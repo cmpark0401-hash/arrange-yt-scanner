@@ -13,3 +13,5 @@
 - `daily_YYYY-MM-DD.html` — 일별 모니터링 리포트
 - `news_YYYY-MM-DD.html` — 뉴스 키워드 외부 영상 검색 결과
 # Last auto-build test: 2026-05-27 14:30:29
+
+
