@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta name="theme-color" content="#007aff">
-  <title>유튜브 모니터링 대시보드</title>
+  <title>어레인지 유튜브 스캐너</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
@@ -226,8 +226,8 @@ footer {
 </head>
 <body>
   <header>
-    <h1>📡 유튜브 모니터링 대시보드</h1>
-    <div class="sub">최종 갱신: 2026-05-27 14:35 · 추적 채널 46개</div>
+    <h1>📡 어레인지 유튜브 스캐너</h1>
+    <div class="sub">최종 갱신: 2026-05-27 15:08 · 추적 채널 46개</div>
     <nav>
       <a href="#summary">요약</a>
       <a href="#trend">7일 추이</a>
@@ -299,19 +299,19 @@ footer {
     
   </section>
 
-  <footer>autoworkers monitoring · built 2026-05-27 14:35</footer>
+  <footer>autoworkers monitoring · built 2026-05-27 15:08</footer>
 
   <script>
     const ctx = document.getElementById('trendChart').getContext('2d');
     new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ["2026-05-19", "2026-05-26", "2026-05-27"],
+        labels: ["05-21", "05-22", "05-23", "05-24", "05-25", "05-26", "05-27"],
         datasets: [
-          { label: '시그널', data: [0, 0, 4], borderColor: '#f28b82', backgroundColor: 'rgba(242,139,130,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
-          { label: '소형 폭발', data: [0, 0, 0], borderColor: '#81c995', backgroundColor: 'rgba(129,201,149,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
-          { label: '대형 폭발', data: [0, 0, 0], borderColor: '#8ab4f8', backgroundColor: 'rgba(138,180,248,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
-          { label: '신영상', data: [19, 0, 10], borderColor: '#c58af9', backgroundColor: 'rgba(197,138,249,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false }
+          { label: '시그널', data: [0, 0, 0, 0, 0, 0, 4], borderColor: '#f28b82', backgroundColor: 'rgba(242,139,130,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
+          { label: '소형 폭발', data: [0, 0, 0, 0, 0, 0, 0], borderColor: '#81c995', backgroundColor: 'rgba(129,201,149,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
+          { label: '대형 폭발', data: [0, 0, 0, 0, 0, 0, 0], borderColor: '#8ab4f8', backgroundColor: 'rgba(138,180,248,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
+          { label: '신영상', data: [0, 0, 0, 0, 0, 0, 10], borderColor: '#c58af9', backgroundColor: 'rgba(197,138,249,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false }
         ]
       },
       options: {
