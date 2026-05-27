@@ -12,3 +12,4 @@
 - `index.html` — 메인 대시보드 (오늘 요약 + 7일 추이 차트 + TOP 영상 + 아카이브)
 - `daily_YYYY-MM-DD.html` — 일별 모니터링 리포트
 - `news_YYYY-MM-DD.html` — 뉴스 키워드 외부 영상 검색 결과
+# Last auto-build test: 2026-05-27 14:30:29
