@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#007aff">
+  <title>유튜브 모니터링 대시보드</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  /* 차트 4색 팔레트와 통일 (Google Material 300 톤) */
+  --gt-blue: #8ab4f8;       /* 대형 폭발·primary·링크 */
+  --gt-blue-hover: #669df6; /* 호버용 살짝 진한 파랑 */
+  --gt-red: #f28b82;        /* 시그널·alert */
+  --gt-yellow: #c58af9;     /* 신영상·warn (실제는 연보라) */
+  --gt-green: #81c995;      /* 소형 폭발·success */
+  --gt-text: #202124;
+  --gt-text-secondary: #5f6368;
+  --gt-border: #dadce0;
+  --gt-surface: #ffffff;
+  --gt-bg: #ffffff;
+  --gt-hover-bg: #f1f3f4;
+  --gt-divider: #e8eaed;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Google Sans', 'Roboto', 'Noto Sans KR',
+               -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  line-height: 1.5;
+  color: var(--gt-text);
+  background: var(--gt-bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  padding: 16px 0 24px;
+  border-bottom: 1px solid var(--gt-divider);
+  margin-bottom: 32px;
+}
+header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--gt-text);
+}
+header .sub {
+  color: var(--gt-text-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+nav { margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  color: var(--gt-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #e8f0fe;
+  transition: background 0.15s ease;
+}
+nav a:hover { background: #d2e3fc; text-decoration: none; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.card {
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  border-color: transparent;
+}
+.card .label {
+  font-size: 14px;
+  color: var(--gt-text-secondary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.card .value {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--gt-text);
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+}
+/* 카드 색 톤 — 차트 4색 매핑 (배경은 같은 색 매우 옅게) */
+.card.tone-red {
+  background: rgba(242,139,130,0.08);
+  border-color: rgba(242,139,130,0.35);
+}
+.card.tone-red .value { color: var(--gt-red); }
+
+.card.tone-green {
+  background: rgba(129,201,149,0.08);
+  border-color: rgba(129,201,149,0.35);
+}
+.card.tone-green .value { color: var(--gt-green); }
+
+.card.tone-blue {
+  background: rgba(138,180,248,0.08);
+  border-color: rgba(138,180,248,0.35);
+}
+.card.tone-blue .value { color: var(--gt-blue); }
+
+.card.tone-purple {
+  background: rgba(197,138,249,0.08);
+  border-color: rgba(197,138,249,0.35);
+}
+.card.tone-purple .value { color: var(--gt-yellow); }  /* yellow 변수가 실제 purple */
+
+section {
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+section h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--gt-text);
+  letter-spacing: -0.2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 4px 0;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--gt-divider);
+}
+th {
+  font-weight: 500;
+  color: var(--gt-text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: transparent;
+}
+tr:hover td { background: var(--gt-hover-bg); }
+
+ul { padding-left: 18px; margin: 6px 0; }
+li { margin: 4px 0; font-size: 14px; }
+
+a { color: var(--gt-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code {
+  background: var(--gt-hover-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--gt-text);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+.archive-grid a {
+  display: block;
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--gt-text);
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s;
+}
+.archive-grid a:hover {
+  background: var(--gt-hover-bg);
+  border-color: var(--gt-blue);
+  text-decoration: none;
+}
+.archive-grid a.today {
+  background: var(--gt-blue);
+  border-color: var(--gt-blue);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  color: var(--gt-text-secondary);
+  font-size: 12px;
+  padding: 24px 0 8px;
+}
+
+@media (max-width: 600px) {
+  body { padding: 16px; }
+  header h1 { font-size: 22px; }
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .card { padding: 16px; }
+  .card .value { font-size: 26px; }
+  section { padding: 16px; }
+  table { font-size: 12px; }
+  th, td { padding: 8px 6px; }
+}
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📡 유튜브 모니터링 대시보드</h1>
+    <div class="sub">최종 갱신: 2026-05-27 14:02 · 추적 채널 46개</div>
+    <nav>
+      <a href="#summary">요약</a>
+      <a href="#trend">7일 추이</a>
+      <a href="#top">TOP 영상</a>
+      <a href="#archive">아카이브</a>
+    </nav>
+  </header>
+
+  <section id="summary">
+    <h2>📊 오늘(2026-05-27) 요약</h2>
+    <div class="cards">
+      <div class="card tone-red">
+        <div class="label">🚨 알고리즘 시그널</div>
+        <div class="value">4</div>
+      </div>
+      <div class="card tone-green">
+        <div class="label">🔬 소형 폭발</div>
+        <div class="value">0</div>
+      </div>
+      <div class="card tone-blue">
+        <div class="label">🐳 대형 폭발</div>
+        <div class="value">0</div>
+      </div>
+      <div class="card tone-purple">
+        <div class="label">🆕 신영상 24h</div>
+        <div class="value">10</div>
+      </div>
+      <div class="card tone-red">
+        <div class="label">⚠️ 발행 둔화</div>
+        <div class="value">0</div>
+      </div>
+      <div class="card tone-blue">
+        <div class="label">🆕 신규 채널 후보</div>
+        <div class="value">48</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trend">
+    <h2>📈 최근 7일 추이</h2>
+    <canvas id="trendChart" height="120"></canvas>
+  </section>
+
+  <section id="top">
+    <h2>🔥 오늘 TOP 폭발 영상 (효율·velocity 결합)</h2>
+    
+    <p>오늘 폭발 영상이 없거나 데이터를 불러올 수 없음.</p>
+    
+  </section>
+
+  <section id="archive">
+    <h2>📅 일별 리포트 아카이브</h2>
+    <div class="archive-grid">
+      
+        <a href="daily_2026-05-27.html" class="today">2026-05-27</a>
+      
+        <a href="daily_2026-05-26.html" class="">2026-05-26</a>
+      
+        <a href="daily_2026-05-19.html" class="">2026-05-19</a>
+      
+    </div>
+    
+    <h2 style="margin-top:20px;">🌐 외부 영상 검색 (뉴스 키워드)</h2>
+    <div class="archive-grid">
+      
+        <a href="news_2026-05-27.html">2026-05-27</a>
+      
+    </div>
+    
+  </section>
+
+  <footer>autoworkers monitoring · built 2026-05-27 14:02</footer>
+
+  <script>
+    const ctx = document.getElementById('trendChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["2026-05-19", "2026-05-26", "2026-05-27"],
+        datasets: [
+          { label: '시그널', data: [0, 0, 4], borderColor: '#f28b82', backgroundColor: 'rgba(242,139,130,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
+          { label: '소형 폭발', data: [0, 0, 0], borderColor: '#81c995', backgroundColor: 'rgba(129,201,149,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
+          { label: '대형 폭발', data: [0, 0, 0], borderColor: '#8ab4f8', backgroundColor: 'rgba(138,180,248,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
+          { label: '신영상', data: [19, 0, 10], borderColor: '#c58af9', backgroundColor: 'rgba(197,138,249,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false }
+        ]
+      },
+      options: {
+        responsive: true,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: {
+            position: 'top',
+            align: 'start',
+            labels: { font: { family: "'Google Sans', 'Roboto', sans-serif", size: 13 }, color: '#5f6368', padding: 16, boxWidth: 12, boxHeight: 12, usePointStyle: true }
+          },
+          tooltip: {
+            backgroundColor: '#ffffff', titleColor: '#202124', bodyColor: '#5f6368',
+            borderColor: '#dadce0', borderWidth: 1, padding: 12,
+            titleFont: { family: "'Google Sans', sans-serif", weight: '500', size: 13 },
+            bodyFont: { family: "'Roboto', sans-serif", size: 12 }, displayColors: true
+          }
+        },
+        scales: {
+          y: { beginAtZero: true, ticks: { stepSize: 1, color: '#5f6368', font: { size: 11 } }, grid: { color: '#f1f3f4', drawBorder: false } },
+          x: { ticks: { color: '#5f6368', font: { size: 11 } }, grid: { display: false } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

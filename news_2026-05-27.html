@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#007aff">
+  <title>외부 영상 검색 — 2026-05-27</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  /* 차트 4색 팔레트와 통일 (Google Material 300 톤) */
+  --gt-blue: #8ab4f8;       /* 대형 폭발·primary·링크 */
+  --gt-blue-hover: #669df6; /* 호버용 살짝 진한 파랑 */
+  --gt-red: #f28b82;        /* 시그널·alert */
+  --gt-yellow: #c58af9;     /* 신영상·warn (실제는 연보라) */
+  --gt-green: #81c995;      /* 소형 폭발·success */
+  --gt-text: #202124;
+  --gt-text-secondary: #5f6368;
+  --gt-border: #dadce0;
+  --gt-surface: #ffffff;
+  --gt-bg: #ffffff;
+  --gt-hover-bg: #f1f3f4;
+  --gt-divider: #e8eaed;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Google Sans', 'Roboto', 'Noto Sans KR',
+               -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  line-height: 1.5;
+  color: var(--gt-text);
+  background: var(--gt-bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  padding: 16px 0 24px;
+  border-bottom: 1px solid var(--gt-divider);
+  margin-bottom: 32px;
+}
+header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--gt-text);
+}
+header .sub {
+  color: var(--gt-text-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+nav { margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  color: var(--gt-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #e8f0fe;
+  transition: background 0.15s ease;
+}
+nav a:hover { background: #d2e3fc; text-decoration: none; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.card {
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  border-color: transparent;
+}
+.card .label {
+  font-size: 14px;
+  color: var(--gt-text-secondary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.card .value {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--gt-text);
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+}
+/* 카드 색 톤 — 차트 4색 매핑 (배경은 같은 색 매우 옅게) */
+.card.tone-red {
+  background: rgba(242,139,130,0.08);
+  border-color: rgba(242,139,130,0.35);
+}
+.card.tone-red .value { color: var(--gt-red); }
+
+.card.tone-green {
+  background: rgba(129,201,149,0.08);
+  border-color: rgba(129,201,149,0.35);
+}
+.card.tone-green .value { color: var(--gt-green); }
+
+.card.tone-blue {
+  background: rgba(138,180,248,0.08);
+  border-color: rgba(138,180,248,0.35);
+}
+.card.tone-blue .value { color: var(--gt-blue); }
+
+.card.tone-purple {
+  background: rgba(197,138,249,0.08);
+  border-color: rgba(197,138,249,0.35);
+}
+.card.tone-purple .value { color: var(--gt-yellow); }  /* yellow 변수가 실제 purple */
+
+section {
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+section h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--gt-text);
+  letter-spacing: -0.2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 4px 0;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--gt-divider);
+}
+th {
+  font-weight: 500;
+  color: var(--gt-text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: transparent;
+}
+tr:hover td { background: var(--gt-hover-bg); }
+
+ul { padding-left: 18px; margin: 6px 0; }
+li { margin: 4px 0; font-size: 14px; }
+
+a { color: var(--gt-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code {
+  background: var(--gt-hover-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--gt-text);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+.archive-grid a {
+  display: block;
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--gt-text);
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s;
+}
+.archive-grid a:hover {
+  background: var(--gt-hover-bg);
+  border-color: var(--gt-blue);
+  text-decoration: none;
+}
+.archive-grid a.today {
+  background: var(--gt-blue);
+  border-color: var(--gt-blue);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  color: var(--gt-text-secondary);
+  font-size: 12px;
+  padding: 24px 0 8px;
+}
+
+@media (max-width: 600px) {
+  body { padding: 16px; }
+  header h1 { font-size: 22px; }
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .card { padding: 16px; }
+  .card .value { font-size: 26px; }
+  section { padding: 16px; }
+  table { font-size: 12px; }
+  th, td { padding: 8px 6px; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">← 대시보드로</a></nav>
+    <h1>외부 영상 검색 — 2026-05-27</h1>
+  </header>
+  <section>
+    <h1 id="뉴스-키워드-외부-영상-검색-2026-05-27-1323">🌐 뉴스 키워드 외부 영상 검색 — 2026-05-27 13:23</h1>
+
+<p><strong>키워드 TOP 8</strong>: 삼성전자, 가결, 잠정합의안, 레버리지, 삼성, 찬성률, 삼전, 삼전닉스<br />
+<strong>검색 결과</strong>: 56편 고유 영상 → 임계 50,000회+ + 등록 채널 외 → <strong>4편</strong><br />
+<strong>중복 제외</strong>: 등록 채널 0편 · 블록 3편</p>
+
+<h2 id="외부-폭발-영상-top-4-등록-채널-외-조회-50000">🔥 외부 폭발 영상 TOP 4 (등록 채널 외, 조회 50,000+)</h2>
+
+<table>
+<thead>
+<tr>
+  <th>채널</th>
+  <th>조회수</th>
+  <th>구독</th>
+  <th>효율</th>
+  <th>매칭 키워드</th>
+  <th>제목</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>TVING SPORTS</td>
+  <td>285,650</td>
+  <td>531,000</td>
+  <td>0.5x</td>
+  <td>삼성</td>
+  <td><a href="https://www.youtube.com/watch?v=XgvY-FP9W2E">[Samsung vs. Lotte] 5/24 Game I 2026 Shinhan </a></td>
+</tr>
+<tr>
+  <td>김어준의 겸손은힘들다 뉴스공장</td>
+  <td>174,624</td>
+  <td>2,310,000</td>
+  <td>0.1x</td>
+  <td>삼성전자</td>
+  <td><a href="https://www.youtube.com/watch?v=tJ1vRboWD6w">[12시에 만나요] 삼성전자·SK하이닉스 2배 ETF 출시! 첫날부터 국민투자자들</a></td>
+</tr>
+<tr>
+  <td>전인구경제연구소</td>
+  <td>112,611</td>
+  <td>1,280,000</td>
+  <td>0.1x</td>
+  <td>레버리지</td>
+  <td><a href="https://www.youtube.com/watch?v=RpTJliyWdRs">삼성전자, SK하이닉스 레버리지 ETF가 위험한 이유</a></td>
+</tr>
+<tr>
+  <td>웅달 책방</td>
+  <td>52,980</td>
+  <td>975,000</td>
+  <td>0.1x</td>
+  <td>삼전</td>
+  <td><a href="https://www.youtube.com/watch?v=gl0I6AUy8Z0">"80만 전자 가능할까" 삼성전자 상승 신호 켜졌습니다 놀랄만한 일 터질 겁니다 </a></td>
+</tr>
+</tbody>
+</table>
+
+  </section>
+  <footer>autoworkers monitoring · 2026-05-27 14:02</footer>
+</body>
+</html>

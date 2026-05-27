@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#007aff">
+  <title>일일 리포트 — 2026-05-26</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  /* 차트 4색 팔레트와 통일 (Google Material 300 톤) */
+  --gt-blue: #8ab4f8;       /* 대형 폭발·primary·링크 */
+  --gt-blue-hover: #669df6; /* 호버용 살짝 진한 파랑 */
+  --gt-red: #f28b82;        /* 시그널·alert */
+  --gt-yellow: #c58af9;     /* 신영상·warn (실제는 연보라) */
+  --gt-green: #81c995;      /* 소형 폭발·success */
+  --gt-text: #202124;
+  --gt-text-secondary: #5f6368;
+  --gt-border: #dadce0;
+  --gt-surface: #ffffff;
+  --gt-bg: #ffffff;
+  --gt-hover-bg: #f1f3f4;
+  --gt-divider: #e8eaed;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Google Sans', 'Roboto', 'Noto Sans KR',
+               -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  line-height: 1.5;
+  color: var(--gt-text);
+  background: var(--gt-bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  padding: 16px 0 24px;
+  border-bottom: 1px solid var(--gt-divider);
+  margin-bottom: 32px;
+}
+header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--gt-text);
+}
+header .sub {
+  color: var(--gt-text-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+nav { margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  color: var(--gt-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #e8f0fe;
+  transition: background 0.15s ease;
+}
+nav a:hover { background: #d2e3fc; text-decoration: none; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.card {
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  border-color: transparent;
+}
+.card .label {
+  font-size: 14px;
+  color: var(--gt-text-secondary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.card .value {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--gt-text);
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+}
+/* 카드 색 톤 — 차트 4색 매핑 (배경은 같은 색 매우 옅게) */
+.card.tone-red {
+  background: rgba(242,139,130,0.08);
+  border-color: rgba(242,139,130,0.35);
+}
+.card.tone-red .value { color: var(--gt-red); }
+
+.card.tone-green {
+  background: rgba(129,201,149,0.08);
+  border-color: rgba(129,201,149,0.35);
+}
+.card.tone-green .value { color: var(--gt-green); }
+
+.card.tone-blue {
+  background: rgba(138,180,248,0.08);
+  border-color: rgba(138,180,248,0.35);
+}
+.card.tone-blue .value { color: var(--gt-blue); }
+
+.card.tone-purple {
+  background: rgba(197,138,249,0.08);
+  border-color: rgba(197,138,249,0.35);
+}
+.card.tone-purple .value { color: var(--gt-yellow); }  /* yellow 변수가 실제 purple */
+
+section {
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+section h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--gt-text);
+  letter-spacing: -0.2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 4px 0;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--gt-divider);
+}
+th {
+  font-weight: 500;
+  color: var(--gt-text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: transparent;
+}
+tr:hover td { background: var(--gt-hover-bg); }
+
+ul { padding-left: 18px; margin: 6px 0; }
+li { margin: 4px 0; font-size: 14px; }
+
+a { color: var(--gt-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code {
+  background: var(--gt-hover-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--gt-text);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+.archive-grid a {
+  display: block;
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--gt-text);
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s;
+}
+.archive-grid a:hover {
+  background: var(--gt-hover-bg);
+  border-color: var(--gt-blue);
+  text-decoration: none;
+}
+.archive-grid a.today {
+  background: var(--gt-blue);
+  border-color: var(--gt-blue);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  color: var(--gt-text-secondary);
+  font-size: 12px;
+  padding: 24px 0 8px;
+}
+
+@media (max-width: 600px) {
+  body { padding: 16px; }
+  header h1 { font-size: 22px; }
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .card { padding: 16px; }
+  .card .value { font-size: 26px; }
+  section { padding: 16px; }
+  table { font-size: 12px; }
+  th, td { padding: 8px 6px; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">← 대시보드로</a></nav>
+    <h1>일일 리포트 — 2026-05-26</h1>
+  </header>
+  <section>
+    <h1 id="유튜브-채널-모니터링-2026-05-26-1813">유튜브 채널 모니터링 — 2026-05-26 18:13</h1>
+
+<h2 id="알고리즘-시그널-시속-5000회-즉시-검토-0편">🚨 알고리즘 시그널 (시속 5,000회+ · 즉시 검토) — 0편</h2>
+
+<p><em>현재 임계 이상 시그널 없음 (직전 측정 데이터 부족 시에도 해당)</em></p>
+
+<h2 id="발행-중단-둔화-경고-0개-채널">⚠️ 발행 중단 / 둔화 경고 — 0개 채널</h2>
+
+<p><em>모든 채널 정상 발행 중</em></p>
+
+<h2 id="신영상-24시간-내-총-0편">🆕 신영상 (24시간 내) — 총 0편</h2>
+
+<h2 id="효율-5x-한방-영상-총-0편">🔥 효율 5x+ 한방 영상 — 총 0편</h2>
+
+<h2 id="ai-채널-활성도-경고-주-3편-미만-0개">⚠️ AI 채널 활성도 경고 (주 3편 미만) — 0개</h2>
+
+<h2 id="신규-채널-후보-17개">🆕 신규 채널 후보 — 17개</h2>
+
+<blockquote>
+  <p>뉴스 키워드로 발견된 신규 채널. 검토 후 승인/거절 결정:</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+  <li>승인: <code>.venv/bin/python scripts/discover_channels.py approve N</code></li>
+  <li>거절: <code>.venv/bin/python scripts/discover_channels.py reject N</code></li>
+  </ul>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+  <th>#</th>
+  <th>채널</th>
+  <th>hit</th>
+  <th>발견 키워드</th>
+  <th>채널 URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>엠키타카 MKTK</td>
+  <td>2</td>
+  <td>코스피</td>
+  <td>https://www.youtube.com/channel/UCGbkN-3JpOct4KuEv59NF0Q</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>농부의 경제학</td>
+  <td>1</td>
+  <td>삼전닉스</td>
+  <td>https://www.youtube.com/channel/UCsYEheohThz9KQz8K4S2KXA</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>주식원샷</td>
+  <td>1</td>
+  <td>삼전닉스</td>
+  <td>https://www.youtube.com/channel/UCIh431O7x00rZke3oNBuRRA</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>역사경제해결사</td>
+  <td>1</td>
+  <td>삼전닉스</td>
+  <td>https://www.youtube.com/channel/UC2rBfO8HDq4OfMUTBLXVzqQ</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>김어준의 겸손은힘들다 뉴스공장</td>
+  <td>1</td>
+  <td>정용진</td>
+  <td>https://www.youtube.com/channel/UCAAvO0ehWox1bbym3rXKBZw</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>고재영</td>
+  <td>1</td>
+  <td>만원</td>
+  <td>https://www.youtube.com/channel/UClWg5n2YST6_697s-zQSMnA</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>열정무도와 부의 춤을</td>
+  <td>1</td>
+  <td>만원</td>
+  <td>https://www.youtube.com/channel/UCLKkKVxkINoAgDmTaRgMBCA</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>보통 사람</td>
+  <td>1</td>
+  <td>만원</td>
+  <td>https://www.youtube.com/channel/UCBWZUUNW4YNeYmZeXEss6SQ</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>상가의 안녕히살아보기</td>
+  <td>1</td>
+  <td>만원</td>
+  <td>https://www.youtube.com/channel/UC69z_1ZtKQjG5fa-_sKBBfg</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>한국증권TV</td>
+  <td>1</td>
+  <td>만원</td>
+  <td>https://www.youtube.com/channel/UC9OdxrtKsOxQCXpjNmaRMsw</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>굿모닝경제TV</td>
+  <td>1</td>
+  <td>만원</td>
+  <td>https://www.youtube.com/channel/UC-1eEpy7g6TxLaih9KorBTg</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td>초월스토리 - 돈버는 사장님들</td>
+  <td>1</td>
+  <td>만원</td>
+  <td>https://www.youtube.com/channel/UCS3DMEqxRo-WbPfXYcO7nCA</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td>슈퍼개미 이주영TV</td>
+  <td>1</td>
+  <td>코스피</td>
+  <td>https://www.youtube.com/channel/UCRKbuRFO8UhLXOtXWoqMeqQ</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td>리치노마드 Rich Nomad</td>
+  <td>1</td>
+  <td>레버리지</td>
+  <td>https://www.youtube.com/channel/UCTIgENwrcMCmD4xbjPCKfIw</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td>경제 원탑</td>
+  <td>1</td>
+  <td>레버리지</td>
+  <td>https://www.youtube.com/channel/UCDjaj6eENGMvgIXfeRErPmA</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="전체-채널-요약">📊 전체 채널 요약</h2>
+
+<table>
+<thead>
+<tr>
+  <th>분류</th>
+  <th>채널</th>
+  <th>구독자</th>
+  <th>주당 발행</th>
+  <th>최대 효율</th>
+  <th>최대 조회</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>일반</td>
+  <td>지식인사이드</td>
+  <td>3,830,000</td>
+  <td>3.5편</td>
+  <td>0.3x</td>
+  <td>1,174,987</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>보다 BODA</td>
+  <td>3,100,000</td>
+  <td>3.5편</td>
+  <td>0.3x</td>
+  <td>922,470</td>
+</tr>
+</tbody>
+</table>
+
+  </section>
+  <footer>autoworkers monitoring · 2026-05-27 14:02</footer>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#007aff">
+  <title>일일 리포트 — 2026-05-19</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  /* 차트 4색 팔레트와 통일 (Google Material 300 톤) */
+  --gt-blue: #8ab4f8;       /* 대형 폭발·primary·링크 */
+  --gt-blue-hover: #669df6; /* 호버용 살짝 진한 파랑 */
+  --gt-red: #f28b82;        /* 시그널·alert */
+  --gt-yellow: #c58af9;     /* 신영상·warn (실제는 연보라) */
+  --gt-green: #81c995;      /* 소형 폭발·success */
+  --gt-text: #202124;
+  --gt-text-secondary: #5f6368;
+  --gt-border: #dadce0;
+  --gt-surface: #ffffff;
+  --gt-bg: #ffffff;
+  --gt-hover-bg: #f1f3f4;
+  --gt-divider: #e8eaed;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Google Sans', 'Roboto', 'Noto Sans KR',
+               -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  line-height: 1.5;
+  color: var(--gt-text);
+  background: var(--gt-bg);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  padding: 16px 0 24px;
+  border-bottom: 1px solid var(--gt-divider);
+  margin-bottom: 32px;
+}
+header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--gt-text);
+}
+header .sub {
+  color: var(--gt-text-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+nav { margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  color: var(--gt-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #e8f0fe;
+  transition: background 0.15s ease;
+}
+nav a:hover { background: #d2e3fc; text-decoration: none; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.card {
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  border-color: transparent;
+}
+.card .label {
+  font-size: 14px;
+  color: var(--gt-text-secondary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.card .value {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--gt-text);
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+}
+/* 카드 색 톤 — 차트 4색 매핑 (배경은 같은 색 매우 옅게) */
+.card.tone-red {
+  background: rgba(242,139,130,0.08);
+  border-color: rgba(242,139,130,0.35);
+}
+.card.tone-red .value { color: var(--gt-red); }
+
+.card.tone-green {
+  background: rgba(129,201,149,0.08);
+  border-color: rgba(129,201,149,0.35);
+}
+.card.tone-green .value { color: var(--gt-green); }
+
+.card.tone-blue {
+  background: rgba(138,180,248,0.08);
+  border-color: rgba(138,180,248,0.35);
+}
+.card.tone-blue .value { color: var(--gt-blue); }
+
+.card.tone-purple {
+  background: rgba(197,138,249,0.08);
+  border-color: rgba(197,138,249,0.35);
+}
+.card.tone-purple .value { color: var(--gt-yellow); }  /* yellow 변수가 실제 purple */
+
+section {
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+section h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--gt-text);
+  letter-spacing: -0.2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 4px 0;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--gt-divider);
+}
+th {
+  font-weight: 500;
+  color: var(--gt-text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: transparent;
+}
+tr:hover td { background: var(--gt-hover-bg); }
+
+ul { padding-left: 18px; margin: 6px 0; }
+li { margin: 4px 0; font-size: 14px; }
+
+a { color: var(--gt-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+code {
+  background: var(--gt-hover-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  color: var(--gt-text);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+}
+.archive-grid a {
+  display: block;
+  background: var(--gt-surface);
+  border: 1px solid var(--gt-border);
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--gt-text);
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s;
+}
+.archive-grid a:hover {
+  background: var(--gt-hover-bg);
+  border-color: var(--gt-blue);
+  text-decoration: none;
+}
+.archive-grid a.today {
+  background: var(--gt-blue);
+  border-color: var(--gt-blue);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  color: var(--gt-text-secondary);
+  font-size: 12px;
+  padding: 24px 0 8px;
+}
+
+@media (max-width: 600px) {
+  body { padding: 16px; }
+  header h1 { font-size: 22px; }
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .card { padding: 16px; }
+  .card .value { font-size: 26px; }
+  section { padding: 16px; }
+  table { font-size: 12px; }
+  th, td { padding: 8px 6px; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">← 대시보드로</a></nav>
+    <h1>일일 리포트 — 2026-05-19</h1>
+  </header>
+  <section>
+    <h1 id="유튜브-채널-모니터링-2026-05-19">유튜브 채널 모니터링 — 2026-05-19</h1>
+
+<h2 id="신영상-24시간-내-총-19편">🆕 신영상 (24시간 내) — 총 19편</h2>
+
+<ul>
+<li>[일반] <strong>지식인사이드</strong>  <a href="https://www.youtube.com/watch?v=-BOuXTnmkIU">요즘 90년생들이 돈 절대 모을 수 없는 이유ㅣ대외비 EP.21</a> · 조회 31,294 · 효율 0.0x</li>
+<li>[일반] <strong>크랩 KLAB</strong>  <a href="https://www.youtube.com/watch?v=NfRkfpnLCEs">재무장 각이 서고 있다는 요즘 일본 근황｜크랩</a> · 조회 35,385 · 효율 0.0x</li>
+<li>[일반] <strong>스브스뉴스</strong>  <a href="https://www.youtube.com/watch?v=dCpXpSMKd3Y">[이슈 발자국] &quot;G2 독점 시대, 노골적인 강요 시작됐다&quot; 경제 영토 전쟁의 서막..한국</a> · 조회 4,502 · 효율 0.0x</li>
+<li>[일반] <strong>간다효</strong>  <a href="https://www.youtube.com/watch?v=fvdvOWK3gQ0">미국 시장이 중국간첩이었다</a> · 조회 30,032 · 효율 0.0x</li>
+<li>[일반] <strong>머니인사이드</strong>  <a href="https://www.youtube.com/watch?v=kZBPrLVWdUc">&quot;이건 역사적으로 증명됐어요&quot; 한국인이 유독 기가 센 이유 (박정재 교수 1부) I 머니포</a> · 조회 21,213 · 효율 0.0x</li>
+<li>[일반] <strong>만약에 머니</strong>  <a href="https://www.youtube.com/watch?v=YXCIip70eck">50대가 주식으로 2억 만들고도 결국 빈손이 되는 잔인한 이유. 코스피 75% 폭등장에 개미 절반이 손실 본</a> · 조회 253 · 효율 0.0x</li>
+<li>[일반] <strong>김대호박사TV</strong>  <a href="https://www.youtube.com/watch?v=pC5cF70CHm4">🚨기업은 기업으로 승부하라! 정용진 회장의 꼼수와 스타벅스 대위기 #오너리스크 #신세계 #정용진</a> · 조회 1,748 · 효율 0.0x</li>
+<li>[일반] <strong>존리의 부자학교</strong>  <a href="https://www.youtube.com/watch?v=QlKMgPcBMmU">존리의 부자학교 라이브 스트리밍 중</a> · 조회 12,438 · 효율 0.0x</li>
+<li>[일반] <strong>손에잡히는경제</strong>  <a href="https://www.youtube.com/watch?v=El7fnk9gBU4">넷플릭스에 가장 큰 위협, SONY일지 모릅니다 - 서병수 애널리스트</a> · 조회 1,297 · 효율 0.0x</li>
+<li>[일반] <strong>손에잡히는경제</strong>  <a href="https://www.youtube.com/watch?v=xGh-5cj4dfU">요즘 같은 불장에 인버스 사는 사람들 심리는 이런겁니다</a> · 조회 2,956 · 효율 0.0x</li>
+<li>[일반] <strong>손에잡히는경제</strong>  <a href="https://www.youtube.com/watch?v=oe8Vf_u6kVc">이진우가 투자하는 방법 (수익 보장 못함)</a> · 조회 15,149 · 효율 0.0x</li>
+<li>[일반] <strong>손에잡히는경제</strong>  <a href="https://www.youtube.com/watch?v=G-Kguhn9ffY">[손경제] 소아 필수의약품 | 삼성전자 2차 사후조정 | 중국 CXMT 실적 | 국민연금법 개편 | 2026</a> · 조회 34,367 · 효율 0.1x</li>
+<li>[일반] <strong>시사저널TV</strong>  <a href="https://www.youtube.com/watch?v=2fn5gGGh1M8">김종혁 &quot;한동훈 이길 거라 확신... 하정우는 정치적 한계만 계속 보여줘&quot; 김준일 &amp;quo</a> · 조회 26,475 · 효율 0.0x</li>
+<li>[일반] <strong>시사저널TV</strong>  <a href="https://www.youtube.com/watch?v=7T4DvBAYoJ4">[🔴진중권 LIVE] 부산 북갑 한동훈 돌풍... 단일화 가능성｜서울시장 선거, 오세훈·정원오 난타전｜정청래</a> · 조회 62,114 · 효율 0.1x</li>
+<li>[AI] <strong>얄궂은 경제학</strong>  <a href="https://www.youtube.com/watch?v=0cMeSHKmiYA">“회사 없애버리자” 삼성전자 노조 한마디에 동료 4,000명이 등을 돌린 이유</a> · 조회 604 · 효율 0.1x</li>
+<li>[AI] <strong>경제월드</strong>  <a href="https://www.youtube.com/watch?v=6R_6DoRL3zI">파업?! 다 나가라! 노조 45조원 성과급 요구에 사람 빼고 기계 도입, 일자리 잃게 생긴 노조의 최후</a> · 조회 1,447 · 효율 0.1x</li>
+<li>[AI] <strong>머니코믹스</strong>  <a href="https://www.youtube.com/watch?v=ryF63KH2INY">잃은만큼 복구하면 레버리지 끊을 거예요</a> · 조회 32,111 · 효율 0.0x</li>
+<li>[AI] <strong>머니코믹스</strong>  <a href="https://www.youtube.com/watch?v=8tQWty8J7-c">이 남자가 물건까지 파는 이유</a> · 조회 52,290 · 효율 0.0x</li>
+<li>[AI] <strong>만화 경제학</strong>  <a href="https://www.youtube.com/watch?v=XwISRI9djVM">나스닥 ETF 계속 투자할까 아니면 국민성장펀드 해볼까? 국민성장펀드 가입조건 및 치명적 단점 5가지! (나</a> · 조회 639 · 효율 0.0x</li>
+</ul>
+
+<h2 id="효율-5x-한방-영상-총-17편">🔥 효율 5x+ 한방 영상 — 총 17편</h2>
+
+<ul>
+<li>[AI] <strong>경제월드</strong> <a href="https://www.youtube.com/watch?v=H04dO3qsWxQ">국가적 치명적 손실 막는다! 칼 빼든 삼성, 45조 요구 귀족노조 사색 된 진짜 이유 '3가지'!!</a> · 효율 <strong>78.4x</strong> · 조회 1,402,976 · 구독 17,900</li>
+<li>[AI] <strong>경제대부</strong> <a href="https://www.youtube.com/watch?v=yT-_vXIIqRU">&quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히</a> · 효율 <strong>62.4x</strong> · 조회 184,089 · 구독 2,950</li>
+<li>[AI] <strong>경제균열</strong> <a href="https://www.youtube.com/watch?v=0u3wHhqxceA">삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언에 진짜 이유</a> · 효율 <strong>23.7x</strong> · 조회 417,665 · 구독 17,600</li>
+<li>[AI] <strong>탐정 경제학</strong> <a href="https://www.youtube.com/watch?v=NXIcyN1WwSY">북한군 128만의 허상, 핵무기의 한계, 그리고 붕괴 72시간 시나리오 [통합본]</a> · 효율 <strong>20.6x</strong> · 조회 332,380 · 구독 16,100</li>
+<li>[AI] <strong>경제왕토끼</strong> <a href="https://www.youtube.com/watch?v=czy8dA-NPCc">&quot;시청률 0.5%&quot; 갑질하던 방송국의 처참한 몰락, 외면당한 3가지 진짜 이유</a> · 효율 <strong>19.9x</strong> · 조회 369,909 · 구독 18,600</li>
+<li>[AI] <strong>얄궂은 경제학</strong> <a href="https://www.youtube.com/watch?v=J2kGYz_yryw">&quot;전 노조 탈퇴했습니다_&quot; 삼성 MZ가 파업 코앞에 도망친 진짜 이유</a> · 효율 <strong>17.9x</strong> · 조회 94,527 · 구독 5,270</li>
+<li>[AI] <strong>머니 크래시</strong> <a href="https://www.youtube.com/watch?v=x8LY3qVmWxQ">요격률 0%… 이란 방공망을 무너뜨린 중국산 ‘고물’ 시스템의 민낯</a> · 효율 <strong>14.1x</strong> · 조회 81,033 · 구독 5,740</li>
+<li>[AI] <strong>탐정 경제학</strong> <a href="https://www.youtube.com/watch?v=nF1KP1Gnd24">&quot;13조를 퍼줬는데 1조도 못 받았다&quot; 김정은이 푸틴한테 완전히 당한 소름돋는 전말</a> · 효율 <strong>12.5x</strong> · 조회 200,464 · 구독 16,100</li>
+<li>[AI] <strong>경제왕토끼</strong> <a href="https://www.youtube.com/watch?v=EGF6neqw3hs">2026년 대한민국 자산별 8계급, 여러분은 몇 층에 계신가요?</a> · 효율 <strong>11.6x</strong> · 조회 215,397 · 구독 18,600</li>
+<li>[AI] <strong>머니 크래시</strong> <a href="https://www.youtube.com/watch?v=dCuR7NQldwY">‘세계의 공장’ 중국이 흔들린다｜소니·토요타·파나소닉·애플·테슬라까지 탈중국에 나선 이유</a> · 효율 <strong>8.7x</strong> · 조회 49,918 · 구독 5,740</li>
+<li>[AI] <strong>세계경제 돋보기</strong> <a href="https://www.youtube.com/watch?v=ucpy0nH-Lps">&quot;34년 만에 문 닫았다&quot; 중국에서 삼성이 버린 것, 그리고 남은 기업들의 운명 #세계이슈</a> · 효율 <strong>8.7x</strong> · 조회 40,418 · 구독 4,650</li>
+<li>[AI] <strong>경제읽음이</strong> <a href="https://www.youtube.com/watch?v=YVv__ZFo8K0">'협상 끝났다' 삼성, 가전라인 외주 카드로 45조 요구 노조 무너뜨린 진짜 이유</a> · 효율 <strong>8.0x</strong> · 조회 60,764 · 구독 7,570</li>
+<li>[AI] <strong>미니경제학</strong> <a href="https://www.youtube.com/watch?v=VqJZ6Na5HTk">&quot;시진핑 때문에 망했다&quot; 중국 경제 완전 붕괴의 충격적 진실!</a> · 효율 <strong>7.5x</strong> · 조회 212,121 · 구독 28,300</li>
+<li>[AI] <strong>손안의 경제학</strong> <a href="https://www.youtube.com/watch?v=Hf50odneFMM">중국산 못쓰겠다! 독일 자동차가 중국 버리고 한국 배터리를 선택하는 진짜 이유 | 손안의 경제학</a> · 효율 <strong>7.2x</strong> · 조회 5,997 · 구독 831</li>
+<li>[AI] <strong>머니 크래시</strong> <a href="https://www.youtube.com/watch?v=PV4hbxKEJEI">중국인은 왜 계속 표적이 되는가｜위구르 문제가 낳은 연쇄 테러의 실체</a> · 효율 <strong>6.6x</strong> · 조회 38,136 · 구독 5,740</li>
+</ul>
+
+<h2 id="ai-채널-활성도-경고-주-3편-미만-8개">⚠️ AI 채널 활성도 경고 (주 3편 미만) — 8개</h2>
+
+<ul>
+<li><strong>경제대부</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>경제월드</strong> 주당 2.0편 → Tier 2 강등 검토</li>
+<li><strong>경제왕토끼</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>손안의 경제학</strong> 주당 2.5편 → Tier 2 강등 검토</li>
+<li><strong>경제균열</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>탐정 경제학</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>미니경제학</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>방구석 경제학</strong> 주당 0.5편 → Tier 2 강등 검토</li>
+</ul>
+
+<h2 id="전체-채널-요약">📊 전체 채널 요약</h2>
+
+<table>
+<thead>
+<tr>
+  <th>분류</th>
+  <th>채널</th>
+  <th>구독자</th>
+  <th>주당 발행</th>
+  <th>최대 효율</th>
+  <th>최대 조회</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>AI</td>
+  <td>경제월드</td>
+  <td>17,900</td>
+  <td>2.0편</td>
+  <td>78.4x</td>
+  <td>1,402,976</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제대부</td>
+  <td>2,950</td>
+  <td>0.0편</td>
+  <td>62.4x</td>
+  <td>184,089</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제균열</td>
+  <td>17,600</td>
+  <td>0.0편</td>
+  <td>23.7x</td>
+  <td>417,665</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>탐정 경제학</td>
+  <td>16,100</td>
+  <td>0.0편</td>
+  <td>20.6x</td>
+  <td>332,380</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제왕토끼</td>
+  <td>18,600</td>
+  <td>0.0편</td>
+  <td>19.9x</td>
+  <td>369,909</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>얄궂은 경제학</td>
+  <td>5,270</td>
+  <td>3.5편</td>
+  <td>17.9x</td>
+  <td>94,527</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>머니 크래시</td>
+  <td>5,740</td>
+  <td>3.5편</td>
+  <td>14.1x</td>
+  <td>81,033</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>세계경제 돋보기</td>
+  <td>4,650</td>
+  <td>3.5편</td>
+  <td>8.7x</td>
+  <td>40,418</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제읽음이</td>
+  <td>7,570</td>
+  <td>3.5편</td>
+  <td>8.0x</td>
+  <td>60,764</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>미니경제학</td>
+  <td>28,300</td>
+  <td>0.0편</td>
+  <td>7.5x</td>
+  <td>212,121</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>손안의 경제학</td>
+  <td>831</td>
+  <td>2.5편</td>
+  <td>7.2x</td>
+  <td>5,997</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>방구석 경제학</td>
+  <td>20,800</td>
+  <td>0.5편</td>
+  <td>6.5x</td>
+  <td>135,919</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>만약에 머니</td>
+  <td>29,800</td>
+  <td>2.5편</td>
+  <td>2.4x</td>
+  <td>71,594</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>만화 경제학</td>
+  <td>74,200</td>
+  <td>3.5편</td>
+  <td>1.4x</td>
+  <td>105,491</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>모두의 경제학</td>
+  <td>34,300</td>
+  <td>3.5편</td>
+  <td>1.2x</td>
+  <td>41,795</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>김대호박사TV</td>
+  <td>86,400</td>
+  <td>3.5편</td>
+  <td>1.1x</td>
+  <td>97,034</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>존리의 부자학교</td>
+  <td>533,000</td>
+  <td>1.0편</td>
+  <td>0.6x</td>
+  <td>341,236</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>스브스뉴스</td>
+  <td>424,000</td>
+  <td>3.5편</td>
+  <td>0.4x</td>
+  <td>172,577</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>시사저널TV</td>
+  <td>757,000</td>
+  <td>3.5편</td>
+  <td>0.4x</td>
+  <td>296,783</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>김지윤의 지식Play</td>
+  <td>1,390,000</td>
+  <td>1.0편</td>
+  <td>0.4x</td>
+  <td>507,959</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>크랩 KLAB</td>
+  <td>1,000,000</td>
+  <td>3.5편</td>
+  <td>0.3x</td>
+  <td>345,994</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>간다효</td>
+  <td>736,000</td>
+  <td>3.5편</td>
+  <td>0.3x</td>
+  <td>213,610</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>손에잡히는경제</td>
+  <td>461,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>88,904</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>설민석</td>
+  <td>662,000</td>
+  <td>2.0편</td>
+  <td>0.2x</td>
+  <td>112,698</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>지식인사이드</td>
+  <td>3,800,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>633,753</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>보다 BODA</td>
+  <td>3,100,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>516,818</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>머니코믹스</td>
+  <td>1,370,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>168,569</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>머니인사이드</td>
+  <td>2,040,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>150,113</td>
+</tr>
+</tbody>
+</table>
+
+  </section>
+  <footer>autoworkers monitoring · 2026-05-27 14:02</footer>
+</body>
+</html>
