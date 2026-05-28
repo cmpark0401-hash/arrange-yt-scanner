@@ -3,243 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-  <meta name="theme-color" content="#007aff">
+  <meta name="theme-color" content="#8ab4f8">
   <title>어레인지 유튜브 스캐너</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
-
 :root {
-  /* 차트 4색 팔레트와 통일 (Google Material 300 톤) */
-  --gt-blue: #8ab4f8;       /* 대형 폭발·primary·링크 */
-  --gt-blue-hover: #669df6; /* 호버용 살짝 진한 파랑 */
-  --gt-red: #f28b82;        /* 시그널·alert */
-  --gt-yellow: #c58af9;     /* 신영상·warn (실제는 연보라) */
-  --gt-green: #81c995;      /* 소형 폭발·success */
-  --gt-text: #202124;
-  --gt-text-secondary: #5f6368;
-  --gt-border: #dadce0;
-  --gt-surface: #ffffff;
-  --gt-bg: #ffffff;
-  --gt-hover-bg: #f1f3f4;
-  --gt-divider: #e8eaed;
+  --blue:#8ab4f8; --red:#f28b82; --purple:#c58af9; --green:#81c995;
+  --text:#202124; --text2:#5f6368; --border:#dadce0; --surface:#fff; --bg:#fff;
+  --hover:#f1f3f4; --divider:#e8eaed; --chip:#e8f0fe;
 }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
+* { box-sizing:border-box; margin:0; padding:0; }
 body {
-  font-family: 'Google Sans', 'Roboto', 'Noto Sans KR',
-               -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
-  line-height: 1.5;
-  color: var(--gt-text);
-  background: var(--gt-bg);
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 24px 24px 48px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family:'Google Sans','Roboto','Noto Sans KR',-apple-system,sans-serif;
+  line-height:1.5; color:var(--text); background:var(--bg);
+  max-width:1280px; margin:0 auto; padding:20px 20px 48px;
+  -webkit-font-smoothing:antialiased;
 }
+header { padding:12px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px; }
+header h1 { font-size:26px; font-weight:700; letter-spacing:-0.5px; }
+header .sub { color:var(--text2); font-size:13px; margin-top:6px; }
+a { color:var(--blue); text-decoration:none; }
+a:hover { text-decoration:underline; }
 
-header {
-  padding: 16px 0 24px;
-  border-bottom: 1px solid var(--gt-divider);
-  margin-bottom: 32px;
-}
-header h1 {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--gt-text);
-}
-header .sub {
-  color: var(--gt-text-secondary);
-  font-size: 14px;
-  margin-top: 8px;
-  font-weight: 400;
-}
+/* 요약 카드 */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:20px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
+.card .label { font-size:13px; color:var(--text2); margin-bottom:8px; font-weight:500; }
+.card .value { font-size:30px; font-weight:500; letter-spacing:-0.5px; }
+.card.tone-red { background:rgba(242,139,130,.08); border-color:rgba(242,139,130,.35); }
+.card.tone-red .value { color:var(--red); }
+.card.tone-green { background:rgba(129,201,149,.08); border-color:rgba(129,201,149,.35); }
+.card.tone-green .value { color:var(--green); }
+.card.tone-blue { background:rgba(138,180,248,.08); border-color:rgba(138,180,248,.35); }
+.card.tone-blue .value { color:var(--blue); }
+.card.tone-purple { background:rgba(197,138,249,.08); border-color:rgba(197,138,249,.35); }
+.card.tone-purple .value { color:#a855f7; }
 
-nav { margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
-nav a {
-  color: var(--gt-blue);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: #e8f0fe;
-  transition: background 0.15s ease;
-}
-nav a:hover { background: #d2e3fc; text-decoration: none; }
+/* 카테고리 탭 */
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 12px; }
+.tab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2);
+       font-size:14px; font-weight:500; cursor:pointer; border:none; transition:all .15s; }
+.tab:hover { background:#e3e6e8; }
+.tab.active { background:var(--blue); color:#fff; }
+.tab .cnt { font-size:12px; opacity:.8; margin-left:4px; }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.card {
-  background: var(--gt-surface);
-  border: 1px solid var(--gt-border);
-  border-radius: 8px;
-  padding: 20px;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.card:hover {
-  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
-  border-color: transparent;
-}
-.card .label {
-  font-size: 14px;
-  color: var(--gt-text-secondary);
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-.card .value {
-  font-size: 36px;
-  font-weight: 500;
-  color: var(--gt-text);
-  letter-spacing: -0.8px;
-  line-height: 1.1;
-}
-/* 카드 색 톤 — 차트 4색 매핑 (배경은 같은 색 매우 옅게) */
-.card.tone-red {
-  background: rgba(242,139,130,0.08);
-  border-color: rgba(242,139,130,0.35);
-}
-.card.tone-red .value { color: var(--gt-red); }
+/* 필터 바 */
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;
+           padding:12px 16px; background:var(--hover); border-radius:8px; }
+.filter-group { display:flex; gap:4px; align-items:center; }
+.filter-group .lbl { font-size:12px; color:var(--text2); margin-right:4px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff; }
+.seg button { padding:6px 12px; border:none; background:#fff; font-size:13px; cursor:pointer; color:var(--text2); }
+.seg button.active { background:var(--blue); color:#fff; }
+.toggle { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text); cursor:pointer; }
+#search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
+          border-radius:20px; font-size:14px; background:#fff; }
+#search:focus { outline:none; border-color:var(--blue); }
 
-.card.tone-green {
-  background: rgba(129,201,149,0.08);
-  border-color: rgba(129,201,149,0.35);
-}
-.card.tone-green .value { color: var(--gt-green); }
+/* 채널 카드 그리드 */
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px; }
+.ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+           padding:16px; transition:box-shadow .2s; }
+.ch-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15); }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.ch-name { font-size:16px; font-weight:700; }
+.ch-meta { font-size:12px; color:var(--text2); margin-top:2px; }
+.ch-type { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--hover); color:var(--text2); white-space:nowrap; }
+.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:8px 0; }
+.ch-cat { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--chip); color:var(--blue); font-weight:500; }
+.ch-stats { display:flex; gap:12px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:12px; color:var(--text2); }
+.ch-stat b { font-size:15px; color:var(--text); font-weight:600; display:block; }
+.ch-stat.sig b { color:var(--red); }
+.ch-vid { margin-top:8px; }
+.ch-vid .vlabel { font-size:11px; color:var(--text2); font-weight:500; }
+.ch-vid .vtitle { font-size:13px; display:block; margin-top:2px; }
+.ch-vid .vmeta { font-size:11px; color:var(--text2); }
+.empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
 
-.card.tone-blue {
-  background: rgba(138,180,248,0.08);
-  border-color: rgba(138,180,248,0.35);
-}
-.card.tone-blue .value { color: var(--gt-blue); }
+section { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
+section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
+.archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:12px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:500; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
+.archive-grid a.today { background:var(--blue); border-color:var(--blue); color:#fff; }
+.nav-links { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; }
+.nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
+footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
 
-.card.tone-purple {
-  background: rgba(197,138,249,0.08);
-  border-color: rgba(197,138,249,0.35);
-}
-.card.tone-purple .value { color: var(--gt-yellow); }  /* yellow 변수가 실제 purple */
-
-section {
-  background: var(--gt-surface);
-  border: 1px solid var(--gt-border);
-  border-radius: 8px;
-  padding: 24px;
-  margin-bottom: 16px;
-}
-section h2 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  color: var(--gt-text);
-  letter-spacing: -0.2px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  margin: 4px 0;
-}
-th, td {
-  padding: 10px 12px;
-  text-align: left;
-  border-bottom: 1px solid var(--gt-divider);
-}
-th {
-  font-weight: 500;
-  color: var(--gt-text-secondary);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  background: transparent;
-}
-tr:hover td { background: var(--gt-hover-bg); }
-
-ul { padding-left: 18px; margin: 6px 0; }
-li { margin: 4px 0; font-size: 14px; }
-
-a { color: var(--gt-blue); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-code {
-  background: var(--gt-hover-bg);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: 'Roboto Mono', "SF Mono", Menlo, Consolas, monospace;
-  font-size: 12px;
-  color: var(--gt-text);
-}
-
-.cat-grid {
-  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
-}
-.cat-pill {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 6px 14px; border-radius: 20px;
-  background: #e8f0fe; color: var(--gt-blue);
-  font-size: 13px; font-weight: 500;
-}
-.cat-pill .cat-num {
-  background: var(--gt-blue); color: white;
-  padding: 1px 8px; border-radius: 10px; font-size: 12px;
-}
-.format-bar {
-  display: flex; gap: 16px; padding-top: 8px;
-  border-top: 1px solid var(--gt-divider);
-  color: var(--gt-text-secondary); font-size: 13px;
-}
-.format-bar b { color: var(--gt-text); font-weight: 500; margin-left: 4px; }
-
-.archive-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 8px;
-}
-.archive-grid a {
-  display: block;
-  background: var(--gt-surface);
-  border: 1px solid var(--gt-border);
-  padding: 12px 14px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--gt-text);
-  font-weight: 500;
-  transition: background 0.15s, border-color 0.15s;
-}
-.archive-grid a:hover {
-  background: var(--gt-hover-bg);
-  border-color: var(--gt-blue);
-  text-decoration: none;
-}
-.archive-grid a.today {
-  background: var(--gt-blue);
-  border-color: var(--gt-blue);
-  color: white;
-}
-
-footer {
-  text-align: center;
-  color: var(--gt-text-secondary);
-  font-size: 12px;
-  padding: 24px 0 8px;
-}
-
-@media (max-width: 600px) {
-  body { padding: 16px; }
-  header h1 { font-size: 22px; }
-  .cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .card { padding: 16px; }
-  .card .value { font-size: 26px; }
-  section { padding: 16px; }
-  table { font-size: 12px; }
-  th, td { padding: 8px 6px; }
+@media (max-width:600px) {
+  body { padding:14px; }
+  header h1 { font-size:21px; }
+  .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .card .value { font-size:24px; }
+  .ch-grid { grid-template-columns:1fr; }
+  .filters { flex-direction:column; align-items:stretch; }
 }
 </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -247,264 +106,149 @@ footer {
 <body>
   <header>
     <h1>📡 어레인지 유튜브 스캐너</h1>
-    <div class="sub">최종 갱신: 2026-05-27 21:38 · 추적 채널 46개</div>
-    <nav>
-      <a href="#summary">요약</a>
-      <a href="#trend">7일 추이</a>
-      <a href="#categories">카테고리</a>
-      <a href="#top">TOP 영상</a>
+    <div class="sub">최종 갱신: 2026-05-28 15:19 · 추적 채널 82개 · 기준일 2026-05-28</div>
+    <div class="nav-links">
+      <a href="#dashboard">대시보드</a>
+      <a href="news_2026-05-27.html">외부 영상 검색</a>
+      <a href="science_2026-05-27.html">🔬 과학 트렌드</a>
       <a href="#archive">아카이브</a>
-    </nav>
+    </div>
   </header>
 
-  <section id="summary">
-    <h2>📊 오늘(2026-05-27) 요약</h2>
+  <section id="dashboard" style="border:none; padding:0; background:none;">
     <div class="cards">
-      <div class="card tone-red">
-        <div class="label">🚨 알고리즘 시그널</div>
-        <div class="value">3</div>
-      </div>
-      <div class="card tone-green">
-        <div class="label">🔬 소형 폭발</div>
-        <div class="value">44</div>
-      </div>
-      <div class="card tone-blue">
-        <div class="label">🐳 대형 폭발</div>
-        <div class="value">21</div>
-      </div>
-      <div class="card tone-purple">
-        <div class="label">🆕 신영상 24h</div>
-        <div class="value">41</div>
-      </div>
-      <div class="card tone-red">
-        <div class="label">⚠️ 발행 둔화</div>
-        <div class="value">1</div>
-      </div>
-      <div class="card tone-blue">
-        <div class="label">🆕 신규 채널 후보</div>
-        <div class="value">137</div>
+      <div class="card tone-red"><div class="label">🚨 알고리즘 시그널</div><div class="value">0</div></div>
+      <div class="card tone-green"><div class="label">🔬 소형 폭발</div><div class="value">43</div></div>
+      <div class="card tone-blue"><div class="label">🐳 대형 폭발</div><div class="value">40</div></div>
+      <div class="card tone-purple"><div class="label">🆕 신영상 24h</div><div class="value">26</div></div>
+      <div class="card"><div class="label">🆕 신규 채널 후보</div><div class="value">197</div></div>
+    </div>
+
+    <canvas id="trendChart" height="90"></canvas>
+  </section>
+
+  <!-- 카테고리 탭 -->
+  <div class="tabs" id="catTabs">
+    <button class="tab active" data-cat="all">전체 <span class="cnt">82</span></button>
+    
+    <button class="tab" data-cat="경제">경제 <span class="cnt">49</span></button>
+    
+    <button class="tab" data-cat="역사">역사 <span class="cnt">8</span></button>
+    
+    <button class="tab" data-cat="지식">지식 <span class="cnt">18</span></button>
+    
+    <button class="tab" data-cat="심리학">심리학 <span class="cnt">0</span></button>
+    
+    <button class="tab" data-cat="과학">과학 <span class="cnt">11</span></button>
+    
+    <button class="tab" data-cat="시사">시사 <span class="cnt">17</span></button>
+    
+    <button class="tab" data-cat="정치">정치 <span class="cnt">1</span></button>
+    
+  </div>
+
+  <!-- 필터 바 -->
+  <div class="filters">
+    <input type="text" id="search" placeholder="🔍 채널명 검색...">
+    <div class="filter-group">
+      <span class="lbl">형식</span>
+      <div class="seg" id="formatSeg">
+        <button class="active" data-fmt="all">전체</button>
+        <button data-fmt="long">🎬 롱폼</button>
+        <button data-fmt="short">📱 쇼츠</button>
       </div>
     </div>
-  </section>
+    <label class="toggle"><input type="checkbox" id="excludeLarge"> 대형채널 제외</label>
+    <label class="toggle"><input type="checkbox" id="onlyHot"> 폭발/시그널만</label>
+  </div>
 
-  <section id="trend">
-    <h2>📈 최근 7일 추이</h2>
-    <canvas id="trendChart" height="120"></canvas>
-  </section>
+  <div class="ch-grid" id="chGrid"></div>
 
-  <section id="categories">
-    <h2>🏷️ 카테고리별 (시그널·폭발 영상 수)</h2>
-    
-    <div class="cat-grid">
-      
-        <div class="cat-pill">
-          <span class="cat-name">경제</span>
-          <span class="cat-num">48</span>
-        </div>
-      
-        <div class="cat-pill">
-          <span class="cat-name">지식</span>
-          <span class="cat-num">17</span>
-        </div>
-      
-        <div class="cat-pill">
-          <span class="cat-name">시사</span>
-          <span class="cat-num">5</span>
-        </div>
-      
-        <div class="cat-pill">
-          <span class="cat-name">역사</span>
-          <span class="cat-num">2</span>
-        </div>
-      
-    </div>
-    <div class="format-bar">
-      <span>🎬 롱폼 <b>59</b></span>
-      <span>📱 쇼츠 <b>6</b></span>
-      <span>❓ 미확인 <b>0</b></span>
-    </div>
-    
-  </section>
-
-  <section id="top">
-    <h2>🔥 오늘 TOP 폭발 영상 (효율·velocity 결합)</h2>
-    
-    <table>
-      <thead><tr><th>#</th><th>채널</th><th>카테고리</th><th>포맷</th><th>제목</th><th>효율</th><th>vel</th><th>조회</th></tr></thead>
-      <tbody>
-      
-        <tr>
-          <td>1</td>
-          <td>경제대부</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=yT-_vXIIqRU" target="_blank">&quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국...</a></td>
-          <td>62.4x</td>
-          <td>0/h</td>
-          <td>184,116</td>
-        </tr>
-      
-        <tr>
-          <td>2</td>
-          <td>농부의 경제학</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=25tCUGqi6tY" target="_blank">&quot;반도체 독식은 지속...</a></td>
-          <td>28.7x</td>
-          <td>15/h</td>
-          <td>107,227</td>
-        </tr>
-      
-        <tr>
-          <td>3</td>
-          <td>경제읽음이</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=DBAtINf_tDQ" target="_blank">엔비디아가 삼성·SK 놔두고 1000억 베팅한 무명 회사의 진짜 정체</a></td>
-          <td>23.8x</td>
-          <td>707/h</td>
-          <td>304,382</td>
-        </tr>
-      
-        <tr>
-          <td>4</td>
-          <td>궁금한경제학</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=j9se0u-V2Nk" target="_blank">“누가 요즘 새차사요?” 도로 위 10대중 4대가 10년 넘은 노후차......</a></td>
-          <td>23.5x</td>
-          <td>72/h</td>
-          <td>78,957</td>
-        </tr>
-      
-        <tr>
-          <td>5</td>
-          <td>경제균열</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=0u3wHhqxceA" target="_blank">삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언에 진짜 이유</a></td>
-          <td>23.7x</td>
-          <td>1/h</td>
-          <td>417,898</td>
-        </tr>
-      
-        <tr>
-          <td>6</td>
-          <td>탐정 경제학</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=NXIcyN1WwSY" target="_blank">북한군 128만의 허상, 핵무기의 한계, 그리고 붕괴 72시간 시나리오 [통합본]</a></td>
-          <td>21.4x</td>
-          <td>3/h</td>
-          <td>355,753</td>
-        </tr>
-      
-        <tr>
-          <td>7</td>
-          <td>경제왕토끼</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=czy8dA-NPCc" target="_blank">&quot;시청률 0.5%&quot; 갑질하던 방송국의 처참한 몰락,...</a></td>
-          <td>18.6x</td>
-          <td>64/h</td>
-          <td>373,619</td>
-        </tr>
-      
-        <tr>
-          <td>8</td>
-          <td>경제왕토끼</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=EGF6neqw3hs" target="_blank">2026년 대한민국 자산별 8계급, 여러분은 몇 층에 계신가요?</a></td>
-          <td>13.7x</td>
-          <td>206/h</td>
-          <td>275,344</td>
-        </tr>
-      
-        <tr>
-          <td>9</td>
-          <td>탐정 경제학</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=nF1KP1Gnd24" target="_blank">&quot;13조를 퍼줬는데 1조도 못 받았다&quot; 김정은이 푸틴한테...</a></td>
-          <td>13.5x</td>
-          <td>131/h</td>
-          <td>223,986</td>
-        </tr>
-      
-        <tr>
-          <td>10</td>
-          <td>농부의 경제학</td>
-          <td>경제</td>
-          <td>🎬</td>
-          <td><a href="https://www.youtube.com/watch?v=_CfiOeykmrQ" target="_blank">삼전·닉스 들고 계신가요? 이번주...</a></td>
-          <td>13.2x</td>
-          <td>9/h</td>
-          <td>49,254</td>
-        </tr>
-      
-      </tbody>
-    </table>
-    
-  </section>
-
-  <section id="archive">
+  <section id="archive" style="margin-top:24px;">
     <h2>📅 일별 리포트 아카이브</h2>
     <div class="archive-grid">
-      
-        <a href="daily_2026-05-27.html" class="today">2026-05-27</a>
-      
-        <a href="daily_2026-05-26.html" class="">2026-05-26</a>
-      
-        <a href="daily_2026-05-19.html" class="">2026-05-19</a>
-      
+      <a href="daily_2026-05-28.html" class="today">2026-05-28</a><a href="daily_2026-05-27.html" class="">2026-05-27</a><a href="daily_2026-05-26.html" class="">2026-05-26</a><a href="daily_2026-05-19.html" class="">2026-05-19</a>
     </div>
-    
-    <h2 style="margin-top:20px;">🌐 외부 영상 검색 (뉴스 키워드)</h2>
-    <div class="archive-grid">
-      
-        <a href="news_2026-05-27.html">2026-05-27</a>
-      
-    </div>
-    
   </section>
 
-  <footer>autoworkers monitoring · built 2026-05-27 21:38</footer>
+  <footer>arrange yt scanner · built 2026-05-28 15:19</footer>
 
   <script>
-    const ctx = document.getElementById('trendChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ["05-21", "05-22", "05-23", "05-24", "05-25", "05-26", "05-27"],
-        datasets: [
-          { label: '시그널', data: [0, 0, 0, 0, 0, 0, 3], borderColor: '#f28b82', backgroundColor: 'rgba(242,139,130,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
-          { label: '소형 폭발', data: [0, 0, 0, 0, 0, 0, 44], borderColor: '#81c995', backgroundColor: 'rgba(129,201,149,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
-          { label: '대형 폭발', data: [0, 0, 0, 0, 0, 0, 21], borderColor: '#8ab4f8', backgroundColor: 'rgba(138,180,248,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false },
-          { label: '신영상', data: [0, 0, 0, 0, 0, 0, 41], borderColor: '#c58af9', backgroundColor: 'rgba(197,138,249,0.12)', tension: 0.4, borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: '#fff', pointBorderWidth: 2, fill: false }
-        ]
-      },
-      options: {
-        responsive: true,
-        interaction: { mode: 'index', intersect: false },
-        plugins: {
-          legend: {
-            position: 'top',
-            align: 'start',
-            labels: { font: { family: "'Google Sans', 'Roboto', sans-serif", size: 13 }, color: '#5f6368', padding: 16, boxWidth: 12, boxHeight: 12, usePointStyle: true }
-          },
-          tooltip: {
-            backgroundColor: '#ffffff', titleColor: '#202124', bodyColor: '#5f6368',
-            borderColor: '#dadce0', borderWidth: 1, padding: 12,
-            titleFont: { family: "'Google Sans', sans-serif", weight: '500', size: 13 },
-            bodyFont: { family: "'Roboto', sans-serif", size: 12 }, displayColors: true
-          }
-        },
-        scales: {
-          y: { beginAtZero: true, ticks: { stepSize: 1, color: '#5f6368', font: { size: 11 } }, grid: { color: '#f1f3f4', drawBorder: false } },
-          x: { ticks: { color: '#5f6368', font: { size: 11 } }, grid: { display: false } }
+    const CHANNELS = [{"categories": ["\uc9c0\uc2dd", "\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 5, "latest_video": null, "name": "\uc9c0\uc2dd\uc778\uc0ac\uc774\ub4dc", "new_count": 0, "signal_count": 0, "subscribers": 3830000, "top_video": {"efficiency": 0.2930342036553525, "format": "long", "id": "UY_5u8K6_gw", "title": "\uc778\uc0dd\uc744 \ub108\ubb34 \uc9c4\uc9c0\ud558\uac8c \uc0b4\uba74 \uc548 \ub418\ub294 \uc774\uc720\u3163\uc9c0\uc2dd\uc778\ucd08\ub300\uc11d EP.135 (\ubcf4\ub9cc \uc2a4\ub2d8 1\ubd80)", "views": 1122321}, "type": "\ub300\ud615", "weekly_rate": 3.5}, {"categories": ["\uc9c0\uc2dd", "\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\ubcf4\ub2e4 BODA", "new_count": 0, "signal_count": 0, "subscribers": 3100000, "top_video": {"efficiency": 0.2241041935483871, "format": "long", "id": "KSw7CuSoNy0", "title": "\ubb34\ub108\uc9c4 \uc77c\ubcf8 \uc655 \ubb34\ub364\uc5d0\uc11c \uc3df\uc544\uc9c4 \ucda9\uaca9\uc801\uc778 \uc720\ubb3c\ub4e4..(\ucd9c\uc2e0\uc774..\uc6b0\ub9ac\ucabd?)\u3163\uc5ed\uc0ac\ub97c \ubcf4\ub2e4 EP.140", "views": 694723}, "type": "\ub300\ud615", "weekly_rate": 2.5}, {"categories": ["\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 6, "latest_video": null, "name": "\ud06c\ub7a9 KLAB", "new_count": 0, "signal_count": 0, "subscribers": 1000000, "top_video": {"efficiency": 0.884798, "format": "long", "id": "62F9ITNVf0s", "title": "\uc228\uaca8\uc9c4 \uc554\ud638\uac00 \uc774\ub807\uac8c \ub9ce\uc558\ub2e4\uace0? \ub09c\ub9ac\ub09c \uc2a4\ud0c0\ubc85\uc2a4 \uc774\ubca4\ud2b8 \ub17c\ub780 6\ubd84 \uc815\ub9ac\uff5c\ud06c\ub7a9", "views": 884798}, "type": "\uc77c\ubc18+AI", "weekly_rate": 3.5}, {"categories": ["\uc9c0\uc2dd", "\uc2dc\uc0ac", "\uacbd\uc81c"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\uad50\uc591\uc774\ub97c \ubd80\ud0c1\ud574", "new_count": 0, "signal_count": 0, "subscribers": 433000, "top_video": {"efficiency": 0.8023487297921478, "format": "long", "id": "PVdHWITuQrk", "title": "[\uc9c0\uc2dd\ub274\uc2a4] \"30\ub144 \uae30\uc801\uc758 \uc2dc\ub300 \ub05d\ub0ac\ub2e4\" \ucda9\uaca9\uc801 \uc800\uae08\ub9ac\uc758 \uc885\ub9d0..\uc601\ub04c\u2022\ube5a\ud22c? \uce58\uc19f\ub294 \ubbf8 \uad6d\ucc44\uae08\ub9ac\uc758", "views": 347417}, "type": "\uc77c\ubc18, \ub274\uc2a4", "weekly_rate": 2.5}, {"categories": ["\uc2dc\uc0ac", "\uc815\uce58"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc2dc\uc0ac\uc800\ub110TV", "new_count": 0, "signal_count": 0, "subscribers": 761000, "top_video": null, "type": "\uc77c\ubc18, \ub274\uc2a4", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "a6qKHN2-c9o", "title": "(\ud604\uc7a5\uc601\uc0c1) \u0027\ud55c\ub355\uc218 \uc7ac\ud310 \uc704\uc99d\u0027 \uc724\uc11d\uc5f4 \ubb34\uc8c4 \uc120\uace0 \uc21c\uac04..\ubcc0\ud638\uc778\ub2e8 \u0027\ub044\ub355\u0027 \uc6c3\uc74c \ud130\uc9c4 \uae40\uacc4\ub9ac", "views": 317}, "name": "\uc5e0\ud0a4\ud0c0\uce74 MKTK", "new_count": 5, "signal_count": 0, "subscribers": 1070000, "top_video": null, "type": "\uc77c\ubc18, \ub274\uc2a4", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc8fc\uc2dd\uc6d0\uc0f7", "new_count": 0, "signal_count": 0, "subscribers": 201000, "top_video": null, "type": "\uc77c\ubc18, \ub274\uc2a4", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c", "\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "tK12lSA3UvE", "title": "\"\uc0bc\uc131\uc804\uc790 \uc9c0\uae08\uc774\ub77c\ub3c4 \uc4f8\uc5b4 \ub2f4\uc73c\uc138\uc694\", \ub2e8 \u0027\uc774 \uc2e0\ud638\u0027 \ub728\uba74 \ubb34\uc870\uac74 \ub3c4\ub9dd\uac00\uc154\uc57c \ud569\ub2c8\ub2e4 ( \u110e\u1161\u110b\u1167\u11bc", "views": 4512}, "name": "\uacbd\uc81c \uc6d0\ud0d1", "new_count": 1, "signal_count": 0, "subscribers": 474000, "top_video": null, "type": "\uc77c\ubc18, \ub274\uc2a4", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c", "\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 3, "latest_video": null, "name": "\uc138\uacc4\uacbd\uc81c \ub3cb\ubcf4\uae30", "new_count": 0, "signal_count": 0, "subscribers": 6660, "top_video": {"efficiency": 14.921021021021021, "format": "long", "id": "GmVCT_CfQWU", "title": "\uc911\uad6d \uc0bc\ud611\ub310, \uc138\uacc4 \ucd5c\ub300 \ub310\uc758 \uc800\uc8fc #\uc138\uacc4\uc774\uc288", "views": 99374}, "type": "\uc77c\ubc18, \ub274\uc2a4", "weekly_rate": 3.5}, {"categories": ["\uc9c0\uc2dd", "\uc2dc\uc0ac", "\uc815\uce58"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uac04\ub2e4\ud6a8", "new_count": 0, "signal_count": 0, "subscribers": 736000, "top_video": {"efficiency": 0.3000760869565217, "format": "long", "id": "K6H8O4yxvL4", "title": "\ub3c5\uc77c\uc5d0\uc11c \ubbf8\uad70\uc774 \ucca0\uc218\ud55c\ub2e4", "views": 220856}, "type": "\uc77c\ubc18", "weekly_rate": 2.0}, {"categories": ["\uacbd\uc81c", "\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\uba38\ub2c8\uc778\uc0ac\uc774\ub4dc", "new_count": 0, "signal_count": 0, "subscribers": 2060000, "top_video": {"efficiency": 0.5087271844660194, "format": "long", "id": "L_g1h2oVZv0", "title": "\"\ub178\ud6c4\ub294 \uc644\ubcbd\ud558\uac8c \ud574\uacb0\ub429\ub2c8\ub2e4\" \uc6d4\uae09\uc5d0\uc11c \ub531 50\ub9cc \uc6d0\ub9cc \u0027\uc774 \uacc4\uc88c\u0027\uc5d0 \ub123\uc73c\uc138\uc694 (\ubc15\uacf0\ud76c \uc791\uac00 2\ubd80)", "views": 1047978}, "type": "\uc77c\ubc18", "weekly_rate": 3.5}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\uae40\uc9c0\uc724\uc758 \uc9c0\uc2ddPlay", "new_count": 0, "signal_count": 0, "subscribers": 1390000, "top_video": {"efficiency": 0.3717517985611511, "format": "long", "id": "6l5Id1WK-n0", "title": "UAE\uc758 OPEC\ud0c8\ud1f4, \uc804\uc7c1 \uc911\uc778 \uc9c0\uae08 \ub610 \uc65c..?", "views": 516735}, "type": "\uc77c\ubc18", "weekly_rate": 1.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uc190\uc5d0\uc7a1\ud788\ub294\uacbd\uc81c", "new_count": 0, "signal_count": 0, "subscribers": 466000, "top_video": {"efficiency": 0.6990751072961373, "format": "long", "id": "hMpgmdw91hQ", "title": "[\ucee4\ud53c\ud0c0\uc784] \uc0bc\uc804\ub2c9\uc2a4, \uc0cc\ub514\uc2a4\ud06c \ub2e4\uc74c \ud0c0\uc790\ub294? - \uc774\uc9c4\uc6b0, \uae40\uc815\ud638\uad50\uc218, \ubc15PD", "views": 325769}, "type": "\uc77c\ubc18", "weekly_rate": 3.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 3, "latest_video": null, "name": "\uba38\ub2c8\ucf54\ubbf9\uc2a4", "new_count": 0, "signal_count": 0, "subscribers": 1380000, "top_video": {"efficiency": 0.2079753623188406, "format": "long", "id": "ryF63KH2INY", "title": "\uc783\uc740\ub9cc\ud07c \ubcf5\uad6c\ud558\uba74 \ub808\ubc84\ub9ac\uc9c0 \ub04a\uc744 \uac70\uc608\uc694", "views": 287006}, "type": "\uc77c\ubc18", "weekly_rate": 3.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\ub9cc\uc57d\uc5d0 \uba38\ub2c8", "new_count": 0, "signal_count": 0, "subscribers": 30900, "top_video": {"efficiency": 3.2976375404530742, "format": "long", "id": "A5E-2sukBgo", "title": "2026 \uad6d\ubbfc\uc131\uc7a5\ud380\ub4dc \uac00\uc785\uc804 \ud544\uc218 \ud655\uc778! 5060\uc774 \ubc18\ub4dc\uc2dc \ud53c\ud574\uc57c \ud560 \ud568\uc815 3\uac00\uc9c0 (\uc18c\ub4dd\uacf5\uc81c, \ubd84\ub9ac", "views": 101897}, "type": "AI", "weekly_rate": 2.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "qdvyByllEVw", "title": "\"600\uc5b5 \ub4e4\uace0 \uc57c\ubc18\ub3c4\uc8fc\" \uc138\uacc4 1\uc704 BYD\uac00 \ubb34\ub108\uc9c4 76\uc870 \ube5a\uc758 \uc9c4\uc9dc \uc815\uccb4", "views": 0}, "name": "\uc584\uad82\uc740 \uacbd\uc81c\ud559", "new_count": 1, "signal_count": 0, "subscribers": 5930, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uacbd\uc81c\ub300\ubd80", "new_count": 0, "signal_count": 0, "subscribers": 2950, "top_video": {"efficiency": 62.41288135593221, "format": "long", "id": "yT-_vXIIqRU", "title": "\"\ud658\uacbd\ubd80\ub3c4, \uce74\uc774\uc2a4\ud2b8\ub3c4 \uc804\ubd80 \uc778\uc815\ud588\ub294\ub370...\" \uc804\uad6d \uc8fc\uc720\uc18c \ub4a4\ud754\ub4e0 990\uc6d0 \uc138\ub179\uc2a4\uac00 \uc644\uc804\ud788 \uc0ac\ub77c\uc9c4 ", "views": 184118}, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uacbd\uc81c\uc6d4\ub4dc", "new_count": 0, "signal_count": 0, "subscribers": 19600, "top_video": null, "type": "AI", "weekly_rate": 2.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 4, "latest_video": null, "name": "\uacbd\uc81c\uc655\ud1a0\ub07c", "new_count": 0, "signal_count": 0, "subscribers": 20200, "top_video": {"efficiency": 18.591633663366338, "format": "long", "id": "czy8dA-NPCc", "title": "\"\uc2dc\uccad\ub960 0.5%\" \uac11\uc9c8\ud558\ub358 \ubc29\uc1a1\uad6d\uc758 \ucc98\ucc38\ud55c \ubab0\ub77d, \uc678\uba74\ub2f9\ud55c 3\uac00\uc9c0 \uc9c4\uc9dc \uc774\uc720", "views": 375551}, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": [], "hot_count": 0, "latest_video": null, "name": "\uc190\uc548\uc758 \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 0, "top_video": null, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uba38\ub2c8 \ud06c\ub798\uc2dc", "new_count": 0, "signal_count": 0, "subscribers": 6480, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uacbd\uc81c\uade0\uc5f4", "new_count": 0, "signal_count": 0, "subscribers": 17600, "top_video": {"efficiency": 23.74505681818182, "format": "long", "id": "0u3wHhqxceA", "title": "\uc0bc\uc131 \uadc0\uc871 \ub178\uc870\uc758 \ucd5c\ud6c4! \ud3c9\ud0dd \uacf5\uc7a5 \ud574\uccb4 \uba85\ub839\uacfc \uc0ac\ub78c \uc5c6\ub294 \uacf5\uc7a5 \uc120\uc5b8\uc5d0 \uc9c4\uc9dc \uc774\uc720", "views": 417913}, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uacbd\uc81c\uc77d\uc74c\uc774", "new_count": 0, "signal_count": 0, "subscribers": 13100, "top_video": {"efficiency": 24.486870229007632, "format": "long", "id": "DBAtINf_tDQ", "title": "\uc5d4\ube44\ub514\uc544\uac00 \uc0bc\uc131\u00b7SK \ub194\ub450\uace0 1000\uc5b5 \ubca0\ud305\ud55c \ubb34\uba85 \ud68c\uc0ac\uc758 \uc9c4\uc9dc \uc815\uccb4", "views": 320778}, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\ubbf8\ub2c8\uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 28400, "top_video": {"efficiency": 7.494788732394366, "format": "long", "id": "VqJZ6Na5HTk", "title": "\"\uc2dc\uc9c4\ud551 \ub54c\ubb38\uc5d0 \ub9dd\ud588\ub2e4\" \uc911\uad6d \uacbd\uc81c \uc644\uc804 \ubd95\uad34\uc758 \ucda9\uaca9\uc801 \uc9c4\uc2e4!", "views": 212852}, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\ubaa8\ub450\uc758 \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 35500, "top_video": {"efficiency": 2.6481971830985915, "format": "long", "id": "8XrF4DJ0u18", "title": "\uac00\uc804\uc81c\ud488 \ub9cc\ub4dc\ub294 \ud68c\uc0ac\uc778\uc904 \uc54c\uc558\ub294\ub370.. LG\uac00 \uc138\uacc4 \ucd5c\ucd08\ub85c \uc591\uc0b0\ud558\uc790 \uc804\uc138\uacc4 \ubc1c\uce75 \ub4a4\uc9d1\ud614\ub2e4", "views": 94011}, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 4, "latest_video": null, "name": "\ubc29\uad6c\uc11d \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 20900, "top_video": {"efficiency": 6.531626794258373, "format": "long", "id": "83bCn6Zth00", "title": "\uc815\ubd80\uac00 \uc808\ub300 \ub9d0 \uc548 \ud558\ub294 \ud55c\uad6d \uacbd\uc81c\uc758 \ubd88\ud3b8\ud55c \uc9c4\uc2e4 7\uac00\uc9c0", "views": 136511}, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\ub9cc\ud654 \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 76900, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 3, "latest_video": null, "name": "\ub18d\ubd80\uc758 \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 3740, "top_video": {"efficiency": 28.735561497326202, "format": "long", "id": "25tCUGqi6tY", "title": "\"\u1107\u1161\u11ab\u1103\u1169\u110e\u1166 \u1103\u1169\u11a8\u1109\u1175\u11a8\u110b\u1173\u11ab \u110c\u1175\u1109\u1169\u11a8 \u1107\u116e\u11af\u1100\u1161\u1102\u1173\u11bc\u1112\u1161\u1103\u1161\" \u110b\u116f\u11af\u1100\u1161\u1100\u1161 \u110c\u1169\u110b\u116d\u11bc\u1112\u1175 ", "views": 107471}, "type": "AI", "weekly_rate": 2.5}, {"categories": ["\uc5ed\uc0ac", "\uacbd\uc81c"], "formats": ["long"], "hot_count": 3, "latest_video": null, "name": "\uc5ed\uc0ac\uacbd\uc81c\ud574\uacb0\uc0ac", "new_count": 0, "signal_count": 0, "subscribers": 15500, "top_video": {"efficiency": 2.9533548387096773, "format": "long", "id": "KURmF8qnDec", "title": "\"\uc0bc\uc131\u00b7\ud558\uc774\ub2c9\uc2a4 2\ubc30 ETF \uc0c1\uc7a5 \uccab\ub0a0 \ub300\uaca9\ubcc0 \uc2dc\uc791\" KODEX +30% \ud3ed\ub4f1 \ud6c4 \ucd94\ub77d\ud55c \uc9c4\uc9dc \uc774\uc720", "views": 45777}, "type": "AI", "weekly_rate": 3.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 5, "latest_video": null, "name": "\ud0d0\uc815 \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 16600, "top_video": {"efficiency": 21.43487951807229, "format": "long", "id": "NXIcyN1WwSY", "title": "\ubd81\ud55c\uad70 128\ub9cc\uc758 \ud5c8\uc0c1, \ud575\ubb34\uae30\uc758 \ud55c\uacc4, \uadf8\ub9ac\uace0 \ubd95\uad34 72\uc2dc\uac04 \uc2dc\ub098\ub9ac\uc624 [\ud1b5\ud569\ubcf8]", "views": 355819}, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc9d1\uad6c\uc11d\uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 118000, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\ud478\uc9d0\ud55c \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 38200, "top_video": {"efficiency": 1.0054973821989528, "format": "long", "id": "MsWoEwz9xT4", "title": "\"\uce6d\uae30\uc988\uce78\uae4c\uc9c0 \ube8f\uc73c\ub824\ub294 \uc911\uad6d, 800\ub144 \ub9cc\uc5d0 \ub2e4\uc2dc \uc2dc\uc791\ub41c \ubabd\uace8\uc758 \uac70\ub300\ud55c \ubcf5\uc218\uadf9\"", "views": 38410}, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\ud32c\ub354\uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 30200, "top_video": {"efficiency": 2.2173509933774835, "format": "long", "id": "KcwAkbYtgmU", "title": "\uc131\uacfc\uae09 6\uc5b5 \ubc1b\uc558\ub294\ub370...\" \uc0bc\uc131 \ub178\uc870 \uc9c1\uc6d0\ub4e4 \ud1b5\uc7a5\uc740 0\uc6d0\uc778 \uc9c4\uc9dc \uc774\uc720", "views": 66964}, "type": "AI", "weekly_rate": 3.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc0c8\uc2f9\uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 29600, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\ub7ed\ud0a4\uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 19300, "top_video": {"efficiency": 19.442020725388602, "format": "long", "id": "4qLCUYg40aU", "title": "\"\uc5b4\ub514\ud55c\ubc88 \ub05d\uae4c\uc9c0 \ud574\ubd10\ub77c\" 45\uc870 \uc694\uad6c\ud55c \uc0bc\uc131 \uadc0\uc871 \ub178\uc870\uc758 \ucd5c\ud6c4\uff5c\uc0bc\uc131 \ub178\uc870 \ud30c\uc5c5 \ucd1d\uc815\ub9ac", "views": 375231}, "type": "AI", "weekly_rate": 1.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": {"format": "long", "id": "g-YPfGPNAkE", "title": "\ub124\uc774\ubc84\uac00 \ud3ec\uae30\ud55c AI\u202630\uc870 \ub4e4\uace0 \ud55c\uad6d \uc628 \uc0ac\uc6b0\ub514 \uc655\uc790\ub4e4\uc774 \ub178\ub9ac\ub294 \uc9c4\uc9dc \ud55c \uacf3", "views": 170}, "name": "\ud074\ub9ad \uacbd\uc81c\ud559", "new_count": 1, "signal_count": 0, "subscribers": 15000, "top_video": {"efficiency": 1.5702666666666667, "format": "long", "id": "FjgPcg-x6sU", "title": "100\uc870 \ub9c9\uc740 \uc0bc\uc131, \uc0ac\uc2e4 \ub178\uc870\uc5d0 \u0027\uc791\ubcc4 \uc778\uc0ac\u0027 \ud588\uc2b5\ub2c8\ub2e4", "views": 23554}, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": [], "hot_count": 0, "latest_video": null, "name": "\uc194\uc9c1\ud55c \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 0, "top_video": null, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\uadc0\uc5d0\uc3d9\uc3d9\uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 12500, "top_video": {"efficiency": 3.4948, "format": "long", "id": "l2828LbhXpE", "title": "\ubc95\uc6d0 1\uc77c\ub2f9 1\uc5b5 \ubc30\uc0c1\ud558\ub77c, \uc0bc\uc131 \ub178\uc870 \ucd1d\ud30c\uc5c5 \ub05d\ub0ac\ub2e4", "views": 43685}, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc6d0\uac00 \uacf5\uac1c \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 12000, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc900\uc758\uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 5450, "top_video": null, "type": "AI", "weekly_rate": 3.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uad81\uae08\ud55c\uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 3380, "top_video": {"efficiency": 24.08491124260355, "format": "long", "id": "j9se0u-V2Nk", "title": "\u201c\ub204\uac00 \uc694\uc998 \uc0c8\ucc28\uc0ac\uc694?\u201d \ub3c4\ub85c \uc704 10\ub300\uc911 4\ub300\uac00 10\ub144 \ub118\uc740 \ub178\ud6c4\ucc28... \ud5c8\ub9ac\ub760 \uc878\ub77c\ub9e4\ub294 \ub300\ud55c\ubbfc\uad6d", "views": 81407}, "type": "AI", "weekly_rate": 3.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": {"format": "long", "id": "YB89qJ1POQc", "title": "\"\uc2a4\ud0c0\ubc85\uc2a4 \ud0f1\ud06c\ub370\uc774\uc5d0 \uc678\uad6d\uc774 \ud55c\uad6d\uc744 \uc0c8\ub85c \ubd80\ub974\uae30 \uc2dc\uc791?\"\uc678\uad6d\uc778\ub4e4\uc774 \uc790\uae30 SNS\uc5d0 \uc801\uc740 \ud55c\uad6d \uc774\uc57c\uae30 ", "views": 204}, "name": "\ud401\ud401\ud401\uacbd\uc81c\ud559", "new_count": 1, "signal_count": 0, "subscribers": 3370, "top_video": {"efficiency": 9.011275964391691, "format": "long", "id": "x2EkGjZA8Rc", "title": "\"\ud55c\uad6d\uc774 \uadf8\ub807\uac8c \ubb34\uc11c\uc6b4 \uc2dc\uc7a5\uc774\uc5c8\uc5b4?\"\uc2a4\ud0c0\ubc85\uc2a4 \ud0f1\ud06c\ub370\uc774 \ud55c \uc904\uc5d0 \ubbf8\uad6d \ubcf8\uc0ac\uac00 \uc77c\uc8fc\uc77c \ub9cc\uc5d0 \ubb34\ub98e \uafc7\uc740 ", "views": 30368}, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\ucf54\ubbf9\uc2a4 \uacbd\uc81c", "new_count": 0, "signal_count": 0, "subscribers": 1570, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uc27d\uac8c\uc774\ud574\ub418\ub294 \uacbd\uc81c", "new_count": 0, "signal_count": 0, "subscribers": 1540, "top_video": {"efficiency": 8.134415584415585, "format": "long", "id": "9poYKzIKaf8", "title": "\uc77c\ud558\ub294 60\ub300\uc640 \uc26c\ub294 60\ub300\uc758 \uacb0\uc815\uc801 \ucc28\uc774\uff5c5\ub144 \ud6c4 \uac74\uac15\uacfc \uc778\uc0dd\uc774 \uc644\uc804\ud788 \uac08\ub838\uc2b5\ub2c8\ub2e4!", "views": 12527}, "type": "AI", "weekly_rate": 3.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uae4c\uce60\ud55c \ubc0d\uad11\uc758 \uacbd\uc81c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 1120, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uacbd\uc81c\ub530\ub77c\uc7a1\uae30", "new_count": 0, "signal_count": 0, "subscribers": 1070, "top_video": null, "type": "AI", "weekly_rate": 3.0}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uc0ac\ubb3c\uad81\uc774 \uc7a1\ud559\uc9c0\uc2dd", "new_count": 0, "signal_count": 0, "subscribers": 1560000, "top_video": {"efficiency": 0.13157692307692306, "format": "long", "id": "CgIcdajLiM0", "title": "\ubc25 \uba39\uace0 \uc5b8\uc81c \uc0b0\ucc45\ud574\uc57c \ubab8\uc5d0 \uac00\uc7a5 \uc88b\uc744\uae4c?", "views": 205260}, "type": "\ub300\ud615", "weekly_rate": 1.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\ubd80\uc77d\ub0a8TV_\ub0b4\uc9d1\ub9c8\ub828\ubd80\ud130\uac74\ubb3c\uc8fc\uae4c\uc9c0", "new_count": 0, "signal_count": 0, "subscribers": 1780000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 2.5}, {"categories": ["\uc9c0\uc2dd", "\uacfc\ud559", "\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "Q-lt1G7ozHI", "title": "[\ub098\uc758 \ub450 \ubc88\uc9f8 \uad50\uacfc\uc11c \uc2dc\uc98c3] \u2013 \ubb38\ud559 1\uac15 \uc0ac\ub7911 - \uc778\uac04\uc774\ub77c\ub294 \uc99d\uac70", "views": 152}, "name": "EBSCulture (EBS \uad50\uc591)", "new_count": 1, "signal_count": 0, "subscribers": 2990000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "XOrOtUhm6G8", "title": "\uc911\uad6d\uc758 \ub300\ub9cc \uce68\uacf5 \ubc1c\uc5b8\uc5d0\ub3c4 \ud2b8\ub7fc\ud504\uac00 \uce68\ubb35\ud55c \uc774\uc720(ft.\uc870\ud55c\ubc94 \ubc15\uc0ac 1\ubd80)", "views": 765}, "name": "\uc804\uc778\uad6c\uacbd\uc81c\uc5f0\uad6c\uc18c", "new_count": 1, "signal_count": 0, "subscribers": 1280000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 3.0}, {"categories": ["\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\ub85c\ube48\uc758 \uc5ed\uc0ac \uae30\ub85d", "new_count": 0, "signal_count": 0, "subscribers": 473000, "top_video": null, "type": "AI", "weekly_rate": 1.0}, {"categories": ["\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\ud55c\ubc24\uc758 \ud55c\uad6d\uc0ac", "new_count": 0, "signal_count": 0, "subscribers": 4010, "top_video": {"efficiency": 10.32493765586035, "format": "long", "id": "NRtLHrlkspU", "title": "\uc870\uc120\uc655\uc870\uc2e4\ub85d\uc5d0 3000\ubc88 \ub4f1\uc7a5\ud558\ub294 \ub2e8 \ud55c \uc0ac\ub78c\u3163\uc219\uc885\uc758 \uc0ac\uc57d\uc744 \uc138 \uc0ac\ubc1c\uc774\ub098 \ub9c8\uc2e0 \ub178\ub860 \uc601\uc218\u3163\uc6b0\uc554 \uc1a1\uc2dc", "views": 41403}, "type": "AI", "weekly_rate": 1.0}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\ubc29\uc1a1\ub300 \uc9c0\uc2dd+", "new_count": 0, "signal_count": 0, "subscribers": 907000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 1.5}, {"categories": ["\uc2ec\ub9ac\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc2ec\ub9ac\ud559\uc790 \ucc28\ud76c\uc5f0", "new_count": 0, "signal_count": 0, "subscribers": 366000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 1.5}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "DU_45eOQtpM", "title": "\uc5b4\ub974\uc2e0\ub4e4\uc774 \ud55c \uc2dc\uac04\uc774\ub098 \uc904 \uc11c\uc11c \uc5b4\ub5bb\uac8c\ub4e0 \uc0ac \uba39\uace0 \uac04\ub2e4\ub294 \uc74c\uc2dd\uc758 \uc815\uccb4\uff5c\ud55c\uad6d\uae30\ud589\uff5c#\uace8\ub77c\ub4c4\ub2e4\ud050", "views": 381}, "name": "EBSDocumentary (EBS \ub2e4\ud050)", "new_count": 3, "signal_count": 0, "subscribers": 5380000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 3.0}, {"categories": ["\uacbd\uc81c"], "formats": [], "hot_count": 0, "latest_video": null, "name": "\uc0bc\ud504\ub85cTV 3PROTV", "new_count": 0, "signal_count": 0, "subscribers": 0, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 0.0}, {"categories": ["\uc9c0\uc2dd"], "formats": [], "hot_count": 0, "latest_video": null, "name": "\uc138\ubc14\uc2dc \uac15\uc5f0 Sebasi Talk", "new_count": 0, "signal_count": 0, "subscribers": 0, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 0.0}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uc138\ubaa8\uacfc\ud559", "new_count": 0, "signal_count": 0, "subscribers": 154000, "top_video": {"efficiency": 1.4401688311688312, "format": "long", "id": "Lu1vruKQTuA", "title": "\uacfc\ud559\uc790\ub4e4\uc774 \uae30\uc5b4\uc774 \u0027\ud0dd\ubc30\u0027\ub85c \uc62e\uaca8\ubc84\ub9b0 \ubc18\ubb3c\uc9c8", "views": 221786}, "type": "AI", "weekly_rate": 1.0}, {"categories": ["\uacfc\ud559"], "formats": [], "hot_count": 0, "latest_video": null, "name": "\uc138\uc0c1\uc758 \ubaa8\ub4e0 \ub2e4\ud050", "new_count": 0, "signal_count": 0, "subscribers": 0, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 0.0}, {"categories": ["\uc2ec\ub9ac\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc544\ube60\uc758\uc0ac\uc758 \uc778\uc0dd \uc2a4\ud0ac\ubd81", "new_count": 0, "signal_count": 0, "subscribers": 99500, "top_video": null, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uc2ec\ub9ac\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "Sprouts \ud55c\uad6d", "new_count": 0, "signal_count": 0, "subscribers": 83200, "top_video": null, "type": "AI", "weekly_rate": 0.5}, {"categories": ["\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc368\uc5d0\uc774\uc2a4\uc1fc sirace show", "new_count": 0, "signal_count": 0, "subscribers": 639000, "top_video": null, "type": "AI", "weekly_rate": 1.0}, {"categories": ["\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uc3e8\uc791\uac00\uc758\uc9c0\uc2dd\uc0ac\uc804", "new_count": 0, "signal_count": 0, "subscribers": 593000, "top_video": {"efficiency": 0.5776846543001687, "format": "long", "id": "DbanWQ9mUzQ", "title": "\uc608\uc220\uc801 \uae30\uc9c8\uc740 \uc815\uc2e0\ubcd1\uc77c\uae4c? (ft.\ub1cc\uacfc\ud559)", "views": 342567}, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uad50\uc591 Voyage", "new_count": 0, "signal_count": 0, "subscribers": 1070000, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "B tv \uc774\ub3d9\uc9c4\uc758 \ud30c\uc774\uc544\ud0a4\uc544", "new_count": 0, "signal_count": 0, "subscribers": 837000, "top_video": {"efficiency": 0.24048506571087216, "format": "long", "id": "V3JUWuR52D4", "title": "\uc9c4\uc9dc \ub098\uc05c \uc0ac\ub78c\uc744 \uc774\ud574\ud574\uc57c \ud560\uae4c?", "views": 201286}, "type": "\uc77c\ubc18", "weekly_rate": 1.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "ksD8OQd4Y1c", "title": "6\uc6d4 \uc2dc\uc7a5\uc5d0\uc11c \u0027\uc774\uac83\u0027\uc744 \uc548\ubcf8\ub2e4? \uadf8\ub7ec\uba74 \uc8fc\uc2dd \ud558\uba74 \uc548\ub429\ub2c8\ub2e4", "views": 10925}, "name": "\uc774\ud6a8\uc11d\uc544\uce74\ub370\ubbf8", "new_count": 1, "signal_count": 0, "subscribers": 595000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 3.5}, {"categories": ["\uc2ec\ub9ac\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc9c0\uc2dd\uc740 \ub0a0\ub9ac\uc9c0", "new_count": 0, "signal_count": 0, "subscribers": 638000, "top_video": null, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "U6DL59sswcw", "title": "[SK\ud558\uc774\ub2c9\uc2a4 \uc8fc\uac00 \uc804\ub9dd] SK\uc99d\uad8c\u00b7KB\uc99d\uad8c \ubaa9\ud45c\uc8fc\uac00 300\ub9cc\uc6d0 \uc787\ub2e8 \uc0c1\ud5a5, HAM \uc288\ud37c\uc0ac\uc774\ud074 \ubcf8\uaca9", "views": 5}, "name": "\uc8fc\uc2dd\uacf3\uac04TV", "new_count": 7, "signal_count": 0, "subscribers": 540000, "top_video": null, "type": "AI", "weekly_rate": 3.5}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "EBS \uceec\ub809\uc158 - \uc0ac\uc774\uc5b8\uc2a4", "new_count": 0, "signal_count": 0, "subscribers": 1330000, "top_video": {"efficiency": 0.2856075187969925, "format": "long", "id": "bp_05sMh3xw", "title": "\uc81c\uc784\uc2a4 \uc6f9\uc774 \ud3ec\ucc29\ud55c 135\uc5b5 \ub144 \uc804 \uc740\ud558 \u3137\u3137 \ud604\ub300 \uc6b0\uc8fc\ub860\uc774 \ub4a4\uc9d1\ud78c \uc774\uc720(feat. \ud669\ud638\uc131 \uad50\uc218) ", "views": 379858}, "type": "\ub300\ud615", "weekly_rate": 0.5}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\uc548\ub420\uacfc\ud559", "new_count": 0, "signal_count": 0, "subscribers": 1380000, "top_video": {"efficiency": 0.29081159420289854, "format": "long", "id": "tef5aBjv-UU", "title": "SpaceX \uc2a4\ud0c0\uc2ed 12\ucc28 \ubc1c\uc0ac \ud558\uc774\ub77c\uc774\ud2b8! \uc9c0\uad6c \ucd5c\uac15\uc758 \uc6b0\uc8fc\uc120, \uc2e0\ud615\uc73c\ub85c \ub0a0\uc544\uc624\ub974\ub2e4!", "views": 401320}, "type": "\uc77c\ubc18", "weekly_rate": 3.5}, {"categories": ["\uacfc\ud559"], "formats": ["long", "short"], "hot_count": 0, "latest_video": null, "name": "\uce74\uc624\uc2a4 \uc0ac\uc774\uc5b8\uc2a4", "new_count": 0, "signal_count": 0, "subscribers": 276000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 2.0}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\ub9ac\ubdf0\uc5c9\uc774: Owl\u0027s Review", "new_count": 0, "signal_count": 0, "subscribers": 1830000, "top_video": {"efficiency": 0.21320218579234973, "format": "long", "id": "fk3jfzHexeg", "title": "\ub3c4\uc800\ud788 \uc124\uba85\uc774 \uc548 \ub418\ub294 \ub9e4\uba38\ub4dc\uc758 \uba78\uc885...", "views": 390160}, "type": "\uc77c\ubc18", "weekly_rate": 0.0}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 5, "latest_video": null, "name": "\uacfc\ud559\ub4dc\ub9bc", "new_count": 0, "signal_count": 0, "subscribers": 1130000, "top_video": {"efficiency": 0.849453982300885, "format": "long", "id": "hRTTUnNt8gw", "title": "\ubbf8\uad6d\uc774 \ub9e4\uc8fc 5\ucc9c\ub9cc \ub9c8\ub9ac\uc758 \ud30c\ub9ac\ub97c \uc232\uc5d0 \uc0b4\ud3ec\ud558\ub294 \uc774\uc720!", "views": 959883}, "type": "\uc77c\ubc18", "weekly_rate": 0.5}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc7a5\ub3d9\uc120\uc758 \uad81\uae08\ud55c \ub1cc", "new_count": 0, "signal_count": 0, "subscribers": 724000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 1.0}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uae40\uc751\ube48\uc758 \uc751\uc0dd\ubb3c\ud559", "new_count": 0, "signal_count": 0, "subscribers": 73100, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 2.0}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uacfc\ud559\uc744\ubcf4\ub2e4", "new_count": 0, "signal_count": 0, "subscribers": 184000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 3.5}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\ubc29\uad6c\uc11d \uacfc\ud559", "new_count": 0, "signal_count": 0, "subscribers": 183000, "top_video": null, "type": "AI", "weekly_rate": 0.0}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\ubc94\uc900\uc5d0 \ubb3c\ub9ac\ub2e4", "new_count": 0, "signal_count": 0, "subscribers": 357000, "top_video": {"efficiency": 0.6432072829131653, "format": "long", "id": "ErNXiZrP5z8", "title": "\ud604\uc874\ud558\ub294 \ud575\ubb34\uae30\uac00 \uc9c0\uae08 \ub2f9\uc7a5 \uc11c\uc6b8 \ud55c\ubcf5\ud310\uc5d0 \ub5a8\uc5b4\uc9c0\uba74 \uc0dd\uae30\ub294 \uc77c\u3163\ubc94\uc900\uc5d0 \ubb3c\ub9ac\ub2e4", "views": 229625}, "type": "\uc77c\ubc18", "weekly_rate": 1.0}, {"categories": ["\uc2ec\ub9ac\ud559", "\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc774\ud074\ub9bd\uc2a4", "new_count": 0, "signal_count": 0, "subscribers": 154000, "top_video": null, "type": "AI", "weekly_rate": 0.5}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\uc11d\uad70 seokkun", "new_count": 0, "signal_count": 0, "subscribers": 120000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 0.0}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 2, "latest_video": null, "name": "\uc815\ud615\ub3c8\uc758 \uc81c\ubaa9\uc5c6\uc74cTV", "new_count": 0, "signal_count": 0, "subscribers": 869000, "top_video": {"efficiency": 0.3481035673187572, "format": "long", "id": "7H848RY1eK0", "title": "\ud0dc\uc815\ud0dc\uc138\ubb38\ub2e8\uc138\uc608\uc131\uc5f0\uc911\uc778\uba85\uc120\uad11\uc778\ud6a8\ud604\uc219\uacbd\uc601\uc815\uc21c\ud5cc\ucca0\uace0\uc21c!!!!\ud83d\udc41\u200d\ud83d\udde8 \uc815\ud1b5\uc131 \uc5ed\uc0ac \uad00\uc810\uac8c\uc784", "views": 302502}, "type": "\uc77c\ubc18", "weekly_rate": 2.0}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "3m77yoHekpU", "title": "[#\uc720\ud034\uc988\uc628\ub354\ube14\ub7ed] \ubc18\ub4dc\uc2dc \uc774\ud63c\ud574\uc57c \ud558\ub294 \uacbd\uc6b0\u2049\ufe0f 27\ub144 \ucc28 \uc0c1\ub2f4\uac00 \uc774\ud638\uc120\uc774 \ub9d0\ud558\ub294 \ubd80\ubd80 \uac04\uc758 \uc774\ud63c", "views": 458}, "name": "tvN D ENT", "new_count": 4, "signal_count": 0, "subscribers": 5350000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 3.5}];
+    let curCat = 'all', curFmt = 'all', excludeLarge = false, onlyHot = false, search = '';
+
+    function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function fmtNum(n){ return (n||0).toLocaleString(); }
+
+    function render(){
+      const grid = document.getElementById('chGrid');
+      let list = CHANNELS.filter(c => {
+        if (curCat !== 'all' && !(c.categories||[]).includes(curCat)) return false;
+        if (excludeLarge && c.type === '대형') return false;
+        if (search && !c.name.toLowerCase().includes(search)) return false;
+        if (curFmt !== 'all') {
+          const fmts = c.formats || [];
+          if (!fmts.includes(curFmt)) return false;
         }
-      }
+        if (onlyHot && (c.signal_count + c.hot_count) === 0) return false;
+        return true;
+      });
+      // 정렬: 시그널 > 폭발 > 구독자
+      list.sort((a,b) => (b.signal_count - a.signal_count) || (b.hot_count - a.hot_count) || (b.subscribers - a.subscribers));
+      if (!list.length){ grid.innerHTML = '<div class="empty">조건에 맞는 채널이 없습니다.</div>'; return; }
+      grid.innerHTML = list.map(c => {
+        const cats = (c.categories||[]).map(x => `<span class="ch-cat">${esc(x)}</span>`).join('');
+        const tv = c.top_video, lv = c.latest_video;
+        const topHtml = tv ? `<div class="ch-vid"><span class="vlabel">🔥 폭발</span>
+          <a class="vtitle" href="https://www.youtube.com/watch?v=${tv.id}" target="_blank">${esc(tv.title)}</a>
+          <span class="vmeta">효율 ${tv.efficiency.toFixed(1)}x · 조회 ${fmtNum(tv.views)} ${tv.format==='short'?'📱':(tv.format==='long'?'🎬':'')}</span></div>` : '';
+        const latHtml = lv ? `<div class="ch-vid"><span class="vlabel">🆕 최신</span>
+          <a class="vtitle" href="https://www.youtube.com/watch?v=${lv.id}" target="_blank">${esc(lv.title)}</a>
+          <span class="vmeta">조회 ${fmtNum(lv.views)} ${lv.format==='short'?'📱':(lv.format==='long'?'🎬':'')}</span></div>` : '';
+        return `<div class="ch-card">
+          <div class="ch-head">
+            <div><div class="ch-name">${esc(c.name)}</div>
+              <div class="ch-meta">구독 ${fmtNum(c.subscribers)} · 주 ${c.weekly_rate.toFixed(1)}편</div></div>
+            <span class="ch-type">${esc(c.type)}</span>
+          </div>
+          <div class="ch-cats">${cats}</div>
+          <div class="ch-stats">
+            <div class="ch-stat sig"><b>${c.signal_count}</b>시그널</div>
+            <div class="ch-stat"><b>${c.hot_count}</b>폭발</div>
+            <div class="ch-stat"><b>${c.new_count}</b>신영상</div>
+          </div>
+          ${topHtml}${latHtml}
+        </div>`;
+      }).join('');
+    }
+
+    // 탭
+    document.querySelectorAll('#catTabs .tab').forEach(t => t.onclick = () => {
+      document.querySelectorAll('#catTabs .tab').forEach(x => x.classList.remove('active'));
+      t.classList.add('active'); curCat = t.dataset.cat; render();
+    });
+    // 형식 세그먼트
+    document.querySelectorAll('#formatSeg button').forEach(b => b.onclick = () => {
+      document.querySelectorAll('#formatSeg button').forEach(x => x.classList.remove('active'));
+      b.classList.add('active'); curFmt = b.dataset.fmt; render();
+    });
+    document.getElementById('excludeLarge').onchange = e => { excludeLarge = e.target.checked; render(); };
+    document.getElementById('onlyHot').onchange = e => { onlyHot = e.target.checked; render(); };
+    document.getElementById('search').oninput = e => { search = e.target.value.toLowerCase(); render(); };
+    render();
+
+    // 7일 추이 차트
+    new Chart(document.getElementById('trendChart'), {
+      type:'line',
+      data:{ labels:["05-22", "05-23", "05-24", "05-25", "05-26", "05-27", "05-28"], datasets:[
+        {label:'시그널',data:[0, 0, 0, 0, 0, 3, 0],borderColor:'#f28b82',backgroundColor:'rgba(242,139,130,.1)',tension:.4,borderWidth:3,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,fill:false},
+        {label:'소형 폭발',data:[0, 0, 0, 0, 0, 44, 43],borderColor:'#81c995',tension:.4,borderWidth:3,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,fill:false},
+        {label:'대형 폭발',data:[0, 0, 0, 0, 0, 21, 40],borderColor:'#8ab4f8',tension:.4,borderWidth:3,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,fill:false},
+        {label:'신영상',data:[0, 0, 0, 0, 0, 41, 26],borderColor:'#c58af9',tension:.4,borderWidth:3,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,fill:false}
+      ]},
+      options:{ responsive:true, interaction:{mode:'index',intersect:false},
+        plugins:{legend:{position:'top',align:'start',labels:{font:{family:"'Google Sans',sans-serif",size:13},color:'#5f6368',padding:14,boxWidth:12,usePointStyle:true}}},
+        scales:{y:{beginAtZero:true,ticks:{stepSize:1,color:'#5f6368'},grid:{color:'#f1f3f4'}},x:{ticks:{color:'#5f6368'},grid:{display:false}}} }
     });
   </script>
 </body>
