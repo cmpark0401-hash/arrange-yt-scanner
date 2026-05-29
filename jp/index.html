@@ -190,148 +190,62 @@ section table { margin:10px 0; }
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
-  <header>
+  <header class="shell-head">
     <a href="../index.html" class="country-switch">← 🇰🇷 한국 유튜브 스캐너</a>
     <h1>🇯🇵 일본 유튜브 스캐너 by arrange</h1>
-    <div class="sub">최종 갱신: 2026-05-29 19:02 · 추적 채널 26개 · 기준일 2026-05-29</div>
-    <div class="nav-links">
-      <a href="recommendations.html" class="nav-primary">🎯 오늘의 주제</a>
-      <a href="#dashboard">🏠 대시보드 홈</a>
-      <a href="archive.html">🔥 Hot키워드</a>
-      <a href="science_2026-05-29.html">🔬 과학 트렌드</a>
-      <a href="news_headlines.html">📰 일본 뉴스</a>
-      <a href="#archive">📅 일별 아카이브</a>
+    <div class="sub">최종 갱신: 2026-05-29 19:09 · 추적 채널 26개 · 기준일 2026-05-29</div>
+    <div class="nav-links" id="tabs">
+      <a href="dashboard.html" data-tab="dashboard">🏠 대시보드 홈</a>
+      <a href="recommendations.html" data-tab="recs" class="nav-primary">🎯 오늘의 주제</a>
+      <a href="archive.html" data-tab="archive">🔥 Hot키워드</a>
+      <a href="science_2026-05-29.html" data-tab="science">🔬 과학 트렌드</a>
+      <a href="news_headlines.html" data-tab="news">📰 뉴스 모니터링</a>
+      <a href="daily_2026-05-29.html" data-tab="daily">📅 일별 아카이브</a>
     </div>
   </header>
 
-  <div class="info-bar">
-    <span class="desc">🇯🇵 일본 추적 채널들의 폭발·시그널을 한눈에 — 일본 시장에서 검증된 주제를 발굴하세요.</span>
-    <span class="legend-item">🚨 <b>시그널</b> = 시속 5천+/h</span>
-    <span class="legend-item">🔥 <b>폭발</b> = 효율 5배+</span>
-    <span class="legend-item"><b>효율</b> = 조회÷구독</span>
-  </div>
-
-  <section id="dashboard" style="border:none; padding:0; background:none;">
-    <div class="cards">
-      <div class="card tone-red"><div class="label">🚨 알고리즘 시그널</div><div class="value">0</div></div>
-      <div class="card tone-green"><div class="label">🔬 소형 폭발</div><div class="value">9</div></div>
-      <div class="card tone-blue"><div class="label">🐳 대형 폭발</div><div class="value">19</div></div>
-      <div class="card tone-purple"><div class="label">🆕 신영상 24h</div><div class="value">4</div></div>
-    </div>
-    <canvas id="trendChart" height="90"></canvas>
-  </section>
-
-  <div class="tabs" id="catTabs">
-    <button class="tab active" data-cat="all">전체 <span class="cnt">26</span></button>
-    
-    <button class="tab" data-cat="경제">경제 <span class="cnt">2</span></button>
-    
-    <button class="tab" data-cat="역사">역사 <span class="cnt">8</span></button>
-    
-    <button class="tab" data-cat="지식">지식 <span class="cnt">10</span></button>
-    
-    <button class="tab" data-cat="심리학">심리학 <span class="cnt">4</span></button>
-    
-    <button class="tab" data-cat="과학">과학 <span class="cnt">10</span></button>
-    
-    <button class="tab" data-cat="시사">시사 <span class="cnt">5</span></button>
-    
-    <button class="tab" data-cat="정치">정치 <span class="cnt">0</span></button>
-    
-  </div>
-
-  <div class="filters">
-    <input type="text" id="search" placeholder="🔍 채널명 검색...">
-    <div class="filter-group">
-      <span class="lbl">형식</span>
-      <div class="seg" id="formatSeg">
-        <button class="active" data-fmt="all">전체</button>
-        <button data-fmt="long">🎬 롱폼</button>
-        <button data-fmt="short">📱 쇼츠</button>
-      </div>
-    </div>
-    <label class="toggle"><input type="checkbox" id="excludeLarge"> 대형채널 제외</label>
-    <label class="toggle"><input type="checkbox" id="onlyHot"> 폭발/시그널만</label>
-  </div>
-
-  <div class="ch-grid" id="chGrid"></div>
-
-  <section id="archive" style="margin-top:24px;">
-    <h2>📅 일별 리포트 아카이브</h2>
-    <div class="archive-grid">
-      <a href="daily_2026-05-29.html" class="today">2026-05-29</a>
-    </div>
-  </section>
-
-  <footer>arrange yt scanner · 2026-05-29 19:02</footer>
+  <div id="view"><div class="view-loading">불러오는 중…</div></div>
+  <footer>arrange yt scanner · 2026-05-29 19:09</footer>
 
   <script>
-    const CHANNELS = [{"categories": ["\uc9c0\uc2dd", "\uacfc\ud559"], "formats": ["long"], "hot_count": 5, "latest_video": null, "name": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66", "new_count": 0, "signal_count": 0, "subscribers": 496000, "top_video": {"efficiency": 1.1746471774193548, "format": "long", "id": "Ifluvg0fcRk", "title": "\u3010\u7d20\u6734\u306a\u7591\u554f\u3011\u6c34\u304b\u3089\u3067\u3057\u304b\u751f\u547d\u304c\u751f\u307e\u308c\u306a\u3044\u7406\u7531\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "views": 582625}, "type": "\ub300\ud615", "weekly_rate": 0.0}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u53e4\u4ee3\u751f\u7269\u3061\u3083\u3093\u306d\u308b", "new_count": 0, "signal_count": 0, "subscribers": 102000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 2.5}, {"categories": ["\uacfc\ud559", "\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u3086\u3063\u304f\u308a\u5b87\u5b99\u30cf\u30f3\u30bf\u30fc", "new_count": 0, "signal_count": 0, "subscribers": 82300, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "c8D7RJg-rkc", "title": "\u3010\u30c8\u30ec\u30fc\u30c9\u53ce\u76ca\u5411\u4e0a\u306e\u305f\u3081\u306b\u5fc5\u8981\u306a\u3082\u306e\u306f\uff1f\uff5c\u6c34\u4e0a\u7d00\u884c\u3011\u30cf\u30f3\u30b0\u30ea\u30fc\u7cbe\u795e\u3067\u751f\u304d\u3066\u304d\u305f\uff0f\u5177\u4f53\u7684\u306a\u76ee\u6a19\u3092\u6301\u3064\uff0f\u6311\u3080\u5fc3\u304c\u306a", "views": 85}, "name": "\u65e5\u7d4cCNBC \u516c\u5f0f\u30c1\u30e3\u30f3\u30cd\u30eb", "new_count": 1, "signal_count": 0, "subscribers": 205000, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 2.0}, {"categories": ["\uc9c0\uc2dd", "\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u95c7\u4e16\u754c\u306e\u30c4\u30fc\u30ea\u30b9\u30c8\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011", "new_count": 0, "signal_count": 0, "subscribers": 791000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 1.5}, {"categories": ["\uacbd\uc81c", "\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "qYbI83dcg2w", "title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u30c8\u30eb\u30b3\u304c\u7c73\u56fd\u50b5\u3092\u3059\u3079\u3066\u58f2\u5374\uff01\u30a2\u30db\u3059\u304e\u308b\u6c7a\u65ad\u306b\u56fd\u5bb6\u5d29\u58ca\u79d2\u8aad\u307f\u306b\u3002", "views": 7692}, "name": "\u3086\u3063\u304f\u308a\u9632\u885b\u30c1\u30e3\u30f3\u30cd\u30eb", "new_count": 1, "signal_count": 0, "subscribers": 197000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 3.5}, {"categories": ["\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u65e5\u672c\u53f2\u30d2\u30b9\u30c8\u30ea\u30a2\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011", "new_count": 0, "signal_count": 0, "subscribers": 46400, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 3.5}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u4e16\u754c\u306e\u5947\u5999\u306a\u30df\u30b9\u30c6\u30ea\u30fc\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011", "new_count": 0, "signal_count": 0, "subscribers": 27700, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 2.5}, {"categories": ["\uacfc\ud559"], "formats": ["long"], "hot_count": 5, "latest_video": null, "name": "\u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66", "new_count": 0, "signal_count": 0, "subscribers": 664000, "top_video": {"efficiency": 1.4740903614457832, "format": "long", "id": "XEJzpoAToIk", "title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u306a\u305c\u5730\u7403\u4ee5\u5916\u306e\u5929\u4f53\u306b\u306f\u571f\u304c\u5b58\u5728\u3057\u306a\u3044\u306e\u304b\uff1f\uff0d\u5730\u7403\u304b\u3089\u571f\u304c\u306a\u304f\u306a\u308b\u65e5\uff0d", "views": 978796}, "type": "\ub300\ud615", "weekly_rate": 0.0}, {"categories": ["\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 3, "latest_video": null, "name": "\u6559\u990a\u3068\u3057\u3066\u306e\u4e16\u754c\u53f2ch", "new_count": 0, "signal_count": 0, "subscribers": 144000, "top_video": {"efficiency": 6.180416666666667, "format": "long", "id": "EvOGa_iGyN8", "title": "\u3010\u97d3\u56fd\u306e\u6b74\u53f2\u3011\u53e4\u4ee3\u304b\u3089\u73fe\u4ee3\u307e\u3067\u3092\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac\uff01", "views": 889980}, "type": "\ub300\ud615", "weekly_rate": 0.0}, {"categories": ["\uc9c0\uc2dd", "\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": {"format": "long", "id": "CxiFpnGT1s8", "title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3084\u306f\u308aT50\u306f\u65e5\u672c\u3067\u306f\u6574\u5099\u305b\u305aw \u3057\u304b\u3057\u97d3\u56fd\u304b\u3099\u65e5\u672c\u306bT-50\u3092\u58f2\u308a\u8fbc\u3080\u300c\u771f\u306e\u72d9\u3044\u300d\u304c\u3084\u3070\u3059\u304e", "views": 1753}, "name": "\u3086\u3063\u304f\u308a\u6a5f\u5bc6\u60c5\u5831\u5c40", "new_count": 1, "signal_count": 0, "subscribers": 88100, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 3.5}, {"categories": ["\uc5ed\uc0ac", "\uc2ec\ub9ac\ud559"], "formats": ["long"], "hot_count": 4, "latest_video": null, "name": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "new_count": 0, "signal_count": 0, "subscribers": 5480000, "top_video": {"efficiency": 0.17597098540145986, "format": "long", "id": "IuHgxm4HrJs", "title": "\u3010\u65b0\u9078\u7d44\u3011\u6fc0\u52d5\u306e\u5e55\u672b\uff01\u6642\u4ee3\u306b\u6297\u3044\u6557\u308c\u53bb\u3063\u305f\u7537\u305f\u3061\u306e\u9752\u6625\u7fa4\u50cf\u5287\u3010Update\u7248\u3011(Shinsengumi)", "views": 964321}, "type": "\ub300\ud615", "weekly_rate": 0.5}, {"categories": ["\uc2ec\ub9ac\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u30b5\u30e0\u306e\u672c\u89e3\u8aacch", "new_count": 0, "signal_count": 0, "subscribers": 580000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 2.0}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u3010\u516c\u5f0f\u3011\u7aaa\u7530\u7b49\u306e\u4e16\u754c", "new_count": 0, "signal_count": 0, "subscribers": 292000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 1.0}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u304a\u3057\u3048\u3066!\u30aa\u30ab\u30eb\u30c8\u5148\u751f", "new_count": 0, "signal_count": 0, "subscribers": 356000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 2.0}, {"categories": ["\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u3086\u3063\u304f\u308a\u30cb\u30e5\u30fc\u30b9\u89e3\u8aac", "new_count": 0, "signal_count": 0, "subscribers": 7040, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 3.5}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u30ca\u30ec\u30fc\u30bf\u30fc\u718a\u5d0e\u53cb\u9999\u306e\u3050\u3063\u3059\u308a\u304a\u3084\u3059\u307f\u6717\u8aad", "new_count": 0, "signal_count": 0, "subscribers": 100000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 0.5}, {"categories": ["\uc5ed\uc0ac"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "YouTube\u9ad8\u6821 / \u65e5\u672c\u53f2\u30fb\u4e16\u754c\u53f2", "new_count": 0, "signal_count": 0, "subscribers": 668000, "top_video": {"efficiency": 0.7691332335329342, "format": "long", "id": "qVWeUe5u5no", "title": "GHQ\u306f\u6226\u5f8c\u65e5\u672c\u3092\u3069\u3046\u4f5c\u308a\u5909\u3048\u305f\u306e\u304b\uff1f", "views": 513781}, "type": "\ub300\ud615", "weekly_rate": 0.0}, {"categories": ["\uacbd\uc81c", "\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\u30b3\u30a2\u30e9\u5148\u751f\u306e\u6642\u4e8b\u30cd\u30bf\u796d\u308a", "new_count": 0, "signal_count": 0, "subscribers": 554000, "top_video": {"efficiency": 0.5450198555956679, "format": "long", "id": "i5qaLStVvqM", "title": "\u3010\u30ca\u30d5\u30b5\u30b7\u30e7\u30c3\u30af\u3011\"\u77f3\u6cb9\u5371\u6a5f\u306e\u672c\u4e38\" \u30ca\u30d5\u30b5\u306b\u3064\u3044\u3066\u57fa\u672c\u304b\u3089\u89e3\u8aac\u3057\u307e\u3059\uff01", "views": 301941}, "type": "\ub300\ud615", "weekly_rate": 1.0}, {"categories": ["\uacfc\ud559", "\uc2ec\ub9ac\ud559"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u30c7\u30eb\u30bf\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66", "new_count": 0, "signal_count": 0, "subscribers": 135000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 0.0}, {"categories": ["\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 4, "latest_video": null, "name": "\u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2", "new_count": 0, "signal_count": 0, "subscribers": 26300, "top_video": {"efficiency": 0.8152091254752851, "format": "long", "id": "o2xe_fuAIVA", "title": "\u3010\u7720\u308a\u306a\u304c\u3089\u805e\u304f\u3011\u58c7\u30ce\u6d66\u306e\u6226\u3044\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "views": 21440}, "type": "\uc77c\ubc18", "weekly_rate": 3.5}, {"categories": ["\uacfc\ud559", "\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u3086\u3063\u304f\u308a\u5b87\u5b99\u6559\u5ba4", "new_count": 0, "signal_count": 0, "subscribers": 224000, "top_video": null, "type": "\ub300\ud615", "weekly_rate": 3.0}, {"categories": ["\uc2dc\uc0ac", "\uc815\uce58"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u304c\u3061\u885b\u9580\u306e\u30cb\u30e5\u30fc\u30b9\u901f\u5831\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011", "new_count": 0, "signal_count": 0, "subscribers": 4840, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 0.0}, {"categories": ["\uc2dc\uc0ac"], "formats": ["long"], "hot_count": 4, "latest_video": {"format": "long", "id": "8tHG-ScwhN8", "title": "\u4ee4\u548c8\u5e745\u6708\u6642\u4e8b\u89e3\u8aac\u30fb\u6642\u5c40\u5206\u6790\uff5c\u85e4\u539f\u76f4\u54c9\u7406\u4e8b\u9577\uff08\u53ce\u9332\u578b\uff09202605", "views": 9339}, "name": "NSP\u30c1\u30e3\u30f3\u30cd\u30eb", "new_count": 1, "signal_count": 0, "subscribers": 48200, "top_video": {"efficiency": 1.3408713692946057, "format": "long", "id": "eVNIR4yTG4Y", "title": "\u4ee4\u548c8\u5e744\u6708\u6642\u4e8b\u89e3\u8aac\u30fb\u6642\u5c40\u5206\u6790\uff5c\u85e4\u539f\u76f4\u54c9\u7406\u4e8b\u9577\uff08\u53ce\u9332\u578b\uff09202604", "views": 64630}, "type": "\uc77c\ubc18", "weekly_rate": 2.0}, {"categories": ["\uacbd\uc81c"], "formats": ["long"], "hot_count": 0, "latest_video": null, "name": "\u4eca\u65e5\u304b\u3089\u4f7f\u3048\u308b\u304a\u91d1\u306e\u96d1\u5b66", "new_count": 0, "signal_count": 0, "subscribers": 8400, "top_video": null, "type": "\uc77c\ubc18", "weekly_rate": 3.5}, {"categories": ["\uacbd\uc81c", "\uc9c0\uc2dd"], "formats": ["long"], "hot_count": 1, "latest_video": null, "name": "\u3086\u3063\u304f\u308a\u97d3\u56fd\u4e8b\u4ef6\u7c3f\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011", "new_count": 0, "signal_count": 0, "subscribers": 46200, "top_video": {"efficiency": 0.4604329004329004, "format": "long", "id": "A-nidTta0hQ", "title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u30d7\u30ec\u30df\u30a2\u30ea\u30fc\u30b0\u304b\u3089\u6d88\u3048\u308b\u97d3\u56fd\u4eba\u3002\u3044\u3063\u305f\u3044\u306a\u305c\uff1f", "views": 21272}, "type": "\uc77c\ubc18", "weekly_rate": 1.0}];
-    let curCat = 'all', curFmt = 'all', excludeLarge = false, onlyHot = false, search = '';
-    function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-    function fmtNum(n){ return (n||0).toLocaleString(); }
-    function render(){
-      const grid = document.getElementById('chGrid');
-      let list = CHANNELS.filter(c => {
-        if (curCat !== 'all' && !(c.categories||[]).includes(curCat)) return false;
-        if (excludeLarge && c.type === '대형') return false;
-        if (search && !c.name.toLowerCase().includes(search)) return false;
-        if (curFmt !== 'all') { if (!(c.formats||[]).includes(curFmt)) return false; }
-        if (onlyHot && (c.signal_count + c.hot_count) === 0) return false;
-        return true;
+    const cache = {};
+    const tabUrl = {};
+    document.querySelectorAll('#tabs a').forEach(a => tabUrl[a.dataset.tab] = a.getAttribute('href'));
+    function setActive(tab){ document.querySelectorAll('#tabs a').forEach(a => a.classList.toggle('tab-on', a.dataset.tab===tab)); }
+    function runScripts(c){
+      c.querySelectorAll('script').forEach(old => {
+        const s = document.createElement('script');
+        if (old.src) { s.src = old.src; }
+        else { s.textContent = '(function(){\n' + old.textContent + '\n})();'; }
+        old.replaceWith(s);
       });
-      list.sort((a,b) => (b.signal_count - a.signal_count) || (b.hot_count - a.hot_count) || (b.subscribers - a.subscribers));
-      if (!list.length){ grid.innerHTML = '<div class="empty">조건에 맞는 채널이 없습니다.</div>'; return; }
-      grid.innerHTML = list.map(c => {
-        const cats = (c.categories||[]).map(x => `<span class="ch-cat">${esc(x)}</span>`).join('');
-        const tv = c.top_video, lv = c.latest_video;
-        const topHtml = tv ? `<div class="ch-vid"><span class="vlabel">🔥 폭발</span>
-          <a class="vtitle" href="https://www.youtube.com/watch?v=${tv.id}" target="_blank">${esc(tv.title)}</a>
-          <span class="vmeta">효율 ${tv.efficiency.toFixed(1)}x · 조회 ${fmtNum(tv.views)} ${tv.format==='short'?'📱':(tv.format==='long'?'🎬':'')}</span></div>` : '';
-        const latHtml = lv ? `<div class="ch-vid"><span class="vlabel">🆕 최신</span>
-          <a class="vtitle" href="https://www.youtube.com/watch?v=${lv.id}" target="_blank">${esc(lv.title)}</a>
-          <span class="vmeta">조회 ${fmtNum(lv.views)} ${lv.format==='short'?'📱':(lv.format==='long'?'🎬':'')}</span></div>` : '';
-        return `<div class="ch-card">
-          <div class="ch-head">
-            <div><div class="ch-name">${esc(c.name)}</div>
-              <div class="ch-meta">구독 ${fmtNum(c.subscribers)} · 주 ${c.weekly_rate.toFixed(1)}편</div></div>
-            <span class="ch-type">${esc(c.type)}</span>
-          </div>
-          <div class="ch-cats">${cats}</div>
-          <div class="ch-stats">
-            <div class="ch-stat sig"><b>${c.signal_count}</b>시그널</div>
-            <div class="ch-stat"><b>${c.hot_count}</b>폭발</div>
-            <div class="ch-stat"><b>${c.new_count}</b>신영상</div>
-          </div>
-          ${topHtml}${latHtml}
-        </div>`;
-      }).join('');
     }
-    document.querySelectorAll('#catTabs .tab').forEach(t => t.onclick = () => {
-      document.querySelectorAll('#catTabs .tab').forEach(x => x.classList.remove('active'));
-      t.classList.add('active'); curCat = t.dataset.cat; render();
+    async function loadUrl(url, tab){
+      const v = document.getElementById('view');
+      setActive(tab || '');
+      v.innerHTML = '<div class="view-loading">불러오는 중…</div>';
+      let html = cache[url];
+      if (html === undefined){
+        try { html = await fetch(url).then(r => r.text()); cache[url] = html; }
+        catch(e){ v.innerHTML = '<div class="view-loading">불러오기 실패 — 새로고침 해보세요.</div>'; return; }
+      }
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      doc.querySelectorAll('header, footer').forEach(h => h.remove());
+      v.innerHTML = doc.body.innerHTML;
+      runScripts(v);
+      window.scrollTo(0, 0);
+    }
+    function renderTab(tab){ if (!tabUrl[tab]) tab = 'dashboard'; loadUrl(tabUrl[tab], tab); }
+    document.querySelectorAll('#tabs a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); location.hash = a.dataset.tab; }));
+    document.getElementById('view').addEventListener('click', e => {
+      const a = e.target.closest('a'); if (!a) return;
+      const href = a.getAttribute('href') || '';
+      if (/^(daily_|archive|news_headlines|recommendations|dashboard|science_)[^/]*\.html$/.test(href)){
+        e.preventDefault(); loadUrl(href, '');
+      }
     });
-    document.querySelectorAll('#formatSeg button').forEach(b => b.onclick = () => {
-      document.querySelectorAll('#formatSeg button').forEach(x => x.classList.remove('active'));
-      b.classList.add('active'); curFmt = b.dataset.fmt; render();
-    });
-    document.getElementById('excludeLarge').onchange = e => { excludeLarge = e.target.checked; render(); };
-    document.getElementById('onlyHot').onchange = e => { onlyHot = e.target.checked; render(); };
-    document.getElementById('search').oninput = e => { search = e.target.value.toLowerCase(); render(); };
-    render();
-
-    new Chart(document.getElementById('trendChart'), {
-      type:'line',
-      data:{ labels:["05-23", "05-24", "05-25", "05-26", "05-27", "05-28", "05-29"], datasets:[
-        {label:'시그널',data:[0, 0, 0, 0, 0, 0, 0],borderColor:'#f28b82',tension:.4,borderWidth:3,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,fill:false},
-        {label:'소형 폭발',data:[0, 0, 0, 0, 0, 0, 9],borderColor:'#81c995',tension:.4,borderWidth:3,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,fill:false},
-        {label:'대형 폭발',data:[0, 0, 0, 0, 0, 0, 19],borderColor:'#8ab4f8',tension:.4,borderWidth:3,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,fill:false},
-        {label:'신영상',data:[0, 0, 0, 0, 0, 0, 4],borderColor:'#c58af9',tension:.4,borderWidth:3,pointRadius:4,pointBackgroundColor:'#fff',pointBorderWidth:2,fill:false}
-      ]},
-      options:{ responsive:true, interaction:{mode:'index',intersect:false},
-        plugins:{legend:{position:'top',align:'start',labels:{font:{family:"'Google Sans',sans-serif",size:13},color:'#5f6368',padding:14,boxWidth:12,usePointStyle:true}}},
-        scales:{y:{beginAtZero:true,ticks:{stepSize:1,color:'#5f6368'},grid:{color:'#f1f3f4'}},x:{ticks:{color:'#5f6368'},grid:{display:false}}} }
-    });
+    window.addEventListener('hashchange', () => renderTab((location.hash || '#dashboard').slice(1)));
+    renderTab((location.hash || '#dashboard').slice(1));
   </script>
 </body>
 </html>
