@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#8ab4f8">
+  <title>일일 리포트 — 2026-05-29</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+:root {
+  --blue:#8ab4f8; --red:#f28b82; --purple:#c58af9; --green:#81c995;
+  --text:#202124; --text2:#5f6368; --border:#dadce0; --surface:#fff; --bg:#fff;
+  --hover:#f1f3f4; --divider:#e8eaed; --chip:#e8f0fe;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Google Sans','Roboto','Noto Sans KR',-apple-system,sans-serif;
+  line-height:1.5; color:var(--text); background:var(--bg);
+  max-width:1280px; margin:0 auto; padding:20px 20px 48px;
+  -webkit-font-smoothing:antialiased;
+}
+header { padding:12px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px; }
+header h1 { font-size:26px; font-weight:700; letter-spacing:-0.5px; }
+header .sub { color:var(--text2); font-size:13px; margin-top:6px; }
+a { color:var(--blue); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* 요약 카드 */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:20px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
+.card .label { font-size:13px; color:var(--text2); margin-bottom:8px; font-weight:500; }
+.card .value { font-size:30px; font-weight:500; letter-spacing:-0.5px; }
+.card.tone-red { background:rgba(242,139,130,.08); border-color:rgba(242,139,130,.35); }
+.card.tone-red .value { color:var(--red); }
+.card.tone-green { background:rgba(129,201,149,.08); border-color:rgba(129,201,149,.35); }
+.card.tone-green .value { color:var(--green); }
+.card.tone-blue { background:rgba(138,180,248,.08); border-color:rgba(138,180,248,.35); }
+.card.tone-blue .value { color:var(--blue); }
+.card.tone-purple { background:rgba(197,138,249,.08); border-color:rgba(197,138,249,.35); }
+.card.tone-purple .value { color:#a855f7; }
+
+/* 카테고리 탭 */
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 12px; }
+.tab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2);
+       font-size:14px; font-weight:500; cursor:pointer; border:none; transition:all .15s; }
+.tab:hover { background:#e3e6e8; }
+.tab.active { background:var(--blue); color:#fff; }
+.tab .cnt { font-size:12px; opacity:.8; margin-left:4px; }
+
+/* 필터 바 */
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;
+           padding:12px 16px; background:var(--hover); border-radius:8px; }
+.filter-group { display:flex; gap:4px; align-items:center; }
+.filter-group .lbl { font-size:12px; color:var(--text2); margin-right:4px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff; }
+.seg button { padding:6px 12px; border:none; background:#fff; font-size:13px; cursor:pointer; color:var(--text2); }
+.seg button.active { background:var(--blue); color:#fff; }
+.toggle { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text); cursor:pointer; }
+#search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
+          border-radius:20px; font-size:14px; background:#fff; }
+#search:focus { outline:none; border-color:var(--blue); }
+
+/* 채널 카드 그리드 */
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px; }
+.ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+           padding:16px; transition:box-shadow .2s; }
+.ch-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15); }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.ch-name { font-size:16px; font-weight:700; }
+.ch-meta { font-size:12px; color:var(--text2); margin-top:2px; }
+.ch-type { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--hover); color:var(--text2); white-space:nowrap; }
+.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:8px 0; }
+.ch-cat { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--chip); color:var(--blue); font-weight:500; }
+.ch-stats { display:flex; gap:12px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:12px; color:var(--text2); }
+.ch-stat b { font-size:15px; color:var(--text); font-weight:600; display:block; }
+.ch-stat.sig b { color:var(--red); }
+.ch-vid { margin-top:8px; }
+.ch-vid .vlabel { font-size:11px; color:var(--text2); font-weight:500; }
+.ch-vid .vtitle { font-size:13px; display:block; margin-top:2px; }
+.ch-vid .vmeta { font-size:11px; color:var(--text2); }
+.empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
+
+section { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
+section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
+.archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:12px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:500; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
+.archive-grid a.today { background:var(--blue); border-color:var(--blue); color:#fff; }
+.nav-links { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; }
+.nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
+footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
+
+@media (max-width:600px) {
+  body { padding:14px; }
+  header h1 { font-size:21px; }
+  .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .card .value { font-size:24px; }
+  .ch-grid { grid-template-columns:1fr; }
+  .filters { flex-direction:column; align-items:stretch; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
+    <h1>일일 리포트 — 2026-05-29</h1>
+  </header>
+  <section><h1 id="유튜브-채널-모니터링-2026-05-29-1001-오늘-뉴스-키워드-매칭">유튜브 채널 모니터링 — 2026-05-29 10:01 · 🎯 = 오늘 뉴스 키워드 매칭</h1>
+
+<h2 id="알고리즘-시그널-시속-5000회-즉시-검토-14편">🚨 알고리즘 시그널 (시속 5,000회+ · 즉시 검토) — 14편</h2>
+
+<blockquote>
+  <p>알고리즘 노출 받는 중 — 같은 주제로 빠르게 발행하면 트래픽 동승 가능</p>
+</blockquote>
+
+<ul>
+<li>🔥 [일반] <strong>과학을보다</strong> 🎬 <a href="https://www.youtube.com/watch?v=2eZhiseK2W0">알고나면 꽤 무서운 스타링크 위성의 진실</a> · 시속 <strong>14,880회/h</strong> · 증가 +191,219회/12.8h · 누적 208,827회</li>
+<li>🔥 [일반+AI] <strong>크랩 KLAB</strong> 🎬 <a href="https://www.youtube.com/watch?v=CUPO0Mg1iLE">한국의 아낌없이 주는 나무 실사판ㄷㄷ｜크랩</a> · 시속 <strong>9,394회/h</strong> · 증가 +121,035회/12.9h · 누적 159,549회</li>
+<li>🔥 [일반, 뉴스] <strong>시사저널TV</strong> 📱 <a href="https://www.youtube.com/watch?v=dy_6EFGYAQw">하정우, 질 수밖에 없는 이유? &quot;출마 준비 자체가 안 된 사람&quot;</a> · 시속 <strong>9,174회/h</strong> · 증가 +118,051회/12.9h · 누적 118,051회</li>
+<li>🔥 [일반] <strong>머니코믹스</strong> 📱 <a href="https://www.youtube.com/watch?v=87dMdrSLIeU">했제쇼</a> · 시속 <strong>8,920회/h</strong> · 증가 +114,779회/12.9h · 누적 268,790회</li>
+<li>🔥 [일반+AI] <strong>크랩 KLAB</strong> 🎬 <a href="https://www.youtube.com/watch?v=pJ--5eDH_xU">미국에서 난리라는 성당, 왜 인기인지 교민에게 직접 물어봄｜크랩</a> · 시속 <strong>6,718회/h</strong> · 증가 +86,553회/12.9h · 누적 394,123회</li>
+<li>🔥 [일반] <strong>과학을보다</strong> 🎬 <a href="https://www.youtube.com/watch?v=7cYrC7LVlUo">인간이 제거에 실패한 생존력 최강의 민폐생물</a> · 시속 <strong>5,803회/h</strong> · 증가 +74,573회/12.8h · 누적 109,408회</li>
+<li>🔥 [일반] <strong>리뷰엉이: Owl's Review</strong> 🎬 <a href="https://www.youtube.com/watch?v=EkSpu-OZ4FQ">만약 지구의 바다가 전부 사라진다면?</a> · 시속 <strong>5,790회/h</strong> · 증가 +74,506회/12.9h · 누적 82,338회</li>
+<li>🔥 [대형] <strong>지식인사이드</strong> 🎬 <a href="https://www.youtube.com/watch?v=vgYAHX4BtAM">&quot;아파트 아닙니다&quot; '이 3가지' 있다면 이미 훌륭한 중년입니다ㅣ지식인클래스 EP.01 (</a> · 시속 <strong>5,224회/h</strong> · 증가 +67,221회/12.9h · 누적 72,082회</li>
+<li>🔥 [일반, 뉴스] <strong>시사저널TV</strong> 🎬 <a href="https://www.youtube.com/watch?v=UmMORp4-Vu8">신지호 &quot;한동훈 대세 기류에 '뉴 한동훈' 움직임 벌써 시작..장동혁 대표직 유지? 꿈 깨라&amp;quo</a> · 시속 <strong>5,178회/h</strong> · 증가 +66,636회/12.9h · 누적 87,574회</li>
+<li>🔥 [일반] <strong>머니코믹스</strong> 🎯[삼성전자] 🎬 <a href="https://www.youtube.com/watch?v=Wu6yNBudOk4">[긴급 라이브] 삼성전자, 마이크론 2배에 물렸습니다</a> · 시속 <strong>5,168회/h</strong> · 증가 +66,498회/12.9h · 누적 136,399회</li>
+</ul>
+
+<h2 id="발행-중단-둔화-경고-3개-채널">⚠️ 발행 중단 / 둔화 경고 — 3개 채널</h2>
+
+<table>
+<thead>
+<tr>
+  <th>채널</th>
+  <th>분류</th>
+  <th>평소(주당)</th>
+  <th>최근 7일</th>
+  <th>변화율</th>
+  <th>상태</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>김지윤의 지식Play</td>
+  <td>일반</td>
+  <td>1.0편</td>
+  <td>0편</td>
+  <td>-100%</td>
+  <td>🛑 발행 중단</td>
+</tr>
+<tr>
+  <td>방구석 경제학</td>
+  <td>AI</td>
+  <td>0.3편</td>
+  <td>0편</td>
+  <td>-100%</td>
+  <td>🛑 발행 중단</td>
+</tr>
+<tr>
+  <td>새싹경제학</td>
+  <td>AI</td>
+  <td>3.5편</td>
+  <td>0편</td>
+  <td>-100%</td>
+  <td>🛑 발행 중단</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="신영상-24시간-내-총-8편">🆕 신영상 (24시간 내) — 총 8편</h2>
+
+<ul>
+<li>[일반+AI] <strong>크랩 KLAB</strong>  🎬 <a href="https://www.youtube.com/watch?v=mQ7EKdI94OM">사전투표 7시간 전 진행! 서울시장 후보 토론 7분 요약｜크랩</a> · 조회 2,342 · 효율 0.0x</li>
+<li>[일반] <strong>손에잡히는경제</strong>  <a href="https://www.youtube.com/watch?v=QlkHYW6J7p0">🔴 [손경제플러스 LIVE] 중국 드라마 열풍, K-콘텐츠가 위험합니다 - 조영신 작가</a> · 조회 0 · 효율 0.0x</li>
+<li>[일반] <strong>손에잡히는경제</strong>  🎯[금리] <a href="https://www.youtube.com/watch?v=36Ifza-M8SA">[손경제] 기준금리 동결 | 국민연금 국내주식 비중 | 가상자산 과세 | 미국 반도체 | 20260529(금</a> · 조회 6,072 · 효율 0.0x</li>
+<li>[대형] <strong>EBSCulture (EBS 교양)</strong>  🎬 <a href="https://www.youtube.com/watch?v=dIUP1fM-cHg">[선공개] [세상에 나쁜 개는 없다] 개 돌보는 토끼 엄마와 알파카 아빠_2</a> · 조회 50 · 효율 0.0x</li>
+<li>[대형] <strong>EBSDocumentary (EBS 다큐)</strong>  🎬 <a href="https://www.youtube.com/watch?v=LiMqeh_oxcw">학교·군대·대기업 쉴틈없이 거쳤던 청년이 무인도 백사장으로 도망쳐온 사정. 하루 딱 살아보고 주민 정착까지 </a> · 조회 306 · 효율 0.0x</li>
+<li>[일반] <strong>삼프로TV 3PROTV</strong>  🎯[삼전, 삼전닉스] 🎬 <a href="https://www.youtube.com/watch?v=1N1M0H-pD6w">삼전닉스 레버리지 쏠림에 의한 장중 변동성…주의해야 할 점은? | 박병창 MP파트너스 대표 [마켓 인사이드]</a> · 조회 6,624 · 효율 0.0x</li>
+<li>[AI] <strong>주식곳간TV</strong>  🎬 <a href="https://www.youtube.com/watch?v=kneTPgn61Wg">[흥아해운 주가 전망] 신저점 찍고 급반등! VI 발동 단기 과열 주의보 지금 매도를 해야 하나? #흥아해운</a> · 조회 268 · 효율 0.0x</li>
+<li>[AI] <strong>주식곳간TV</strong>  <a href="https://www.youtube.com/watch?v=oefSh1sxm0k">[나무기술 주가 전망] 클라우드·에이전틱 AI 플랫폼 부각, 강세 흐름 및 레드햇과 에이전틱 AI 공동 개발</a> · 조회 269 · 효율 0.0x</li>
+</ul>
+
+<h2 id="소형-채널-폭발-영상-구독-50000-효율-5x-or-vel-1000-or-조회-20000-총-51편">🔬 소형 채널 폭발 영상 (구독 ≤50,000, 효율 5x+ OR vel 1,000+ OR 조회 20,000+) — 총 51편</h2>
+
+<ul>
+<li>[AI] <strong>경제대부</strong> 🎬 <a href="https://www.youtube.com/watch?v=yT-_vXIIqRU">&quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히</a> · 효율 <strong>62.6x</strong> · vel 0/h · 조회 184,120 · 구독 2,940</li>
+<li>[AI] <strong>농부의 경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=25tCUGqi6tY">&quot;반도체 독식은 지속 불가능하다&quot; 월가가 조ᄋ</a> · 효율 <strong>28.6x</strong> · vel 32/h · 조회 108,086 · 구독 3,780</li>
+<li>[AI] <strong>경제읽음이</strong> 🎬 <a href="https://www.youtube.com/watch?v=DBAtINf_tDQ">엔비디아가 삼성·SK 놔두고 1000억 베팅한 무명 회사의 진짜 정체</a> · 효율 <strong>25.1x</strong> · vel 651/h · 조회 333,684 · 구독 13,300</li>
+<li>[AI] <strong>경제균열</strong> 🎬 <a href="https://www.youtube.com/watch?v=0u3wHhqxceA">삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언에 진짜 이유</a> · 효율 <strong>23.7x</strong> · vel 0/h · 조회 417,925 · 구독 17,600</li>
+<li>[AI] <strong>탐정 경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=NXIcyN1WwSY">북한군 128만의 허상, 핵무기의 한계, 그리고 붕괴 72시간 시나리오 [통합본]</a> · 효율 <strong>21.3x</strong> · vel 3/h · 조회 355,879 · 구독 16,700</li>
+<li>[AI] <strong>럭키경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=4qLCUYg40aU">&quot;어디한번 끝까지 해봐라&quot; 45조 요구한 삼성 귀족 노조의 최후｜삼성 노조 파업 총정리</a> · 효율 <strong>19.4x</strong> · vel 0/h · 조회 375,243 · 구독 19,300</li>
+<li>[AI] <strong>경제왕토끼</strong> 🎬 <a href="https://www.youtube.com/watch?v=czy8dA-NPCc">&quot;시청률 0.5%&quot; 갑질하던 방송국의 처참한 몰락, 외면당한 3가지 진짜 이유</a> · 효율 <strong>18.5x</strong> · vel 122/h · 조회 378,611 · 구독 20,500</li>
+<li>[일반, 뉴스] <strong>세계경제 돋보기</strong> 🎬 <a href="https://www.youtube.com/watch?v=7XPYobTh-jg">중국 댐 98000개가 동시에 늙고 있다 #세계이슈</a> · 효율 <strong>16.0x</strong> · vel 706/h · 조회 110,481 · 구독 6,920</li>
+<li>[AI] <strong>경제왕토끼</strong> 🎬 <a href="https://www.youtube.com/watch?v=EGF6neqw3hs">2026년 대한민국 자산별 8계급, 여러분은 몇 층에 계신가요?</a> · 효율 <strong>14.0x</strong> · vel 325/h · 조회 287,648 · 구독 20,500</li>
+<li>[AI] <strong>탐정 경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=nF1KP1Gnd24">&quot;13조를 퍼줬는데 1조도 못 받았다&quot; 김정은이 푸틴한테 완전히 당한 소름돋는 전말</a> · 효율 <strong>13.7x</strong> · vel 100/h · 조회 228,601 · 구독 16,700</li>
+<li>[AI] <strong>농부의 경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=_CfiOeykmrQ">삼전·닉스 들고 계신가요? 이번주 27일, 29일 종가를 </a> · 효율 <strong>13.1x</strong> · vel 0/h · 조회 49,339 · 구독 3,780</li>
+<li>[일반, 뉴스] <strong>세계경제 돋보기</strong> 🎯[만명] 🎬 <a href="https://www.youtube.com/watch?v=f1H4hkODdZw">중국 판교댐 1975 24만명이 하룻밤에 사라졌다 #세계이슈</a> · 효율 <strong>12.9x</strong> · vel 590/h · 조회 89,456 · 구독 6,920</li>
+<li>[AI] <strong>한밤의 한국사</strong> 🎬 <a href="https://www.youtube.com/watch?v=NRtLHrlkspU">조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열</a> · 효율 <strong>12.4x</strong> · vel 716/h · 조회 52,291 · 구독 4,220</li>
+<li>[AI] <strong>럭키경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=uXOTcLNWIsk">&quot;45조 안 주면 멈춘다&quot; 결국 터진 이재용의 한 마디</a> · 효율 <strong>12.3x</strong> · vel 0/h · 조회 237,271 · 구독 19,300</li>
+<li>[AI] <strong>퐁퐁퐁경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=x2EkGjZA8Rc">&quot;한국이 그렇게 무서운 시장이었어?&quot;스타벅스 탱크데이 한 줄에 미국 본사가 일주일 만에 무</a> · 효율 <strong>9.3x</strong> · vel 93/h · 조회 32,438 · 구독 3,490</li>
+<li>[AI] <strong>농부의 경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=D7FbAgVlrQA">미국-이란 종전협상, 이번엔 진짜 타결?! 종전 선ᄋ</a> · 효율 <strong>9.0x</strong> · vel 1/h · 조회 33,911 · 구독 3,780</li>
+<li>[AI] <strong>쉽게이해되는 경제</strong> 🎬 <a href="https://www.youtube.com/watch?v=9poYKzIKaf8">일하는 60대와 쉬는 60대의 결정적 차이｜5년 후 건강과 인생이 완전히 갈렸습니다!</a> · 효율 <strong>9.0x</strong> · vel 78/h · 조회 13,897 · 구독 1,550</li>
+<li>[AI] <strong>한밤의 한국사</strong> 🎬 <a href="https://www.youtube.com/watch?v=eXqSvez3fgc">세종은 진짜 성군이었나ㅣ 조선왕조실록이 기록한 9가지 충격적 진실</a> · 효율 <strong>9.0x</strong> · vel 127/h · 조회 37,783 · 구독 4,220</li>
+<li>[AI] <strong>미니경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=VqJZ6Na5HTk">&quot;시진핑 때문에 망했다&quot; 중국 경제 완전 붕괴의 충격적 진실!</a> · 효율 <strong>7.5x</strong> · vel 0/h · 조회 212,861 · 구독 28,400</li>
+<li>[AI] <strong>탐정 경제학</strong> 🎬 <a href="https://www.youtube.com/watch?v=t_72L86c5kY">&quot;북한 핵보유 싹다 거짓?&quot;김정은이 절대 말 못하는 진실</a> · 효율 <strong>7.0x</strong> · vel 254/h · 조회 117,666 · 구독 16,700</li>
+</ul>
+
+<h2 id="대형-채널-폭발-영상-구독-50000-vel-5000-or-조회-200000-총-43편">🐳 대형 채널 폭발 영상 (구독 &gt;50,000, vel 5,000+ OR 조회 200,000+) — 총 43편</h2>
+
+<ul>
+<li>[일반] <strong>과학을보다</strong> 🎬 <a href="https://www.youtube.com/watch?v=2eZhiseK2W0">알고나면 꽤 무서운 스타링크 위성의 진실</a> · vel <strong>14,880/h</strong> · 조회 208,827 · 효율 1.1x · 구독 185,000</li>
+<li>[일반+AI] <strong>크랩 KLAB</strong> 🎬 <a href="https://www.youtube.com/watch?v=CUPO0Mg1iLE">한국의 아낌없이 주는 나무 실사판ㄷㄷ｜크랩</a> · vel <strong>9,394/h</strong> · 조회 159,549 · 효율 0.2x · 구독 1,000,000</li>
+<li>[일반, 뉴스] <strong>시사저널TV</strong> 📱 <a href="https://www.youtube.com/watch?v=dy_6EFGYAQw">하정우, 질 수밖에 없는 이유? &quot;출마 준비 자체가 안 된 사람&quot;</a> · vel <strong>9,174/h</strong> · 조회 118,051 · 효율 0.2x · 구독 761,000</li>
+<li>[일반] <strong>머니코믹스</strong> 📱 <a href="https://www.youtube.com/watch?v=87dMdrSLIeU">했제쇼</a> · vel <strong>8,920/h</strong> · 조회 268,790 · 효율 0.2x · 구독 1,380,000</li>
+<li>[일반+AI] <strong>크랩 KLAB</strong> 🎬 <a href="https://www.youtube.com/watch?v=pJ--5eDH_xU">미국에서 난리라는 성당, 왜 인기인지 교민에게 직접 물어봄｜크랩</a> · vel <strong>6,718/h</strong> · 조회 394,123 · 효율 0.4x · 구독 1,000,000</li>
+<li>[일반] <strong>과학을보다</strong> 🎬 <a href="https://www.youtube.com/watch?v=7cYrC7LVlUo">인간이 제거에 실패한 생존력 최강의 민폐생물</a> · vel <strong>5,803/h</strong> · 조회 109,408 · 효율 0.6x · 구독 185,000</li>
+<li>[일반] <strong>리뷰엉이: Owl's Review</strong> 🎬 <a href="https://www.youtube.com/watch?v=EkSpu-OZ4FQ">만약 지구의 바다가 전부 사라진다면?</a> · vel <strong>5,790/h</strong> · 조회 82,338 · 효율 0.0x · 구독 1,830,000</li>
+<li>[대형] <strong>지식인사이드</strong> 🎬 <a href="https://www.youtube.com/watch?v=vgYAHX4BtAM">&quot;아파트 아닙니다&quot; '이 3가지' 있다면 이미 훌륭한 중년입니다ㅣ지식인클래스 EP.01 (</a> · vel <strong>5,224/h</strong> · 조회 72,082 · 효율 0.0x · 구독 3,830,000</li>
+<li>[일반, 뉴스] <strong>시사저널TV</strong> 🎬 <a href="https://www.youtube.com/watch?v=UmMORp4-Vu8">신지호 &quot;한동훈 대세 기류에 '뉴 한동훈' 움직임 벌써 시작..장동혁 대표직 유지? 꿈 깨라&amp;quo</a> · vel <strong>5,178/h</strong> · 조회 87,574 · 효율 0.1x · 구독 761,000</li>
+<li>[일반] <strong>머니코믹스</strong> 🎯[삼성전자] 🎬 <a href="https://www.youtube.com/watch?v=Wu6yNBudOk4">[긴급 라이브] 삼성전자, 마이크론 2배에 물렸습니다</a> · vel <strong>5,168/h</strong> · 조회 136,399 · 효율 0.1x · 구독 1,380,000</li>
+<li>[일반] <strong>부읽남TV_내집마련부터건물주까지</strong> 🎬 <a href="https://www.youtube.com/watch?v=lKx8JB_YyI8">지방선거 끝나면 집값 이렇게 됩니다</a> · vel <strong>3,750/h</strong> · 조회 299,742 · 효율 0.2x · 구독 1,780,000</li>
+<li>[대형] <strong>보다 BODA</strong> 🎬 <a href="https://www.youtube.com/watch?v=S4ixQ_DjrLQ">서로가 멸망할 때까지 싸우는 이스라엘과 레바논(헤즈볼라의 탄생..)ㅣ그날을 보다 EP.30</a> · vel <strong>3,573/h</strong> · 조회 273,753 · 효율 0.1x · 구독 3,110,000</li>
+<li>[일반] <strong>안될과학</strong> 🎬 <a href="https://www.youtube.com/watch?v=YaESJ1X6AJo">위고비, 마운자로 시대 끝? 먹는 비만치료제 '파운다요'가 온다</a> · vel <strong>1,903/h</strong> · 조회 239,716 · 효율 0.2x · 구독 1,380,000</li>
+<li>[일반] <strong>머니코믹스</strong> 📱 <a href="https://www.youtube.com/watch?v=CqdyArqSGhk">닉스통 와요</a> · vel <strong>1,832/h</strong> · 조회 402,974 · 효율 0.3x · 구독 1,380,000</li>
+<li>[대형] <strong>보다 BODA</strong> 🎬 <a href="https://www.youtube.com/watch?v=xihlxwwEiIA">고대 문명이 탄생한 비밀을 담고있는 문자(진짜 이것 때문에..?)ㅣ역사를 보다 EP.142</a> · vel <strong>1,548/h</strong> · 조회 269,907 · 효율 0.1x · 구독 3,110,000</li>
+<li>[대형] <strong>보다 BODA</strong> 🎬 <a href="https://www.youtube.com/watch?v=KSw7CuSoNy0">무너진 일본 왕 무덤에서 쏟아진 충격적인 유물들..(출신이..우리쪽?)ㅣ역사를 보다 EP.140</a> · vel <strong>1,252/h</strong> · 조회 725,852 · 효율 0.2x · 구독 3,110,000</li>
+<li>[대형] <strong>지식인사이드</strong> 🎬 <a href="https://www.youtube.com/watch?v=x_5g8eAz424">나의 사회적 신분을 결정하는 ‘3가지’ 행동ㅣ지식인초대석 EP.136 (보만 스님 2부)</a> · vel <strong>1,242/h</strong> · 조회 514,008 · 효율 0.1x · 구독 3,830,000</li>
+<li>[대형] <strong>보다 BODA</strong> 🎬 <a href="https://www.youtube.com/watch?v=CW4JtlzXyj4">지구에 문명을 일으킨 태양이 붕괴되자 벌어진 일 (인류에게 남은 시간...) | 과학을 보다 EP.193</a> · vel <strong>982/h</strong> · 조회 501,602 · 효율 0.2x · 구독 3,110,000</li>
+<li>[대형] <strong>지식인사이드</strong> 🎬 <a href="https://www.youtube.com/watch?v=UY_5u8K6_gw">인생을 너무 진지하게 살면 안 되는 이유ㅣ지식인초대석 EP.135 (보만 스님 1부)</a> · vel <strong>879/h</strong> · 조회 1,151,162 · 효율 0.3x · 구독 3,830,000</li>
+<li>[AI] <strong>세모과학</strong> 🎬 <a href="https://www.youtube.com/watch?v=MH4cK20eUzI">과학자들이 아직도 보이저 1호와 통신이 가능한 이유</a> · vel <strong>790/h</strong> · 조회 208,045 · 효율 1.3x · 구독 155,000</li>
+</ul>
+
+<h2 id="ai-채널-활성도-경고-주-3편-미만-17개">⚠️ AI 채널 활성도 경고 (주 3편 미만) — 17개</h2>
+
+<ul>
+<li><strong>만약에 머니</strong> 주당 2.5편 → Tier 2 강등 검토</li>
+<li><strong>경제대부</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>경제왕토끼</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>경제균열</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>미니경제학</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>방구석 경제학</strong> 주당 0.5편 → Tier 2 강등 검토</li>
+<li><strong>탐정 경제학</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>럭키경제학</strong> 주당 1.5편 → Tier 2 강등 검토</li>
+<li><strong>로빈의 역사 기록</strong> 주당 0.5편 → Tier 2 강등 검토</li>
+<li><strong>한밤의 한국사</strong> 주당 2.0편 → Tier 2 강등 검토</li>
+<li><strong>세모과학</strong> 주당 2.0편 → Tier 2 강등 검토</li>
+<li><strong>아빠의사의 인생 스킬북</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>Sprouts 한국</strong> 주당 1.0편 → Tier 2 강등 검토</li>
+<li><strong>써에이스쇼 sirace show</strong> 주당 1.5편 → Tier 2 강등 검토</li>
+<li><strong>쏨작가의지식사전</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>지식은 날리지</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+<li><strong>신비과학</strong> 주당 0.0편 → Tier 2 강등 검토</li>
+</ul>
+
+<h2 id="신규-채널-후보-264개">🆕 신규 채널 후보 — 264개</h2>
+
+<blockquote>
+  <p>뉴스 키워드로 발견된 신규 채널. 검토 후 승인/거절 결정:</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+  <li>승인: <code>.venv/bin/python scripts/discover_channels.py approve N</code></li>
+  <li>거절: <code>.venv/bin/python scripts/discover_channels.py reject N</code></li>
+  </ul>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+  <th>#</th>
+  <th>채널</th>
+  <th>hit</th>
+  <th>발견 키워드</th>
+  <th>채널 URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>JTV뉴스</td>
+  <td>26</td>
+  <td>국회 본회의, 김영훈, 정치 분석</td>
+  <td>https://www.youtube.com/channel/UCWGk_-J9WJxgFBAgJXi4ilA</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>디글 :Diggle</td>
+  <td>22</td>
+  <td>근현대사, 과학 잡학, 인문 강의</td>
+  <td>https://www.youtube.com/channel/UCWYzc_p0GgfCepIWDHGFmEg</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>박성태의 뉴스쇼</td>
+  <td>15</td>
+  <td>김영훈, 납품단, 주간 시사</td>
+  <td>https://www.youtube.com/channel/UC4Aa3OPkMenwTANpf0oWVRQ</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>서울경제TV</td>
+  <td>13</td>
+  <td>삼성전자, 삼전, 부동산 시장</td>
+  <td>https://www.youtube.com/channel/UC3p-0EWA8OXko2EUDUXAy5w</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>공무원 교육1위 해커스공무원</td>
+  <td>12</td>
+  <td>근현대사, 정책 해설</td>
+  <td>https://www.youtube.com/channel/UCcDz72Vic8ILPpIhcFWdkvA</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>시사타파TV</td>
+  <td>11</td>
+  <td>시사 분석</td>
+  <td>https://www.youtube.com/channel/UCzQJmmpZjqzJe96CwlrwlHQ</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>우주의 발견</td>
+  <td>10</td>
+  <td>우주 다큐, 블랙홀, 외계행성</td>
+  <td>https://www.youtube.com/channel/UC0lJDV9wY5C6FJfKrEkRlYQ</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>뜨억맨의 지식탐구소</td>
+  <td>7</td>
+  <td>외계행성, 블랙홀</td>
+  <td>https://www.youtube.com/channel/UCxJSA4HaszUawEVlGZIrwxQ</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>책읽기좋은날</td>
+  <td>6</td>
+  <td>교양 상식, 행동심리</td>
+  <td>https://www.youtube.com/channel/UC17lvWECf2AWRbqKuCcf4VQ</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>황현필 한국사</td>
+  <td>6</td>
+  <td>근현대사, 조선왕조 실록</td>
+  <td>https://www.youtube.com/channel/UCRPRCmoQrbQ2qef7HpHz6GA</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>잡학게티</td>
+  <td>6</td>
+  <td>과학 잡학</td>
+  <td>https://www.youtube.com/channel/UCa5c474zwav6yij1MCB8dQg</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td>명품차트분석</td>
+  <td>5</td>
+  <td>삼성전자, 주식 시장 분석</td>
+  <td>https://www.youtube.com/channel/UC6haO7lRiXKrgSeynRUfGNw</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td>증시각도기TV</td>
+  <td>5</td>
+  <td>주식 시장 분석, 투자</td>
+  <td>https://www.youtube.com/channel/UCdOjVxkj5JA0iDu3_xcsTyQ</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td>역사노트</td>
+  <td>5</td>
+  <td>조선왕조 실록, 근현대사</td>
+  <td>https://www.youtube.com/channel/UCRyPVG_fIoD0KAy8omijieA</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td>넥스트스터디</td>
+  <td>5</td>
+  <td>정책 해설</td>
+  <td>https://www.youtube.com/channel/UCkY2Tq32Mpy8Qq-QljPFLag</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="전체-채널-요약">📊 전체 채널 요약</h2>
+
+<table>
+<thead>
+<tr>
+  <th>분류</th>
+  <th>채널</th>
+  <th>구독자</th>
+  <th>주당 발행</th>
+  <th>최대 효율</th>
+  <th>최대 조회</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>AI</td>
+  <td>경제대부</td>
+  <td>2,940</td>
+  <td>0.0편</td>
+  <td>62.6x</td>
+  <td>184,120</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>농부의 경제학</td>
+  <td>3,780</td>
+  <td>3.0편</td>
+  <td>28.6x</td>
+  <td>108,086</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제읽음이</td>
+  <td>13,300</td>
+  <td>3.5편</td>
+  <td>25.1x</td>
+  <td>333,684</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제균열</td>
+  <td>17,600</td>
+  <td>0.0편</td>
+  <td>23.7x</td>
+  <td>417,925</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>탐정 경제학</td>
+  <td>16,700</td>
+  <td>0.0편</td>
+  <td>21.3x</td>
+  <td>355,879</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>럭키경제학</td>
+  <td>19,300</td>
+  <td>1.5편</td>
+  <td>19.4x</td>
+  <td>375,243</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제왕토끼</td>
+  <td>20,500</td>
+  <td>0.0편</td>
+  <td>18.5x</td>
+  <td>378,611</td>
+</tr>
+<tr>
+  <td>일반, 뉴스</td>
+  <td>세계경제 돋보기</td>
+  <td>6,920</td>
+  <td>3.5편</td>
+  <td>16.0x</td>
+  <td>110,481</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>한밤의 한국사</td>
+  <td>4,220</td>
+  <td>2.0편</td>
+  <td>12.4x</td>
+  <td>52,291</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>퐁퐁퐁경제학</td>
+  <td>3,490</td>
+  <td>3.5편</td>
+  <td>9.3x</td>
+  <td>32,438</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>쉽게이해되는 경제</td>
+  <td>1,550</td>
+  <td>3.5편</td>
+  <td>9.0x</td>
+  <td>13,897</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>미니경제학</td>
+  <td>28,400</td>
+  <td>0.0편</td>
+  <td>7.5x</td>
+  <td>212,861</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>방구석 경제학</td>
+  <td>20,900</td>
+  <td>0.5편</td>
+  <td>6.5x</td>
+  <td>136,561</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>밤의 우주</td>
+  <td>5,940</td>
+  <td>3.5편</td>
+  <td>6.1x</td>
+  <td>36,484</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>자연의 비밀 노트</td>
+  <td>3,890</td>
+  <td>3.5편</td>
+  <td>5.8x</td>
+  <td>22,606</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>손안의 경제학</td>
+  <td>952</td>
+  <td>3.0편</td>
+  <td>5.3x</td>
+  <td>5,075</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>귀에쏙쏙경제학</td>
+  <td>12,600</td>
+  <td>3.5편</td>
+  <td>3.5x</td>
+  <td>43,711</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>만약에 머니</td>
+  <td>30,900</td>
+  <td>2.5편</td>
+  <td>3.3x</td>
+  <td>101,916</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>역사경제해결사</td>
+  <td>15,500</td>
+  <td>3.5편</td>
+  <td>3.2x</td>
+  <td>50,014</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>모두의 경제학</td>
+  <td>35,500</td>
+  <td>3.5편</td>
+  <td>2.7x</td>
+  <td>96,703</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>궁금한경제학</td>
+  <td>3,400</td>
+  <td>3.5편</td>
+  <td>1.8x</td>
+  <td>6,145</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>클릭 경제학</td>
+  <td>15,200</td>
+  <td>3.0편</td>
+  <td>1.6x</td>
+  <td>24,049</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>세모과학</td>
+  <td>155,000</td>
+  <td>2.0편</td>
+  <td>1.3x</td>
+  <td>208,045</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제월드</td>
+  <td>19,600</td>
+  <td>3.5편</td>
+  <td>1.3x</td>
+  <td>25,797</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>과학을보다</td>
+  <td>185,000</td>
+  <td>3.5편</td>
+  <td>1.1x</td>
+  <td>208,827</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>팬더경제학</td>
+  <td>30,300</td>
+  <td>3.5편</td>
+  <td>1.0x</td>
+  <td>29,815</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>원가 공개 경제학</td>
+  <td>12,000</td>
+  <td>3.5편</td>
+  <td>1.0x</td>
+  <td>11,683</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>이클립스</td>
+  <td>154,000</td>
+  <td>3.0편</td>
+  <td>0.9x</td>
+  <td>144,141</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>과학드림</td>
+  <td>1,130,000</td>
+  <td>0.0편</td>
+  <td>0.9x</td>
+  <td>963,385</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>준의경제학</td>
+  <td>5,510</td>
+  <td>3.5편</td>
+  <td>0.8x</td>
+  <td>4,585</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>신비과학</td>
+  <td>40,600</td>
+  <td>0.0편</td>
+  <td>0.7x</td>
+  <td>28,937</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>범준에 물리다</td>
+  <td>357,000</td>
+  <td>0.5편</td>
+  <td>0.7x</td>
+  <td>238,849</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>코믹스 경제</td>
+  <td>1,590</td>
+  <td>3.5편</td>
+  <td>0.6x</td>
+  <td>1,022</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>김응빈의 응생물학</td>
+  <td>73,200</td>
+  <td>3.5편</td>
+  <td>0.6x</td>
+  <td>43,841</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>쏨작가의지식사전</td>
+  <td>593,000</td>
+  <td>0.0편</td>
+  <td>0.6x</td>
+  <td>342,618</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>솔직한 경제학</td>
+  <td>14,800</td>
+  <td>3.5편</td>
+  <td>0.5x</td>
+  <td>7,855</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>석군 seokkun</td>
+  <td>120,000</td>
+  <td>0.0편</td>
+  <td>0.5x</td>
+  <td>60,630</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>만화 경제학</td>
+  <td>77,100</td>
+  <td>3.5편</td>
+  <td>0.5x</td>
+  <td>37,414</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>머니 크래시</td>
+  <td>6,500</td>
+  <td>3.5편</td>
+  <td>0.5x</td>
+  <td>3,109</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>과학이 말하는 삶</td>
+  <td>15,800</td>
+  <td>3.5편</td>
+  <td>0.4x</td>
+  <td>6,230</td>
+</tr>
+<tr>
+  <td>일반+AI</td>
+  <td>크랩 KLAB</td>
+  <td>1,000,000</td>
+  <td>3.5편</td>
+  <td>0.4x</td>
+  <td>394,123</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>방구석 과학</td>
+  <td>183,000</td>
+  <td>3.5편</td>
+  <td>0.4x</td>
+  <td>68,236</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>김지윤의 지식Play</td>
+  <td>1,390,000</td>
+  <td>0.5편</td>
+  <td>0.4x</td>
+  <td>516,948</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>정형돈의 제목없음TV</td>
+  <td>869,000</td>
+  <td>1.5편</td>
+  <td>0.4x</td>
+  <td>313,239</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>아빠의사의 인생 스킬북</td>
+  <td>99,500</td>
+  <td>0.0편</td>
+  <td>0.3x</td>
+  <td>32,196</td>
+</tr>
+<tr>
+  <td>대형</td>
+  <td>지식인사이드</td>
+  <td>3,830,000</td>
+  <td>3.5편</td>
+  <td>0.3x</td>
+  <td>1,151,162</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>머니코믹스</td>
+  <td>1,380,000</td>
+  <td>3.5편</td>
+  <td>0.3x</td>
+  <td>402,974</td>
+</tr>
+<tr>
+  <td>일반, 뉴스</td>
+  <td>교양이를 부탁해</td>
+  <td>433,000</td>
+  <td>3.5편</td>
+  <td>0.3x</td>
+  <td>123,227</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>새싹경제학</td>
+  <td>29,600</td>
+  <td>3.5편</td>
+  <td>0.3x</td>
+  <td>8,309</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>B tv 이동진의 파이아키아</td>
+  <td>838,000</td>
+  <td>1.0편</td>
+  <td>0.2x</td>
+  <td>202,526</td>
+</tr>
+<tr>
+  <td>대형</td>
+  <td>보다 BODA</td>
+  <td>3,110,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>725,852</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>까칠한 밍광의 경제학</td>
+  <td>1,120</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>255</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>리뷰엉이: Owl's Review</td>
+  <td>1,830,000</td>
+  <td>0.5편</td>
+  <td>0.2x</td>
+  <td>393,064</td>
+</tr>
+<tr>
+  <td>일반, 뉴스</td>
+  <td>시사저널TV</td>
+  <td>761,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>163,321</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>Sprouts 한국</td>
+  <td>83,200</td>
+  <td>1.0편</td>
+  <td>0.2x</td>
+  <td>16,081</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>안될과학</td>
+  <td>1,380,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>239,716</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>부읽남TV_내집마련부터건물주까지</td>
+  <td>1,780,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>299,742</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>이효석아카데미</td>
+  <td>597,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>96,294</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>써에이스쇼 sirace show</td>
+  <td>639,000</td>
+  <td>1.5편</td>
+  <td>0.2x</td>
+  <td>99,948</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>머니인사이드</td>
+  <td>2,060,000</td>
+  <td>3.5편</td>
+  <td>0.2x</td>
+  <td>317,003</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>집구석경제학</td>
+  <td>118,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>16,739</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>장동선의 궁금한 뇌</td>
+  <td>724,000</td>
+  <td>1.5편</td>
+  <td>0.1x</td>
+  <td>97,939</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>전인구경제연구소</td>
+  <td>1,280,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>138,337</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>지식은 날리지</td>
+  <td>638,000</td>
+  <td>0.0편</td>
+  <td>0.1x</td>
+  <td>58,139</td>
+</tr>
+<tr>
+  <td>대형</td>
+  <td>사물궁이 잡학지식</td>
+  <td>1,560,000</td>
+  <td>1.5편</td>
+  <td>0.1x</td>
+  <td>141,364</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>얄궂은 경제학</td>
+  <td>5,930</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>498</td>
+</tr>
+<tr>
+  <td>일반, 뉴스</td>
+  <td>경제 원탑</td>
+  <td>475,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>38,949</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>카오스 사이언스</td>
+  <td>276,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>21,822</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>푸짐한 경제학</td>
+  <td>38,200</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>2,947</td>
+</tr>
+<tr>
+  <td>일반, 뉴스</td>
+  <td>주식원샷</td>
+  <td>202,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>14,982</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>간다효</td>
+  <td>736,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>52,321</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>삼프로TV 3PROTV</td>
+  <td>2,950,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>206,752</td>
+</tr>
+<tr>
+  <td>대형</td>
+  <td>EBS 컬렉션 - 사이언스</td>
+  <td>1,330,000</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>86,444</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>경제따라잡기</td>
+  <td>1,070</td>
+  <td>3.5편</td>
+  <td>0.1x</td>
+  <td>65</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>세상의 모든 다큐</td>
+  <td>166,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>7,324</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>로빈의 역사 기록</td>
+  <td>473,000</td>
+  <td>0.5편</td>
+  <td>0.0x</td>
+  <td>20,640</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>방송대 지식+</td>
+  <td>907,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>37,216</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>심리학자 차희연</td>
+  <td>366,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>9,756</td>
+</tr>
+<tr>
+  <td>일반, 뉴스</td>
+  <td>엠키타카 MKTK</td>
+  <td>1,070,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>26,561</td>
+</tr>
+<tr>
+  <td>대형</td>
+  <td>tvN D ENT</td>
+  <td>5,350,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>115,024</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>세바시 강연 Sebasi Talk</td>
+  <td>2,200,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>13,158</td>
+</tr>
+<tr>
+  <td>대형</td>
+  <td>EBSDocumentary (EBS 다큐)</td>
+  <td>5,380,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>19,182</td>
+</tr>
+<tr>
+  <td>대형</td>
+  <td>EBSCulture (EBS 교양)</td>
+  <td>2,990,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>7,661</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>교양 Voyage</td>
+  <td>1,070,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>2,382</td>
+</tr>
+<tr>
+  <td>AI</td>
+  <td>주식곳간TV</td>
+  <td>540,000</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>270</td>
+</tr>
+<tr>
+  <td>일반</td>
+  <td>손에잡히는경제</td>
+  <td>0</td>
+  <td>3.5편</td>
+  <td>0.0x</td>
+  <td>37,321</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="카테고리별-폭발시그널-영상-요약">🏷️ 카테고리별 폭발/시그널 영상 요약</h2>
+
+<table>
+<thead>
+<tr>
+  <th>카테고리</th>
+  <th>영상수</th>
+  <th>시그널</th>
+  <th>폭발(소)</th>
+  <th>폭발(대)</th>
+  <th>롱폼</th>
+  <th>쇼츠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>경제</td>
+  <td>53</td>
+  <td>5</td>
+  <td>44</td>
+  <td>6</td>
+  <td>49</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td>과학</td>
+  <td>17</td>
+  <td>3</td>
+  <td>4</td>
+  <td>13</td>
+  <td>17</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>시사</td>
+  <td>14</td>
+  <td>7</td>
+  <td>3</td>
+  <td>9</td>
+  <td>13</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>역사</td>
+  <td>12</td>
+  <td>0</td>
+  <td>6</td>
+  <td>6</td>
+  <td>12</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>정치</td>
+  <td>3</td>
+  <td>3</td>
+  <td>0</td>
+  <td>2</td>
+  <td>2</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>지식</td>
+  <td>21</td>
+  <td>2</td>
+  <td>0</td>
+  <td>20</td>
+  <td>21</td>
+  <td>0</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="오늘-분포-기준선-임계-보정용">📈 오늘 분포 기준선 (임계 보정용)</h2>
+
+<table>
+<thead>
+<tr>
+  <th>그룹</th>
+  <th>영상수</th>
+  <th>효율 median</th>
+  <th>효율 p75</th>
+  <th>효율 p90</th>
+  <th>vel p90</th>
+  <th>조회 p90</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>소형(≤50K)</td>
+  <td>259</td>
+  <td>0.2x</td>
+  <td>0.6x</td>
+  <td>4.9x</td>
+  <td>122/h</td>
+  <td>49,339</td>
+</tr>
+<tr>
+  <td>대형(&gt;50K)</td>
+  <td>343</td>
+  <td>0.0x</td>
+  <td>0.1x</td>
+  <td>0.3x</td>
+  <td>1,409/h</td>
+  <td>203,390</td>
+</tr>
+</tbody>
+</table>
+</section>
+  <footer>arrange yt scanner · 2026-05-29 10:05</footer>
+</body>
+</html>
