@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#8ab4f8">
+  <title>일일 리포트 — 2026-05-29</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+:root {
+  --blue:#8ab4f8; --red:#f28b82; --purple:#c58af9; --green:#81c995;
+  --text:#202124; --text2:#5f6368; --border:#dadce0; --surface:#fff; --bg:#fff;
+  --hover:#f1f3f4; --divider:#e8eaed; --chip:#e8f0fe;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Google Sans','Roboto','Noto Sans KR',-apple-system,sans-serif;
+  line-height:1.5; color:var(--text); background:var(--bg);
+  max-width:1280px; margin:0 auto; padding:20px 20px 48px;
+  -webkit-font-smoothing:antialiased;
+}
+header { padding:12px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px; }
+header h1 { font-size:26px; font-weight:700; letter-spacing:-0.5px; }
+header .sub { color:var(--text2); font-size:13px; margin-top:6px; }
+a { color:var(--blue); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* 요약 카드 */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:20px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
+.card .label { font-size:13px; color:var(--text2); margin-bottom:8px; font-weight:500; }
+.card .value { font-size:30px; font-weight:500; letter-spacing:-0.5px; }
+.card.tone-red { background:rgba(242,139,130,.08); border-color:rgba(242,139,130,.35); }
+.card.tone-red .value { color:var(--red); }
+.card.tone-green { background:rgba(129,201,149,.08); border-color:rgba(129,201,149,.35); }
+.card.tone-green .value { color:var(--green); }
+.card.tone-blue { background:rgba(138,180,248,.08); border-color:rgba(138,180,248,.35); }
+.card.tone-blue .value { color:var(--blue); }
+.card.tone-purple { background:rgba(197,138,249,.08); border-color:rgba(197,138,249,.35); }
+.card.tone-purple .value { color:#a855f7; }
+
+/* 카테고리 탭 */
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 12px; }
+.tab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2);
+       font-size:14px; font-weight:500; cursor:pointer; border:none; transition:all .15s; }
+.tab:hover { background:#e3e6e8; }
+.tab.active { background:var(--blue); color:#fff; }
+.tab .cnt { font-size:12px; opacity:.8; margin-left:4px; }
+
+/* 필터 바 */
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;
+           padding:12px 16px; background:var(--hover); border-radius:8px; }
+.filter-group { display:flex; gap:4px; align-items:center; }
+.filter-group .lbl { font-size:12px; color:var(--text2); margin-right:4px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff; }
+.seg button { padding:6px 12px; border:none; background:#fff; font-size:13px; cursor:pointer; color:var(--text2); }
+.seg button.active { background:var(--blue); color:#fff; }
+.toggle { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text); cursor:pointer; }
+#search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
+          border-radius:20px; font-size:14px; background:#fff; }
+#search:focus { outline:none; border-color:var(--blue); }
+
+/* 채널 카드 그리드 */
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px; }
+.ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+           padding:16px; transition:box-shadow .2s; }
+.ch-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15); }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.ch-name { font-size:16px; font-weight:700; }
+.ch-meta { font-size:12px; color:var(--text2); margin-top:2px; }
+.ch-type { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--hover); color:var(--text2); white-space:nowrap; }
+.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:8px 0; }
+.ch-cat { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--chip); color:var(--blue); font-weight:500; }
+.ch-stats { display:flex; gap:12px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:12px; color:var(--text2); }
+.ch-stat b { font-size:15px; color:var(--text); font-weight:600; display:block; }
+.ch-stat.sig b { color:var(--red); }
+.ch-vid { margin-top:8px; }
+.ch-vid .vlabel { font-size:11px; color:var(--text2); font-weight:500; }
+.ch-vid .vtitle { font-size:13px; display:block; margin-top:2px; }
+.ch-vid .vmeta { font-size:11px; color:var(--text2); }
+.empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
+
+section { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
+section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
+.archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:12px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:500; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
+.archive-grid a.today { background:var(--blue); border-color:var(--blue); color:#fff; }
+.nav-links { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; }
+.nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
+/* 국가 전환 버튼 (한국 ⇄ 일본) — 최상단 prominent */
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:8px 16px; border:1px solid var(--border);
+  border-radius:20px; font-size:14px; font-weight:600; color:var(--text); background:var(--surface); margin-bottom:12px; }
+.country-switch:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
+/* 설명·지표 범례 바 */
+.info-bar { background:var(--hover); border:1px solid var(--border); border-radius:10px; padding:12px 16px; margin:6px 0 18px; font-size:13px; color:var(--text2); line-height:1.9; }
+.info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:500; font-size:14px; }
+.info-bar b { color:var(--text); }
+.legend-item { display:inline-block; margin-right:16px; white-space:nowrap; }
+/* nav 강조 (오늘 만들 주제) */
+.nav-links a.nav-primary { background:var(--blue); color:#fff; }
+/* 제작 추천 보드 */
+.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px; }
+.rec-group h3 { font-size:15px; font-weight:700; margin:6px 0 10px; }
+.rec-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:10px; }
+.rec-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.2),0 2px 6px 2px rgba(60,64,67,.12); }
+.rec-rank { color:var(--text2); font-weight:500; font-size:12px; margin-right:6px; }
+.rec-topic { font-size:15px; font-weight:700; margin-bottom:5px; }
+.rec-date { font-size:11px; color:#1e8e3e; font-weight:500; margin-bottom:4px; }
+.rec-why { font-size:12px; color:var(--text2); margin-bottom:7px; }
+.rec-ref { font-size:12px; display:inline-block; }
+.rec-empty { color:var(--text2); padding:18px; font-size:13px; }
+/* 🔥 재편집 재폭발 (최우선) */
+.reedit-box { background:rgba(242,139,130,.08); border:1px solid rgba(242,139,130,.45); border-radius:12px; padding:14px 16px; margin:10px 0 20px; }
+.reedit-head { font-size:16px; font-weight:700; }
+.reedit-sub { display:block; font-size:12px; font-weight:400; color:var(--text2); margin-top:3px; }
+.reedit-card { padding:10px 0; border-top:1px solid rgba(242,139,130,.22); }
+.reedit-card:first-of-type { border-top:none; }
+.reedit-line1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.reedit-line1 .row-title { max-width:420px; font-weight:500; }
+.reedit-meta { font-size:12px; color:var(--text2); margin-top:4px; padding-left:26px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } }
+footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
+
+/* 테이블 (아카이브 + 리포트 공통) — 클린 랭킹 행 */
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:auto; margin:10px 0 18px; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+thead th { text-align:left; font-weight:500; font-size:12px; color:var(--text2);
+  padding:11px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:#fafbfc; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; }
+tbody tr:last-child td { border-bottom:none; }
+tbody tr:hover { background:var(--hover); }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:500; font-variant-numeric:tabular-nums; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.num.lead { color:var(--text); font-weight:600; }
+.muted { color:var(--text2); }
+.cat-badge { display:inline-block; font-size:11px; padding:2px 9px; border-radius:11px; font-weight:500; white-space:nowrap; }
+.kw { font-weight:700; font-size:15px; }
+.cellv { display:flex; flex-direction:column; gap:1px; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; }
+.row-sub { font-size:11px; color:var(--text2); }
+.ch-tag { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--hover); color:var(--text2); }
+/* 리포트 섹션 헤더 */
+.rep-sec { margin:24px 0 4px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:17px; font-weight:700; }
+.rep-sec .cnt { font-size:13px; color:var(--text2); }
+.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
+/* 마크다운 리포트 잔여 표 */
+section table { margin:10px 0; }
+
+/* 뉴스 헤드라인 리스트 (Pixeling 스타일) */
+.news-list { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.news-row { display:flex; gap:12px; align-items:baseline; padding:13px 16px; border-bottom:1px solid var(--divider); }
+.news-row:last-child { border-bottom:none; }
+.news-row:hover { background:var(--hover); }
+.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:500; text-align:right; font-variant-numeric:tabular-nums; }
+.news-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.news-title { font-size:14px; font-weight:500; color:var(--text); white-space:normal; }
+.news-title:hover { color:var(--blue); }
+.news-meta { font-size:12px; color:var(--text2); display:flex; gap:7px; align-items:center; flex-wrap:wrap; }
+.news-src { color:#1e8e3e; font-weight:500; }
+.news-cat { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--chip); color:var(--blue); font-weight:500; }
+.news-orig { font-size:12px; color:var(--text2); }
+
+@media (max-width:600px) {
+  body { padding:14px; }
+  header h1 { font-size:21px; }
+  .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .card .value { font-size:24px; }
+  .ch-grid { grid-template-columns:1fr; }
+  .filters { flex-direction:column; align-items:stretch; }
+  .row-title { max-width:200px; }
+  tbody td, thead th { padding:9px 8px; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
+    <h1>📋 일일 리포트 — 2026-05-29</h1>
+    <div class="sub">시그널 0 · 소형 폭발 9 · 대형 폭발 19 · 신영상 3 · 2026-05-29 15:06</div>
+  </header>
+
+  <div class="info-bar">
+    <span class="desc">📋 그날 무엇이 터졌는지 섹션별 전체 디테일 — 시그널·폭발·신영상·발행둔화.</span>
+    <span class="legend-item">🚨 <b>시그널</b> = 시속 5천+/h (지금 뜨는 중)</span>
+    <span class="legend-item">🔥 <b>폭발</b> = 효율 5배+ (검증)</span>
+    <span class="legend-item"><b>효율</b> = 조회÷구독 · <b>시속</b> = 시간당 조회 증가</span>
+  </div>
+
+  <div class="cards">
+    <div class="card tone-red"><div class="label">🚨 알고리즘 시그널</div><div class="value">0</div></div>
+    <div class="card tone-green"><div class="label">🔬 소형 폭발</div><div class="value">9</div></div>
+    <div class="card tone-blue"><div class="label">🐳 대형 폭발</div><div class="value">19</div></div>
+    <div class="card tone-purple"><div class="label">🆕 신영상 24h</div><div class="value">3</div></div>
+  </div>
+  <div class="rep-sec"><h2>🐳 대형 채널 폭발 (구독 50,000+)</h2><span class="cnt">19편</span></div><div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>채널</th><th>제목</th><th class="num">효율</th><th class="num">시속</th><th class="num">조회</th></tr></thead><tbody><tr><td class="rank">1</td><td><div class="cellv"><b>るーいのゆっくり科学</b><span class="row-sub">구독 664,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=xSwN9b2oQ40" target="_blank">🎬 【ゆっくり解説】天体の運動はなぜ予測不能なのか－三体問題－</a></td><td class="num lead">1.5x</td><td class="num">0/h</td><td class="num">978,931</td></tr><tr><td class="rank">2</td><td><div class="cellv"><b>るーいのゆっくり科学</b><span class="row-sub">구독 664,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=XEJzpoAToIk" target="_blank">🎬 【ゆっくり解説】なぜ地球以外の天体には土が存在しないのか？－地球から土がなくなる日－</a></td><td class="num lead">1.5x</td><td class="num">55/h</td><td class="num">978,660</td></tr><tr><td class="rank">3</td><td><div class="cellv"><b>中田敦彦のYouTube大学 - NAKATA UNIVERSITY</b><span class="row-sub">구독 5,480,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=IuHgxm4HrJs" target="_blank">🎬 【新選組】激動の幕末！時代に抗い敗れ去った男たちの青春群像劇【Update版】(Shinsengumi)</a></td><td class="num lead">0.2x</td><td class="num">0/h</td><td class="num">964,078</td></tr><tr><td class="rank">4</td><td><div class="cellv"><b>教養としての世界史ch</b><span class="row-sub">구독 144,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=EvOGa_iGyN8" target="_blank">🎬 【韓国の歴史】古代から現代までをわかりやすく解説！</a></td><td class="num lead">6.2x</td><td class="num">0/h</td><td class="num">889,927</td></tr><tr><td class="rank">5</td><td><div class="cellv"><b>【ゆっくり解説】9割が知らない雑学</b><span class="row-sub">구독 496,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=Ifluvg0fcRk" target="_blank">🎬 【素朴な疑問】水からでしか生命が生まれない理由【ゆっくり解説】【雑学】</a></td><td class="num lead">1.2x</td><td class="num">0/h</td><td class="num">582,612</td></tr><tr><td class="rank">6</td><td><div class="cellv"><b>るーいのゆっくり科学</b><span class="row-sub">구독 664,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=Rw_SXw_Ciig" target="_blank">🎬 【ゆっくり解説】なぜブラックホールからは光すら脱出不可能なのか－時間と空間の入れ替わり－</a></td><td class="num lead">0.8x</td><td class="num">9/h</td><td class="num">540,156</td></tr><tr><td class="rank">7</td><td><div class="cellv"><b>教養としての世界史ch</b><span class="row-sub">구독 144,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=-DGBnXasT5M" target="_blank">🎬 【（改訂版）イギリスの歴史】古代から現代までをわかりやすく解説！</a></td><td class="num lead">3.7x</td><td class="num">55/h</td><td class="num">535,824</td></tr><tr><td class="rank">8</td><td><div class="cellv"><b>YouTube高校 / 日本史・世界史</b><span class="row-sub">구독 668,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=qVWeUe5u5no" target="_blank">🎬 GHQは戦後日本をどう作り変えたのか？</a></td><td class="num lead">0.8x</td><td class="num">161/h</td><td class="num">513,551</td></tr><tr><td class="rank">9</td><td><div class="cellv"><b>中田敦彦のYouTube大学 - NAKATA UNIVERSITY</b><span class="row-sub">구독 5,480,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=-VKt_JqnIoQ" target="_blank">🎬 【プーチン】ウクライナ侵攻は錯乱か、緻密な戦略か？アメリカの影と動き出した皇帝たち【Update版】(Vladimir Putin)</a></td><td class="num lead">0.1x</td><td class="num">0/h</td><td class="num">496,247</td></tr><tr><td class="rank">10</td><td><div class="cellv"><b>【ゆっくり解説】9割が知らない雑学</b><span class="row-sub">구독 496,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=1uttYuNQs8g" target="_blank">🎬 【危険だからではない】なぜ原発は海にあるのかー東日本大震災ー【ゆっくり解説】【雑学】</a></td><td class="num lead">1.0x</td><td class="num">0/h</td><td class="num">484,947</td></tr><tr><td class="rank">11</td><td><div class="cellv"><b>【ゆっくり解説】9割が知らない雑学</b><span class="row-sub">구독 496,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=NAKbh5_Vlvw" target="_blank">🎬 【パンドラの箱】放射線の発見はどうやって科学史を変えたのか【ゆっくり解説】【雑学】</a></td><td class="num lead">1.0x</td><td class="num">0/h</td><td class="num">472,599</td></tr><tr><td class="rank">12</td><td><div class="cellv"><b>中田敦彦のYouTube大学 - NAKATA UNIVERSITY</b><span class="row-sub">구독 5,480,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=8Fgp6B8ocis" target="_blank">🎬 【宇宙創成】人類最大の謎！その真理に挑んだ天才たちの軌跡【Update版】(Big Bang)</a></td><td class="num lead">0.1x</td><td class="num">0/h</td><td class="num">378,966</td></tr><tr><td class="rank">13</td><td><div class="cellv"><b>るーいのゆっくり科学</b><span class="row-sub">구독 664,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=yqsnkULOsp8" target="_blank">🎬 【ゆっくり解説】色に踊らされた人類と死の歴史</a></td><td class="num lead">0.5x</td><td class="num">0/h</td><td class="num">341,613</td></tr><tr><td class="rank">14</td><td><div class="cellv"><b>中田敦彦のYouTube大学 - NAKATA UNIVERSITY</b><span class="row-sub">구독 5,480,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=mDtZclTAqDc" target="_blank">🎬 【ウクライナとロシアの関係史】なぜ侵攻は行われた？大国が奪い合う運命の交差点【Update版】(History of Ukraine and Russia)</a></td><td class="num lead">0.1x</td><td class="num">0/h</td><td class="num">325,000</td></tr><tr><td class="rank">15</td><td><div class="cellv"><b>コアラ先生の時事ネタ祭り</b><span class="row-sub">구독 554,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=i5qaLStVvqM" target="_blank">🎬 【ナフサショック】"石油危機の本丸" ナフサについて基本から解説します！</a></td><td class="num lead">0.5x</td><td class="num">0/h</td><td class="num">301,895</td></tr><tr><td class="rank">16</td><td><div class="cellv"><b>るーいのゆっくり科学</b><span class="row-sub">구독 664,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=OXrUYFosp5g" target="_blank">🎬 【ゆっくり解説】なぜ植物はオスとメスが一体化しているのか？</a></td><td class="num lead">0.5x</td><td class="num">0/h</td><td class="num">299,871</td></tr><tr><td class="rank">17</td><td><div class="cellv"><b>教養としての世界史ch</b><span class="row-sub">구독 144,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=UbgVMd13zFU" target="_blank">🎬 【（改訂版）イタリアの歴史】古代から現代までをわかりやすく解説！</a></td><td class="num lead">1.6x</td><td class="num">0/h</td><td class="num">236,854</td></tr><tr><td class="rank">18</td><td><div class="cellv"><b>【ゆっくり解説】9割が知らない雑学</b><span class="row-sub">구독 496,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=NqNxrrpD6fc" target="_blank">🎬 【帆船2000年 最大の謎】昔の船は逆風の時どうしていたのか【ゆっくり解説】【雑学】</a></td><td class="num lead">0.4x</td><td class="num">0/h</td><td class="num">217,707</td></tr><tr><td class="rank">19</td><td><div class="cellv"><b>【ゆっくり解説】9割が知らない雑学</b><span class="row-sub">구독 496,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=dnZyVXOFgGI" target="_blank">🎬 【累計500億人感染】マラリアを絶対に駆逐できない意外な理由【ゆっくり解説】【雑学】</a></td><td class="num lead">0.4x</td><td class="num">46/h</td><td class="num">207,586</td></tr></tbody></table></div>
+<div class="rep-sec"><h2>🔬 소형 채널 폭발 (구독 ≤50,000)</h2><span class="cnt">9편</span></div><div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>채널</th><th>제목</th><th class="num">효율</th><th class="num">시속</th><th class="num">조회</th></tr></thead><tbody><tr><td class="rank">1</td><td><div class="cellv"><b>NSPチャンネル</b><span class="row-sub">구독 48,200</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=eVNIR4yTG4Y" target="_blank">🎬 令和8年4月時事解説・時局分析｜藤原直哉理事長（収録型）202604</a></td><td class="num lead">1.3x</td><td class="num">24/h</td><td class="num">64,606</td></tr><tr><td class="rank">2</td><td><div class="cellv"><b>ぐっすり眠れる歴史</b><span class="row-sub">구독 26,300</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=VtDtLDv4iJ8" target="_blank">🎬 【眠りながら聞く】承久の乱の話（３時間）</a></td><td class="num lead">0.9x</td><td class="num">4/h</td><td class="num">23,320</td></tr><tr><td class="rank">3</td><td><div class="cellv"><b>ぐっすり眠れる歴史</b><span class="row-sub">구독 26,300</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=YWrgGFidmS0" target="_blank">🎬 寝るときに聞き流す源頼朝の生涯（３時間）</a></td><td class="num lead">0.9x</td><td class="num">-4/h</td><td class="num">23,068</td></tr><tr><td class="rank">4</td><td><div class="cellv"><b>ぐっすり眠れる歴史</b><span class="row-sub">구독 26,300</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=o2xe_fuAIVA" target="_blank">🎬 【眠りながら聞く】壇ノ浦の戦いの話（３時間）</a></td><td class="num lead">0.8x</td><td class="num">0/h</td><td class="num">21,430</td></tr><tr><td class="rank">5</td><td><div class="cellv"><b>NSPチャンネル</b><span class="row-sub">구독 48,200</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=D-H1oumaElw" target="_blank">🎬 藤原理事長が今、お話したいこと 令和8年5月編 / 第115回NSP時局ならびに日本再生戦略講演会</a></td><td class="num lead">0.8x</td><td class="num">8/h</td><td class="num">38,225</td></tr><tr><td class="rank">6</td><td><div class="cellv"><b>ぐっすり眠れる歴史</b><span class="row-sub">구독 26,300</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=ZKVNUX_QzIM" target="_blank">🎬 なぜか熟睡できる「元寇」の話（３時間）</a></td><td class="num lead">0.8x</td><td class="num">180/h</td><td class="num">20,093</td></tr><tr><td class="rank">7</td><td><div class="cellv"><b>NSPチャンネル</b><span class="row-sub">구독 48,200</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=AFrvw14hlAo" target="_blank">🎬 令和8年5月質疑応答 / 第115回NSP時局ならびに日本再生戦略講演会</a></td><td class="num lead">0.6x</td><td class="num">4/h</td><td class="num">27,313</td></tr><tr><td class="rank">8</td><td><div class="cellv"><b>ゆっくり韓国事件簿【ゆっくり解説】</b><span class="row-sub">구독 46,200</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=A-nidTta0hQ" target="_blank">🎬 【ゆっくり解説】プレミアリーグから消える韓国人。いったいなぜ？</a></td><td class="num lead">0.5x</td><td class="num">0/h</td><td class="num">21,257</td></tr><tr><td class="rank">9</td><td><div class="cellv"><b>NSPチャンネル</b><span class="row-sub">구독 48,200</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=8tHG-ScwhN8" target="_blank">🎬 令和8年5月時事解説・時局分析｜藤原直哉理事長（収録型）202605</a></td><td class="num lead">0.1x</td><td class="num">1,760/h</td><td class="num">6,281</td></tr></tbody></table></div>
+<div class="rep-sec"><h2>🆕 신영상 (24시간 내)</h2><span class="cnt">3편</span></div><div class="tbl-wrap"><table><thead><tr><th>채널</th><th>제목</th><th class="num">효율</th><th class="num">조회</th></tr></thead><tbody><tr><td><div class="cellv"><b>NSPチャンネル</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=8tHG-ScwhN8" target="_blank">🎬 令和8年5月時事解説・時局分析｜藤原直哉理事長（収録型）202605</a></td><td class="num">0.1x</td><td class="num">6,281</td></tr><tr><td><div class="cellv"><b>ゆっくり防衛チャンネル</b><span class="row-sub">대형</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=qYbI83dcg2w" target="_blank">🎬 【ゆっくり解説】トルコが米国債をすべて売却！アホすぎる決断に国家崩壊秒読みに。</a></td><td class="num">0.0x</td><td class="num">3,996</td></tr><tr><td><div class="cellv"><b>ゆっくり機密情報局</b><span class="row-sub">대형</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=CxiFpnGT1s8" target="_blank">🎬 【ゆっくり解説】やはりT50は日本では整備せずw しかし韓国が日本にT-50を売り込む「真の狙い」がやばすぎた</a></td><td class="num">0.0x</td><td class="num">772</td></tr></tbody></table></div>
+  <footer>arrange yt scanner · 2026-05-29 15:06</footer>
+</body>
+</html>

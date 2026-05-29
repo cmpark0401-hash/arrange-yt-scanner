@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#8ab4f8">
+  <title>🎯 오늘의 주제 by arrange</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+:root {
+  --blue:#8ab4f8; --red:#f28b82; --purple:#c58af9; --green:#81c995;
+  --text:#202124; --text2:#5f6368; --border:#dadce0; --surface:#fff; --bg:#fff;
+  --hover:#f1f3f4; --divider:#e8eaed; --chip:#e8f0fe;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Google Sans','Roboto','Noto Sans KR',-apple-system,sans-serif;
+  line-height:1.5; color:var(--text); background:var(--bg);
+  max-width:1280px; margin:0 auto; padding:20px 20px 48px;
+  -webkit-font-smoothing:antialiased;
+}
+header { padding:12px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px; }
+header h1 { font-size:26px; font-weight:700; letter-spacing:-0.5px; }
+header .sub { color:var(--text2); font-size:13px; margin-top:6px; }
+a { color:var(--blue); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* 요약 카드 */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:20px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
+.card .label { font-size:13px; color:var(--text2); margin-bottom:8px; font-weight:500; }
+.card .value { font-size:30px; font-weight:500; letter-spacing:-0.5px; }
+.card.tone-red { background:rgba(242,139,130,.08); border-color:rgba(242,139,130,.35); }
+.card.tone-red .value { color:var(--red); }
+.card.tone-green { background:rgba(129,201,149,.08); border-color:rgba(129,201,149,.35); }
+.card.tone-green .value { color:var(--green); }
+.card.tone-blue { background:rgba(138,180,248,.08); border-color:rgba(138,180,248,.35); }
+.card.tone-blue .value { color:var(--blue); }
+.card.tone-purple { background:rgba(197,138,249,.08); border-color:rgba(197,138,249,.35); }
+.card.tone-purple .value { color:#a855f7; }
+
+/* 카테고리 탭 */
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 12px; }
+.tab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2);
+       font-size:14px; font-weight:500; cursor:pointer; border:none; transition:all .15s; }
+.tab:hover { background:#e3e6e8; }
+.tab.active { background:var(--blue); color:#fff; }
+.tab .cnt { font-size:12px; opacity:.8; margin-left:4px; }
+
+/* 필터 바 */
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;
+           padding:12px 16px; background:var(--hover); border-radius:8px; }
+.filter-group { display:flex; gap:4px; align-items:center; }
+.filter-group .lbl { font-size:12px; color:var(--text2); margin-right:4px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff; }
+.seg button { padding:6px 12px; border:none; background:#fff; font-size:13px; cursor:pointer; color:var(--text2); }
+.seg button.active { background:var(--blue); color:#fff; }
+.toggle { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text); cursor:pointer; }
+#search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
+          border-radius:20px; font-size:14px; background:#fff; }
+#search:focus { outline:none; border-color:var(--blue); }
+
+/* 채널 카드 그리드 */
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px; }
+.ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+           padding:16px; transition:box-shadow .2s; }
+.ch-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15); }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.ch-name { font-size:16px; font-weight:700; }
+.ch-meta { font-size:12px; color:var(--text2); margin-top:2px; }
+.ch-type { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--hover); color:var(--text2); white-space:nowrap; }
+.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:8px 0; }
+.ch-cat { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--chip); color:var(--blue); font-weight:500; }
+.ch-stats { display:flex; gap:12px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:12px; color:var(--text2); }
+.ch-stat b { font-size:15px; color:var(--text); font-weight:600; display:block; }
+.ch-stat.sig b { color:var(--red); }
+.ch-vid { margin-top:8px; }
+.ch-vid .vlabel { font-size:11px; color:var(--text2); font-weight:500; }
+.ch-vid .vtitle { font-size:13px; display:block; margin-top:2px; }
+.ch-vid .vmeta { font-size:11px; color:var(--text2); }
+.empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
+
+section { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
+section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
+.archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:12px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:500; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
+.archive-grid a.today { background:var(--blue); border-color:var(--blue); color:#fff; }
+.nav-links { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; }
+.nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
+/* 국가 전환 버튼 (한국 ⇄ 일본) — 최상단 prominent */
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:8px 16px; border:1px solid var(--border);
+  border-radius:20px; font-size:14px; font-weight:600; color:var(--text); background:var(--surface); margin-bottom:12px; }
+.country-switch:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
+/* 설명·지표 범례 바 */
+.info-bar { background:var(--hover); border:1px solid var(--border); border-radius:10px; padding:12px 16px; margin:6px 0 18px; font-size:13px; color:var(--text2); line-height:1.9; }
+.info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:500; font-size:14px; }
+.info-bar b { color:var(--text); }
+.legend-item { display:inline-block; margin-right:16px; white-space:nowrap; }
+/* nav 강조 (오늘 만들 주제) */
+.nav-links a.nav-primary { background:var(--blue); color:#fff; }
+/* 제작 추천 보드 */
+.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px; }
+.rec-group h3 { font-size:15px; font-weight:700; margin:6px 0 10px; }
+.rec-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:10px; }
+.rec-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.2),0 2px 6px 2px rgba(60,64,67,.12); }
+.rec-rank { color:var(--text2); font-weight:500; font-size:12px; margin-right:6px; }
+.rec-topic { font-size:15px; font-weight:700; margin-bottom:5px; }
+.rec-date { font-size:11px; color:#1e8e3e; font-weight:500; margin-bottom:4px; }
+.rec-why { font-size:12px; color:var(--text2); margin-bottom:7px; }
+.rec-ref { font-size:12px; display:inline-block; }
+.rec-empty { color:var(--text2); padding:18px; font-size:13px; }
+/* 🔥 재편집 재폭발 (최우선) */
+.reedit-box { background:rgba(242,139,130,.08); border:1px solid rgba(242,139,130,.45); border-radius:12px; padding:14px 16px; margin:10px 0 20px; }
+.reedit-head { font-size:16px; font-weight:700; }
+.reedit-sub { display:block; font-size:12px; font-weight:400; color:var(--text2); margin-top:3px; }
+.reedit-card { padding:10px 0; border-top:1px solid rgba(242,139,130,.22); }
+.reedit-card:first-of-type { border-top:none; }
+.reedit-line1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.reedit-line1 .row-title { max-width:420px; font-weight:500; }
+.reedit-meta { font-size:12px; color:var(--text2); margin-top:4px; padding-left:26px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } }
+footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
+
+/* 테이블 (아카이브 + 리포트 공통) — 클린 랭킹 행 */
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:auto; margin:10px 0 18px; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+thead th { text-align:left; font-weight:500; font-size:12px; color:var(--text2);
+  padding:11px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:#fafbfc; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; }
+tbody tr:last-child td { border-bottom:none; }
+tbody tr:hover { background:var(--hover); }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:500; font-variant-numeric:tabular-nums; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.num.lead { color:var(--text); font-weight:600; }
+.muted { color:var(--text2); }
+.cat-badge { display:inline-block; font-size:11px; padding:2px 9px; border-radius:11px; font-weight:500; white-space:nowrap; }
+.kw { font-weight:700; font-size:15px; }
+.cellv { display:flex; flex-direction:column; gap:1px; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; }
+.row-sub { font-size:11px; color:var(--text2); }
+.ch-tag { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--hover); color:var(--text2); }
+/* 리포트 섹션 헤더 */
+.rep-sec { margin:24px 0 4px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:17px; font-weight:700; }
+.rep-sec .cnt { font-size:13px; color:var(--text2); }
+.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
+/* 마크다운 리포트 잔여 표 */
+section table { margin:10px 0; }
+
+/* 뉴스 헤드라인 리스트 (Pixeling 스타일) */
+.news-list { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.news-row { display:flex; gap:12px; align-items:baseline; padding:13px 16px; border-bottom:1px solid var(--divider); }
+.news-row:last-child { border-bottom:none; }
+.news-row:hover { background:var(--hover); }
+.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:500; text-align:right; font-variant-numeric:tabular-nums; }
+.news-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.news-title { font-size:14px; font-weight:500; color:var(--text); white-space:normal; }
+.news-title:hover { color:var(--blue); }
+.news-meta { font-size:12px; color:var(--text2); display:flex; gap:7px; align-items:center; flex-wrap:wrap; }
+.news-src { color:#1e8e3e; font-weight:500; }
+.news-cat { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--chip); color:var(--blue); font-weight:500; }
+.news-orig { font-size:12px; color:var(--text2); }
+
+@media (max-width:600px) {
+  body { padding:14px; }
+  header h1 { font-size:21px; }
+  .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .card .value { font-size:24px; }
+  .ch-grid { grid-template-columns:1fr; }
+  .filters { flex-direction:column; align-items:stretch; }
+  .row-title { max-width:200px; }
+  tbody td, thead th { padding:9px 8px; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
+    <h1>🎯 오늘의 주제</h1>
+    <div class="sub">주제 키워드별 오늘 바로 만들 주제 추천 · 2026-05-29 15:06</div>
+  </header>
+
+  <div class="info-bar">
+    <span class="desc">주제 키워드마다 ① <b>검증 금광 주제</b>(여러 채널·반복 폭발 = 안전)와 ② <b>오늘 뜬 주제</b>(지금 신선)를 보여줍니다. 주제를 고르면 script-pd에서 바로 제작하세요.</span>
+    <span class="legend-item">🔁 <b>검증 금광</b> = 재편집해도 다시 터지는 누적 주제</span>
+    <span class="legend-item">🔥 <b>오늘 뜬</b> = 오늘 모니터링에서 폭발/시그널</span>
+  </div>
+
+  <div id="reeditWrap"></div>
+
+  <div class="tabs" id="chTabs">
+    
+    <button class="tab active" data-ch="경제">💰 경제</button>
+    
+    <button class="tab " data-ch="역사">📜 역사</button>
+    
+    <button class="tab " data-ch="지식">📚 지식</button>
+    
+    <button class="tab " data-ch="심리학">🧠 심리학</button>
+    
+    <button class="tab " data-ch="과학">🔬 과학</button>
+    
+    <button class="tab " data-ch="시사">🗞️ 시사</button>
+    
+    <button class="tab " data-ch="정치">🏛️ 정치</button>
+    
+  </div>
+
+  <div id="recBody"></div>
+  <footer>arrange yt scanner · 2026-05-29 15:06</footer>
+
+  <script>
+    const RECS = {"\uacbd\uc81c": {"emoji": "\ud83d\udcb0", "proven": [], "today": [{"_sort": 0.5449368231046932, "date": "2026-04-25 (34\uc77c \uc804)", "eff": 0.5449368231046932, "ref_ch": "\u30b3\u30a2\u30e9\u5148\u751f\u306e\u6642\u4e8b\u30cd\u30bf\u796d\u308a", "ref_id": "i5qaLStVvqM", "ref_title": "\u3010\u30ca\u30d5\u30b5\u30b7\u30e7\u30c3\u30af\u3011\"\u77f3\u6cb9\u5371\u6a5f\u306e\u672c\u4e38\" \u30ca\u30d5\u30b5\u306b\u3064\u3044\u3066\u57fa\u672c\u304b\u3089\u89e3\u8aac\u3057\u307e\u3059\uff01", "topic": "\u3010\u30ca\u30d5\u30b5\u30b7\u30e7\u30c3\u30af\u3011\"\u77f3\u6cb9\u5371\u6a5f\u306e\u672c\u4e38\" \u30ca\u30d5\u30b5\u306b\u3064\u3044\u3066\u57fa\u672c\u304b\u3089\u89e3\u8aac\u3057\u307e\u3059\uff01", "why": "\ud6a8\uc728 0.5x \u00b7 \uc870\ud68c 301,895\ud68c \u00b7 \u30b3\u30a2\u30e9\u5148\u751f\u306e\u6642\u4e8b\u30cd\u30bf\u796d\u308a"}, {"_sort": 0.46010822510822513, "date": "2026-05-12 (17\uc77c \uc804)", "eff": 0.46010822510822513, "ref_ch": "\u3086\u3063\u304f\u308a\u97d3\u56fd\u4e8b\u4ef6\u7c3f\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011", "ref_id": "A-nidTta0hQ", "ref_title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u30d7\u30ec\u30df\u30a2\u30ea\u30fc\u30b0\u304b\u3089\u6d88\u3048\u308b\u97d3\u56fd\u4eba\u3002\u3044\u3063\u305f\u3044\u306a\u305c\uff1f", "topic": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u30d7\u30ec\u30df\u30a2\u30ea\u30fc\u30b0\u304b\u3089\u6d88\u3048\u308b\u97d3\u56fd\u4eba\u3002\u3044\u3063\u305f\u3044\u306a\u305c\uff1f", "why": "\ud6a8\uc728 0.5x \u00b7 \uc870\ud68c 21,257\ud68c \u00b7 \u3086\u3063\u304f\u308a\u97d3\u56fd\u4e8b\u4ef6\u7c3f\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011"}]}, "\uacfc\ud559": {"emoji": "\ud83d\udd2c", "proven": [{"ref_ch": "\u4e88\u5099\u6821\u306e\u30ce\u30ea\u3067\u5b66\u3076\u300c\u5927\u5b66\u306e\u6570\u5b66\u30fb\u7269\u7406\u300d", "ref_id": "voFHToRM4xI", "ref_title": "\u4e2d\u5b66\u6570\u5b66\u304b\u3089\u306f\u3058\u3081\u308b\u76f8\u5bfe\u6027\u7406\u8ad6", "topic": "\u76f8\u5bfe\u6027\u7406\u8ad6", "why": "\uac80\uc99d 1\uc77c \u00b7 8\ucc44\ub110 \u00b7 \ub204\uc801 82,471,572\ud68c"}, {"ref_ch": "\u30f4\u30a1\u30fc\u30cb\u30e3\u30fb\u30de\u30fc\u30cb\u30e3 \u65e5\u672c\u8a9e", "ref_id": "WWE8SGk-RYU", "ref_title": "\u6050\u7adc\u306e\u304a\u3082\u3061\u3083\u304c\u52d5\u304d\u51fa\u3057\u305f\uff01\ud83e\udd96\u2728\uff5c\u6050\u7adc\u3068\u5192\u967a\u3057\u3088\u3046\uff01", "topic": "\u6050\u7adc", "why": "\uac80\uc99d 1\uc77c \u00b7 4\ucc44\ub110 \u00b7 \ub204\uc801 34,231,428\ud68c"}, {"ref_ch": "\u308b\u306a", "ref_id": "jM02C3uSBXY", "ref_title": "\u5b87\u5b99\u306e\u5927\u304d\u3055\u3092\u4f53\u611f\u3067\u304d\u308b\u52d5\u753b", "topic": "\u5b87\u5b99", "why": "\uac80\uc99d 1\uc77c \u00b7 3\ucc44\ub110 \u00b7 \ub204\uc801 37,025,747\ud68c"}, {"ref_ch": "Kaoru GreenEmerald", "ref_id": "GPdLEKzHd1g", "ref_title": "\u5730\u7403\u305d\u3057\u3066\u751f\u547d\u306e\u8a95\u751f\u3068\u9032\u5316 \u3010\u5b8c\u6210\u7248\u3011", "topic": "\u751f\u547d", "why": "\uac80\uc99d 1\uc77c \u00b7 3\ucc44\ub110 \u00b7 \ub204\uc801 24,586,305\ud68c"}, {"ref_ch": "National Geographic", "ref_id": "kOEDG3j1bjs", "ref_title": "\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb\u5165\u9580\uff5c\u30ca\u30b7\u30e7\u30ca\u30eb\u30b8\u30aa\u30b0\u30e9\u30d5\u30a3\u30c3\u30af", "topic": "\u30d6\u30e9\u30c3\u30af\u30db", "why": "\uac80\uc99d 1\uc77c \u00b7 3\ucc44\ub110 \u00b7 \ub204\uc801 13,237,399\ud68c"}, {"ref_ch": "National Geographic", "ref_id": "kOEDG3j1bjs", "ref_title": "\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb\u5165\u9580\uff5c\u30ca\u30b7\u30e7\u30ca\u30eb\u30b8\u30aa\u30b0\u30e9\u30d5\u30a3\u30c3\u30af", "topic": "\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb", "why": "\uac80\uc99d 1\uc77c \u00b7 3\ucc44\ub110 \u00b7 \ub204\uc801 13,237,399\ud68c"}, {"ref_ch": "PIVOT \u516c\u5f0f\u30c1\u30e3\u30f3\u30cd\u30eb", "ref_id": "bw2pLH7v8Rw", "ref_title": "\u3010\u4eba\u985e\u306f\u3069\u3053\u304b\u3089\u6765\u3066\u3001\u3069\u3053\u306b\u5411\u304b\u3046\u306e\u304b\u3011\u56fd\u7acb\u79d1\u5b66\u535a\u7269\u9928\u9928\u9577\u30fb\u7be0\u7530\u8b19\u4e00\uff0f\u30ce\u30fc\u30d9\u30eb\u8cde\u53d7\u8cde\u7814\u7a76\u304c\u660e\u3089\u304b\u306b\u3057\u305f\u4eba\u985e\u306e\u8d77\u6e90\uff0f\u300c\u65e5\u672c\u4eba\u300d\u306e\u8d77\u6e90\u3068\u306f\uff0f\u300c\u79d1\u535a\u30af\u30e9\u30d5\u30a1\u30f3\u300d\u306e\u88cf\u5074\u3068\u76ee\u7684\u3010EXTREME SCIENCE\u3011", "topic": "\u4eba\u985e", "why": "\uac80\uc99d 1\uc77c \u00b7 3\ucc44\ub110 \u00b7 \ub204\uc801 4,608,816\ud68c"}, {"ref_ch": "Kaoru GreenEmerald", "ref_id": "GPdLEKzHd1g", "ref_title": "\u5730\u7403\u305d\u3057\u3066\u751f\u547d\u306e\u8a95\u751f\u3068\u9032\u5316 \u3010\u5b8c\u6210\u7248\u3011", "topic": "\u9032\u5316", "why": "\uac80\uc99d 1\uc77c \u00b7 2\ucc44\ub110 \u00b7 \ub204\uc801 29,088,173\ud68c"}], "today": [{"_sort": 1.4742936746987951, "date": "2025-01-25 (489\uc77c \uc804)", "eff": 1.4742936746987951, "ref_ch": "\u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66", "ref_id": "xSwN9b2oQ40", "ref_title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u5929\u4f53\u306e\u904b\u52d5\u306f\u306a\u305c\u4e88\u6e2c\u4e0d\u80fd\u306a\u306e\u304b\uff0d\u4e09\u4f53\u554f\u984c\uff0d", "topic": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u5929\u4f53\u306e\u904b\u52d5\u306f\u306a\u305c\u4e88\u6e2c\u4e0d\u80fd\u306a\u306e\u304b\uff0d\u4e09\u4f53\u554f\u984c\uff0d", "why": "\ud6a8\uc728 1.5x \u00b7 \uc870\ud68c 978,931\ud68c \u00b7 \u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66"}, {"_sort": 1.4738855421686747, "date": "2025-11-28 (182\uc77c \uc804)", "eff": 1.4738855421686747, "ref_ch": "\u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66", "ref_id": "XEJzpoAToIk", "ref_title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u306a\u305c\u5730\u7403\u4ee5\u5916\u306e\u5929\u4f53\u306b\u306f\u571f\u304c\u5b58\u5728\u3057\u306a\u3044\u306e\u304b\uff1f\uff0d\u5730\u7403\u304b\u3089\u571f\u304c\u306a\u304f\u306a\u308b\u65e5\uff0d", "topic": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u306a\u305c\u5730\u7403\u4ee5\u5916\u306e\u5929\u4f53\u306b\u306f\u571f\u304c\u5b58\u5728\u3057\u306a\u3044\u306e\u304b\uff1f\uff0d\u5730\u7403\u304b\u3089\u571f\u304c\u306a\u304f\u306a\u308b\u65e5\uff0d", "why": "\ud6a8\uc728 1.5x \u00b7 \uc870\ud68c 978,660\ud68c \u00b7 \u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66"}, {"_sort": 1.1746209677419355, "date": "2025-11-14 (196\uc77c \uc804)", "eff": 1.1746209677419355, "ref_ch": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66", "ref_id": "Ifluvg0fcRk", "ref_title": "\u3010\u7d20\u6734\u306a\u7591\u554f\u3011\u6c34\u304b\u3089\u3067\u3057\u304b\u751f\u547d\u304c\u751f\u307e\u308c\u306a\u3044\u7406\u7531\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "topic": "\u3010\u7d20\u6734\u306a\u7591\u554f\u3011\u6c34\u304b\u3089\u3067\u3057\u304b\u751f\u547d\u304c\u751f\u307e\u308c\u306a\u3044\u7406\u7531\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "why": "\ud6a8\uc728 1.2x \u00b7 \uc870\ud68c 582,612\ud68c \u00b7 \u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66"}, {"_sort": 0.9777157258064516, "date": "2025-12-05 (175\uc77c \uc804)", "eff": 0.9777157258064516, "ref_ch": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66", "ref_id": "1uttYuNQs8g", "ref_title": "\u3010\u5371\u967a\u3060\u304b\u3089\u3067\u306f\u306a\u3044\u3011\u306a\u305c\u539f\u767a\u306f\u6d77\u306b\u3042\u308b\u306e\u304b\u30fc\u6771\u65e5\u672c\u5927\u9707\u707d\u30fc\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "topic": "\u3010\u5371\u967a\u3060\u304b\u3089\u3067\u306f\u306a\u3044\u3011\u306a\u305c\u539f\u767a\u306f\u6d77\u306b\u3042\u308b\u306e\u304b\u30fc\u6771\u65e5\u672c\u5927\u9707\u707d\u30fc\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "why": "\ud6a8\uc728 1.0x \u00b7 \uc870\ud68c 484,947\ud68c \u00b7 \u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66"}, {"_sort": 0.9528205645161291, "date": "2025-12-19 (161\uc77c \uc804)", "eff": 0.9528205645161291, "ref_ch": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66", "ref_id": "NAKbh5_Vlvw", "ref_title": "\u3010\u30d1\u30f3\u30c9\u30e9\u306e\u7bb1\u3011\u653e\u5c04\u7dda\u306e\u767a\u898b\u306f\u3069\u3046\u3084\u3063\u3066\u79d1\u5b66\u53f2\u3092\u5909\u3048\u305f\u306e\u304b\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "topic": "\u3010\u30d1\u30f3\u30c9\u30e9\u306e\u7bb1\u3011\u653e\u5c04\u7dda\u306e\u767a\u898b\u306f\u3069\u3046\u3084\u3063\u3066\u79d1\u5b66\u53f2\u3092\u5909\u3048\u305f\u306e\u304b\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "why": "\ud6a8\uc728 1.0x \u00b7 \uc870\ud68c 472,599\ud68c \u00b7 \u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66"}, {"_sort": 0.8134879518072289, "date": "2026-03-15 (75\uc77c \uc804)", "eff": 0.8134879518072289, "ref_ch": "\u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66", "ref_id": "Rw_SXw_Ciig", "ref_title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u306a\u305c\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb\u304b\u3089\u306f\u5149\u3059\u3089\u8131\u51fa\u4e0d\u53ef\u80fd\u306a\u306e\u304b\uff0d\u6642\u9593\u3068\u7a7a\u9593\u306e\u5165\u308c\u66ff\u308f\u308a\uff0d", "topic": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u306a\u305c\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb\u304b\u3089\u306f\u5149\u3059\u3089\u8131\u51fa\u4e0d\u53ef\u80fd\u306a\u306e\u304b\uff0d\u6642\u9593\u3068\u7a7a\u9593\u306e\u5165\u308c\u66ff\u308f\u308a\uff0d", "why": "\ud6a8\uc728 0.8x \u00b7 \uc870\ud68c 540,156\ud68c \u00b7 \u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66"}, {"_sort": 0.5144774096385543, "date": "2025-08-04 (298\uc77c \uc804)", "eff": 0.5144774096385543, "ref_ch": "\u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66", "ref_id": "yqsnkULOsp8", "ref_title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u8272\u306b\u8e0a\u3089\u3055\u308c\u305f\u4eba\u985e\u3068\u6b7b\u306e\u6b74\u53f2", "topic": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u8272\u306b\u8e0a\u3089\u3055\u308c\u305f\u4eba\u985e\u3068\u6b7b\u306e\u6b74\u53f2", "why": "\ud6a8\uc728 0.5x \u00b7 \uc870\ud68c 341,613\ud68c \u00b7 \u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66"}, {"_sort": 0.45161295180722894, "date": "2025-03-14 (441\uc77c \uc804)", "eff": 0.45161295180722894, "ref_ch": "\u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66", "ref_id": "OXrUYFosp5g", "ref_title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u306a\u305c\u690d\u7269\u306f\u30aa\u30b9\u3068\u30e1\u30b9\u304c\u4e00\u4f53\u5316\u3057\u3066\u3044\u308b\u306e\u304b\uff1f", "topic": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u306a\u305c\u690d\u7269\u306f\u30aa\u30b9\u3068\u30e1\u30b9\u304c\u4e00\u4f53\u5316\u3057\u3066\u3044\u308b\u306e\u304b\uff1f", "why": "\ud6a8\uc728 0.5x \u00b7 \uc870\ud68c 299,871\ud68c \u00b7 \u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66"}]}, "\uc2dc\uc0ac": {"emoji": "\ud83d\uddde\ufe0f", "proven": [], "today": [{"_sort": 35.1303112033195, "date": "2026-05-29 (\uc624\ub298)", "eff": 0.13031120331950208, "ref_ch": "NSP\u30c1\u30e3\u30f3\u30cd\u30eb", "ref_id": "8tHG-ScwhN8", "ref_title": "\u4ee4\u548c8\u5e745\u6708\u6642\u4e8b\u89e3\u8aac\u30fb\u6642\u5c40\u5206\u6790\uff5c\u85e4\u539f\u76f4\u54c9\u7406\u4e8b\u9577\uff08\u53ce\u9332\u578b\uff09202605", "topic": "\u4ee4\u548c8\u5e745\u6708\u6642\u4e8b\u89e3\u8aac\u30fb\u6642\u5c40\u5206\u6790\uff5c\u85e4\u539f\u76f4\u54c9\u7406\u4e8b\u9577\uff08\u53ce\u9332\u578b\uff09202605", "why": "\ud6a8\uc728 0.1x \u00b7 \uc870\ud68c 6,281\ud68c \u00b7 NSP\u30c1\u30e3\u30f3\u30cd\u30eb"}, {"_sort": 1.3403734439834025, "date": "2026-04-23 (36\uc77c \uc804)", "eff": 1.3403734439834025, "ref_ch": "NSP\u30c1\u30e3\u30f3\u30cd\u30eb", "ref_id": "eVNIR4yTG4Y", "ref_title": "\u4ee4\u548c8\u5e744\u6708\u6642\u4e8b\u89e3\u8aac\u30fb\u6642\u5c40\u5206\u6790\uff5c\u85e4\u539f\u76f4\u54c9\u7406\u4e8b\u9577\uff08\u53ce\u9332\u578b\uff09202604", "topic": "\u4ee4\u548c8\u5e744\u6708\u6642\u4e8b\u89e3\u8aac\u30fb\u6642\u5c40\u5206\u6790\uff5c\u85e4\u539f\u76f4\u54c9\u7406\u4e8b\u9577\uff08\u53ce\u9332\u578b\uff09202604", "why": "\ud6a8\uc728 1.3x \u00b7 \uc870\ud68c 64,606\ud68c \u00b7 NSP\u30c1\u30e3\u30f3\u30cd\u30eb"}, {"_sort": 0.7930497925311203, "date": "2026-05-17 (12\uc77c \uc804)", "eff": 0.7930497925311203, "ref_ch": "NSP\u30c1\u30e3\u30f3\u30cd\u30eb", "ref_id": "D-H1oumaElw", "ref_title": "\u85e4\u539f\u7406\u4e8b\u9577\u304c\u4eca\u3001\u304a\u8a71\u3057\u305f\u3044\u3053\u3068 \u4ee4\u548c8\u5e745\u6708\u7de8 / \u7b2c115\u56deNSP\u6642\u5c40\u306a\u3089\u3073\u306b\u65e5\u672c\u518d\u751f\u6226\u7565\u8b1b\u6f14\u4f1a", "topic": "\u85e4\u539f\u7406\u4e8b\u9577\u304c\u4eca\u3001\u304a\u8a71\u3057\u305f\u3044\u3053\u3068 \u4ee4\u548c8\u5e745\u6708\u7de8 / \u7b2c115\u56deNSP\u6642\u5c40\u306a\u3089\u3073\u306b\u65e5\u672c\u518d\u751f\u6226\u7565\u8b1b\u6f14\u4f1a", "why": "\ud6a8\uc728 0.8x \u00b7 \uc870\ud68c 38,225\ud68c \u00b7 NSP\u30c1\u30e3\u30f3\u30cd\u30eb"}, {"_sort": 0.5666597510373445, "date": "2026-05-21 (8\uc77c \uc804)", "eff": 0.5666597510373445, "ref_ch": "NSP\u30c1\u30e3\u30f3\u30cd\u30eb", "ref_id": "AFrvw14hlAo", "ref_title": "\u4ee4\u548c8\u5e745\u6708\u8cea\u7591\u5fdc\u7b54 / \u7b2c115\u56deNSP\u6642\u5c40\u306a\u3089\u3073\u306b\u65e5\u672c\u518d\u751f\u6226\u7565\u8b1b\u6f14\u4f1a", "topic": "\u4ee4\u548c8\u5e745\u6708\u8cea\u7591\u5fdc\u7b54 / \u7b2c115\u56deNSP\u6642\u5c40\u306a\u3089\u3073\u306b\u65e5\u672c\u518d\u751f\u6226\u7565\u8b1b\u6f14\u4f1a", "why": "\ud6a8\uc728 0.6x \u00b7 \uc870\ud68c 27,313\ud68c \u00b7 NSP\u30c1\u30e3\u30f3\u30cd\u30eb"}, {"_sort": 0.5449368231046932, "date": "2026-04-25 (34\uc77c \uc804)", "eff": 0.5449368231046932, "ref_ch": "\u30b3\u30a2\u30e9\u5148\u751f\u306e\u6642\u4e8b\u30cd\u30bf\u796d\u308a", "ref_id": "i5qaLStVvqM", "ref_title": "\u3010\u30ca\u30d5\u30b5\u30b7\u30e7\u30c3\u30af\u3011\"\u77f3\u6cb9\u5371\u6a5f\u306e\u672c\u4e38\" \u30ca\u30d5\u30b5\u306b\u3064\u3044\u3066\u57fa\u672c\u304b\u3089\u89e3\u8aac\u3057\u307e\u3059\uff01", "topic": "\u3010\u30ca\u30d5\u30b5\u30b7\u30e7\u30c3\u30af\u3011\"\u77f3\u6cb9\u5371\u6a5f\u306e\u672c\u4e38\" \u30ca\u30d5\u30b5\u306b\u3064\u3044\u3066\u57fa\u672c\u304b\u3089\u89e3\u8aac\u3057\u307e\u3059\uff01", "why": "\ud6a8\uc728 0.5x \u00b7 \uc870\ud68c 301,895\ud68c \u00b7 \u30b3\u30a2\u30e9\u5148\u751f\u306e\u6642\u4e8b\u30cd\u30bf\u796d\u308a"}]}, "\uc2ec\ub9ac\ud559": {"emoji": "\ud83e\udde0", "proven": [], "today": [{"_sort": 0.17592664233576644, "date": "2026-03-21 (69\uc77c \uc804)", "eff": 0.17592664233576644, "ref_ch": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "ref_id": "IuHgxm4HrJs", "ref_title": "\u3010\u65b0\u9078\u7d44\u3011\u6fc0\u52d5\u306e\u5e55\u672b\uff01\u6642\u4ee3\u306b\u6297\u3044\u6557\u308c\u53bb\u3063\u305f\u7537\u305f\u3061\u306e\u9752\u6625\u7fa4\u50cf\u5287\u3010Update\u7248\u3011(Shinsengumi)", "topic": "\u3010\u65b0\u9078\u7d44\u3011\u6fc0\u52d5\u306e\u5e55\u672b\uff01\u6642\u4ee3\u306b\u6297\u3044\u6557\u308c\u53bb\u3063\u305f\u7537\u305f\u3061\u306e\u9752\u6625\u7fa4\u50cf\u5287\u3010Update\u7248\u3011(Shinsengumi)", "why": "\ud6a8\uc728 0.2x \u00b7 \uc870\ud68c 964,078\ud68c \u00b7 \u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY"}, {"_sort": 0.09055602189781022, "date": "2026-04-04 (55\uc77c \uc804)", "eff": 0.09055602189781022, "ref_ch": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "ref_id": "-VKt_JqnIoQ", "ref_title": "\u3010\u30d7\u30fc\u30c1\u30f3\u3011\u30a6\u30af\u30e9\u30a4\u30ca\u4fb5\u653b\u306f\u932f\u4e71\u304b\u3001\u7dfb\u5bc6\u306a\u6226\u7565\u304b\uff1f\u30a2\u30e1\u30ea\u30ab\u306e\u5f71\u3068\u52d5\u304d\u51fa\u3057\u305f\u7687\u5e1d\u305f\u3061\u3010Update\u7248\u3011(Vladimir Putin)", "topic": "\u3010\u30d7\u30fc\u30c1\u30f3\u3011\u30a6\u30af\u30e9\u30a4\u30ca\u4fb5\u653b\u306f\u932f\u4e71\u304b\u3001\u7dfb\u5bc6\u306a\u6226\u7565\u304b\uff1f\u30a2\u30e1\u30ea\u30ab\u306e\u5f71\u3068\u52d5\u304d\u51fa\u3057\u305f\u7687\u5e1d\u305f\u3061\u3010Update\u7248\u3011(Vladimir ", "why": "\ud6a8\uc728 0.1x \u00b7 \uc870\ud68c 496,247\ud68c \u00b7 \u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY"}, {"_sort": 0.0691543795620438, "date": "2026-04-11 (48\uc77c \uc804)", "eff": 0.0691543795620438, "ref_ch": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "ref_id": "8Fgp6B8ocis", "ref_title": "\u3010\u5b87\u5b99\u5275\u6210\u3011\u4eba\u985e\u6700\u5927\u306e\u8b0e\uff01\u305d\u306e\u771f\u7406\u306b\u6311\u3093\u3060\u5929\u624d\u305f\u3061\u306e\u8ecc\u8de1\u3010Update\u7248\u3011(Big Bang)", "topic": "\u3010\u5b87\u5b99\u5275\u6210\u3011\u4eba\u985e\u6700\u5927\u306e\u8b0e\uff01\u305d\u306e\u771f\u7406\u306b\u6311\u3093\u3060\u5929\u624d\u305f\u3061\u306e\u8ecc\u8de1\u3010Update\u7248\u3011(Big Bang)", "why": "\ud6a8\uc728 0.1x \u00b7 \uc870\ud68c 378,966\ud68c \u00b7 \u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY"}, {"_sort": 0.05930656934306569, "date": "2026-04-25 (34\uc77c \uc804)", "eff": 0.05930656934306569, "ref_ch": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "ref_id": "mDtZclTAqDc", "ref_title": "\u3010\u30a6\u30af\u30e9\u30a4\u30ca\u3068\u30ed\u30b7\u30a2\u306e\u95a2\u4fc2\u53f2\u3011\u306a\u305c\u4fb5\u653b\u306f\u884c\u308f\u308c\u305f\uff1f\u5927\u56fd\u304c\u596a\u3044\u5408\u3046\u904b\u547d\u306e\u4ea4\u5dee\u70b9\u3010Update\u7248\u3011(History of Ukraine and Russia)", "topic": "\u3010\u30a6\u30af\u30e9\u30a4\u30ca\u3068\u30ed\u30b7\u30a2\u306e\u95a2\u4fc2\u53f2\u3011\u306a\u305c\u4fb5\u653b\u306f\u884c\u308f\u308c\u305f\uff1f\u5927\u56fd\u304c\u596a\u3044\u5408\u3046\u904b\u547d\u306e\u4ea4\u5dee\u70b9\u3010Update\u7248\u3011(History of U", "why": "\ud6a8\uc728 0.1x \u00b7 \uc870\ud68c 325,000\ud68c \u00b7 \u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY"}]}, "\uc5ed\uc0ac": {"emoji": "\ud83d\udcdc", "proven": [{"ref_ch": "The Bizarre Lab", "ref_id": "gp2rDKVuaCc", "ref_title": "\u53e4\u4ee3AI\u6c34\u65cf\u9928 \u2013 Creatures Beyond \u2013 When AI revives the ancient oceans, forgotten giants swim once again.", "topic": "\u53e4\u4ee3", "why": "\uac80\uc99d 1\uc77c \u00b7 2\ucc44\ub110 \u00b7 \ub204\uc801 3,022,667\ud68c"}], "today": [{"_sort": 6.180048611111111, "date": "2025-08-03 (299\uc77c \uc804)", "eff": 6.180048611111111, "ref_ch": "\u6559\u990a\u3068\u3057\u3066\u306e\u4e16\u754c\u53f2ch", "ref_id": "EvOGa_iGyN8", "ref_title": "\u3010\u97d3\u56fd\u306e\u6b74\u53f2\u3011\u53e4\u4ee3\u304b\u3089\u73fe\u4ee3\u307e\u3067\u3092\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac\uff01", "topic": "\u3010\u97d3\u56fd\u306e\u6b74\u53f2\u3011\u53e4\u4ee3\u304b\u3089\u73fe\u4ee3\u307e\u3067\u3092\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac\uff01", "why": "\ud6a8\uc728 6.2x \u00b7 \uc870\ud68c 889,927\ud68c \u00b7 \u6559\u990a\u3068\u3057\u3066\u306e\u4e16\u754c\u53f2ch"}, {"_sort": 3.721, "date": "2025-11-01 (209\uc77c \uc804)", "eff": 3.721, "ref_ch": "\u6559\u990a\u3068\u3057\u3066\u306e\u4e16\u754c\u53f2ch", "ref_id": "-DGBnXasT5M", "ref_title": "\u3010\uff08\u6539\u8a02\u7248\uff09\u30a4\u30ae\u30ea\u30b9\u306e\u6b74\u53f2\u3011\u53e4\u4ee3\u304b\u3089\u73fe\u4ee3\u307e\u3067\u3092\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac\uff01", "topic": "\u3010\uff08\u6539\u8a02\u7248\uff09\u30a4\u30ae\u30ea\u30b9\u306e\u6b74\u53f2\u3011\u53e4\u4ee3\u304b\u3089\u73fe\u4ee3\u307e\u3067\u3092\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac\uff01", "why": "\ud6a8\uc728 3.7x \u00b7 \uc870\ud68c 535,824\ud68c \u00b7 \u6559\u990a\u3068\u3057\u3066\u306e\u4e16\u754c\u53f2ch"}, {"_sort": 1.6448194444444444, "date": "2025-04-26 (398\uc77c \uc804)", "eff": 1.6448194444444444, "ref_ch": "\u6559\u990a\u3068\u3057\u3066\u306e\u4e16\u754c\u53f2ch", "ref_id": "UbgVMd13zFU", "ref_title": "\u3010\uff08\u6539\u8a02\u7248\uff09\u30a4\u30bf\u30ea\u30a2\u306e\u6b74\u53f2\u3011\u53e4\u4ee3\u304b\u3089\u73fe\u4ee3\u307e\u3067\u3092\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac\uff01", "topic": "\u3010\uff08\u6539\u8a02\u7248\uff09\u30a4\u30bf\u30ea\u30a2\u306e\u6b74\u53f2\u3011\u53e4\u4ee3\u304b\u3089\u73fe\u4ee3\u307e\u3067\u3092\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac\uff01", "why": "\ud6a8\uc728 1.6x \u00b7 \uc870\ud68c 236,854\ud68c \u00b7 \u6559\u990a\u3068\u3057\u3066\u306e\u4e16\u754c\u53f2ch"}, {"_sort": 0.7687889221556886, "date": "2026-04-17 (42\uc77c \uc804)", "eff": 0.7687889221556886, "ref_ch": "YouTube\u9ad8\u6821 / \u65e5\u672c\u53f2\u30fb\u4e16\u754c\u53f2", "ref_id": "qVWeUe5u5no", "ref_title": "GHQ\u306f\u6226\u5f8c\u65e5\u672c\u3092\u3069\u3046\u4f5c\u308a\u5909\u3048\u305f\u306e\u304b\uff1f", "topic": "GHQ\u306f\u6226\u5f8c\u65e5\u672c\u3092\u3069\u3046\u4f5c\u308a\u5909\u3048\u305f\u306e\u304b\uff1f", "why": "\ud6a8\uc728 0.8x \u00b7 \uc870\ud68c 513,551\ud68c \u00b7 YouTube\u9ad8\u6821 / \u65e5\u672c\u53f2\u30fb\u4e16\u754c\u53f2"}, {"_sort": 0.17592664233576644, "date": "2026-03-21 (69\uc77c \uc804)", "eff": 0.17592664233576644, "ref_ch": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "ref_id": "IuHgxm4HrJs", "ref_title": "\u3010\u65b0\u9078\u7d44\u3011\u6fc0\u52d5\u306e\u5e55\u672b\uff01\u6642\u4ee3\u306b\u6297\u3044\u6557\u308c\u53bb\u3063\u305f\u7537\u305f\u3061\u306e\u9752\u6625\u7fa4\u50cf\u5287\u3010Update\u7248\u3011(Shinsengumi)", "topic": "\u3010\u65b0\u9078\u7d44\u3011\u6fc0\u52d5\u306e\u5e55\u672b\uff01\u6642\u4ee3\u306b\u6297\u3044\u6557\u308c\u53bb\u3063\u305f\u7537\u305f\u3061\u306e\u9752\u6625\u7fa4\u50cf\u5287\u3010Update\u7248\u3011(Shinsengumi)", "why": "\ud6a8\uc728 0.2x \u00b7 \uc870\ud68c 964,078\ud68c \u00b7 \u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY"}, {"_sort": 0.09055602189781022, "date": "2026-04-04 (55\uc77c \uc804)", "eff": 0.09055602189781022, "ref_ch": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "ref_id": "-VKt_JqnIoQ", "ref_title": "\u3010\u30d7\u30fc\u30c1\u30f3\u3011\u30a6\u30af\u30e9\u30a4\u30ca\u4fb5\u653b\u306f\u932f\u4e71\u304b\u3001\u7dfb\u5bc6\u306a\u6226\u7565\u304b\uff1f\u30a2\u30e1\u30ea\u30ab\u306e\u5f71\u3068\u52d5\u304d\u51fa\u3057\u305f\u7687\u5e1d\u305f\u3061\u3010Update\u7248\u3011(Vladimir Putin)", "topic": "\u3010\u30d7\u30fc\u30c1\u30f3\u3011\u30a6\u30af\u30e9\u30a4\u30ca\u4fb5\u653b\u306f\u932f\u4e71\u304b\u3001\u7dfb\u5bc6\u306a\u6226\u7565\u304b\uff1f\u30a2\u30e1\u30ea\u30ab\u306e\u5f71\u3068\u52d5\u304d\u51fa\u3057\u305f\u7687\u5e1d\u305f\u3061\u3010Update\u7248\u3011(Vladimir ", "why": "\ud6a8\uc728 0.1x \u00b7 \uc870\ud68c 496,247\ud68c \u00b7 \u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY"}, {"_sort": 0.0691543795620438, "date": "2026-04-11 (48\uc77c \uc804)", "eff": 0.0691543795620438, "ref_ch": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "ref_id": "8Fgp6B8ocis", "ref_title": "\u3010\u5b87\u5b99\u5275\u6210\u3011\u4eba\u985e\u6700\u5927\u306e\u8b0e\uff01\u305d\u306e\u771f\u7406\u306b\u6311\u3093\u3060\u5929\u624d\u305f\u3061\u306e\u8ecc\u8de1\u3010Update\u7248\u3011(Big Bang)", "topic": "\u3010\u5b87\u5b99\u5275\u6210\u3011\u4eba\u985e\u6700\u5927\u306e\u8b0e\uff01\u305d\u306e\u771f\u7406\u306b\u6311\u3093\u3060\u5929\u624d\u305f\u3061\u306e\u8ecc\u8de1\u3010Update\u7248\u3011(Big Bang)", "why": "\ud6a8\uc728 0.1x \u00b7 \uc870\ud68c 378,966\ud68c \u00b7 \u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY"}, {"_sort": 0.05930656934306569, "date": "2026-04-25 (34\uc77c \uc804)", "eff": 0.05930656934306569, "ref_ch": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "ref_id": "mDtZclTAqDc", "ref_title": "\u3010\u30a6\u30af\u30e9\u30a4\u30ca\u3068\u30ed\u30b7\u30a2\u306e\u95a2\u4fc2\u53f2\u3011\u306a\u305c\u4fb5\u653b\u306f\u884c\u308f\u308c\u305f\uff1f\u5927\u56fd\u304c\u596a\u3044\u5408\u3046\u904b\u547d\u306e\u4ea4\u5dee\u70b9\u3010Update\u7248\u3011(History of Ukraine and Russia)", "topic": "\u3010\u30a6\u30af\u30e9\u30a4\u30ca\u3068\u30ed\u30b7\u30a2\u306e\u95a2\u4fc2\u53f2\u3011\u306a\u305c\u4fb5\u653b\u306f\u884c\u308f\u308c\u305f\uff1f\u5927\u56fd\u304c\u596a\u3044\u5408\u3046\u904b\u547d\u306e\u4ea4\u5dee\u70b9\u3010Update\u7248\u3011(History of U", "why": "\ud6a8\uc728 0.1x \u00b7 \uc870\ud68c 325,000\ud68c \u00b7 \u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY"}]}, "\uc815\uce58": {"emoji": "\ud83c\udfdb\ufe0f", "proven": [], "today": []}, "\uc9c0\uc2dd": {"emoji": "\ud83d\udcda", "proven": [{"ref_ch": "\u308b\u30fc\u3044\u306e\u3086\u3063\u304f\u308a\u79d1\u5b66", "ref_id": "Rw_SXw_Ciig", "ref_title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u306a\u305c\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb\u304b\u3089\u306f\u5149\u3059\u3089\u8131\u51fa\u4e0d\u53ef\u80fd\u306a\u306e\u304b\uff0d\u6642\u9593\u3068\u7a7a\u9593\u306e\u5165\u308c\u66ff\u308f\u308a\uff0d", "topic": "\u6642\u9593", "why": "\uac80\uc99d 1\uc77c \u00b7 2\ucc44\ub110 \u00b7 \ub204\uc801 628,067\ud68c"}], "today": [{"_sort": 10.763992395437262, "date": "2026-05-24 (5\uc77c \uc804)", "eff": 0.7639923954372624, "ref_ch": "\u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2", "ref_id": "ZKVNUX_QzIM", "ref_title": "\u306a\u305c\u304b\u719f\u7761\u3067\u304d\u308b\u300c\u5143\u5bc7\u300d\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "topic": "\u306a\u305c\u304b\u719f\u7761\u3067\u304d\u308b\u300c\u5143\u5bc7\u300d\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "why": "\ud6a8\uc728 0.8x \u00b7 \uc870\ud68c 20,093\ud68c \u00b7 \u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2"}, {"_sort": 1.1746209677419355, "date": "2025-11-14 (196\uc77c \uc804)", "eff": 1.1746209677419355, "ref_ch": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66", "ref_id": "Ifluvg0fcRk", "ref_title": "\u3010\u7d20\u6734\u306a\u7591\u554f\u3011\u6c34\u304b\u3089\u3067\u3057\u304b\u751f\u547d\u304c\u751f\u307e\u308c\u306a\u3044\u7406\u7531\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "topic": "\u3010\u7d20\u6734\u306a\u7591\u554f\u3011\u6c34\u304b\u3089\u3067\u3057\u304b\u751f\u547d\u304c\u751f\u307e\u308c\u306a\u3044\u7406\u7531\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "why": "\ud6a8\uc728 1.2x \u00b7 \uc870\ud68c 582,612\ud68c \u00b7 \u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66"}, {"_sort": 0.9777157258064516, "date": "2025-12-05 (175\uc77c \uc804)", "eff": 0.9777157258064516, "ref_ch": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66", "ref_id": "1uttYuNQs8g", "ref_title": "\u3010\u5371\u967a\u3060\u304b\u3089\u3067\u306f\u306a\u3044\u3011\u306a\u305c\u539f\u767a\u306f\u6d77\u306b\u3042\u308b\u306e\u304b\u30fc\u6771\u65e5\u672c\u5927\u9707\u707d\u30fc\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "topic": "\u3010\u5371\u967a\u3060\u304b\u3089\u3067\u306f\u306a\u3044\u3011\u306a\u305c\u539f\u767a\u306f\u6d77\u306b\u3042\u308b\u306e\u304b\u30fc\u6771\u65e5\u672c\u5927\u9707\u707d\u30fc\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "why": "\ud6a8\uc728 1.0x \u00b7 \uc870\ud68c 484,947\ud68c \u00b7 \u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66"}, {"_sort": 0.9528205645161291, "date": "2025-12-19 (161\uc77c \uc804)", "eff": 0.9528205645161291, "ref_ch": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66", "ref_id": "NAKbh5_Vlvw", "ref_title": "\u3010\u30d1\u30f3\u30c9\u30e9\u306e\u7bb1\u3011\u653e\u5c04\u7dda\u306e\u767a\u898b\u306f\u3069\u3046\u3084\u3063\u3066\u79d1\u5b66\u53f2\u3092\u5909\u3048\u305f\u306e\u304b\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "topic": "\u3010\u30d1\u30f3\u30c9\u30e9\u306e\u7bb1\u3011\u653e\u5c04\u7dda\u306e\u767a\u898b\u306f\u3069\u3046\u3084\u3063\u3066\u79d1\u5b66\u53f2\u3092\u5909\u3048\u305f\u306e\u304b\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u3010\u96d1\u5b66\u3011", "why": "\ud6a8\uc728 1.0x \u00b7 \uc870\ud68c 472,599\ud68c \u00b7 \u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u30119\u5272\u304c\u77e5\u3089\u306a\u3044\u96d1\u5b66"}, {"_sort": 0.8866920152091254, "date": "2026-05-22 (7\uc77c \uc804)", "eff": 0.8866920152091254, "ref_ch": "\u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2", "ref_id": "VtDtLDv4iJ8", "ref_title": "\u3010\u7720\u308a\u306a\u304c\u3089\u805e\u304f\u3011\u627f\u4e45\u306e\u4e71\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "topic": "\u3010\u7720\u308a\u306a\u304c\u3089\u805e\u304f\u3011\u627f\u4e45\u306e\u4e71\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "why": "\ud6a8\uc728 0.9x \u00b7 \uc870\ud68c 23,320\ud68c \u00b7 \u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2"}, {"_sort": 0.8771102661596958, "date": "2026-05-20 (9\uc77c \uc804)", "eff": 0.8771102661596958, "ref_ch": "\u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2", "ref_id": "YWrgGFidmS0", "ref_title": "\u5bdd\u308b\u3068\u304d\u306b\u805e\u304d\u6d41\u3059\u6e90\u983c\u671d\u306e\u751f\u6daf\uff08\uff13\u6642\u9593\uff09", "topic": "\u5bdd\u308b\u3068\u304d\u306b\u805e\u304d\u6d41\u3059\u6e90\u983c\u671d\u306e\u751f\u6daf\uff08\uff13\u6642\u9593\uff09", "why": "\ud6a8\uc728 0.9x \u00b7 \uc870\ud68c 23,068\ud68c \u00b7 \u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2"}, {"_sort": 0.814828897338403, "date": "2026-05-18 (11\uc77c \uc804)", "eff": 0.814828897338403, "ref_ch": "\u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2", "ref_id": "o2xe_fuAIVA", "ref_title": "\u3010\u7720\u308a\u306a\u304c\u3089\u805e\u304f\u3011\u58c7\u30ce\u6d66\u306e\u6226\u3044\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "topic": "\u3010\u7720\u308a\u306a\u304c\u3089\u805e\u304f\u3011\u58c7\u30ce\u6d66\u306e\u6226\u3044\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "why": "\ud6a8\uc728 0.8x \u00b7 \uc870\ud68c 21,430\ud68c \u00b7 \u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2"}, {"_sort": 0.46010822510822513, "date": "2026-05-12 (17\uc77c \uc804)", "eff": 0.46010822510822513, "ref_ch": "\u3086\u3063\u304f\u308a\u97d3\u56fd\u4e8b\u4ef6\u7c3f\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011", "ref_id": "A-nidTta0hQ", "ref_title": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u30d7\u30ec\u30df\u30a2\u30ea\u30fc\u30b0\u304b\u3089\u6d88\u3048\u308b\u97d3\u56fd\u4eba\u3002\u3044\u3063\u305f\u3044\u306a\u305c\uff1f", "topic": "\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011\u30d7\u30ec\u30df\u30a2\u30ea\u30fc\u30b0\u304b\u3089\u6d88\u3048\u308b\u97d3\u56fd\u4eba\u3002\u3044\u3063\u305f\u3044\u306a\u305c\uff1f", "why": "\ud6a8\uc728 0.5x \u00b7 \uc870\ud68c 21,257\ud68c \u00b7 \u3086\u3063\u304f\u308a\u97d3\u56fd\u4e8b\u4ef6\u7c3f\u3010\u3086\u3063\u304f\u308a\u89e3\u8aac\u3011"}]}};
+    const REEDIT = [{"category": "\uc9c0\uc2dd", "channel": "\u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2", "date": "2026-05-24 (5\uc77c \uc804)", "perf": "\ud6a8\uc728 0.8x \u00b7 \uc2dc\uc18d 180/h \u00b7 \uc870\ud68c 20,093\ud68c", "proven_why": "\uac80\uc99d 1\uc77c\u00b72\ucc44\ub110\u00b7\ub204\uc801 628,067\ud68c", "ref_id": "ZKVNUX_QzIM", "ref_title": "\u306a\u305c\u304b\u719f\u7761\u3067\u304d\u308b\u300c\u5143\u5bc7\u300d\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "score": 21.6, "topic": "\u6642\u9593"}, {"category": "\uc9c0\uc2dd", "channel": "\u3050\u3063\u3059\u308a\u7720\u308c\u308b\u6b74\u53f2", "date": "2026-05-22 (7\uc77c \uc804)", "perf": "\ud6a8\uc728 0.9x \u00b7 \uc2dc\uc18d 4/h \u00b7 \uc870\ud68c 23,320\ud68c", "proven_why": "\uac80\uc99d 1\uc77c\u00b72\ucc44\ub110\u00b7\ub204\uc801 628,067\ud68c", "ref_id": "VtDtLDv4iJ8", "ref_title": "\u3010\u7720\u308a\u306a\u304c\u3089\u805e\u304f\u3011\u627f\u4e45\u306e\u4e71\u306e\u8a71\uff08\uff13\u6642\u9593\uff09", "score": 15.7, "topic": "\u6642\u9593"}];
+    const CAT_COLOR = {'과학':['#e8f0fe','#1a73e8'],'역사':['#fce8e6','#c5221f'],'경제':['#e6f4ea','#1e8e3e'],'지식':['#fef7e0','#b06000'],'심리학':['#f3e8fd','#8430ce'],'시사':['#e8eaed','#5f6368'],'정치':['#fde8f0','#c61a6e']};
+    let cur = Object.keys(RECS)[0];
+    function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function catBadge(c){ const m=CAT_COLOR[c]||['#e8eaed','#5f6368']; return `<span class="cat-badge" style="background:${m[0]};color:${m[1]}">${esc(c)}</span>`; }
+    function renderReedit(){
+      const w = document.getElementById('reeditWrap');
+      if(!REEDIT.length){ w.innerHTML=''; return; }
+      w.innerHTML = `<div class="reedit-box">
+        <div class="reedit-head">🔥 지금 재편집 재폭발 중<span class="reedit-sub">검증된 주제가 최근 7일 내 재업로드돼 다시 터지는 중 — 지금 만들면 알고리즘 수혜</span></div>
+        ${REEDIT.map((r,i)=>`<div class="reedit-card">
+          <div class="reedit-line1"><span class="rec-rank">${i+1}</span>${catBadge(r.category)}<b>${esc(r.topic)}</b>
+            <a class="row-title" href="https://youtube.com/watch?v=${r.ref_id}" target="_blank">${esc(r.ref_title)}</a></div>
+          <div class="reedit-meta">${r.src==='yt'?'🌐 전체검색':'📡 등록채널'} · 📅 발행 ${esc(r.date)} · ${esc(r.channel)} · ${esc(r.perf)} · <span class="muted">검증: ${esc(r.proven_why)}</span></div>
+        </div>`).join('')}
+      </div>`;
+    }
+    function card(r, i){
+      const ref = r.ref_id ? `<a class="rec-ref" href="https://youtube.com/watch?v=${r.ref_id}" target="_blank">▶ 참고: ${esc(r.ref_title).slice(0,42)} (${esc(r.ref_ch)})</a>` : '';
+      const date = r.date ? `<div class="rec-date">📅 발행 ${esc(r.date)}</div>` : '';
+      return `<div class="rec-card">
+        <div class="rec-topic"><span class="rec-rank">${i+1}</span>${esc(r.topic)}</div>
+        ${date}
+        <div class="rec-why">${esc(r.why)}</div>
+        ${ref}
+      </div>`;
+    }
+    function group(title, items){
+      const body = items.length ? items.map(card).join('') : '<div class="rec-empty">해당 주제 없음</div>';
+      return `<div class="rec-group"><h3>${title}</h3>${body}</div>`;
+    }
+    function render(){
+      const c = RECS[cur];
+      document.getElementById('recBody').innerHTML =
+        `<div class="sub" style="margin:4px 0 10px;">🔁 검증 금광 ${c.proven.length}개 · 🔥 오늘 뜬 ${c.today.length}개</div>
+         <div class="rec-cols">
+           ${group('🔁 검증 금광 주제', c.proven)}
+           ${group('🔥 오늘 뜬 주제', c.today)}
+         </div>`;
+    }
+    document.querySelectorAll('#chTabs .tab').forEach(t=>t.onclick=()=>{
+      document.querySelectorAll('#chTabs .tab').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active'); cur=t.dataset.ch; render();
+    });
+    renderReedit();
+    render();
+  </script>
+</body>
+</html>
