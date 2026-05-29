@@ -90,6 +90,10 @@ section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
 .archive-grid a.today { background:var(--blue); border-color:var(--blue); color:#fff; }
 .nav-links { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; }
 .nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
+/* 국가 전환 버튼 (한국 ⇄ 일본) — 최상단 prominent */
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:8px 16px; border:1px solid var(--border);
+  border-radius:20px; font-size:14px; font-weight:600; color:var(--text); background:var(--surface); margin-bottom:12px; }
+.country-switch:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
 footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
 
 /* 테이블 (아카이브 + 리포트 공통) — 클린 랭킹 행 */
@@ -146,9 +150,9 @@ section table { margin:10px 0; }
 </head>
 <body>
   <header>
-    <div class="nav-links"><a href="../index.html">← 🇰🇷 한국 대시보드</a></div>
+    <a href="../index.html" class="country-switch">← 🇰🇷 한국 유튜브 스캐너</a>
     <h1>🇯🇵 일본 유튜브 스캐너</h1>
-    <div class="sub">일본 시장 모니터링 · 2026-05-29 12:48</div>
+    <div class="sub">일본 시장 모니터링 · 2026-05-29 12:56</div>
   </header>
   <div class="ch-grid">
     <a class="ch-card" href="news_headlines.html" style="text-decoration:none;color:inherit;">
@@ -164,6 +168,6 @@ section table { margin:10px 0; }
       <div class="ch-meta" style="margin-top:6px;">준비 중 (일본 채널 데이터 누적 후)</div>
     </div>
   </div>
-  <footer>arrange yt scanner · 2026-05-29 12:48</footer>
+  <footer>arrange yt scanner · 2026-05-29 12:56</footer>
 </body>
 </html>
