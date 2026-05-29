@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#8ab4f8">
+  <title>🎯 오늘 만들 주제 by arrange</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+:root {
+  --blue:#8ab4f8; --red:#f28b82; --purple:#c58af9; --green:#81c995;
+  --text:#202124; --text2:#5f6368; --border:#dadce0; --surface:#fff; --bg:#fff;
+  --hover:#f1f3f4; --divider:#e8eaed; --chip:#e8f0fe;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Google Sans','Roboto','Noto Sans KR',-apple-system,sans-serif;
+  line-height:1.5; color:var(--text); background:var(--bg);
+  max-width:1280px; margin:0 auto; padding:20px 20px 48px;
+  -webkit-font-smoothing:antialiased;
+}
+header { padding:12px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px; }
+header h1 { font-size:26px; font-weight:700; letter-spacing:-0.5px; }
+header .sub { color:var(--text2); font-size:13px; margin-top:6px; }
+a { color:var(--blue); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* 요약 카드 */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:20px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
+.card .label { font-size:13px; color:var(--text2); margin-bottom:8px; font-weight:500; }
+.card .value { font-size:30px; font-weight:500; letter-spacing:-0.5px; }
+.card.tone-red { background:rgba(242,139,130,.08); border-color:rgba(242,139,130,.35); }
+.card.tone-red .value { color:var(--red); }
+.card.tone-green { background:rgba(129,201,149,.08); border-color:rgba(129,201,149,.35); }
+.card.tone-green .value { color:var(--green); }
+.card.tone-blue { background:rgba(138,180,248,.08); border-color:rgba(138,180,248,.35); }
+.card.tone-blue .value { color:var(--blue); }
+.card.tone-purple { background:rgba(197,138,249,.08); border-color:rgba(197,138,249,.35); }
+.card.tone-purple .value { color:#a855f7; }
+
+/* 카테고리 탭 */
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 12px; }
+.tab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2);
+       font-size:14px; font-weight:500; cursor:pointer; border:none; transition:all .15s; }
+.tab:hover { background:#e3e6e8; }
+.tab.active { background:var(--blue); color:#fff; }
+.tab .cnt { font-size:12px; opacity:.8; margin-left:4px; }
+
+/* 필터 바 */
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;
+           padding:12px 16px; background:var(--hover); border-radius:8px; }
+.filter-group { display:flex; gap:4px; align-items:center; }
+.filter-group .lbl { font-size:12px; color:var(--text2); margin-right:4px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff; }
+.seg button { padding:6px 12px; border:none; background:#fff; font-size:13px; cursor:pointer; color:var(--text2); }
+.seg button.active { background:var(--blue); color:#fff; }
+.toggle { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text); cursor:pointer; }
+#search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
+          border-radius:20px; font-size:14px; background:#fff; }
+#search:focus { outline:none; border-color:var(--blue); }
+
+/* 채널 카드 그리드 */
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px; }
+.ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+           padding:16px; transition:box-shadow .2s; }
+.ch-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15); }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
+.ch-name { font-size:16px; font-weight:700; }
+.ch-meta { font-size:12px; color:var(--text2); margin-top:2px; }
+.ch-type { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--hover); color:var(--text2); white-space:nowrap; }
+.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:8px 0; }
+.ch-cat { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--chip); color:var(--blue); font-weight:500; }
+.ch-stats { display:flex; gap:12px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:12px; color:var(--text2); }
+.ch-stat b { font-size:15px; color:var(--text); font-weight:600; display:block; }
+.ch-stat.sig b { color:var(--red); }
+.ch-vid { margin-top:8px; }
+.ch-vid .vlabel { font-size:11px; color:var(--text2); font-weight:500; }
+.ch-vid .vtitle { font-size:13px; display:block; margin-top:2px; }
+.ch-vid .vmeta { font-size:11px; color:var(--text2); }
+.empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
+
+section { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
+section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
+.archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:12px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:500; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
+.archive-grid a.today { background:var(--blue); border-color:var(--blue); color:#fff; }
+.nav-links { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; }
+.nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
+/* 국가 전환 버튼 (한국 ⇄ 일본) — 최상단 prominent */
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:8px 16px; border:1px solid var(--border);
+  border-radius:20px; font-size:14px; font-weight:600; color:var(--text); background:var(--surface); margin-bottom:12px; }
+.country-switch:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
+/* 설명·지표 범례 바 */
+.info-bar { background:var(--hover); border:1px solid var(--border); border-radius:10px; padding:12px 16px; margin:6px 0 18px; font-size:13px; color:var(--text2); line-height:1.9; }
+.info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:500; font-size:14px; }
+.info-bar b { color:var(--text); }
+.legend-item { display:inline-block; margin-right:16px; white-space:nowrap; }
+/* nav 강조 (오늘 만들 주제) */
+.nav-links a.nav-primary { background:var(--blue); color:#fff; }
+/* 제작 추천 보드 */
+.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px; }
+.rec-group h3 { font-size:15px; font-weight:700; margin:6px 0 10px; }
+.rec-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:10px; }
+.rec-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.2),0 2px 6px 2px rgba(60,64,67,.12); }
+.rec-rank { color:var(--text2); font-weight:500; font-size:12px; margin-right:6px; }
+.rec-topic { font-size:15px; font-weight:700; margin-bottom:5px; }
+.rec-why { font-size:12px; color:var(--text2); margin-bottom:7px; }
+.rec-ref { font-size:12px; display:inline-block; }
+.rec-empty { color:var(--text2); padding:18px; font-size:13px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } }
+footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
+
+/* 테이블 (아카이브 + 리포트 공통) — 클린 랭킹 행 */
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:auto; margin:10px 0 18px; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+thead th { text-align:left; font-weight:500; font-size:12px; color:var(--text2);
+  padding:11px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:#fafbfc; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; }
+tbody tr:last-child td { border-bottom:none; }
+tbody tr:hover { background:var(--hover); }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:500; font-variant-numeric:tabular-nums; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.num.lead { color:var(--text); font-weight:600; }
+.muted { color:var(--text2); }
+.cat-badge { display:inline-block; font-size:11px; padding:2px 9px; border-radius:11px; font-weight:500; white-space:nowrap; }
+.kw { font-weight:700; font-size:15px; }
+.cellv { display:flex; flex-direction:column; gap:1px; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; }
+.row-sub { font-size:11px; color:var(--text2); }
+.ch-tag { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--hover); color:var(--text2); }
+/* 리포트 섹션 헤더 */
+.rep-sec { margin:24px 0 4px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:17px; font-weight:700; }
+.rep-sec .cnt { font-size:13px; color:var(--text2); }
+.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
+/* 마크다운 리포트 잔여 표 */
+section table { margin:10px 0; }
+
+/* 뉴스 헤드라인 리스트 (Pixeling 스타일) */
+.news-list { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.news-row { display:flex; gap:12px; align-items:baseline; padding:13px 16px; border-bottom:1px solid var(--divider); }
+.news-row:last-child { border-bottom:none; }
+.news-row:hover { background:var(--hover); }
+.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:500; text-align:right; font-variant-numeric:tabular-nums; }
+.news-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.news-title { font-size:14px; font-weight:500; color:var(--text); white-space:normal; }
+.news-title:hover { color:var(--blue); }
+.news-meta { font-size:12px; color:var(--text2); display:flex; gap:7px; align-items:center; flex-wrap:wrap; }
+.news-src { color:#1e8e3e; font-weight:500; }
+.news-cat { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--chip); color:var(--blue); font-weight:500; }
+.news-orig { font-size:12px; color:var(--text2); }
+
+@media (max-width:600px) {
+  body { padding:14px; }
+  header h1 { font-size:21px; }
+  .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .card .value { font-size:24px; }
+  .ch-grid { grid-template-columns:1fr; }
+  .filters { flex-direction:column; align-items:stretch; }
+  .row-title { max-width:200px; }
+  tbody td, thead th { padding:9px 8px; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
+    <h1>🎯 오늘 만들 주제</h1>
+    <div class="sub">우리 채널별로 오늘 바로 만들 주제 추천 · 2026-05-29 13:48</div>
+  </header>
+
+  <div class="info-bar">
+    <span class="desc">채널마다 ① <b>검증 금광 주제</b>(여러 채널·반복 폭발 = 안전)와 ② <b>오늘 뜬 주제</b>(지금 신선)를 보여줍니다. 주제를 고르면 script-pd에서 바로 제작하세요.</span>
+    <span class="legend-item">🔁 <b>검증 금광</b> = 재편집해도 다시 터지는 누적 주제</span>
+    <span class="legend-item">🔥 <b>오늘 뜬</b> = 오늘 모니터링에서 폭발/시그널</span>
+  </div>
+
+  <div class="tabs" id="chTabs">
+    
+    <button class="tab active" data-ch="지식록">🧠 지식록</button>
+    
+    <button class="tab " data-ch="잘듣네">🌙 잘듣네</button>
+    
+    <button class="tab " data-ch="과만세">🔬 과만세</button>
+    
+  </div>
+
+  <div id="recBody"></div>
+  <footer>arrange yt scanner · 2026-05-29 13:48</footer>
+
+  <script>
+    const RECS = {"\uacfc\ub9cc\uc138": {"categories": ["\uacfc\ud559"], "emoji": "\ud83d\udd2c", "proven": [{"category": "\uacfc\ud559", "ref_ch": "\ud551\ud06c\ud401 (\uc778\uae30 \ub3d9\uc694\u30fb\ub3d9\ud654)", "ref_id": "v2tsHXQI6d0", "ref_title": "\uacf5\ub8e1 \ub3d9\uc694 \ucd1d\uc9d1\ud569! | \ud2f0\ub77c\ub178\uc0ac\uc6b0\ub8e8\uc2a4, \uc548\ud0ac\ub85c\uc0ac\uc6b0\ub8e8\uc2a4, \ud2b8\ub9ac\ucf00\ub77c\ud1b1\uc2a4 \uc678 22\uace1 | + \ubaa8\uc74c\uc9d1 | \uacf5\ub8e1 \ub3d9\uc694 | \ud551\ud06c\ud401! \uc778\uae30\ub3d9\uc694", "topic": "\uacf5\ub8e1", "why": "\uac80\uc99d 1\uc77c \u00b7 15\ucc44\ub110 \u00b7 \ub204\uc801 57,362,056\ud68c"}, {"category": "\uacfc\ud559", "ref_ch": "\uc3e8\uc791\uac00\uc758\uc9c0\uc2dd\uc0ac\uc804", "ref_id": "vxGQbf1koHk", "ref_title": "[\uc778\ub958\uc758 \uc5ed\uc0ac] \ucd5c\ucd08\uc758 \ube45\ubc45\ubd80\ud130, \ucd5c\ucd08\uc758 \ubb38\uba85\uae4c\uc9c0 l \ubaa8\ub4e0 \uc9c0\uc2dd\uc758 \uadfc\ubcf8\uc774 \ub418\uc5b4 \uc904 \uc774\uc57c\uae30 l 138\uc5b5 \ub144 \uc5ed\uc0ac \ucd1d\uc815\ub9ac (The History of Humanity)", "topic": "\uc778\ub958", "why": "\uac80\uc99d 1\uc77c \u00b7 12\ucc44\ub110 \u00b7 \ub204\uc801 23,524,844\ud68c"}, {"category": "\uacfc\ud559", "ref_ch": "\ub9ac\ubdf0\uc5c9\uc774: Owl\u0027s Review", "ref_id": "guDoMTahmeo", "ref_title": "\uc6b0\uc8fc \ub05d\uae4c\uc9c0 \uc808\ub300 \uac08 \uc218 \uc5c6\ub294 \uc9c4\uc9dc \uc774\uc720! (10\ubd84 \uc21c\uc0ad)", "topic": "\uc6b0\uc8fc", "why": "\uac80\uc99d 1\uc77c \u00b7 12\ucc44\ub110 \u00b7 \ub204\uc801 26,235,221\ud68c"}, {"category": "\uacfc\ud559", "ref_ch": "\uc0ac\ud53c\uc5d4\uc2a4 \uc2a4\ud29c\ub514\uc624", "ref_id": "qLXJlHoSz8w", "ref_title": "\uae40\uc0c1\uc6b1 \uad50\uc218 | \uc9c0\uad6c \uc628\ub09c\ud654\uc758 \uc8fc\ubc94\uc740 \u0027\uc778\uac04\u0027\uc77c\uae4c \u0027\ud0dc\uc591\u0027\uc77c\uae4c? \uacfc\ud559\uc801 \ud329\ud2b8\ub85c \uc54c\uc544\ubcf4\ub294 \uae30\ud6c4 \uc704\uae30\uc758 \ud575\uc2ec [\ud658\uacbd\uc77d\uc5b4\ub4dc\ub9bd\ub2c8\ub2e4]", "topic": "\uc9c0\uad6c", "why": "\uac80\uc99d 1\uc77c \u00b7 11\ucc44\ub110 \u00b7 \ub204\uc801 39,730,279\ud68c"}, {"category": "\uacfc\ud559", "ref_ch": "\uc0ac\ud53c\uc5d4\uc2a4 \uc2a4\ud29c\ub514\uc624", "ref_id": "qLXJlHoSz8w", "ref_title": "\uae40\uc0c1\uc6b1 \uad50\uc218 | \uc9c0\uad6c \uc628\ub09c\ud654\uc758 \uc8fc\ubc94\uc740 \u0027\uc778\uac04\u0027\uc77c\uae4c \u0027\ud0dc\uc591\u0027\uc77c\uae4c? \uacfc\ud559\uc801 \ud329\ud2b8\ub85c \uc54c\uc544\ubcf4\ub294 \uae30\ud6c4 \uc704\uae30\uc758 \ud575\uc2ec [\ud658\uacbd\uc77d\uc5b4\ub4dc\ub9bd\ub2c8\ub2e4]", "topic": "\uc778\uac04", "why": "\uac80\uc99d 1\uc77c \u00b7 9\ucc44\ub110 \u00b7 \ub204\uc801 19,429,671\ud68c"}, {"category": "\uacfc\ud559", "ref_ch": "\ubcf4\ub2e4 BODA", "ref_id": "m3jb8Z8u1Xk", "ref_title": "\uc790\uae30 \uc804\uc5d0 \ub4e4\uc73c\uba74 \uc800\uc808\ub85c \uc313\uc774\ub294 \uc2e0\uae30\ud55c \uc0c1\uc2dd\ub4e4 (\ubd88\uba74\uc99d\ub3c4 \ub0a0\ub824\ubc84\ub9b4 \uacfc\ud559\uc744 \ubcf4\ub2e4 3\uc2dc\uac04)", "topic": "\uacfc\ud559", "why": "\uac80\uc99d 1\uc77c \u00b7 8\ucc44\ub110 \u00b7 \ub204\uc801 34,996,498\ud68c"}, {"category": "\uacfc\ud559", "ref_ch": "\uacfc\ud559\ub4dc\ub9bc [Science Dream]", "ref_id": "J_1C7iWYBa4", "ref_title": "\uc5b4\ub5a4 \uc2ec\ud574 \uc0dd\ubb3c\ub4e4\uc740 \uc65c \uc774\ud1a0\ub85d \uac70\ub300\ud574\uc84c\uc744\uae4c?", "topic": "\uc2ec\ud574", "why": "\uac80\uc99d 1\uc77c \u00b7 7\ucc44\ub110 \u00b7 \ub204\uc801 17,390,357\ud68c"}, {"category": "\uacfc\ud559", "ref_ch": "\uacfc\ud559\ub4dc\ub9bc [Science Dream]", "ref_id": "hjJNdlCUt0o", "ref_title": "\ucd5c\ucd08\uc758 \uc0dd\uba85\uc740 \uc5b4\ub514\uc5d0\uc11c \uc654\uc744\uae4c?\uff5c\uc0dd\uba85\uc758 \uae30\uc6d0", "topic": "\uae30\uc6d0", "why": "\uac80\uc99d 1\uc77c \u00b7 7\ucc44\ub110 \u00b7 \ub204\uc801 8,399,768\ud68c"}], "today": [{"category": "\uacfc\ud559", "eff": 6.142087542087542, "ref_ch": "\ubc24\uc758 \uc6b0\uc8fc", "ref_id": "lwbWlqAVPX0", "ref_title": "\ub204\uac00 \uc6b0\uc8fc\ub97c \uc0dd\uba85\uc5d0 \ub9de\uac8c \uc124\uacc4\ud588\uc744\uae4c? \ubb3c\ub9ac\ud559\uc790\ub4e4\uc758 \ub2f5\uc740 \ub2f9\uc2e0\uc744 \ubd88\uc548\ud558\uac8c \ud55c\ub2e4", "topic": "\ub204\uac00 \uc6b0\uc8fc\ub97c \uc0dd\uba85\uc5d0 \ub9de\uac8c \uc124\uacc4\ud588\uc744\uae4c? \ubb3c\ub9ac\ud559\uc790\ub4e4\uc758 \ub2f5\uc740 \ub2f9\uc2e0\uc744 \ubd88\uc548\ud558\uac8c \ud55c\ub2e4", "why": "\ud6a8\uc728 6.1x \u00b7 \uc870\ud68c 36,484\ud68c \u00b7 \ubc24\uc758 \uc6b0\uc8fc"}, {"category": "\uacfc\ud559", "eff": 5.811311053984576, "ref_ch": "\uc790\uc5f0\uc758 \ube44\ubc00 \ub178\ud2b8", "ref_id": "OBcx_8SeJ4U", "ref_title": "\ubd80\uc871\ub4e4\uc774 \uc218\ubc31 \ub144\uac04 \uc9c0\ucf1c\uc628 \uc0dd\uba85\uc758 \uc2dd\ubb3c\u2026 \ud604\ub300 \uacfc\ud559\uc774 \ubc1d\ud600\ub0b8 \ub180\ub77c\uc6b4 \ube44\ubc00", "topic": "\ubd80\uc871\ub4e4\uc774 \uc218\ubc31 \ub144\uac04 \uc9c0\ucf1c\uc628 \uc0dd\uba85\uc758 \uc2dd\ubb3c\u2026 \ud604\ub300 \uacfc\ud559\uc774 \ubc1d\ud600\ub0b8 \ub180\ub77c\uc6b4 \ube44\ubc00", "why": "\ud6a8\uc728 5.8x \u00b7 \uc870\ud68c 22,606\ud68c \u00b7 \uc790\uc5f0\uc758 \ube44\ubc00 \ub178\ud2b8"}, {"category": "\uacfc\ud559", "eff": 1.3422258064516128, "ref_ch": "\uc138\ubaa8\uacfc\ud559", "ref_id": "MH4cK20eUzI", "ref_title": "\uacfc\ud559\uc790\ub4e4\uc774 \uc544\uc9c1\ub3c4 \ubcf4\uc774\uc800 1\ud638\uc640 \ud1b5\uc2e0\uc774 \uac00\ub2a5\ud55c \uc774\uc720", "topic": "\uacfc\ud559\uc790\ub4e4\uc774 \uc544\uc9c1\ub3c4 \ubcf4\uc774\uc800 1\ud638\uc640 \ud1b5\uc2e0\uc774 \uac00\ub2a5\ud55c \uc774\uc720", "why": "\ud6a8\uc728 1.3x \u00b7 \uc870\ud68c 208,045\ud68c \u00b7 \uc138\ubaa8\uacfc\ud559"}, {"category": "\uacfc\ud559", "eff": 1.1287945945945945, "ref_ch": "\uacfc\ud559\uc744\ubcf4\ub2e4", "ref_id": "2eZhiseK2W0", "ref_title": "\uc54c\uace0\ub098\uba74 \uaf64 \ubb34\uc11c\uc6b4 \uc2a4\ud0c0\ub9c1\ud06c \uc704\uc131\uc758 \uc9c4\uc2e4", "topic": "\uc54c\uace0\ub098\uba74 \uaf64 \ubb34\uc11c\uc6b4 \uc2a4\ud0c0\ub9c1\ud06c \uc704\uc131\uc758 \uc9c4\uc2e4", "why": "\ud6a8\uc728 1.1x \u00b7 \uc870\ud68c 208,827\ud68c \u00b7 \uacfc\ud559\uc744\ubcf4\ub2e4"}, {"category": "\uacfc\ud559", "eff": 0.8525530973451327, "ref_ch": "\uacfc\ud559\ub4dc\ub9bc", "ref_id": "hRTTUnNt8gw", "ref_title": "\ubbf8\uad6d\uc774 \ub9e4\uc8fc 5\ucc9c\ub9cc \ub9c8\ub9ac\uc758 \ud30c\ub9ac\ub97c \uc232\uc5d0 \uc0b4\ud3ec\ud558\ub294 \uc774\uc720!", "topic": "\ubbf8\uad6d\uc774 \ub9e4\uc8fc 5\ucc9c\ub9cc \ub9c8\ub9ac\uc758 \ud30c\ub9ac\ub97c \uc232\uc5d0 \uc0b4\ud3ec\ud558\ub294 \uc774\uc720!", "why": "\ud6a8\uc728 0.9x \u00b7 \uc870\ud68c 963,385\ud68c \u00b7 \uacfc\ud559\ub4dc\ub9bc"}, {"category": "\uacfc\ud559", "eff": 0.7127339901477833, "ref_ch": "\uc2e0\ube44\uacfc\ud559", "ref_id": "ldt15Cg45aU", "ref_title": "\uacfc\ud559\uc790\ub4e4\uc740 \ube5b\ubcf4\ub2e4 \ube60\ub974\uac8c \uc6c0\uc9c1\uc774\ub294 \uc874\uc7ac\ub97c \ucc98\uc74c\uc73c\ub85c \ud655\uc778\ud588\uc2b5\ub2c8\ub2e4.", "topic": "\uacfc\ud559\uc790\ub4e4\uc740 \ube5b\ubcf4\ub2e4 \ube60\ub974\uac8c \uc6c0\uc9c1\uc774\ub294 \uc874\uc7ac\ub97c \ucc98\uc74c\uc73c\ub85c \ud655\uc778\ud588\uc2b5\ub2c8\ub2e4.", "why": "\ud6a8\uc728 0.7x \u00b7 \uc870\ud68c 28,937\ud68c \u00b7 \uc2e0\ube44\uacfc\ud559"}, {"category": "\uacfc\ud559", "eff": 0.6690448179271709, "ref_ch": "\ubc94\uc900\uc5d0 \ubb3c\ub9ac\ub2e4", "ref_id": "ErNXiZrP5z8", "ref_title": "\ud604\uc874\ud558\ub294 \ud575\ubb34\uae30\uac00 \uc9c0\uae08 \ub2f9\uc7a5 \uc11c\uc6b8 \ud55c\ubcf5\ud310\uc5d0 \ub5a8\uc5b4\uc9c0\uba74 \uc0dd\uae30\ub294 \uc77c\u3163\ubc94\uc900\uc5d0 \ubb3c\ub9ac\ub2e4", "topic": "\ud604\uc874\ud558\ub294 \ud575\ubb34\uae30\uac00 \uc9c0\uae08 \ub2f9\uc7a5 \uc11c\uc6b8 \ud55c\ubcf5\ud310\uc5d0 \ub5a8\uc5b4\uc9c0\uba74 \uc0dd\uae30\ub294 \uc77c\u3163\ubc94\uc900\uc5d0 \ubb3c\ub9ac\ub2e4", "why": "\ud6a8\uc728 0.7x \u00b7 \uc870\ud68c 238,849\ud68c \u00b7 \ubc94\uc900\uc5d0 \ubb3c\ub9ac\ub2e4"}, {"category": "\uacfc\ud559", "eff": 0.5935106194690265, "ref_ch": "\uacfc\ud559\ub4dc\ub9bc", "ref_id": "yviSHdii6f0", "ref_title": "\uadf8\uac83\ub3c4 \ubb3c\uace0\uae30\uac00... 200\ub9c8\ub9ac\ub3c4 \uc548 \ub0a8\uc740 \ubb3c\uace0\uae30\uc758 \uc0ac\ub9c9 \uace0\ub9bd\uae30!", "topic": "\uadf8\uac83\ub3c4 \ubb3c\uace0\uae30\uac00... 200\ub9c8\ub9ac\ub3c4 \uc548 \ub0a8\uc740 \ubb3c\uace0\uae30\uc758 \uc0ac\ub9c9 \uace0\ub9bd\uae30!", "why": "\ud6a8\uc728 0.6x \u00b7 \uc870\ud68c 670,667\ud68c \u00b7 \uacfc\ud559\ub4dc\ub9bc"}], "tone": "\uacfc\ud559\u00b7\uacbd\uc774"}, "\uc798\ub4e3\ub124": {"categories": ["\uc2ec\ub9ac\ud559", "\uc9c0\uc2dd"], "emoji": "\ud83c\udf19", "proven": [{"category": "\uc2ec\ub9ac\ud559", "ref_ch": "\uc0ac\ud53c\uc5d4\uc2a4 \uc2a4\ud29c\ub514\uc624", "ref_id": "dtths4qNAZY", "ref_title": "\u301040\ubd84 \ud480\ubc84\uc804\u3011 \uc0ac\ub78c \ub54c\ubb38\uc5d0 \uc2a4\ud2b8\ub808\uc2a4 \ubc1b\uc544 \ud798\ub4e4 \ub54c, \ub098 \uc790\uc2e0\uc744 \uc9c0\ud0a4\ub294 \uc0dd\uac01\ubcf4\ub2e4 \ub2e8\uc21c\ud55c \uc778\uac04\uad00\uacc4 \uae30\uc220 [\ud0c0\uc778\uc758 \uc2ec\ub9ac \uc77d\uc5b4\ub4dc\ub9bd\ub2c8\ub2e4] | \uae40\uacbd\uc77c \uad50\uc218", "topic": "\uc778\uac04\uad00\uacc4", "why": "\uac80\uc99d 1\uc77c \u00b7 8\ucc44\ub110 \u00b7 \ub204\uc801 8,346,387\ud68c"}, {"category": "\uc9c0\uc2dd", "ref_ch": "\uc3e8\uc791\uac00\uc758\uc9c0\uc2dd\uc0ac\uc804", "ref_id": "vxGQbf1koHk", "ref_title": "[\uc778\ub958\uc758 \uc5ed\uc0ac] \ucd5c\ucd08\uc758 \ube45\ubc45\ubd80\ud130, \ucd5c\ucd08\uc758 \ubb38\uba85\uae4c\uc9c0 l \ubaa8\ub4e0 \uc9c0\uc2dd\uc758 \uadfc\ubcf8\uc774 \ub418\uc5b4 \uc904 \uc774\uc57c\uae30 l 138\uc5b5 \ub144 \uc5ed\uc0ac \ucd1d\uc815\ub9ac (The History of Humanity)", "topic": "\uc9c0\uc2dd", "why": "\uac80\uc99d 1\uc77c \u00b7 7\ucc44\ub110 \u00b7 \ub204\uc801 7,020,826\ud68c"}, {"category": "\uc2ec\ub9ac\ud559", "ref_ch": "\ubc29\uc1a1\ub300 \uc9c0\uc2dd+", "ref_id": "sBZaOZcpcos", "ref_title": "[\ubb34\uc0ad\uc81c+]\ud83d\udc49 \uc7a0\uc744 \uc798 \uc790\uba74 \uc131\uaca9\uc774 \ubc14\ub00c\uace0 \uc778\uc0dd\uc774 \ubc14\ub010\ub2e4_\uae40\uacbd\uc77c \uad50\uc218 @\ubc29\uc1a1\ub300\uc9c0\uc2dd  \uba85\uac15 | \uad50\uc591 | \ubc29\uc1a1\ub300 | \uc0c1\ub2f4 | \uc2ec\ub9ac\ud559", "topic": "\uc2ec\ub9ac\ud559", "why": "\uac80\uc99d 1\uc77c \u00b7 7\ucc44\ub110 \u00b7 \ub204\uc801 4,937,112\ud68c"}, {"category": "\uc9c0\uc2dd", "ref_ch": "\uc138\ubc14\uc2dc \uac15\uc5f0 Sebasi Talk", "ref_id": "-PmZ2KcfGCI", "ref_title": "(Kor, Chi, Jpn, Eng) \ub3c5\uc11c, \ub0b4 \uc778\uc0dd\uc758 \uc9c0\ub3c4\ub97c \ucc3e\uc544\uc11c | \ub098\ubbfc\uc560 \uc11c\uc6b8\ub300\ud559\uad50 \uae30\ucd08\uad50\uc721\uc6d0 \uad50\uc218 | \ucd94\ucc9c \uac15\uc5f0 \uac15\uc758 \ub4e3\uae30 | \uc138\ubc14\uc2dc 1917\ud68c", "topic": "\uc778\uc0dd", "why": "\uac80\uc99d 1\uc77c \u00b7 6\ucc44\ub110 \u00b7 \ub204\uc801 5,991,643\ud68c"}, {"category": "\uc2ec\ub9ac\ud559", "ref_ch": "\uc7a5\ub3d9\uc120\uc758 \uad81\uae08\ud55c \ub1cc", "ref_id": "9uos2eMwUbg", "ref_title": "\uc77c\ub2e8 \uc2dc\uc791\ud558\uace0 \ud589\ub3d9\ud574\uc57c \ub1cc\uac00 \ubc14\ub01d\ub2c8\ub2e4 | \ud589\ub3d9\uc758 \ub1cc\uacfc\ud559", "topic": "\ud589\ub3d9", "why": "\uac80\uc99d 1\uc77c \u00b7 6\ucc44\ub110 \u00b7 \ub204\uc801 4,349,192\ud68c"}, {"category": "\uc2ec\ub9ac\ud559", "ref_ch": "\uc0ac\ud53c\uc5d4\uc2a4 \uc2a4\ud29c\ub514\uc624", "ref_id": "dtths4qNAZY", "ref_title": "\u301040\ubd84 \ud480\ubc84\uc804\u3011 \uc0ac\ub78c \ub54c\ubb38\uc5d0 \uc2a4\ud2b8\ub808\uc2a4 \ubc1b\uc544 \ud798\ub4e4 \ub54c, \ub098 \uc790\uc2e0\uc744 \uc9c0\ud0a4\ub294 \uc0dd\uac01\ubcf4\ub2e4 \ub2e8\uc21c\ud55c \uc778\uac04\uad00\uacc4 \uae30\uc220 [\ud0c0\uc778\uc758 \uc2ec\ub9ac \uc77d\uc5b4\ub4dc\ub9bd\ub2c8\ub2e4] | \uae40\uacbd\uc77c \uad50\uc218", "topic": "\uae40\uacbd\uc77c", "why": "\uac80\uc99d 1\uc77c \u00b7 5\ucc44\ub110 \u00b7 \ub204\uc801 6,595,954\ud68c"}, {"category": "\uc2ec\ub9ac\ud559", "ref_ch": "\uc0ac\ud53c\uc5d4\uc2a4 \uc2a4\ud29c\ub514\uc624", "ref_id": "dtths4qNAZY", "ref_title": "\u301040\ubd84 \ud480\ubc84\uc804\u3011 \uc0ac\ub78c \ub54c\ubb38\uc5d0 \uc2a4\ud2b8\ub808\uc2a4 \ubc1b\uc544 \ud798\ub4e4 \ub54c, \ub098 \uc790\uc2e0\uc744 \uc9c0\ud0a4\ub294 \uc0dd\uac01\ubcf4\ub2e4 \ub2e8\uc21c\ud55c \uc778\uac04\uad00\uacc4 \uae30\uc220 [\ud0c0\uc778\uc758 \uc2ec\ub9ac \uc77d\uc5b4\ub4dc\ub9bd\ub2c8\ub2e4] | \uae40\uacbd\uc77c \uad50\uc218", "topic": "\uae30\uc220", "why": "\uac80\uc99d 1\uc77c \u00b7 5\ucc44\ub110 \u00b7 \ub204\uc801 3,358,756\ud68c"}, {"category": "\uc2ec\ub9ac\ud559", "ref_ch": "\uc0ac\ud53c\uc5d4\uc2a4 \uc2a4\ud29c\ub514\uc624", "ref_id": "R5QNO944doo", "ref_title": "(40\ubd84) MBTI \ubcf4\ub2e4 \uacfc\ud559\uc801\uc774\ub2e4! \ub2f9\uc2e0\uc758 \u0027\uc9c4\uc9dc\u0027 \uc131\uaca9\uc744 \uc54c\ub824\uc8fc\ub294 \uc2ec\ub9ac\ud14c\uc2a4\ud2b8 \ubaa8\uc74c | \uc0ac\ud53c\uc5d4\uc2a4 \uc6d4\uc694\ud2b9\uac15", "topic": "\uc131\uaca9", "why": "\uac80\uc99d 1\uc77c \u00b7 4\ucc44\ub110 \u00b7 \ub204\uc801 6,730,267\ud68c"}], "today": [{"category": "\uc9c0\uc2dd", "eff": 0.37190503597122304, "ref_ch": "\uae40\uc9c0\uc724\uc758 \uc9c0\uc2ddPlay", "ref_id": "6l5Id1WK-n0", "ref_title": "UAE\uc758 OPEC\ud0c8\ud1f4, \uc804\uc7c1 \uc911\uc778 \uc9c0\uae08 \ub610 \uc65c..?", "topic": "UAE\uc758 OPEC\ud0c8\ud1f4, \uc804\uc7c1 \uc911\uc778 \uc9c0\uae08 \ub610 \uc65c..?", "why": "\ud6a8\uc728 0.4x \u00b7 \uc870\ud68c 516,948\ud68c \u00b7 \uae40\uc9c0\uc724\uc758 \uc9c0\uc2ddPlay"}, {"category": "\uc9c0\uc2dd", "eff": 0.36045914844649024, "ref_ch": "\uc815\ud615\ub3c8\uc758 \uc81c\ubaa9\uc5c6\uc74cTV", "ref_id": "7H848RY1eK0", "ref_title": "\ud0dc\uc815\ud0dc\uc138\ubb38\ub2e8\uc138\uc608\uc131\uc5f0\uc911\uc778\uba85\uc120\uad11\uc778\ud6a8\ud604\uc219\uacbd\uc601\uc815\uc21c\ud5cc\ucca0\uace0\uc21c!!!!\ud83d\udc41\u200d\ud83d\udde8 \uc815\ud1b5\uc131 \uc5ed\uc0ac \uad00\uc810\uac8c\uc784", "topic": "\ud0dc\uc815\ud0dc\uc138\ubb38\ub2e8\uc138\uc608\uc131\uc5f0\uc911\uc778\uba85\uc120\uad11\uc778\ud6a8\ud604\uc219\uacbd\uc601\uc815\uc21c\ud5cc\ucca0\uace0\uc21c!!!!\ud83d\udc41\u200d\ud83d\udde8 \uc815\ud1b5\uc131 \uc5ed\uc0ac \uad00\uc810\uac8c\uc784", "why": "\ud6a8\uc728 0.4x \u00b7 \uc870\ud68c 313,239\ud68c \u00b7 \uc815\ud615\ub3c8\uc758 \uc81c\ubaa9\uc5c6\uc74cTV"}, {"category": "\uc9c0\uc2dd", "eff": 0.32814959723820486, "ref_ch": "\uc815\ud615\ub3c8\uc758 \uc81c\ubaa9\uc5c6\uc74cTV", "ref_id": "p4GkUv9JVHc", "ref_title": "[\ud669\uc9c0\uc131 \ud0c8\ubd81\uae30 Ep.2] \ud558\ub8e8\ub9cc \ub354 \uc0b4\uc790... \uc2e4\uc874\ud558\ub294 \uc9c0\uc625\uc5d0\uc11c \uc0b4\uc544\ub0a8\ub294\ubc95\ud83c\udff4\u200d\u2620\ufe0f \u203b\ub3c5\uc810\uacf5\uac1c\u203b", "topic": "[\ud669\uc9c0\uc131 \ud0c8\ubd81\uae30 Ep.2] \ud558\ub8e8\ub9cc \ub354 \uc0b4\uc790... \uc2e4\uc874\ud558\ub294 \uc9c0\uc625\uc5d0\uc11c \uc0b4\uc544\ub0a8\ub294\ubc95\ud83c\udff4\u200d\u2620\ufe0f \u203b\ub3c5\uc810\uacf5\uac1c\u203b", "why": "\ud6a8\uc728 0.3x \u00b7 \uc870\ud68c 285,162\ud68c \u00b7 \uc815\ud615\ub3c8\uc758 \uc81c\ubaa9\uc5c6\uc74cTV"}, {"category": "\uc9c0\uc2dd", "eff": 0.32713021582733814, "ref_ch": "\uae40\uc9c0\uc724\uc758 \uc9c0\uc2ddPlay", "ref_id": "CXUPKNLZCZw", "ref_title": "\ub610 \ub2e4\uc2dc \uc5b8\uae09\ub41c \ub098\ud1a0 \ud0c8\ud1f4! \uc804\ud6c4 \ubbf8\uad6d\uc758 \ub3d9\ub9f9 \uc7ac\ud3b8\uc740 \uc5b4\ub5bb\uac8c \ub420\uae4c | \ubbf8\uad6d, \ud2b8\ub7fc\ud504, \ub098\ud1a0", "topic": "\ub610 \ub2e4\uc2dc \uc5b8\uae09\ub41c \ub098\ud1a0 \ud0c8\ud1f4! \uc804\ud6c4 \ubbf8\uad6d\uc758 \ub3d9\ub9f9 \uc7ac\ud3b8\uc740 \uc5b4\ub5bb\uac8c \ub420\uae4c | \ubbf8\uad6d, \ud2b8\ub7fc\ud504, \ub098\ud1a0", "why": "\ud6a8\uc728 0.3x \u00b7 \uc870\ud68c 454,711\ud68c \u00b7 \uae40\uc9c0\uc724\uc758 \uc9c0\uc2ddPlay"}, {"category": "\uc9c0\uc2dd", "eff": 0.3207571921749137, "ref_ch": "\uc815\ud615\ub3c8\uc758 \uc81c\ubaa9\uc5c6\uc74cTV", "ref_id": "VRuV8lc6bRY", "ref_title": "[\ud669\uc9c0\uc131 \ud0c8\ubd81\uae30 Ep.3] \uc601\ud654\ud654 \uc808\ub300 \ubd88\uac00!!!\ud83d\ude45\u274c\uc0dd\uc0dd\ud55c \ud0c8\ubd81 \ub85c\ub4dc \u5927\uacf5\uac1c!! \uc774\uac8c \ub9d0\uc774 \ub428?? \u203b\ub3c5\uc810\uacf5\uac1c\u203b", "topic": "[\ud669\uc9c0\uc131 \ud0c8\ubd81\uae30 Ep.3] \uc601\ud654\ud654 \uc808\ub300 \ubd88\uac00!!!\ud83d\ude45\u274c\uc0dd\uc0dd\ud55c \ud0c8\ubd81 \ub85c\ub4dc \u5927\uacf5\uac1c!! \uc774\uac8c \ub9d0\uc774 \ub428?? \u203b\ub3c5\uc810\uacf5\uac1c", "why": "\ud6a8\uc728 0.3x \u00b7 \uc870\ud68c 278,738\ud68c \u00b7 \uc815\ud615\ub3c8\uc758 \uc81c\ubaa9\uc5c6\uc74cTV"}, {"category": "\uc9c0\uc2dd", "eff": 0.3005644908616188, "ref_ch": "\uc9c0\uc2dd\uc778\uc0ac\uc774\ub4dc", "ref_id": "UY_5u8K6_gw", "ref_title": "\uc778\uc0dd\uc744 \ub108\ubb34 \uc9c4\uc9c0\ud558\uac8c \uc0b4\uba74 \uc548 \ub418\ub294 \uc774\uc720\u3163\uc9c0\uc2dd\uc778\ucd08\ub300\uc11d EP.135 (\ubcf4\ub9cc \uc2a4\ub2d8 1\ubd80)", "topic": "\uc778\uc0dd\uc744 \ub108\ubb34 \uc9c4\uc9c0\ud558\uac8c \uc0b4\uba74 \uc548 \ub418\ub294 \uc774\uc720\u3163\uc9c0\uc2dd\uc778\ucd08\ub300\uc11d EP.135 (\ubcf4\ub9cc \uc2a4\ub2d8 1\ubd80)", "why": "\ud6a8\uc728 0.3x \u00b7 \uc870\ud68c 1,151,162\ud68c \u00b7 \uc9c0\uc2dd\uc778\uc0ac\uc774\ub4dc"}, {"category": "\uc9c0\uc2dd", "eff": 0.2416778042959427, "ref_ch": "B tv \uc774\ub3d9\uc9c4\uc758 \ud30c\uc774\uc544\ud0a4\uc544", "ref_id": "V3JUWuR52D4", "ref_title": "\uc9c4\uc9dc \ub098\uc05c \uc0ac\ub78c\uc744 \uc774\ud574\ud574\uc57c \ud560\uae4c?", "topic": "\uc9c4\uc9dc \ub098\uc05c \uc0ac\ub78c\uc744 \uc774\ud574\ud574\uc57c \ud560\uae4c?", "why": "\ud6a8\uc728 0.2x \u00b7 \uc870\ud68c 202,526\ud68c \u00b7 B tv \uc774\ub3d9\uc9c4\uc758 \ud30c\uc774\uc544\ud0a4\uc544"}, {"category": "\uc9c0\uc2dd", "eff": 0.23339292604501607, "ref_ch": "\ubcf4\ub2e4 BODA", "ref_id": "KSw7CuSoNy0", "ref_title": "\ubb34\ub108\uc9c4 \uc77c\ubcf8 \uc655 \ubb34\ub364\uc5d0\uc11c \uc3df\uc544\uc9c4 \ucda9\uaca9\uc801\uc778 \uc720\ubb3c\ub4e4..(\ucd9c\uc2e0\uc774..\uc6b0\ub9ac\ucabd?)\u3163\uc5ed\uc0ac\ub97c \ubcf4\ub2e4 EP.140", "topic": "\ubb34\ub108\uc9c4 \uc77c\ubcf8 \uc655 \ubb34\ub364\uc5d0\uc11c \uc3df\uc544\uc9c4 \ucda9\uaca9\uc801\uc778 \uc720\ubb3c\ub4e4..(\ucd9c\uc2e0\uc774..\uc6b0\ub9ac\ucabd?)\u3163\uc5ed\uc0ac\ub97c \ubcf4\ub2e4 EP.140", "why": "\ud6a8\uc728 0.2x \u00b7 \uc870\ud68c 725,852\ud68c \u00b7 \ubcf4\ub2e4 BODA"}], "tone": "\ubc24\u00b7\uc218\uba74\u00b7\uc704\ub85c"}, "\uc9c0\uc2dd\ub85d": {"categories": ["\uacbd\uc81c", "\uc9c0\uc2dd"], "emoji": "\ud83e\udde0", "proven": [{"category": "\uacbd\uc81c", "ref_ch": "\uacbd\uc81c\uade0\uc5f4", "ref_id": "0u3wHhqxceA", "ref_title": "\uc0bc\uc131 \uadc0\uc871 \ub178\uc870\uc758 \ucd5c\ud6c4! \ud3c9\ud0dd \uacf5\uc7a5 \ud574\uccb4 \uba85\ub839\uacfc \uc0ac\ub78c \uc5c6\ub294 \uacf5\uc7a5 \uc120\uc5b8\uc5d0 \uc9c4\uc9dc \uc774\uc720", "topic": "\uc0bc\uc131", "why": "\uac80\uc99d 1\uc77c \u00b7 9\ucc44\ub110 \u00b7 \ub204\uc801 1,433,388\ud68c"}, {"category": "\uc9c0\uc2dd", "ref_ch": "\uc3e8\uc791\uac00\uc758\uc9c0\uc2dd\uc0ac\uc804", "ref_id": "vxGQbf1koHk", "ref_title": "[\uc778\ub958\uc758 \uc5ed\uc0ac] \ucd5c\ucd08\uc758 \ube45\ubc45\ubd80\ud130, \ucd5c\ucd08\uc758 \ubb38\uba85\uae4c\uc9c0 l \ubaa8\ub4e0 \uc9c0\uc2dd\uc758 \uadfc\ubcf8\uc774 \ub418\uc5b4 \uc904 \uc774\uc57c\uae30 l 138\uc5b5 \ub144 \uc5ed\uc0ac \ucd1d\uc815\ub9ac (The History of Humanity)", "topic": "\uc9c0\uc2dd", "why": "\uac80\uc99d 1\uc77c \u00b7 7\ucc44\ub110 \u00b7 \ub204\uc801 7,020,826\ud68c"}, {"category": "\uc9c0\uc2dd", "ref_ch": "\uc138\ubc14\uc2dc \uac15\uc5f0 Sebasi Talk", "ref_id": "-PmZ2KcfGCI", "ref_title": "(Kor, Chi, Jpn, Eng) \ub3c5\uc11c, \ub0b4 \uc778\uc0dd\uc758 \uc9c0\ub3c4\ub97c \ucc3e\uc544\uc11c | \ub098\ubbfc\uc560 \uc11c\uc6b8\ub300\ud559\uad50 \uae30\ucd08\uad50\uc721\uc6d0 \uad50\uc218 | \ucd94\ucc9c \uac15\uc5f0 \uac15\uc758 \ub4e3\uae30 | \uc138\ubc14\uc2dc 1917\ud68c", "topic": "\uc778\uc0dd", "why": "\uac80\uc99d 1\uc77c \u00b7 6\ucc44\ub110 \u00b7 \ub204\uc801 5,991,643\ud68c"}, {"category": "\uacbd\uc81c", "ref_ch": "\ubcf4\ub2e4 BODA", "ref_id": "9BobXAiJ5MU", "ref_title": "\uc804 \uc138\uacc4\uac00 \ud638\ub974\ubb34\uc988 \ud574\ud611\uc5d0 \ubaa8\uc774\uace0 \uc788\ub294 \uc774\uc720 (\ub05d\uc774 \uc548 \ubcf4\uc774\ub294 \uc11d\uc720..)", "topic": "\uc138\uacc4", "why": "\uac80\uc99d 1\uc77c \u00b7 6\ucc44\ub110 \u00b7 \ub204\uc801 725,585\ud68c"}, {"category": "\uacbd\uc81c", "ref_ch": "\ud06c\ub7a9 KLAB", "ref_id": "XaLAnSo_6sw", "ref_title": "[\uacbd\uc81c \ubaa8\uc544\ubcf4\uae30 1\ud0c4] \uc544\ub294 \ucc99 \ud558\uae30 \ub531 \uc88b\uc740 \uacbd\uc81c \ub274\uc2a4 10\uac00\uc9c0\uff5c\ud06c\ub7a9", "topic": "\uacbd\uc81c", "why": "\uac80\uc99d 1\uc77c \u00b7 5\ucc44\ub110 \u00b7 \ub204\uc801 5,544,264\ud68c"}, {"category": "\uacbd\uc81c", "ref_ch": "\ub514\uae00 :Diggle", "ref_id": "_Q3QaktDBPg", "ref_title": "[#\ubc8c\uac70\ubc97\uc740\uc138\uacc4\uc0ac] \"\uc778\ub958\uac00 \ubbf8\ucce4\ub2e4...\" 18\uc138\uae30 \uc720\ub7fd\uc744 \ucd08\ud1a0\ud654 \uc2dc\ud0a8 \uc81c1\ucc28 \uc138\uacc4\ub300\uc804\ud83d\udca5 1\uc2dc\uac04 \ub9cc\uc5d0 \uc815\ubcf5\ud558\uae30 | #\ub514\uc81c\uc774\ud53d", "topic": "\ub9cc\uc5d0", "why": "\uac80\uc99d 1\uc77c \u00b7 5\ucc44\ub110 \u00b7 \ub204\uc801 2,357,714\ud68c"}, {"category": "\uacbd\uc81c", "ref_ch": "\uacbd\uc81c\uade0\uc5f4", "ref_id": "0u3wHhqxceA", "ref_title": "\uc0bc\uc131 \uadc0\uc871 \ub178\uc870\uc758 \ucd5c\ud6c4! \ud3c9\ud0dd \uacf5\uc7a5 \ud574\uccb4 \uba85\ub839\uacfc \uc0ac\ub78c \uc5c6\ub294 \uacf5\uc7a5 \uc120\uc5b8\uc5d0 \uc9c4\uc9dc \uc774\uc720", "topic": "\ub178\uc870", "why": "\uac80\uc99d 1\uc77c \u00b7 5\ucc44\ub110 \u00b7 \ub204\uc801 957,325\ud68c"}, {"category": "\uacbd\uc81c", "ref_ch": "EBSCulture (EBS \uad50\uc591)", "ref_id": "uf_TCqRU8oM", "ref_title": "\"\ub5a8\uc5b4\uc9c4\ub2e4\ub294 \uac83\uc740 \ubb34\uc5c7\uc778\uac00?\" \ud558\ub098\uc758 \ubb3c\uc74c\uc5d0\uc11c \uc2dc\uc791\ub41c \uc138\uc0c1\uc744 \uc644\uc804\ud788 \ubc14\uafbc \uc9c0\uc2dd \uc0c1\ub300\uc131\uc774\ub860\u2502EBS\ub2e4\ud050\ud504\ub77c\uc784\u2502\uc54c\uace0e\uc998", "topic": "\uc644\uc804\ud788", "why": "\uac80\uc99d 1\uc77c \u00b7 5\ucc44\ub110 \u00b7 \ub204\uc801 932,694\ud68c"}], "today": [{"category": "\uacbd\uc81c", "eff": 62.625850340136054, "ref_ch": "\uacbd\uc81c\ub300\ubd80", "ref_id": "yT-_vXIIqRU", "ref_title": "\"\ud658\uacbd\ubd80\ub3c4, \uce74\uc774\uc2a4\ud2b8\ub3c4 \uc804\ubd80 \uc778\uc815\ud588\ub294\ub370...\" \uc804\uad6d \uc8fc\uc720\uc18c \ub4a4\ud754\ub4e0 990\uc6d0 \uc138\ub179\uc2a4\uac00 \uc644\uc804\ud788 \uc0ac\ub77c\uc9c4 \uc9c4\uc9dc \uc774\uc720", "topic": "\"\ud658\uacbd\ubd80\ub3c4, \uce74\uc774\uc2a4\ud2b8\ub3c4 \uc804\ubd80 \uc778\uc815\ud588\ub294\ub370...\" \uc804\uad6d \uc8fc\uc720\uc18c \ub4a4\ud754\ub4e0 990\uc6d0 \uc138\ub179\uc2a4\uac00 \uc644\uc804\ud788 \uc0ac\ub77c\uc9c4 \uc9c4\uc9dc \uc774\uc720", "why": "\ud6a8\uc728 62.6x \u00b7 \uc870\ud68c 184,120\ud68c \u00b7 \uacbd\uc81c\ub300\ubd80"}, {"category": "\uacbd\uc81c", "eff": 28.594179894179895, "ref_ch": "\ub18d\ubd80\uc758 \uacbd\uc81c\ud559", "ref_id": "25tCUGqi6tY", "ref_title": "\"\u1107\u1161\u11ab\u1103\u1169\u110e\u1166 \u1103\u1169\u11a8\u1109\u1175\u11a8\u110b\u1173\u11ab \u110c\u1175\u1109\u1169\u11a8 \u1107\u116e\u11af\u1100\u1161\u1102\u1173\u11bc\u1112\u1161\u1103\u1161\" \u110b\u116f\u11af\u1100\u1161\u1100\u1161 \u110c\u1169\u110b\u116d\u11bc\u1112\u1175 \u1106\u1162\u110c\u1175\u11b8 \u110c\u116e\u11bc\u110b\u1175\u11ab AI \u1103\u1161\u110b\u1173\u11b7 \u1109\u116e\u1112\u1168\u110c\u116e", "topic": "\"\u1107\u1161\u11ab\u1103\u1169\u110e\u1166 \u1103\u1169\u11a8\u1109\u1175\u11a8\u110b\u1173\u11ab \u110c\u1175\u1109\u1169\u11a8 \u1107\u116e\u11af\u1100\u1161\u1102\u1173\u11bc\u1112\u1161\u1103\u1161\" \u110b\u116f\u11af\u1100\u1161\u1100\u1161 \u110c\u1169\u110b\u116d\u11bc\u1112\u1175 \u1106\u1162\u110c\u1175\u11b8", "why": "\ud6a8\uc728 28.6x \u00b7 \uc870\ud68c 108,086\ud68c \u00b7 \ub18d\ubd80\uc758 \uacbd\uc81c\ud559"}, {"category": "\uacbd\uc81c", "eff": 25.089022556390976, "ref_ch": "\uacbd\uc81c\uc77d\uc74c\uc774", "ref_id": "DBAtINf_tDQ", "ref_title": "\uc5d4\ube44\ub514\uc544\uac00 \uc0bc\uc131\u00b7SK \ub194\ub450\uace0 1000\uc5b5 \ubca0\ud305\ud55c \ubb34\uba85 \ud68c\uc0ac\uc758 \uc9c4\uc9dc \uc815\uccb4", "topic": "\uc5d4\ube44\ub514\uc544\uac00 \uc0bc\uc131\u00b7SK \ub194\ub450\uace0 1000\uc5b5 \ubca0\ud305\ud55c \ubb34\uba85 \ud68c\uc0ac\uc758 \uc9c4\uc9dc \uc815\uccb4", "why": "\ud6a8\uc728 25.1x \u00b7 \uc870\ud68c 333,684\ud68c \u00b7 \uacbd\uc81c\uc77d\uc74c\uc774"}, {"category": "\uacbd\uc81c", "eff": 23.745738636363637, "ref_ch": "\uacbd\uc81c\uade0\uc5f4", "ref_id": "0u3wHhqxceA", "ref_title": "\uc0bc\uc131 \uadc0\uc871 \ub178\uc870\uc758 \ucd5c\ud6c4! \ud3c9\ud0dd \uacf5\uc7a5 \ud574\uccb4 \uba85\ub839\uacfc \uc0ac\ub78c \uc5c6\ub294 \uacf5\uc7a5 \uc120\uc5b8\uc5d0 \uc9c4\uc9dc \uc774\uc720", "topic": "\uc0bc\uc131 \uadc0\uc871 \ub178\uc870\uc758 \ucd5c\ud6c4! \ud3c9\ud0dd \uacf5\uc7a5 \ud574\uccb4 \uba85\ub839\uacfc \uc0ac\ub78c \uc5c6\ub294 \uacf5\uc7a5 \uc120\uc5b8\uc5d0 \uc9c4\uc9dc \uc774\uc720", "why": "\ud6a8\uc728 23.7x \u00b7 \uc870\ud68c 417,925\ud68c \u00b7 \uacbd\uc81c\uade0\uc5f4"}, {"category": "\uacbd\uc81c", "eff": 21.310119760479044, "ref_ch": "\ud0d0\uc815 \uacbd\uc81c\ud559", "ref_id": "NXIcyN1WwSY", "ref_title": "\ubd81\ud55c\uad70 128\ub9cc\uc758 \ud5c8\uc0c1, \ud575\ubb34\uae30\uc758 \ud55c\uacc4, \uadf8\ub9ac\uace0 \ubd95\uad34 72\uc2dc\uac04 \uc2dc\ub098\ub9ac\uc624 [\ud1b5\ud569\ubcf8]", "topic": "\ubd81\ud55c\uad70 128\ub9cc\uc758 \ud5c8\uc0c1, \ud575\ubb34\uae30\uc758 \ud55c\uacc4, \uadf8\ub9ac\uace0 \ubd95\uad34 72\uc2dc\uac04 \uc2dc\ub098\ub9ac\uc624 [\ud1b5\ud569\ubcf8]", "why": "\ud6a8\uc728 21.3x \u00b7 \uc870\ud68c 355,879\ud68c \u00b7 \ud0d0\uc815 \uacbd\uc81c\ud559"}, {"category": "\uacbd\uc81c", "eff": 19.442642487046633, "ref_ch": "\ub7ed\ud0a4\uacbd\uc81c\ud559", "ref_id": "4qLCUYg40aU", "ref_title": "\"\uc5b4\ub514\ud55c\ubc88 \ub05d\uae4c\uc9c0 \ud574\ubd10\ub77c\" 45\uc870 \uc694\uad6c\ud55c \uc0bc\uc131 \uadc0\uc871 \ub178\uc870\uc758 \ucd5c\ud6c4\uff5c\uc0bc\uc131 \ub178\uc870 \ud30c\uc5c5 \ucd1d\uc815\ub9ac", "topic": "\"\uc5b4\ub514\ud55c\ubc88 \ub05d\uae4c\uc9c0 \ud574\ubd10\ub77c\" 45\uc870 \uc694\uad6c\ud55c \uc0bc\uc131 \uadc0\uc871 \ub178\uc870\uc758 \ucd5c\ud6c4\uff5c\uc0bc\uc131 \ub178\uc870 \ud30c\uc5c5 \ucd1d\uc815\ub9ac", "why": "\ud6a8\uc728 19.4x \u00b7 \uc870\ud68c 375,243\ud68c \u00b7 \ub7ed\ud0a4\uacbd\uc81c\ud559"}, {"category": "\uacbd\uc81c", "eff": 18.468829268292684, "ref_ch": "\uacbd\uc81c\uc655\ud1a0\ub07c", "ref_id": "czy8dA-NPCc", "ref_title": "\"\uc2dc\uccad\ub960 0.5%\" \uac11\uc9c8\ud558\ub358 \ubc29\uc1a1\uad6d\uc758 \ucc98\ucc38\ud55c \ubab0\ub77d, \uc678\uba74\ub2f9\ud55c 3\uac00\uc9c0 \uc9c4\uc9dc \uc774\uc720", "topic": "\"\uc2dc\uccad\ub960 0.5%\" \uac11\uc9c8\ud558\ub358 \ubc29\uc1a1\uad6d\uc758 \ucc98\ucc38\ud55c \ubab0\ub77d, \uc678\uba74\ub2f9\ud55c 3\uac00\uc9c0 \uc9c4\uc9dc \uc774\uc720", "why": "\ud6a8\uc728 18.5x \u00b7 \uc870\ud68c 378,611\ud68c \u00b7 \uacbd\uc81c\uc655\ud1a0\ub07c"}, {"category": "\uacbd\uc81c", "eff": 15.965462427745665, "ref_ch": "\uc138\uacc4\uacbd\uc81c \ub3cb\ubcf4\uae30", "ref_id": "7XPYobTh-jg", "ref_title": "\uc911\uad6d \ub310 98000\uac1c\uac00 \ub3d9\uc2dc\uc5d0 \ub299\uace0 \uc788\ub2e4 #\uc138\uacc4\uc774\uc288", "topic": "\uc911\uad6d \ub310 98000\uac1c\uac00 \ub3d9\uc2dc\uc5d0 \ub299\uace0 \uc788\ub2e4 #\uc138\uacc4\uc774\uc288", "why": "\ud6a8\uc728 16.0x \u00b7 \uc870\ud68c 110,481\ud68c \u00b7 \uc138\uacc4\uacbd\uc81c \ub3cb\ubcf4\uae30"}], "tone": "\uc815\ubcf4\u00b7\uacbd\uc81c"}};
+    let cur = Object.keys(RECS)[0];
+    function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function card(r, i){
+      const ref = r.ref_id ? `<a class="rec-ref" href="https://youtube.com/watch?v=${r.ref_id}" target="_blank">▶ 참고: ${esc(r.ref_title).slice(0,42)} (${esc(r.ref_ch)})</a>` : '';
+      return `<div class="rec-card">
+        <div class="rec-topic"><span class="rec-rank">${i+1}</span>${esc(r.topic)}</div>
+        <div class="rec-why">${esc(r.why)}</div>
+        ${ref}
+      </div>`;
+    }
+    function group(title, items){
+      const body = items.length ? items.map(card).join('') : '<div class="rec-empty">해당 주제 없음</div>';
+      return `<div class="rec-group"><h3>${title}</h3>${body}</div>`;
+    }
+    function render(){
+      const c = RECS[cur];
+      document.getElementById('recBody').innerHTML =
+        `<div class="sub" style="margin:4px 0 10px;">컨셉: ${esc(c.tone)} · 카테고리: ${c.categories.join('·')}</div>
+         <div class="rec-cols">
+           ${group('🔁 검증 금광 주제', c.proven)}
+           ${group('🔥 오늘 뜬 주제', c.today)}
+         </div>`;
+    }
+    document.querySelectorAll('#chTabs .tab').forEach(t=>t.onclick=()=>{
+      document.querySelectorAll('#chTabs .tab').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active'); cur=t.dataset.ch; render();
+    });
+    render();
+  </script>
+</body>
+</html>
