@@ -112,7 +112,16 @@ section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
 .rec-why { font-size:12px; color:var(--text2); margin-bottom:7px; }
 .rec-ref { font-size:12px; display:inline-block; }
 .rec-empty { color:var(--text2); padding:18px; font-size:13px; }
-@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } }
+/* 🔥 재편집 재폭발 (최우선) */
+.reedit-box { background:rgba(242,139,130,.08); border:1px solid rgba(242,139,130,.45); border-radius:12px; padding:14px 16px; margin:10px 0 20px; }
+.reedit-head { font-size:16px; font-weight:700; }
+.reedit-sub { display:block; font-size:12px; font-weight:400; color:var(--text2); margin-top:3px; }
+.reedit-card { padding:10px 0; border-top:1px solid rgba(242,139,130,.22); }
+.reedit-card:first-of-type { border-top:none; }
+.reedit-line1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.reedit-line1 .row-title { max-width:420px; font-weight:500; }
+.reedit-meta { font-size:12px; color:var(--text2); margin-top:4px; padding-left:26px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } }
 footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
 
 /* 테이블 (아카이브 + 리포트 공통) — 클린 랭킹 행 */
@@ -171,7 +180,7 @@ section table { margin:10px 0; }
   <header>
     <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
     <h1>📋 일일 리포트 — 2026-05-26</h1>
-    <div class="sub">시그널 0 · 소형 폭발 0 · 대형 폭발 0 · 신영상 0 · 2026-05-29 14:20</div>
+    <div class="sub">시그널 0 · 소형 폭발 0 · 대형 폭발 0 · 신영상 0 · 2026-05-29 14:26</div>
   </header>
 
   <div class="info-bar">
@@ -188,6 +197,6 @@ section table { margin:10px 0; }
     <div class="card tone-purple"><div class="label">🆕 신영상 24h</div><div class="value">0</div></div>
   </div>
   
-  <footer>arrange yt scanner · 2026-05-29 14:20</footer>
+  <footer>arrange yt scanner · 2026-05-29 14:26</footer>
 </body>
 </html>
