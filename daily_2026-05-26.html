@@ -92,6 +92,32 @@ section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
 .nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
 footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
 
+/* 테이블 (아카이브 + 리포트 공통) — 클린 랭킹 행 */
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:auto; margin:10px 0 18px; }
+table { width:100%; border-collapse:collapse; font-size:14px; }
+thead th { text-align:left; font-weight:500; font-size:12px; color:var(--text2);
+  padding:11px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:#fafbfc; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; }
+tbody tr:last-child td { border-bottom:none; }
+tbody tr:hover { background:var(--hover); }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:500; font-variant-numeric:tabular-nums; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.num.lead { color:var(--text); font-weight:600; }
+.muted { color:var(--text2); }
+.cat-badge { display:inline-block; font-size:11px; padding:2px 9px; border-radius:11px; font-weight:500; white-space:nowrap; }
+.kw { font-weight:700; font-size:15px; }
+.cellv { display:flex; flex-direction:column; gap:1px; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; }
+.row-sub { font-size:11px; color:var(--text2); }
+.ch-tag { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--hover); color:var(--text2); }
+/* 리포트 섹션 헤더 */
+.rep-sec { margin:24px 0 4px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:17px; font-weight:700; }
+.rep-sec .cnt { font-size:13px; color:var(--text2); }
+.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
+/* 마크다운 리포트 잔여 표 */
+section table { margin:10px 0; }
+
 @media (max-width:600px) {
   body { padding:14px; }
   header h1 { font-size:21px; }
@@ -99,195 +125,24 @@ footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8
   .card .value { font-size:24px; }
   .ch-grid { grid-template-columns:1fr; }
   .filters { flex-direction:column; align-items:stretch; }
+  .row-title { max-width:200px; }
+  tbody td, thead th { padding:9px 8px; }
 }
 </style>
 </head>
 <body>
   <header>
     <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
-    <h1>일일 리포트 — 2026-05-26</h1>
+    <h1>📋 일일 리포트 — 2026-05-26</h1>
+    <div class="sub">시그널 0 · 소형 폭발 0 · 대형 폭발 0 · 신영상 0 · 2026-05-29 11:23</div>
   </header>
-  <section><h1 id="유튜브-채널-모니터링-2026-05-26-1813">유튜브 채널 모니터링 — 2026-05-26 18:13</h1>
-
-<h2 id="알고리즘-시그널-시속-5000회-즉시-검토-0편">🚨 알고리즘 시그널 (시속 5,000회+ · 즉시 검토) — 0편</h2>
-
-<p><em>현재 임계 이상 시그널 없음 (직전 측정 데이터 부족 시에도 해당)</em></p>
-
-<h2 id="발행-중단-둔화-경고-0개-채널">⚠️ 발행 중단 / 둔화 경고 — 0개 채널</h2>
-
-<p><em>모든 채널 정상 발행 중</em></p>
-
-<h2 id="신영상-24시간-내-총-0편">🆕 신영상 (24시간 내) — 총 0편</h2>
-
-<h2 id="효율-5x-한방-영상-총-0편">🔥 효율 5x+ 한방 영상 — 총 0편</h2>
-
-<h2 id="ai-채널-활성도-경고-주-3편-미만-0개">⚠️ AI 채널 활성도 경고 (주 3편 미만) — 0개</h2>
-
-<h2 id="신규-채널-후보-17개">🆕 신규 채널 후보 — 17개</h2>
-
-<blockquote>
-  <p>뉴스 키워드로 발견된 신규 채널. 검토 후 승인/거절 결정:</p>
-</blockquote>
-
-<blockquote>
-  <ul>
-  <li>승인: <code>.venv/bin/python scripts/discover_channels.py approve N</code></li>
-  <li>거절: <code>.venv/bin/python scripts/discover_channels.py reject N</code></li>
-  </ul>
-</blockquote>
-
-<table>
-<thead>
-<tr>
-  <th>#</th>
-  <th>채널</th>
-  <th>hit</th>
-  <th>발견 키워드</th>
-  <th>채널 URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>1</td>
-  <td>엠키타카 MKTK</td>
-  <td>2</td>
-  <td>코스피</td>
-  <td>https://www.youtube.com/channel/UCGbkN-3JpOct4KuEv59NF0Q</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td>농부의 경제학</td>
-  <td>1</td>
-  <td>삼전닉스</td>
-  <td>https://www.youtube.com/channel/UCsYEheohThz9KQz8K4S2KXA</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td>주식원샷</td>
-  <td>1</td>
-  <td>삼전닉스</td>
-  <td>https://www.youtube.com/channel/UCIh431O7x00rZke3oNBuRRA</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td>역사경제해결사</td>
-  <td>1</td>
-  <td>삼전닉스</td>
-  <td>https://www.youtube.com/channel/UC2rBfO8HDq4OfMUTBLXVzqQ</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>김어준의 겸손은힘들다 뉴스공장</td>
-  <td>1</td>
-  <td>정용진</td>
-  <td>https://www.youtube.com/channel/UCAAvO0ehWox1bbym3rXKBZw</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>고재영</td>
-  <td>1</td>
-  <td>만원</td>
-  <td>https://www.youtube.com/channel/UClWg5n2YST6_697s-zQSMnA</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td>열정무도와 부의 춤을</td>
-  <td>1</td>
-  <td>만원</td>
-  <td>https://www.youtube.com/channel/UCLKkKVxkINoAgDmTaRgMBCA</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td>보통 사람</td>
-  <td>1</td>
-  <td>만원</td>
-  <td>https://www.youtube.com/channel/UCBWZUUNW4YNeYmZeXEss6SQ</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td>상가의 안녕히살아보기</td>
-  <td>1</td>
-  <td>만원</td>
-  <td>https://www.youtube.com/channel/UC69z_1ZtKQjG5fa-_sKBBfg</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td>한국증권TV</td>
-  <td>1</td>
-  <td>만원</td>
-  <td>https://www.youtube.com/channel/UC9OdxrtKsOxQCXpjNmaRMsw</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td>굿모닝경제TV</td>
-  <td>1</td>
-  <td>만원</td>
-  <td>https://www.youtube.com/channel/UC-1eEpy7g6TxLaih9KorBTg</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td>초월스토리 - 돈버는 사장님들</td>
-  <td>1</td>
-  <td>만원</td>
-  <td>https://www.youtube.com/channel/UCS3DMEqxRo-WbPfXYcO7nCA</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td>슈퍼개미 이주영TV</td>
-  <td>1</td>
-  <td>코스피</td>
-  <td>https://www.youtube.com/channel/UCRKbuRFO8UhLXOtXWoqMeqQ</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td>리치노마드 Rich Nomad</td>
-  <td>1</td>
-  <td>레버리지</td>
-  <td>https://www.youtube.com/channel/UCTIgENwrcMCmD4xbjPCKfIw</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td>경제 원탑</td>
-  <td>1</td>
-  <td>레버리지</td>
-  <td>https://www.youtube.com/channel/UCDjaj6eENGMvgIXfeRErPmA</td>
-</tr>
-</tbody>
-</table>
-
-<h2 id="전체-채널-요약">📊 전체 채널 요약</h2>
-
-<table>
-<thead>
-<tr>
-  <th>분류</th>
-  <th>채널</th>
-  <th>구독자</th>
-  <th>주당 발행</th>
-  <th>최대 효율</th>
-  <th>최대 조회</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>일반</td>
-  <td>지식인사이드</td>
-  <td>3,830,000</td>
-  <td>3.5편</td>
-  <td>0.3x</td>
-  <td>1,174,987</td>
-</tr>
-<tr>
-  <td>일반</td>
-  <td>보다 BODA</td>
-  <td>3,100,000</td>
-  <td>3.5편</td>
-  <td>0.3x</td>
-  <td>922,470</td>
-</tr>
-</tbody>
-</table>
-</section>
-  <footer>arrange yt scanner · 2026-05-29 10:07</footer>
+  <div class="cards">
+    <div class="card tone-red"><div class="label">🚨 알고리즘 시그널</div><div class="value">0</div></div>
+    <div class="card tone-green"><div class="label">🔬 소형 폭발</div><div class="value">0</div></div>
+    <div class="card tone-blue"><div class="label">🐳 대형 폭발</div><div class="value">0</div></div>
+    <div class="card tone-purple"><div class="label">🆕 신영상 24h</div><div class="value">0</div></div>
+  </div>
+  
+  <footer>arrange yt scanner · 2026-05-29 11:23</footer>
 </body>
 </html>
