@@ -3,201 +3,274 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-  <meta name="theme-color" content="#8ab4f8">
+  <meta name="theme-color" content="#a855f7">
   <title>🎙️ 시니어랩 — 2026-05-30</title>
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
 :root {
-  --blue:#8ab4f8; --red:#f28b82; --purple:#c58af9; --green:#81c995;
-  --text:#202124; --text2:#5f6368; --border:#dadce0; --surface:#fff; --bg:#fff;
-  --hover:#f1f3f4; --divider:#e8eaed; --chip:#e8f0fe;
+  /* 다크 베이스 */
+  --bg:#0a0a12; --surface:#13131c; --surface2:#1a1a26;
+  --border:#26263a; --divider:#1f1f30; --hover:#1e1e2e;
+  /* 텍스트 */
+  --text:#ededf2; --text2:#9696a6; --text3:#6c6c80;
+  /* 키 컬러 — 보라 (알고리즘 해킹) */
+  --primary:#a855f7; --primary-hi:#c084fc; --primary-bg:rgba(168,85,247,.12); --primary-bd:rgba(168,85,247,.35);
+  /* 보조 강조 */
+  --hot:#84cc16;        /* 라임 — 폭발/검증 */
+  --hot-bg:rgba(132,204,22,.10); --hot-bd:rgba(132,204,22,.35);
+  --warn:#ff7a45;       /* 오렌지 — 시그널 */
+  --warn-bg:rgba(255,122,69,.10); --warn-bd:rgba(255,122,69,.35);
+  --danger:#ef4444;     /* 빨강 — 폭락 */
+  --danger-bg:rgba(239,68,68,.10); --danger-bd:rgba(239,68,68,.35);
+  --up:#4ade80; --down:#ef4444;  /* 등락 */
+  --info:#60a5fa; --info-bg:rgba(96,165,250,.10);
+  /* 호환 (구 변수명) */
+  --blue:var(--primary); --green:var(--up); --red:var(--danger); --purple:var(--primary-hi);
+  --chip:rgba(168,85,247,.13);
 }
 * { box-sizing:border-box; margin:0; padding:0; }
 body {
-  font-family:'Google Sans','Roboto','Noto Sans KR',-apple-system,sans-serif;
+  font-family:'Inter','Noto Sans KR',-apple-system,sans-serif;
   line-height:1.5; color:var(--text); background:var(--bg);
-  max-width:1280px; margin:0 auto; padding:20px 20px 48px;
-  -webkit-font-smoothing:antialiased;
+  max-width:1320px; margin:0 auto; padding:18px 20px 48px;
+  -webkit-font-smoothing:antialiased; font-feature-settings:'cv11','ss01';
 }
-header { padding:12px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px; }
-header h1 { font-size:26px; font-weight:700; letter-spacing:-0.5px; }
-header .sub { color:var(--text2); font-size:13px; margin-top:6px; }
-a { color:var(--blue); text-decoration:none; }
-a:hover { text-decoration:underline; }
+header { padding:10px 0 14px; border-bottom:1px solid var(--divider); margin-bottom:18px;
+         display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+header h1 { font-size:24px; font-weight:800; letter-spacing:-0.5px; color:var(--text); }
+header h1 .brand-accent { color:var(--primary); }
+header .sub { color:var(--text2); font-size:13px; }
+header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; }
+.h-chip { display:inline-flex; align-items:center; gap:5px; padding:5px 11px; border-radius:14px;
+          background:var(--surface); border:1px solid var(--border); font-size:12px; color:var(--text2); font-weight:500; }
+.h-chip b { color:var(--text); font-weight:700; font-variant-numeric:tabular-nums; }
+.h-chip.warn { border-color:var(--warn-bd); background:var(--warn-bg); color:var(--warn); }
+.h-chip.warn b { color:var(--warn); }
+.h-chip.hot { border-color:var(--hot-bd); background:var(--hot-bg); color:var(--hot); }
+.h-chip.hot b { color:var(--hot); }
+.h-chip.info { border-color:var(--primary-bd); background:var(--primary-bg); color:var(--primary-hi); }
+.h-chip.info b { color:var(--primary-hi); }
+a { color:var(--primary-hi); text-decoration:none; transition:color .15s; }
+a:hover { color:var(--primary); text-decoration:none; }
 
 /* 요약 카드 */
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:20px; }
-.card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
-.card .label { font-size:13px; color:var(--text2); margin-bottom:8px; font-weight:500; }
-.card .value { font-size:30px; font-weight:500; letter-spacing:-0.5px; }
-.card.tone-red { background:rgba(242,139,130,.08); border-color:rgba(242,139,130,.35); }
-.card.tone-red .value { color:var(--red); }
-.card.tone-green { background:rgba(129,201,149,.08); border-color:rgba(129,201,149,.35); }
-.card.tone-green .value { color:var(--green); }
-.card.tone-blue { background:rgba(138,180,248,.08); border-color:rgba(138,180,248,.35); }
-.card.tone-blue .value { color:var(--blue); }
-.card.tone-purple { background:rgba(197,138,249,.08); border-color:rgba(197,138,249,.35); }
-.card.tone-purple .value { color:#a855f7; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-bottom:18px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px 16px; transition:transform .15s, border-color .15s; }
+.card:hover { transform:translateY(-1px); border-color:var(--primary-bd); }
+.card .label { font-size:12px; color:var(--text2); margin-bottom:6px; font-weight:500; display:flex; align-items:center; gap:5px; }
+.card .value { font-size:28px; font-weight:700; letter-spacing:-0.5px; line-height:1.1; font-variant-numeric:tabular-nums; }
+.card.tone-red { background:var(--danger-bg); border-color:var(--danger-bd); }
+.card.tone-red .value { color:var(--danger); }
+.card.tone-green { background:var(--hot-bg); border-color:var(--hot-bd); }
+.card.tone-green .value { color:var(--hot); }
+.card.tone-blue { background:var(--primary-bg); border-color:var(--primary-bd); }
+.card.tone-blue .value { color:var(--primary-hi); }
+.card.tone-purple { background:rgba(168,85,247,.18); border-color:rgba(168,85,247,.4); }
+.card.tone-purple .value { color:var(--primary-hi); }
+.card.tone-warn { background:var(--warn-bg); border-color:var(--warn-bd); }
+.card.tone-warn .value { color:var(--warn); }
 
 /* 카테고리 탭 */
-.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 12px; }
-.tab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2);
-       font-size:14px; font-weight:500; cursor:pointer; border:none; transition:all .15s; }
-.tab:hover { background:#e3e6e8; }
-.tab.active { background:var(--blue); color:#fff; }
-.tab .cnt { font-size:12px; opacity:.8; margin-left:4px; }
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:14px 0 12px; }
+.tab { padding:7px 14px; border-radius:18px; background:var(--surface); color:var(--text2);
+       font-size:13px; font-weight:600; cursor:pointer; border:1px solid var(--border); transition:all .15s; }
+.tab:hover { border-color:var(--primary-bd); color:var(--text); }
+.tab.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+.tab .cnt { font-size:11px; opacity:.85; margin-left:5px; padding:1px 6px; background:rgba(255,255,255,.15); border-radius:8px; }
 
 /* 필터 바 */
-.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;
-           padding:12px 16px; background:var(--hover); border-radius:8px; }
+.filters { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:14px;
+           padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
 .filter-group { display:flex; gap:4px; align-items:center; }
-.filter-group .lbl { font-size:12px; color:var(--text2); margin-right:4px; }
-.seg { display:flex; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff; }
-.seg button { padding:6px 12px; border:none; background:#fff; font-size:13px; cursor:pointer; color:var(--text2); }
-.seg button.active { background:var(--blue); color:#fff; }
-.toggle { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text); cursor:pointer; }
+.filter-group .lbl { font-size:11px; color:var(--text2); margin-right:4px; font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--bg); }
+.seg button { padding:6px 12px; border:none; background:transparent; font-size:13px; cursor:pointer; color:var(--text2); font-weight:500; transition:all .15s; }
+.seg button:hover { color:var(--text); background:var(--hover); }
+.seg button.active { background:var(--primary); color:#fff; }
+.toggle { display:flex; align-items:center; gap:7px; font-size:13px; color:var(--text); cursor:pointer; }
+.toggle input[type=checkbox] { appearance:none; width:32px; height:18px; background:var(--border); border-radius:9px; position:relative; cursor:pointer; transition:background .2s; }
+.toggle input[type=checkbox]::after { content:''; position:absolute; top:2px; left:2px; width:14px; height:14px; background:#fff; border-radius:50%; transition:transform .2s; }
+.toggle input[type=checkbox]:checked { background:var(--primary); }
+.toggle input[type=checkbox]:checked::after { transform:translateX(14px); }
 #search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
-          border-radius:20px; font-size:14px; background:#fff; }
-#search:focus { outline:none; border-color:var(--blue); }
+          border-radius:18px; font-size:13px; background:var(--bg); color:var(--text); }
+#search::placeholder { color:var(--text3); }
+#search:focus { outline:none; border-color:var(--primary); background:var(--surface); }
 
 /* 채널 카드 그리드 */
-.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px; }
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:14px; }
 .ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
-           padding:16px; transition:box-shadow .2s; }
-.ch-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15); }
-.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
-.ch-name { font-size:16px; font-weight:700; }
-.ch-meta { font-size:12px; color:var(--text2); margin-top:2px; }
-.ch-type { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--hover); color:var(--text2); white-space:nowrap; }
-.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:8px 0; }
-.ch-cat { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--chip); color:var(--blue); font-weight:500; }
-.ch-stats { display:flex; gap:12px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
-.ch-stat { font-size:12px; color:var(--text2); }
-.ch-stat b { font-size:15px; color:var(--text); font-weight:600; display:block; }
-.ch-stat.sig b { color:var(--red); }
-.ch-vid { margin-top:8px; }
-.ch-vid .vlabel { font-size:11px; color:var(--text2); font-weight:500; }
-.ch-vid .vtitle { font-size:13px; display:block; margin-top:2px; }
-.ch-vid .vmeta { font-size:11px; color:var(--text2); }
+           padding:16px; transition:all .18s; position:relative; }
+.ch-card:hover { border-color:var(--primary-bd); transform:translateY(-2px); box-shadow:0 8px 24px rgba(168,85,247,.12); }
+.ch-card.rank-1 { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.ch-card.rank-2 { border-color:rgba(196,196,196,.45); background:linear-gradient(180deg, rgba(196,196,196,.05) 0%, var(--surface) 60%); }
+.ch-card.rank-3 { border-color:rgba(205,127,50,.45); background:linear-gradient(180deg, rgba(205,127,50,.05) 0%, var(--surface) 60%); }
+.ch-rank-badge { position:absolute; top:-9px; left:14px; padding:2px 9px; border-radius:10px;
+                 background:var(--surface2); border:1px solid var(--border); font-size:11px; font-weight:700; color:var(--text2); font-variant-numeric:tabular-nums; }
+.ch-rank-badge.rank-1 { background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; border-color:#ffd700; }
+.ch-rank-badge.rank-2 { background:linear-gradient(135deg,#e0e0e0,#a8a8a8); color:#000; border-color:#c0c0c0; }
+.ch-rank-badge.rank-3 { background:linear-gradient(135deg,#cd7f32,#8b4513); color:#fff; border-color:#cd7f32; }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; gap:10px; }
+.ch-name { font-size:15px; font-weight:700; line-height:1.3; flex:1; min-width:0; }
+.ch-name .delta { font-size:11px; margin-left:6px; vertical-align:middle; font-weight:700; }
+.ch-name .delta.up { color:var(--up); }
+.ch-name .delta.down { color:var(--down); }
+.ch-name .delta.flat { color:var(--text3); }
+.ch-meta { font-size:11px; color:var(--text2); margin-top:2px; font-weight:500; }
+.ch-type { font-size:10px; padding:2px 7px; border-radius:8px; background:var(--bg); color:var(--text2); white-space:nowrap; font-weight:600; border:1px solid var(--border); }
+.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:6px 0; }
+.ch-cat { font-size:10px; padding:2px 8px; border-radius:8px; background:var(--primary-bg); color:var(--primary-hi); font-weight:600; border:1px solid var(--primary-bd); }
+.ch-stats { display:flex; gap:14px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:11px; color:var(--text2); flex:1; min-width:0; }
+.ch-stat b { font-size:14px; color:var(--text); font-weight:700; display:block; font-variant-numeric:tabular-nums; }
+.ch-stat.sig b { color:var(--danger); }
+.ch-stat.hot b { color:var(--hot); }
+.ch-vid { margin-top:8px; font-size:12px; }
+.ch-vid .vlabel { font-size:10px; color:var(--text2); font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.ch-vid .vlabel.popular { color:var(--warn); }
+.ch-vid .vlabel.latest { color:var(--hot); }
+.ch-vid .vtitle { font-size:12px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:3px; color:var(--text); line-height:1.35; }
+.ch-vid .vmeta { font-size:10px; color:var(--text3); margin-top:2px; }
+/* 채널 카드 - Pint 스타일 듀얼 영상 컬럼 */
+.ch-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; padding-top:10px; border-top:1px solid var(--divider); }
+.ch-vid-col { min-width:0; }
+.ch-thumb-mini { width:100%; aspect-ratio:16/9; background:var(--bg); border-radius:6px; overflow:hidden; margin-bottom:6px; border:1px solid var(--border); position:relative; }
+.ch-thumb-mini img { width:100%; height:100%; object-fit:cover; display:block; }
+.ch-thumb-mini .views-badge { position:absolute; bottom:4px; right:4px; font-size:10px; padding:1px 5px; border-radius:4px; background:rgba(0,0,0,.78); color:#fff; font-weight:700; font-variant-numeric:tabular-nums; }
+/* 스파크라인 (7일 추세) */
+.ch-spark { margin-top:6px; padding-top:6px; border-top:1px dashed var(--divider); display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; color:var(--text2); }
+.ch-spark canvas { flex:1; height:24px !important; max-width:140px; }
+.ch-spark .spark-val { font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
+.ch-freq { font-size:11px; color:var(--text2); display:inline-flex; align-items:center; gap:4px; padding:2px 7px; border-radius:8px; background:var(--bg); border:1px solid var(--border); white-space:nowrap; font-weight:600; }
 .empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
 
-section { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
-section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
+section { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px; margin-bottom:14px; }
+section h2 { font-size:17px; font-weight:700; margin-bottom:14px; }
 .archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
-.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:12px;
-                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:500; }
-.archive-grid a:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
-.archive-grid a.today { background:var(--blue); border-color:var(--blue); color:#fff; }
-.nav-links { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; }
-.nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
-/* 국가 전환 버튼 (한국 ⇄ 일본) — 최상단 prominent */
-.country-switch { display:inline-flex; align-items:center; gap:7px; padding:8px 16px; border:1px solid var(--border);
-  border-radius:20px; font-size:14px; font-weight:600; color:var(--text); background:var(--surface); margin-bottom:12px; }
-.country-switch:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
-/* 셸 탭 (SPA) */
-.shell-head { position:sticky; top:0; z-index:50; background:var(--bg); padding-top:8px; border-bottom:1px solid var(--divider); }
-.nav-links a.tab-on { background:var(--blue); color:#fff; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:11px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:600; transition:all .15s; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.archive-grid a.today { background:var(--primary); border-color:var(--primary); color:#fff; }
+.nav-links { margin:10px 0; display:flex; gap:6px; flex-wrap:wrap; }
+.nav-links a { background:var(--surface); padding:7px 14px; border-radius:18px; font-size:13px; font-weight:600; color:var(--text2); border:1px solid var(--border); transition:all .15s; }
+.nav-links a:hover { border-color:var(--primary-bd); color:var(--text); }
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:7px 14px; border:1px solid var(--border);
+  border-radius:18px; font-size:13px; font-weight:700; color:var(--text); background:var(--surface); transition:all .15s; }
+.country-switch:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.shell-head { position:sticky; top:0; z-index:50; background:var(--bg); padding-top:6px; border-bottom:1px solid var(--divider); backdrop-filter:blur(8px); }
+.nav-links a.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
 #view { min-height:60vh; }
 .view-loading { padding:60px 20px; text-align:center; color:var(--text2); font-size:14px; }
-/* 설명·지표 범례 바 */
-.info-bar { background:var(--hover); border:1px solid var(--border); border-radius:10px; padding:12px 16px; margin:6px 0 18px; font-size:13px; color:var(--text2); line-height:1.9; }
-.info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:500; font-size:14px; }
-.info-bar b { color:var(--text); }
-.legend-item { display:inline-block; margin-right:16px; white-space:nowrap; }
-/* nav 강조 (오늘 만들 주제) */
-.nav-links a.nav-primary { background:var(--blue); color:#fff; }
-/* 제작 추천 보드 */
-.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px; }
-.rec-group h3 { font-size:15px; font-weight:700; margin:6px 0 10px; }
-.rec-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:10px; }
-.rec-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.2),0 2px 6px 2px rgba(60,64,67,.12); }
-.rec-rank { color:var(--text2); font-weight:500; font-size:12px; margin-right:6px; }
-.rec-topic { font-size:15px; font-weight:700; margin-bottom:5px; }
-.rec-date { font-size:11px; color:#1e8e3e; font-weight:500; margin-bottom:4px; }
-.rec-why { font-size:12px; color:var(--text2); margin-bottom:7px; }
-.rec-ref { font-size:12px; display:inline-block; }
-.rec-empty { color:var(--text2); padding:18px; font-size:13px; }
-.hot-flag { display:inline-block; font-size:11px; font-weight:600; padding:1px 8px; border-radius:10px; background:rgba(242,139,130,.15); color:#d93025; white-space:nowrap; }
-/* 🔥 재편집 재폭발 (최우선) */
-.reedit-box { background:rgba(242,139,130,.08); border:1px solid rgba(242,139,130,.45); border-radius:12px; padding:14px 16px; margin:10px 0 20px; }
-.reedit-head { font-size:16px; font-weight:700; }
-.reedit-sub { display:block; font-size:12px; font-weight:400; color:var(--text2); margin-top:3px; }
-.reedit-card { padding:10px 0; border-top:1px solid rgba(242,139,130,.22); }
+.info-bar { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 14px; margin:6px 0 16px; font-size:13px; color:var(--text2); line-height:1.8; }
+.info-bar .desc { display:block; margin-bottom:5px; color:var(--text); font-weight:600; font-size:13px; }
+.info-bar b { color:var(--text); font-weight:700; }
+.legend-item { display:inline-block; margin-right:14px; white-space:nowrap; }
+.nav-links a.nav-primary { background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border-color:var(--primary); font-weight:700; box-shadow:0 0 16px rgba(168,85,247,.25); }
+.nav-links a.nav-primary:hover { box-shadow:0 0 22px rgba(168,85,247,.4); }
+.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
+.rec-group h3 { font-size:14px; font-weight:700; margin:6px 0 10px; }
+.rec-card { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:13px; margin-bottom:9px; transition:all .15s; }
+.rec-card:hover { border-color:var(--primary-bd); }
+.rec-rank { color:var(--text3); font-weight:600; font-size:11px; margin-right:5px; }
+.rec-topic { font-size:14px; font-weight:700; margin-bottom:4px; color:var(--text); }
+.rec-date { font-size:11px; color:var(--hot); font-weight:600; margin-bottom:3px; }
+.rec-why { font-size:11px; color:var(--text2); margin-bottom:6px; }
+.rec-ref { font-size:11px; display:inline-block; }
+.rec-empty { color:var(--text2); padding:16px; font-size:12px; }
+.hot-flag { display:inline-block; font-size:10px; font-weight:700; padding:1px 7px; border-radius:8px; background:var(--danger-bg); color:var(--danger); white-space:nowrap; border:1px solid var(--danger-bd); }
+.reedit-box { background:var(--danger-bg); border:1px solid var(--danger-bd); border-radius:12px; padding:13px 16px; margin:10px 0 18px; }
+.reedit-head { font-size:15px; font-weight:700; color:var(--text); }
+.reedit-sub { display:block; font-size:11px; font-weight:500; color:var(--text2); margin-top:3px; }
+.reedit-card { padding:9px 0; border-top:1px solid rgba(239,68,68,.18); }
 .reedit-card:first-of-type { border-top:none; }
 .reedit-line1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-.reedit-line1 .row-title { max-width:420px; font-weight:500; }
-.reedit-meta { font-size:12px; color:var(--text2); margin-top:4px; padding-left:26px; }
-@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } }
-footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
+.reedit-line1 .row-title { max-width:420px; font-weight:600; }
+.reedit-meta { font-size:11px; color:var(--text2); margin-top:3px; padding-left:24px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } header { flex-direction:column; align-items:flex-start; } header .header-chips { margin-left:0; } }
+footer { text-align:center; color:var(--text3); font-size:11px; padding:24px 0 8px; }
 
-/* 테이블 (아카이브 + 리포트 공통) — 클린 랭킹 행 */
-.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:auto; margin:10px 0 18px; }
-table { width:100%; border-collapse:collapse; font-size:14px; }
-thead th { text-align:left; font-weight:500; font-size:12px; color:var(--text2);
-  padding:11px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:#fafbfc; }
-tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; }
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:auto; margin:10px 0 16px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+thead th { text-align:left; font-weight:700; font-size:11px; color:var(--text2);
+  padding:10px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:var(--surface2); text-transform:uppercase; letter-spacing:.3px; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; color:var(--text); }
 tbody tr:last-child td { border-bottom:none; }
 tbody tr:hover { background:var(--hover); }
-td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:500; font-variant-numeric:tabular-nums; }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:700; font-variant-numeric:tabular-nums; }
 td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
-td.num.lead { color:var(--text); font-weight:600; }
+td.num.lead { color:var(--text); font-weight:700; }
 .muted { color:var(--text2); }
-.cat-badge { display:inline-block; font-size:11px; padding:2px 9px; border-radius:11px; font-weight:500; white-space:nowrap; }
-.kw { font-weight:700; font-size:15px; }
+.cat-badge { display:inline-block; font-size:10px; padding:2px 9px; border-radius:10px; font-weight:700; white-space:nowrap; background:var(--primary-bg); color:var(--primary-hi); border:1px solid var(--primary-bd); }
+.kw { font-weight:700; font-size:14px; }
 .cellv { display:flex; flex-direction:column; gap:1px; }
-.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; color:var(--text); font-weight:500; }
 .row-sub { font-size:11px; color:var(--text2); }
-.ch-tag { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--hover); color:var(--text2); }
-/* Hot키워드 주제별 영상 리스트 (조회 상위 3-5) */
-.vid-list { display:flex; flex-direction:column; gap:7px; }
+.ch-tag { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--bg); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.vid-list { display:flex; flex-direction:column; gap:6px; }
 .vd-row { display:flex; flex-direction:column; gap:1px; max-width:560px; }
-.vd-title { font-size:13px; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.vd-title { font-size:12px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
 .vd-meta { font-size:11px; color:var(--text2); }
-.vd-date { color:#1e8e3e; font-weight:500; }
-/* 리포트 섹션 헤더 */
-.rep-sec { margin:24px 0 4px; display:flex; align-items:baseline; gap:8px; }
-.rep-sec h2 { font-size:17px; font-weight:700; }
-.rep-sec .cnt { font-size:13px; color:var(--text2); }
-.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
-/* 마크다운 리포트 잔여 표 */
+.vd-date { color:var(--hot); font-weight:600; }
+.rep-sec { margin:22px 0 4px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:16px; font-weight:800; color:var(--text); }
+.rep-sec .cnt { font-size:12px; color:var(--text2); }
+.rep-note { font-size:11px; color:var(--text2); margin:0 0 6px; }
 section table { margin:10px 0; }
 
-/* 뉴스 헤드라인 리스트 (Pixeling 스타일) */
-.news-list { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.news-list { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
 .news-row { display:flex; gap:12px; align-items:baseline; padding:13px 16px; border-bottom:1px solid var(--divider); }
 .news-row:last-child { border-bottom:none; }
 .news-row:hover { background:var(--hover); }
-.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:500; text-align:right; font-variant-numeric:tabular-nums; }
+.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; }
 .news-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
-.news-title { font-size:14px; font-weight:500; color:var(--text); white-space:normal; }
-.news-title:hover { color:var(--blue); }
-.news-meta { font-size:12px; color:var(--text2); display:flex; gap:7px; align-items:center; flex-wrap:wrap; }
-.news-src { color:#1e8e3e; font-weight:500; }
-.news-cat { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--chip); color:var(--blue); font-weight:500; }
-.news-orig { font-size:12px; color:var(--text2); }
-/* 과거 날짜 네비 (뉴스·과학 날짜별 열람) */
+.news-title { font-size:13px; font-weight:600; color:var(--text); white-space:normal; }
+.news-title:hover { color:var(--primary-hi); }
+.news-meta { font-size:11px; color:var(--text2); display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.news-src { color:var(--hot); font-weight:700; }
+.news-cat { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; border:1px solid var(--primary-bd); }
+.news-orig { font-size:11px; color:var(--text2); }
 .date-nav { display:flex; flex-wrap:wrap; gap:5px; margin:10px 0 14px; align-items:center; font-size:12px; }
-.date-nav .lbl { color:var(--text2); margin-right:4px; font-weight:500; }
-.date-nav a { padding:4px 10px; border-radius:14px; background:var(--hover); color:var(--text2); font-weight:500; }
-.date-nav a:hover { background:#e3e6e8; text-decoration:none; }
-.date-nav a.on { background:var(--blue); color:#fff; }
+.date-nav .lbl { color:var(--text2); margin-right:4px; font-weight:700; text-transform:uppercase; letter-spacing:.3px; font-size:11px; }
+.date-nav a { padding:4px 10px; border-radius:13px; background:var(--surface); color:var(--text2); font-weight:600; border:1px solid var(--border); transition:all .15s; }
+.date-nav a:hover { border-color:var(--primary-bd); color:var(--text); }
+.date-nav a.on { background:var(--primary); color:#fff; border-color:var(--primary); }
 
-/* 시니어랩 — 서브탭 + 채널 칩 */
 .subtab-nav { display:flex; gap:6px; margin:6px 0 14px; }
-.subtab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2); font-size:14px; font-weight:500; border:none; cursor:pointer; }
-.subtab.on { background:var(--blue); color:#fff; }
+.subtab { padding:7px 14px; border-radius:18px; background:var(--surface); color:var(--text2); font-size:13px; font-weight:600; border:1px solid var(--border); cursor:pointer; }
+.subtab:hover { border-color:var(--primary-bd); color:var(--text); }
+.subtab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
 .subtab.dim { opacity:.45; cursor:not-allowed; }
-.chan-chip { display:inline-block; font-size:11px; padding:2px 9px; border-radius:11px; background:var(--chip); color:var(--blue); font-weight:500; margin:3px 4px 0 0; }
+.chan-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:10px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; margin:3px 4px 0 0; border:1px solid var(--primary-bd); }
+
+/* Autopsy 페이지 폼 */
+.autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
+.autopsy-form .ah { font-size:15px; font-weight:800; color:var(--text); margin-bottom:4px; }
+.autopsy-form .asub { font-size:12px; color:var(--text2); margin-bottom:14px; }
+.autopsy-form textarea { width:100%; min-height:110px; padding:11px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; resize:vertical; }
+.autopsy-form textarea:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .row2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+.autopsy-form input[type=text] { padding:9px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; }
+.autopsy-form input[type=text]:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .actions { display:flex; gap:8px; margin-top:14px; align-items:center; }
+.autopsy-form button { padding:10px 22px; background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border:none; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer; box-shadow:0 0 16px rgba(168,85,247,.3); transition:all .15s; }
+.autopsy-form button:hover { box-shadow:0 0 22px rgba(168,85,247,.5); transform:translateY(-1px); }
+.autopsy-form button.ghost { background:var(--surface2); color:var(--text2); box-shadow:none; }
+.autopsy-form button.ghost:hover { color:var(--text); }
+.autopsy-form .hint { font-size:11px; color:var(--text3); margin-left:auto; }
+.autopsy-card { display:flex; flex-direction:column; min-height:130px; transition:all .18s; }
+.autopsy-card:hover { border-color:var(--primary) !important; box-shadow:0 4px 16px rgba(168,85,247,.18); }
 
 @media (max-width:600px) {
   body { padding:14px; }
-  header h1 { font-size:21px; }
+  header h1 { font-size:20px; }
   .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
-  .card .value { font-size:24px; }
+  .card .value { font-size:22px; }
   .ch-grid { grid-template-columns:1fr; }
   .filters { flex-direction:column; align-items:stretch; }
   .row-title { max-width:200px; }
   tbody td, thead th { padding:9px 8px; }
+  .ch-vid-dual { grid-template-columns:1fr; }
+  .autopsy-form .row2 { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -213,9 +286,9 @@ section table { margin:10px 0; }
 <button class="subtab dim" disabled>👴 시니어사연 (준비 중)</button>
 </div>
 <div class="rep-sec"><h2>🎯 오늘 만들 영상 추천 TOP3</h2><span class="cnt">윈도우(1d/7d/30d) + 채널 역대 검증 종합 스코어 · <a href="yadam_study.md" target="_blank">📖 학습 문서 (자막 구조별)</a></span></div>
-<div class="info-bar" style="border-color:rgba(217,48,37,.5);background:rgba(217,48,37,.06);"><span class="desc">🥇 <b style="color:#d93025">효·가족</b> (score 26412.9)</span><span class="chan-chip">1d: 2편·시속 919</span><span class="chan-chip">7d: 6편·시속 1,765</span><span class="chan-chip">30d: 21편·시속 5,678</span><span class="chan-chip">역대 TOP에 19회 등장 (검증)</span></div><div class="rep-note">💡 대표 영상 (학습 대상): <a class="row-title" href="https://youtube.com/watch?v=t1Bv17Qup4M" target="_blank"><b>The Husband Who Said, "Leave the Child and Get Out": The Real Reason t</b></a> · 16,995회 · 송림야담 · 1d 윈도우</div>
-<div class="info-bar" style="border-color:rgba(217,48,37,.5);background:rgba(217,48,37,.06);"><span class="desc">🥈 <b style="color:#d93025">혼인·치정</b> (score 16114.1)</span><span class="chan-chip">1d: 1편·시속 211</span><span class="chan-chip">7d: 7편·시속 1,212</span><span class="chan-chip">30d: 25편·시속 4,411</span><span class="chan-chip">역대 TOP에 22회 등장 (검증)</span></div><div class="rep-note">💡 대표 영상 (학습 대상): <a class="row-title" href="https://youtube.com/watch?v=oseRNIkFFsI" target="_blank"><b>알뜰한 규슈들을 제치고 돈 펑펑 쓰는 처녀를 며느리로 선택한 지혜로운 시어머니 #옛날이야기 #민담 #수면동화 #오디오북 #야담</b></a> · 5,073회 · 산골야담 · 1d 윈도우</div>
-<div class="info-bar" style="border-color:rgba(217,48,37,.5);background:rgba(217,48,37,.06);"><span class="desc">🥉 <b style="color:#d93025">권선징악·사이다</b> (score 11987.7)</span><span class="chan-chip">7d: 4편·시속 428</span><span class="chan-chip">30d: 25편·시속 4,895</span><span class="chan-chip">역대 TOP에 11회 등장 (검증)</span></div><div class="rep-note">💡 대표 영상 (학습 대상): <a class="row-title" href="https://youtube.com/watch?v=WEg_WlvUWuM" target="_blank"><b>외교신동.청 황실 깊숙이 첩보망을 깐 열두 살 어린 인질의 정체. 조선야담처녀. 야담. 민담. 옛날이야기. 감동실화. 조선판사</b></a> · 11,000회 · 조선야담처녀 · 7d 윈도우</div>
+<div class="info-bar" style="border-color:rgba(217,48,37,.5);background:rgba(217,48,37,.06);"><span class="desc">🥇 <b style="color:var(--hot)">효·가족</b> (score 26412.9)</span><span class="chan-chip">1d: 2편·시속 919</span><span class="chan-chip">7d: 6편·시속 1,765</span><span class="chan-chip">30d: 21편·시속 5,678</span><span class="chan-chip">역대 TOP에 19회 등장 (검증)</span></div><div class="rep-note">💡 대표 영상 (학습 대상): <a class="row-title" href="https://youtube.com/watch?v=t1Bv17Qup4M" target="_blank"><b>The Husband Who Said, "Leave the Child and Get Out": The Real Reason t</b></a> · 16,995회 · 송림야담 · 1d 윈도우</div>
+<div class="info-bar" style="border-color:rgba(217,48,37,.5);background:rgba(217,48,37,.06);"><span class="desc">🥈 <b style="color:var(--hot)">혼인·치정</b> (score 16114.1)</span><span class="chan-chip">1d: 1편·시속 211</span><span class="chan-chip">7d: 7편·시속 1,212</span><span class="chan-chip">30d: 25편·시속 4,411</span><span class="chan-chip">역대 TOP에 22회 등장 (검증)</span></div><div class="rep-note">💡 대표 영상 (학습 대상): <a class="row-title" href="https://youtube.com/watch?v=oseRNIkFFsI" target="_blank"><b>알뜰한 규슈들을 제치고 돈 펑펑 쓰는 처녀를 며느리로 선택한 지혜로운 시어머니 #옛날이야기 #민담 #수면동화 #오디오북 #야담</b></a> · 5,073회 · 산골야담 · 1d 윈도우</div>
+<div class="info-bar" style="border-color:rgba(217,48,37,.5);background:rgba(217,48,37,.06);"><span class="desc">🥉 <b style="color:var(--hot)">권선징악·사이다</b> (score 11987.7)</span><span class="chan-chip">7d: 4편·시속 428</span><span class="chan-chip">30d: 25편·시속 4,895</span><span class="chan-chip">역대 TOP에 11회 등장 (검증)</span></div><div class="rep-note">💡 대표 영상 (학습 대상): <a class="row-title" href="https://youtube.com/watch?v=WEg_WlvUWuM" target="_blank"><b>외교신동.청 황실 깊숙이 첩보망을 깐 열두 살 어린 인질의 정체. 조선야담처녀. 야담. 민담. 옛날이야기. 감동실화. 조선판사</b></a> · 11,000회 · 조선야담처녀 · 7d 윈도우</div>
 <div class="rep-sec"><h2>📅 윈도우별 폭발 주제</h2><span class="cnt">오늘(1d) · 이번 주(7d) · 이번 달(30d) 비교</span></div>
 <div class="info-bar"><span class="desc">🔥 오늘 (24h) — <b>3편</b></span><span class="chan-chip" title="2편·시속 919"><b>효·가족</b> ×2</span><span class="chan-chip" title="1편·시속 211"><b>혼인·치정</b> ×1</span><span class="chan-chip" title="1편·시속 211"><b>지혜·반전</b> ×1</span></div>
 <div class="info-bar"><span class="desc">📈 이번 주 (7d) — <b>21편</b></span><span class="chan-chip" title="6편·시속 1,765"><b>효·가족</b> ×6</span><span class="chan-chip" title="7편·시속 1,212"><b>혼인·치정</b> ×7</span><span class="chan-chip" title="3편·시속 664"><b>출생의 비밀</b> ×3</span><span class="chan-chip" title="4편·시속 443"><b>양반 vs 천민</b> ×4</span><span class="chan-chip" title="4편·시속 428"><b>권선징악·사이다</b> ×4</span><span class="chan-chip" title="2편·시속 198"><b>임진왜란·병자호란</b> ×2</span><span class="chan-chip" title="1편·시속 211"><b>지혜·반전</b> ×1</span><span class="chan-chip" title="2편·시속 132"><b>관리·암행어사</b> ×2</span></div>
@@ -223,14 +296,14 @@ section table { margin:10px 0; }
 <div class="rep-sec"><h2>🎬 야담 영상 표준 구조 (자막 학습)</h2><span class="cnt">corpus 26편에서 추출</span></div><div class="info-bar"><span class="desc">대본 작성용 가이드 — 이 구조 그대로 따라가기</span><span class="legend-item">⏱️ 평균 <b>43.0분</b> (중앙 40.2분)</span><span class="legend-item">🗣️ 발화 속도 <b>85.4wpm</b></span><span class="legend-item">📝 대본 권장 <b>3,672단어</b></span></div><div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>단계</th><th class="num">구간</th><th class="num">길이</th><th>역할</th></tr></thead><tbody><tr><td class="rank">1</td><td><b>Hook</b></td><td class="num">0~30s</td><td class="num">0.5분</td><td>충격 사건 + 시점 환기</td></tr><tr><td class="rank">2</td><td><b>Intro</b></td><td class="num">30~180s</td><td class="num">2.5분</td><td>인물·배경·시대 소개</td></tr><tr><td class="rank">3</td><td><b>Body</b></td><td class="num">180~1031s</td><td class="num">14.2분</td><td>갈등 전개·증폭</td></tr><tr><td class="rank">4</td><td><b>Climax</b></td><td class="num">1031~1805s</td><td class="num">12.9분</td><td>절정·반전</td></tr><tr><td class="rank">5</td><td><b>Resolution</b></td><td class="num">1805~2519s</td><td class="num">11.9분</td><td>결말·권선징악</td></tr><tr><td class="rank">6</td><td><b>Outro</b></td><td class="num">2519~2579s</td><td class="num">1.0분</td><td>여운·시그니처</td></tr></tbody></table></div>
 <div class="rep-sec"><h2>🪝 검증된 Hook 문장 풀</h2><span class="cnt">26개 — 새 영상 Hook 작성 시 참고</span></div><div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>Hook 첫 문장</th><th>출처 영상</th></tr></thead><tbody><tr><td class="rank">1</td><td>누구든 저말을 진정시킬 자신이 있는 자는 앞으로 나오라.</td><td><a class="row-sub" href="https://youtube.com/watch?v=0uArdo2PPl8" target="_blank">두만강 변방의 기적.임금이 내리신 어마가 미쳐버리자 종놈 10살이 사흘 </a></td></tr><tr><td class="rank">2</td><td>앞도 못 보는 자식을 매일 새벽부터 극한의 훈련으로 몰아붙이는 어미.</td><td><a class="row-sub" href="https://youtube.com/watch?v=4Kt3rUXjpn8" target="_blank">성질 더러운 과부가 눈 먼 자식을 버리려했다.  #야담 #조선이야기 #전</a></td></tr><tr><td class="rank">3</td><td>아니 이런 곳에 아이가 쓰러져 있다니 보아하니 며칠을 굶은 아이가 철죽을 먹고 탈이 난 것이 분명했습니다.</td><td><a class="row-sub" href="https://youtube.com/watch?v=5SJE9VpZ-4E" target="_blank">A beggar child who was picked up and rai</a></td></tr><tr><td class="rank">4</td><td>어느 날 명나라의 황제가 노인하고 닭이 그려진 그림을 우리나라 임금에게 보내면서 노인의 나이를 맞추어 보라 했습니다 임금은 대소 신료들에게 그림</td><td><a class="row-sub" href="https://youtube.com/watch?v=60bBX9c6cKg" target="_blank">조선야담. quiz. 그림 속 노인의 나이는?</a></td></tr><tr><td class="rank">5</td><td>오늘 밤에는 주랑을 미루셔야 합니다.</td><td><a class="row-sub" href="https://youtube.com/watch?v=CfMujs8GF5E" target="_blank">폭풍우를 읽는 소년과 거상의 맹신 - 일곱 해 묵은 한이 폭풍에 풀리다.</a></td></tr><tr><td class="rank">6</td><td>아버지를 아버지라 부르지 못하고 형을 형이라 부르지 못하고 아마 한국인이라면 다들 한 번쯤 들어봤을 겁니다.</td><td><a class="row-sub" href="https://youtube.com/watch?v=CwQkNI1Bsbw" target="_blank">The true identity of "Hong Gil-dong," wh</a></td></tr><tr><td class="rank">7</td><td>네가 김간이야.</td><td><a class="row-sub" href="https://youtube.com/watch?v=DRpBcL_0P7s" target="_blank">아버지가 강물에 던져진 그날, 14살 아들의 망치가 움직이기 시작했다 ㅣ</a></td></tr><tr><td class="rank">8</td><td>신부 좀 봐.</td><td><a class="row-sub" href="https://youtube.com/watch?v=DnXDYgJEp58" target="_blank">폐가가 된 시댁에 들어온 새색시가 단 보름 만에 사람들을 줄 세운 비결 </a></td></tr><tr><td class="rank">9</td><td>그 도둑년이 바로 내 며느리었다.</td><td><a class="row-sub" href="https://youtube.com/watch?v=EX5f3lsKRls" target="_blank">매일 쌀을 가지고 폐가로 가던 며느리, 폐가 문틈 속 낯익은 얼굴을 보고</a></td></tr><tr><td class="rank">10</td><td>어린 호랑이가 누런 털을 눈속에 묻은 채 가쁜 숨을 몰아시고 있었습니다.</td><td><a class="row-sub" href="https://youtube.com/watch?v=GvI8lgx3Jhw" target="_blank">10년 전 살려준 호랑이가 마을을 구한 실제 조선 야담. 조선시대 호랑이</a></td></tr><tr><td class="rank">11</td><td>시바지로 들어간 첫날 밤 빗장이 걸리고 이윽고 문이 열렸습니다.</td><td><a class="row-sub" href="https://youtube.com/watch?v=Lh7I1yaRI6Y" target="_blank">씨받이 첫날밤, 늙은 대감 대신 들어온 젊은 도련님의 정체 | 야담 옛날</a></td></tr><tr><td class="rank">12</td><td>누구든 저말을 진정시킬 자신이 있는 자는 앞으로 나오라.</td><td><a class="row-sub" href="https://youtube.com/watch?v=Or3fEqupil0" target="_blank">미친 천리마를 길들인 10살 종놈에게 세종대왕이 내린 어명 한 줄.조선야</a></td></tr><tr><td class="rank">13</td><td>오라보니 오늘은 어디까지 가요?</td><td><a class="row-sub" href="https://youtube.com/watch?v=QJSTk90D_rM" target="_blank">새끼를 살려준 열다섯 사냥꾼의 운명. 조선야담처녀. 야담. 옛날이야기. </a></td></tr><tr><td class="rank">14</td><td>옛날 옛적 충청도 예산고울 이름만 들어도 사람들이 혀를 차는 처자가 있었습니다.</td><td><a class="row-sub" href="https://youtube.com/watch?v=RVWIuSieUz4" target="_blank">매일 술만 마시는 망나니 며느리를  간택한 지혜로운 시어머니 | 야담 옛</a></td></tr><tr><td class="rank">15</td><td>야담 능소화를 찾아 주셔서 감사합니다.</td><td><a class="row-sub" href="https://youtube.com/watch?v=RWZJ_I2lEQ0" target="_blank">[야담 능소화154] 산골 처녀를 잘 못 건들었다가 폭망한 범죄 조직 /</a></td></tr></tbody></table></div>
 <div class="info-bar"><span class="desc">📚 야담 채널 공통 어휘 (검증 표현 — 본문에 박기)</span><span class="chan-chip"><b>있었습니다</b> ×569</span><span class="chan-chip"><b>있었지요</b> ×388</span><span class="chan-chip"><b>내가</b> ×146</span><span class="chan-chip"><b>않았습니다</b> ×137</span><span class="chan-chip"><b>고개를</b> ×121</span><span class="chan-chip"><b>박씨의</b> ×121</span><span class="chan-chip"><b>도하는</b> ×115</span><span class="chan-chip"><b>어머니의</b> ×111</span><span class="chan-chip"><b>가만히</b> ×105</span><span class="chan-chip"><b>손이</b> ×101</span><span class="chan-chip"><b>어머니가</b> ×96</span><span class="chan-chip"><b>복녀가</b> ×89</span><span class="chan-chip"><b>연수는</b> ×89</span><span class="chan-chip"><b>박씨는</b> ×85</span><span class="chan-chip"><b>유선의</b> ×83</span><span class="chan-chip"><b>박씨가</b> ×80</span><span class="chan-chip"><b>작은</b> ×77</span><span class="chan-chip"><b>눈이</b> ×74</span><span class="chan-chip"><b>다시</b> ×74</span><span class="chan-chip"><b>복녀는</b> ×74</span><span class="chan-chip"><b>어린</b> ×67</span><span class="chan-chip"><b>정인은</b> ×67</span><span class="chan-chip"><b>어머니는</b> ×66</span><span class="chan-chip"><b>어머님</b> ×63</span><span class="chan-chip"><b>단우가</b> ×62</span></div>
-<div class="info-bar" style="border-color:rgba(255,193,7,.5);background:rgba(255,193,7,.08);"><span class="desc">🥇 1순위 벤치마크: <b style="color:#d93025">조선야담처녀</b> (누적 시속 3,629/h) — 톤·서사·분량을 정확히 추종</span><span class="legend-item">2·3차: <b>천년전설야담사</b> · <b>송림야담</b></span></div>
+<div class="info-bar" style="border-color:rgba(255,193,7,.5);background:rgba(255,193,7,.08);"><span class="desc">🥇 1순위 벤치마크: <b style="color:var(--hot)">조선야담처녀</b> (누적 시속 3,629/h) — 톤·서사·분량을 정확히 추종</span><span class="legend-item">2·3차: <b>천년전설야담사</b> · <b>송림야담</b></span></div>
 <div class="info-bar"><span class="desc">📡 추적 야담 채널 9개 (최근 60일 발행)</span><span class="chan-chip">조선 야담집 · 1일전</span><span class="chan-chip">조선야담처녀 · 1일전</span><span class="chan-chip">솔잎야담 · 1일전</span><span class="chan-chip">팔도야담방 · 6일전</span><span class="chan-chip">소설야담 · 2일전</span><span class="chan-chip">하루야담 · 1일전</span><span class="chan-chip">황도야담 · 2일전</span><span class="chan-chip">야담우화 · 0일전</span><span class="chan-chip">야담 능소화 · 1일전</span></div>
 <div class="rep-sec"><h2>🏆 폭발 야담 영상</h2><span class="cnt">velocity 상위 (지금 빠르게 오르는 중)</span></div>
-<div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th class="num">시속</th><th class="num">발행</th><th class="num">조회</th><th>채널</th><th>제목</th><th>출처</th></tr></thead><tbody><tr><td class="rank">1</td><td class="num lead" style="color:#d93025">1,455/h</td><td class="num">14일전</td><td class="num">489,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=DRpBcL_0P7s" target="_blank">아버지가 강물에 던져진 그날, 14살 아들의 망치가 움직이기 시작했다 ㅣ 임진왜란 권선징악 .조선야담처녀. 임진왜란 14살 소년 왜군 무찌른 이야기.왜군 5천을 수장시킨 조선 소년</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">2</td><td class="num lead" style="color:#d93025">665/h</td><td class="num">2일전</td><td class="num">31,930</td><td><b>천년전설야담사</b></td><td><a class="row-title" href="https://youtube.com/watch?v=4fKkx4pFOIc" target="_blank">The Woodcutter Couple Who Spent Their Life Savings on Salt Instead of Rice During a Drought, and ...</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">3</td><td class="num lead" style="color:#d93025">520/h</td><td class="num">2일전</td><td class="num">24,994</td><td><b>소설야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=Lh7I1yaRI6Y" target="_blank">씨받이 첫날밤, 늙은 대감 대신 들어온 젊은 도련님의 정체 | 야담 옛날이야기 오디오북 수면동화</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">4</td><td class="num lead" style="color:#d93025">519/h</td><td class="num">13일전</td><td class="num">162,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=CfMujs8GF5E" target="_blank">폭풍우를 읽는 소년과 거상의 맹신 - 일곱 해 묵은 한이 폭풍에 풀리다.조선야담, 권선징악, 사이다, 인과응보, 옛이야기, 한국야담, 조선시대, 전래동화, 구전설화, 도덕설화</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">5</td><td class="num lead" style="color:#d93025">470/h</td><td class="num">7일전</td><td class="num">79,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=0uArdo2PPl8" target="_blank">두만강 변방의 기적.임금이 내리신 어마가 미쳐버리자 종놈 10살이 사흘 굶으며 마구간에 앉아. 조선야담처녀. 야담. 민담. 옛날이야기. 조선판사이다. 시니어사이다 #감동 #조선시대</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">6</td><td class="num lead" style="color:#d93025">409/h</td><td class="num">12일전</td><td class="num">118,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=GvI8lgx3Jhw" target="_blank">10년 전 살려준 호랑이가 마을을 구한 실제 조선 야담. 조선시대 호랑이 전설, 한국 옛날이야기 호랑이, 조선 야담 실화, 산신령 이야기, 어르신을 위한 옛날이야기,  #권선징악</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">7</td><td class="num lead" style="color:#d93025">318/h</td><td class="num">3일전</td><td class="num">22,899</td><td><b>송림야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=5v0REqFDUt4" target="_blank">The Real Reason a Lowly Maid Wanted the Reckless Young Master #Folktale #Folklore #Audiobook #Bed...</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">8</td><td class="num lead" style="color:#d93025">283/h</td><td class="num">15일전</td><td class="num">102,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=vrGZaQkEuLk" target="_blank">'늙은 개가 활을 잡았구나' 비웃은 오랑캐 .조선야담처녀. 야담. 옛날이야기. 조선판사이다. 재미있는이야기. 시니어사이다 #권선징악 #조선시대 #감동</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">9</td><td class="num lead" style="color:#d93025">283/h</td><td class="num">11일전</td><td class="num">74,699</td><td><b>달빛명월야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=RVWIuSieUz4" target="_blank">매일 술만 마시는 망나니 며느리를  간택한 지혜로운 시어머니 | 야담 옛날이야기 수면동화 전설 민담 오디오북</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">10</td><td class="num lead" style="color:#d93025">181/h</td><td class="num">11일전</td><td class="num">47,900</td><td><b>시간이 풀어준 이야기</b></td><td><a class="row-title" href="https://youtube.com/watch?v=FMHq4YfptwI" target="_blank">조선왕조실록이 숨긴 3가지 미스터리ㅣ한국사ㅣ472년의 비밀</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">11</td><td class="num lead" style="color:#d93025">166/h</td><td class="num">3일전</td><td class="num">12,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=pTJ5hHzbDy8" target="_blank">10년을 기다린 여인을 데리러 간 조선 노비의 복수극. 조선노비, 양반과노비, 신분제, 압록강, 청나라비단상, 은장도, 편각검법, 의금부, 사헌부, 조선복수극</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">12</td><td class="num lead" style="color:#d93025">166/h</td><td class="num">17일전</td><td class="num">68,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=LHo_H1DoWPs" target="_blank">[권선징악] 어미 굶긴다고 침 뱉던 시장 사람들이 자비방 앞에 줄 서게 된 이야기,어사출두, 위조 화폐, 호조 별감, 양반과 평민, 박첨지, 폐병 어머니, 한양 명의, 약방 이야기</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">13</td><td class="num lead" style="color:#d93025">139/h</td><td class="num">12일전</td><td class="num">40,096</td><td><b>송림야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=OmbkT1PDt1s" target="_blank">손 하나 까딱 않는 며느리에게 곳간 열쇠를 맡겼더니, 굶던 집안에 쌀가마가 쌓이기 시작했다 #옛날이야기 #민담 #오디오북 #수면동화 #야담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">14</td><td class="num lead" style="color:#d93025">134/h</td><td class="num">23일전</td><td class="num">73,984</td><td><b>송림야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=q5SUGwRacxQ" target="_blank">가난한 주막 과부가 거둔 아이가 10년 뒤 어사화를 두른 가마를 타고 오는데!!! #옛날이야기 #민담 #오디오북 #수면동화 #야담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">15</td><td class="num lead" style="color:#d93025">90/h</td><td class="num">6일전</td><td class="num">13,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=5FRCEZ76ATg" target="_blank">5냥에 거둔 거지소년 .잃어버린 적손.옥패의 비밀.거지 양반.며느리 누명.어사출두.한양 대감댁.이판서.충주 사또.양반가 멸문.닷냥의 정 #권선징악 #조선시대 #사이다</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">16</td><td class="num lead" style="color:#d93025">76/h</td><td class="num">18일전</td><td class="num">32,825</td><td><b>청월야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=yOeI1W7a4io" target="_blank">The 12-Year-Old Genius Girl Who Hid the Pursued King #OldStory #Folktale #SleepStory #Audiobook #...</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">17</td><td class="num lead" style="color:#d93025">43/h</td><td class="num">10일전</td><td class="num">10,315</td><td><b>소설야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=WW5fa5WlXpw" target="_blank">"오늘 밤은 등잔불을 꺼주십시오"... 밤마다 외딴집 선비를 찾아온 처녀가 숨긴 것 | 오디오북 | 옛날이야기 | 야담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">18</td><td class="num lead" style="color:#d93025">39/h</td><td class="num">26일전</td><td class="num">24,810</td><td><b>굿밤야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=3zETzuuw85E" target="_blank">바다 절벽에 떨어져 죽어가던 조선 제일 거상, 나뭇꾼 소년이 목숨걸고 구하는데  | 야담 | 옛날이야기 | 오디오북 | 수면동화 | 전설 | 민담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">19</td><td class="num lead" style="color:#d93025">34/h</td><td class="num">18일전</td><td class="num">15,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=tKxld9jD-Co" target="_blank">오랑캐에게 자기 마을 백 명 명단을 바친 양반.조선야담처녀, 병자호란, 사이다 사극, 권선징악, 오랑캐, 양반 응징, 조선시대 이야기, 한국 민담, 옛날이야기, 역사 야담</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">20</td><td class="num lead" style="color:#d93025">32/h</td><td class="num">19일전</td><td class="num">15,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=vD6Y9OrvXMM" target="_blank">시어머니를 죽음에서 살린 세 가지 약재.노인 허리 건강 옛 처방, 어골 가루 발효 콩 햇살, 조선시대 효도 야담, 조선야담처녀. 옛날건강이야기. 시니어허리통증 #감동 #권선징악</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">21</td><td class="num lead" style="color:#d93025">24/h</td><td class="num">17일전</td><td class="num">10,084</td><td><b>조선야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=R6AFAfmaxBY" target="_blank">조선야담.🎉 어화둥둥 내 사랑아!   이야기 모음 #민담 #야담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr></tbody></table></div>
+<div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th class="num">시속</th><th class="num">발행</th><th class="num">조회</th><th>채널</th><th>제목</th><th>출처</th></tr></thead><tbody><tr><td class="rank">1</td><td class="num lead" style="color:var(--hot)">1,455/h</td><td class="num">14일전</td><td class="num">489,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=DRpBcL_0P7s" target="_blank">아버지가 강물에 던져진 그날, 14살 아들의 망치가 움직이기 시작했다 ㅣ 임진왜란 권선징악 .조선야담처녀. 임진왜란 14살 소년 왜군 무찌른 이야기.왜군 5천을 수장시킨 조선 소년</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">2</td><td class="num lead" style="color:var(--hot)">665/h</td><td class="num">2일전</td><td class="num">31,930</td><td><b>천년전설야담사</b></td><td><a class="row-title" href="https://youtube.com/watch?v=4fKkx4pFOIc" target="_blank">The Woodcutter Couple Who Spent Their Life Savings on Salt Instead of Rice During a Drought, and ...</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">3</td><td class="num lead" style="color:var(--hot)">520/h</td><td class="num">2일전</td><td class="num">24,994</td><td><b>소설야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=Lh7I1yaRI6Y" target="_blank">씨받이 첫날밤, 늙은 대감 대신 들어온 젊은 도련님의 정체 | 야담 옛날이야기 오디오북 수면동화</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">4</td><td class="num lead" style="color:var(--hot)">519/h</td><td class="num">13일전</td><td class="num">162,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=CfMujs8GF5E" target="_blank">폭풍우를 읽는 소년과 거상의 맹신 - 일곱 해 묵은 한이 폭풍에 풀리다.조선야담, 권선징악, 사이다, 인과응보, 옛이야기, 한국야담, 조선시대, 전래동화, 구전설화, 도덕설화</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">5</td><td class="num lead" style="color:var(--hot)">470/h</td><td class="num">7일전</td><td class="num">79,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=0uArdo2PPl8" target="_blank">두만강 변방의 기적.임금이 내리신 어마가 미쳐버리자 종놈 10살이 사흘 굶으며 마구간에 앉아. 조선야담처녀. 야담. 민담. 옛날이야기. 조선판사이다. 시니어사이다 #감동 #조선시대</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">6</td><td class="num lead" style="color:var(--hot)">409/h</td><td class="num">12일전</td><td class="num">118,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=GvI8lgx3Jhw" target="_blank">10년 전 살려준 호랑이가 마을을 구한 실제 조선 야담. 조선시대 호랑이 전설, 한국 옛날이야기 호랑이, 조선 야담 실화, 산신령 이야기, 어르신을 위한 옛날이야기,  #권선징악</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">7</td><td class="num lead" style="color:var(--hot)">318/h</td><td class="num">3일전</td><td class="num">22,899</td><td><b>송림야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=5v0REqFDUt4" target="_blank">The Real Reason a Lowly Maid Wanted the Reckless Young Master #Folktale #Folklore #Audiobook #Bed...</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">8</td><td class="num lead" style="color:var(--hot)">283/h</td><td class="num">15일전</td><td class="num">102,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=vrGZaQkEuLk" target="_blank">'늙은 개가 활을 잡았구나' 비웃은 오랑캐 .조선야담처녀. 야담. 옛날이야기. 조선판사이다. 재미있는이야기. 시니어사이다 #권선징악 #조선시대 #감동</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">9</td><td class="num lead" style="color:var(--hot)">283/h</td><td class="num">11일전</td><td class="num">74,699</td><td><b>달빛명월야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=RVWIuSieUz4" target="_blank">매일 술만 마시는 망나니 며느리를  간택한 지혜로운 시어머니 | 야담 옛날이야기 수면동화 전설 민담 오디오북</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">10</td><td class="num lead" style="color:var(--hot)">181/h</td><td class="num">11일전</td><td class="num">47,900</td><td><b>시간이 풀어준 이야기</b></td><td><a class="row-title" href="https://youtube.com/watch?v=FMHq4YfptwI" target="_blank">조선왕조실록이 숨긴 3가지 미스터리ㅣ한국사ㅣ472년의 비밀</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">11</td><td class="num lead" style="color:var(--hot)">166/h</td><td class="num">3일전</td><td class="num">12,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=pTJ5hHzbDy8" target="_blank">10년을 기다린 여인을 데리러 간 조선 노비의 복수극. 조선노비, 양반과노비, 신분제, 압록강, 청나라비단상, 은장도, 편각검법, 의금부, 사헌부, 조선복수극</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">12</td><td class="num lead" style="color:var(--hot)">166/h</td><td class="num">17일전</td><td class="num">68,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=LHo_H1DoWPs" target="_blank">[권선징악] 어미 굶긴다고 침 뱉던 시장 사람들이 자비방 앞에 줄 서게 된 이야기,어사출두, 위조 화폐, 호조 별감, 양반과 평민, 박첨지, 폐병 어머니, 한양 명의, 약방 이야기</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">13</td><td class="num lead" style="color:var(--hot)">139/h</td><td class="num">12일전</td><td class="num">40,096</td><td><b>송림야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=OmbkT1PDt1s" target="_blank">손 하나 까딱 않는 며느리에게 곳간 열쇠를 맡겼더니, 굶던 집안에 쌀가마가 쌓이기 시작했다 #옛날이야기 #민담 #오디오북 #수면동화 #야담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">14</td><td class="num lead" style="color:var(--hot)">134/h</td><td class="num">23일전</td><td class="num">73,984</td><td><b>송림야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=q5SUGwRacxQ" target="_blank">가난한 주막 과부가 거둔 아이가 10년 뒤 어사화를 두른 가마를 타고 오는데!!! #옛날이야기 #민담 #오디오북 #수면동화 #야담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">15</td><td class="num lead" style="color:var(--hot)">90/h</td><td class="num">6일전</td><td class="num">13,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=5FRCEZ76ATg" target="_blank">5냥에 거둔 거지소년 .잃어버린 적손.옥패의 비밀.거지 양반.며느리 누명.어사출두.한양 대감댁.이판서.충주 사또.양반가 멸문.닷냥의 정 #권선징악 #조선시대 #사이다</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">16</td><td class="num lead" style="color:var(--hot)">76/h</td><td class="num">18일전</td><td class="num">32,825</td><td><b>청월야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=yOeI1W7a4io" target="_blank">The 12-Year-Old Genius Girl Who Hid the Pursued King #OldStory #Folktale #SleepStory #Audiobook #...</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">17</td><td class="num lead" style="color:var(--hot)">43/h</td><td class="num">10일전</td><td class="num">10,315</td><td><b>소설야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=WW5fa5WlXpw" target="_blank">"오늘 밤은 등잔불을 꺼주십시오"... 밤마다 외딴집 선비를 찾아온 처녀가 숨긴 것 | 오디오북 | 옛날이야기 | 야담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">18</td><td class="num lead" style="color:var(--hot)">39/h</td><td class="num">26일전</td><td class="num">24,810</td><td><b>굿밤야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=3zETzuuw85E" target="_blank">바다 절벽에 떨어져 죽어가던 조선 제일 거상, 나뭇꾼 소년이 목숨걸고 구하는데  | 야담 | 옛날이야기 | 오디오북 | 수면동화 | 전설 | 민담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr><tr><td class="rank">19</td><td class="num lead" style="color:var(--hot)">34/h</td><td class="num">18일전</td><td class="num">15,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=tKxld9jD-Co" target="_blank">오랑캐에게 자기 마을 백 명 명단을 바친 양반.조선야담처녀, 병자호란, 사이다 사극, 권선징악, 오랑캐, 양반 응징, 조선시대 이야기, 한국 민담, 옛날이야기, 역사 야담</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">20</td><td class="num lead" style="color:var(--hot)">32/h</td><td class="num">19일전</td><td class="num">15,000</td><td><b>조선야담처녀</b></td><td><a class="row-title" href="https://youtube.com/watch?v=vD6Y9OrvXMM" target="_blank">시어머니를 죽음에서 살린 세 가지 약재.노인 허리 건강 옛 처방, 어골 가루 발효 콩 햇살, 조선시대 효도 야담, 조선야담처녀. 옛날건강이야기. 시니어허리통증 #감동 #권선징악</a></td><td><span class="ch-tag">📡 추적</span></td></tr><tr><td class="rank">21</td><td class="num lead" style="color:var(--hot)">24/h</td><td class="num">17일전</td><td class="num">10,084</td><td><b>조선야담</b></td><td><a class="row-title" href="https://youtube.com/watch?v=R6AFAfmaxBY" target="_blank">조선야담.🎉 어화둥둥 내 사랑아!   이야기 모음 #민담 #야담</a></td><td><span class="ch-tag">🔍 검색</span></td></tr></tbody></table></div>
 <div class="rep-sec"><h2>📊 폭발 영상 제목 패턴</h2><span class="cnt">상위 20영상에서 자주 등장한 단어</span></div><div class="info-bar"><span class="desc">제목 짤 때 참고 — 이 단어들이 야담 viewer에게 검증된 트리거입니다.</span><span class="chan-chip"><b>옛날이야기</b> ×11</span><span class="chan-chip"><b>권선징악</b> ×8</span><span class="chan-chip"><b>조선시대</b> ×7</span><span class="chan-chip"><b>오디오북</b> ×6</span><span class="chan-chip"><b>민담</b> ×6</span><span class="chan-chip"><b>조선야담처녀</b> ×5</span><span class="chan-chip"><b>수면동화</b> ×5</span><span class="chan-chip"><b>사이다</b> ×3</span><span class="chan-chip"><b>감동</b> ×3</span><span class="chan-chip"><b>전설</b> ×3</span><span class="chan-chip"><b>양반</b> ×3</span><span class="chan-chip"><b>시작했다</b> ×2</span><span class="chan-chip"><b>임진왜란</b> ×2</span><span class="chan-chip"><b>소년</b> ×2</span><span class="chan-chip"><b>왜군</b> ×2</span></div>
 <div class="rep-sec"><h2>🔄 교차 카테고리 → 야담 변환 후보</h2><span class="cnt">Hot키워드의 역사·심리·시사 주제를 조선 야담으로 풀기</span></div><div class="tbl-wrap"><table><thead><tr><th>카테고리</th><th>Hot키워드 주제</th><th>증거</th><th>야담 변환 프롬프트</th></tr></thead><tbody><tr><td><span class="cat-badge">역사</span></td><td><b>조선</b></td><td class="muted">11채널·누적 31,785,304회</td><td><span class="row-sub">"조선 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">역사</span></td><td><b>고구려</b></td><td class="muted">9채널·누적 7,032,348회</td><td><span class="row-sub">"고구려 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">역사</span></td><td><b>세계대전</b></td><td class="muted">7채널·누적 12,533,349회</td><td><span class="row-sub">"세계대전 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">역사</span></td><td><b>순삭</b></td><td class="muted">6채널·누적 28,571,967회</td><td><span class="row-sub">"순삭 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">역사</span></td><td><b>조선왕조실록</b></td><td class="muted">6채널·누적 11,271,863회</td><td><span class="row-sub">"조선왕조실록 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">역사</span></td><td><b>임진왜란</b></td><td class="muted">6채널·누적 11,481,627회</td><td><span class="row-sub">"임진왜란 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">심리학</span></td><td><b>인간관계</b></td><td class="muted">9채널·누적 8,346,387회</td><td><span class="row-sub">"인간관계 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">심리학</span></td><td><b>심리학</b></td><td class="muted">7채널·누적 4,937,112회</td><td><span class="row-sub">"심리학 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">심리학</span></td><td><b>김경일</b></td><td class="muted">6채널·누적 7,540,963회</td><td><span class="row-sub">"김경일 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">심리학</span></td><td><b>행동</b></td><td class="muted">6채널·누적 4,349,687회</td><td><span class="row-sub">"행동 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">심리학</span></td><td><b>스트레스</b></td><td class="muted">3채널·누적 4,240,852회</td><td><span class="row-sub">"스트레스 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">심리학</span></td><td><b>지키</b></td><td class="muted">3채널·누적 2,882,730회</td><td><span class="row-sub">"지키 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">시사</span></td><td><b>요즘</b></td><td class="muted">6채널·누적 10,017,715회</td><td><span class="row-sub">"요즘 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">시사</span></td><td><b>정리</b></td><td class="muted">6채널·누적 7,395,840회</td><td><span class="row-sub">"정리 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">시사</span></td><td><b>최대</b></td><td class="muted">4채널·누적 1,423,300회</td><td><span class="row-sub">"최대 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">시사</span></td><td><b>아직</b></td><td class="muted">4채널·누적 1,710,595회</td><td><span class="row-sub">"아직 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">시사</span></td><td><b>근황</b></td><td class="muted">3채널·누적 2,045,524회</td><td><span class="row-sub">"근황 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr><tr><td><span class="cat-badge">시사</span></td><td><b>한동훈</b></td><td class="muted">3채널·누적 690,083회</td><td><span class="row-sub">"한동훈 → 조선시대에 비슷한 사건·인물·갈등은 어떤 게 있었을까?"</span></td></tr></tbody></table></div>
 <div class="rep-sec"><h2>🆕 watch list 추가 후보</h2><span class="cnt">씨앗검색에서 자주 등장하지만 watch list에 없는 채널 (10)</span></div><div class="rep-note">검토 후 <code>scripts/channels_yadam.json</code>에 URL을 추가하면 다음 실행부터 추적됩니다.</div><div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>채널</th><th class="num">검색 등장</th><th>채널 URL</th></tr></thead><tbody><tr><td class="rank">1</td><td><b>조선야담</b></td><td class="num">7회</td><td><a class="row-title" href="https://www.youtube.com/channel/UCqdodvP7DC1cVCcJ4uprQoA" target="_blank">https://www.youtube.com/channel/UCqdodvP7DC1cVCcJ4uprQoA</a></td></tr><tr><td class="rank">2</td><td><b>괴담실록 [조선·동아시아 야사·괴담]</b></td><td class="num">4회</td><td><a class="row-title" href="https://www.youtube.com/channel/UCRQqdcMWDdBaz6lAat82oZg" target="_blank">https://www.youtube.com/channel/UCRQqdcMWDdBaz6lAat82oZg</a></td></tr><tr><td class="rank">3</td><td><b>기묘한 밤</b></td><td class="num">4회</td><td><a class="row-title" href="https://www.youtube.com/channel/UC_SgaM1zbb1Mibnsp6J0fJA" target="_blank">https://www.youtube.com/channel/UC_SgaM1zbb1Mibnsp6J0fJA</a></td></tr><tr><td class="rank">4</td><td><b>송림야담</b></td><td class="num">4회</td><td><a class="row-title" href="https://www.youtube.com/channel/UCcV_SLaGHK9ifJEVv5UiMew" target="_blank">https://www.youtube.com/channel/UCcV_SLaGHK9ifJEVv5UiMew</a></td></tr><tr><td class="rank">5</td><td><b>기담 : 이상하고 신비한 이야기</b></td><td class="num">4회</td><td><a class="row-title" href="https://www.youtube.com/channel/UCTlEKIqrZP6mx_uz0Pmzvvg" target="_blank">https://www.youtube.com/channel/UCTlEKIqrZP6mx_uz0Pmzvvg</a></td></tr><tr><td class="rank">6</td><td><b>사피엔스 스튜디오</b></td><td class="num">3회</td><td><a class="row-title" href="https://www.youtube.com/channel/UC-9RQCJ0gS_Kgt7J0SVrE8w" target="_blank">https://www.youtube.com/channel/UC-9RQCJ0gS_Kgt7J0SVrE8w</a></td></tr><tr><td class="rank">7</td><td><b>야밤의보따리</b></td><td class="num">2회</td><td><a class="row-title" href="https://www.youtube.com/channel/UCXumhc3UxKPNbQ9VxiOQOzA" target="_blank">https://www.youtube.com/channel/UCXumhc3UxKPNbQ9VxiOQOzA</a></td></tr><tr><td class="rank">8</td><td><b>고독한 낭독회</b></td><td class="num">2회</td><td><a class="row-title" href="https://www.youtube.com/channel/UClkZfse00Rl226AJ7V5Hl4w" target="_blank">https://www.youtube.com/channel/UClkZfse00Rl226AJ7V5Hl4w</a></td></tr><tr><td class="rank">9</td><td><b>역사꾼</b></td><td class="num">2회</td><td><a class="row-title" href="https://www.youtube.com/channel/UC3M_efpw-t7fG0-R7whjWjA" target="_blank">https://www.youtube.com/channel/UC3M_efpw-t7fG0-R7whjWjA</a></td></tr><tr><td class="rank">10</td><td><b>여우야담</b></td><td class="num">2회</td><td><a class="row-title" href="https://www.youtube.com/channel/UCTt8JDp4tCIiC6xk4n8ceRg" target="_blank">https://www.youtube.com/channel/UCTt8JDp4tCIiC6xk4n8ceRg</a></td></tr></tbody></table></div>
 <div class="rep-sec"><h2>📜 사료 인용 인트로 가이드</h2><span class="cnt">진정성·AI양산회피·차별화의 핵심 한 수</span></div><div class="info-bar"><span class="desc">매 영상 0:00~0:30에 사료 1줄 인용 → "오늘 이야기는 그 한 줄에서 시작됩니다" 패턴.</span><span class="legend-item">📚 <a href="https://sillok.history.go.kr/" target="_blank"><b>조선왕조실록 DB</b></a> — 키워드 검색 후 1줄 인용</span><span class="legend-item">📚 <a href="https://db.history.go.kr/" target="_blank">한국사데이터베이스</a> — 향토사·읍지</span><span class="legend-item">📚 어우야담·천예록·계서야담 번역본 (도서관)</span></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 17:34</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 18:31</footer>
 </body>
 </html>

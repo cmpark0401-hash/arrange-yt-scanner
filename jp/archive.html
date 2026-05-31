@@ -3,201 +3,274 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-  <meta name="theme-color" content="#8ab4f8">
+  <meta name="theme-color" content="#a855f7">
   <title>🔥 Hot키워드</title>
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
 :root {
-  --blue:#8ab4f8; --red:#f28b82; --purple:#c58af9; --green:#81c995;
-  --text:#202124; --text2:#5f6368; --border:#dadce0; --surface:#fff; --bg:#fff;
-  --hover:#f1f3f4; --divider:#e8eaed; --chip:#e8f0fe;
+  /* 다크 베이스 */
+  --bg:#0a0a12; --surface:#13131c; --surface2:#1a1a26;
+  --border:#26263a; --divider:#1f1f30; --hover:#1e1e2e;
+  /* 텍스트 */
+  --text:#ededf2; --text2:#9696a6; --text3:#6c6c80;
+  /* 키 컬러 — 보라 (알고리즘 해킹) */
+  --primary:#a855f7; --primary-hi:#c084fc; --primary-bg:rgba(168,85,247,.12); --primary-bd:rgba(168,85,247,.35);
+  /* 보조 강조 */
+  --hot:#84cc16;        /* 라임 — 폭발/검증 */
+  --hot-bg:rgba(132,204,22,.10); --hot-bd:rgba(132,204,22,.35);
+  --warn:#ff7a45;       /* 오렌지 — 시그널 */
+  --warn-bg:rgba(255,122,69,.10); --warn-bd:rgba(255,122,69,.35);
+  --danger:#ef4444;     /* 빨강 — 폭락 */
+  --danger-bg:rgba(239,68,68,.10); --danger-bd:rgba(239,68,68,.35);
+  --up:#4ade80; --down:#ef4444;  /* 등락 */
+  --info:#60a5fa; --info-bg:rgba(96,165,250,.10);
+  /* 호환 (구 변수명) */
+  --blue:var(--primary); --green:var(--up); --red:var(--danger); --purple:var(--primary-hi);
+  --chip:rgba(168,85,247,.13);
 }
 * { box-sizing:border-box; margin:0; padding:0; }
 body {
-  font-family:'Google Sans','Roboto','Noto Sans KR',-apple-system,sans-serif;
+  font-family:'Inter','Noto Sans KR',-apple-system,sans-serif;
   line-height:1.5; color:var(--text); background:var(--bg);
-  max-width:1280px; margin:0 auto; padding:20px 20px 48px;
-  -webkit-font-smoothing:antialiased;
+  max-width:1320px; margin:0 auto; padding:18px 20px 48px;
+  -webkit-font-smoothing:antialiased; font-feature-settings:'cv11','ss01';
 }
-header { padding:12px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px; }
-header h1 { font-size:26px; font-weight:700; letter-spacing:-0.5px; }
-header .sub { color:var(--text2); font-size:13px; margin-top:6px; }
-a { color:var(--blue); text-decoration:none; }
-a:hover { text-decoration:underline; }
+header { padding:10px 0 14px; border-bottom:1px solid var(--divider); margin-bottom:18px;
+         display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+header h1 { font-size:24px; font-weight:800; letter-spacing:-0.5px; color:var(--text); }
+header h1 .brand-accent { color:var(--primary); }
+header .sub { color:var(--text2); font-size:13px; }
+header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; }
+.h-chip { display:inline-flex; align-items:center; gap:5px; padding:5px 11px; border-radius:14px;
+          background:var(--surface); border:1px solid var(--border); font-size:12px; color:var(--text2); font-weight:500; }
+.h-chip b { color:var(--text); font-weight:700; font-variant-numeric:tabular-nums; }
+.h-chip.warn { border-color:var(--warn-bd); background:var(--warn-bg); color:var(--warn); }
+.h-chip.warn b { color:var(--warn); }
+.h-chip.hot { border-color:var(--hot-bd); background:var(--hot-bg); color:var(--hot); }
+.h-chip.hot b { color:var(--hot); }
+.h-chip.info { border-color:var(--primary-bd); background:var(--primary-bg); color:var(--primary-hi); }
+.h-chip.info b { color:var(--primary-hi); }
+a { color:var(--primary-hi); text-decoration:none; transition:color .15s; }
+a:hover { color:var(--primary); text-decoration:none; }
 
 /* 요약 카드 */
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:20px; }
-.card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px; }
-.card .label { font-size:13px; color:var(--text2); margin-bottom:8px; font-weight:500; }
-.card .value { font-size:30px; font-weight:500; letter-spacing:-0.5px; }
-.card.tone-red { background:rgba(242,139,130,.08); border-color:rgba(242,139,130,.35); }
-.card.tone-red .value { color:var(--red); }
-.card.tone-green { background:rgba(129,201,149,.08); border-color:rgba(129,201,149,.35); }
-.card.tone-green .value { color:var(--green); }
-.card.tone-blue { background:rgba(138,180,248,.08); border-color:rgba(138,180,248,.35); }
-.card.tone-blue .value { color:var(--blue); }
-.card.tone-purple { background:rgba(197,138,249,.08); border-color:rgba(197,138,249,.35); }
-.card.tone-purple .value { color:#a855f7; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-bottom:18px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px 16px; transition:transform .15s, border-color .15s; }
+.card:hover { transform:translateY(-1px); border-color:var(--primary-bd); }
+.card .label { font-size:12px; color:var(--text2); margin-bottom:6px; font-weight:500; display:flex; align-items:center; gap:5px; }
+.card .value { font-size:28px; font-weight:700; letter-spacing:-0.5px; line-height:1.1; font-variant-numeric:tabular-nums; }
+.card.tone-red { background:var(--danger-bg); border-color:var(--danger-bd); }
+.card.tone-red .value { color:var(--danger); }
+.card.tone-green { background:var(--hot-bg); border-color:var(--hot-bd); }
+.card.tone-green .value { color:var(--hot); }
+.card.tone-blue { background:var(--primary-bg); border-color:var(--primary-bd); }
+.card.tone-blue .value { color:var(--primary-hi); }
+.card.tone-purple { background:rgba(168,85,247,.18); border-color:rgba(168,85,247,.4); }
+.card.tone-purple .value { color:var(--primary-hi); }
+.card.tone-warn { background:var(--warn-bg); border-color:var(--warn-bd); }
+.card.tone-warn .value { color:var(--warn); }
 
 /* 카테고리 탭 */
-.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 12px; }
-.tab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2);
-       font-size:14px; font-weight:500; cursor:pointer; border:none; transition:all .15s; }
-.tab:hover { background:#e3e6e8; }
-.tab.active { background:var(--blue); color:#fff; }
-.tab .cnt { font-size:12px; opacity:.8; margin-left:4px; }
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:14px 0 12px; }
+.tab { padding:7px 14px; border-radius:18px; background:var(--surface); color:var(--text2);
+       font-size:13px; font-weight:600; cursor:pointer; border:1px solid var(--border); transition:all .15s; }
+.tab:hover { border-color:var(--primary-bd); color:var(--text); }
+.tab.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+.tab .cnt { font-size:11px; opacity:.85; margin-left:5px; padding:1px 6px; background:rgba(255,255,255,.15); border-radius:8px; }
 
 /* 필터 바 */
-.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:16px;
-           padding:12px 16px; background:var(--hover); border-radius:8px; }
+.filters { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:14px;
+           padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
 .filter-group { display:flex; gap:4px; align-items:center; }
-.filter-group .lbl { font-size:12px; color:var(--text2); margin-right:4px; }
-.seg { display:flex; border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#fff; }
-.seg button { padding:6px 12px; border:none; background:#fff; font-size:13px; cursor:pointer; color:var(--text2); }
-.seg button.active { background:var(--blue); color:#fff; }
-.toggle { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text); cursor:pointer; }
+.filter-group .lbl { font-size:11px; color:var(--text2); margin-right:4px; font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--bg); }
+.seg button { padding:6px 12px; border:none; background:transparent; font-size:13px; cursor:pointer; color:var(--text2); font-weight:500; transition:all .15s; }
+.seg button:hover { color:var(--text); background:var(--hover); }
+.seg button.active { background:var(--primary); color:#fff; }
+.toggle { display:flex; align-items:center; gap:7px; font-size:13px; color:var(--text); cursor:pointer; }
+.toggle input[type=checkbox] { appearance:none; width:32px; height:18px; background:var(--border); border-radius:9px; position:relative; cursor:pointer; transition:background .2s; }
+.toggle input[type=checkbox]::after { content:''; position:absolute; top:2px; left:2px; width:14px; height:14px; background:#fff; border-radius:50%; transition:transform .2s; }
+.toggle input[type=checkbox]:checked { background:var(--primary); }
+.toggle input[type=checkbox]:checked::after { transform:translateX(14px); }
 #search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
-          border-radius:20px; font-size:14px; background:#fff; }
-#search:focus { outline:none; border-color:var(--blue); }
+          border-radius:18px; font-size:13px; background:var(--bg); color:var(--text); }
+#search::placeholder { color:var(--text3); }
+#search:focus { outline:none; border-color:var(--primary); background:var(--surface); }
 
 /* 채널 카드 그리드 */
-.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:14px; }
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:14px; }
 .ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
-           padding:16px; transition:box-shadow .2s; }
-.ch-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15); }
-.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; }
-.ch-name { font-size:16px; font-weight:700; }
-.ch-meta { font-size:12px; color:var(--text2); margin-top:2px; }
-.ch-type { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--hover); color:var(--text2); white-space:nowrap; }
-.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:8px 0; }
-.ch-cat { font-size:11px; padding:2px 8px; border-radius:10px; background:var(--chip); color:var(--blue); font-weight:500; }
-.ch-stats { display:flex; gap:12px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
-.ch-stat { font-size:12px; color:var(--text2); }
-.ch-stat b { font-size:15px; color:var(--text); font-weight:600; display:block; }
-.ch-stat.sig b { color:var(--red); }
-.ch-vid { margin-top:8px; }
-.ch-vid .vlabel { font-size:11px; color:var(--text2); font-weight:500; }
-.ch-vid .vtitle { font-size:13px; display:block; margin-top:2px; }
-.ch-vid .vmeta { font-size:11px; color:var(--text2); }
+           padding:16px; transition:all .18s; position:relative; }
+.ch-card:hover { border-color:var(--primary-bd); transform:translateY(-2px); box-shadow:0 8px 24px rgba(168,85,247,.12); }
+.ch-card.rank-1 { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.ch-card.rank-2 { border-color:rgba(196,196,196,.45); background:linear-gradient(180deg, rgba(196,196,196,.05) 0%, var(--surface) 60%); }
+.ch-card.rank-3 { border-color:rgba(205,127,50,.45); background:linear-gradient(180deg, rgba(205,127,50,.05) 0%, var(--surface) 60%); }
+.ch-rank-badge { position:absolute; top:-9px; left:14px; padding:2px 9px; border-radius:10px;
+                 background:var(--surface2); border:1px solid var(--border); font-size:11px; font-weight:700; color:var(--text2); font-variant-numeric:tabular-nums; }
+.ch-rank-badge.rank-1 { background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; border-color:#ffd700; }
+.ch-rank-badge.rank-2 { background:linear-gradient(135deg,#e0e0e0,#a8a8a8); color:#000; border-color:#c0c0c0; }
+.ch-rank-badge.rank-3 { background:linear-gradient(135deg,#cd7f32,#8b4513); color:#fff; border-color:#cd7f32; }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; gap:10px; }
+.ch-name { font-size:15px; font-weight:700; line-height:1.3; flex:1; min-width:0; }
+.ch-name .delta { font-size:11px; margin-left:6px; vertical-align:middle; font-weight:700; }
+.ch-name .delta.up { color:var(--up); }
+.ch-name .delta.down { color:var(--down); }
+.ch-name .delta.flat { color:var(--text3); }
+.ch-meta { font-size:11px; color:var(--text2); margin-top:2px; font-weight:500; }
+.ch-type { font-size:10px; padding:2px 7px; border-radius:8px; background:var(--bg); color:var(--text2); white-space:nowrap; font-weight:600; border:1px solid var(--border); }
+.ch-cats { display:flex; flex-wrap:wrap; gap:4px; margin:6px 0; }
+.ch-cat { font-size:10px; padding:2px 8px; border-radius:8px; background:var(--primary-bg); color:var(--primary-hi); font-weight:600; border:1px solid var(--primary-bd); }
+.ch-stats { display:flex; gap:14px; margin:10px 0; padding:8px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:11px; color:var(--text2); flex:1; min-width:0; }
+.ch-stat b { font-size:14px; color:var(--text); font-weight:700; display:block; font-variant-numeric:tabular-nums; }
+.ch-stat.sig b { color:var(--danger); }
+.ch-stat.hot b { color:var(--hot); }
+.ch-vid { margin-top:8px; font-size:12px; }
+.ch-vid .vlabel { font-size:10px; color:var(--text2); font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.ch-vid .vlabel.popular { color:var(--warn); }
+.ch-vid .vlabel.latest { color:var(--hot); }
+.ch-vid .vtitle { font-size:12px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:3px; color:var(--text); line-height:1.35; }
+.ch-vid .vmeta { font-size:10px; color:var(--text3); margin-top:2px; }
+/* 채널 카드 - Pint 스타일 듀얼 영상 컬럼 */
+.ch-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; padding-top:10px; border-top:1px solid var(--divider); }
+.ch-vid-col { min-width:0; }
+.ch-thumb-mini { width:100%; aspect-ratio:16/9; background:var(--bg); border-radius:6px; overflow:hidden; margin-bottom:6px; border:1px solid var(--border); position:relative; }
+.ch-thumb-mini img { width:100%; height:100%; object-fit:cover; display:block; }
+.ch-thumb-mini .views-badge { position:absolute; bottom:4px; right:4px; font-size:10px; padding:1px 5px; border-radius:4px; background:rgba(0,0,0,.78); color:#fff; font-weight:700; font-variant-numeric:tabular-nums; }
+/* 스파크라인 (7일 추세) */
+.ch-spark { margin-top:6px; padding-top:6px; border-top:1px dashed var(--divider); display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; color:var(--text2); }
+.ch-spark canvas { flex:1; height:24px !important; max-width:140px; }
+.ch-spark .spark-val { font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
+.ch-freq { font-size:11px; color:var(--text2); display:inline-flex; align-items:center; gap:4px; padding:2px 7px; border-radius:8px; background:var(--bg); border:1px solid var(--border); white-space:nowrap; font-weight:600; }
 .empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
 
-section { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
-section h2 { font-size:18px; font-weight:500; margin-bottom:16px; }
+section { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px; margin-bottom:14px; }
+section h2 { font-size:17px; font-weight:700; margin-bottom:14px; }
 .archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
-.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:12px;
-                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:500; }
-.archive-grid a:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
-.archive-grid a.today { background:var(--blue); border-color:var(--blue); color:#fff; }
-.nav-links { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; }
-.nav-links a { background:var(--chip); padding:8px 16px; border-radius:20px; font-size:14px; font-weight:500; }
-/* 국가 전환 버튼 (한국 ⇄ 일본) — 최상단 prominent */
-.country-switch { display:inline-flex; align-items:center; gap:7px; padding:8px 16px; border:1px solid var(--border);
-  border-radius:20px; font-size:14px; font-weight:600; color:var(--text); background:var(--surface); margin-bottom:12px; }
-.country-switch:hover { background:var(--hover); border-color:var(--blue); text-decoration:none; }
-/* 셸 탭 (SPA) */
-.shell-head { position:sticky; top:0; z-index:50; background:var(--bg); padding-top:8px; border-bottom:1px solid var(--divider); }
-.nav-links a.tab-on { background:var(--blue); color:#fff; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:11px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:600; transition:all .15s; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.archive-grid a.today { background:var(--primary); border-color:var(--primary); color:#fff; }
+.nav-links { margin:10px 0; display:flex; gap:6px; flex-wrap:wrap; }
+.nav-links a { background:var(--surface); padding:7px 14px; border-radius:18px; font-size:13px; font-weight:600; color:var(--text2); border:1px solid var(--border); transition:all .15s; }
+.nav-links a:hover { border-color:var(--primary-bd); color:var(--text); }
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:7px 14px; border:1px solid var(--border);
+  border-radius:18px; font-size:13px; font-weight:700; color:var(--text); background:var(--surface); transition:all .15s; }
+.country-switch:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.shell-head { position:sticky; top:0; z-index:50; background:var(--bg); padding-top:6px; border-bottom:1px solid var(--divider); backdrop-filter:blur(8px); }
+.nav-links a.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
 #view { min-height:60vh; }
 .view-loading { padding:60px 20px; text-align:center; color:var(--text2); font-size:14px; }
-/* 설명·지표 범례 바 */
-.info-bar { background:var(--hover); border:1px solid var(--border); border-radius:10px; padding:12px 16px; margin:6px 0 18px; font-size:13px; color:var(--text2); line-height:1.9; }
-.info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:500; font-size:14px; }
-.info-bar b { color:var(--text); }
-.legend-item { display:inline-block; margin-right:16px; white-space:nowrap; }
-/* nav 강조 (오늘 만들 주제) */
-.nav-links a.nav-primary { background:var(--blue); color:#fff; }
-/* 제작 추천 보드 */
-.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px; }
-.rec-group h3 { font-size:15px; font-weight:700; margin:6px 0 10px; }
-.rec-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:10px; }
-.rec-card:hover { box-shadow:0 1px 2px rgba(60,64,67,.2),0 2px 6px 2px rgba(60,64,67,.12); }
-.rec-rank { color:var(--text2); font-weight:500; font-size:12px; margin-right:6px; }
-.rec-topic { font-size:15px; font-weight:700; margin-bottom:5px; }
-.rec-date { font-size:11px; color:#1e8e3e; font-weight:500; margin-bottom:4px; }
-.rec-why { font-size:12px; color:var(--text2); margin-bottom:7px; }
-.rec-ref { font-size:12px; display:inline-block; }
-.rec-empty { color:var(--text2); padding:18px; font-size:13px; }
-.hot-flag { display:inline-block; font-size:11px; font-weight:600; padding:1px 8px; border-radius:10px; background:rgba(242,139,130,.15); color:#d93025; white-space:nowrap; }
-/* 🔥 재편집 재폭발 (최우선) */
-.reedit-box { background:rgba(242,139,130,.08); border:1px solid rgba(242,139,130,.45); border-radius:12px; padding:14px 16px; margin:10px 0 20px; }
-.reedit-head { font-size:16px; font-weight:700; }
-.reedit-sub { display:block; font-size:12px; font-weight:400; color:var(--text2); margin-top:3px; }
-.reedit-card { padding:10px 0; border-top:1px solid rgba(242,139,130,.22); }
+.info-bar { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 14px; margin:6px 0 16px; font-size:13px; color:var(--text2); line-height:1.8; }
+.info-bar .desc { display:block; margin-bottom:5px; color:var(--text); font-weight:600; font-size:13px; }
+.info-bar b { color:var(--text); font-weight:700; }
+.legend-item { display:inline-block; margin-right:14px; white-space:nowrap; }
+.nav-links a.nav-primary { background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border-color:var(--primary); font-weight:700; box-shadow:0 0 16px rgba(168,85,247,.25); }
+.nav-links a.nav-primary:hover { box-shadow:0 0 22px rgba(168,85,247,.4); }
+.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
+.rec-group h3 { font-size:14px; font-weight:700; margin:6px 0 10px; }
+.rec-card { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:13px; margin-bottom:9px; transition:all .15s; }
+.rec-card:hover { border-color:var(--primary-bd); }
+.rec-rank { color:var(--text3); font-weight:600; font-size:11px; margin-right:5px; }
+.rec-topic { font-size:14px; font-weight:700; margin-bottom:4px; color:var(--text); }
+.rec-date { font-size:11px; color:var(--hot); font-weight:600; margin-bottom:3px; }
+.rec-why { font-size:11px; color:var(--text2); margin-bottom:6px; }
+.rec-ref { font-size:11px; display:inline-block; }
+.rec-empty { color:var(--text2); padding:16px; font-size:12px; }
+.hot-flag { display:inline-block; font-size:10px; font-weight:700; padding:1px 7px; border-radius:8px; background:var(--danger-bg); color:var(--danger); white-space:nowrap; border:1px solid var(--danger-bd); }
+.reedit-box { background:var(--danger-bg); border:1px solid var(--danger-bd); border-radius:12px; padding:13px 16px; margin:10px 0 18px; }
+.reedit-head { font-size:15px; font-weight:700; color:var(--text); }
+.reedit-sub { display:block; font-size:11px; font-weight:500; color:var(--text2); margin-top:3px; }
+.reedit-card { padding:9px 0; border-top:1px solid rgba(239,68,68,.18); }
 .reedit-card:first-of-type { border-top:none; }
 .reedit-line1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-.reedit-line1 .row-title { max-width:420px; font-weight:500; }
-.reedit-meta { font-size:12px; color:var(--text2); margin-top:4px; padding-left:26px; }
-@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } }
-footer { text-align:center; color:var(--text2); font-size:12px; padding:24px 0 8px; }
+.reedit-line1 .row-title { max-width:420px; font-weight:600; }
+.reedit-meta { font-size:11px; color:var(--text2); margin-top:3px; padding-left:24px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } header { flex-direction:column; align-items:flex-start; } header .header-chips { margin-left:0; } }
+footer { text-align:center; color:var(--text3); font-size:11px; padding:24px 0 8px; }
 
-/* 테이블 (아카이브 + 리포트 공통) — 클린 랭킹 행 */
-.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:auto; margin:10px 0 18px; }
-table { width:100%; border-collapse:collapse; font-size:14px; }
-thead th { text-align:left; font-weight:500; font-size:12px; color:var(--text2);
-  padding:11px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:#fafbfc; }
-tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; }
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:auto; margin:10px 0 16px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+thead th { text-align:left; font-weight:700; font-size:11px; color:var(--text2);
+  padding:10px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:var(--surface2); text-transform:uppercase; letter-spacing:.3px; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; color:var(--text); }
 tbody tr:last-child td { border-bottom:none; }
 tbody tr:hover { background:var(--hover); }
-td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:500; font-variant-numeric:tabular-nums; }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:700; font-variant-numeric:tabular-nums; }
 td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
-td.num.lead { color:var(--text); font-weight:600; }
+td.num.lead { color:var(--text); font-weight:700; }
 .muted { color:var(--text2); }
-.cat-badge { display:inline-block; font-size:11px; padding:2px 9px; border-radius:11px; font-weight:500; white-space:nowrap; }
-.kw { font-weight:700; font-size:15px; }
+.cat-badge { display:inline-block; font-size:10px; padding:2px 9px; border-radius:10px; font-weight:700; white-space:nowrap; background:var(--primary-bg); color:var(--primary-hi); border:1px solid var(--primary-bd); }
+.kw { font-weight:700; font-size:14px; }
 .cellv { display:flex; flex-direction:column; gap:1px; }
-.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; color:var(--text); font-weight:500; }
 .row-sub { font-size:11px; color:var(--text2); }
-.ch-tag { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--hover); color:var(--text2); }
-/* Hot키워드 주제별 영상 리스트 (조회 상위 3-5) */
-.vid-list { display:flex; flex-direction:column; gap:7px; }
+.ch-tag { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--bg); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.vid-list { display:flex; flex-direction:column; gap:6px; }
 .vd-row { display:flex; flex-direction:column; gap:1px; max-width:560px; }
-.vd-title { font-size:13px; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.vd-title { font-size:12px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
 .vd-meta { font-size:11px; color:var(--text2); }
-.vd-date { color:#1e8e3e; font-weight:500; }
-/* 리포트 섹션 헤더 */
-.rep-sec { margin:24px 0 4px; display:flex; align-items:baseline; gap:8px; }
-.rep-sec h2 { font-size:17px; font-weight:700; }
-.rep-sec .cnt { font-size:13px; color:var(--text2); }
-.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
-/* 마크다운 리포트 잔여 표 */
+.vd-date { color:var(--hot); font-weight:600; }
+.rep-sec { margin:22px 0 4px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:16px; font-weight:800; color:var(--text); }
+.rep-sec .cnt { font-size:12px; color:var(--text2); }
+.rep-note { font-size:11px; color:var(--text2); margin:0 0 6px; }
 section table { margin:10px 0; }
 
-/* 뉴스 헤드라인 리스트 (Pixeling 스타일) */
-.news-list { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.news-list { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
 .news-row { display:flex; gap:12px; align-items:baseline; padding:13px 16px; border-bottom:1px solid var(--divider); }
 .news-row:last-child { border-bottom:none; }
 .news-row:hover { background:var(--hover); }
-.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:500; text-align:right; font-variant-numeric:tabular-nums; }
+.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; }
 .news-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
-.news-title { font-size:14px; font-weight:500; color:var(--text); white-space:normal; }
-.news-title:hover { color:var(--blue); }
-.news-meta { font-size:12px; color:var(--text2); display:flex; gap:7px; align-items:center; flex-wrap:wrap; }
-.news-src { color:#1e8e3e; font-weight:500; }
-.news-cat { font-size:11px; padding:1px 7px; border-radius:9px; background:var(--chip); color:var(--blue); font-weight:500; }
-.news-orig { font-size:12px; color:var(--text2); }
-/* 과거 날짜 네비 (뉴스·과학 날짜별 열람) */
+.news-title { font-size:13px; font-weight:600; color:var(--text); white-space:normal; }
+.news-title:hover { color:var(--primary-hi); }
+.news-meta { font-size:11px; color:var(--text2); display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.news-src { color:var(--hot); font-weight:700; }
+.news-cat { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; border:1px solid var(--primary-bd); }
+.news-orig { font-size:11px; color:var(--text2); }
 .date-nav { display:flex; flex-wrap:wrap; gap:5px; margin:10px 0 14px; align-items:center; font-size:12px; }
-.date-nav .lbl { color:var(--text2); margin-right:4px; font-weight:500; }
-.date-nav a { padding:4px 10px; border-radius:14px; background:var(--hover); color:var(--text2); font-weight:500; }
-.date-nav a:hover { background:#e3e6e8; text-decoration:none; }
-.date-nav a.on { background:var(--blue); color:#fff; }
+.date-nav .lbl { color:var(--text2); margin-right:4px; font-weight:700; text-transform:uppercase; letter-spacing:.3px; font-size:11px; }
+.date-nav a { padding:4px 10px; border-radius:13px; background:var(--surface); color:var(--text2); font-weight:600; border:1px solid var(--border); transition:all .15s; }
+.date-nav a:hover { border-color:var(--primary-bd); color:var(--text); }
+.date-nav a.on { background:var(--primary); color:#fff; border-color:var(--primary); }
 
-/* 시니어랩 — 서브탭 + 채널 칩 */
 .subtab-nav { display:flex; gap:6px; margin:6px 0 14px; }
-.subtab { padding:8px 16px; border-radius:20px; background:var(--hover); color:var(--text2); font-size:14px; font-weight:500; border:none; cursor:pointer; }
-.subtab.on { background:var(--blue); color:#fff; }
+.subtab { padding:7px 14px; border-radius:18px; background:var(--surface); color:var(--text2); font-size:13px; font-weight:600; border:1px solid var(--border); cursor:pointer; }
+.subtab:hover { border-color:var(--primary-bd); color:var(--text); }
+.subtab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
 .subtab.dim { opacity:.45; cursor:not-allowed; }
-.chan-chip { display:inline-block; font-size:11px; padding:2px 9px; border-radius:11px; background:var(--chip); color:var(--blue); font-weight:500; margin:3px 4px 0 0; }
+.chan-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:10px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; margin:3px 4px 0 0; border:1px solid var(--primary-bd); }
+
+/* Autopsy 페이지 폼 */
+.autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
+.autopsy-form .ah { font-size:15px; font-weight:800; color:var(--text); margin-bottom:4px; }
+.autopsy-form .asub { font-size:12px; color:var(--text2); margin-bottom:14px; }
+.autopsy-form textarea { width:100%; min-height:110px; padding:11px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; resize:vertical; }
+.autopsy-form textarea:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .row2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+.autopsy-form input[type=text] { padding:9px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; }
+.autopsy-form input[type=text]:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .actions { display:flex; gap:8px; margin-top:14px; align-items:center; }
+.autopsy-form button { padding:10px 22px; background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border:none; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer; box-shadow:0 0 16px rgba(168,85,247,.3); transition:all .15s; }
+.autopsy-form button:hover { box-shadow:0 0 22px rgba(168,85,247,.5); transform:translateY(-1px); }
+.autopsy-form button.ghost { background:var(--surface2); color:var(--text2); box-shadow:none; }
+.autopsy-form button.ghost:hover { color:var(--text); }
+.autopsy-form .hint { font-size:11px; color:var(--text3); margin-left:auto; }
+.autopsy-card { display:flex; flex-direction:column; min-height:130px; transition:all .18s; }
+.autopsy-card:hover { border-color:var(--primary) !important; box-shadow:0 4px 16px rgba(168,85,247,.18); }
 
 @media (max-width:600px) {
   body { padding:14px; }
-  header h1 { font-size:21px; }
+  header h1 { font-size:20px; }
   .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
-  .card .value { font-size:24px; }
+  .card .value { font-size:22px; }
   .ch-grid { grid-template-columns:1fr; }
   .filters { flex-direction:column; align-items:stretch; }
   .row-title { max-width:200px; }
   tbody td, thead th { padding:9px 8px; }
+  .ch-vid-dual { grid-template-columns:1fr; }
+  .autopsy-form .row2 { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -205,7 +278,7 @@ section table { margin:10px 0; }
   <header>
     <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
     <h1>🔥 Hot키워드</h1>
-    <div class="sub">여러 채널·여러 영상이 반복 폭발한 검증된 금광 키워드 누적 · 총 54개 · 2026-05-31 17:34</div>
+    <div class="sub">여러 채널·여러 영상이 반복 폭발한 검증된 금광 키워드 누적 · 총 54개 · 2026-05-31 18:31</div>
   </header>
 
   <div class="info-bar">
@@ -258,7 +331,7 @@ section table { margin:10px 0; }
   </table>
   </div>
 
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 17:34</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 18:31</footer>
 
   <script>
     const ARCHIVE = [{"archive_score": 33.0, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u76f8\u5bfe\u6027\u7406\u8ad6", "last_seen": "2026-05-29", "max_channels": 10, "max_total_views": 92869652, "max_videos": 12, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "\u4e88\u5099\u6821\u306e\u30ce\u30ea\u3067\u5b66\u3076\u300c\u5927\u5b66\u306e\u6570\u5b66\u30fb\u7269\u7406\u300d", "id": "voFHToRM4xI", "source": "science", "title": "\u4e2d\u5b66\u6570\u5b66\u304b\u3089\u306f\u3058\u3081\u308b\u76f8\u5bfe\u6027\u7406\u8ad6", "views": 24022386}}, {"archive_score": 32.2, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u96d1\u5b66", "last_seen": "2026-05-29", "max_channels": 10, "max_total_views": 14842824, "max_videos": 18, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u304a\u304b\u3060\u9332\u3010\u5ca1\u7530\u6597\u53f8\u592b\u5207\u308a\u629c\u304d\u3011", "id": "IigamhW02_4", "source": "seed", "title": "\u3010\u4f5c\u696d\u30fb\u7761\u7720\u7528\u3011\u4eba\u751f\u306e\u5f79\u306b\u7acb\u3064\u96d1\u5b66\uff06\u4eba\u751f\u76f8\u8ac7\u307e\u3068\u308124\u9078\uff01\u3010\u5ca1\u7530\u6597\u53f8\u592b/\u5207\u308a\u629c\u304d/\u96d1\u5b66/\u4eba\u751f\u76f8\u8ac7/\u304a\u3082\u3057\u308d\u96d1\u5b66/\u7761\u7720\u5b66\u7fd2/\u805e\u304d\u6d41\u3057/\u307e\u3068\u3081\u3011", "views": 2973160}}, {"archive_score": 28.6, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u5b87\u5b99", "last_seen": "2026-05-29", "max_channels": 8, "max_total_views": 38604393, "max_videos": 13, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "\u308b\u306a", "id": "jM02C3uSBXY", "source": "science", "title": "\u5b87\u5b99\u306e\u5927\u304d\u3055\u3092\u4f53\u611f\u3067\u304d\u308b\u52d5\u753b", "views": 13983336}}, {"archive_score": 26.7, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u6050\u7adc", "last_seen": "2026-05-29", "max_channels": 7, "max_total_views": 45457984, "max_videos": 10, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "\u30f4\u30a1\u30fc\u30cb\u30e3\u30fb\u30de\u30fc\u30cb\u30e3 \u65e5\u672c\u8a9e", "id": "WWE8SGk-RYU", "source": "science", "title": "\u6050\u7adc\u306e\u304a\u3082\u3061\u3083\u304c\u52d5\u304d\u51fa\u3057\u305f\uff01\ud83e\udd96\u2728\uff5c\u6050\u7adc\u3068\u5192\u967a\u3057\u3088\u3046\uff01", "views": 18478828}}, {"archive_score": 25.8, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u6226\u56fd\u6642\u4ee3", "last_seen": "2026-05-29", "max_channels": 7, "max_total_views": 6651040, "max_videos": 8, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "ReHacQ\u2212\u30ea\u30cf\u30c3\u30af\u2212\u3010\u516c\u5f0f\u3011", "id": "H6ZVuj7IGOM", "source": "seed", "title": "\u3010\u9ad8\u6a4b\u5f18\u6a39vs\u5449\u5ea7\u52c7\u4e00\u3011\u6226\u56fd\u6642\u4ee3\u306e\u30a6\u30bd\uff01\u8c4a\u81e3\u79c0\u5409\u306e\u6b63\u4f53\u3068\u306f\uff1f\u6b74\u53f2\u306b\u9a19\u3055\u308c\u306a\u3044\u65b9\u6cd5\u3010ReHacQvs\u7e54\u7530\u4fe1\u9577\u306e\u771f\u5b9f\u3011", "views": 2376639}}, {"archive_score": 23.8, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u5927\u4eba", "last_seen": "2026-05-29", "max_channels": 6, "max_total_views": 6781255, "max_videos": 9, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "\u30d1\u30bd\u30b3\u30f3\u535a\u58ebTAIKI", "id": "VWVqqyhlcu0", "source": "seed", "title": "\u3010\u5c0f\u5b66\u751f\u3067\u3082\u308f\u304b\u308b\u3011\u534a\u5c0e\u4f53\u3068\u306f\u4f55\u304b\uff1f\u3010\u5927\u4eba\u306e\u5b66\u3073\u306a\u304a\u3057\u3011", "views": 3056443}}, {"archive_score": 23.8, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u9762\u767d", "last_seen": "2026-05-29", "max_channels": 6, "max_total_views": 5704323, "max_videos": 6, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "VAIENCE \u30d0\u30a4\u30a8\u30f3\u30b9", "id": "h-gsDg6i3JQ", "source": "science", "title": "\u3010\u5b87\u5b99\u8ad6\u3011\u7720\u308c\u306a\u304f\u306a\u308b\u307b\u3069\u9762\u767d\u3044\u5b87\u5b99\u306e\u8a71", "views": 2061101}}, {"archive_score": 23.7, "category": "\uc2ec\ub9ac\ud559", "first_seen": "2026-05-29", "keyword": "\u5fc3\u7406\u5b66", "last_seen": "2026-05-29", "max_channels": 6, "max_total_views": 4821371, "max_videos": 7, "seen_days": 1, "top_video": {"categories": ["\uc2ec\ub9ac\ud559"], "channel": "\u30a2\u30d0\u30bf\u30ed\u30fc", "id": "DtJSzuBGMH0", "source": "seed", "title": "\u3010\u7a76\u6975\u3011\u4eba\u751f\u306e\u610f\u5473\u306e\u5fc3\u7406\u5b66\uff5c\u30a2\u30c9\u30e9\u30fc\u3000\u75b2\u308c\u305f\u5fc3\u306b\u52b9\u304f\u3001\u30a2\u30c9\u30e9\u30fc\u76f4\u4f1d\u306e\u6559\u3048", "views": 1519726}}, {"archive_score": 23.6, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u30ed\u30fc\u30de", "last_seen": "2026-05-29", "max_channels": 6, "max_total_views": 3860572, "max_videos": 6, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "\u30e6\u30fc\u30c6\u30e9\u6388\u696d\u30c1\u30e3\u30f3\u30cd\u30eb\u3010YouTube\u306e\u5bfa\u5b50\u5c4b\u3011", "id": "oO9NPqRwBVI", "source": "seed", "title": "3\u6642\u9593\u3067\u653b\u7565\uff01\u897f\u6d0b\u53e4\u4ee3\u53f2\u3010\u30aa\u30ea\u30a8\u30f3\u30c8\u30fb\u30ae\u30ea\u30b7\u30a2\u30fb\u30ed\u30fc\u30de\u3011\u4f50\u85e4\u5e78\u592b\u306e\u30bc\u30ed\u304b\u3089\u4e16\u754c\u53f2\u7dcf\u96c6\u7de8\u2460", "views": 2084883}}, {"archive_score": 22.4, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u5730\u7403", "last_seen": "2026-05-29", "max_channels": 5, "max_total_views": 23563002, "max_videos": 7, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "Kaoru GreenEmerald", "id": "GPdLEKzHd1g", "source": "science", "title": "\u5730\u7403\u305d\u3057\u3066\u751f\u547d\u306e\u8a95\u751f\u3068\u9032\u5316 \u3010\u5b8c\u6210\u7248\u3011", "views": 19458645}}, {"archive_score": 22.4, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u7b2c\u4e8c\u6b21\u4e16\u754c\u5927", "last_seen": "2026-05-29", "max_channels": 5, "max_total_views": 22600494, "max_videos": 7, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "\u30b8\u30aa\u30d2\u30b9\u30c8\u30ea\u30fc", "id": "JnXXYD8lXqY", "source": "seed", "title": "\u7b2c\u4e8c\u6b21\u4e16\u754c\u5927\u6226", "views": 9735164}}, {"archive_score": 22.2, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u4e16\u754c\u53f2", "last_seen": "2026-05-29", "max_channels": 5, "max_total_views": 16461477, "max_videos": 8, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "id": "NhLIT_gujm0", "source": "seed", "title": "\u3010\u4e16\u754c\u53f2\u2460/10\u3011\u53e4\u4ee3\u30fb\u4e2d\u4e16\u30e8\u30fc\u30ed\u30c3\u30d1\u306e\u6b74\u53f2 \u3010\u6700\u65b0\u7248\u3011", "views": 3894878}}, {"archive_score": 22.0, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u6642\u9593", "last_seen": "2026-05-29", "max_channels": 5, "max_total_views": 8984706, "max_videos": 9, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "YouTube\u9ad8\u6821 / \u65e5\u672c\u53f2\u30fb\u4e16\u754c\u53f2", "id": "zrAcyhxjbs8", "source": "seed", "title": "\u521d\u3081\u3066\u5b66\u3076\u7b2c\u4e8c\u6b21\u4e16\u754c\u5927\u6226\uff1a6\u6642\u9593\u3067\u305f\u3069\u308b\u5168\u4f53\u50cf", "views": 4063368}}, {"archive_score": 22.0, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u4f5c\u696d\u7528", "last_seen": "2026-05-29", "max_channels": 5, "max_total_views": 10114662, "max_videos": 8, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "Marley Stanley", "id": "4Zff3vkWM9M", "source": "seed", "title": "\u3010\u4f5c\u696d\u7528\u3011\u5c0f\u85ea\u3000\u4f55\u5ea6\u805e\u3044\u3066\u3082\u7b11\u3048\u308b\u30c8\u30fc\u30af\u96c6", "views": 3760257}}, {"archive_score": 21.9, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u7761\u7720\u7528", "last_seen": "2026-05-29", "max_channels": 5, "max_total_views": 7104551, "max_videos": 6, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u304a\u304b\u3060\u9332\u3010\u5ca1\u7530\u6597\u53f8\u592b\u5207\u308a\u629c\u304d\u3011", "id": "IigamhW02_4", "source": "seed", "title": "\u3010\u4f5c\u696d\u30fb\u7761\u7720\u7528\u3011\u4eba\u751f\u306e\u5f79\u306b\u7acb\u3064\u96d1\u5b66\uff06\u4eba\u751f\u76f8\u8ac7\u307e\u3068\u308124\u9078\uff01\u3010\u5ca1\u7530\u6597\u53f8\u592b/\u5207\u308a\u629c\u304d/\u96d1\u5b66/\u4eba\u751f\u76f8\u8ac7/\u304a\u3082\u3057\u308d\u96d1\u5b66/\u7761\u7720\u5b66\u7fd2/\u805e\u304d\u6d41\u3057/\u307e\u3068\u3081\u3011", "views": 2973160}}, {"archive_score": 20.1, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 13838279, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "National Geographic", "id": "kOEDG3j1bjs", "source": "science", "title": "\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb\u5165\u9580\uff5c\u30ca\u30b7\u30e7\u30ca\u30eb\u30b8\u30aa\u30b0\u30e9\u30d5\u30a3\u30c3\u30af", "views": 11360356}}, {"archive_score": 20.0, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u53e4\u4ee3", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 10900343, "max_videos": 9, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "id": "NhLIT_gujm0", "source": "seed", "title": "\u3010\u4e16\u754c\u53f2\u2460/10\u3011\u53e4\u4ee3\u30fb\u4e2d\u4e16\u30e8\u30fc\u30ed\u30c3\u30d1\u306e\u6b74\u53f2 \u3010\u6700\u65b0\u7248\u3011", "views": 3894878}}, {"archive_score": 19.9, "category": "\uacbd\uc81c", "first_seen": "2026-05-29", "keyword": "\u534a\u5c0e\u4f53", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 7524092, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "\u30d1\u30bd\u30b3\u30f3\u535a\u58ebTAIKI", "id": "VWVqqyhlcu0", "source": "seed", "title": "\u3010\u5c0f\u5b66\u751f\u3067\u3082\u308f\u304b\u308b\u3011\u534a\u5c0e\u4f53\u3068\u306f\u4f55\u304b\uff1f\u3010\u5927\u4eba\u306e\u5b66\u3073\u306a\u304a\u3057\u3011", "views": 3056443}}, {"archive_score": 19.8, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u6717\u8aad", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 6659640, "max_videos": 6, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc\u3057\u307e\u3048\u308a\u3053\u306e\u6717\u8aad\u8aad\u307f\u805e\u304b\u305b", "id": "mrWqaZ4cfbI", "source": "seed", "title": "\u3010\u7761\u7720\u5c0e\u5165\u3011\u7720\u308c\u308b\u6717\u8aad\u300c\u9280\u6cb3\u9244\u9053\u306e\u591c\u300d\u5bae\u6ca2\u8ce2\u6cbb\u3010\u5143\uff2e\uff28\uff2b\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc\u5cf6 \u6c38\u540f\u5b50\u3011\u5b57\u5e55\u3064\u304d", "views": 3652318}}, {"archive_score": 19.8, "category": "\uacbd\uc81c", "first_seen": "2026-05-29", "keyword": "\u65e5\u672c\u4eba", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 6703957, "max_videos": 4, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "PIVOT \u516c\u5f0f\u30c1\u30e3\u30f3\u30cd\u30eb", "id": "bw2pLH7v8Rw", "source": "science", "title": "\u3010\u4eba\u985e\u306f\u3069\u3053\u304b\u3089\u6765\u3066\u3001\u3069\u3053\u306b\u5411\u304b\u3046\u306e\u304b\u3011\u56fd\u7acb\u79d1\u5b66\u535a\u7269\u9928\u9928\u9577\u30fb\u7be0\u7530\u8b19\u4e00\uff0f\u30ce\u30fc\u30d9\u30eb\u8cde\u53d7\u8cde\u7814\u7a76\u304c\u660e\u3089\u304b\u306b\u3057\u305f\u4eba\u985e\u306e\u8d77\u6e90\uff0f\u300c\u65e5\u672c\u4eba\u300d\u306e\u8d77\u6e90\u3068\u306f\uff0f\u300c\u79d1\u535a\u30af\u30e9\u30d5\u30a1\u30f3\u300d\u306e\u88cf\u5074\u3068\u76ee\u7684\u3010EXTREME SCIENCE\u3011", "views": 3121441}}, {"archive_score": 19.7, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u4eba\u985e", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 5337764, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "PIVOT \u516c\u5f0f\u30c1\u30e3\u30f3\u30cd\u30eb", "id": "bw2pLH7v8Rw", "source": "science", "title": "\u3010\u4eba\u985e\u306f\u3069\u3053\u304b\u3089\u6765\u3066\u3001\u3069\u3053\u306b\u5411\u304b\u3046\u306e\u304b\u3011\u56fd\u7acb\u79d1\u5b66\u535a\u7269\u9928\u9928\u9577\u30fb\u7be0\u7530\u8b19\u4e00\uff0f\u30ce\u30fc\u30d9\u30eb\u8cde\u53d7\u8cde\u7814\u7a76\u304c\u660e\u3089\u304b\u306b\u3057\u305f\u4eba\u985e\u306e\u8d77\u6e90\uff0f\u300c\u65e5\u672c\u4eba\u300d\u306e\u8d77\u6e90\u3068\u306f\uff0f\u300c\u79d1\u535a\u30af\u30e9\u30d5\u30a1\u30f3\u300d\u306e\u88cf\u5074\u3068\u76ee\u7684\u3010EXTREME SCIENCE\u3011", "views": 3121441}}, {"archive_score": 19.7, "category": "\uacbd\uc81c", "first_seen": "2026-05-29", "keyword": "\u4e07\u5186", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 5000851, "max_videos": 4, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "\u30b5\u30e9\u30c0\u306e\u304a\u91d1\u76f8\u8ac7\u6240", "id": "mL0bwzi8KFM", "source": "seed", "title": "\u3010\u7dca\u6025\u89e3\u8aac\u30112026\u5e744\u6708\u304b\u3089\u30eb\u30fc\u30eb\u5909\u66f4\uff01\u5e74\u91d1\uff0b7\u4e07\u5186\u304c\u4e00\u751f\u4e0a\u4e57\u305b\u652f\u7d66\uff01\u7d66\u4ed8\u91d1\u984d\u30fb\u7533\u8acb\u65b9\u6cd5\u3092\u89e3\u8aac\u3010\u5e74\u91d1\u751f\u6d3b/\u8001\u5f8c\u3011", "views": 2873604}}, {"archive_score": 19.6, "category": "\uc2ec\ub9ac\ud559", "first_seen": "2026-05-29", "keyword": "\u4eba\u9593\u95a2\u4fc2", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 3991012, "max_videos": 4, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u306a\u3093\u3068\u306a\u304f\u898b\u308b\u96d1\u5b66", "id": "xHIekkb9V4s", "source": "seed", "title": "\u3010\u96d1\u5b66\u3011\u4eba\u9593\u95a2\u4fc2\u3068\u65e5\u5e38\u306e\u96d1\u5b66", "views": 2877551}}, {"archive_score": 19.5, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u771f\u5b9f", "last_seen": "2026-05-29", "max_channels": 4, "max_total_views": 3064358, "max_videos": 4, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "ReHacQ\u2212\u30ea\u30cf\u30c3\u30af\u2212\u3010\u516c\u5f0f\u3011", "id": "H6ZVuj7IGOM", "source": "seed", "title": "\u3010\u9ad8\u6a4b\u5f18\u6a39vs\u5449\u5ea7\u52c7\u4e00\u3011\u6226\u56fd\u6642\u4ee3\u306e\u30a6\u30bd\uff01\u8c4a\u81e3\u79c0\u5409\u306e\u6b63\u4f53\u3068\u306f\uff1f\u6b74\u53f2\u306b\u9a19\u3055\u308c\u306a\u3044\u65b9\u6cd5\u3010ReHacQvs\u7e54\u7530\u4fe1\u9577\u306e\u771f\u5b9f\u3011", "views": 2376639}}, {"archive_score": 18.5, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u9032\u5316", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 30422318, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "Kaoru GreenEmerald", "id": "GPdLEKzHd1g", "source": "science", "title": "\u5730\u7403\u305d\u3057\u3066\u751f\u547d\u306e\u8a95\u751f\u3068\u9032\u5316 \u3010\u5b8c\u6210\u7248\u3011", "views": 19458645}}, {"archive_score": 18.4, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u751f\u547d", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 24831971, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "Kaoru GreenEmerald", "id": "GPdLEKzHd1g", "source": "science", "title": "\u5730\u7403\u305d\u3057\u3066\u751f\u547d\u306e\u8a95\u751f\u3068\u9032\u5316 \u3010\u5b8c\u6210\u7248\u3011", "views": 19458645}}, {"archive_score": 18.3, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u8a95\u751f", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 22337376, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "Kaoru GreenEmerald", "id": "GPdLEKzHd1g", "source": "science", "title": "\u5730\u7403\u305d\u3057\u3066\u751f\u547d\u306e\u8a95\u751f\u3068\u9032\u5316 \u3010\u5b8c\u6210\u7248\u3011", "views": 19458645}}, {"archive_score": 18.2, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u4f5c\u696d", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 17318443, "max_videos": 9, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "VAIENCE \u30d0\u30a4\u30a8\u30f3\u30b9", "id": "yi3S-zX84yU", "source": "seed", "title": "\u3010\u8d85\u885d\u6483\u3011\u5bdd\u306a\u304c\u3089\u8074\u3051\u308b\u5b87\u5b99\u306e\u8a71\u3010\u52c9\u5f37\u3084\u4f5c\u696d\u306b\u6700\u9069\u3011", "views": 4859691}}, {"archive_score": 18.1, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u30d6\u30e9\u30c3\u30af\u30db", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 13237399, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "National Geographic", "id": "kOEDG3j1bjs", "source": "science", "title": "\u30d6\u30e9\u30c3\u30af\u30db\u30fc\u30eb\u5165\u9580\uff5c\u30ca\u30b7\u30e7\u30ca\u30eb\u30b8\u30aa\u30b0\u30e9\u30d5\u30a3\u30c3\u30af", "views": 11360249}}, {"archive_score": 18.1, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u592a\u5e73\u6d0b\u6226\u4e89", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 13796774, "max_videos": 4, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "\u5927\u4eba\u306e\u6559\u990aTV", "id": "PhRyRekbtEk", "source": "seed", "title": "\u3010\u592a\u5e73\u6d0b\u6226\u4e89\u3011\u958b\u6226\u304b\u3089\u7d42\u7d50\u307e\u3067\u308f\u304b\u308a\u3084\u3059\u304f\u89e3\u8aac", "views": 6245274}}, {"archive_score": 18.1, "category": "\uacbd\uc81c", "first_seen": "2026-05-29", "keyword": "\u73fe\u5b9f", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 13387574, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "FNN\u30d7\u30e9\u30a4\u30e0\u30aa\u30f3\u30e9\u30a4\u30f3", "id": "kcq3jEKky6g", "source": "seed", "title": "\u3010\u3057\u3089\u3079\u3066\u307f\u305f\u3089\u3011\u591c\u306f\u201d\u61d0\u4e2d\u96fb\u706f\u201d\u751f\u6d3b\u30fb\u30fb\u30fb\u5e74\u91d1\u66ae\u3089\u3057\u306e\u53b3\u3057\u3044\u73fe\u5b9f", "views": 10256458}}, {"archive_score": 18.1, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u751f\u6d3b", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 13045493, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "FNN\u30d7\u30e9\u30a4\u30e0\u30aa\u30f3\u30e9\u30a4\u30f3", "id": "kcq3jEKky6g", "source": "seed", "title": "\u3010\u3057\u3089\u3079\u3066\u307f\u305f\u3089\u3011\u591c\u306f\u201d\u61d0\u4e2d\u96fb\u706f\u201d\u751f\u6d3b\u30fb\u30fb\u30fb\u5e74\u91d1\u66ae\u3089\u3057\u306e\u53b3\u3057\u3044\u73fe\u5b9f", "views": 10256458}}, {"archive_score": 18.0, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u30eb\u30fc\u30c6\u30a3\u30f3", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 10199449, "max_videos": 4, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "\u30f4\u30a1\u30fc\u30cb\u30e3\u30fb\u30de\u30fc\u30cb\u30e3 \u65e5\u672c\u8a9e", "id": "p2qKN2Ec3rE", "source": "seed", "title": "\u6050\u7adc\u3068\u306e\u671d\u306e\u30eb\u30fc\u30c6\u30a3\u30f3\uff01\ud83e\udd96\ud83d\udca5 | \u6050\u7adc\u3068\u4e00\u7dd2\u306b\u5192\u967a\u306b\u51fa\u304b\u3051\u3088\u3046\uff01", "views": 6479111}}, {"archive_score": 17.9, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u65e5\u672c\u53f2", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 7188161, "max_videos": 8, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "\u4e2d\u7530\u6566\u5f66\u306eYouTube\u5927\u5b66 - NAKATA UNIVERSITY", "id": "pGroc3O2V4Y", "source": "seed", "title": "\u3010\u65e5\u672c\u53f2\u2460\u3011\u539f\u59cb\u301c\u5e73\u5b89\u6642\u4ee3\uff01\u65e5\u672c\u5275\u751f\u3068\u5909\u9769\u306e\u591c\u660e\u3051\u3010Update\u7248\u3011", "views": 1405034}}, {"archive_score": 17.8, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u7761\u7720\u5c0e\u5165", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 6428012, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc\u3057\u307e\u3048\u308a\u3053\u306e\u6717\u8aad\u8aad\u307f\u805e\u304b\u305b", "id": "mrWqaZ4cfbI", "source": "seed", "title": "\u3010\u7761\u7720\u5c0e\u5165\u3011\u7720\u308c\u308b\u6717\u8aad\u300c\u9280\u6cb3\u9244\u9053\u306e\u591c\u300d\u5bae\u6ca2\u8ce2\u6cbb\u3010\u5143\uff2e\uff28\uff2b\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc\u5cf6 \u6c38\u540f\u5b50\u3011\u5b57\u5e55\u3064\u304d", "views": 3652318}}, {"archive_score": 17.8, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u5b57\u5e55", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 6709623, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc\u3057\u307e\u3048\u308a\u3053\u306e\u6717\u8aad\u8aad\u307f\u805e\u304b\u305b", "id": "mrWqaZ4cfbI", "source": "seed", "title": "\u3010\u7761\u7720\u5c0e\u5165\u3011\u7720\u308c\u308b\u6717\u8aad\u300c\u9280\u6cb3\u9244\u9053\u306e\u591c\u300d\u5bae\u6ca2\u8ce2\u6cbb\u3010\u5143\uff2e\uff28\uff2b\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc\u5cf6 \u6c38\u540f\u5b50\u3011\u5b57\u5e55\u3064\u304d", "views": 3652318}}, {"archive_score": 17.7, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u90fd\u5e02\u4f1d\u8aac", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 4866384, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u3046\u3058\u3068\u3046\u3048\u3060", "id": "VJxpo1Meb68", "source": "seed", "title": "\u3010\u6050\u6016\u3011\u90fd\u5e02\u4f1d\u8aac\u5927\u304d\u3089\u3044\u7537 vs \u90fd\u5e02\u4f1d\u8aac\u306b\u72c2\u308f\u3055\u308c\u305f\u7537\u3010\u798f\u5ca1\u65c5\u3011", "views": 3593794}}, {"archive_score": 17.6, "category": "\uacbd\uc81c", "first_seen": "2026-05-29", "keyword": "\u521d\u5fc3\u8005\u5411", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 4230154, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "\u4e21\u5b66\u9577 \u30ea\u30d9\u30e9\u30eb\u30a2\u30fc\u30c4\u5927\u5b66", "id": "wnUynxpxJS4", "source": "seed", "title": "\u3010\u521d\u5fc3\u8005\u5411\u3051\u3011\u8cc7\u7523\u904b\u7528\u3063\u3066\u7d50\u5c40\u3069\u3046\u3059\u308c\u3070\u826f\u3044\u306e\uff1f\u306b\u5bfe\u3059\u308b\u5177\u4f53\u7684\u56de\u7b54\u3010\u8d85\u30b7\u30f3\u30d7\u30eb\u30d7\u30e9\u30f3\u3011\u3010\u682a\u5f0f\u6295\u8cc7\u7de8\u3011\uff08\u30a2\u30cb\u30e1\u52d5\u753b\uff09\uff1a\u7b2c17\u56de", "views": 3447072}}, {"archive_score": 17.6, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u7e54\u7530\u4fe1\u9577", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 3882937, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "ReHacQ\u2212\u30ea\u30cf\u30c3\u30af\u2212\u3010\u516c\u5f0f\u3011", "id": "H6ZVuj7IGOM", "source": "seed", "title": "\u3010\u9ad8\u6a4b\u5f18\u6a39vs\u5449\u5ea7\u52c7\u4e00\u3011\u6226\u56fd\u6642\u4ee3\u306e\u30a6\u30bd\uff01\u8c4a\u81e3\u79c0\u5409\u306e\u6b63\u4f53\u3068\u306f\uff1f\u6b74\u53f2\u306b\u9a19\u3055\u308c\u306a\u3044\u65b9\u6cd5\u3010ReHacQvs\u7e54\u7530\u4fe1\u9577\u306e\u771f\u5b9f\u3011", "views": 2376639}}, {"archive_score": 17.5, "category": "\uc2ec\ub9ac\ud559", "first_seen": "2026-05-29", "keyword": "\u5929\u624d", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 3504208, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "ReHacQ\u2212\u30ea\u30cf\u30c3\u30af\u2212\u3010\u516c\u5f0f\u3011", "id": "hio2XdBPW5Y", "source": "science", "title": "\u3010\u6210\u7530\u60a0\u8f14\u304c\u63a8\u85a6\u306e\u5929\u624d\u3011\u76f8\u5bfe\u6027\u7406\u8ad6\uff01\uff16\u6b73\u306b\u308f\u304b\u308b\u3088\u3046\u306b\u8aac\u660e\u3057\u3066\u307f\u3088\u3046\uff01\u3010ReHacQvsUC\u30d0\u30fc\u30af\u30ec\u30fc\u3011", "views": 2692491}}, {"archive_score": 17.5, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u6642\u4ee3", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 3033148, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "Netflix Japan", "id": "_A95GVlD1Zg", "source": "science", "title": "\u6050\u7adc\u304c\u9b5a\u91e3\u308a\uff1f - \u30b9\u30d4\u30ce\u30b5\u30a6\u30eb\u30b9\u306e\u72e9\u308a\u306e\u5fc3\u5f97\ud83e\udd95 | \u30c0\u30a4\u30ca\u30bd\u30fc\u30ba: \u6050\u7adc\u306e\u6642\u4ee3 | Netflix Japan", "views": 1561998}}, {"archive_score": 17.5, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u8133\u79d1\u5b66", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 3128522, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "\u65e5\u672c\u795e\u7d4c\u79d1\u5b66\u5b66\u4f1a\u5e02\u6c11\u516c\u958b\u4f01\u753b", "id": "IWit9QzIDBU", "source": "science", "title": "\u3010\u8133\u79d1\u5b66\u306e\u9054\u4eba\u3011\u6c60\u8c37 \u88d5\u4e8c\u3010\u7b2c38\u56de\u65e5\u672c\u795e\u7d4c\u79d1\u5b66\u5927\u4f1a \u5e02\u6c11\u516c\u958b\u8b1b\u5ea7\u3011", "views": 1819719}}, {"archive_score": 17.5, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u65b9\u6cd5", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 3308761, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "ReHacQ\u2212\u30ea\u30cf\u30c3\u30af\u2212\u3010\u516c\u5f0f\u3011", "id": "H6ZVuj7IGOM", "source": "seed", "title": "\u3010\u9ad8\u6a4b\u5f18\u6a39vs\u5449\u5ea7\u52c7\u4e00\u3011\u6226\u56fd\u6642\u4ee3\u306e\u30a6\u30bd\uff01\u8c4a\u81e3\u79c0\u5409\u306e\u6b63\u4f53\u3068\u306f\uff1f\u6b74\u53f2\u306b\u9a19\u3055\u308c\u306a\u3044\u65b9\u6cd5\u3010ReHacQvs\u7e54\u7530\u4fe1\u9577\u306e\u771f\u5b9f\u3011", "views": 2376639}}, {"archive_score": 17.4, "category": "\uacbd\uc81c", "first_seen": "2026-05-29", "keyword": "\u5d29\u58ca", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 2632635, "max_videos": 4, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "\u697d\u5f85 RAKUMACHI", "id": "_nm96YANSko", "source": "seed", "title": "\u3010\u6df1\u523b\u3011\u4e2d\u56fd\u7d4c\u6e08\u4f4e\u8ff7\u3067\u5e83\u304c\u308b\u793e\u4f1a\u4e0d\u5b89\u3001\u4e0d\u52d5\u7523\u30d0\u30d6\u30eb\u5d29\u58ca\u306e\u5f71\u306b\u6b6a\u306a\u793e\u4f1a\u69cb\u9020\u2026\u4e2d\u56fd\u306f\u65e5\u672c\u306e\u201d\u5931\u308f\u308c\u305f30\u5e74\u201d\u3068\u540c\u3058\u9053\u3092\u8fbf\u308b!?", "views": 1214994}}, {"archive_score": 17.4, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u6c5f\u6238", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 2683350, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "\u6c5f\u6238\u898b\u805e\u9332", "id": "06nAGQeGtmE", "source": "seed", "title": "\u6c5f\u6238\u306e\u753a\u306f\u3069\u306e\u3088\u3046\u306b\u9020\u3089\u308c\u305f\u306e\u304b\uff1f\u5fb3\u5ddd\u5bb6\u306b\u3088\u308b\u6c5f\u6238\u57ce\u306e\u5929\u4e0b\u666e\u8acb\u3068\u57ce\u4e0b\u753a\u3065\u304f\u308a", "views": 1926314}}, {"archive_score": 17.3, "category": "\uacbd\uc81c", "first_seen": "2026-05-29", "keyword": "\u30d0\u30d6\u30eb", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 1962476, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "\u697d\u5f85 RAKUMACHI", "id": "_nm96YANSko", "source": "seed", "title": "\u3010\u6df1\u523b\u3011\u4e2d\u56fd\u7d4c\u6e08\u4f4e\u8ff7\u3067\u5e83\u304c\u308b\u793e\u4f1a\u4e0d\u5b89\u3001\u4e0d\u52d5\u7523\u30d0\u30d6\u30eb\u5d29\u58ca\u306e\u5f71\u306b\u6b6a\u306a\u793e\u4f1a\u69cb\u9020\u2026\u4e2d\u56fd\u306f\u65e5\u672c\u306e\u201d\u5931\u308f\u308c\u305f30\u5e74\u201d\u3068\u540c\u3058\u9053\u3092\u8fbf\u308b!?", "views": 1214994}}, {"archive_score": 17.3, "category": "\uacbd\uc81c", "first_seen": "2026-05-29", "keyword": "\u4e0d\u52d5\u7523", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 1962476, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "\u697d\u5f85 RAKUMACHI", "id": "_nm96YANSko", "source": "seed", "title": "\u3010\u6df1\u523b\u3011\u4e2d\u56fd\u7d4c\u6e08\u4f4e\u8ff7\u3067\u5e83\u304c\u308b\u793e\u4f1a\u4e0d\u5b89\u3001\u4e0d\u52d5\u7523\u30d0\u30d6\u30eb\u5d29\u58ca\u306e\u5f71\u306b\u6b6a\u306a\u793e\u4f1a\u69cb\u9020\u2026\u4e2d\u56fd\u306f\u65e5\u672c\u306e\u201d\u5931\u308f\u308c\u305f30\u5e74\u201d\u3068\u540c\u3058\u9053\u3092\u8fbf\u308b!?", "views": 1214994}}, {"archive_score": 16.9, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u610f\u5916", "last_seen": "2026-05-29", "max_channels": 3, "max_total_views": 849526, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacbd\uc81c"], "channel": "PIVOT \u516c\u5f0f\u30c1\u30e3\u30f3\u30cd\u30eb", "id": "3E4Od9f1XHs", "source": "seed", "title": "\u3010\u500b\u5225\u682a\u6295\u8cc7\uff1a\u5165\u9580\u7de8\u30113\u3064\u306e\u516c\u5f0f\u3092\u899a\u3048\u3066\u3001\u4f01\u696d\u5206\u6790\u305b\u3088\uff0f\u9ad8\u5024\u63b4\u307f\u3092\u56de\u907f\u3059\u308b\u300c\u7269\u5dee\u3057\u300d\uff0f\u610f\u5916\u3068\u52d8\u9055\u3044\u3057\u3066\u308bPER\u306e\u610f\u5473\uff0fPER15\u500d\u3067\u5224\u65ad\u3059\u308b\u306a\uff0f\u91d1\u5229\u304c\u682a\u4fa1\u306b\u5f71\u97ff\u3092\u4e0e\u3048\u308b\u4ed5\u7d44\u307f", "views": 494333}}, {"archive_score": 16.2, "category": "\uacfc\ud559", "first_seen": "2026-05-29", "keyword": "\u9707\u64bc", "last_seen": "2026-05-29", "max_channels": 2, "max_total_views": 14725907, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uacfc\ud559"], "channel": "\u8001\u9ad8\u8207\u5c0f\u8309 Mr \u0026 Mrs Gao", "id": "yNFgOL-7nOw", "source": "science", "title": "\u3010\u9707\u64bc\u3011\u9032\u5316\uff0c\u5f9e1859\u52302020 | \u8001\u9ad8\u8207\u5c0f\u8309 Mr \u0026 Mrs Gao", "views": 8131771}}, {"archive_score": 15.9, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u4eba\u751f", "last_seen": "2026-05-29", "max_channels": 2, "max_total_views": 7524237, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u304a\u304b\u3060\u9332\u3010\u5ca1\u7530\u6597\u53f8\u592b\u5207\u308a\u629c\u304d\u3011", "id": "IigamhW02_4", "source": "seed", "title": "\u3010\u4f5c\u696d\u30fb\u7761\u7720\u7528\u3011\u4eba\u751f\u306e\u5f79\u306b\u7acb\u3064\u96d1\u5b66\uff06\u4eba\u751f\u76f8\u8ac7\u307e\u3068\u308124\u9078\uff01\u3010\u5ca1\u7530\u6597\u53f8\u592b/\u5207\u308a\u629c\u304d/\u96d1\u5b66/\u4eba\u751f\u76f8\u8ac7/\u304a\u3082\u3057\u308d\u96d1\u5b66/\u7761\u7720\u5b66\u7fd2/\u805e\u304d\u6d41\u3057/\u307e\u3068\u3081\u3011", "views": 2973160}}, {"archive_score": 15.6, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc", "last_seen": "2026-05-29", "max_channels": 2, "max_total_views": 4430390, "max_videos": 5, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc\u3057\u307e\u3048\u308a\u3053\u306e\u6717\u8aad\u8aad\u307f\u805e\u304b\u305b", "id": "mrWqaZ4cfbI", "source": "seed", "title": "\u3010\u7761\u7720\u5c0e\u5165\u3011\u7720\u308c\u308b\u6717\u8aad\u300c\u9280\u6cb3\u9244\u9053\u306e\u591c\u300d\u5bae\u6ca2\u8ce2\u6cbb\u3010\u5143\uff2e\uff28\uff2b\u30d5\u30ea\u30fc\u30a2\u30ca\u30a6\u30f3\u30b5\u30fc\u5cf6 \u6c38\u540f\u5b50\u3011\u5b57\u5e55\u3064\u304d", "views": 3652318}}, {"archive_score": 15.5, "category": "\uc5ed\uc0ac", "first_seen": "2026-05-29", "keyword": "\u6539\u8a02\u7248", "last_seen": "2026-05-29", "max_channels": 2, "max_total_views": 2981167, "max_videos": 4, "seen_days": 1, "top_video": {"categories": ["\uc5ed\uc0ac"], "channel": "\u305f\u308d\u30fc\u3067\u3059\u3010\u6b74\u53f2\u89e3\u8aac\u3011", "id": "UqOTcsfMegs", "source": "seed", "title": "10\u6642\u9593\u3067\u53d7\u9a13\u4e16\u754c\u53f2\u3092\u8a71\u3059\u3060\u3051\u306e\u52d5\u753b\u3002\u3010\u6539\u8a02\u7248\u3011", "views": 2015315}}, {"archive_score": 14.9, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u5f79\u7acb", "last_seen": "2026-05-29", "max_channels": 2, "max_total_views": 843443, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u304a\u304b\u3060\u9332\u3010\u5ca1\u7530\u6597\u53f8\u592b\u5207\u308a\u629c\u304d\u3011", "id": "ZdkfuN7pXrk", "source": "seed", "title": "\u3010\u4f5c\u696d\u30fb\u7761\u7720\u30fb\u805e\u304d\u6d41\u3057\u7528\u3011\u4eba\u751f\u306b\u5f79\u7acb\u3064\u6709\u6599\u7d1a\u306e\u96d1\u5b66\uff06\u4eba\u751f\u76f8\u8ac724\u9078 \u3010\u5ca1\u7530\u6597\u53f8\u592b/\u5207\u308a\u629c\u304d/\u96d1\u5b66/\u4eba\u751f\u76f8\u8ac7/\u304a\u3082\u3057\u308d\u96d1\u5b66/\u7761\u7720\u5b66\u7fd2/\u307e\u3068\u3081\u3011", "views": 336971}}, {"archive_score": 14.9, "category": "\uc9c0\uc2dd", "first_seen": "2026-05-29", "keyword": "\u30c8\u30ea\u30d3\u30a2", "last_seen": "2026-05-29", "max_channels": 2, "max_total_views": 738100, "max_videos": 3, "seen_days": 1, "top_video": {"categories": ["\uc9c0\uc2dd"], "channel": "\u3061\u3087\u3063\u3074\u308a\u77e5\u308a\u305f\u3044\u96d1\u5b66", "id": "EkW3EzVI83U", "source": "seed", "title": "\u3010\u805e\u304d\u6d41\u3057\u3011\u3061\u3087\u3063\u3074\u308a\u77e5\u308a\u305f\u3044\u5f79\u7acb\u3064\u96d1\u5b66\u30c8\u30ea\u30d3\u30a2\u8c46\u77e5\u8b58\u3010\u4f5c\u696d\u30fb\u7761\u7720\u7528\u3011", "views": 310554}}];
@@ -289,7 +362,7 @@ section table { margin:10px 0; }
       const tb = document.getElementById('archBody');
       if (!list.length){ tb.innerHTML = '<tr><td colspan="7" style="text-align:center;color:#5f6368;padding:30px;">없음</td></tr>'; return; }
       tb.innerHTML = list.map((a,i) => {
-        const persist = a.seen_days>=2 ? `<b style="color:#1e8e3e;">${a.seen_days}일</b>` : `<span class="muted">${a.seen_days}일</span>`;
+        const persist = a.seen_days>=2 ? `<b style="color:var(--hot);">${a.seen_days}일</b>` : `<span class="muted">${a.seen_days}일</span>`;
         return `<tr>
           <td class="rank">${i+1}</td>
           <td><span class="kw">${esc(a.keyword)}</span> ${catBadge(a.category)}</td>
