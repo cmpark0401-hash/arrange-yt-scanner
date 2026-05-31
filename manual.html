@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#a855f7">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>📖 TubeHacker 사용 가이드</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+:root {
+  /* 다크 베이스 */
+  --bg:#0a0a12; --surface:#13131c; --surface2:#1a1a26;
+  --border:#26263a; --divider:#1f1f30; --hover:#1e1e2e;
+  /* 텍스트 */
+  --text:#ededf2; --text2:#9696a6; --text3:#6c6c80;
+  /* 키 컬러 — 보라 (알고리즘 해킹) */
+  --primary:#a855f7; --primary-hi:#c084fc; --primary-bg:rgba(168,85,247,.12); --primary-bd:rgba(168,85,247,.35);
+  /* 보조 강조 */
+  --hot:#84cc16;        /* 라임 — 폭발/검증 */
+  --hot-bg:rgba(132,204,22,.10); --hot-bd:rgba(132,204,22,.35);
+  --warn:#ff7a45;       /* 오렌지 — 시그널 */
+  --warn-bg:rgba(255,122,69,.10); --warn-bd:rgba(255,122,69,.35);
+  --danger:#ef4444;     /* 빨강 — 폭락 */
+  --danger-bg:rgba(239,68,68,.10); --danger-bd:rgba(239,68,68,.35);
+  --up:#4ade80; --down:#ef4444;  /* 등락 */
+  --info:#60a5fa; --info-bg:rgba(96,165,250,.10);
+  /* 호환 (구 변수명) */
+  --blue:var(--primary); --green:var(--up); --red:var(--danger); --purple:var(--primary-hi);
+  --chip:rgba(168,85,247,.13);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Inter','Noto Sans KR',-apple-system,sans-serif;
+  line-height:1.5; color:var(--text); background:var(--bg);
+  max-width:1320px; margin:0 auto; padding:18px 20px 48px;
+  -webkit-font-smoothing:antialiased; font-feature-settings:'cv11','ss01';
+}
+header { padding:14px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px;
+         display:flex; flex-wrap:wrap; align-items:center; gap:14px; }
+header .brand-block { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+header h1 { font-size:13px; font-weight:400; color:var(--text2); line-height:1.3; letter-spacing:0; display:flex; align-items:baseline; gap:8px; }
+header h1 .brand-flag { font-size:18px; line-height:1; }
+header h1 .brand-accent { color:var(--primary); font-weight:800; font-size:22px; letter-spacing:-0.5px; }
+header h1 .brand-divider { color:var(--text3); margin:0 2px; }
+header h1 .brand-slogan { font-size:13px; color:var(--text2); font-weight:400; }
+header .sub { color:var(--text3); font-size:12px; margin-top:4px; flex-basis:100%; }
+header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; align-items:center; }
+.h-chip { display:inline-flex; align-items:center; gap:5px; padding:5px 11px; border-radius:13px;
+          background:var(--surface); border:1px solid var(--border); font-size:12px; color:var(--text2); font-weight:500; }
+.h-chip b { color:var(--text); font-weight:700; font-variant-numeric:tabular-nums; }
+.h-chip.warn { border-color:var(--warn-bd); background:var(--warn-bg); color:var(--warn); }
+.h-chip.warn b { color:var(--warn); }
+.h-chip.hot { border-color:var(--hot-bd); background:var(--hot-bg); color:var(--hot); }
+.h-chip.hot b { color:var(--hot); }
+.h-chip.info { border-color:var(--primary-bd); background:var(--primary-bg); color:var(--primary-hi); }
+.h-chip.info b { color:var(--primary-hi); }
+.h-chip.jp { background:var(--surface); border-color:var(--border); color:var(--text); font-weight:600; cursor:pointer; transition:all .15s; }
+.h-chip.jp:hover { background:var(--primary-bg); border-color:var(--primary); color:var(--primary-hi); text-decoration:none; }
+a { color:var(--primary-hi); text-decoration:none; transition:color .15s; }
+a:hover { color:var(--primary); text-decoration:none; }
+
+/* 요약 카드 */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:22px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px 18px; transition:transform .15s, border-color .15s; }
+.card:hover { transform:translateY(-1px); border-color:var(--primary-bd); }
+.card .label { font-size:12px; color:var(--text2); margin-bottom:8px; font-weight:600; display:flex; align-items:center; gap:5px; text-transform:none; letter-spacing:0; }
+.card .value { font-size:30px; font-weight:800; letter-spacing:-0.6px; line-height:1.05; font-variant-numeric:tabular-nums; }
+.card.tone-red { background:var(--danger-bg); border-color:var(--danger-bd); }
+.card.tone-red .value { color:var(--danger); }
+.card.tone-green { background:var(--hot-bg); border-color:var(--hot-bd); }
+.card.tone-green .value { color:var(--hot); }
+.card.tone-blue { background:var(--primary-bg); border-color:var(--primary-bd); }
+.card.tone-blue .value { color:var(--primary-hi); }
+.card.tone-purple { background:rgba(168,85,247,.18); border-color:rgba(168,85,247,.4); }
+.card.tone-purple .value { color:var(--primary-hi); }
+.card.tone-warn { background:var(--warn-bg); border-color:var(--warn-bd); }
+.card.tone-warn .value { color:var(--warn); }
+
+/* 카테고리 탭 */
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:18px 0 14px; }
+.tab { padding:6px 13px; border-radius:16px; background:var(--surface); color:var(--text2);
+       font-size:13px; font-weight:600; cursor:pointer; border:1px solid var(--border); transition:all .15s; }
+.tab:hover { border-color:var(--primary-bd); color:var(--text); }
+.tab.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+.tab .cnt { font-size:11px; opacity:.85; margin-left:5px; padding:1px 6px; background:rgba(255,255,255,.15); border-radius:8px; }
+
+/* 필터 바 */
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:18px;
+           padding:12px 16px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
+.filter-group { display:flex; gap:5px; align-items:center; }
+.filter-group .lbl { font-size:11px; color:var(--text2); margin-right:5px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--bg); }
+.seg button { padding:6px 12px; border:none; background:transparent; font-size:13px; cursor:pointer; color:var(--text2); font-weight:500; transition:all .15s; }
+.seg button:hover { color:var(--text); background:var(--hover); }
+.seg button.active { background:var(--primary); color:#fff; }
+.toggle { display:flex; align-items:center; gap:7px; font-size:13px; color:var(--text); cursor:pointer; }
+.toggle input[type=checkbox] { appearance:none; width:32px; height:18px; background:var(--border); border-radius:9px; position:relative; cursor:pointer; transition:background .2s; }
+.toggle input[type=checkbox]::after { content:''; position:absolute; top:2px; left:2px; width:14px; height:14px; background:#fff; border-radius:50%; transition:transform .2s; }
+.toggle input[type=checkbox]:checked { background:var(--primary); }
+.toggle input[type=checkbox]:checked::after { transform:translateX(14px); }
+#search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
+          border-radius:18px; font-size:13px; background:var(--bg); color:var(--text); }
+#search::placeholder { color:var(--text3); }
+#search:focus { outline:none; border-color:var(--primary); background:var(--surface); }
+
+/* 채널 카드 그리드 */
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:16px; }
+.ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+           padding:18px; transition:all .18s; position:relative; }
+.ch-card:hover { border-color:var(--primary-bd); transform:translateY(-2px); box-shadow:0 8px 24px rgba(168,85,247,.12); }
+.ch-card.rank-1 { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.ch-card.rank-2 { border-color:rgba(196,196,196,.45); background:linear-gradient(180deg, rgba(196,196,196,.05) 0%, var(--surface) 60%); }
+.ch-card.rank-3 { border-color:rgba(205,127,50,.45); background:linear-gradient(180deg, rgba(205,127,50,.05) 0%, var(--surface) 60%); }
+.ch-rank-badge { position:absolute; top:-9px; left:16px; padding:2px 9px; border-radius:10px;
+                 background:var(--surface2); border:1px solid var(--border); font-size:11px; font-weight:700; color:var(--text2); font-variant-numeric:tabular-nums; }
+.ch-rank-badge.rank-1 { background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; border-color:#ffd700; }
+.ch-rank-badge.rank-2 { background:linear-gradient(135deg,#e0e0e0,#a8a8a8); color:#000; border-color:#c0c0c0; }
+.ch-rank-badge.rank-3 { background:linear-gradient(135deg,#cd7f32,#8b4513); color:#fff; border-color:#cd7f32; }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:10px; }
+.ch-name { font-size:16px; font-weight:700; line-height:1.3; flex:1; min-width:0; color:var(--text); }
+.ch-name .delta { font-size:11px; margin-left:6px; vertical-align:middle; font-weight:700; }
+.ch-name .delta.up { color:var(--up); }
+.ch-name .delta.down { color:var(--down); }
+.ch-name .delta.flat { color:var(--text3); }
+.ch-meta { font-size:12px; color:var(--text2); margin-top:3px; font-weight:500; }
+.ch-type { font-size:10px; padding:2px 8px; border-radius:8px; background:var(--bg); color:var(--text2); white-space:nowrap; font-weight:700; border:1px solid var(--border); text-transform:uppercase; letter-spacing:.3px; }
+.ch-cats { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0; }
+.ch-cat { font-size:11px; padding:2px 9px; border-radius:9px; background:var(--primary-bg); color:var(--primary-hi); font-weight:600; border:1px solid var(--primary-bd); }
+.ch-stats { display:flex; gap:14px; margin:12px 0; padding:10px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:11px; color:var(--text2); flex:1; min-width:0; font-weight:500; }
+.ch-stat b { font-size:18px; color:var(--text); font-weight:800; display:block; font-variant-numeric:tabular-nums; line-height:1.1; margin-bottom:2px; letter-spacing:-0.3px; }
+.ch-stat.sig b { color:var(--danger); }
+.ch-stat.hot b { color:var(--hot); }
+.ch-vid { margin-top:10px; font-size:12px; }
+.ch-vid .vlabel { font-size:10px; color:var(--text2); font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.ch-vid .vlabel.popular { color:var(--warn); }
+.ch-vid .vlabel.latest { color:var(--hot); }
+.ch-vid .vtitle { font-size:13px; font-weight:500; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:4px; color:var(--text); line-height:1.4; }
+.ch-vid .vmeta { font-size:11px; color:var(--text3); margin-top:3px; }
+.ch-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; padding-top:12px; border-top:1px solid var(--divider); }
+.ch-vid-col { min-width:0; }
+.ch-thumb-mini { width:100%; aspect-ratio:16/9; background:var(--bg); border-radius:6px; overflow:hidden; margin-bottom:6px; border:1px solid var(--border); position:relative; }
+.ch-thumb-mini img { width:100%; height:100%; object-fit:cover; display:block; }
+.ch-thumb-mini .views-badge { position:absolute; bottom:4px; right:4px; font-size:10px; padding:1px 5px; border-radius:4px; background:rgba(0,0,0,.78); color:#fff; font-weight:700; font-variant-numeric:tabular-nums; }
+/* 스파크라인 (7일 추세) */
+.ch-spark { margin-top:6px; padding-top:6px; border-top:1px dashed var(--divider); display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; color:var(--text2); }
+.ch-spark canvas { flex:1; height:24px !important; max-width:140px; }
+.ch-spark .spark-val { font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
+.ch-freq { font-size:11px; color:var(--text2); display:inline-flex; align-items:center; gap:4px; padding:2px 7px; border-radius:8px; background:var(--bg); border:1px solid var(--border); white-space:nowrap; font-weight:600; }
+.empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
+
+section { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; margin-bottom:18px; }
+section h2 { font-size:18px; font-weight:700; margin-bottom:14px; letter-spacing:-0.3px; }
+.archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:11px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:600; transition:all .15s; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.archive-grid a.today { background:var(--primary); border-color:var(--primary); color:#fff; }
+.nav-links { margin:14px 0; display:flex; gap:7px; flex-wrap:wrap; }
+.nav-links a { background:var(--surface); padding:8px 15px; border-radius:18px; font-size:13px; font-weight:600; color:var(--text2); border:1px solid var(--border); transition:all .15s; }
+.nav-links a:hover { border-color:var(--primary-bd); color:var(--text); }
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:7px 14px; border:1px solid var(--border);
+  border-radius:18px; font-size:13px; font-weight:700; color:var(--text); background:var(--surface); transition:all .15s; }
+.country-switch:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.shell-head { position:sticky; top:0; z-index:50; background:var(--bg); padding-top:6px; border-bottom:1px solid var(--divider); backdrop-filter:blur(8px); }
+.nav-links a.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
+#view { min-height:60vh; }
+.view-loading { padding:60px 20px; text-align:center; color:var(--text2); font-size:14px; }
+.info-bar { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:13px 16px; margin:8px 0 18px; font-size:12px; color:var(--text2); line-height:1.8; }
+.info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:600; font-size:13px; }
+.info-bar b { color:var(--text); font-weight:700; }
+.legend-item { display:inline-block; margin-right:14px; white-space:nowrap; font-size:12px; }
+.nav-links a.nav-primary { background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border-color:var(--primary); font-weight:700; box-shadow:0 0 16px rgba(168,85,247,.25); }
+.nav-links a.nav-primary:hover { box-shadow:0 0 22px rgba(168,85,247,.4); }
+.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
+.rec-group h3 { font-size:14px; font-weight:700; margin:6px 0 10px; }
+.rec-card { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:13px; margin-bottom:9px; transition:all .15s; }
+.rec-card:hover { border-color:var(--primary-bd); }
+.rec-rank { color:var(--text3); font-weight:600; font-size:11px; margin-right:5px; }
+.rec-topic { font-size:14px; font-weight:700; margin-bottom:4px; color:var(--text); }
+.rec-date { font-size:11px; color:var(--hot); font-weight:600; margin-bottom:3px; }
+.rec-why { font-size:11px; color:var(--text2); margin-bottom:6px; }
+.rec-ref { font-size:11px; display:inline-block; }
+.rec-empty { color:var(--text2); padding:16px; font-size:12px; }
+.hot-flag { display:inline-block; font-size:10px; font-weight:700; padding:1px 7px; border-radius:8px; background:var(--danger-bg); color:var(--danger); white-space:nowrap; border:1px solid var(--danger-bd); }
+.reedit-box { background:var(--danger-bg); border:1px solid var(--danger-bd); border-radius:12px; padding:13px 16px; margin:10px 0 18px; }
+.reedit-head { font-size:15px; font-weight:700; color:var(--text); }
+.reedit-sub { display:block; font-size:11px; font-weight:500; color:var(--text2); margin-top:3px; }
+.reedit-card { padding:9px 0; border-top:1px solid rgba(239,68,68,.18); }
+.reedit-card:first-of-type { border-top:none; }
+.reedit-line1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.reedit-line1 .row-title { max-width:420px; font-weight:600; }
+.reedit-meta { font-size:11px; color:var(--text2); margin-top:3px; padding-left:24px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } header { flex-direction:column; align-items:flex-start; } header .header-chips { margin-left:0; } }
+footer { text-align:center; color:var(--text3); font-size:11px; padding:24px 0 8px; }
+
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:auto; margin:10px 0 16px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+thead th { text-align:left; font-weight:700; font-size:11px; color:var(--text2);
+  padding:10px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:var(--surface2); text-transform:uppercase; letter-spacing:.3px; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; color:var(--text); }
+tbody tr:last-child td { border-bottom:none; }
+tbody tr:hover { background:var(--hover); }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:700; font-variant-numeric:tabular-nums; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.num.lead { color:var(--text); font-weight:700; }
+.muted { color:var(--text2); }
+.cat-badge { display:inline-block; font-size:10px; padding:2px 9px; border-radius:10px; font-weight:700; white-space:nowrap; background:var(--primary-bg); color:var(--primary-hi); border:1px solid var(--primary-bd); }
+.kw { font-weight:700; font-size:14px; }
+.cellv { display:flex; flex-direction:column; gap:1px; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; color:var(--text); font-weight:500; }
+.row-sub { font-size:11px; color:var(--text2); }
+.ch-tag { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--bg); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.vid-list { display:flex; flex-direction:column; gap:6px; }
+.vd-row { display:flex; flex-direction:column; gap:1px; max-width:560px; }
+.vd-title { font-size:12px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
+.vd-meta { font-size:11px; color:var(--text2); }
+.vd-date { color:var(--hot); font-weight:600; }
+.rep-sec { margin:24px 0 6px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:17px; font-weight:800; color:var(--text); letter-spacing:-0.3px; }
+.rep-sec .cnt { font-size:12px; color:var(--text2); font-weight:500; }
+.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
+section table { margin:10px 0; }
+
+.news-list { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+.news-row { display:flex; gap:12px; align-items:baseline; padding:13px 16px; border-bottom:1px solid var(--divider); }
+.news-row:last-child { border-bottom:none; }
+.news-row:hover { background:var(--hover); }
+.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; }
+.news-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.news-title { font-size:13px; font-weight:600; color:var(--text); white-space:normal; }
+.news-title:hover { color:var(--primary-hi); }
+.news-meta { font-size:11px; color:var(--text2); display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.news-src { color:var(--hot); font-weight:700; }
+.news-cat { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; border:1px solid var(--primary-bd); }
+.news-orig { font-size:11px; color:var(--text2); }
+.date-nav { display:flex; flex-wrap:wrap; gap:5px; margin:10px 0 14px; align-items:center; font-size:12px; }
+.date-nav .lbl { color:var(--text2); margin-right:4px; font-weight:700; text-transform:uppercase; letter-spacing:.3px; font-size:11px; }
+.date-nav a { padding:4px 10px; border-radius:13px; background:var(--surface); color:var(--text2); font-weight:600; border:1px solid var(--border); transition:all .15s; }
+.date-nav a:hover { border-color:var(--primary-bd); color:var(--text); }
+.date-nav a.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+
+.subtab-nav { display:flex; gap:6px; margin:6px 0 14px; }
+.subtab { padding:7px 14px; border-radius:18px; background:var(--surface); color:var(--text2); font-size:13px; font-weight:600; border:1px solid var(--border); cursor:pointer; }
+.subtab:hover { border-color:var(--primary-bd); color:var(--text); }
+.subtab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+.subtab.dim { opacity:.45; cursor:not-allowed; }
+.chan-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:10px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; margin:3px 4px 0 0; border:1px solid var(--primary-bd); }
+
+/* Manual (사용 가이드) */
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:900px; }
+.manual-body h1 { font-size:28px; font-weight:800; margin:24px 0 12px; color:var(--text); letter-spacing:-0.5px; }
+.manual-body h2 { font-size:22px; font-weight:800; margin:32px 0 12px; padding-top:16px; border-top:1px solid var(--divider); color:var(--primary-hi); letter-spacing:-0.3px; }
+.manual-body h3 { font-size:17px; font-weight:700; margin:20px 0 8px; color:var(--text); }
+.manual-body h4 { font-size:15px; font-weight:700; margin:14px 0 6px; color:var(--text2); }
+.manual-body p { margin:10px 0; }
+.manual-body ul, .manual-body ol { margin:10px 0 14px 22px; }
+.manual-body li { margin:5px 0; }
+.manual-body strong, .manual-body b { color:var(--text); font-weight:700; }
+.manual-body code { background:var(--surface2); color:var(--primary-hi); padding:1px 6px; border-radius:5px; font-size:0.92em; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; border:1px solid var(--border); }
+.manual-body pre { background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:14px 16px; overflow-x:auto; margin:14px 0; line-height:1.55; font-size:12.5px; }
+.manual-body pre code { background:none; border:none; padding:0; color:var(--text); }
+.manual-body blockquote { border-left:3px solid var(--primary); background:var(--primary-bg); padding:10px 14px; margin:14px 0; border-radius:0 8px 8px 0; color:var(--text); font-size:13px; }
+.manual-body table { width:100%; border-collapse:collapse; margin:14px 0; font-size:13px; background:var(--surface); border-radius:8px; overflow:hidden; }
+.manual-body th { background:var(--surface2); color:var(--text); font-weight:700; padding:9px 12px; text-align:left; border-bottom:1px solid var(--border); }
+.manual-body td { padding:8px 12px; border-bottom:1px solid var(--divider); }
+.manual-body td:first-child { color:var(--text); font-weight:600; }
+.manual-body hr { border:none; border-top:1px solid var(--divider); margin:24px 0; }
+.manual-body a { color:var(--primary-hi); }
+.manual-body a:hover { color:var(--primary); }
+
+/* Autopsy 페이지 폼 */
+.autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
+.autopsy-form .ah { font-size:15px; font-weight:800; color:var(--text); margin-bottom:4px; }
+.autopsy-form .asub { font-size:12px; color:var(--text2); margin-bottom:14px; }
+.autopsy-form textarea { width:100%; min-height:110px; padding:11px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; resize:vertical; }
+.autopsy-form textarea:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .row2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+.autopsy-form input[type=text] { padding:9px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; }
+.autopsy-form input[type=text]:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .actions { display:flex; gap:8px; margin-top:14px; align-items:center; }
+.autopsy-form button { padding:10px 22px; background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border:none; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer; box-shadow:0 0 16px rgba(168,85,247,.3); transition:all .15s; }
+.autopsy-form button:hover { box-shadow:0 0 22px rgba(168,85,247,.5); transform:translateY(-1px); }
+.autopsy-form button.ghost { background:var(--surface2); color:var(--text2); box-shadow:none; }
+.autopsy-form button.ghost:hover { color:var(--text); }
+.autopsy-form .hint { font-size:11px; color:var(--text3); margin-left:auto; }
+.autopsy-card { display:flex; flex-direction:column; min-height:130px; transition:all .18s; }
+.autopsy-card:hover { border-color:var(--primary) !important; box-shadow:0 4px 16px rgba(168,85,247,.18); }
+
+@media (max-width:600px) {
+  body { padding:14px; }
+  header h1 { font-size:20px; }
+  .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .card .value { font-size:22px; }
+  .ch-grid { grid-template-columns:1fr; }
+  .filters { flex-direction:column; align-items:stretch; }
+  .row-title { max-width:200px; }
+  tbody td, thead th { padding:9px 8px; }
+  .ch-vid-dual { grid-template-columns:1fr; }
+  .autopsy-form .row2 { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
+    <h1>📖 TubeHacker 사용 가이드</h1>
+    <div class="sub">초보자도 인사이트 도출 가능 · 탭·섹션·메트릭·시나리오 풀세트</div>
+  </header>
+  
+  <div class="manual-body"><h1 id="tubehacker-사용-가이드">📖 TubeHacker 사용 가이드</h1>
+
+<p><strong>유튜브 알고리즘 해킹의 모든 것</strong> — 발견 → 검증 → 청사진 → 제작까지 한 사이클.</p>
+
+<hr />
+
+<h2 id="처음-사용자를-위한-3분-가이드">🚀 처음 사용자를 위한 3분 가이드</h2>
+
+<p><strong>처음 들어왔다면 이 순서대로 하세요:</strong></p>
+
+<h3 id="step-1-30초-오늘의-시그널-보기">Step 1 (30초): 오늘의 시그널 보기</h3>
+
+<ol>
+<li><strong>🏠 대시보드 홈</strong> 탭</li>
+<li>상단 헤더에 빨간 칩 보기:
+<ul>
+<li><code>🚨 시그널 N</code> — 알고리즘이 지금 미는 영상 수</li>
+<li><code>🔥 폭발 N</code> — 효율 검증된 영상 수</li>
+</ul></li>
+<li><strong>숫자가 크면 = 오늘 만들기 좋은 날</strong></li>
+</ol>
+
+<h3 id="step-2-1분-우리-채널-카테고리-찾기">Step 2 (1분): 우리 채널 카테고리 찾기</h3>
+
+<ol>
+<li>카테고리 탭 클릭 (예: <code>역사</code>, <code>경제</code>)</li>
+<li><strong>👑 1·2·3위 카드 = 오늘 가장 잘 나가는 채널들</strong></li>
+<li>카드의 <strong>인기 영상</strong> 썸네일 확인 → 이게 지금 사람들이 좋아하는 콘텐츠</li>
+</ol>
+
+<h3 id="step-3-1분-30초-만들-영상-주제-정하기">Step 3 (1분 30초): 만들 영상 주제 정하기</h3>
+
+<ol>
+<li><strong>🎯 오늘의 주제</strong> 탭 클릭</li>
+<li>우리 카테고리에서:
+<ul>
+<li><strong>🔥 재편집 재폭발</strong> — 지금 다시 뜬 검증 주제 (최우선)</li>
+<li><strong>검증 주제</strong> — 시간 검증된 영구 가치 주제</li>
+</ul></li>
+<li>마음에 드는 주제 골라 그 대표 영상 URL 복사</li>
+</ol>
+
+<p>→ 이제 <strong>🔥 왜 이 영상은 터졌는가?</strong> 탭으로 가서 그 URL 분석.</p>
+
+<hr />
+
+<h2 id="tubehacker가-답하는-5가지-질문">🎯 TubeHacker가 답하는 5가지 질문</h2>
+
+<p>이 도구는 <strong>유튜브 PD를 위한 의사결정 도우미</strong>입니다. 다음 질문에 자동으로 답해줍니다:</p>
+
+<table>
+<thead>
+<tr>
+  <th>질문</th>
+  <th>답하는 탭</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>"오늘 만들 영상 주제 뭐?"</td>
+  <td>🎯 오늘의 주제</td>
+</tr>
+<tr>
+  <td>"이 카테고리에 영구 가치 있는 주제는?"</td>
+  <td>🔥 Hot키워드</td>
+</tr>
+<tr>
+  <td>"이 영상은 왜 터졌고 어떻게 만들어졌나?"</td>
+  <td>🔥 왜 이 영상은 터졌는가?</td>
+</tr>
+<tr>
+  <td>"지금 어떤 썸네일·제목·후크가 효과적이지?"</td>
+  <td>🏆 패턴 라이브러리</td>
+</tr>
+<tr>
+  <td>"내 채널이 어디쯤이고 경쟁 채널은?"</td>
+  <td>🏠 대시보드</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="핵심-컨셉-이거-모르면-안-됨">📚 핵심 컨셉 (이거 모르면 안 됨)</h2>
+
+<h3 id="효율-efficiency-조회수-구독자수">효율 (Efficiency) = 조회수 ÷ 구독자수</h3>
+
+<ul>
+<li><strong>1.0</strong> = 구독자 수만큼 봄 (양호)</li>
+<li><strong>5.0</strong> = 구독자의 5배가 봄 (폭발 = 알고리즘이 외부 추천)</li>
+<li><strong>10.0+</strong> = 메가폭발 (트렌딩급)</li>
+<li><strong>왜 중요?</strong> 구독자 작은 채널도 폭발 가능. <em>어떤 영상이 알고리즘 추천을 받았나</em> 정확히 측정.</li>
+</ul>
+
+<h3 id="시속-velocity-조회수-영상-나이시간">시속 (Velocity) = 조회수 ÷ 영상 나이(시간)</h3>
+
+<ul>
+<li><strong>5,000/h+</strong> = 알고리즘 시그널 (지금 미는 중)</li>
+<li><strong>50,000/h+</strong> = 트렌딩</li>
+<li><strong>왜 중요?</strong> 이미 폭발한 영상이 아니라 <em>지금 막 폭발 중</em>인 영상 발견.</li>
+</ul>
+
+<h3 id="폭발-vs-시그널-헷갈리기-쉬움">폭발 vs 시그널 (헷갈리기 쉬움)</h3>
+
+<ul>
+<li><strong>🔥 폭발</strong> = 효율 5배+ (총 결과 검증)</li>
+<li><strong>🚨 시그널</strong> = 시속 5,000+/h (현재 진행 중)</li>
+<li><strong>둘 다 있으면</strong>: 검증 + 현재 진행 = 최강</li>
+</ul>
+
+<h3 id="hook-030초">Hook (0~30초)</h3>
+
+<ul>
+<li>시청자가 <em>떠날지 머무를지</em> 결정하는 30초</li>
+<li><strong>0~3초</strong> = 첫인상 (소리·시각 즉시 인지)</li>
+<li><strong>3~10초</strong> = 충격·질문·통계</li>
+<li><strong>10~30초</strong> = "이 영상에서 보여줄 것" 약속</li>
+</ul>
+
+<h3 id="첫-사건-발생-시점">첫 사건 발생 시점</h3>
+
+<ul>
+<li>영상 시작부터 첫 사건(어느날·갑자기·쓰러졌 등) 등장 시점</li>
+<li><strong>60초 안</strong> = 🟢 retention 유지 (시청자 머묾)</li>
+<li><strong>120초+</strong> = 🔴 이탈 위험</li>
+</ul>
+
+<h3 id="단조도-monotony">단조도 (Monotony)</h3>
+
+<ul>
+<li>같은 채널이 매번 같은 표현 쓰는 정도</li>
+<li><strong>30+</strong> = 시청자 거부감 발생 (다음 영상 안 봄)</li>
+</ul>
+
+<hr />
+
+<h2 id="탭별-상세-사용법">🗂️ 탭별 상세 사용법</h2>
+
+<h3 id="대시보드-홈">🏠 대시보드 홈</h3>
+
+<p><strong>언제 보나</strong>: 매일 아침 30초 확인용. 오늘의 시그널 한눈에.</p>
+
+<h4 id="단계별-사용법">📍 단계별 사용법</h4>
+
+<p><strong>1단계: 헤더 칩 확인 (5초)</strong><br />
+화면 상단 우측 칩 3개:</p>
+
+<pre><code>🚨 시그널 9     ← 지금 알고리즘이 미는 영상
+🔥 폭발 150    ← 효율 검증된 영상  
+🆕 24h 65     ← 새로 발견된 영상
+</code></pre>
+
+<ul>
+<li>숫자 클수록 = 오늘 만들기 좋은 날</li>
+<li>숫자 작으면 = 오늘은 잠잠 → 검증된 주제(🔥 Hot키워드)에서 발굴</li>
+</ul>
+
+<p><strong>2단계: 필터 활용 (15초)</strong><br />
+- <strong>기간 토글</strong> <code>24h | 7일 | 30일 | 급가속</code> → 정렬 기준<br />
+  - <code>24h</code> = 오늘 시그널 많은 채널 우선<br />
+  - <code>7일</code> = 일주일 누적 좋은 채널 (꾸준한 성장)<br />
+  - <code>급가속</code> = 어제 → 오늘 가장 큰 점프<br />
+- <strong>형식 토글</strong> <code>전체 | 🎬 롱폼 | 📱 쇼츠</code> → 우리 컨텐츠 타입만<br />
+- <strong>대형 제외</strong> 체크 → 작은 채널의 보석 발굴<br />
+- <strong>폭발/시그널만</strong> 체크 → 평범한 채널 숨김</p>
+
+<p><strong>3단계: 채널 카드 읽기 (10초/카드)</strong></p>
+
+<pre><code>🥇 #1 [채널명]  ▲5
+구독 38만 · 🎬 롱폼
+📅 21년 8월 개설 · 4년 9개월차
+🚨 3 시그널  🔥 5 폭발  🆕 1 24h
+[스파크라인 차트] +12  📈 6.5편/주
+🔥 인기 영상 (썸네일+제목)
+🆕 최신 영상 (썸네일+제목)
+</code></pre>
+
+<ul>
+<li><strong>👑 1·2·3위</strong> = 오늘 가장 잘 나가는 채널</li>
+<li><strong>▲5</strong> = 어제 대비 순위 5단 상승 (= 가속도 ↑)</li>
+<li><strong>📅 21년 개설 · 4년차</strong> = 채널 성숙도 (오래된 채널인지 신생인지)</li>
+<li><strong>편/주</strong> = 활동성 (5편 이상 = 매우 활발)</li>
+<li><strong>인기 vs 최신</strong> = 채널 대표작 + 지금 뭐하고 있는지</li>
+</ul>
+
+<h4 id="초보자-실수-회피">💡 초보자 실수 회피</h4>
+
+<ul>
+<li>❌ 1위 채널이 항상 좋은 게 아님. 그 채널 <em>카테고리</em>가 우리와 맞는지 봐야.</li>
+<li>❌ 구독자 많은 대형채널 위주로 보지 마세요. <strong>대형 제외</strong> 체크하면 우리에게 맞는 사이즈 채널 보임.</li>
+<li>✅ <strong>▲ 상승 화살표 있는 채널</strong>을 더 봐야 — 지금 알고리즘이 밀어주는 중.</li>
+</ul>
+
+<h4 id="인사이트-도출-예시">🎯 인사이트 도출 예시</h4>
+
+<blockquote>
+  <p><strong>상황</strong>: 역사 카테고리 1위가 "지식인사이드" ▲3 상승, 인기 영상은 <em>조선 마지막 환관의 비밀</em><br />
+  <strong>인사이트</strong>: 1) 역사 채널 지금 알고리즘 추천 받음. 2) "비밀·정체" 클릭베이트가 통하는 중. 3) 조선시대 비주류 인물 콘텐츠 효율 좋음.<br />
+  <strong>액션</strong>: 우리 채널도 조선시대 비주류(궁녀/내시/상궁) 인물 콘텐츠 1개 만들어보기.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="오늘의-주제">🎯 오늘의 주제</h3>
+
+<p><strong>언제 보나</strong>: 매일 영상 만들기 전. 의사결정 도구.</p>
+
+<h4 id="단계별-사용법-2">📍 단계별 사용법</h4>
+
+<p><strong>1단계: 카테고리 카드 찾기</strong><br />
+- 우리 채널 카테고리 카드로 스크롤 (역사·경제·과학·심리학 등)<br />
+- 각 카드 안에 3가지 묶음:</p>
+
+<p><strong>2단계: 묶음별 우선순위</strong></p>
+
+<p>🥇 <strong>🔥 재편집 재폭발 (최우선)</strong><br />
+- 검증된 주제 + 최근 7일 내 재업로드 + 폭발 신호<br />
+- <strong>= "다른 채널이 지금 같은 주제로 재업로드해서 잘 됐다"</strong> = 우리도 만들면 잘 될 확률 매우 높음<br />
+- 각 항목 클릭 → YouTube 원본 확인 가능</p>
+
+<p>🥈 <strong>검증 주제 (Hot키워드)</strong><br />
+- 시간 검증을 통과한 영구 가치 주제<br />
+- 시즌 무관, 언제 만들어도 양호<br />
+- <em>영상 카탈로그 기획용</em></p>
+
+<p>🥉 <strong>오늘 폭발 주제</strong><br />
+- 24시간 안 폭발한 영상<br />
+- 신선하지만 1회성일 수 있음 (검증 안 된 단발 트렌드)</p>
+
+<p><strong>3단계: 주제 선택 → autopsy 던지기</strong><br />
+- 선택한 주제의 대표 영상 URL 복사<br />
+- <strong>🔥 왜 이 영상은 터졌는가?</strong> 탭으로 이동<br />
+- 폼에 URL 붙여넣기 → 분석 시작</p>
+
+<h4 id="초보자-실수-회피-2">💡 초보자 실수 회피</h4>
+
+<ul>
+<li>❌ "오늘 폭발 주제"만 보지 마세요. 그건 단발 트렌드일 수 있음.</li>
+<li>✅ <strong>🔥 재편집 재폭발 &gt; 검증 주제 &gt; 오늘 폭발</strong> 순으로 신뢰.</li>
+<li>❌ 주제만 가져다 그대로 따라 하지 마세요. autopsy로 <em>왜 터졌는지</em>까지 분석 후 만들기.</li>
+</ul>
+
+<h4 id="인사이트-도출-예시-2">🎯 인사이트 도출 예시</h4>
+
+<blockquote>
+  <p><strong>상황</strong>: "이재명 재판" 키워드가 시사·정치 카테고리에 🔥 재편집 재폭발로 떠 있음<br />
+  <strong>인사이트</strong>: 1) 검증된 주제. 2) 최근 다른 채널도 다시 만들었고 성공. 3) 지금 만들면 알고리즘 추천 받기 좋은 시점.<br />
+  <strong>액션</strong>: 이 주제로 우리 채널 톤에 맞게 영상 기획. 최신 사건·발언 추가해 차별화.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="hot키워드-검증-주제-아카이브">🔥 Hot키워드 (검증 주제 아카이브)</h3>
+
+<p><strong>언제 보나</strong>: 콘텐츠 라인업 기획 / 시즌·트렌드 무관한 주제가 필요할 때.</p>
+
+<h4 id="단계별-사용법-3">📍 단계별 사용법</h4>
+
+<p><strong>1단계: 카테고리 필터</strong> (역사·경제·과학·심리학 등)<br />
+<strong>2단계: 검증 점수 정렬</strong> — <em>검증 점수가 높은 것 = 더 안전</em><br />
+<strong>3단계: 영상 풀 보기</strong> — 같은 키워드로 만들어진 영상 3~5개 모음</p>
+
+<h4 id="핵심-포인트">💡 핵심 포인트</h4>
+
+<p>이 탭의 키워드들은 <strong>검증 점수</strong>(seen<em>days × max</em>channels × max_views)로 계산됨.<br />
+- 검증 점수 ≥ 100 = 매우 안전<br />
+- 50~100 = 양호<br />
+- 20~50 = 시도해볼 만</p>
+
+<h4 id="인사이트-도출-예시-3">🎯 인사이트 도출 예시</h4>
+
+<blockquote>
+  <p><strong>상황</strong>: 역사 카테고리에 "사도세자" 키워드 검증 점수 150<br />
+  <strong>인사이트</strong>: 1) 이미 12채널이 만들었고 모두 효율 양호. 2) 우리가 만들어도 알고리즘이 미는 데이터 패턴 인식 가능. 3) 이미 만들어진 영상들의 <em>차별화 포인트</em>만 찾으면 됨.<br />
+  <strong>액션</strong>: 그 키워드의 영상 3개를 autopsy로 분해 → 공통점 추출 → 그것 + 우리만의 차별 포인트로 영상 기획.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="시니어랩-야담">🎙️ 시니어랩 (야담)</h3>
+
+<p><strong>언제 보나</strong>: 시니어 타깃(야담·시니어사연) 카테고리 영상 만들 때.</p>
+
+<h4 id="단계별-사용법-야담-채널-시작-첫-영상까지-완성">📍 단계별 사용법 (야담 채널 시작 → 첫 영상까지 완성)</h4>
+
+<p><strong>1단계: 추천 TOP3 보기 (30초)</strong><br />
+- 페이지 상단 🎯 카드 3개<br />
+- 1d/7d/30d 윈도우 가중치로 계산된 <em>가장 안전한 주제</em> 3개<br />
+- 각 추천에 학습 대상 영상도 함께 표시</p>
+
+<p><strong>2단계: 벤치마크 채널 톤 학습 (3분)</strong><br />
+- 📚 1~5순위 벤치마크 채널 상세 섹션<br />
+- 1순위 (조선야담처녀)의 평균 분량·발화 속도·시그너처 어휘 확인<br />
+- TOP5 영상 클릭해서 직접 들어가 톤 흡수</p>
+
+<p><strong>3단계: 표준 영상 구조 보기 (1분)</strong><br />
+- 🎬 표준 구조: Hook 30s → Intro 180s → Body N분 → Climax → Resolution → Outro<br />
+- 평균 분량 (예: 43분) 확인<br />
+- <em>우리 영상도 이 구조로</em></p>
+
+<p><strong>4단계: 검증된 Hook 풀 확인 (2분)</strong><br />
+- 🪝 Hook 풀 26개 — 실제 영상 첫 문장<br />
+- 패턴 파악: 충격 사건 + 반대 반응 + 미스터리 후크</p>
+
+<p><strong>5단계: 폭발 야담 영상에서 1편 골라 autopsy</strong><br />
+- 🏆 폭발 야담 영상 표<br />
+- 마음에 드는 영상의 [🔥 분석] 클릭<br />
+- autopsy 페이지로 자동 이동 + URL prefill<br />
+- [분석 시작] → 3~5분 대기</p>
+
+<p><strong>6단계: autopsy 결과 → 대본 만들기</strong><br />
+- 분석 카드 들어가서 인사이트 확인<br />
+- [📝 이 인사이트로 대본 만들기] 클릭<br />
+- Claude Code에 prompt 붙여넣기</p>
+
+<h4 id="초보자-실수-회피-3">💡 초보자 실수 회피</h4>
+
+<ul>
+<li>❌ 추천 TOP3만 보지 마세요. 벤치마크 채널 <em>상세</em>까지 봐야 톤 학습 가능.</li>
+<li>❌ 1편만 분석하지 마세요. 5편 분석해야 <em>공통 패턴</em>이 보임.</li>
+<li>✅ 단조도가 25 이상이면 새 영상은 어휘 갱신 필수.</li>
+</ul>
+
+<h4 id="야담-채널-첫-영상-만들기-전체-흐름">🎯 야담 채널 첫 영상 만들기 전체 흐름</h4>
+
+<pre><code>1. 시니어랩 → 추천 TOP3 #1 "효·가족" 선택
+2. 학습 대상 5편 골라 autopsy에 한 번에 던지기
+3. autopsy 결과: 평균 분량 85분 · Hook 회상형 · 첫 사건 평균 130초
+4. [📝 대본 만들기] → Claude Code에 prompt 붙여넣기  
+5. Claude가 channel-setup 진입 → shared corpus 자동 사용
+6. profile.md에 "조선야담처녀 스타일 + 85분 + 회상형 Hook" 박힘
+7. script-pd가 야담 주제 3개 제안 → 선택 → 대본 작성
+8. 결과: TTS 가능한 .txt 대본 + 영상 메타 (제목·설명·태그)
+</code></pre>
+
+<hr />
+
+<h3 id="왜-이-영상은-터졌는가-autopsy">🔥 왜 이 영상은 터졌는가? (Autopsy)</h3>
+
+<p><strong>언제 보나</strong>: 특정 영상의 성공 비결 자세히 알고 싶을 때 / 우리 영상 만들기 전 검증 영상 분석.</p>
+
+<h4 id="단계별-사용법-4">📍 단계별 사용법</h4>
+
+<p><strong>1단계: URL 준비</strong><br />
+- YouTube에서 마음에 드는 영상 URL 복사<br />
+- <strong>1개도 가능하지만 3~5편 한 번에 던지면 공통 패턴이 나와서 훨씬 강력</strong><br />
+- 같은 카테고리·비슷한 효율의 영상 5편 권장</p>
+
+<p><strong>2단계: 폼 입력</strong></p>
+
+<pre><code>URLs:    ← 한 줄에 하나씩
+https://youtube.com/watch?v=AAA
+https://youtube.com/watch?v=BBB
+https://youtube.com/watch?v=CCC
+
+라벨:    "야담 효·가족 효율 TOP3"  (선택, 없으면 자동)
+태그:    "야담,효,가족"            (선택)
+</code></pre>
+
+<p><strong>3단계: [🔥 분석 시작] 클릭</strong><br />
+- 자동으로 GitHub Issue 작성됨 (새 탭)<br />
+- Issue에서 [Create] 버튼 한 번 클릭<br />
+- 5~10분 후 자동 처리</p>
+
+<p><strong>4단계: 결과 확인</strong><br />
+- 페이지 새로고침 (Cmd+R)<br />
+- 새 카드 등장 → 클릭해서 상세 페이지</p>
+
+<h4 id="상세-페이지에-나오는-분석-의미-활용법">📊 상세 페이지에 나오는 분석 (의미 + 활용법)</h4>
+
+<p><strong>🎯 공통 패턴</strong><br />
+- <em>N편이 공유하는 공식</em><br />
+- 활용: 우리도 이 패턴 따라가면 비슷한 효율 기대 가능</p>
+
+<p><strong>🔬 Hook 0~30초 심층 분석</strong><br />
+- 0~3s / 3~10s / 10~30s 별 텍스트<br />
+- 활용: 우리 Hook 작성 시 30초 구간 시간 배분 따라하기<br />
+- Hook 발화 속도 +차이가 양수면 = 우리도 Hook을 본문보다 빠르게</p>
+
+<p><strong>⚡ 첫 사건 발생 시점</strong><br />
+- N편 평균 시점 (예: 130초)<br />
+- 활용: 우리 영상도 130초 안에 첫 사건 등장시키기<br />
+- 60초 안이면 🟢 / 120초+면 🔴</p>
+
+<p><strong>📊 시간 효율</strong> (영상별)<br />
+- 각 영상의 효율·시속·티어<br />
+- 좋아요 비율·댓글 비율 (= 시청자 참여도)<br />
+- 활용: 우리 영상 발행 후 비교 기준</p>
+
+<p><strong>🖼️ 썸네일 + OCR</strong><br />
+- 썸네일 이미지 + OCR 추출 텍스트<br />
+- 활용: 우리 썸네일 만들 때 글자 수·위치 참고</p>
+
+<p><strong>💬 댓글 timestamp 분포</strong><br />
+- <em>"1:23 부분 좋아요" 같은 댓글 시점 분포</em><br />
+- 활용: 그 시점이 retention spike — 그 부분이 영상의 <em>킬링 포인트</em></p>
+
+<p><strong>♻️ N편 중복도</strong><br />
+- 채널들 간 표현 재사용 정도<br />
+- 활용: 30 이상이면 우리는 <em>다른 표현</em>으로 만들어 차별화</p>
+
+<h4 id="초보자-실수-회피-4">💡 초보자 실수 회피</h4>
+
+<ul>
+<li>❌ 1편만 던지지 마세요. 패턴은 N=3~5에서 나옵니다.</li>
+<li>❌ 자막 없는 영상은 분석 불가. 다른 영상 선택.</li>
+<li>✅ 야담은 efficiency 0이라 시니어랩에서 <em>velocity</em> 기반으로 골라야.</li>
+</ul>
+
+<h4 id="결정적-활용-대본-만들기">🎯 결정적 활용 — [📝 대본 만들기]</h4>
+
+<ol>
+<li>분석 결과 페이지 상단 보라 박스</li>
+<li>[📝 이 인사이트로 대본 만들기] 클릭</li>
+<li>자동 생성된 Prompt + 클립보드 복사 + 모달</li>
+<li>Claude Code 터미널에 붙여넣기</li>
+<li>자동으로 채널 셋업 + 대본 작업 시작</li>
+</ol>
+
+<hr />
+
+<h3 id="패턴-라이브러리">🏆 패턴 라이브러리</h3>
+
+<p><strong>언제 보나</strong>: 새 영상의 <em>썸네일·제목·Hook 만들기 전</em> 필수 참고.</p>
+
+<h4 id="단계별-사용법-5">📍 단계별 사용법</h4>
+
+<p><strong>1단계: ⚡ 첫 사건 시점 표준 확인 (20초)</strong><br />
+- 페이지 상단의 평균/중앙/P25/P75 확인<br />
+- 우리 영상도 이 범위 안에 첫 사건 배치<br />
+- 예: 평균 130초 = 우리도 100~150초 안에 첫 사건</p>
+
+<p><strong>2단계: 📝 카테고리별 제목 공식 (2분)</strong><br />
+우리 카테고리 카드만 보기:<br />
+- 평균 글자수 → 우리 제목도 이 정도 길이<br />
+- 구조 빈도 → ❓ 질문 70%면 우리도 질문형으로<br />
+- 클릭베이트 패턴 → 비밀_정체 50%면 우리도 "비밀·정체" 박기<br />
+- 빈출 2-gram → 우리 제목에 박을 검증 표현</p>
+
+<p><strong>3단계: 🖼️ 썸네일 카탈로그 (5분)</strong><br />
+- 카테고리별 효율 TOP 영상 그리드<br />
+- 카드 하나하나 클릭해서 YouTube에서 영상·썸네일 확인<br />
+- LLM 분석 활성화 시:<br />
+  - 🎯 클릭베이트 점수 → 우리도 비슷한 점수 목표<br />
+  - 🔤 OCR → 어떤 글자가 박혀있나 (글자 수·위치)<br />
+  - 📝 전략 → "어두운 배경+밝은 텍스트 대비" 같은 한 줄 인사이트</p>
+
+<p><strong>4단계: 🪝 Hook 풀에서 첫 문장 학습 (3분)</strong><br />
+- 효율 정렬된 첫 문장 30개<br />
+- 패턴 분류 (충격사건/질문/회상/통계 등)<br />
+- 우리 영상 Hook 만들 때 비슷한 구조로</p>
+
+<h4 id="초보자-실수-회피-5">💡 초보자 실수 회피</h4>
+
+<ul>
+<li>❌ 패턴 라이브러리만 보고 <em>그대로 베끼지 마세요</em>. 패턴 이해 → 우리 톤에 적용이 핵심.</li>
+<li>❌ 카테고리 평균 글자수만 맞춘다고 효율 안 나옴. 클릭베이트 패턴까지 같이.</li>
+<li>✅ <strong>LLM 분석 활성화 권장</strong>. 시각 인사이트가 텍스트만 보는 것보다 압도적.</li>
+</ul>
+
+<h4 id="인사이트-도출-예시-4">🎯 인사이트 도출 예시</h4>
+
+<blockquote>
+  <p><strong>상황</strong>: 야담 카테고리 데이터 — 평균 글자수 80자 · 파이프(ㅣ) 22% · 숫자 32% · 클릭베이트 "비밀_정체" 우세<br />
+  <strong>인사이트</strong>: 야담 영상 제목은 <em>길고 (80자) · 파이프 구분자 · 숫자 포함 (인물 나이) · 비밀/정체 키워드</em> 패턴이 검증됨.<br />
+  <strong>액션</strong>: 우리 첫 야담 영상 제목 = "14살 종놈이 임금을 살린 비밀의 망치 ㅣ 임진왜란 야담 ㅣ 옛날이야기" (80자·파이프·숫자·비밀).</p>
+</blockquote>
+
+<hr />
+
+<h3 id="일별-아카이브">📅 일별 아카이브</h3>
+
+<p><strong>언제 보나</strong>: 과거 시점 검증 / 어제 놓친 시그널 회수 / 트렌드 시간 추적.</p>
+
+<h4 id="단계별-사용법-6">📍 단계별 사용법</h4>
+
+<p><strong>1단계: 날짜 선택</strong> (최근 30일 그리드)<br />
+<strong>2단계: 그날의 채널 카드 보기</strong><br />
+<strong>3단계: 트렌드 추적</strong> — 같은 키워드가 며칠 동안 떠 있었나</p>
+
+<hr />
+
+<h3 id="뉴스-모니터링">📰 뉴스 모니터링</h3>
+
+<p><strong>언제 보나</strong>: 시사·경제 영상의 시의성 주제 발굴.</p>
+
+<h4 id="단계별-사용법-7">📍 단계별 사용법</h4>
+
+<ul>
+<li>카테고리별 헤드라인 확인</li>
+<li>같은 사건이 며칠째 보도되면 = 장기 이슈 → 영상 만들기 좋음</li>
+<li>한 번만 보도되고 사라지면 = 단발 이슈 → 신중</li>
+</ul>
+
+<hr />
+
+<h2 id="전체-워크플로우-영상-1편-만들-때">🎯 전체 워크플로우 — 영상 1편 만들 때</h2>
+
+<h3 id="풀-체크리스트">📋 풀 체크리스트</h3>
+
+<pre><code>[Phase 1: 발견] — 5분
+□ 🏠 대시보드: 우리 카테고리 시그널/폭발 수 확인
+□ 👑 1·2·3위 채널 카드의 인기 영상 보기
+□ ▲ 상승 화살표 있는 채널 우선 관찰
+
+[Phase 2: 주제 결정] — 10분
+□ 🎯 오늘의 주제: 우리 카테고리 카드
+□ 🔥 재편집 재폭발 우선 → 검증 주제 → 오늘 폭발 순
+□ 또는 🔥 Hot키워드에서 검증 점수 100+ 주제 선택
+□ 결정된 주제의 대표 영상 3~5편 URL 복사
+
+[Phase 3: 분석] — 10분
+□ 🔥 왜 이 영상은 터졌는가? 탭
+□ URL 3~5편 한 번에 던지기
+□ 5~10분 대기
+
+[Phase 4: 패턴 학습] — 10분
+□ 분석 결과 페이지 들어가기
+□ 🎯 공통 패턴 (Hook 유형·결말 톤)
+□ ⚡ 첫 사건 시점 평균
+□ ♻️ 단조도 확인 (30+이면 우리는 다른 표현 사용)
+□ 💬 댓글 timestamp = retention spike 시점 파악
+
+[Phase 5: 패턴 라이브러리 추가 확인] — 5분
+□ 🏆 패턴 라이브러리 → 카테고리 제목 공식
+□ 썸네일 카탈로그 시각 학습
+□ Hook 풀에서 첫 문장 패턴 흡수
+
+[Phase 6: 대본 작업] — 5분 (Claude Code 진입)
+□ autopsy 결과 페이지 → [📝 대본 만들기]
+□ 클립보드 복사된 Prompt를 Claude Code에 붙여넣기
+□ channel-setup이 자동으로 patterns 적용
+□ script-pd가 대본 작성
+
+[Phase 7: 발행 후 검증] — 발행 24h 후
+□ 🔥 왜 이 영상은 터졌는가?에 우리 영상도 던지기
+□ 분석 결과와 학습 대상 영상 비교
+□ 차이점 인사이트로 다음 영상 개선
+</code></pre>
+
+<p><strong>총 소요: 45분 + 대본 작성 시간 (script-pd)</strong></p>
+
+<hr />
+
+<h2 id="핵심-메트릭-사전-상세">📊 핵심 메트릭 사전 (상세)</h2>
+
+<table>
+<thead>
+<tr>
+  <th>메트릭</th>
+  <th>공식</th>
+  <th>기준값</th>
+  <th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>효율</strong></td>
+  <td>조회 ÷ 구독</td>
+  <td>1=양호 5=폭발 10+=메가</td>
+  <td>알고리즘 추천 정도</td>
+</tr>
+<tr>
+  <td><strong>시속</strong></td>
+  <td>조회 ÷ 영상나이(h)</td>
+  <td>5k+ 시그널 50k+ 트렌딩</td>
+  <td><em>지금</em> 가속도</td>
+</tr>
+<tr>
+  <td><strong>단조도</strong></td>
+  <td>3-gram Jaccard×100</td>
+  <td>10🟢 20🟡 30🔴</td>
+  <td>시청자 거부감</td>
+</tr>
+<tr>
+  <td><strong>클릭베이트</strong></td>
+  <td>LLM 1~10점</td>
+  <td>카테고리 평균이 목표</td>
+  <td>썸네일 강도</td>
+</tr>
+<tr>
+  <td><strong>첫 사건 시점</strong></td>
+  <td>영상 시작~사건 등장</td>
+  <td>&lt;60🟢 &lt;120🟡 120+🔴</td>
+  <td>retention 결정</td>
+</tr>
+<tr>
+  <td><strong>Hook wpm 차</strong></td>
+  <td>Hook wpm - 본문 wpm</td>
+  <td>+가 좋음</td>
+  <td>집중 유지력</td>
+</tr>
+<tr>
+  <td><strong>like_ratio</strong></td>
+  <td>좋아요 ÷ 조회</td>
+  <td>2%+ 양호</td>
+  <td>시청자 만족</td>
+</tr>
+<tr>
+  <td><strong>comment_ratio</strong></td>
+  <td>댓글 ÷ 조회</td>
+  <td>0.3%+ 양호</td>
+  <td>시청자 참여</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="faq-초보자가-자주-묻는-것">❓ FAQ (초보자가 자주 묻는 것)</h2>
+
+<h3 id="q-어디부터-봐야-하나요">Q: 어디부터 봐야 하나요?</h3>
+
+<p>A: <strong>🎯 오늘의 주제 탭</strong>. 우리 카테고리 카드에서 🔥 재편집 재폭발 묶음의 첫 번째 주제부터.</p>
+
+<h3 id="q-분석-결과-너무-많아서-어떻게-봐야-할지-모르겠어요">Q: 분석 결과 너무 많아서 어떻게 봐야 할지 모르겠어요</h3>
+
+<p>A: 3개만 보세요:<br />
+1. <strong>공통 후크 유형</strong> — 우리도 같은 유형으로<br />
+2. <strong>첫 사건 평균 시점</strong> — 우리도 같은 시점에<br />
+3. <strong>시그너처 어휘</strong> — 우리 본문에 박기</p>
+
+<h3 id="q-autopsy에-던지는-영상-어떻게-골라요">Q: autopsy에 던지는 영상 어떻게 골라요?</h3>
+
+<p>A: <strong>같은 카테고리 + 비슷한 효율 + 3~5편</strong>. 1편만 던지면 패턴 안 나옴.<br />
+- 시니어랩 폭발 야담 영상 표에서 [🔥 분석] 버튼 활용하면 자동.</p>
+
+<h3 id="q-단조도가-25-나왔어요-위험한가요">Q: 단조도가 25 나왔어요. 위험한가요?</h3>
+
+<p>A: 🟠 반복 신호 단계. 다음 영상은:<br />
+1. 시그너처 어휘 줄이기 (영상당 5번 → 2번)<br />
+2. Hook 패턴 변경 (충격사건형 → 회상형)<br />
+3. 인물명·주제 갱신</p>
+
+<h3 id="q-클릭베이트-점수가-710-나왔어요-너무-자극적인가요">Q: 클릭베이트 점수가 7/10 나왔어요. 너무 자극적인가요?</h3>
+
+<p>A: 카테고리 평균이 6.5 정도면 7은 적정. 9+는 신뢰도 떨어져서 retention ↓. <strong>카테고리 평균 ± 1 안에 두기</strong>.</p>
+
+<h3 id="q-우리-영상도-autopsy로-분석할-수-있나요">Q: 우리 영상도 autopsy로 분석할 수 있나요?</h3>
+
+<p>A: ✅ 발행 24시간 후 던지세요. 다른 영상과 비교해서 차이점 찾고 다음 영상 개선.</p>
+
+<h3 id="q-새-채널-만들-때-어떻게-활용해요">Q: 새 채널 만들 때 어떻게 활용해요?</h3>
+
+<p>A:<br />
+1. 🏆 패턴 라이브러리에서 카테고리 제목 공식 확인<br />
+2. 시니어랩처럼 corpus 있는 카테고리면 shared corpus 활용 자동<br />
+3. Claude Code에 "[카테고리] 채널 만들어줘" → channel-setup이 패턴 자동 적용</p>
+
+<h3 id="q-매일-봐야-하나요">Q: 매일 봐야 하나요?</h3>
+
+<p>A: 의무 X. 주 1~2회 충분. 매일 보면 같은 데이터 반복 (효율 영상은 1~2주 단위 변경).</p>
+
+<h3 id="q-모바일에서도-보이나요">Q: 모바일에서도 보이나요?</h3>
+
+<p>A: ✅ 반응형. 다만 데스크탑이 정보 위계 명확.</p>
+
+<hr />
+
+<h2 id="트러블슈팅">🆘 트러블슈팅</h2>
+
+<h3 id="분석-시작-버튼이-작동-안-함">분석 시작 버튼이 작동 안 함</h3>
+
+<ol>
+<li>Cmd+Shift+R 하드 새로고침</li>
+<li>F12 콘솔 에러 확인 후 알려주세요</li>
+</ol>
+
+<h3 id="autopsy가-실패함-자막-없음">autopsy가 실패함 (자막 없음)</h3>
+
+<ul>
+<li>영상에 자막 자체가 없음 (YouTube에서 확인)</li>
+<li>자동자막만 있는 영상은 한국어 인식 오류 가능</li>
+<li>→ 다른 영상으로 시도</li>
+</ul>
+
+<h3 id="시니어-분석-클릭해도-url-prefill-안-됨">시니어 [🔥 분석] 클릭해도 URL prefill 안 됨</h3>
+
+<ul>
+<li>하드 새로고침</li>
+<li>콘솔에서 <code>sessionStorage.getItem('autopsyPrefill')</code> 확인</li>
+</ul>
+
+<h3 id="cloudflare-배포가-안-보임">Cloudflare 배포가 안 보임</h3>
+
+<ul>
+<li>KR push 후 1~2분, JP는 2~3분 대기</li>
+<li>Cmd+Shift+R</li>
+</ul>
+
+<hr />
+
+<h2 id="외부-링크">🔗 외부 링크</h2>
+
+<ul>
+<li><strong>사이트</strong>: https://arrange-yt-scanner.pages.dev</li>
+<li><strong>GitHub</strong>: https://github.com/cmpark0401-hash/arrange-yt-scanner</li>
+<li><strong>API 키 발급</strong> (LLM 분석용): https://console.anthropic.com/</li>
+</ul>
+
+<hr />
+
+<h2 id="마지막-한-마디">📝 마지막 한 마디</h2>
+
+<p>TubeHacker는 <em>데이터를 보여주는 도구</em>입니다. <em>결정은 사람이 합니다.</em></p>
+
+<p>데이터가 보여주는 패턴 + 사용자의 카테고리 직관 + 채널 톤 = 최고의 영상.</p>
+
+<p>매번 5단계 따라하다 보면 본인만의 패턴이 보입니다. 그게 진짜 노하우입니다.</p>
+
+<p><em>TubeHacker · 유튜브 알고리즘 해킹의 모든 것</em></p>
+</div>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 23:58</footer>
+</body>
+</html>
