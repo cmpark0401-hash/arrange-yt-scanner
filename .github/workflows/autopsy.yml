@@ -1,0 +1,116 @@
+name: Autopsy — 영상 부검
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  autopsy:
+    if: contains(github.event.issue.labels.*.name, 'autopsy')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install yt-dlp
+
+      - name: Parse issue body
+        id: parse
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          python - <<'PYEOF'
+          import os, re, json
+          body = os.environ.get("ISSUE_BODY", "")
+          title = os.environ.get("ISSUE_TITLE", "")
+
+          # URL 추출
+          urls = re.findall(r"https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/|youtube\.com/shorts/)[A-Za-z0-9_-]{11}\S*", body)
+          urls = [u.rstrip(".,)]") for u in urls][:10]
+
+          # 라벨 (### 라벨 ... 다음 줄)
+          m = re.search(r"###\s*라벨\s*\n+([^\n#]+)", body)
+          label = (m.group(1).strip() if m else "").replace("(없음)", "").strip()
+          if not label:
+              t = title.replace("[autopsy]", "").strip()
+              label = t or f"{len(urls)}편 분석"
+
+          # 태그
+          m = re.search(r"###\s*태그\s*\n+([^\n#]+)", body)
+          tags = (m.group(1).strip() if m else "").replace("(없음)", "").strip()
+
+          out = {"urls": urls, "label": label, "tags": tags}
+          print(json.dumps(out, ensure_ascii=False, indent=2))
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"urls={' '.join(urls)}\n")
+              f.write(f"label={label}\n")
+              f.write(f"tags={tags}\n")
+              f.write(f"n_urls={len(urls)}\n")
+          PYEOF
+
+      - name: Run autopsy
+        if: steps.parse.outputs.n_urls != '0'
+        run: |
+          cd _autopsy_scripts
+          python autopsy.py ${{ steps.parse.outputs.urls }} \
+            --label "${{ steps.parse.outputs.label }}" \
+            --tags "${{ steps.parse.outputs.tags }}"
+
+      - name: Build index update
+        if: steps.parse.outputs.n_urls != '0'
+        run: |
+          cd _autopsy_scripts
+          python build_autopsy_pages.py
+
+      - name: Commit + push
+        if: steps.parse.outputs.n_urls != '0'
+        run: |
+          git config user.name "TubeHacker Autopsy Bot"
+          git config user.email "actions@github.com"
+          git add channels/_autopsy autopsy.html autopsy_*.html
+          git diff --cached --quiet || git commit -m "autopsy: ${{ steps.parse.outputs.label }} (#${{ github.event.issue.number }})"
+          git push
+
+      - name: Comment + close issue (success)
+        if: steps.parse.outputs.n_urls != '0' && success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const label = `${{ steps.parse.outputs.label }}`;
+            const n = `${{ steps.parse.outputs.n_urls }}`;
+            github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `✅ 분석 완료 — **${label}** (${n}편)\n\n📄 결과: https://arrange-yt-scanner.pages.dev/autopsy.html\n\n_Cloudflare Pages 배포까지 1~2분 추가 소요됩니다._`
+            });
+            github.rest.issues.update({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number, state: 'closed'
+            });
+
+      - name: Comment failure
+        if: steps.parse.outputs.n_urls == '0' || failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const n = `${{ steps.parse.outputs.n_urls }}`;
+            const reason = n === '0' ? 'URL을 찾지 못했습니다. YouTube URL을 1~10개 포함해주세요.' : '분석 중 오류가 발생했습니다. Action 로그를 확인하세요.';
+            github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `❌ ${reason}`
+            });
