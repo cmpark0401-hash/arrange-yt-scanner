@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta name="theme-color" content="#8ab4f8">
-  <title>🇰🇷 TubeHacker · 유튜브 알고리즘 해킹의 모든 것</title>
+  <title>🔥 왜 이 영상은 터졌는가?</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 :root {
@@ -200,67 +200,15 @@ section table { margin:10px 0; }
   tbody td, thead th { padding:9px 8px; }
 }
 </style>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
-  <header class="shell-head">
-    <a href="jp/index.html" class="country-switch">🇯🇵 TubeHacker JP →</a>
-    <h1>🇰🇷 TubeHacker · 유튜브 알고리즘 해킹의 모든 것</h1>
-    <div class="sub">최종 갱신: 2026-05-31 17:34 · 추적 채널 86개 · 기준일 2026-05-30</div>
-    <div class="nav-links" id="tabs">
-      <a href="dashboard.html" data-tab="dashboard">🏠 대시보드 홈</a>
-      <a href="recommendations.html" data-tab="recs" class="nav-primary">🎯 오늘의 주제</a>
-      <a href="archive.html" data-tab="archive">🔥 Hot키워드</a>
-      <a href="science_2026-05-29.html" data-tab="science">🔬 과학 트렌드</a>
-      <a href="senior_2026-05-31.html" data-tab="senior">🎙️ 시니어랩</a>
-      <a href="autopsy.html" data-tab="autopsy" class="nav-primary">🔥 왜 이 영상은 터졌는가?</a>
-      <a href="news_headlines.html" data-tab="news">📰 뉴스 모니터링</a>
-      <a href="daily_2026-05-30.html" data-tab="daily">📅 일별 아카이브</a>
-    </div>
+  <header>
+    <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
+    <h1>🔥 왜 이 영상은 터졌는가?</h1>
+    <div class="sub">분석 0건 · 사용자 던진 영상의 자막 corpus 분해</div>
   </header>
-
-  <div id="view"><div class="view-loading">불러오는 중…</div></div>
+  
+  <div class="rep-note" style="padding:32px; text-align:center; font-size:14px;">아직 분석된 영상이 없습니다.<br><br><b>사용법</b>: Claude에게 자연어로 요청하세요 — <i>"왜 이 영상은 터졌는가? URL1 URL2 URL3"</i><br>또는 터미널: <code>.venv/bin/python scripts/autopsy.py URL1 URL2 --label "..."</code></div>
   <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 17:34</footer>
-
-  <script>
-    const cache = {};
-    const tabUrl = {};
-    document.querySelectorAll('#tabs a').forEach(a => tabUrl[a.dataset.tab] = a.getAttribute('href'));
-    function setActive(tab){ document.querySelectorAll('#tabs a').forEach(a => a.classList.toggle('tab-on', a.dataset.tab===tab)); }
-    function runScripts(c){
-      c.querySelectorAll('script').forEach(old => {
-        const s = document.createElement('script');
-        if (old.src) { s.src = old.src; }
-        else { s.textContent = '(function(){\n' + old.textContent + '\n})();'; }
-        old.replaceWith(s);
-      });
-    }
-    async function loadUrl(url, tab){
-      const v = document.getElementById('view');
-      setActive(tab || '');
-      v.innerHTML = '<div class="view-loading">불러오는 중…</div>';
-      let html = cache[url];
-      if (html === undefined){
-        try { html = await fetch(url).then(r => r.text()); cache[url] = html; }
-        catch(e){ v.innerHTML = '<div class="view-loading">불러오기 실패 — 새로고침 해보세요.</div>'; return; }
-      }
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      doc.querySelectorAll('header, footer').forEach(h => h.remove());
-      v.innerHTML = doc.body.innerHTML;
-      runScripts(v);
-      window.scrollTo(0, 0);
-    }
-    function renderTab(tab){ if (!tabUrl[tab]) tab = 'dashboard'; loadUrl(tabUrl[tab], tab); }
-    document.querySelectorAll('#tabs a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); location.hash = a.dataset.tab; }));
-    document.getElementById('view').addEventListener('click', e => {
-      const a = e.target.closest('a'); if (!a) return;
-      const href = a.getAttribute('href') || '';
-      if (/^(daily_|archive|news_headlines|recommendations|dashboard|science_|senior_|autopsy)[^/]*\.html$/.test(href)){
-        e.preventDefault(); loadUrl(href, '');
-      }
-    });
-    window.addEventListener('hashchange', () => renderTab((location.hash || '#dashboard').slice(1)));
-    renderTab((location.hash || '#dashboard').slice(1));
-  </script>
 </body>
 </html>
