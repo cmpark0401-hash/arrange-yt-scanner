@@ -46,7 +46,8 @@ def extract_video_id(url: str) -> str:
 
 def fetch_video_title(vid: str) -> str:
     import subprocess
-    yt = str(ROOT / ".venv" / "bin" / "yt-dlp")
+    venv_yt = ROOT / ".venv" / "bin" / "yt-dlp"
+    yt = str(venv_yt) if venv_yt.exists() else "yt-dlp"
     try:
         r = subprocess.run([yt, f"https://www.youtube.com/watch?v={vid}", "--skip-download",
                             "--print", "%(title)s", "--no-warnings",
