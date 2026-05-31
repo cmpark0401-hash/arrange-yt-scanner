@@ -286,7 +286,7 @@ section table { margin:10px 0; }
   <header class="shell-head">
     <div style="flex:1;min-width:0;">
       <h1><span class="brand-flag">🇰🇷</span><span class="brand-accent">TubeHacker</span><span class="brand-divider">·</span><span class="brand-slogan">유튜브 알고리즘 해킹의 모든 것</span></h1>
-      <div class="sub">최종 갱신: 2026-05-31 21:52 · 추적 채널 86개 · 기준일 2026-05-30</div>
+      <div class="sub">최종 갱신: 2026-05-31 21:56 · 추적 채널 86개 · 기준일 2026-05-30</div>
     </div>
     <div class="header-chips">
       <a href="jp/index.html" class="h-chip jp" title="🇯🇵 JP">🇯🇵 JP</a>
@@ -304,7 +304,7 @@ section table { margin:10px 0; }
   </div>
 
   <div id="view"><div class="view-loading">불러오는 중…</div></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 21:52</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 21:56</footer>
 
   <script>
     const cache = {};
@@ -334,6 +334,45 @@ section table { margin:10px 0; }
       runScripts(v);
       window.scrollTo(0, 0);
     }
+    // autopsy 폼 submit/clear — SHELL 레벨에 박아 SPA cache/IIFE 무관 작동
+    window.tubehackerAutopsySubmit = function(){
+      var ta=document.getElementById("autopsyUrls");
+      var lb=document.getElementById("autopsyLabel");
+      var tg=document.getElementById("autopsyTags");
+      if(!ta){alert("폼을 찾을 수 없습니다.");return;}
+      var urls=ta.value.trim();
+      var label=(lb&&lb.value.trim())||"";
+      var tags=(tg&&tg.value.trim())||"";
+      if(!urls){alert("URL을 1개 이상 입력하세요.");return;}
+      var lines=urls.split(/
+/).map(function(s){return s.trim();}).filter(Boolean);
+      if(lines.length>10){alert("URL은 최대 10개까지 가능합니다.");return;}
+      var body="### URLs
+
+"+lines.join("
+")+"
+
+### 라벨
+
+"+(label||"(없음)")+"
+
+### 태그
+
+"+(tags||"(없음)")+"
+";
+      var title="[autopsy] "+(label||(lines.length+"편 분석"));
+      var url="https://github.com/cmpark0401-hash/arrange-yt-scanner/issues/new?title="+encodeURIComponent(title)+"&body="+encodeURIComponent(body)+"&labels=autopsy";
+      var w=window.open(url,"_blank");
+      if(!w){alert("팝업이 차단됐어요. 주소창의 팝업 차단 해제 후 다시 시도하거나, 다음 URL을 직접 여세요:
+
+"+url);}
+    };
+    window.tubehackerAutopsyClear = function(){
+      ["autopsyUrls","autopsyLabel","autopsyTags"].forEach(function(id){
+        var el=document.getElementById(id); if(el) el.value="";
+      });
+    };
+
     const tabTitles = {
       dashboard:'실시간 알고리즘 시그널', recs:'오늘의 주제', archive:'Hot키워드',
       science:'과학 트렌드', senior:'시니어랩 야담',
