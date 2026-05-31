@@ -249,8 +249,116 @@ section table { margin:10px 0; }
 .subtab.dim { opacity:.45; cursor:not-allowed; }
 .chan-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:10px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; margin:3px 4px 0 0; border:1px solid var(--primary-bd); }
 
-/* Manual (사용 가이드) */
-.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:900px; }
+/* Manual (사용 가이드) — 시각 컴포넌트 */
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
+
+/* 단계 카드 (1→2→3 가로 흐름) */
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin:14px 0; }
+.step { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; position:relative; }
+.step .step-num { position:absolute; top:-10px; left:14px; background:var(--primary); color:#fff; font-weight:800; font-size:12px; padding:3px 10px; border-radius:10px; }
+.step .step-title { font-weight:700; color:var(--text); font-size:14px; margin:6px 0 6px; }
+.step .step-body { font-size:12px; color:var(--text2); line-height:1.6; }
+.step.hot { border-color:var(--hot-bd); background:var(--hot-bg); }
+.step.hot .step-num { background:var(--hot); color:#000; }
+.step.warn { border-color:var(--warn-bd); background:var(--warn-bg); }
+.step.warn .step-num { background:var(--warn); color:#000; }
+
+/* 사이트 UI 미니어처 — 실제 페이지처럼 */
+.mock { background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:12px; margin:14px 0; }
+.mock-header { display:flex; align-items:baseline; gap:8px; padding-bottom:8px; border-bottom:1px solid var(--divider); margin-bottom:10px; }
+.mock-brand { font-size:14px; font-weight:800; color:var(--primary); }
+.mock-slogan { font-size:10px; color:var(--text2); }
+.mock-chips { margin-left:auto; display:flex; gap:5px; }
+.mock-chip { font-size:10px; padding:3px 8px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--text2); font-weight:600; }
+.mock-chip.warn { color:var(--warn); border-color:var(--warn-bd); background:var(--warn-bg); }
+.mock-chip.hot { color:var(--hot); border-color:var(--hot-bd); background:var(--hot-bg); }
+.mock-chip b { color:var(--text); }
+.mock-chip.warn b { color:var(--warn); }
+.mock-chip.hot b { color:var(--hot); }
+.mock-tabs { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0 10px; }
+.mock-tab { font-size:11px; padding:5px 10px; border-radius:13px; background:var(--surface); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.mock-tab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+.mock-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 13px; margin:6px 0; position:relative; }
+.mock-card.crown { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.mock-rank-badge { display:inline-block; background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; font-size:11px; font-weight:800; padding:2px 8px; border-radius:8px; margin-right:6px; }
+.mock-ch-name { font-size:13px; font-weight:700; color:var(--text); display:inline; }
+.mock-delta { color:var(--up); font-weight:700; font-size:11px; margin-left:6px; }
+.mock-meta-line { font-size:11px; color:var(--text2); margin-top:3px; }
+.mock-stats-row { display:flex; gap:14px; margin:7px 0; padding:6px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.mock-stat { font-size:10px; color:var(--text2); }
+.mock-stat b { display:block; font-size:13px; font-weight:800; color:var(--text); }
+.mock-stat.sig b { color:var(--danger); }
+.mock-stat.hot b { color:var(--hot); }
+.mock-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; padding-top:8px; border-top:1px solid var(--divider); }
+.mock-vid-mini { font-size:10px; }
+.mock-vid-mini .lbl { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.mock-vid-mini .lbl.pop { color:var(--warn); }
+.mock-vid-mini .lbl.latest { color:var(--hot); }
+.mock-vid-thumb { background:linear-gradient(135deg, #3a3a4a, #1a1a26); height:55px; border-radius:5px; margin:3px 0; display:flex; align-items:center; justify-content:center; color:var(--text3); font-size:9px; }
+.mock-vid-mini .title { font-size:11px; color:var(--text); line-height:1.3; }
+.mock-pointer { display:inline-block; background:var(--primary); color:#fff; font-size:10px; font-weight:700; padding:3px 9px; border-radius:5px; position:absolute; }
+.mock-pointer::before { content:"👉 "; }
+
+/* 인포그래픽 게이지 */
+.gauge { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; }
+.gauge-title { font-size:13px; font-weight:700; color:var(--text); margin-bottom:8px; }
+.gauge-bar { height:24px; border-radius:8px; background:linear-gradient(90deg, #4ade80 0%, #4ade80 30%, #facc15 30%, #facc15 60%, #ff7a45 60%, #ff7a45 80%, #ef4444 80%); position:relative; overflow:hidden; }
+.gauge-labels { display:flex; justify-content:space-between; margin-top:4px; font-size:10px; color:var(--text2); }
+.gauge-pointer { position:absolute; top:-2px; bottom:-2px; width:3px; background:var(--text); border-radius:2px; box-shadow:0 0 0 2px var(--surface); }
+
+/* 메트릭 인포그래픽 카드 */
+.metric-card { display:flex; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:10px 0; }
+.metric-icon { font-size:26px; flex-shrink:0; }
+.metric-body { flex:1; min-width:0; }
+.metric-body .name { font-size:14px; font-weight:800; color:var(--text); }
+.metric-body .formula { font-size:11px; color:var(--text2); margin:3px 0; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+.metric-body .meaning { font-size:12px; color:var(--text); margin-top:5px; }
+.metric-grades { display:flex; gap:6px; margin-top:8px; }
+.metric-grades .grade { font-size:10px; padding:3px 8px; border-radius:6px; font-weight:700; }
+.metric-grades .grade.good { background:rgba(74,222,128,.15); color:var(--up); border:1px solid rgba(74,222,128,.4); }
+.metric-grades .grade.mid { background:rgba(250,204,21,.15); color:#facc15; border:1px solid rgba(250,204,21,.4); }
+.metric-grades .grade.bad { background:rgba(239,68,68,.15); color:var(--danger); border:1px solid rgba(239,68,68,.4); }
+
+/* 시간 룰러 (첫 사건 시점) */
+.ruler { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; position:relative; }
+.ruler-track { height:50px; background:linear-gradient(90deg, var(--hot) 0%, var(--hot) 33%, var(--warn) 33%, var(--warn) 66%, var(--danger) 66%); border-radius:8px; position:relative; }
+.ruler-marker { position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--text); box-shadow:0 0 0 2px var(--surface); }
+.ruler-marker::after { content:attr(data-label); position:absolute; top:-22px; left:50%; transform:translateX(-50%); background:var(--text); color:var(--bg); font-size:10px; font-weight:700; padding:2px 7px; border-radius:5px; white-space:nowrap; }
+.ruler-scale { display:flex; justify-content:space-between; margin-top:6px; font-size:10px; color:var(--text2); }
+.ruler-labels { display:flex; justify-content:space-between; margin-top:3px; font-size:9px; color:var(--text2); font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+
+/* 흐름 다이어그램 (큰 화살표 박스) */
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px; align-items:stretch; margin:14px 0; }
+.flow-node { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; position:relative; }
+.flow-node .icon { font-size:24px; display:block; margin-bottom:5px; }
+.flow-node .title { font-size:12px; font-weight:700; color:var(--text); }
+.flow-node .sub { font-size:10px; color:var(--text2); margin-top:3px; }
+.flow-node.primary { background:var(--primary-bg); border-color:var(--primary-bd); }
+.flow-node.primary .title { color:var(--primary-hi); }
+
+/* 좋은 예 vs 나쁜 예 박스 */
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0; }
+.compare-box { padding:14px; border-radius:10px; border:1px solid; }
+.compare-box.good { background:rgba(74,222,128,.07); border-color:rgba(74,222,128,.35); }
+.compare-box.bad { background:rgba(239,68,68,.07); border-color:rgba(239,68,68,.35); }
+.compare-box .head { font-size:13px; font-weight:800; margin-bottom:6px; }
+.compare-box.good .head { color:var(--up); }
+.compare-box.bad .head { color:var(--danger); }
+.compare-box ul { margin:5px 0 0 18px; }
+.compare-box li { font-size:12px; line-height:1.55; margin:3px 0; }
+
+/* TL;DR callout */
+.tldr { background:linear-gradient(135deg, var(--primary-bg), var(--info-bg)); border:1px solid var(--primary-bd); border-radius:10px; padding:14px 16px; margin:14px 0; }
+.tldr-title { font-size:13px; font-weight:800; color:var(--primary-hi); margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
+.tldr-body { font-size:13px; color:var(--text); line-height:1.65; }
+
+/* 강조 인용 박스 (인사이트 예시) */
+.insight { background:var(--surface); border-left:4px solid var(--hot); border-radius:0 10px 10px 0; padding:13px 16px; margin:14px 0; }
+.insight-tag { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:var(--hot); margin-bottom:5px; }
+.insight-section { margin:6px 0; font-size:12.5px; line-height:1.6; }
+.insight-section b { color:var(--hot); }
+
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
 .manual-body h1 { font-size:28px; font-weight:800; margin:24px 0 12px; color:var(--text); letter-spacing:-0.5px; }
 .manual-body h2 { font-size:22px; font-weight:800; margin:32px 0 12px; padding-top:16px; border-top:1px solid var(--divider); color:var(--primary-hi); letter-spacing:-0.3px; }
 .manual-body h3 { font-size:17px; font-weight:700; margin:20px 0 8px; color:var(--text); }
@@ -314,135 +422,212 @@ section table { margin:10px 0; }
 
 <p><strong>유튜브 알고리즘 해킹의 모든 것</strong> — 발견 → 검증 → 청사진 → 제작까지 한 사이클.</p>
 
+<div class="tldr">
+<div class="tldr-title">⚡ TL;DR — 3줄 요약</div>
+<div class="tldr-body">
+✅ <b>오늘 만들 영상 주제·구조·어휘</b>를 데이터 기반으로 추천<br>
+✅ <b>YouTube URL을 던지면</b> 자막 분해 → Hook/구조/단조도 자동 분석<br>
+✅ 분석 결과 → <b>Claude Code에 한 번에 전달</b> → 대본 자동 생성
+</div>
+</div>
+
 <hr />
 
 <h2 id="처음-사용자를-위한-3분-가이드">🚀 처음 사용자를 위한 3분 가이드</h2>
 
-<p><strong>처음 들어왔다면 이 순서대로 하세요:</strong></p>
+<div class="steps">
+  <div class="step hot">
+    <span class="step-num">STEP 1</span>
+    <div class="step-title">🏠 대시보드 홈 보기</div>
+    <div class="step-body">상단 칩 3개로 오늘 분위기 파악 — 🚨 시그널 · 🔥 폭발 · 🆕 24h</div>
+  </div>
+  <div class="step">
+    <span class="step-num">STEP 2</span>
+    <div class="step-title">📂 우리 카테고리 찾기</div>
+    <div class="step-body">카테고리 탭 클릭 → 👑 1·2·3위 채널 카드의 인기 영상 확인</div>
+  </div>
+  <div class="step warn">
+    <span class="step-num">STEP 3</span>
+    <div class="step-title">🎯 만들 주제 정하기</div>
+    <div class="step-body">오늘의 주제 탭에서 🔥 재편집 재폭발 카드 → 주제 선택</div>
+  </div>
+</div>
 
-<h3 id="step-1-30초-오늘의-시그널-보기">Step 1 (30초): 오늘의 시그널 보기</h3>
+<hr />
 
-<ol>
-<li><strong>🏠 대시보드 홈</strong> 탭</li>
-<li>상단 헤더에 빨간 칩 보기:
-<ul>
-<li><code>🚨 시그널 N</code> — 알고리즘이 지금 미는 영상 수</li>
-<li><code>🔥 폭발 N</code> — 효율 검증된 영상 수</li>
-</ul></li>
-<li><strong>숫자가 크면 = 오늘 만들기 좋은 날</strong></li>
-</ol>
+<h2 id="사이트-한눈에-보기">🖼️ 사이트 한눈에 보기</h2>
 
-<h3 id="step-2-1분-우리-채널-카테고리-찾기">Step 2 (1분): 우리 채널 카테고리 찾기</h3>
+<div class="mock">
+  <div class="mock-header">
+    <span style="font-size:18px;">🇰🇷</span>
+    <span class="mock-brand">TubeHacker</span>
+    <span class="mock-slogan">· 유튜브 알고리즘 해킹의 모든 것</span>
+    <div class="mock-chips">
+      <span class="mock-chip warn">🚨 시그널 <b>9</b></span>
+      <span class="mock-chip hot">🔥 폭발 <b>150</b></span>
+      <span class="mock-chip">🆕 24h <b>65</b></span>
+      <span class="mock-chip">🇯🇵 JP</span>
+    </div>
+  </div>
+  <div class="mock-tabs">
+    <span class="mock-tab on">🏠 대시보드 홈</span>
+    <span class="mock-tab">🎯 오늘의 주제</span>
+    <span class="mock-tab">🔥 Hot키워드</span>
+    <span class="mock-tab">🔬 과학 트렌드</span>
+    <span class="mock-tab">🎙️ 시니어랩</span>
+    <span class="mock-tab">🔥 왜 이 영상은 터졌는가?</span>
+    <span class="mock-tab">🏆 패턴 라이브러리</span>
+    <span class="mock-tab">📖 가이드</span>
+  </div>
+  <div class="mock-card crown">
+    <span class="mock-rank-badge">👑 #1</span>
+    <span class="mock-ch-name">지식인사이드</span>
+    <span class="mock-delta">▲5</span>
+    <div class="mock-meta-line">구독 384만 · 🎬 롱폼 · 📅 21년 8월 개설 · 4년 9개월차</div>
+    <div class="mock-stats-row">
+      <div class="mock-stat sig"><b>3</b>🚨 시그널</div>
+      <div class="mock-stat hot"><b>5</b>🔥 폭발</div>
+      <div class="mock-stat"><b>1</b>🆕 24h</div>
+    </div>
+    <div class="mock-vid-dual">
+      <div class="mock-vid-mini">
+        <div class="lbl pop">🔥 인기 영상</div>
+        <div class="mock-vid-thumb">[썸네일]</div>
+        <div class="title">조선 마지막 환관의 비밀</div>
+      </div>
+      <div class="mock-vid-mini">
+        <div class="lbl latest">🆕 최신 영상</div>
+        <div class="mock-vid-thumb">[썸네일]</div>
+        <div class="title">광해군이 왜 폐위됐나</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<ol>
-<li>카테고리 탭 클릭 (예: <code>역사</code>, <code>경제</code>)</li>
-<li><strong>👑 1·2·3위 카드 = 오늘 가장 잘 나가는 채널들</strong></li>
-<li>카드의 <strong>인기 영상</strong> 썸네일 확인 → 이게 지금 사람들이 좋아하는 콘텐츠</li>
-</ol>
-
-<h3 id="step-3-1분-30초-만들-영상-주제-정하기">Step 3 (1분 30초): 만들 영상 주제 정하기</h3>
-
-<ol>
-<li><strong>🎯 오늘의 주제</strong> 탭 클릭</li>
-<li>우리 카테고리에서:
-<ul>
-<li><strong>🔥 재편집 재폭발</strong> — 지금 다시 뜬 검증 주제 (최우선)</li>
-<li><strong>검증 주제</strong> — 시간 검증된 영구 가치 주제</li>
-</ul></li>
-<li>마음에 드는 주제 골라 그 대표 영상 URL 복사</li>
-</ol>
-
-<p>→ 이제 <strong>🔥 왜 이 영상은 터졌는가?</strong> 탭으로 가서 그 URL 분석.</p>
+<p style="text-align:center; color:var(--text2); font-size:12px;">↑ 실제 사이트 헤더 + 채널 카드 모양 (미니어처)</p>
 
 <hr />
 
 <h2 id="tubehacker가-답하는-5가지-질문">🎯 TubeHacker가 답하는 5가지 질문</h2>
 
-<p>이 도구는 <strong>유튜브 PD를 위한 의사결정 도우미</strong>입니다. 다음 질문에 자동으로 답해줍니다:</p>
-
-<table>
-<thead>
-<tr>
-  <th>질문</th>
-  <th>답하는 탭</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>"오늘 만들 영상 주제 뭐?"</td>
-  <td>🎯 오늘의 주제</td>
-</tr>
-<tr>
-  <td>"이 카테고리에 영구 가치 있는 주제는?"</td>
-  <td>🔥 Hot키워드</td>
-</tr>
-<tr>
-  <td>"이 영상은 왜 터졌고 어떻게 만들어졌나?"</td>
-  <td>🔥 왜 이 영상은 터졌는가?</td>
-</tr>
-<tr>
-  <td>"지금 어떤 썸네일·제목·후크가 효과적이지?"</td>
-  <td>🏆 패턴 라이브러리</td>
-</tr>
-<tr>
-  <td>"내 채널이 어디쯤이고 경쟁 채널은?"</td>
-  <td>🏠 대시보드</td>
-</tr>
-</tbody>
-</table>
+<div class="flow">
+  <div class="flow-node primary">
+    <span class="icon">🎯</span>
+    <div class="title">오늘 만들 주제?</div>
+    <div class="sub">→ 오늘의 주제</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🔥</span>
+    <div class="title">영구 가치 주제?</div>
+    <div class="sub">→ Hot키워드</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🔬</span>
+    <div class="title">왜 터졌나?</div>
+    <div class="sub">→ Autopsy</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🏆</span>
+    <div class="title">검증 패턴?</div>
+    <div class="sub">→ 패턴 라이브러리</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">📊</span>
+    <div class="title">경쟁 채널?</div>
+    <div class="sub">→ 대시보드</div>
+  </div>
+</div>
 
 <hr />
 
-<h2 id="핵심-컨셉-이거-모르면-안-됨">📚 핵심 컨셉 (이거 모르면 안 됨)</h2>
+<h2 id="핵심-메트릭-이거-모르면-안-됨">📊 핵심 메트릭 (이거 모르면 안 됨)</h2>
 
-<h3 id="효율-efficiency-조회수-구독자수">효율 (Efficiency) = 조회수 ÷ 구독자수</h3>
+<div class="metric-card">
+  <div class="metric-icon">⚡</div>
+  <div class="metric-body">
+    <div class="name">효율 (Efficiency)</div>
+    <div class="formula">= 조회수 ÷ 구독자수</div>
+    <div class="meaning">알고리즘이 외부 추천한 정도. 구독자 작은 채널도 폭발 가능.</div>
+    <div class="metric-grades">
+      <span class="grade good">1.0+ 양호</span>
+      <span class="grade good">5.0+ 폭발 🔥</span>
+      <span class="grade good">10.0+ 메가폭발 🚀</span>
+    </div>
+  </div>
+</div>
 
-<ul>
-<li><strong>1.0</strong> = 구독자 수만큼 봄 (양호)</li>
-<li><strong>5.0</strong> = 구독자의 5배가 봄 (폭발 = 알고리즘이 외부 추천)</li>
-<li><strong>10.0+</strong> = 메가폭발 (트렌딩급)</li>
-<li><strong>왜 중요?</strong> 구독자 작은 채널도 폭발 가능. <em>어떤 영상이 알고리즘 추천을 받았나</em> 정확히 측정.</li>
-</ul>
+<div class="metric-card">
+  <div class="metric-icon">🚀</div>
+  <div class="metric-body">
+    <div class="name">시속 (Velocity)</div>
+    <div class="formula">= 조회수 ÷ 영상 나이(시간)</div>
+    <div class="meaning">'지금 막' 폭발 중인 영상 발견. 이미 폭발한 영상이 아니라 진행 중.</div>
+    <div class="metric-grades">
+      <span class="grade mid">5,000+/h 시그널 🚨</span>
+      <span class="grade good">50,000+/h 트렌딩</span>
+    </div>
+  </div>
+</div>
 
-<h3 id="시속-velocity-조회수-영상-나이시간">시속 (Velocity) = 조회수 ÷ 영상 나이(시간)</h3>
+<div class="metric-card">
+  <div class="metric-icon">⏱️</div>
+  <div class="metric-body">
+    <div class="name">첫 사건 발생 시점</div>
+    <div class="formula">영상 시작 → 첫 사건 키워드 등장 시점</div>
+    <div class="meaning">시청자 머무름 결정. 늦으면 이탈.</div>
+  </div>
+</div>
 
-<ul>
-<li><strong>5,000/h+</strong> = 알고리즘 시그널 (지금 미는 중)</li>
-<li><strong>50,000/h+</strong> = 트렌딩</li>
-<li><strong>왜 중요?</strong> 이미 폭발한 영상이 아니라 <em>지금 막 폭발 중</em>인 영상 발견.</li>
-</ul>
+<div class="ruler">
+  <div class="ruler-track">
+    <div class="ruler-marker" data-label="60s" style="left:33%;"></div>
+    <div class="ruler-marker" data-label="120s" style="left:66%;"></div>
+  </div>
+  <div class="ruler-labels">
+    <span>🟢 안전</span>
+    <span>🟡 주의</span>
+    <span>🔴 위험</span>
+  </div>
+  <div class="ruler-scale">
+    <span>0s</span><span>60s</span><span>120s</span><span>180s</span>
+  </div>
+</div>
 
-<h3 id="폭발-vs-시그널-헷갈리기-쉬움">폭발 vs 시그널 (헷갈리기 쉬움)</h3>
+<div class="metric-card">
+  <div class="metric-icon">♻️</div>
+  <div class="metric-body">
+    <div class="name">단조도 (Monotony)</div>
+    <div class="formula">= N편 영상간 3-gram Jaccard × 100</div>
+    <div class="meaning">같은 채널이 매번 같은 표현 쓰는 정도. 높으면 시청자 거부감.</div>
+  </div>
+</div>
 
-<ul>
-<li><strong>🔥 폭발</strong> = 효율 5배+ (총 결과 검증)</li>
-<li><strong>🚨 시그널</strong> = 시속 5,000+/h (현재 진행 중)</li>
-<li><strong>둘 다 있으면</strong>: 검증 + 현재 진행 = 최강</li>
-</ul>
+<div class="gauge">
+  <div class="gauge-title">단조도 점수 0~100</div>
+  <div class="gauge-bar">
+    <div class="gauge-pointer" style="left:25%;"></div>
+  </div>
+  <div class="gauge-labels">
+    <span>🟢 0~10 다양</span>
+    <span>🟡 10~20 적당</span>
+    <span>🟠 20~30 반복</span>
+    <span>🔴 30+ 거부</span>
+  </div>
+</div>
 
-<h3 id="hook-030초">Hook (0~30초)</h3>
-
-<ul>
-<li>시청자가 <em>떠날지 머무를지</em> 결정하는 30초</li>
-<li><strong>0~3초</strong> = 첫인상 (소리·시각 즉시 인지)</li>
-<li><strong>3~10초</strong> = 충격·질문·통계</li>
-<li><strong>10~30초</strong> = "이 영상에서 보여줄 것" 약속</li>
-</ul>
-
-<h3 id="첫-사건-발생-시점">첫 사건 발생 시점</h3>
-
-<ul>
-<li>영상 시작부터 첫 사건(어느날·갑자기·쓰러졌 등) 등장 시점</li>
-<li><strong>60초 안</strong> = 🟢 retention 유지 (시청자 머묾)</li>
-<li><strong>120초+</strong> = 🔴 이탈 위험</li>
-</ul>
-
-<h3 id="단조도-monotony">단조도 (Monotony)</h3>
-
-<ul>
-<li>같은 채널이 매번 같은 표현 쓰는 정도</li>
-<li><strong>30+</strong> = 시청자 거부감 발생 (다음 영상 안 봄)</li>
-</ul>
+<div class="metric-card">
+  <div class="metric-icon">🎯</div>
+  <div class="metric-body">
+    <div class="name">클릭베이트 점수</div>
+    <div class="formula">LLM 1~10점</div>
+    <div class="meaning">썸네일의 자극도. 카테고리 평균이 목표 — 너무 높으면 신뢰도 ↓ → retention ↓</div>
+    <div class="metric-grades">
+      <span class="grade good">5~7 적정</span>
+      <span class="grade mid">8 강함</span>
+      <span class="grade bad">9~10 과함 ⚠️</span>
+    </div>
+  </div>
+</div>
 
 <hr />
 
@@ -450,284 +635,229 @@ section table { margin:10px 0; }
 
 <h3 id="대시보드-홈">🏠 대시보드 홈</h3>
 
-<p><strong>언제 보나</strong>: 매일 아침 30초 확인용. 오늘의 시그널 한눈에.</p>
+<p><strong>언제 보나</strong>: 매일 아침 30초 확인용.</p>
 
-<h4 id="단계별-사용법">📍 단계별 사용법</h4>
+<div class="steps">
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-title">헤더 칩 확인</div>
+    <div class="step-body">🚨 시그널 · 🔥 폭발 · 🆕 24h 숫자 클수록 = 만들기 좋은 날</div>
+  </div>
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-title">필터 활용</div>
+    <div class="step-body">시간 토글 · 형식 토글 · 대형 제외 · 폭발/시그널만 · 검색</div>
+  </div>
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-title">채널 카드 읽기</div>
+    <div class="step-body">👑 1·2·3위 · ▲ 등락 · 📅 연차 · 인기/최신 영상</div>
+  </div>
+</div>
 
-<p><strong>1단계: 헤더 칩 확인 (5초)</strong><br />
-화면 상단 우측 칩 3개:</p>
+<div class="compare">
+  <div class="compare-box good">
+    <div class="head">✅ 이렇게 보세요</div>
+    <ul>
+      <li>▲ 상승 화살표 있는 채널 우선</li>
+      <li>대형 제외 체크해서 우리 사이즈 채널만</li>
+      <li>인기 영상 + 최신 영상 모두 확인</li>
+      <li>편/주 5+ 채널 = 활발한 채널</li>
+    </ul>
+  </div>
+  <div class="compare-box bad">
+    <div class="head">❌ 흔한 실수</div>
+    <ul>
+      <li>1위 채널만 보고 따라가기</li>
+      <li>우리 카테고리 아닌 채널 분석</li>
+      <li>구독자 수만 보고 판단</li>
+      <li>매일 같은 채널만 확인</li>
+    </ul>
+  </div>
+</div>
 
-<pre><code>🚨 시그널 9     ← 지금 알고리즘이 미는 영상
-🔥 폭발 150    ← 효율 검증된 영상  
-🆕 24h 65     ← 새로 발견된 영상
-</code></pre>
-
-<ul>
-<li>숫자 클수록 = 오늘 만들기 좋은 날</li>
-<li>숫자 작으면 = 오늘은 잠잠 → 검증된 주제(🔥 Hot키워드)에서 발굴</li>
-</ul>
-
-<p><strong>2단계: 필터 활용 (15초)</strong><br />
-- <strong>기간 토글</strong> <code>24h | 7일 | 30일 | 급가속</code> → 정렬 기준<br />
-  - <code>24h</code> = 오늘 시그널 많은 채널 우선<br />
-  - <code>7일</code> = 일주일 누적 좋은 채널 (꾸준한 성장)<br />
-  - <code>급가속</code> = 어제 → 오늘 가장 큰 점프<br />
-- <strong>형식 토글</strong> <code>전체 | 🎬 롱폼 | 📱 쇼츠</code> → 우리 컨텐츠 타입만<br />
-- <strong>대형 제외</strong> 체크 → 작은 채널의 보석 발굴<br />
-- <strong>폭발/시그널만</strong> 체크 → 평범한 채널 숨김</p>
-
-<p><strong>3단계: 채널 카드 읽기 (10초/카드)</strong></p>
-
-<pre><code>🥇 #1 [채널명]  ▲5
-구독 38만 · 🎬 롱폼
-📅 21년 8월 개설 · 4년 9개월차
-🚨 3 시그널  🔥 5 폭발  🆕 1 24h
-[스파크라인 차트] +12  📈 6.5편/주
-🔥 인기 영상 (썸네일+제목)
-🆕 최신 영상 (썸네일+제목)
-</code></pre>
-
-<ul>
-<li><strong>👑 1·2·3위</strong> = 오늘 가장 잘 나가는 채널</li>
-<li><strong>▲5</strong> = 어제 대비 순위 5단 상승 (= 가속도 ↑)</li>
-<li><strong>📅 21년 개설 · 4년차</strong> = 채널 성숙도 (오래된 채널인지 신생인지)</li>
-<li><strong>편/주</strong> = 활동성 (5편 이상 = 매우 활발)</li>
-<li><strong>인기 vs 최신</strong> = 채널 대표작 + 지금 뭐하고 있는지</li>
-</ul>
-
-<h4 id="초보자-실수-회피">💡 초보자 실수 회피</h4>
-
-<ul>
-<li>❌ 1위 채널이 항상 좋은 게 아님. 그 채널 <em>카테고리</em>가 우리와 맞는지 봐야.</li>
-<li>❌ 구독자 많은 대형채널 위주로 보지 마세요. <strong>대형 제외</strong> 체크하면 우리에게 맞는 사이즈 채널 보임.</li>
-<li>✅ <strong>▲ 상승 화살표 있는 채널</strong>을 더 봐야 — 지금 알고리즘이 밀어주는 중.</li>
-</ul>
-
-<h4 id="인사이트-도출-예시">🎯 인사이트 도출 예시</h4>
-
-<blockquote>
-  <p><strong>상황</strong>: 역사 카테고리 1위가 "지식인사이드" ▲3 상승, 인기 영상은 <em>조선 마지막 환관의 비밀</em><br />
-  <strong>인사이트</strong>: 1) 역사 채널 지금 알고리즘 추천 받음. 2) "비밀·정체" 클릭베이트가 통하는 중. 3) 조선시대 비주류 인물 콘텐츠 효율 좋음.<br />
-  <strong>액션</strong>: 우리 채널도 조선시대 비주류(궁녀/내시/상궁) 인물 콘텐츠 1개 만들어보기.</p>
-</blockquote>
+<div class="insight">
+  <div class="insight-tag">🎯 인사이트 도출 예시</div>
+  <div class="insight-section"><b>상황</b>: 역사 카테고리 1위 ▲3 상승 + 인기 영상 "조선 마지막 환관의 비밀"</div>
+  <div class="insight-section"><b>인사이트</b>: 역사 채널 지금 알고리즘 추천 + "비밀·정체" 클릭베이트 통함 + 조선 비주류 인물 콘텐츠 효율 좋음</div>
+  <div class="insight-section"><b>액션</b>: 조선시대 비주류(궁녀/내시/상궁) 인물 콘텐츠 1개 만들기</div>
+</div>
 
 <hr />
 
 <h3 id="오늘의-주제">🎯 오늘의 주제</h3>
 
-<p><strong>언제 보나</strong>: 매일 영상 만들기 전. 의사결정 도구.</p>
+<p><strong>언제 보나</strong>: 매일 영상 만들기 전.</p>
 
-<h4 id="단계별-사용법-2">📍 단계별 사용법</h4>
+<div class="flow">
+  <div class="flow-node primary">
+    <span class="icon">🥇</span>
+    <div class="title">🔥 재편집 재폭발</div>
+    <div class="sub">최우선 — 가장 안전</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🥈</span>
+    <div class="title">검증 주제</div>
+    <div class="sub">영구 가치</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🥉</span>
+    <div class="title">오늘 폭발</div>
+    <div class="sub">단발 트렌드 주의</div>
+  </div>
+</div>
 
-<p><strong>1단계: 카테고리 카드 찾기</strong><br />
-- 우리 채널 카테고리 카드로 스크롤 (역사·경제·과학·심리학 등)<br />
-- 각 카드 안에 3가지 묶음:</p>
-
-<p><strong>2단계: 묶음별 우선순위</strong></p>
-
-<p>🥇 <strong>🔥 재편집 재폭발 (최우선)</strong><br />
-- 검증된 주제 + 최근 7일 내 재업로드 + 폭발 신호<br />
-- <strong>= "다른 채널이 지금 같은 주제로 재업로드해서 잘 됐다"</strong> = 우리도 만들면 잘 될 확률 매우 높음<br />
-- 각 항목 클릭 → YouTube 원본 확인 가능</p>
-
-<p>🥈 <strong>검증 주제 (Hot키워드)</strong><br />
-- 시간 검증을 통과한 영구 가치 주제<br />
-- 시즌 무관, 언제 만들어도 양호<br />
-- <em>영상 카탈로그 기획용</em></p>
-
-<p>🥉 <strong>오늘 폭발 주제</strong><br />
-- 24시간 안 폭발한 영상<br />
-- 신선하지만 1회성일 수 있음 (검증 안 된 단발 트렌드)</p>
-
-<p><strong>3단계: 주제 선택 → autopsy 던지기</strong><br />
-- 선택한 주제의 대표 영상 URL 복사<br />
-- <strong>🔥 왜 이 영상은 터졌는가?</strong> 탭으로 이동<br />
-- 폼에 URL 붙여넣기 → 분석 시작</p>
-
-<h4 id="초보자-실수-회피-2">💡 초보자 실수 회피</h4>
-
-<ul>
-<li>❌ "오늘 폭발 주제"만 보지 마세요. 그건 단발 트렌드일 수 있음.</li>
-<li>✅ <strong>🔥 재편집 재폭발 &gt; 검증 주제 &gt; 오늘 폭발</strong> 순으로 신뢰.</li>
-<li>❌ 주제만 가져다 그대로 따라 하지 마세요. autopsy로 <em>왜 터졌는지</em>까지 분석 후 만들기.</li>
-</ul>
-
-<h4 id="인사이트-도출-예시-2">🎯 인사이트 도출 예시</h4>
-
-<blockquote>
-  <p><strong>상황</strong>: "이재명 재판" 키워드가 시사·정치 카테고리에 🔥 재편집 재폭발로 떠 있음<br />
-  <strong>인사이트</strong>: 1) 검증된 주제. 2) 최근 다른 채널도 다시 만들었고 성공. 3) 지금 만들면 알고리즘 추천 받기 좋은 시점.<br />
-  <strong>액션</strong>: 이 주제로 우리 채널 톤에 맞게 영상 기획. 최신 사건·발언 추가해 차별화.</p>
-</blockquote>
+<div class="compare">
+  <div class="compare-box good">
+    <div class="head">✅ 우선순위</div>
+    <ul>
+      <li><b>🔥 재편집 재폭발</b> — 다른 채널이 *지금 같은 주제로 다시 만들어 잘 됨* → 우리도 만들면 효율 높음</li>
+      <li><b>검증 주제</b> — 시간 검증 통과 → 안전</li>
+      <li><b>오늘 폭발</b> — 단발일 수 있음 → 신중</li>
+    </ul>
+  </div>
+  <div class="compare-box bad">
+    <div class="head">❌ 흔한 실수</div>
+    <ul>
+      <li>"오늘 폭발 주제"만 따라가기 (단발 위험)</li>
+      <li>주제만 가져가고 *왜 터졌는지* 분석 안 함</li>
+      <li>autopsy 안 거치고 바로 대본 작업</li>
+    </ul>
+  </div>
+</div>
 
 <hr />
 
-<h3 id="hot키워드-검증-주제-아카이브">🔥 Hot키워드 (검증 주제 아카이브)</h3>
+<h3 id="시니어랩-야담-풀세트-흐름">🎙️ 시니어랩 (야담) — 풀세트 흐름</h3>
 
-<p><strong>언제 보나</strong>: 콘텐츠 라인업 기획 / 시즌·트렌드 무관한 주제가 필요할 때.</p>
+<div class="flow">
+  <div class="flow-node primary">
+    <span class="icon">1️⃣</span>
+    <div class="title">추천 TOP3</div>
+    <div class="sub">윈도우 가중 점수</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">2️⃣</span>
+    <div class="title">📚 벤치마크 학습</div>
+    <div class="sub">1~5순위 채널 톤</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">3️⃣</span>
+    <div class="title">🎬 표준 구조</div>
+    <div class="sub">6단계 시간 배분</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">4️⃣</span>
+    <div class="title">🪝 Hook 풀</div>
+    <div class="sub">검증된 첫 문장</div>
+  </div>
+  <div class="flow-node primary">
+    <span class="icon">5️⃣</span>
+    <div class="title">🔥 분석 1클릭</div>
+    <div class="sub">표 행 [🔥 분석]</div>
+  </div>
+</div>
 
-<h4 id="단계별-사용법-3">📍 단계별 사용법</h4>
-
-<p><strong>1단계: 카테고리 필터</strong> (역사·경제·과학·심리학 등)<br />
-<strong>2단계: 검증 점수 정렬</strong> — <em>검증 점수가 높은 것 = 더 안전</em><br />
-<strong>3단계: 영상 풀 보기</strong> — 같은 키워드로 만들어진 영상 3~5개 모음</p>
-
-<h4 id="핵심-포인트">💡 핵심 포인트</h4>
-
-<p>이 탭의 키워드들은 <strong>검증 점수</strong>(seen<em>days × max</em>channels × max_views)로 계산됨.<br />
-- 검증 점수 ≥ 100 = 매우 안전<br />
-- 50~100 = 양호<br />
-- 20~50 = 시도해볼 만</p>
-
-<h4 id="인사이트-도출-예시-3">🎯 인사이트 도출 예시</h4>
-
-<blockquote>
-  <p><strong>상황</strong>: 역사 카테고리에 "사도세자" 키워드 검증 점수 150<br />
-  <strong>인사이트</strong>: 1) 이미 12채널이 만들었고 모두 효율 양호. 2) 우리가 만들어도 알고리즘이 미는 데이터 패턴 인식 가능. 3) 이미 만들어진 영상들의 <em>차별화 포인트</em>만 찾으면 됨.<br />
-  <strong>액션</strong>: 그 키워드의 영상 3개를 autopsy로 분해 → 공통점 추출 → 그것 + 우리만의 차별 포인트로 영상 기획.</p>
-</blockquote>
-
-<hr />
-
-<h3 id="시니어랩-야담">🎙️ 시니어랩 (야담)</h3>
-
-<p><strong>언제 보나</strong>: 시니어 타깃(야담·시니어사연) 카테고리 영상 만들 때.</p>
-
-<h4 id="단계별-사용법-야담-채널-시작-첫-영상까지-완성">📍 단계별 사용법 (야담 채널 시작 → 첫 영상까지 완성)</h4>
-
-<p><strong>1단계: 추천 TOP3 보기 (30초)</strong><br />
-- 페이지 상단 🎯 카드 3개<br />
-- 1d/7d/30d 윈도우 가중치로 계산된 <em>가장 안전한 주제</em> 3개<br />
-- 각 추천에 학습 대상 영상도 함께 표시</p>
-
-<p><strong>2단계: 벤치마크 채널 톤 학습 (3분)</strong><br />
-- 📚 1~5순위 벤치마크 채널 상세 섹션<br />
-- 1순위 (조선야담처녀)의 평균 분량·발화 속도·시그너처 어휘 확인<br />
-- TOP5 영상 클릭해서 직접 들어가 톤 흡수</p>
-
-<p><strong>3단계: 표준 영상 구조 보기 (1분)</strong><br />
-- 🎬 표준 구조: Hook 30s → Intro 180s → Body N분 → Climax → Resolution → Outro<br />
-- 평균 분량 (예: 43분) 확인<br />
-- <em>우리 영상도 이 구조로</em></p>
-
-<p><strong>4단계: 검증된 Hook 풀 확인 (2분)</strong><br />
-- 🪝 Hook 풀 26개 — 실제 영상 첫 문장<br />
-- 패턴 파악: 충격 사건 + 반대 반응 + 미스터리 후크</p>
-
-<p><strong>5단계: 폭발 야담 영상에서 1편 골라 autopsy</strong><br />
-- 🏆 폭발 야담 영상 표<br />
-- 마음에 드는 영상의 [🔥 분석] 클릭<br />
-- autopsy 페이지로 자동 이동 + URL prefill<br />
-- [분석 시작] → 3~5분 대기</p>
-
-<p><strong>6단계: autopsy 결과 → 대본 만들기</strong><br />
-- 분석 카드 들어가서 인사이트 확인<br />
-- [📝 이 인사이트로 대본 만들기] 클릭<br />
-- Claude Code에 prompt 붙여넣기</p>
-
-<h4 id="초보자-실수-회피-3">💡 초보자 실수 회피</h4>
-
-<ul>
-<li>❌ 추천 TOP3만 보지 마세요. 벤치마크 채널 <em>상세</em>까지 봐야 톤 학습 가능.</li>
-<li>❌ 1편만 분석하지 마세요. 5편 분석해야 <em>공통 패턴</em>이 보임.</li>
-<li>✅ 단조도가 25 이상이면 새 영상은 어휘 갱신 필수.</li>
-</ul>
-
-<h4 id="야담-채널-첫-영상-만들기-전체-흐름">🎯 야담 채널 첫 영상 만들기 전체 흐름</h4>
-
-<pre><code>1. 시니어랩 → 추천 TOP3 #1 "효·가족" 선택
-2. 학습 대상 5편 골라 autopsy에 한 번에 던지기
-3. autopsy 결과: 평균 분량 85분 · Hook 회상형 · 첫 사건 평균 130초
-4. [📝 대본 만들기] → Claude Code에 prompt 붙여넣기  
-5. Claude가 channel-setup 진입 → shared corpus 자동 사용
-6. profile.md에 "조선야담처녀 스타일 + 85분 + 회상형 Hook" 박힘
-7. script-pd가 야담 주제 3개 제안 → 선택 → 대본 작성
-8. 결과: TTS 가능한 .txt 대본 + 영상 메타 (제목·설명·태그)
-</code></pre>
+<div class="tldr">
+<div class="tldr-title">🎯 시니어랩 → 야담 채널 첫 영상 워크플로</div>
+<div class="tldr-body">
+시니어 탭 → 추천 TOP3 #1 선택 → 학습 영상 5편 [🔥 분석] → autopsy 결과 → [📝 대본 만들기] → Claude Code → 대본 완성 (총 ~50분)
+</div>
+</div>
 
 <hr />
 
 <h3 id="왜-이-영상은-터졌는가-autopsy">🔥 왜 이 영상은 터졌는가? (Autopsy)</h3>
 
-<p><strong>언제 보나</strong>: 특정 영상의 성공 비결 자세히 알고 싶을 때 / 우리 영상 만들기 전 검증 영상 분석.</p>
+<p><strong>언제 보나</strong>: 특정 영상 성공 비결 분석 / 우리 영상 만들기 전 검증.</p>
 
-<h4 id="단계별-사용법-4">📍 단계별 사용법</h4>
+<div class="steps">
+  <div class="step hot">
+    <span class="step-num">1</span>
+    <div class="step-title">📋 URL 준비 (3~5편 권장)</div>
+    <div class="step-body">1편만 던지면 패턴 안 보임. 같은 카테고리·비슷한 효율의 영상 묶어서</div>
+  </div>
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-title">📥 폼 입력</div>
+    <div class="step-body">URL · 라벨(선택) · 태그(선택) → [🔥 분석 시작]</div>
+  </div>
+  <div class="step warn">
+    <span class="step-num">3</span>
+    <div class="step-title">🤖 GitHub Issue 자동 작성</div>
+    <div class="step-body">새 탭에서 [Create] 한 번 클릭. 5~10분 자동 처리</div>
+  </div>
+  <div class="step">
+    <span class="step-num">4</span>
+    <div class="step-title">📊 결과 카드 확인</div>
+    <div class="step-body">Cmd+R 새로고침 → 새 카드 → 클릭해서 상세</div>
+  </div>
+</div>
 
-<p><strong>1단계: URL 준비</strong><br />
-- YouTube에서 마음에 드는 영상 URL 복사<br />
-- <strong>1개도 가능하지만 3~5편 한 번에 던지면 공통 패턴이 나와서 훨씬 강력</strong><br />
-- 같은 카테고리·비슷한 효율의 영상 5편 권장</p>
+<h4 id="결과-페이지에서-보는-것">📊 결과 페이지에서 보는 것</h4>
 
-<p><strong>2단계: 폼 입력</strong></p>
+<div class="mock">
+  <div style="font-size:14px; font-weight:800; color:var(--text); margin-bottom:8px;">🎯 공통 패턴 (핵심 인사이트)</div>
+  <div class="mock-stats-row">
+    <div class="mock-stat"><b>회상형</b>🪝 후크</div>
+    <div class="mock-stat"><b>교훈형</b>🎯 결말</div>
+    <div class="mock-stat"><b>43.6분</b>⏱️ 평균</div>
+    <div class="mock-stat"><b>247 wpm</b>🗣️ 발화</div>
+  </div>
+  <div style="margin-top:8px; padding-top:8px; border-top:1px solid var(--divider); font-size:12px; color:var(--text2);">
+    공통 어휘: <code>잠시</code>×96 · <code>있었습니다</code>×85 · <code>있었지요</code>×72 · ...
+  </div>
+</div>
 
-<pre><code>URLs:    ← 한 줄에 하나씩
-https://youtube.com/watch?v=AAA
-https://youtube.com/watch?v=BBB
-https://youtube.com/watch?v=CCC
+<div class="mock">
+  <div style="font-size:14px; font-weight:800; color:var(--text); margin-bottom:8px;">🔬 Hook 0~30초 세분화</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+    <div style="background:var(--surface);padding:10px;border-radius:8px;font-size:11px;">
+      <div style="font-weight:700;color:var(--warn);">⚡ 0~3s Pre-hook</div>
+      <div style="color:var(--text2);margin-top:3px;">첫인상 (시각·청각 즉시 인지)</div>
+    </div>
+    <div style="background:var(--surface);padding:10px;border-radius:8px;font-size:11px;">
+      <div style="font-weight:700;color:var(--hot);">⚡ 3~10s Core</div>
+      <div style="color:var(--text2);margin-top:3px;">충격·질문·통계 패턴</div>
+    </div>
+    <div style="background:var(--surface);padding:10px;border-radius:8px;font-size:11px;">
+      <div style="font-weight:700;color:var(--primary-hi);">⚡ 10~30s Promise</div>
+      <div style="color:var(--text2);margin-top:3px;">"이 영상에서 보여줄 것" 약속</div>
+    </div>
+  </div>
+</div>
 
-라벨:    "야담 효·가족 효율 TOP3"  (선택, 없으면 자동)
-태그:    "야담,효,가족"            (선택)
-</code></pre>
+<div class="insight">
+  <div class="insight-tag">🎯 활용법</div>
+  <div class="insight-section">분석 결과의 <b>첫 사건 평균 시점</b>이 우리 영상 만들 때 기준 — 같은 시점에 첫 사건 배치</div>
+  <div class="insight-section"><b>댓글 timestamp 분포</b>의 spike 시점 = 영상의 *킬링 포인트* — 우리도 비슷한 시점에 강조 포인트 배치</div>
+  <div class="insight-section"><b>단조도 30+</b>인 채널의 후속 영상이라면 우리는 <b>다른 표현</b>으로 만들어 차별화</div>
+</div>
 
-<p><strong>3단계: [🔥 분석 시작] 클릭</strong><br />
-- 자동으로 GitHub Issue 작성됨 (새 탭)<br />
-- Issue에서 [Create] 버튼 한 번 클릭<br />
-- 5~10분 후 자동 처리</p>
+<h4 id="결정적-활용-대본-만들기">📝 결정적 활용 — [📝 대본 만들기]</h4>
 
-<p><strong>4단계: 결과 확인</strong><br />
-- 페이지 새로고침 (Cmd+R)<br />
-- 새 카드 등장 → 클릭해서 상세 페이지</p>
-
-<h4 id="상세-페이지에-나오는-분석-의미-활용법">📊 상세 페이지에 나오는 분석 (의미 + 활용법)</h4>
-
-<p><strong>🎯 공통 패턴</strong><br />
-- <em>N편이 공유하는 공식</em><br />
-- 활용: 우리도 이 패턴 따라가면 비슷한 효율 기대 가능</p>
-
-<p><strong>🔬 Hook 0~30초 심층 분석</strong><br />
-- 0~3s / 3~10s / 10~30s 별 텍스트<br />
-- 활용: 우리 Hook 작성 시 30초 구간 시간 배분 따라하기<br />
-- Hook 발화 속도 +차이가 양수면 = 우리도 Hook을 본문보다 빠르게</p>
-
-<p><strong>⚡ 첫 사건 발생 시점</strong><br />
-- N편 평균 시점 (예: 130초)<br />
-- 활용: 우리 영상도 130초 안에 첫 사건 등장시키기<br />
-- 60초 안이면 🟢 / 120초+면 🔴</p>
-
-<p><strong>📊 시간 효율</strong> (영상별)<br />
-- 각 영상의 효율·시속·티어<br />
-- 좋아요 비율·댓글 비율 (= 시청자 참여도)<br />
-- 활용: 우리 영상 발행 후 비교 기준</p>
-
-<p><strong>🖼️ 썸네일 + OCR</strong><br />
-- 썸네일 이미지 + OCR 추출 텍스트<br />
-- 활용: 우리 썸네일 만들 때 글자 수·위치 참고</p>
-
-<p><strong>💬 댓글 timestamp 분포</strong><br />
-- <em>"1:23 부분 좋아요" 같은 댓글 시점 분포</em><br />
-- 활용: 그 시점이 retention spike — 그 부분이 영상의 <em>킬링 포인트</em></p>
-
-<p><strong>♻️ N편 중복도</strong><br />
-- 채널들 간 표현 재사용 정도<br />
-- 활용: 30 이상이면 우리는 <em>다른 표현</em>으로 만들어 차별화</p>
-
-<h4 id="초보자-실수-회피-4">💡 초보자 실수 회피</h4>
-
-<ul>
-<li>❌ 1편만 던지지 마세요. 패턴은 N=3~5에서 나옵니다.</li>
-<li>❌ 자막 없는 영상은 분석 불가. 다른 영상 선택.</li>
-<li>✅ 야담은 efficiency 0이라 시니어랩에서 <em>velocity</em> 기반으로 골라야.</li>
-</ul>
-
-<h4 id="결정적-활용-대본-만들기">🎯 결정적 활용 — [📝 대본 만들기]</h4>
-
-<ol>
-<li>분석 결과 페이지 상단 보라 박스</li>
-<li>[📝 이 인사이트로 대본 만들기] 클릭</li>
-<li>자동 생성된 Prompt + 클립보드 복사 + 모달</li>
-<li>Claude Code 터미널에 붙여넣기</li>
-<li>자동으로 채널 셋업 + 대본 작업 시작</li>
-</ol>
+<div class="flow">
+  <div class="flow-node">
+    <span class="icon">📊</span>
+    <div class="title">분석 결과</div>
+    <div class="sub">상단 보라 박스</div>
+  </div>
+  <div class="flow-node primary">
+    <span class="icon">📝</span>
+    <div class="title">[대본 만들기]</div>
+    <div class="sub">버튼 클릭</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">📋</span>
+    <div class="title">자동 복사</div>
+    <div class="sub">클립보드 + 모달</div>
+  </div>
+  <div class="flow-node primary">
+    <span class="icon">🤖</span>
+    <div class="title">Claude Code</div>
+    <div class="sub">붙여넣기 → 대본 시작</div>
+  </div>
+</div>
 
 <hr />
 
@@ -735,270 +865,185 @@ https://youtube.com/watch?v=CCC
 
 <p><strong>언제 보나</strong>: 새 영상의 <em>썸네일·제목·Hook 만들기 전</em> 필수 참고.</p>
 
-<h4 id="단계별-사용법-5">📍 단계별 사용법</h4>
+<div class="steps">
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-title">⚡ 첫 사건 시점 표준</div>
+    <div class="step-body">평균/중앙/P25/P75 → 우리 영상도 이 범위 안에</div>
+  </div>
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-title">📝 제목 공식</div>
+    <div class="step-body">우리 카테고리 카드 — 글자수·구조·클릭베이트·2-gram</div>
+  </div>
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-title">🖼️ 썸네일 카탈로그</div>
+    <div class="step-body">효율 TOP + LLM 시각 분석 (클릭베이트·전략 한 줄)</div>
+  </div>
+  <div class="step">
+    <span class="step-num">4</span>
+    <div class="step-title">🪝 Hook 풀</div>
+    <div class="step-body">효율 정렬 첫 문장 30개 — 패턴 학습</div>
+  </div>
+</div>
 
-<p><strong>1단계: ⚡ 첫 사건 시점 표준 확인 (20초)</strong><br />
-- 페이지 상단의 평균/중앙/P25/P75 확인<br />
-- 우리 영상도 이 범위 안에 첫 사건 배치<br />
-- 예: 평균 130초 = 우리도 100~150초 안에 첫 사건</p>
-
-<p><strong>2단계: 📝 카테고리별 제목 공식 (2분)</strong><br />
-우리 카테고리 카드만 보기:<br />
-- 평균 글자수 → 우리 제목도 이 정도 길이<br />
-- 구조 빈도 → ❓ 질문 70%면 우리도 질문형으로<br />
-- 클릭베이트 패턴 → 비밀_정체 50%면 우리도 "비밀·정체" 박기<br />
-- 빈출 2-gram → 우리 제목에 박을 검증 표현</p>
-
-<p><strong>3단계: 🖼️ 썸네일 카탈로그 (5분)</strong><br />
-- 카테고리별 효율 TOP 영상 그리드<br />
-- 카드 하나하나 클릭해서 YouTube에서 영상·썸네일 확인<br />
-- LLM 분석 활성화 시:<br />
-  - 🎯 클릭베이트 점수 → 우리도 비슷한 점수 목표<br />
-  - 🔤 OCR → 어떤 글자가 박혀있나 (글자 수·위치)<br />
-  - 📝 전략 → "어두운 배경+밝은 텍스트 대비" 같은 한 줄 인사이트</p>
-
-<p><strong>4단계: 🪝 Hook 풀에서 첫 문장 학습 (3분)</strong><br />
-- 효율 정렬된 첫 문장 30개<br />
-- 패턴 분류 (충격사건/질문/회상/통계 등)<br />
-- 우리 영상 Hook 만들 때 비슷한 구조로</p>
-
-<h4 id="초보자-실수-회피-5">💡 초보자 실수 회피</h4>
-
-<ul>
-<li>❌ 패턴 라이브러리만 보고 <em>그대로 베끼지 마세요</em>. 패턴 이해 → 우리 톤에 적용이 핵심.</li>
-<li>❌ 카테고리 평균 글자수만 맞춘다고 효율 안 나옴. 클릭베이트 패턴까지 같이.</li>
-<li>✅ <strong>LLM 분석 활성화 권장</strong>. 시각 인사이트가 텍스트만 보는 것보다 압도적.</li>
-</ul>
-
-<h4 id="인사이트-도출-예시-4">🎯 인사이트 도출 예시</h4>
-
-<blockquote>
-  <p><strong>상황</strong>: 야담 카테고리 데이터 — 평균 글자수 80자 · 파이프(ㅣ) 22% · 숫자 32% · 클릭베이트 "비밀_정체" 우세<br />
-  <strong>인사이트</strong>: 야담 영상 제목은 <em>길고 (80자) · 파이프 구분자 · 숫자 포함 (인물 나이) · 비밀/정체 키워드</em> 패턴이 검증됨.<br />
-  <strong>액션</strong>: 우리 첫 야담 영상 제목 = "14살 종놈이 임금을 살린 비밀의 망치 ㅣ 임진왜란 야담 ㅣ 옛날이야기" (80자·파이프·숫자·비밀).</p>
-</blockquote>
+<div class="insight">
+  <div class="insight-tag">🎯 인사이트 도출 예시 — 야담 카테고리</div>
+  <div class="insight-section"><b>데이터</b>: 평균 글자수 80자 · 파이프(ㅣ) 22% · 숫자 32% · "비밀_정체" 클릭베이트 우세</div>
+  <div class="insight-section"><b>인사이트</b>: 야담 제목은 <b>길고 + 파이프 구분자 + 숫자 (인물 나이) + 비밀/정체 키워드</b> 패턴이 검증됨</div>
+  <div class="insight-section"><b>액션</b>: "14살 종놈이 임금을 살린 비밀의 망치 ㅣ 임진왜란 야담 ㅣ 옛날이야기" (80자·파이프 2개·숫자·비밀)</div>
+</div>
 
 <hr />
 
-<h3 id="일별-아카이브">📅 일별 아카이브</h3>
+<h2 id="영상-1편-만들-때-풀-워크플로우">🎯 영상 1편 만들 때 풀 워크플로우</h2>
 
-<p><strong>언제 보나</strong>: 과거 시점 검증 / 어제 놓친 시그널 회수 / 트렌드 시간 추적.</p>
+<div class="steps" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
+  <div class="step hot">
+    <span class="step-num">Phase 1</span>
+    <div class="step-title">발견</div>
+    <div class="step-body">🏠 대시보드 시그널·👑 1·2·3위</div>
+  </div>
+  <div class="step">
+    <span class="step-num">Phase 2</span>
+    <div class="step-title">주제 결정</div>
+    <div class="step-body">🎯 오늘의 주제 → URL 복사</div>
+  </div>
+  <div class="step">
+    <span class="step-num">Phase 3</span>
+    <div class="step-title">분석</div>
+    <div class="step-body">🔥 autopsy URL 3~5편</div>
+  </div>
+  <div class="step">
+    <span class="step-num">Phase 4</span>
+    <div class="step-title">패턴 학습</div>
+    <div class="step-body">결과 + 🏆 라이브러리</div>
+  </div>
+  <div class="step warn">
+    <span class="step-num">Phase 5</span>
+    <div class="step-title">대본</div>
+    <div class="step-body">[📝 대본 만들기] → Claude</div>
+  </div>
+  <div class="step">
+    <span class="step-num">Phase 6</span>
+    <div class="step-title">발행</div>
+    <div class="step-body">대본 → 영상 → 업로드</div>
+  </div>
+  <div class="step hot">
+    <span class="step-num">Phase 7</span>
+    <div class="step-title">검증</div>
+    <div class="step-body">24h 후 우리 영상도 autopsy</div>
+  </div>
+</div>
 
-<h4 id="단계별-사용법-6">📍 단계별 사용법</h4>
-
-<p><strong>1단계: 날짜 선택</strong> (최근 30일 그리드)<br />
-<strong>2단계: 그날의 채널 카드 보기</strong><br />
-<strong>3단계: 트렌드 추적</strong> — 같은 키워드가 며칠 동안 떠 있었나</p>
-
-<hr />
-
-<h3 id="뉴스-모니터링">📰 뉴스 모니터링</h3>
-
-<p><strong>언제 보나</strong>: 시사·경제 영상의 시의성 주제 발굴.</p>
-
-<h4 id="단계별-사용법-7">📍 단계별 사용법</h4>
-
-<ul>
-<li>카테고리별 헤드라인 확인</li>
-<li>같은 사건이 며칠째 보도되면 = 장기 이슈 → 영상 만들기 좋음</li>
-<li>한 번만 보도되고 사라지면 = 단발 이슈 → 신중</li>
-</ul>
-
-<hr />
-
-<h2 id="전체-워크플로우-영상-1편-만들-때">🎯 전체 워크플로우 — 영상 1편 만들 때</h2>
-
-<h3 id="풀-체크리스트">📋 풀 체크리스트</h3>
-
-<pre><code>[Phase 1: 발견] — 5분
-□ 🏠 대시보드: 우리 카테고리 시그널/폭발 수 확인
-□ 👑 1·2·3위 채널 카드의 인기 영상 보기
-□ ▲ 상승 화살표 있는 채널 우선 관찰
-
-[Phase 2: 주제 결정] — 10분
-□ 🎯 오늘의 주제: 우리 카테고리 카드
-□ 🔥 재편집 재폭발 우선 → 검증 주제 → 오늘 폭발 순
-□ 또는 🔥 Hot키워드에서 검증 점수 100+ 주제 선택
-□ 결정된 주제의 대표 영상 3~5편 URL 복사
-
-[Phase 3: 분석] — 10분
-□ 🔥 왜 이 영상은 터졌는가? 탭
-□ URL 3~5편 한 번에 던지기
-□ 5~10분 대기
-
-[Phase 4: 패턴 학습] — 10분
-□ 분석 결과 페이지 들어가기
-□ 🎯 공통 패턴 (Hook 유형·결말 톤)
-□ ⚡ 첫 사건 시점 평균
-□ ♻️ 단조도 확인 (30+이면 우리는 다른 표현 사용)
-□ 💬 댓글 timestamp = retention spike 시점 파악
-
-[Phase 5: 패턴 라이브러리 추가 확인] — 5분
-□ 🏆 패턴 라이브러리 → 카테고리 제목 공식
-□ 썸네일 카탈로그 시각 학습
-□ Hook 풀에서 첫 문장 패턴 흡수
-
-[Phase 6: 대본 작업] — 5분 (Claude Code 진입)
-□ autopsy 결과 페이지 → [📝 대본 만들기]
-□ 클립보드 복사된 Prompt를 Claude Code에 붙여넣기
-□ channel-setup이 자동으로 patterns 적용
-□ script-pd가 대본 작성
-
-[Phase 7: 발행 후 검증] — 발행 24h 후
-□ 🔥 왜 이 영상은 터졌는가?에 우리 영상도 던지기
-□ 분석 결과와 학습 대상 영상 비교
-□ 차이점 인사이트로 다음 영상 개선
-</code></pre>
-
-<p><strong>총 소요: 45분 + 대본 작성 시간 (script-pd)</strong></p>
-
-<hr />
-
-<h2 id="핵심-메트릭-사전-상세">📊 핵심 메트릭 사전 (상세)</h2>
-
-<table>
-<thead>
-<tr>
-  <th>메트릭</th>
-  <th>공식</th>
-  <th>기준값</th>
-  <th>의미</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><strong>효율</strong></td>
-  <td>조회 ÷ 구독</td>
-  <td>1=양호 5=폭발 10+=메가</td>
-  <td>알고리즘 추천 정도</td>
-</tr>
-<tr>
-  <td><strong>시속</strong></td>
-  <td>조회 ÷ 영상나이(h)</td>
-  <td>5k+ 시그널 50k+ 트렌딩</td>
-  <td><em>지금</em> 가속도</td>
-</tr>
-<tr>
-  <td><strong>단조도</strong></td>
-  <td>3-gram Jaccard×100</td>
-  <td>10🟢 20🟡 30🔴</td>
-  <td>시청자 거부감</td>
-</tr>
-<tr>
-  <td><strong>클릭베이트</strong></td>
-  <td>LLM 1~10점</td>
-  <td>카테고리 평균이 목표</td>
-  <td>썸네일 강도</td>
-</tr>
-<tr>
-  <td><strong>첫 사건 시점</strong></td>
-  <td>영상 시작~사건 등장</td>
-  <td>&lt;60🟢 &lt;120🟡 120+🔴</td>
-  <td>retention 결정</td>
-</tr>
-<tr>
-  <td><strong>Hook wpm 차</strong></td>
-  <td>Hook wpm - 본문 wpm</td>
-  <td>+가 좋음</td>
-  <td>집중 유지력</td>
-</tr>
-<tr>
-  <td><strong>like_ratio</strong></td>
-  <td>좋아요 ÷ 조회</td>
-  <td>2%+ 양호</td>
-  <td>시청자 만족</td>
-</tr>
-<tr>
-  <td><strong>comment_ratio</strong></td>
-  <td>댓글 ÷ 조회</td>
-  <td>0.3%+ 양호</td>
-  <td>시청자 참여</td>
-</tr>
-</tbody>
-</table>
+<div class="tldr">
+<div class="tldr-title">⏱️ 총 소요 시간</div>
+<div class="tldr-body">
+Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-pd가 자동) + <b>영상 제작</b> (사용자)
+</div>
+</div>
 
 <hr />
 
 <h2 id="faq-초보자가-자주-묻는-것">❓ FAQ (초보자가 자주 묻는 것)</h2>
 
-<h3 id="q-어디부터-봐야-하나요">Q: 어디부터 봐야 하나요?</h3>
+<p><details><br />
+<summary><b>Q: 어디부터 봐야 하나요?</b></summary></p>
 
-<p>A: <strong>🎯 오늘의 주제 탭</strong>. 우리 카테고리 카드에서 🔥 재편집 재폭발 묶음의 첫 번째 주제부터.</p>
+<p>🎯 <b>오늘의 주제 탭</b>. 우리 카테고리 카드의 🔥 재편집 재폭발 묶음 첫 번째 주제부터.</p>
 
-<h3 id="q-분석-결과-너무-많아서-어떻게-봐야-할지-모르겠어요">Q: 분석 결과 너무 많아서 어떻게 봐야 할지 모르겠어요</h3>
+<p></details></p>
 
-<p>A: 3개만 보세요:<br />
-1. <strong>공통 후크 유형</strong> — 우리도 같은 유형으로<br />
-2. <strong>첫 사건 평균 시점</strong> — 우리도 같은 시점에<br />
-3. <strong>시그너처 어휘</strong> — 우리 본문에 박기</p>
+<p><details><br />
+<summary><b>Q: 분석 결과 너무 많아서 어떻게 봐야 할지 모르겠어요</b></summary></p>
 
-<h3 id="q-autopsy에-던지는-영상-어떻게-골라요">Q: autopsy에 던지는 영상 어떻게 골라요?</h3>
+<p>3개만 보세요:<br>
+1. <b>공통 후크 유형</b> — 우리도 같은 유형으로<br>
+2. <b>첫 사건 평균 시점</b> — 우리도 같은 시점에<br>
+3. <b>시그너처 어휘</b> — 우리 본문에 박기</p>
 
-<p>A: <strong>같은 카테고리 + 비슷한 효율 + 3~5편</strong>. 1편만 던지면 패턴 안 나옴.<br />
-- 시니어랩 폭발 야담 영상 표에서 [🔥 분석] 버튼 활용하면 자동.</p>
+<p></details></p>
 
-<h3 id="q-단조도가-25-나왔어요-위험한가요">Q: 단조도가 25 나왔어요. 위험한가요?</h3>
+<p><details><br />
+<summary><b>Q: autopsy에 던지는 영상 어떻게 골라요?</b></summary></p>
 
-<p>A: 🟠 반복 신호 단계. 다음 영상은:<br />
-1. 시그너처 어휘 줄이기 (영상당 5번 → 2번)<br />
-2. Hook 패턴 변경 (충격사건형 → 회상형)<br />
+<p><b>같은 카테고리 + 비슷한 효율 + 3~5편</b>. 1편만 던지면 패턴 안 나옴. 시니어랩의 [🔥 분석] 버튼 활용하면 자동.</p>
+
+<p></details></p>
+
+<p><details><br />
+<summary><b>Q: 단조도가 25 나왔어요. 위험한가요?</b></summary></p>
+
+<p>🟠 반복 신호 단계. 다음 영상은:<br>
+1. 시그너처 어휘 줄이기 (영상당 5번 → 2번)<br>
+2. Hook 패턴 변경 (충격사건형 → 회상형)<br>
 3. 인물명·주제 갱신</p>
 
-<h3 id="q-클릭베이트-점수가-710-나왔어요-너무-자극적인가요">Q: 클릭베이트 점수가 7/10 나왔어요. 너무 자극적인가요?</h3>
+<p></details></p>
 
-<p>A: 카테고리 평균이 6.5 정도면 7은 적정. 9+는 신뢰도 떨어져서 retention ↓. <strong>카테고리 평균 ± 1 안에 두기</strong>.</p>
+<p><details><br />
+<summary><b>Q: 클릭베이트 점수가 7/10 나왔어요. 너무 자극적인가요?</b></summary></p>
 
-<h3 id="q-우리-영상도-autopsy로-분석할-수-있나요">Q: 우리 영상도 autopsy로 분석할 수 있나요?</h3>
+<p>카테고리 평균이 6.5 정도면 7은 적정. 9+는 신뢰도 떨어져 retention ↓ — <b>카테고리 평균 ± 1 안에 두기</b>.</p>
 
-<p>A: ✅ 발행 24시간 후 던지세요. 다른 영상과 비교해서 차이점 찾고 다음 영상 개선.</p>
+<p></details></p>
 
-<h3 id="q-새-채널-만들-때-어떻게-활용해요">Q: 새 채널 만들 때 어떻게 활용해요?</h3>
+<p><details><br />
+<summary><b>Q: 매일 봐야 하나요?</b></summary></p>
 
-<p>A:<br />
-1. 🏆 패턴 라이브러리에서 카테고리 제목 공식 확인<br />
-2. 시니어랩처럼 corpus 있는 카테고리면 shared corpus 활용 자동<br />
-3. Claude Code에 "[카테고리] 채널 만들어줘" → channel-setup이 패턴 자동 적용</p>
+<p>의무 X. 주 1~2회 충분. 매일 보면 같은 데이터 반복 — 효율 영상은 1~2주 단위 변경.</p>
 
-<h3 id="q-매일-봐야-하나요">Q: 매일 봐야 하나요?</h3>
+<p></details></p>
 
-<p>A: 의무 X. 주 1~2회 충분. 매일 보면 같은 데이터 반복 (효율 영상은 1~2주 단위 변경).</p>
+<p><details><br />
+<summary><b>Q: 우리 영상도 autopsy로 분석할 수 있나요?</b></summary></p>
 
-<h3 id="q-모바일에서도-보이나요">Q: 모바일에서도 보이나요?</h3>
+<p>✅ 발행 24시간 후 던지세요. 다른 영상과 비교해서 차이점 찾고 다음 영상 개선.</p>
 
-<p>A: ✅ 반응형. 다만 데스크탑이 정보 위계 명확.</p>
+<p></details></p>
+
+<p><details><br />
+<summary><b>Q: LLM 썸네일 분석 비용은?</b></summary></p>
+
+<p>영상당 ~$0.005 · 30편 ~$0.15 · 100편 ~$0.50. 한 번 분석한 영상은 영구 캐시.</p>
+
+<p></details></p>
+
+<p><details><br />
+<summary><b>Q: 모바일에서도 보이나요?</b></summary></p>
+
+<p>✅ 반응형. 다만 데스크탑이 정보 위계 명확.</p>
+
+<p></details></p>
 
 <hr />
 
 <h2 id="트러블슈팅">🆘 트러블슈팅</h2>
 
-<h3 id="분석-시작-버튼이-작동-안-함">분석 시작 버튼이 작동 안 함</h3>
+<div class="compare">
+  <div class="compare-box bad">
+    <div class="head">⚠️ 흔한 문제</div>
 
-<ol>
-<li>Cmd+Shift+R 하드 새로고침</li>
-<li>F12 콘솔 에러 확인 후 알려주세요</li>
-</ol>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;분석 시작 버튼 안 됨&lt;/li&gt;
+  &lt;li&gt;autopsy 실패 (자막 없음)&lt;/li&gt;
+  &lt;li&gt;[🔥 분석] URL prefill 안 됨&lt;/li&gt;
+  &lt;li&gt;Cloudflare 배포 늦음&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
 
-<h3 id="autopsy가-실패함-자막-없음">autopsy가 실패함 (자막 없음)</h3>
-
-<ul>
-<li>영상에 자막 자체가 없음 (YouTube에서 확인)</li>
-<li>자동자막만 있는 영상은 한국어 인식 오류 가능</li>
-<li>→ 다른 영상으로 시도</li>
-</ul>
-
-<h3 id="시니어-분석-클릭해도-url-prefill-안-됨">시니어 [🔥 분석] 클릭해도 URL prefill 안 됨</h3>
-
-<ul>
-<li>하드 새로고침</li>
-<li>콘솔에서 <code>sessionStorage.getItem('autopsyPrefill')</code> 확인</li>
-</ul>
-
-<h3 id="cloudflare-배포가-안-보임">Cloudflare 배포가 안 보임</h3>
-
-<ul>
-<li>KR push 후 1~2분, JP는 2~3분 대기</li>
-<li>Cmd+Shift+R</li>
-</ul>
+<p></div><br />
+  <div class="compare-box good"><br />
+    <div class="head">✅ 해결법</div><br />
+    <ul><br />
+      <li>Cmd+Shift+R 하드 새로고침</li><br />
+      <li>다른 영상 시도 (자막 있는)</li><br />
+      <li>콘솔(F12) sessionStorage 확인</li><br />
+      <li>1~2분 대기 후 새로고침</li><br />
+    </ul><br />
+  </div><br />
+</div></p>
 
 <hr />
 
@@ -1007,21 +1052,26 @@ https://youtube.com/watch?v=CCC
 <ul>
 <li><strong>사이트</strong>: https://arrange-yt-scanner.pages.dev</li>
 <li><strong>GitHub</strong>: https://github.com/cmpark0401-hash/arrange-yt-scanner</li>
-<li><strong>API 키 발급</strong> (LLM 분석용): https://console.anthropic.com/</li>
+<li><strong>API 키 발급</strong> (LLM 분석): https://console.anthropic.com/</li>
 </ul>
 
 <hr />
 
 <h2 id="마지막-한-마디">📝 마지막 한 마디</h2>
 
-<p>TubeHacker는 <em>데이터를 보여주는 도구</em>입니다. <em>결정은 사람이 합니다.</em></p>
+<div class="tldr">
+<div class="tldr-title">💡 데이터 + 직관 = 좋은 영상</div>
 
-<p>데이터가 보여주는 패턴 + 사용자의 카테고리 직관 + 채널 톤 = 최고의 영상.</p>
+<div class="tldr-body">
+TubeHacker는 <b>데이터를 보여주는 도구</b>. <b>결정은 사람이 합니다</b>.<br><br>
+데이터가 보여주는 패턴 + 사용자의 카테고리 직관 + 채널 톤 = 최고의 영상.<br>
+매번 7-Phase 따라하다 보면 본인만의 패턴이 보입니다. 그게 진짜 노하우입니다.
+</div>
 
-<p>매번 5단계 따라하다 보면 본인만의 패턴이 보입니다. 그게 진짜 노하우입니다.</p>
+<p></div></p>
 
 <p><em>TubeHacker · 유튜브 알고리즘 해킹의 모든 것</em></p>
 </div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 23:58</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 00:08</footer>
 </body>
 </html>

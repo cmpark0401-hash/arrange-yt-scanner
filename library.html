@@ -249,8 +249,116 @@ section table { margin:10px 0; }
 .subtab.dim { opacity:.45; cursor:not-allowed; }
 .chan-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:10px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; margin:3px 4px 0 0; border:1px solid var(--primary-bd); }
 
-/* Manual (사용 가이드) */
-.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:900px; }
+/* Manual (사용 가이드) — 시각 컴포넌트 */
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
+
+/* 단계 카드 (1→2→3 가로 흐름) */
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin:14px 0; }
+.step { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; position:relative; }
+.step .step-num { position:absolute; top:-10px; left:14px; background:var(--primary); color:#fff; font-weight:800; font-size:12px; padding:3px 10px; border-radius:10px; }
+.step .step-title { font-weight:700; color:var(--text); font-size:14px; margin:6px 0 6px; }
+.step .step-body { font-size:12px; color:var(--text2); line-height:1.6; }
+.step.hot { border-color:var(--hot-bd); background:var(--hot-bg); }
+.step.hot .step-num { background:var(--hot); color:#000; }
+.step.warn { border-color:var(--warn-bd); background:var(--warn-bg); }
+.step.warn .step-num { background:var(--warn); color:#000; }
+
+/* 사이트 UI 미니어처 — 실제 페이지처럼 */
+.mock { background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:12px; margin:14px 0; }
+.mock-header { display:flex; align-items:baseline; gap:8px; padding-bottom:8px; border-bottom:1px solid var(--divider); margin-bottom:10px; }
+.mock-brand { font-size:14px; font-weight:800; color:var(--primary); }
+.mock-slogan { font-size:10px; color:var(--text2); }
+.mock-chips { margin-left:auto; display:flex; gap:5px; }
+.mock-chip { font-size:10px; padding:3px 8px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--text2); font-weight:600; }
+.mock-chip.warn { color:var(--warn); border-color:var(--warn-bd); background:var(--warn-bg); }
+.mock-chip.hot { color:var(--hot); border-color:var(--hot-bd); background:var(--hot-bg); }
+.mock-chip b { color:var(--text); }
+.mock-chip.warn b { color:var(--warn); }
+.mock-chip.hot b { color:var(--hot); }
+.mock-tabs { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0 10px; }
+.mock-tab { font-size:11px; padding:5px 10px; border-radius:13px; background:var(--surface); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.mock-tab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+.mock-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 13px; margin:6px 0; position:relative; }
+.mock-card.crown { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.mock-rank-badge { display:inline-block; background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; font-size:11px; font-weight:800; padding:2px 8px; border-radius:8px; margin-right:6px; }
+.mock-ch-name { font-size:13px; font-weight:700; color:var(--text); display:inline; }
+.mock-delta { color:var(--up); font-weight:700; font-size:11px; margin-left:6px; }
+.mock-meta-line { font-size:11px; color:var(--text2); margin-top:3px; }
+.mock-stats-row { display:flex; gap:14px; margin:7px 0; padding:6px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.mock-stat { font-size:10px; color:var(--text2); }
+.mock-stat b { display:block; font-size:13px; font-weight:800; color:var(--text); }
+.mock-stat.sig b { color:var(--danger); }
+.mock-stat.hot b { color:var(--hot); }
+.mock-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; padding-top:8px; border-top:1px solid var(--divider); }
+.mock-vid-mini { font-size:10px; }
+.mock-vid-mini .lbl { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.mock-vid-mini .lbl.pop { color:var(--warn); }
+.mock-vid-mini .lbl.latest { color:var(--hot); }
+.mock-vid-thumb { background:linear-gradient(135deg, #3a3a4a, #1a1a26); height:55px; border-radius:5px; margin:3px 0; display:flex; align-items:center; justify-content:center; color:var(--text3); font-size:9px; }
+.mock-vid-mini .title { font-size:11px; color:var(--text); line-height:1.3; }
+.mock-pointer { display:inline-block; background:var(--primary); color:#fff; font-size:10px; font-weight:700; padding:3px 9px; border-radius:5px; position:absolute; }
+.mock-pointer::before { content:"👉 "; }
+
+/* 인포그래픽 게이지 */
+.gauge { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; }
+.gauge-title { font-size:13px; font-weight:700; color:var(--text); margin-bottom:8px; }
+.gauge-bar { height:24px; border-radius:8px; background:linear-gradient(90deg, #4ade80 0%, #4ade80 30%, #facc15 30%, #facc15 60%, #ff7a45 60%, #ff7a45 80%, #ef4444 80%); position:relative; overflow:hidden; }
+.gauge-labels { display:flex; justify-content:space-between; margin-top:4px; font-size:10px; color:var(--text2); }
+.gauge-pointer { position:absolute; top:-2px; bottom:-2px; width:3px; background:var(--text); border-radius:2px; box-shadow:0 0 0 2px var(--surface); }
+
+/* 메트릭 인포그래픽 카드 */
+.metric-card { display:flex; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:10px 0; }
+.metric-icon { font-size:26px; flex-shrink:0; }
+.metric-body { flex:1; min-width:0; }
+.metric-body .name { font-size:14px; font-weight:800; color:var(--text); }
+.metric-body .formula { font-size:11px; color:var(--text2); margin:3px 0; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+.metric-body .meaning { font-size:12px; color:var(--text); margin-top:5px; }
+.metric-grades { display:flex; gap:6px; margin-top:8px; }
+.metric-grades .grade { font-size:10px; padding:3px 8px; border-radius:6px; font-weight:700; }
+.metric-grades .grade.good { background:rgba(74,222,128,.15); color:var(--up); border:1px solid rgba(74,222,128,.4); }
+.metric-grades .grade.mid { background:rgba(250,204,21,.15); color:#facc15; border:1px solid rgba(250,204,21,.4); }
+.metric-grades .grade.bad { background:rgba(239,68,68,.15); color:var(--danger); border:1px solid rgba(239,68,68,.4); }
+
+/* 시간 룰러 (첫 사건 시점) */
+.ruler { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; position:relative; }
+.ruler-track { height:50px; background:linear-gradient(90deg, var(--hot) 0%, var(--hot) 33%, var(--warn) 33%, var(--warn) 66%, var(--danger) 66%); border-radius:8px; position:relative; }
+.ruler-marker { position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--text); box-shadow:0 0 0 2px var(--surface); }
+.ruler-marker::after { content:attr(data-label); position:absolute; top:-22px; left:50%; transform:translateX(-50%); background:var(--text); color:var(--bg); font-size:10px; font-weight:700; padding:2px 7px; border-radius:5px; white-space:nowrap; }
+.ruler-scale { display:flex; justify-content:space-between; margin-top:6px; font-size:10px; color:var(--text2); }
+.ruler-labels { display:flex; justify-content:space-between; margin-top:3px; font-size:9px; color:var(--text2); font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+
+/* 흐름 다이어그램 (큰 화살표 박스) */
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px; align-items:stretch; margin:14px 0; }
+.flow-node { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; position:relative; }
+.flow-node .icon { font-size:24px; display:block; margin-bottom:5px; }
+.flow-node .title { font-size:12px; font-weight:700; color:var(--text); }
+.flow-node .sub { font-size:10px; color:var(--text2); margin-top:3px; }
+.flow-node.primary { background:var(--primary-bg); border-color:var(--primary-bd); }
+.flow-node.primary .title { color:var(--primary-hi); }
+
+/* 좋은 예 vs 나쁜 예 박스 */
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0; }
+.compare-box { padding:14px; border-radius:10px; border:1px solid; }
+.compare-box.good { background:rgba(74,222,128,.07); border-color:rgba(74,222,128,.35); }
+.compare-box.bad { background:rgba(239,68,68,.07); border-color:rgba(239,68,68,.35); }
+.compare-box .head { font-size:13px; font-weight:800; margin-bottom:6px; }
+.compare-box.good .head { color:var(--up); }
+.compare-box.bad .head { color:var(--danger); }
+.compare-box ul { margin:5px 0 0 18px; }
+.compare-box li { font-size:12px; line-height:1.55; margin:3px 0; }
+
+/* TL;DR callout */
+.tldr { background:linear-gradient(135deg, var(--primary-bg), var(--info-bg)); border:1px solid var(--primary-bd); border-radius:10px; padding:14px 16px; margin:14px 0; }
+.tldr-title { font-size:13px; font-weight:800; color:var(--primary-hi); margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
+.tldr-body { font-size:13px; color:var(--text); line-height:1.65; }
+
+/* 강조 인용 박스 (인사이트 예시) */
+.insight { background:var(--surface); border-left:4px solid var(--hot); border-radius:0 10px 10px 0; padding:13px 16px; margin:14px 0; }
+.insight-tag { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:var(--hot); margin-bottom:5px; }
+.insight-section { margin:6px 0; font-size:12.5px; line-height:1.6; }
+.insight-section b { color:var(--hot); }
+
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
 .manual-body h1 { font-size:28px; font-weight:800; margin:24px 0 12px; color:var(--text); letter-spacing:-0.5px; }
 .manual-body h2 { font-size:22px; font-weight:800; margin:32px 0 12px; padding-top:16px; border-top:1px solid var(--divider); color:var(--primary-hi); letter-spacing:-0.3px; }
 .manual-body h3 { font-size:17px; font-weight:700; margin:20px 0 8px; color:var(--text); }
@@ -381,6 +489,6 @@ B1
 (도박의 비밀)</div></a><a class="ch-card" href="https://youtube.com/watch?v=yT-_vXIIqRU" target="_blank" style="text-decoration:none;color:inherit;padding:10px;"><img src="https://i.ytimg.com/vi/yT-_vXIIqRU/mqdefault.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:8px;"><div style="font-size:13px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">"환경부도, 카이스트도 전부 인정했는데..." 전국 주유소 뒤흔든 990원 세녹스가 완전히 사라진 진짜 이유</div><div style="font-size:11px;color:var(--text2);margin-top:4px;">경제대부 · 경제</div><div style="font-size:11px;margin-top:3px;"><b style="color:var(--hot);">184,122회</b> · 효율 <b>62.63x</b></div></a><a class="ch-card" href="https://youtube.com/watch?v=JPxtLP4eUQc" target="_blank" style="text-decoration:none;color:inherit;padding:10px;"><img src="https://i.ytimg.com/vi/JPxtLP4eUQc/mqdefault.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:8px;"><div style="font-size:13px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">"파업? 다 나가세요" 삼성 노조 45조원 성과급 요구에 사람 빼고 기계 쓴다, 일자리 잃게 생긴 노조의 최후</div><div style="font-size:11px;color:var(--text2);margin-top:4px;">경제왕토끼 · 경제</div><div style="font-size:11px;margin-top:3px;"><b style="color:var(--hot);">666,315회</b> · 효율 <b>32.03x</b></div></a><a class="ch-card" href="https://youtube.com/watch?v=25tCUGqi6tY" target="_blank" style="text-decoration:none;color:inherit;padding:10px;"><img src="https://i.ytimg.com/vi/25tCUGqi6tY/mqdefault.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:8px;"><div style="font-size:13px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">"반도체 독식은 지속 불가능하다" 월가가 조용히 매집 중인 AI</div><div style="font-size:11px;color:var(--text2);margin-top:4px;">농부의 경제학 · 경제</div><div style="font-size:11px;margin-top:3px;"><b style="color:var(--hot);">108,993회</b> · 효율 <b>28.24x</b></div></a><a class="ch-card" href="https://youtube.com/watch?v=DBAtINf_tDQ" target="_blank" style="text-decoration:none;color:inherit;padding:10px;"><img src="https://i.ytimg.com/vi/DBAtINf_tDQ/mqdefault.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:8px;"><div style="font-size:13px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">엔비디아가 삼성·SK 놔두고 1000억 베팅한 무명 회사의 진짜 정체</div><div style="font-size:11px;color:var(--text2);margin-top:4px;">경제읽음이 · 경제</div><div style="font-size:11px;margin-top:3px;"><b style="color:var(--hot);">342,355회</b> · 효율 <b>25.55x</b></div></a><a class="ch-card" href="https://youtube.com/watch?v=j9se0u-V2Nk" target="_blank" style="text-decoration:none;color:inherit;padding:10px;"><img src="https://i.ytimg.com/vi/j9se0u-V2Nk/mqdefault.jpg" alt="" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:8px;"><div style="font-size:13px;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">“누가 요즘 새차사요?” 도로 위 10대중 4대가 10년 넘은 노후차... 허리띠 졸라매는 대한민국 소비자</div><div style="font-size:11px;color:var(--text2);margin-top:4px;">궁금한경제학 · 경제</div><div style="font-size:11px;margin-top:3px;"><b style="color:var(--hot);">85,284회</b> · 효율 <b>24.86x</b></div></a></div>
 <div class="rep-sec"><h2>🪝 검증된 Hook 첫 문장 풀</h2><span class="cnt">32개 — 효율 정렬, 새 영상 Hook 작성 시 참고</span></div>
 <div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>패턴</th><th>첫 문장</th><th class="num">효율</th><th>첫 사건</th><th></th></tr></thead><tbody><tr><td class="rank">1</td><td><span class="ch-tag">기타</span></td><td>네가 김간이야.</td><td class="num muted">22.2x</td><td class="muted">136.5s</td><td><a href="https://youtube.com/watch?v=DRpBcL_0P7s" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">2</td><td><span class="ch-tag">기타</span></td><td>옛날에 적난한 한 아홉살 소년은 약초를 캐기 위해 산으로 올랐습니다.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=aI8A973spEw" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">3</td><td><span class="ch-tag">기타</span></td><td>그날은 나라의 중요한 일로 임금의 행렬이 고우를 지나가던 날이었습니다.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=LXR_hE4X3qE" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">4</td><td><span class="ch-tag">기타</span></td><td>아이고 무거워 죽겠네요.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=ipIPHP41M9Y" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">5</td><td><span class="ch-tag">기타</span></td><td>누구든 저말을 진정시킬 자신이 있는 자는 앞으로 나오라.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=0uArdo2PPl8" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">6</td><td><span class="ch-tag">기타</span></td><td>앞도 못 보는 자식을 매일 새벽부터 극한의 훈련으로 몰아붙이는 어미.</td><td class="num muted">0.0x</td><td class="muted">81.3s</td><td><a href="https://youtube.com/watch?v=4Kt3rUXjpn8" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">7</td><td><span class="ch-tag">회상형</span></td><td>아니 이런 곳에 아이가 쓰러져 있다니 보아하니 며칠을 굶은 아이가 철죽을 먹고 탈이 난 것이 분명했습니다.</td><td class="num muted">0.0x</td><td class="muted">0.1s</td><td><a href="https://youtube.com/watch?v=5SJE9VpZ-4E" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">8</td><td><span class="ch-tag">기타</span></td><td>어느 날 명나라의 황제가 노인하고 닭이 그려진 그림을 우리나라 임금에게 보내면서 노인의 나이를 맞추어 보라 했습니다 임금은 대소 신료들에게 그림</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=60bBX9c6cKg" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">9</td><td><span class="ch-tag">기타</span></td><td>오늘 밤에는 주랑을 미루셔야 합니다.</td><td class="num muted">0.0x</td><td class="muted">6.4s</td><td><a href="https://youtube.com/watch?v=CfMujs8GF5E" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">10</td><td><span class="ch-tag">대비형</span></td><td>아버지를 아버지라 부르지 못하고 형을 형이라 부르지 못하고 아마 한국인이라면 다들 한 번쯤 들어봤을 겁니다.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=CwQkNI1Bsbw" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">11</td><td><span class="ch-tag">기타</span></td><td>네가 김간이야.</td><td class="num muted">0.0x</td><td class="muted">136.5s</td><td><a href="https://youtube.com/watch?v=DRpBcL_0P7s" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">12</td><td><span class="ch-tag">회상형</span></td><td>신부 좀 봐.</td><td class="num muted">0.0x</td><td class="muted">154.6s</td><td><a href="https://youtube.com/watch?v=DnXDYgJEp58" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">13</td><td><span class="ch-tag">회상형</span></td><td>그 도둑년이 바로 내 며느리었다.</td><td class="num muted">0.0x</td><td class="muted">140.7s</td><td><a href="https://youtube.com/watch?v=EX5f3lsKRls" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">14</td><td><span class="ch-tag">회상형</span></td><td>어린 호랑이가 누런 털을 눈속에 묻은 채 가쁜 숨을 몰아시고 있었습니다.</td><td class="num muted">0.0x</td><td class="muted">51.4s</td><td><a href="https://youtube.com/watch?v=GvI8lgx3Jhw" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">15</td><td><span class="ch-tag">기타</span></td><td>저것만 없으면 된다.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=IrPBmWeTj3Q" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">16</td><td><span class="ch-tag">충격사건형</span></td><td>시바지로 들어간 첫날 밤 빗장이 걸리고 이윽고 문이 열렸습니다.</td><td class="num muted">0.0x</td><td class="muted">21.2s</td><td><a href="https://youtube.com/watch?v=Lh7I1yaRI6Y" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">17</td><td><span class="ch-tag">기타</span></td><td>누구든 저말을 진정시킬 자신이 있는 자는 앞으로 나오라.</td><td class="num muted">0.0x</td><td class="muted">174.4s</td><td><a href="https://youtube.com/watch?v=Or3fEqupil0" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">18</td><td><span class="ch-tag">약속형</span></td><td>오라보니 오늘은 어디까지 가요?</td><td class="num muted">0.0x</td><td class="muted">32.1s</td><td><a href="https://youtube.com/watch?v=QJSTk90D_rM" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">19</td><td><span class="ch-tag">회상형</span></td><td>옛날 옛적 충청도 예산고울 이름만 들어도 사람들이 혀를 차는 처자가 있었습니다.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=RVWIuSieUz4" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">20</td><td><span class="ch-tag">회상형</span></td><td>야담 능소화를 찾아 주셔서 감사합니다.</td><td class="num muted">0.0x</td><td class="muted">156.7s</td><td><a href="https://youtube.com/watch?v=RWZJ_I2lEQ0" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">21</td><td><span class="ch-tag">대비형</span></td><td>저 과부가 공짜로 죽을 퍼준다며?</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=TKdUQh4mq60" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">22</td><td><span class="ch-tag">충격사건형</span></td><td>아주머니, 그거 드시면 죽어요 여인의 손이 멈췄습니다 입으로 가져가려던 풀잎 사이에 거무튀튀한 줄기 세 가닥이 끼어 있었지요 사람 목숨이 갈리는</td><td class="num muted">0.0x</td><td class="muted">15.0s</td><td><a href="https://youtube.com/watch?v=e0LhtQ7_VLs" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">23</td><td><span class="ch-tag">질문형</span></td><td>자, 첫 번째 문제요.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=e2OpiZfYBMM" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">24</td><td><span class="ch-tag">대비형</span></td><td>이곳은 미국 LA 세계 태권도 챔피언 결승전이 펼쳐지는 현장.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=g4je4_RZn9M" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">25</td><td><span class="ch-tag">기타</span></td><td>그는 시체들 사이를 뒤지고 다니면 살아있는 사람이 있는지를 살폈다 그러다 혹 목숨이 붙어 있는 자가 있으며 칼을 뽑아 그 잘 가슴을 찔렀다 그리</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=p8O6WaXEhuM" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">26</td><td><span class="ch-tag">충격사건형</span></td><td>나리이 소금물 좀 드세요.</td><td class="num muted">0.0x</td><td class="muted">24.4s</td><td><a href="https://youtube.com/watch?v=q1ynacOQ-YU" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">27</td><td><span class="ch-tag">회상형</span></td><td>경상도 어느 산골 장터에서 바보라 불리던 총각 하나가 더덕한 보자기를 팔러 나왔다가 사람들 앞에서 크게 망신을 다녔습니다.</td><td class="num muted">0.0x</td><td class="muted">20.7s</td><td><a href="https://youtube.com/watch?v=qOL0pw-aCgA" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">28</td><td><span class="ch-tag">충격사건형</span></td><td>나이만 두고 너는 당장이 집에서 나가거라.</td><td class="num muted">0.0x</td><td class="muted">8.3s</td><td><a href="https://youtube.com/watch?v=t1Bv17Qup4M" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">29</td><td><span class="ch-tag">회상형</span></td><td>벌량이를 건드리면 죽는다.</td><td class="num muted">0.0x</td><td class="muted">-s</td><td><a href="https://youtube.com/watch?v=uEKTEVsEl5U" target="_blank" class="ch-tag">▶</a></td></tr><tr><td class="rank">30</td><td><span class="ch-tag">기타</span></td><td>동이야, 너무 무리하지 말거라.</td><td class="num muted">0.0x</td><td class="muted">76.1s</td><td><a href="https://youtube.com/watch?v=vrGZaQkEuLk" target="_blank" class="ch-tag">▶</a></td></tr></tbody></table></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 23:58</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 00:08</footer>
 </body>
 </html>

@@ -249,8 +249,116 @@ section table { margin:10px 0; }
 .subtab.dim { opacity:.45; cursor:not-allowed; }
 .chan-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:10px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; margin:3px 4px 0 0; border:1px solid var(--primary-bd); }
 
-/* Manual (사용 가이드) */
-.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:900px; }
+/* Manual (사용 가이드) — 시각 컴포넌트 */
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
+
+/* 단계 카드 (1→2→3 가로 흐름) */
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin:14px 0; }
+.step { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; position:relative; }
+.step .step-num { position:absolute; top:-10px; left:14px; background:var(--primary); color:#fff; font-weight:800; font-size:12px; padding:3px 10px; border-radius:10px; }
+.step .step-title { font-weight:700; color:var(--text); font-size:14px; margin:6px 0 6px; }
+.step .step-body { font-size:12px; color:var(--text2); line-height:1.6; }
+.step.hot { border-color:var(--hot-bd); background:var(--hot-bg); }
+.step.hot .step-num { background:var(--hot); color:#000; }
+.step.warn { border-color:var(--warn-bd); background:var(--warn-bg); }
+.step.warn .step-num { background:var(--warn); color:#000; }
+
+/* 사이트 UI 미니어처 — 실제 페이지처럼 */
+.mock { background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:12px; margin:14px 0; }
+.mock-header { display:flex; align-items:baseline; gap:8px; padding-bottom:8px; border-bottom:1px solid var(--divider); margin-bottom:10px; }
+.mock-brand { font-size:14px; font-weight:800; color:var(--primary); }
+.mock-slogan { font-size:10px; color:var(--text2); }
+.mock-chips { margin-left:auto; display:flex; gap:5px; }
+.mock-chip { font-size:10px; padding:3px 8px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--text2); font-weight:600; }
+.mock-chip.warn { color:var(--warn); border-color:var(--warn-bd); background:var(--warn-bg); }
+.mock-chip.hot { color:var(--hot); border-color:var(--hot-bd); background:var(--hot-bg); }
+.mock-chip b { color:var(--text); }
+.mock-chip.warn b { color:var(--warn); }
+.mock-chip.hot b { color:var(--hot); }
+.mock-tabs { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0 10px; }
+.mock-tab { font-size:11px; padding:5px 10px; border-radius:13px; background:var(--surface); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.mock-tab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+.mock-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 13px; margin:6px 0; position:relative; }
+.mock-card.crown { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.mock-rank-badge { display:inline-block; background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; font-size:11px; font-weight:800; padding:2px 8px; border-radius:8px; margin-right:6px; }
+.mock-ch-name { font-size:13px; font-weight:700; color:var(--text); display:inline; }
+.mock-delta { color:var(--up); font-weight:700; font-size:11px; margin-left:6px; }
+.mock-meta-line { font-size:11px; color:var(--text2); margin-top:3px; }
+.mock-stats-row { display:flex; gap:14px; margin:7px 0; padding:6px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.mock-stat { font-size:10px; color:var(--text2); }
+.mock-stat b { display:block; font-size:13px; font-weight:800; color:var(--text); }
+.mock-stat.sig b { color:var(--danger); }
+.mock-stat.hot b { color:var(--hot); }
+.mock-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; padding-top:8px; border-top:1px solid var(--divider); }
+.mock-vid-mini { font-size:10px; }
+.mock-vid-mini .lbl { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.mock-vid-mini .lbl.pop { color:var(--warn); }
+.mock-vid-mini .lbl.latest { color:var(--hot); }
+.mock-vid-thumb { background:linear-gradient(135deg, #3a3a4a, #1a1a26); height:55px; border-radius:5px; margin:3px 0; display:flex; align-items:center; justify-content:center; color:var(--text3); font-size:9px; }
+.mock-vid-mini .title { font-size:11px; color:var(--text); line-height:1.3; }
+.mock-pointer { display:inline-block; background:var(--primary); color:#fff; font-size:10px; font-weight:700; padding:3px 9px; border-radius:5px; position:absolute; }
+.mock-pointer::before { content:"👉 "; }
+
+/* 인포그래픽 게이지 */
+.gauge { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; }
+.gauge-title { font-size:13px; font-weight:700; color:var(--text); margin-bottom:8px; }
+.gauge-bar { height:24px; border-radius:8px; background:linear-gradient(90deg, #4ade80 0%, #4ade80 30%, #facc15 30%, #facc15 60%, #ff7a45 60%, #ff7a45 80%, #ef4444 80%); position:relative; overflow:hidden; }
+.gauge-labels { display:flex; justify-content:space-between; margin-top:4px; font-size:10px; color:var(--text2); }
+.gauge-pointer { position:absolute; top:-2px; bottom:-2px; width:3px; background:var(--text); border-radius:2px; box-shadow:0 0 0 2px var(--surface); }
+
+/* 메트릭 인포그래픽 카드 */
+.metric-card { display:flex; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:10px 0; }
+.metric-icon { font-size:26px; flex-shrink:0; }
+.metric-body { flex:1; min-width:0; }
+.metric-body .name { font-size:14px; font-weight:800; color:var(--text); }
+.metric-body .formula { font-size:11px; color:var(--text2); margin:3px 0; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+.metric-body .meaning { font-size:12px; color:var(--text); margin-top:5px; }
+.metric-grades { display:flex; gap:6px; margin-top:8px; }
+.metric-grades .grade { font-size:10px; padding:3px 8px; border-radius:6px; font-weight:700; }
+.metric-grades .grade.good { background:rgba(74,222,128,.15); color:var(--up); border:1px solid rgba(74,222,128,.4); }
+.metric-grades .grade.mid { background:rgba(250,204,21,.15); color:#facc15; border:1px solid rgba(250,204,21,.4); }
+.metric-grades .grade.bad { background:rgba(239,68,68,.15); color:var(--danger); border:1px solid rgba(239,68,68,.4); }
+
+/* 시간 룰러 (첫 사건 시점) */
+.ruler { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; position:relative; }
+.ruler-track { height:50px; background:linear-gradient(90deg, var(--hot) 0%, var(--hot) 33%, var(--warn) 33%, var(--warn) 66%, var(--danger) 66%); border-radius:8px; position:relative; }
+.ruler-marker { position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--text); box-shadow:0 0 0 2px var(--surface); }
+.ruler-marker::after { content:attr(data-label); position:absolute; top:-22px; left:50%; transform:translateX(-50%); background:var(--text); color:var(--bg); font-size:10px; font-weight:700; padding:2px 7px; border-radius:5px; white-space:nowrap; }
+.ruler-scale { display:flex; justify-content:space-between; margin-top:6px; font-size:10px; color:var(--text2); }
+.ruler-labels { display:flex; justify-content:space-between; margin-top:3px; font-size:9px; color:var(--text2); font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+
+/* 흐름 다이어그램 (큰 화살표 박스) */
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px; align-items:stretch; margin:14px 0; }
+.flow-node { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; position:relative; }
+.flow-node .icon { font-size:24px; display:block; margin-bottom:5px; }
+.flow-node .title { font-size:12px; font-weight:700; color:var(--text); }
+.flow-node .sub { font-size:10px; color:var(--text2); margin-top:3px; }
+.flow-node.primary { background:var(--primary-bg); border-color:var(--primary-bd); }
+.flow-node.primary .title { color:var(--primary-hi); }
+
+/* 좋은 예 vs 나쁜 예 박스 */
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0; }
+.compare-box { padding:14px; border-radius:10px; border:1px solid; }
+.compare-box.good { background:rgba(74,222,128,.07); border-color:rgba(74,222,128,.35); }
+.compare-box.bad { background:rgba(239,68,68,.07); border-color:rgba(239,68,68,.35); }
+.compare-box .head { font-size:13px; font-weight:800; margin-bottom:6px; }
+.compare-box.good .head { color:var(--up); }
+.compare-box.bad .head { color:var(--danger); }
+.compare-box ul { margin:5px 0 0 18px; }
+.compare-box li { font-size:12px; line-height:1.55; margin:3px 0; }
+
+/* TL;DR callout */
+.tldr { background:linear-gradient(135deg, var(--primary-bg), var(--info-bg)); border:1px solid var(--primary-bd); border-radius:10px; padding:14px 16px; margin:14px 0; }
+.tldr-title { font-size:13px; font-weight:800; color:var(--primary-hi); margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
+.tldr-body { font-size:13px; color:var(--text); line-height:1.65; }
+
+/* 강조 인용 박스 (인사이트 예시) */
+.insight { background:var(--surface); border-left:4px solid var(--hot); border-radius:0 10px 10px 0; padding:13px 16px; margin:14px 0; }
+.insight-tag { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:var(--hot); margin-bottom:5px; }
+.insight-section { margin:6px 0; font-size:12.5px; line-height:1.6; }
+.insight-section b { color:var(--hot); }
+
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
 .manual-body h1 { font-size:28px; font-weight:800; margin:24px 0 12px; color:var(--text); letter-spacing:-0.5px; }
 .manual-body h2 { font-size:22px; font-weight:800; margin:32px 0 12px; padding-top:16px; border-top:1px solid var(--divider); color:var(--primary-hi); letter-spacing:-0.3px; }
 .manual-body h3 { font-size:17px; font-weight:700; margin:20px 0 8px; color:var(--text); }
@@ -313,6 +421,6 @@ section table { margin:10px 0; }
   <div class="autopsy-form"><div class="ah">🔥 영상 URL을 던지세요 — 자동으로 분해됩니다</div><div class="asub">YouTube URL 1~10개를 한 줄씩 붙여넣고 [분석 시작] 클릭. 5분 이내 자동 분석 + 페이지에 카드 추가.</div><textarea id="autopsyUrls" placeholder="https://youtube.com/watch?v=...
 https://youtube.com/watch?v=...
 https://youtube.com/watch?v=..."></textarea><div class="row2"><input type="text" id="autopsyLabel" placeholder="라벨 (예: 잘듣네 신작 비교) — 선택"><input type="text" id="autopsyTags" placeholder="태그 (콤마구분, 예: 위로,수면) — 선택"></div><div class="actions"><button id="autopsySubmitBtn" onclick="if(window.tubehackerAutopsySubmit)window.tubehackerAutopsySubmit();else alert('스크립트 로딩 중 — 잠시 후 다시 시도하세요.');">🔥 분석 시작</button><button class="ghost" id="autopsyClearBtn" onclick="if(window.tubehackerAutopsyClear)window.tubehackerAutopsyClear();">초기화</button><span class="hint">GitHub Issue로 자동 작성 → Action이 분석 → 카드 추가</span></div></div><script>(function(){  function setVal(id, v){ var el=document.getElementById(id); if(el && v) el.value = v; }  // prefill: sessionStorage → URL 파라미터 fallback  try {    var sd = JSON.parse(sessionStorage.getItem("autopsyPrefill") || "null");    if (sd) {      if (sd.urls) setVal("autopsyUrls", String(sd.urls).split(/[,\n]/).filter(Boolean).join("\n"));      if (sd.label) setVal("autopsyLabel", sd.label);      if (sd.tags) setVal("autopsyTags", sd.tags);      sessionStorage.removeItem("autopsyPrefill");    } else {      var qs = new URLSearchParams(location.search);      if (qs.get("urls")) setVal("autopsyUrls", qs.get("urls").split(/[,\n]/).filter(Boolean).join("\n"));      if (qs.get("label")) setVal("autopsyLabel", qs.get("label"));      if (qs.get("tags")) setVal("autopsyTags", qs.get("tags"));    }  } catch(e){}  // window 전역으로 노출 — SPA cache·IIFE 우회  window.tubehackerAutopsySubmit = function(){    var ta=document.getElementById("autopsyUrls"); var lb=document.getElementById("autopsyLabel"); var tg=document.getElementById("autopsyTags");    if(!ta){alert("폼을 찾을 수 없습니다.");return;}    var urls=ta.value.trim(); var label=(lb&&lb.value.trim())||""; var tags=(tg&&tg.value.trim())||"";    if(!urls){alert("URL을 1개 이상 입력하세요.");return;}    var lines=urls.split(/\n/).map(function(s){return s.trim();}).filter(Boolean);    if(lines.length>10){alert("URL은 최대 10개까지 가능합니다.");return;}    var body="### URLs\n\n"+lines.join("\n")+"\n\n### 라벨\n\n"+(label||"(없음)")+"\n\n### 태그\n\n"+(tags||"(없음)")+"\n";    var title="[autopsy] "+(label||(lines.length+"편 분석"));    var url="https://github.com/cmpark0401-hash/arrange-yt-scanner/issues/new?title="+encodeURIComponent(title)+"&body="+encodeURIComponent(body)+"&labels=autopsy";    var w=window.open(url,"_blank");    if(!w){alert("팝업이 차단됐어요. 주소창의 팝업 차단 해제 후 다시 시도하거나, 다음 URL을 직접 여세요:\n\n"+url);}  };  window.tubehackerAutopsyClear = function(){    var ta=document.getElementById("autopsyUrls"); if(ta) ta.value="";    var lb=document.getElementById("autopsyLabel"); if(lb) lb.value="";    var tg=document.getElementById("autopsyTags"); if(tg) tg.value="";  };})();</script><div class="rep-sec"><h2>📂 지난 분석 (2건)</h2></div><div class="ch-grid"><a class="ch-card autopsy-card" href="autopsy_2026-05-31-조선야담처녀--아버지가-강물에-던져진-그날-14살-아들의-망치가-움직이기-시작했다-ㅣ.html" style="text-decoration:none;color:inherit;"><div class="ch-name" style="font-size:15px;">🔥 조선야담처녀 · 아버지가 강물에 던져진 그날, 14살 아들의 망치가 움직이기 시작했다 ㅣ</div><div class="ch-meta" style="margin-top:8px;">  <span>📅 2026-05-31</span>  <span>🎬 1편</span>  <span>⏱️ 3.0분 평균</span></div><div style="margin-top:8px; font-size:12px; color:var(--text);">  🪝 <b style="color:var(--warn);">기타</b> 후크 · 🎯 <b style="color:var(--hot);">요약형</b> 결말</div><div style="margin-top:8px; font-size:12px;"><span class="ch-tag">야담</span></div><div style="margin-top:6px; font-size:11px; color:var(--text2);">공통 어휘: 강물에, 것이다, 있다, 거꾸로, 단지야</div></a><a class="ch-card autopsy-card" href="autopsy_2026-05-31-야담.html" style="text-decoration:none;color:inherit;"><div class="ch-name" style="font-size:15px;">🔥 야담</div><div class="ch-meta" style="margin-top:8px;">  <span>📅 2026-05-31</span>  <span>🎬 3편</span>  <span>⏱️ 84.9분 평균</span></div><div style="margin-top:8px; font-size:12px; color:var(--text);">  🪝 <b style="color:var(--warn);">회상형</b> 후크 · 🎯 <b style="color:var(--hot);">기타</b> 결말</div><div style="margin-top:8px; font-size:12px;"><span class="ch-tag">잠시</span><span class="ch-tag">있었습니다</span><span class="ch-tag">있었지요</span><span class="ch-tag">있었어요</span></div><div style="margin-top:6px; font-size:11px; color:var(--text2);">공통 어휘: 잠시, 있었습니다, 있었지요, 있었어요</div></a></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 23:58</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 00:08</footer>
 </body>
 </html>

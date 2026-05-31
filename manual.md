@@ -2,81 +2,212 @@
 
 **유튜브 알고리즘 해킹의 모든 것** — 발견 → 검증 → 청사진 → 제작까지 한 사이클.
 
+<div class="tldr">
+<div class="tldr-title">⚡ TL;DR — 3줄 요약</div>
+<div class="tldr-body">
+✅ <b>오늘 만들 영상 주제·구조·어휘</b>를 데이터 기반으로 추천<br>
+✅ <b>YouTube URL을 던지면</b> 자막 분해 → Hook/구조/단조도 자동 분석<br>
+✅ 분석 결과 → <b>Claude Code에 한 번에 전달</b> → 대본 자동 생성
+</div>
+</div>
+
 ---
 
 ## 🚀 처음 사용자를 위한 3분 가이드
 
-**처음 들어왔다면 이 순서대로 하세요:**
+<div class="steps">
+  <div class="step hot">
+    <span class="step-num">STEP 1</span>
+    <div class="step-title">🏠 대시보드 홈 보기</div>
+    <div class="step-body">상단 칩 3개로 오늘 분위기 파악 — 🚨 시그널 · 🔥 폭발 · 🆕 24h</div>
+  </div>
+  <div class="step">
+    <span class="step-num">STEP 2</span>
+    <div class="step-title">📂 우리 카테고리 찾기</div>
+    <div class="step-body">카테고리 탭 클릭 → 👑 1·2·3위 채널 카드의 인기 영상 확인</div>
+  </div>
+  <div class="step warn">
+    <span class="step-num">STEP 3</span>
+    <div class="step-title">🎯 만들 주제 정하기</div>
+    <div class="step-body">오늘의 주제 탭에서 🔥 재편집 재폭발 카드 → 주제 선택</div>
+  </div>
+</div>
 
-### Step 1 (30초): 오늘의 시그널 보기
-1. **🏠 대시보드 홈** 탭
-2. 상단 헤더에 빨간 칩 보기:
-   - `🚨 시그널 N` — 알고리즘이 지금 미는 영상 수
-   - `🔥 폭발 N` — 효율 검증된 영상 수
-3. **숫자가 크면 = 오늘 만들기 좋은 날**
+---
 
-### Step 2 (1분): 우리 채널 카테고리 찾기
-1. 카테고리 탭 클릭 (예: `역사`, `경제`)
-2. **👑 1·2·3위 카드 = 오늘 가장 잘 나가는 채널들**
-3. 카드의 **인기 영상** 썸네일 확인 → 이게 지금 사람들이 좋아하는 콘텐츠
+## 🖼️ 사이트 한눈에 보기
 
-### Step 3 (1분 30초): 만들 영상 주제 정하기
-1. **🎯 오늘의 주제** 탭 클릭
-2. 우리 카테고리에서:
-   - **🔥 재편집 재폭발** — 지금 다시 뜬 검증 주제 (최우선)
-   - **검증 주제** — 시간 검증된 영구 가치 주제
-3. 마음에 드는 주제 골라 그 대표 영상 URL 복사
+<div class="mock">
+  <div class="mock-header">
+    <span style="font-size:18px;">🇰🇷</span>
+    <span class="mock-brand">TubeHacker</span>
+    <span class="mock-slogan">· 유튜브 알고리즘 해킹의 모든 것</span>
+    <div class="mock-chips">
+      <span class="mock-chip warn">🚨 시그널 <b>9</b></span>
+      <span class="mock-chip hot">🔥 폭발 <b>150</b></span>
+      <span class="mock-chip">🆕 24h <b>65</b></span>
+      <span class="mock-chip">🇯🇵 JP</span>
+    </div>
+  </div>
+  <div class="mock-tabs">
+    <span class="mock-tab on">🏠 대시보드 홈</span>
+    <span class="mock-tab">🎯 오늘의 주제</span>
+    <span class="mock-tab">🔥 Hot키워드</span>
+    <span class="mock-tab">🔬 과학 트렌드</span>
+    <span class="mock-tab">🎙️ 시니어랩</span>
+    <span class="mock-tab">🔥 왜 이 영상은 터졌는가?</span>
+    <span class="mock-tab">🏆 패턴 라이브러리</span>
+    <span class="mock-tab">📖 가이드</span>
+  </div>
+  <div class="mock-card crown">
+    <span class="mock-rank-badge">👑 #1</span>
+    <span class="mock-ch-name">지식인사이드</span>
+    <span class="mock-delta">▲5</span>
+    <div class="mock-meta-line">구독 384만 · 🎬 롱폼 · 📅 21년 8월 개설 · 4년 9개월차</div>
+    <div class="mock-stats-row">
+      <div class="mock-stat sig"><b>3</b>🚨 시그널</div>
+      <div class="mock-stat hot"><b>5</b>🔥 폭발</div>
+      <div class="mock-stat"><b>1</b>🆕 24h</div>
+    </div>
+    <div class="mock-vid-dual">
+      <div class="mock-vid-mini">
+        <div class="lbl pop">🔥 인기 영상</div>
+        <div class="mock-vid-thumb">[썸네일]</div>
+        <div class="title">조선 마지막 환관의 비밀</div>
+      </div>
+      <div class="mock-vid-mini">
+        <div class="lbl latest">🆕 최신 영상</div>
+        <div class="mock-vid-thumb">[썸네일]</div>
+        <div class="title">광해군이 왜 폐위됐나</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-→ 이제 **🔥 왜 이 영상은 터졌는가?** 탭으로 가서 그 URL 분석.
+<p style="text-align:center; color:var(--text2); font-size:12px;">↑ 실제 사이트 헤더 + 채널 카드 모양 (미니어처)</p>
 
 ---
 
 ## 🎯 TubeHacker가 답하는 5가지 질문
 
-이 도구는 **유튜브 PD를 위한 의사결정 도우미**입니다. 다음 질문에 자동으로 답해줍니다:
-
-| 질문 | 답하는 탭 |
-|---|---|
-| "오늘 만들 영상 주제 뭐?" | 🎯 오늘의 주제 |
-| "이 카테고리에 영구 가치 있는 주제는?" | 🔥 Hot키워드 |
-| "이 영상은 왜 터졌고 어떻게 만들어졌나?" | 🔥 왜 이 영상은 터졌는가? |
-| "지금 어떤 썸네일·제목·후크가 효과적이지?" | 🏆 패턴 라이브러리 |
-| "내 채널이 어디쯤이고 경쟁 채널은?" | 🏠 대시보드 |
+<div class="flow">
+  <div class="flow-node primary">
+    <span class="icon">🎯</span>
+    <div class="title">오늘 만들 주제?</div>
+    <div class="sub">→ 오늘의 주제</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🔥</span>
+    <div class="title">영구 가치 주제?</div>
+    <div class="sub">→ Hot키워드</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🔬</span>
+    <div class="title">왜 터졌나?</div>
+    <div class="sub">→ Autopsy</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🏆</span>
+    <div class="title">검증 패턴?</div>
+    <div class="sub">→ 패턴 라이브러리</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">📊</span>
+    <div class="title">경쟁 채널?</div>
+    <div class="sub">→ 대시보드</div>
+  </div>
+</div>
 
 ---
 
-## 📚 핵심 컨셉 (이거 모르면 안 됨)
+## 📊 핵심 메트릭 (이거 모르면 안 됨)
 
-### 효율 (Efficiency) = 조회수 ÷ 구독자수
-- **1.0** = 구독자 수만큼 봄 (양호)
-- **5.0** = 구독자의 5배가 봄 (폭발 = 알고리즘이 외부 추천)
-- **10.0+** = 메가폭발 (트렌딩급)
-- **왜 중요?** 구독자 작은 채널도 폭발 가능. *어떤 영상이 알고리즘 추천을 받았나* 정확히 측정.
+<div class="metric-card">
+  <div class="metric-icon">⚡</div>
+  <div class="metric-body">
+    <div class="name">효율 (Efficiency)</div>
+    <div class="formula">= 조회수 ÷ 구독자수</div>
+    <div class="meaning">알고리즘이 외부 추천한 정도. 구독자 작은 채널도 폭발 가능.</div>
+    <div class="metric-grades">
+      <span class="grade good">1.0+ 양호</span>
+      <span class="grade good">5.0+ 폭발 🔥</span>
+      <span class="grade good">10.0+ 메가폭발 🚀</span>
+    </div>
+  </div>
+</div>
 
-### 시속 (Velocity) = 조회수 ÷ 영상 나이(시간)
-- **5,000/h+** = 알고리즘 시그널 (지금 미는 중)
-- **50,000/h+** = 트렌딩
-- **왜 중요?** 이미 폭발한 영상이 아니라 *지금 막 폭발 중*인 영상 발견.
+<div class="metric-card">
+  <div class="metric-icon">🚀</div>
+  <div class="metric-body">
+    <div class="name">시속 (Velocity)</div>
+    <div class="formula">= 조회수 ÷ 영상 나이(시간)</div>
+    <div class="meaning">'지금 막' 폭발 중인 영상 발견. 이미 폭발한 영상이 아니라 진행 중.</div>
+    <div class="metric-grades">
+      <span class="grade mid">5,000+/h 시그널 🚨</span>
+      <span class="grade good">50,000+/h 트렌딩</span>
+    </div>
+  </div>
+</div>
 
-### 폭발 vs 시그널 (헷갈리기 쉬움)
-- **🔥 폭발** = 효율 5배+ (총 결과 검증)
-- **🚨 시그널** = 시속 5,000+/h (현재 진행 중)
-- **둘 다 있으면**: 검증 + 현재 진행 = 최강
+<div class="metric-card">
+  <div class="metric-icon">⏱️</div>
+  <div class="metric-body">
+    <div class="name">첫 사건 발생 시점</div>
+    <div class="formula">영상 시작 → 첫 사건 키워드 등장 시점</div>
+    <div class="meaning">시청자 머무름 결정. 늦으면 이탈.</div>
+  </div>
+</div>
 
-### Hook (0~30초)
-- 시청자가 *떠날지 머무를지* 결정하는 30초
-- **0~3초** = 첫인상 (소리·시각 즉시 인지)
-- **3~10초** = 충격·질문·통계
-- **10~30초** = "이 영상에서 보여줄 것" 약속
+<div class="ruler">
+  <div class="ruler-track">
+    <div class="ruler-marker" data-label="60s" style="left:33%;"></div>
+    <div class="ruler-marker" data-label="120s" style="left:66%;"></div>
+  </div>
+  <div class="ruler-labels">
+    <span>🟢 안전</span>
+    <span>🟡 주의</span>
+    <span>🔴 위험</span>
+  </div>
+  <div class="ruler-scale">
+    <span>0s</span><span>60s</span><span>120s</span><span>180s</span>
+  </div>
+</div>
 
-### 첫 사건 발생 시점
-- 영상 시작부터 첫 사건(어느날·갑자기·쓰러졌 등) 등장 시점
-- **60초 안** = 🟢 retention 유지 (시청자 머묾)
-- **120초+** = 🔴 이탈 위험
+<div class="metric-card">
+  <div class="metric-icon">♻️</div>
+  <div class="metric-body">
+    <div class="name">단조도 (Monotony)</div>
+    <div class="formula">= N편 영상간 3-gram Jaccard × 100</div>
+    <div class="meaning">같은 채널이 매번 같은 표현 쓰는 정도. 높으면 시청자 거부감.</div>
+  </div>
+</div>
 
-### 단조도 (Monotony)
-- 같은 채널이 매번 같은 표현 쓰는 정도
-- **30+** = 시청자 거부감 발생 (다음 영상 안 봄)
+<div class="gauge">
+  <div class="gauge-title">단조도 점수 0~100</div>
+  <div class="gauge-bar">
+    <div class="gauge-pointer" style="left:25%;"></div>
+  </div>
+  <div class="gauge-labels">
+    <span>🟢 0~10 다양</span>
+    <span>🟡 10~20 적당</span>
+    <span>🟠 20~30 반복</span>
+    <span>🔴 30+ 거부</span>
+  </div>
+</div>
+
+<div class="metric-card">
+  <div class="metric-icon">🎯</div>
+  <div class="metric-body">
+    <div class="name">클릭베이트 점수</div>
+    <div class="formula">LLM 1~10점</div>
+    <div class="meaning">썸네일의 자극도. 카테고리 평균이 목표 — 너무 높으면 신뢰도 ↓ → retention ↓</div>
+    <div class="metric-grades">
+      <span class="grade good">5~7 적정</span>
+      <span class="grade mid">8 강함</span>
+      <span class="grade bad">9~10 과함 ⚠️</span>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -84,254 +215,229 @@
 
 ### 🏠 대시보드 홈
 
-**언제 보나**: 매일 아침 30초 확인용. 오늘의 시그널 한눈에.
+**언제 보나**: 매일 아침 30초 확인용.
 
-#### 📍 단계별 사용법
+<div class="steps">
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-title">헤더 칩 확인</div>
+    <div class="step-body">🚨 시그널 · 🔥 폭발 · 🆕 24h 숫자 클수록 = 만들기 좋은 날</div>
+  </div>
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-title">필터 활용</div>
+    <div class="step-body">시간 토글 · 형식 토글 · 대형 제외 · 폭발/시그널만 · 검색</div>
+  </div>
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-title">채널 카드 읽기</div>
+    <div class="step-body">👑 1·2·3위 · ▲ 등락 · 📅 연차 · 인기/최신 영상</div>
+  </div>
+</div>
 
-**1단계: 헤더 칩 확인 (5초)**
-화면 상단 우측 칩 3개:
-```
-🚨 시그널 9     ← 지금 알고리즘이 미는 영상
-🔥 폭발 150    ← 효율 검증된 영상  
-🆕 24h 65     ← 새로 발견된 영상
-```
-- 숫자 클수록 = 오늘 만들기 좋은 날
-- 숫자 작으면 = 오늘은 잠잠 → 검증된 주제(🔥 Hot키워드)에서 발굴
+<div class="compare">
+  <div class="compare-box good">
+    <div class="head">✅ 이렇게 보세요</div>
+    <ul>
+      <li>▲ 상승 화살표 있는 채널 우선</li>
+      <li>대형 제외 체크해서 우리 사이즈 채널만</li>
+      <li>인기 영상 + 최신 영상 모두 확인</li>
+      <li>편/주 5+ 채널 = 활발한 채널</li>
+    </ul>
+  </div>
+  <div class="compare-box bad">
+    <div class="head">❌ 흔한 실수</div>
+    <ul>
+      <li>1위 채널만 보고 따라가기</li>
+      <li>우리 카테고리 아닌 채널 분석</li>
+      <li>구독자 수만 보고 판단</li>
+      <li>매일 같은 채널만 확인</li>
+    </ul>
+  </div>
+</div>
 
-**2단계: 필터 활용 (15초)**
-- **기간 토글** `24h | 7일 | 30일 | 급가속` → 정렬 기준
-  - `24h` = 오늘 시그널 많은 채널 우선
-  - `7일` = 일주일 누적 좋은 채널 (꾸준한 성장)
-  - `급가속` = 어제 → 오늘 가장 큰 점프
-- **형식 토글** `전체 | 🎬 롱폼 | 📱 쇼츠` → 우리 컨텐츠 타입만
-- **대형 제외** 체크 → 작은 채널의 보석 발굴
-- **폭발/시그널만** 체크 → 평범한 채널 숨김
-
-**3단계: 채널 카드 읽기 (10초/카드)**
-```
-🥇 #1 [채널명]  ▲5
-구독 38만 · 🎬 롱폼
-📅 21년 8월 개설 · 4년 9개월차
-🚨 3 시그널  🔥 5 폭발  🆕 1 24h
-[스파크라인 차트] +12  📈 6.5편/주
-🔥 인기 영상 (썸네일+제목)
-🆕 최신 영상 (썸네일+제목)
-```
-- **👑 1·2·3위** = 오늘 가장 잘 나가는 채널
-- **▲5** = 어제 대비 순위 5단 상승 (= 가속도 ↑)
-- **📅 21년 개설 · 4년차** = 채널 성숙도 (오래된 채널인지 신생인지)
-- **편/주** = 활동성 (5편 이상 = 매우 활발)
-- **인기 vs 최신** = 채널 대표작 + 지금 뭐하고 있는지
-
-#### 💡 초보자 실수 회피
-- ❌ 1위 채널이 항상 좋은 게 아님. 그 채널 *카테고리*가 우리와 맞는지 봐야.
-- ❌ 구독자 많은 대형채널 위주로 보지 마세요. **대형 제외** 체크하면 우리에게 맞는 사이즈 채널 보임.
-- ✅ **▲ 상승 화살표 있는 채널**을 더 봐야 — 지금 알고리즘이 밀어주는 중.
-
-#### 🎯 인사이트 도출 예시
-> **상황**: 역사 카테고리 1위가 "지식인사이드" ▲3 상승, 인기 영상은 *조선 마지막 환관의 비밀*  
-> **인사이트**: 1) 역사 채널 지금 알고리즘 추천 받음. 2) "비밀·정체" 클릭베이트가 통하는 중. 3) 조선시대 비주류 인물 콘텐츠 효율 좋음.  
-> **액션**: 우리 채널도 조선시대 비주류(궁녀/내시/상궁) 인물 콘텐츠 1개 만들어보기.
+<div class="insight">
+  <div class="insight-tag">🎯 인사이트 도출 예시</div>
+  <div class="insight-section"><b>상황</b>: 역사 카테고리 1위 ▲3 상승 + 인기 영상 "조선 마지막 환관의 비밀"</div>
+  <div class="insight-section"><b>인사이트</b>: 역사 채널 지금 알고리즘 추천 + "비밀·정체" 클릭베이트 통함 + 조선 비주류 인물 콘텐츠 효율 좋음</div>
+  <div class="insight-section"><b>액션</b>: 조선시대 비주류(궁녀/내시/상궁) 인물 콘텐츠 1개 만들기</div>
+</div>
 
 ---
 
 ### 🎯 오늘의 주제
 
-**언제 보나**: 매일 영상 만들기 전. 의사결정 도구.
+**언제 보나**: 매일 영상 만들기 전.
 
-#### 📍 단계별 사용법
+<div class="flow">
+  <div class="flow-node primary">
+    <span class="icon">🥇</span>
+    <div class="title">🔥 재편집 재폭발</div>
+    <div class="sub">최우선 — 가장 안전</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🥈</span>
+    <div class="title">검증 주제</div>
+    <div class="sub">영구 가치</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">🥉</span>
+    <div class="title">오늘 폭발</div>
+    <div class="sub">단발 트렌드 주의</div>
+  </div>
+</div>
 
-**1단계: 카테고리 카드 찾기**
-- 우리 채널 카테고리 카드로 스크롤 (역사·경제·과학·심리학 등)
-- 각 카드 안에 3가지 묶음:
-
-**2단계: 묶음별 우선순위**
-
-🥇 **🔥 재편집 재폭발 (최우선)**
-- 검증된 주제 + 최근 7일 내 재업로드 + 폭발 신호
-- **= "다른 채널이 지금 같은 주제로 재업로드해서 잘 됐다"** = 우리도 만들면 잘 될 확률 매우 높음
-- 각 항목 클릭 → YouTube 원본 확인 가능
-
-🥈 **검증 주제 (Hot키워드)**
-- 시간 검증을 통과한 영구 가치 주제
-- 시즌 무관, 언제 만들어도 양호
-- *영상 카탈로그 기획용*
-
-🥉 **오늘 폭발 주제**
-- 24시간 안 폭발한 영상
-- 신선하지만 1회성일 수 있음 (검증 안 된 단발 트렌드)
-
-**3단계: 주제 선택 → autopsy 던지기**
-- 선택한 주제의 대표 영상 URL 복사
-- **🔥 왜 이 영상은 터졌는가?** 탭으로 이동
-- 폼에 URL 붙여넣기 → 분석 시작
-
-#### 💡 초보자 실수 회피
-- ❌ "오늘 폭발 주제"만 보지 마세요. 그건 단발 트렌드일 수 있음.
-- ✅ **🔥 재편집 재폭발 > 검증 주제 > 오늘 폭발** 순으로 신뢰.
-- ❌ 주제만 가져다 그대로 따라 하지 마세요. autopsy로 *왜 터졌는지*까지 분석 후 만들기.
-
-#### 🎯 인사이트 도출 예시
-> **상황**: "이재명 재판" 키워드가 시사·정치 카테고리에 🔥 재편집 재폭발로 떠 있음  
-> **인사이트**: 1) 검증된 주제. 2) 최근 다른 채널도 다시 만들었고 성공. 3) 지금 만들면 알고리즘 추천 받기 좋은 시점.  
-> **액션**: 이 주제로 우리 채널 톤에 맞게 영상 기획. 최신 사건·발언 추가해 차별화.
-
----
-
-### 🔥 Hot키워드 (검증 주제 아카이브)
-
-**언제 보나**: 콘텐츠 라인업 기획 / 시즌·트렌드 무관한 주제가 필요할 때.
-
-#### 📍 단계별 사용법
-
-**1단계: 카테고리 필터** (역사·경제·과학·심리학 등)
-**2단계: 검증 점수 정렬** — *검증 점수가 높은 것 = 더 안전*
-**3단계: 영상 풀 보기** — 같은 키워드로 만들어진 영상 3~5개 모음
-
-#### 💡 핵심 포인트
-이 탭의 키워드들은 **검증 점수**(seen_days × max_channels × max_views)로 계산됨.
-- 검증 점수 ≥ 100 = 매우 안전
-- 50~100 = 양호
-- 20~50 = 시도해볼 만
-
-#### 🎯 인사이트 도출 예시
-> **상황**: 역사 카테고리에 "사도세자" 키워드 검증 점수 150  
-> **인사이트**: 1) 이미 12채널이 만들었고 모두 효율 양호. 2) 우리가 만들어도 알고리즘이 미는 데이터 패턴 인식 가능. 3) 이미 만들어진 영상들의 *차별화 포인트*만 찾으면 됨.  
-> **액션**: 그 키워드의 영상 3개를 autopsy로 분해 → 공통점 추출 → 그것 + 우리만의 차별 포인트로 영상 기획.
+<div class="compare">
+  <div class="compare-box good">
+    <div class="head">✅ 우선순위</div>
+    <ul>
+      <li><b>🔥 재편집 재폭발</b> — 다른 채널이 *지금 같은 주제로 다시 만들어 잘 됨* → 우리도 만들면 효율 높음</li>
+      <li><b>검증 주제</b> — 시간 검증 통과 → 안전</li>
+      <li><b>오늘 폭발</b> — 단발일 수 있음 → 신중</li>
+    </ul>
+  </div>
+  <div class="compare-box bad">
+    <div class="head">❌ 흔한 실수</div>
+    <ul>
+      <li>"오늘 폭발 주제"만 따라가기 (단발 위험)</li>
+      <li>주제만 가져가고 *왜 터졌는지* 분석 안 함</li>
+      <li>autopsy 안 거치고 바로 대본 작업</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
-### 🎙️ 시니어랩 (야담)
+### 🎙️ 시니어랩 (야담) — 풀세트 흐름
 
-**언제 보나**: 시니어 타깃(야담·시니어사연) 카테고리 영상 만들 때.
+<div class="flow">
+  <div class="flow-node primary">
+    <span class="icon">1️⃣</span>
+    <div class="title">추천 TOP3</div>
+    <div class="sub">윈도우 가중 점수</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">2️⃣</span>
+    <div class="title">📚 벤치마크 학습</div>
+    <div class="sub">1~5순위 채널 톤</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">3️⃣</span>
+    <div class="title">🎬 표준 구조</div>
+    <div class="sub">6단계 시간 배분</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">4️⃣</span>
+    <div class="title">🪝 Hook 풀</div>
+    <div class="sub">검증된 첫 문장</div>
+  </div>
+  <div class="flow-node primary">
+    <span class="icon">5️⃣</span>
+    <div class="title">🔥 분석 1클릭</div>
+    <div class="sub">표 행 [🔥 분석]</div>
+  </div>
+</div>
 
-#### 📍 단계별 사용법 (야담 채널 시작 → 첫 영상까지 완성)
-
-**1단계: 추천 TOP3 보기 (30초)**
-- 페이지 상단 🎯 카드 3개
-- 1d/7d/30d 윈도우 가중치로 계산된 *가장 안전한 주제* 3개
-- 각 추천에 학습 대상 영상도 함께 표시
-
-**2단계: 벤치마크 채널 톤 학습 (3분)**
-- 📚 1~5순위 벤치마크 채널 상세 섹션
-- 1순위 (조선야담처녀)의 평균 분량·발화 속도·시그너처 어휘 확인
-- TOP5 영상 클릭해서 직접 들어가 톤 흡수
-
-**3단계: 표준 영상 구조 보기 (1분)**
-- 🎬 표준 구조: Hook 30s → Intro 180s → Body N분 → Climax → Resolution → Outro
-- 평균 분량 (예: 43분) 확인
-- *우리 영상도 이 구조로*
-
-**4단계: 검증된 Hook 풀 확인 (2분)**
-- 🪝 Hook 풀 26개 — 실제 영상 첫 문장
-- 패턴 파악: 충격 사건 + 반대 반응 + 미스터리 후크
-
-**5단계: 폭발 야담 영상에서 1편 골라 autopsy**
-- 🏆 폭발 야담 영상 표
-- 마음에 드는 영상의 [🔥 분석] 클릭
-- autopsy 페이지로 자동 이동 + URL prefill
-- [분석 시작] → 3~5분 대기
-
-**6단계: autopsy 결과 → 대본 만들기**
-- 분석 카드 들어가서 인사이트 확인
-- [📝 이 인사이트로 대본 만들기] 클릭
-- Claude Code에 prompt 붙여넣기
-
-#### 💡 초보자 실수 회피
-- ❌ 추천 TOP3만 보지 마세요. 벤치마크 채널 *상세*까지 봐야 톤 학습 가능.
-- ❌ 1편만 분석하지 마세요. 5편 분석해야 *공통 패턴*이 보임.
-- ✅ 단조도가 25 이상이면 새 영상은 어휘 갱신 필수.
-
-#### 🎯 야담 채널 첫 영상 만들기 전체 흐름
-
-```
-1. 시니어랩 → 추천 TOP3 #1 "효·가족" 선택
-2. 학습 대상 5편 골라 autopsy에 한 번에 던지기
-3. autopsy 결과: 평균 분량 85분 · Hook 회상형 · 첫 사건 평균 130초
-4. [📝 대본 만들기] → Claude Code에 prompt 붙여넣기  
-5. Claude가 channel-setup 진입 → shared corpus 자동 사용
-6. profile.md에 "조선야담처녀 스타일 + 85분 + 회상형 Hook" 박힘
-7. script-pd가 야담 주제 3개 제안 → 선택 → 대본 작성
-8. 결과: TTS 가능한 .txt 대본 + 영상 메타 (제목·설명·태그)
-```
+<div class="tldr">
+<div class="tldr-title">🎯 시니어랩 → 야담 채널 첫 영상 워크플로</div>
+<div class="tldr-body">
+시니어 탭 → 추천 TOP3 #1 선택 → 학습 영상 5편 [🔥 분석] → autopsy 결과 → [📝 대본 만들기] → Claude Code → 대본 완성 (총 ~50분)
+</div>
+</div>
 
 ---
 
 ### 🔥 왜 이 영상은 터졌는가? (Autopsy)
 
-**언제 보나**: 특정 영상의 성공 비결 자세히 알고 싶을 때 / 우리 영상 만들기 전 검증 영상 분석.
+**언제 보나**: 특정 영상 성공 비결 분석 / 우리 영상 만들기 전 검증.
 
-#### 📍 단계별 사용법
+<div class="steps">
+  <div class="step hot">
+    <span class="step-num">1</span>
+    <div class="step-title">📋 URL 준비 (3~5편 권장)</div>
+    <div class="step-body">1편만 던지면 패턴 안 보임. 같은 카테고리·비슷한 효율의 영상 묶어서</div>
+  </div>
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-title">📥 폼 입력</div>
+    <div class="step-body">URL · 라벨(선택) · 태그(선택) → [🔥 분석 시작]</div>
+  </div>
+  <div class="step warn">
+    <span class="step-num">3</span>
+    <div class="step-title">🤖 GitHub Issue 자동 작성</div>
+    <div class="step-body">새 탭에서 [Create] 한 번 클릭. 5~10분 자동 처리</div>
+  </div>
+  <div class="step">
+    <span class="step-num">4</span>
+    <div class="step-title">📊 결과 카드 확인</div>
+    <div class="step-body">Cmd+R 새로고침 → 새 카드 → 클릭해서 상세</div>
+  </div>
+</div>
 
-**1단계: URL 준비**
-- YouTube에서 마음에 드는 영상 URL 복사
-- **1개도 가능하지만 3~5편 한 번에 던지면 공통 패턴이 나와서 훨씬 강력**
-- 같은 카테고리·비슷한 효율의 영상 5편 권장
+#### 📊 결과 페이지에서 보는 것
 
-**2단계: 폼 입력**
-```
-URLs:    ← 한 줄에 하나씩
-https://youtube.com/watch?v=AAA
-https://youtube.com/watch?v=BBB
-https://youtube.com/watch?v=CCC
+<div class="mock">
+  <div style="font-size:14px; font-weight:800; color:var(--text); margin-bottom:8px;">🎯 공통 패턴 (핵심 인사이트)</div>
+  <div class="mock-stats-row">
+    <div class="mock-stat"><b>회상형</b>🪝 후크</div>
+    <div class="mock-stat"><b>교훈형</b>🎯 결말</div>
+    <div class="mock-stat"><b>43.6분</b>⏱️ 평균</div>
+    <div class="mock-stat"><b>247 wpm</b>🗣️ 발화</div>
+  </div>
+  <div style="margin-top:8px; padding-top:8px; border-top:1px solid var(--divider); font-size:12px; color:var(--text2);">
+    공통 어휘: <code>잠시</code>×96 · <code>있었습니다</code>×85 · <code>있었지요</code>×72 · ...
+  </div>
+</div>
 
-라벨:    "야담 효·가족 효율 TOP3"  (선택, 없으면 자동)
-태그:    "야담,효,가족"            (선택)
-```
+<div class="mock">
+  <div style="font-size:14px; font-weight:800; color:var(--text); margin-bottom:8px;">🔬 Hook 0~30초 세분화</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+    <div style="background:var(--surface);padding:10px;border-radius:8px;font-size:11px;">
+      <div style="font-weight:700;color:var(--warn);">⚡ 0~3s Pre-hook</div>
+      <div style="color:var(--text2);margin-top:3px;">첫인상 (시각·청각 즉시 인지)</div>
+    </div>
+    <div style="background:var(--surface);padding:10px;border-radius:8px;font-size:11px;">
+      <div style="font-weight:700;color:var(--hot);">⚡ 3~10s Core</div>
+      <div style="color:var(--text2);margin-top:3px;">충격·질문·통계 패턴</div>
+    </div>
+    <div style="background:var(--surface);padding:10px;border-radius:8px;font-size:11px;">
+      <div style="font-weight:700;color:var(--primary-hi);">⚡ 10~30s Promise</div>
+      <div style="color:var(--text2);margin-top:3px;">"이 영상에서 보여줄 것" 약속</div>
+    </div>
+  </div>
+</div>
 
-**3단계: [🔥 분석 시작] 클릭**
-- 자동으로 GitHub Issue 작성됨 (새 탭)
-- Issue에서 [Create] 버튼 한 번 클릭
-- 5~10분 후 자동 처리
+<div class="insight">
+  <div class="insight-tag">🎯 활용법</div>
+  <div class="insight-section">분석 결과의 <b>첫 사건 평균 시점</b>이 우리 영상 만들 때 기준 — 같은 시점에 첫 사건 배치</div>
+  <div class="insight-section"><b>댓글 timestamp 분포</b>의 spike 시점 = 영상의 *킬링 포인트* — 우리도 비슷한 시점에 강조 포인트 배치</div>
+  <div class="insight-section"><b>단조도 30+</b>인 채널의 후속 영상이라면 우리는 <b>다른 표현</b>으로 만들어 차별화</div>
+</div>
 
-**4단계: 결과 확인**
-- 페이지 새로고침 (Cmd+R)
-- 새 카드 등장 → 클릭해서 상세 페이지
+#### 📝 결정적 활용 — [📝 대본 만들기]
 
-#### 📊 상세 페이지에 나오는 분석 (의미 + 활용법)
-
-**🎯 공통 패턴**
-- *N편이 공유하는 공식*
-- 활용: 우리도 이 패턴 따라가면 비슷한 효율 기대 가능
-
-**🔬 Hook 0~30초 심층 분석**
-- 0~3s / 3~10s / 10~30s 별 텍스트
-- 활용: 우리 Hook 작성 시 30초 구간 시간 배분 따라하기
-- Hook 발화 속도 +차이가 양수면 = 우리도 Hook을 본문보다 빠르게
-
-**⚡ 첫 사건 발생 시점**
-- N편 평균 시점 (예: 130초)
-- 활용: 우리 영상도 130초 안에 첫 사건 등장시키기
-- 60초 안이면 🟢 / 120초+면 🔴
-
-**📊 시간 효율** (영상별)
-- 각 영상의 효율·시속·티어
-- 좋아요 비율·댓글 비율 (= 시청자 참여도)
-- 활용: 우리 영상 발행 후 비교 기준
-
-**🖼️ 썸네일 + OCR**
-- 썸네일 이미지 + OCR 추출 텍스트
-- 활용: 우리 썸네일 만들 때 글자 수·위치 참고
-
-**💬 댓글 timestamp 분포**
-- *"1:23 부분 좋아요" 같은 댓글 시점 분포*
-- 활용: 그 시점이 retention spike — 그 부분이 영상의 *킬링 포인트*
-
-**♻️ N편 중복도**
-- 채널들 간 표현 재사용 정도
-- 활용: 30 이상이면 우리는 *다른 표현*으로 만들어 차별화
-
-#### 💡 초보자 실수 회피
-- ❌ 1편만 던지지 마세요. 패턴은 N=3~5에서 나옵니다.
-- ❌ 자막 없는 영상은 분석 불가. 다른 영상 선택.
-- ✅ 야담은 efficiency 0이라 시니어랩에서 *velocity* 기반으로 골라야.
-
-#### 🎯 결정적 활용 — [📝 대본 만들기]
-1. 분석 결과 페이지 상단 보라 박스
-2. [📝 이 인사이트로 대본 만들기] 클릭
-3. 자동 생성된 Prompt + 클립보드 복사 + 모달
-4. Claude Code 터미널에 붙여넣기
-5. 자동으로 채널 셋업 + 대본 작업 시작
+<div class="flow">
+  <div class="flow-node">
+    <span class="icon">📊</span>
+    <div class="title">분석 결과</div>
+    <div class="sub">상단 보라 박스</div>
+  </div>
+  <div class="flow-node primary">
+    <span class="icon">📝</span>
+    <div class="title">[대본 만들기]</div>
+    <div class="sub">버튼 클릭</div>
+  </div>
+  <div class="flow-node">
+    <span class="icon">📋</span>
+    <div class="title">자동 복사</div>
+    <div class="sub">클립보드 + 모달</div>
+  </div>
+  <div class="flow-node primary">
+    <span class="icon">🤖</span>
+    <div class="title">Claude Code</div>
+    <div class="sub">붙여넣기 → 대본 시작</div>
+  </div>
+</div>
 
 ---
 
@@ -339,191 +445,164 @@ https://youtube.com/watch?v=CCC
 
 **언제 보나**: 새 영상의 *썸네일·제목·Hook 만들기 전* 필수 참고.
 
-#### 📍 단계별 사용법
+<div class="steps">
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-title">⚡ 첫 사건 시점 표준</div>
+    <div class="step-body">평균/중앙/P25/P75 → 우리 영상도 이 범위 안에</div>
+  </div>
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-title">📝 제목 공식</div>
+    <div class="step-body">우리 카테고리 카드 — 글자수·구조·클릭베이트·2-gram</div>
+  </div>
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-title">🖼️ 썸네일 카탈로그</div>
+    <div class="step-body">효율 TOP + LLM 시각 분석 (클릭베이트·전략 한 줄)</div>
+  </div>
+  <div class="step">
+    <span class="step-num">4</span>
+    <div class="step-title">🪝 Hook 풀</div>
+    <div class="step-body">효율 정렬 첫 문장 30개 — 패턴 학습</div>
+  </div>
+</div>
 
-**1단계: ⚡ 첫 사건 시점 표준 확인 (20초)**
-- 페이지 상단의 평균/중앙/P25/P75 확인
-- 우리 영상도 이 범위 안에 첫 사건 배치
-- 예: 평균 130초 = 우리도 100~150초 안에 첫 사건
-
-**2단계: 📝 카테고리별 제목 공식 (2분)**
-우리 카테고리 카드만 보기:
-- 평균 글자수 → 우리 제목도 이 정도 길이
-- 구조 빈도 → ❓ 질문 70%면 우리도 질문형으로
-- 클릭베이트 패턴 → 비밀_정체 50%면 우리도 "비밀·정체" 박기
-- 빈출 2-gram → 우리 제목에 박을 검증 표현
-
-**3단계: 🖼️ 썸네일 카탈로그 (5분)**
-- 카테고리별 효율 TOP 영상 그리드
-- 카드 하나하나 클릭해서 YouTube에서 영상·썸네일 확인
-- LLM 분석 활성화 시:
-  - 🎯 클릭베이트 점수 → 우리도 비슷한 점수 목표
-  - 🔤 OCR → 어떤 글자가 박혀있나 (글자 수·위치)
-  - 📝 전략 → "어두운 배경+밝은 텍스트 대비" 같은 한 줄 인사이트
-
-**4단계: 🪝 Hook 풀에서 첫 문장 학습 (3분)**
-- 효율 정렬된 첫 문장 30개
-- 패턴 분류 (충격사건/질문/회상/통계 등)
-- 우리 영상 Hook 만들 때 비슷한 구조로
-
-#### 💡 초보자 실수 회피
-- ❌ 패턴 라이브러리만 보고 *그대로 베끼지 마세요*. 패턴 이해 → 우리 톤에 적용이 핵심.
-- ❌ 카테고리 평균 글자수만 맞춘다고 효율 안 나옴. 클릭베이트 패턴까지 같이.
-- ✅ **LLM 분석 활성화 권장**. 시각 인사이트가 텍스트만 보는 것보다 압도적.
-
-#### 🎯 인사이트 도출 예시
-> **상황**: 야담 카테고리 데이터 — 평균 글자수 80자 · 파이프(ㅣ) 22% · 숫자 32% · 클릭베이트 "비밀_정체" 우세  
-> **인사이트**: 야담 영상 제목은 *길고 (80자) · 파이프 구분자 · 숫자 포함 (인물 나이) · 비밀/정체 키워드* 패턴이 검증됨.  
-> **액션**: 우리 첫 야담 영상 제목 = "14살 종놈이 임금을 살린 비밀의 망치 ㅣ 임진왜란 야담 ㅣ 옛날이야기" (80자·파이프·숫자·비밀).
+<div class="insight">
+  <div class="insight-tag">🎯 인사이트 도출 예시 — 야담 카테고리</div>
+  <div class="insight-section"><b>데이터</b>: 평균 글자수 80자 · 파이프(ㅣ) 22% · 숫자 32% · "비밀_정체" 클릭베이트 우세</div>
+  <div class="insight-section"><b>인사이트</b>: 야담 제목은 <b>길고 + 파이프 구분자 + 숫자 (인물 나이) + 비밀/정체 키워드</b> 패턴이 검증됨</div>
+  <div class="insight-section"><b>액션</b>: "14살 종놈이 임금을 살린 비밀의 망치 ㅣ 임진왜란 야담 ㅣ 옛날이야기" (80자·파이프 2개·숫자·비밀)</div>
+</div>
 
 ---
 
-### 📅 일별 아카이브
+## 🎯 영상 1편 만들 때 풀 워크플로우
 
-**언제 보나**: 과거 시점 검증 / 어제 놓친 시그널 회수 / 트렌드 시간 추적.
+<div class="steps" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
+  <div class="step hot">
+    <span class="step-num">Phase 1</span>
+    <div class="step-title">발견</div>
+    <div class="step-body">🏠 대시보드 시그널·👑 1·2·3위</div>
+  </div>
+  <div class="step">
+    <span class="step-num">Phase 2</span>
+    <div class="step-title">주제 결정</div>
+    <div class="step-body">🎯 오늘의 주제 → URL 복사</div>
+  </div>
+  <div class="step">
+    <span class="step-num">Phase 3</span>
+    <div class="step-title">분석</div>
+    <div class="step-body">🔥 autopsy URL 3~5편</div>
+  </div>
+  <div class="step">
+    <span class="step-num">Phase 4</span>
+    <div class="step-title">패턴 학습</div>
+    <div class="step-body">결과 + 🏆 라이브러리</div>
+  </div>
+  <div class="step warn">
+    <span class="step-num">Phase 5</span>
+    <div class="step-title">대본</div>
+    <div class="step-body">[📝 대본 만들기] → Claude</div>
+  </div>
+  <div class="step">
+    <span class="step-num">Phase 6</span>
+    <div class="step-title">발행</div>
+    <div class="step-body">대본 → 영상 → 업로드</div>
+  </div>
+  <div class="step hot">
+    <span class="step-num">Phase 7</span>
+    <div class="step-title">검증</div>
+    <div class="step-body">24h 후 우리 영상도 autopsy</div>
+  </div>
+</div>
 
-#### 📍 단계별 사용법
-
-**1단계: 날짜 선택** (최근 30일 그리드)
-**2단계: 그날의 채널 카드 보기**
-**3단계: 트렌드 추적** — 같은 키워드가 며칠 동안 떠 있었나
-
----
-
-### 📰 뉴스 모니터링
-
-**언제 보나**: 시사·경제 영상의 시의성 주제 발굴.
-
-#### 📍 단계별 사용법
-- 카테고리별 헤드라인 확인
-- 같은 사건이 며칠째 보도되면 = 장기 이슈 → 영상 만들기 좋음
-- 한 번만 보도되고 사라지면 = 단발 이슈 → 신중
-
----
-
-## 🎯 전체 워크플로우 — 영상 1편 만들 때
-
-### 📋 풀 체크리스트
-
-```
-[Phase 1: 발견] — 5분
-□ 🏠 대시보드: 우리 카테고리 시그널/폭발 수 확인
-□ 👑 1·2·3위 채널 카드의 인기 영상 보기
-□ ▲ 상승 화살표 있는 채널 우선 관찰
-
-[Phase 2: 주제 결정] — 10분
-□ 🎯 오늘의 주제: 우리 카테고리 카드
-□ 🔥 재편집 재폭발 우선 → 검증 주제 → 오늘 폭발 순
-□ 또는 🔥 Hot키워드에서 검증 점수 100+ 주제 선택
-□ 결정된 주제의 대표 영상 3~5편 URL 복사
-
-[Phase 3: 분석] — 10분
-□ 🔥 왜 이 영상은 터졌는가? 탭
-□ URL 3~5편 한 번에 던지기
-□ 5~10분 대기
-
-[Phase 4: 패턴 학습] — 10분
-□ 분석 결과 페이지 들어가기
-□ 🎯 공통 패턴 (Hook 유형·결말 톤)
-□ ⚡ 첫 사건 시점 평균
-□ ♻️ 단조도 확인 (30+이면 우리는 다른 표현 사용)
-□ 💬 댓글 timestamp = retention spike 시점 파악
-
-[Phase 5: 패턴 라이브러리 추가 확인] — 5분
-□ 🏆 패턴 라이브러리 → 카테고리 제목 공식
-□ 썸네일 카탈로그 시각 학습
-□ Hook 풀에서 첫 문장 패턴 흡수
-
-[Phase 6: 대본 작업] — 5분 (Claude Code 진입)
-□ autopsy 결과 페이지 → [📝 대본 만들기]
-□ 클립보드 복사된 Prompt를 Claude Code에 붙여넣기
-□ channel-setup이 자동으로 patterns 적용
-□ script-pd가 대본 작성
-
-[Phase 7: 발행 후 검증] — 발행 24h 후
-□ 🔥 왜 이 영상은 터졌는가?에 우리 영상도 던지기
-□ 분석 결과와 학습 대상 영상 비교
-□ 차이점 인사이트로 다음 영상 개선
-```
-
-**총 소요: 45분 + 대본 작성 시간 (script-pd)**
-
----
-
-## 📊 핵심 메트릭 사전 (상세)
-
-| 메트릭 | 공식 | 기준값 | 의미 |
-|---|---|---|---|
-| **효율** | 조회 ÷ 구독 | 1=양호 5=폭발 10+=메가 | 알고리즘 추천 정도 |
-| **시속** | 조회 ÷ 영상나이(h) | 5k+ 시그널 50k+ 트렌딩 | *지금* 가속도 |
-| **단조도** | 3-gram Jaccard×100 | 10🟢 20🟡 30🔴 | 시청자 거부감 |
-| **클릭베이트** | LLM 1~10점 | 카테고리 평균이 목표 | 썸네일 강도 |
-| **첫 사건 시점** | 영상 시작~사건 등장 | <60🟢 <120🟡 120+🔴 | retention 결정 |
-| **Hook wpm 차** | Hook wpm - 본문 wpm | +가 좋음 | 집중 유지력 |
-| **like_ratio** | 좋아요 ÷ 조회 | 2%+ 양호 | 시청자 만족 |
-| **comment_ratio** | 댓글 ÷ 조회 | 0.3%+ 양호 | 시청자 참여 |
+<div class="tldr">
+<div class="tldr-title">⏱️ 총 소요 시간</div>
+<div class="tldr-body">
+Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-pd가 자동) + <b>영상 제작</b> (사용자)
+</div>
+</div>
 
 ---
 
 ## ❓ FAQ (초보자가 자주 묻는 것)
 
-### Q: 어디부터 봐야 하나요?
-A: **🎯 오늘의 주제 탭**. 우리 카테고리 카드에서 🔥 재편집 재폭발 묶음의 첫 번째 주제부터.
+<details>
+<summary><b>Q: 어디부터 봐야 하나요?</b></summary>
+<p>🎯 <b>오늘의 주제 탭</b>. 우리 카테고리 카드의 🔥 재편집 재폭발 묶음 첫 번째 주제부터.</p>
+</details>
 
-### Q: 분석 결과 너무 많아서 어떻게 봐야 할지 모르겠어요
-A: 3개만 보세요:
-1. **공통 후크 유형** — 우리도 같은 유형으로
-2. **첫 사건 평균 시점** — 우리도 같은 시점에
-3. **시그너처 어휘** — 우리 본문에 박기
+<details>
+<summary><b>Q: 분석 결과 너무 많아서 어떻게 봐야 할지 모르겠어요</b></summary>
+<p>3개만 보세요:<br>
+1. <b>공통 후크 유형</b> — 우리도 같은 유형으로<br>
+2. <b>첫 사건 평균 시점</b> — 우리도 같은 시점에<br>
+3. <b>시그너처 어휘</b> — 우리 본문에 박기</p>
+</details>
 
-### Q: autopsy에 던지는 영상 어떻게 골라요?
-A: **같은 카테고리 + 비슷한 효율 + 3~5편**. 1편만 던지면 패턴 안 나옴.
-- 시니어랩 폭발 야담 영상 표에서 [🔥 분석] 버튼 활용하면 자동.
+<details>
+<summary><b>Q: autopsy에 던지는 영상 어떻게 골라요?</b></summary>
+<p><b>같은 카테고리 + 비슷한 효율 + 3~5편</b>. 1편만 던지면 패턴 안 나옴. 시니어랩의 [🔥 분석] 버튼 활용하면 자동.</p>
+</details>
 
-### Q: 단조도가 25 나왔어요. 위험한가요?
-A: 🟠 반복 신호 단계. 다음 영상은:
-1. 시그너처 어휘 줄이기 (영상당 5번 → 2번)
-2. Hook 패턴 변경 (충격사건형 → 회상형)
-3. 인물명·주제 갱신
+<details>
+<summary><b>Q: 단조도가 25 나왔어요. 위험한가요?</b></summary>
+<p>🟠 반복 신호 단계. 다음 영상은:<br>
+1. 시그너처 어휘 줄이기 (영상당 5번 → 2번)<br>
+2. Hook 패턴 변경 (충격사건형 → 회상형)<br>
+3. 인물명·주제 갱신</p>
+</details>
 
-### Q: 클릭베이트 점수가 7/10 나왔어요. 너무 자극적인가요?
-A: 카테고리 평균이 6.5 정도면 7은 적정. 9+는 신뢰도 떨어져서 retention ↓. **카테고리 평균 ± 1 안에 두기**.
+<details>
+<summary><b>Q: 클릭베이트 점수가 7/10 나왔어요. 너무 자극적인가요?</b></summary>
+<p>카테고리 평균이 6.5 정도면 7은 적정. 9+는 신뢰도 떨어져 retention ↓ — <b>카테고리 평균 ± 1 안에 두기</b>.</p>
+</details>
 
-### Q: 우리 영상도 autopsy로 분석할 수 있나요?
-A: ✅ 발행 24시간 후 던지세요. 다른 영상과 비교해서 차이점 찾고 다음 영상 개선.
+<details>
+<summary><b>Q: 매일 봐야 하나요?</b></summary>
+<p>의무 X. 주 1~2회 충분. 매일 보면 같은 데이터 반복 — 효율 영상은 1~2주 단위 변경.</p>
+</details>
 
-### Q: 새 채널 만들 때 어떻게 활용해요?
-A:
-1. 🏆 패턴 라이브러리에서 카테고리 제목 공식 확인
-2. 시니어랩처럼 corpus 있는 카테고리면 shared corpus 활용 자동
-3. Claude Code에 "[카테고리] 채널 만들어줘" → channel-setup이 패턴 자동 적용
+<details>
+<summary><b>Q: 우리 영상도 autopsy로 분석할 수 있나요?</b></summary>
+<p>✅ 발행 24시간 후 던지세요. 다른 영상과 비교해서 차이점 찾고 다음 영상 개선.</p>
+</details>
 
-### Q: 매일 봐야 하나요?
-A: 의무 X. 주 1~2회 충분. 매일 보면 같은 데이터 반복 (효율 영상은 1~2주 단위 변경).
+<details>
+<summary><b>Q: LLM 썸네일 분석 비용은?</b></summary>
+<p>영상당 ~$0.005 · 30편 ~$0.15 · 100편 ~$0.50. 한 번 분석한 영상은 영구 캐시.</p>
+</details>
 
-### Q: 모바일에서도 보이나요?
-A: ✅ 반응형. 다만 데스크탑이 정보 위계 명확.
+<details>
+<summary><b>Q: 모바일에서도 보이나요?</b></summary>
+<p>✅ 반응형. 다만 데스크탑이 정보 위계 명확.</p>
+</details>
 
 ---
 
 ## 🆘 트러블슈팅
 
-### 분석 시작 버튼이 작동 안 함
-1. Cmd+Shift+R 하드 새로고침
-2. F12 콘솔 에러 확인 후 알려주세요
-
-### autopsy가 실패함 (자막 없음)
-- 영상에 자막 자체가 없음 (YouTube에서 확인)
-- 자동자막만 있는 영상은 한국어 인식 오류 가능
-- → 다른 영상으로 시도
-
-### 시니어 [🔥 분석] 클릭해도 URL prefill 안 됨
-- 하드 새로고침
-- 콘솔에서 `sessionStorage.getItem('autopsyPrefill')` 확인
-
-### Cloudflare 배포가 안 보임
-- KR push 후 1~2분, JP는 2~3분 대기
-- Cmd+Shift+R
+<div class="compare">
+  <div class="compare-box bad">
+    <div class="head">⚠️ 흔한 문제</div>
+    <ul>
+      <li>분석 시작 버튼 안 됨</li>
+      <li>autopsy 실패 (자막 없음)</li>
+      <li>[🔥 분석] URL prefill 안 됨</li>
+      <li>Cloudflare 배포 늦음</li>
+    </ul>
+  </div>
+  <div class="compare-box good">
+    <div class="head">✅ 해결법</div>
+    <ul>
+      <li>Cmd+Shift+R 하드 새로고침</li>
+      <li>다른 영상 시도 (자막 있는)</li>
+      <li>콘솔(F12) sessionStorage 확인</li>
+      <li>1~2분 대기 후 새로고침</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
@@ -531,16 +610,19 @@ A: ✅ 반응형. 다만 데스크탑이 정보 위계 명확.
 
 - **사이트**: https://arrange-yt-scanner.pages.dev
 - **GitHub**: https://github.com/cmpark0401-hash/arrange-yt-scanner
-- **API 키 발급** (LLM 분석용): https://console.anthropic.com/
+- **API 키 발급** (LLM 분석): https://console.anthropic.com/
 
 ---
 
 ## 📝 마지막 한 마디
 
-TubeHacker는 *데이터를 보여주는 도구*입니다. *결정은 사람이 합니다.*
-
-데이터가 보여주는 패턴 + 사용자의 카테고리 직관 + 채널 톤 = 최고의 영상.
-
-매번 5단계 따라하다 보면 본인만의 패턴이 보입니다. 그게 진짜 노하우입니다.
+<div class="tldr">
+<div class="tldr-title">💡 데이터 + 직관 = 좋은 영상</div>
+<div class="tldr-body">
+TubeHacker는 <b>데이터를 보여주는 도구</b>. <b>결정은 사람이 합니다</b>.<br><br>
+데이터가 보여주는 패턴 + 사용자의 카테고리 직관 + 채널 톤 = 최고의 영상.<br>
+매번 7-Phase 따라하다 보면 본인만의 패턴이 보입니다. 그게 진짜 노하우입니다.
+</div>
+</div>
 
 _TubeHacker · 유튜브 알고리즘 해킹의 모든 것_
