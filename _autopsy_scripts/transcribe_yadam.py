@@ -165,11 +165,15 @@ def fetch_subtitle(vid: str) -> dict:
         # 다운된 vtt 찾기
         vtts = sorted(tmp_path.glob(f"{vid}.*.vtt"))
         if not vtts:
-            if debug:
-                stdout_tail = (r.stdout or "")[-500:]
-                stderr_tail = (r.stderr or "")[-800:]
-                print(f"          ⚠️  yt-dlp stdout: {stdout_tail}")
-                print(f"          ⚠️  yt-dlp stderr: {stderr_tail}")
+            stdout = r.stdout or ""
+            stderr = r.stderr or ""
+            # 명령행도 같이 출력 (yt-dlp 어떻게 호출했는지)
+            print(f"          ⚠️  yt-dlp returncode={r.returncode}")
+            print(f"          ⚠️  cmd[:3]={cmd[:3]}")
+            if stdout: print(f"          ⚠️  stdout: {stdout[-600:]}")
+            if stderr: print(f"          ⚠️  stderr: {stderr[-800:]}")
+            if not stdout and not stderr:
+                print(f"          ⚠️  (empty stdout/stderr — yt-dlp 명령 자체 실패 가능)")
             return {}
         # ko 수동 우선, 다음 ko-orig, 다음 첫 번째
         preferred = None
