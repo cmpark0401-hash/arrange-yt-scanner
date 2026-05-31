@@ -1,8 +1,10 @@
-name: Autopsy — 영상 부검
+name: Autopsy — 영상 부검 (수동 only)
 
+# 로컬 launchd poller(scripts/autopsy_poller.py)가 1차 처리하므로 자동 트리거 비활성화.
+# YouTube가 GitHub Actions IP를 봇으로 차단해 자막 다운로드 실패하기 때문.
+# 필요 시 GitHub Actions UI에서 'Run workflow' 수동 실행.
 on:
-  issues:
-    types: [opened, edited, labeled]
+  workflow_dispatch:
 
 permissions:
   contents: write
