@@ -123,6 +123,106 @@ def compute_time_efficiency(meta: dict) -> dict:
     }
 
 
+def fetch_comments(vid: str, max_count: int = 80) -> list:
+    """yt-dlp로 댓글 텍스트 가져오기 (top 댓글 위주)."""
+    import subprocess, json as _json
+    venv_yt = ROOT / ".venv" / "bin" / "yt-dlp"
+    yt = str(venv_yt) if venv_yt.exists() else "yt-dlp"
+    try:
+        r = subprocess.run([yt, f"https://www.youtube.com/watch?v={vid}",
+                            "--skip-download", "--write-comments",
+                            "--extractor-args", f"youtube:comment_sort=top;max_comments={max_count},0,0,0",
+                            "--print-json", "--no-warnings", "-q"],
+                           capture_output=True, text=True, timeout=120)
+        if not r.stdout:
+            return []
+        for line in r.stdout.strip().split("\n"):
+            try:
+                obj = _json.loads(line)
+                cs = obj.get("comments", [])
+                return [c.get("text", "") for c in cs if c.get("text")]
+            except Exception:
+                continue
+    except subprocess.TimeoutExpired:
+        return []
+    return []
+
+
+def extract_timestamps(comments: list) -> dict:
+    """댓글에서 timestamp 패턴 (1:23, 1:23:45) 추출 + 시점별 빈도."""
+    pat = re.compile(r"\b(\d{1,2}):(\d{2})(?::(\d{2}))?\b")
+    counter = Counter()
+    examples = {}
+    for c in comments:
+        for m in pat.finditer(c):
+            h = int(m.group(3) and m.group(1) or 0)
+            mm = int(m.group(3) and m.group(2) or m.group(1))
+            ss = int(m.group(3) or m.group(2))
+            total = h * 3600 + mm * 60 + ss
+            if total < 5 or total > 7200:  # 5초~2시간 범위
+                continue
+            counter[total] += 1
+            # 첫 등장 댓글 스니펫 저장
+            if total not in examples:
+                snippet = c.replace("\n", " ").strip()[:140]
+                examples[total] = snippet
+    # 가장 많이 언급된 시점 TOP
+    top = []
+    for sec, cnt in counter.most_common(15):
+        top.append({"sec": sec, "mmss": f"{sec//60}:{sec%60:02d}",
+                    "mentions": cnt, "example": examples.get(sec, "")})
+    # 시점 구간별 분포 (0-30s, 30-180s, 180s-end)
+    bucket = {"0-30s": 0, "30-180s": 0, "3-10m": 0, "10m+": 0}
+    for sec, cnt in counter.items():
+        if sec < 30: bucket["0-30s"] += cnt
+        elif sec < 180: bucket["30-180s"] += cnt
+        elif sec < 600: bucket["3-10m"] += cnt
+        else: bucket["10m+"] += cnt
+    return {
+        "total_timestamps": sum(counter.values()),
+        "unique_seconds": len(counter),
+        "top_mentions": top,
+        "bucket_distribution": bucket,
+    }
+
+
+def fetch_thumbnail_meta(vid: str, work_dir: Path) -> dict:
+    """썸네일 다운로드 + 메타. OCR/LLM은 옵션 (없으면 메타만)."""
+    import subprocess
+    venv_yt = ROOT / ".venv" / "bin" / "yt-dlp"
+    yt = str(venv_yt) if venv_yt.exists() else "yt-dlp"
+    work_dir.mkdir(parents=True, exist_ok=True)
+    # mqdefault(320x180) 또는 maxresdefault(1280x720) — 우선 maxres
+    thumb_url = f"https://i.ytimg.com/vi/{vid}/maxresdefault.jpg"
+    out_path = work_dir / f"{vid}.jpg"
+    try:
+        import urllib.request
+        req = urllib.request.Request(thumb_url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            data = r.read()
+            out_path.write_bytes(data)
+    except Exception:
+        # fallback to hqdefault
+        try:
+            thumb_url = f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"
+            with urllib.request.urlopen(thumb_url, timeout=20) as r:
+                out_path.write_bytes(r.read())
+        except Exception:
+            return {}
+    meta = {"thumbnail_url": thumb_url, "local_path": str(out_path.relative_to(ROOT)),
+            "file_size_kb": round(out_path.stat().st_size / 1024, 1)}
+    # OCR 시도 (tesseract 있으면)
+    try:
+        r = subprocess.run(["tesseract", str(out_path), "-", "-l", "kor+eng"],
+                           capture_output=True, text=True, timeout=30)
+        ocr_text = (r.stdout or "").strip()
+        if ocr_text:
+            meta["ocr_text"] = re.sub(r"\s+", " ", ocr_text)[:300]
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        meta["ocr_text"] = ""
+    return meta
+
+
 def fetch_video_title(vid: str) -> str:
     import subprocess
     venv_yt = ROOT / ".venv" / "bin" / "yt-dlp"
@@ -403,6 +503,7 @@ def main():
     work_dir = AUTOPSY_DIR / slug
     work_dir.mkdir(parents=True, exist_ok=True)
     tr_dir = work_dir / "transcripts"
+    th_dir = work_dir / "thumbnails"
     tr_dir.mkdir(exist_ok=True)
 
     print(f"\n🔥 autopsy: {label} ({slug})")
@@ -435,10 +536,22 @@ def main():
         analysis["title"] = title
         analysis["channel"] = meta.get("channel", "")
         analysis["time_efficiency"] = compute_time_efficiency(meta)
+        # C-4: 댓글 timestamp (retention spike 추정)
+        try:
+            comments = fetch_comments(vid, max_count=80)
+            analysis["comment_timestamps"] = extract_timestamps(comments) if comments else {}
+        except Exception:
+            analysis["comment_timestamps"] = {}
+        # C-5: 썸네일 메타 + OCR (tesseract 있을 때)
+        try:
+            analysis["thumbnail"] = fetch_thumbnail_meta(vid, th_dir)
+        except Exception:
+            analysis["thumbnail"] = {}
         analyses.append(analysis)
         eff = analysis["time_efficiency"]
         eff_str = f"eff {eff.get('efficiency', 0):.2f}x · {eff.get('tier', '')}" if eff else ""
-        print(f"          ✅ {analysis['duration_min']}분 · {analysis['wpm']}wpm · {eff_str}")
+        ts_cnt = (analysis.get("comment_timestamps") or {}).get("total_timestamps", 0)
+        print(f"          ✅ {analysis['duration_min']}분 · {analysis['wpm']}wpm · {eff_str} · 댓글ts {ts_cnt}건")
         time.sleep(0.5)
 
     if not analyses:
