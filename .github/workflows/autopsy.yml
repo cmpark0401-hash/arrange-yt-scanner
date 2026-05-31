@@ -38,28 +38,24 @@ jobs:
           body = os.environ.get("ISSUE_BODY", "")
           title = os.environ.get("ISSUE_TITLE", "")
 
-          # URL 추출
           urls = re.findall(r"https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/|youtube\.com/shorts/)[A-Za-z0-9_-]{11}\S*", body)
           urls = [u.rstrip(".,)]") for u in urls][:10]
 
-          # 라벨 (### 라벨 ... 다음 줄)
           m = re.search(r"###\s*라벨\s*\n+([^\n#]+)", body)
           label = (m.group(1).strip() if m else "").replace("(없음)", "").strip()
           if not label:
               t = title.replace("[autopsy]", "").strip()
               label = t or f"{len(urls)}편 분석"
 
-          # 태그
           m = re.search(r"###\s*태그\s*\n+([^\n#]+)", body)
           tags = (m.group(1).strip() if m else "").replace("(없음)", "").strip()
 
-          out = {"urls": urls, "label": label, "tags": tags}
-          print(json.dumps(out, ensure_ascii=False, indent=2))
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:
               f.write(f"urls={' '.join(urls)}\n")
               f.write(f"label={label}\n")
               f.write(f"tags={tags}\n")
               f.write(f"n_urls={len(urls)}\n")
+          print(json.dumps({"urls": urls, "label": label, "tags": tags}, ensure_ascii=False, indent=2))
           PYEOF
 
       - name: Run autopsy
@@ -70,18 +66,12 @@ jobs:
             --label "${{ steps.parse.outputs.label }}" \
             --tags "${{ steps.parse.outputs.tags }}"
 
-      - name: Build index update
-        if: steps.parse.outputs.n_urls != '0'
-        run: |
-          cd _autopsy_scripts
-          python build_autopsy_pages.py
-
       - name: Commit + push
         if: steps.parse.outputs.n_urls != '0'
         run: |
           git config user.name "TubeHacker Autopsy Bot"
           git config user.email "actions@github.com"
-          git add channels/_autopsy autopsy.html autopsy_*.html
+          git add channels/_autopsy
           git diff --cached --quiet || git commit -m "autopsy: ${{ steps.parse.outputs.label }} (#${{ github.event.issue.number }})"
           git push
 
@@ -95,7 +85,7 @@ jobs:
             github.rest.issues.createComment({
               owner: context.repo.owner, repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `✅ 분석 완료 — **${label}** (${n}편)\n\n📄 결과: https://arrange-yt-scanner.pages.dev/autopsy.html\n\n_Cloudflare Pages 배포까지 1~2분 추가 소요됩니다._`
+              body: `✅ 분석 완료 — **${label}** (${n}편)\n\n📄 결과: https://arrange-yt-scanner.pages.dev/autopsy.html\n\n_Cloudflare Pages 배포 1~2분 후 카드 노출. 다음 정기 빌드에 상세 페이지 완전 렌더링됩니다._`
             });
             github.rest.issues.update({
               owner: context.repo.owner, repo: context.repo.repo,
