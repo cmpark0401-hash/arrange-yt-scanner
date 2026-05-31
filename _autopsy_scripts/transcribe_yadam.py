@@ -142,24 +142,34 @@ def ts_to_sec(ts: str) -> float:
 
 def fetch_subtitle(vid: str) -> dict:
     """수동 → 자동 자막 다운로드 시도. dict 또는 빈 dict."""
+    import os
     url = f"https://www.youtube.com/watch?v={vid}"
+    debug = bool(os.environ.get("AUTOPSY_DEBUG"))
     with tempfile.TemporaryDirectory() as tmp:
         tmp_path = Path(tmp)
         # 수동·자동 자막 모두 시도, ko 우선
+        # IPv4 강제·UA 지정·extractor 다양화 — GitHub Actions IP 제약 우회
         cmd = [_yt(), url, "--skip-download",
                "--write-subs", "--write-auto-subs",
                "--sub-format", "vtt",
-               "--sub-langs", "ko,ko-orig,ko.*",
+               "--sub-langs", "ko.*,ko",
                "-o", str(tmp_path / "%(id)s.%(ext)s"),
-               "--no-warnings",
-               "--extractor-args", "youtube:player_client=web,android,ios"]
+               "--no-warnings", "--force-ipv4",
+               "--user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+               "--extractor-args", "youtube:player_client=mweb,web,android,ios;player_skip=webpage"]
         try:
-            subprocess.run(cmd, capture_output=True, timeout=120)
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
         except subprocess.TimeoutExpired:
+            if debug: print(f"          ⚠️  timeout 180s")
             return {}
         # 다운된 vtt 찾기
         vtts = sorted(tmp_path.glob(f"{vid}.*.vtt"))
         if not vtts:
+            if debug:
+                stdout_tail = (r.stdout or "")[-500:]
+                stderr_tail = (r.stderr or "")[-800:]
+                print(f"          ⚠️  yt-dlp stdout: {stdout_tail}")
+                print(f"          ⚠️  yt-dlp stderr: {stderr_tail}")
             return {}
         # ko 수동 우선, 다음 ko-orig, 다음 첫 번째
         preferred = None
