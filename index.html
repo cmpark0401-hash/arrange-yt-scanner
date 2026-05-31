@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta name="theme-color" content="#a855f7">
-  <title></title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>실시간 알고리즘 시그널 · TubeHacker</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
 :root {
@@ -284,7 +286,7 @@ section table { margin:10px 0; }
   <header class="shell-head">
     <div style="flex:1;min-width:0;">
       <h1><span class="brand-flag">🇰🇷</span><span class="brand-accent">TubeHacker</span><span class="brand-divider">·</span><span class="brand-slogan">유튜브 알고리즘 해킹의 모든 것</span></h1>
-      <div class="sub">최종 갱신: 2026-05-31 21:04 · 추적 채널 86개 · 기준일 2026-05-30</div>
+      <div class="sub">최종 갱신: 2026-05-31 21:10 · 추적 채널 86개 · 기준일 2026-05-30</div>
     </div>
     <div class="header-chips">
       <a href="jp/index.html" class="h-chip jp" title="🇯🇵 JP">🇯🇵 JP</a>
@@ -302,7 +304,7 @@ section table { margin:10px 0; }
   </div>
 
   <div id="view"><div class="view-loading">불러오는 중…</div></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 21:04</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-05-31 21:10</footer>
 
   <script>
     const cache = {};
@@ -332,7 +334,14 @@ section table { margin:10px 0; }
       runScripts(v);
       window.scrollTo(0, 0);
     }
-    function renderTab(tab){ if (!tabUrl[tab]) tab = 'dashboard'; loadUrl(tabUrl[tab], tab); }
+    const tabTitles = {
+      dashboard:'실시간 알고리즘 시그널', recs:'오늘의 주제', archive:'Hot키워드',
+      science:'과학 트렌드', senior:'시니어랩 야담',
+      autopsy:'왜 이 영상은 터졌는가?', news:'뉴스 모니터링', daily:'일별 아카이브',
+    };
+    const _brand = 'TubeHacker' + ('🇰🇷'.indexOf('🇯🇵')>=0?' JP':'');
+    function updateTitle(tab){ document.title = (tabTitles[tab] || '실시간 알고리즘 시그널') + ' · ' + _brand; }
+    function renderTab(tab){ if (!tabUrl[tab]) tab = 'dashboard'; updateTitle(tab); loadUrl(tabUrl[tab], tab); }
     document.querySelectorAll('#tabs a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); location.hash = a.dataset.tab; }));
     document.getElementById('view').addEventListener('click', e => {
       const a = e.target.closest('a'); if (!a) return;
