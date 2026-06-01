@@ -10,6 +10,9 @@
 /candidates.html
   Cache-Control: no-cache, max-age=0
 
+/candidates_logic.js
+  Cache-Control: no-cache, max-age=0
+
 /dashboard.html
   Cache-Control: no-cache, max-age=0
 
