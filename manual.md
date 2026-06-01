@@ -308,12 +308,13 @@ Claude Code에 <code>"OOO 채널 주제 찾아서 대본 만들어줘"</code> �
     <span class="mock-brand">TubeHacker</span>
     <span class="mock-slogan">· 유튜브 알고리즘 해킹의 모든 것</span>
     <div class="mock-chips">
-      <span class="mock-chip warn">🚨 시그널 <b>9</b></span>
-      <span class="mock-chip hot">🔥 폭발 <b>150</b></span>
-      <span class="mock-chip">🆕 24h <b>65</b></span>
-      <span class="mock-chip" style="background:#fff;color:#000;">🇯🇵 JP</span>
+      <span class="mock-chip warn">🚨 <b>9</b></span>
+      <span class="mock-chip hot">🔥 <b>150</b></span>
+      <span class="mock-chip">🆕 <b>65</b></span>
+      <span class="mock-chip" style="background:rgba(34,197,94,.13);color:#22c55e;border-color:rgba(34,197,94,.55);font-weight:700;">📡 <b style="color:#22c55e;">264</b></span>
       <span class="mock-chip" style="background:#fff;color:#000;">📖 가이드</span>
       <span class="mock-chip" style="background:#fff;color:#000;">📅 일별</span>
+      <span class="mock-chip" style="background:linear-gradient(135deg,#fff,#fff5f5);color:#000;border:1.5px solid #ff4d4f;font-weight:800;">🇯🇵 JP</span>
     </div>
   </div>
   <div class="mock-tabs">
@@ -1181,10 +1182,10 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
     <span class="mock-brand">TubeHacker</span>
     <span class="mock-slogan">· 유튜브 알고리즘 해킹의 모든 것</span>
     <div class="mock-chips">
-      <span class="mock-chip warn">🚨 시그널 <b>10</b></span>
-      <span class="mock-chip hot">🔥 폭발 <b>159</b></span>
-      <span class="mock-chip" style="background:var(--primary-bg);color:var(--primary-hi);border-color:var(--primary-bd);">🆕 24h <b>14</b></span>
-      <span class="mock-chip" style="background:var(--primary-bg);color:var(--primary-hi);border-color:var(--primary-bd);">🔄 업데이트 <b>264</b></span>
+      <span class="mock-chip warn">🚨 <b>10</b></span>
+      <span class="mock-chip hot">🔥 <b>159</b></span>
+      <span class="mock-chip" style="background:var(--primary-bg);color:var(--primary-hi);border-color:var(--primary-bd);">🆕 <b>14</b></span>
+      <span class="mock-chip" style="background:rgba(34,197,94,.13);color:#22c55e;border-color:rgba(34,197,94,.55);font-weight:700;">📡 <b style="color:#22c55e;">264</b></span>
       <span class="mock-chip" style="background:#fff;color:#000;">📖 가이드</span>
       <span class="mock-chip" style="background:#fff;color:#000;">📅 일별</span>
       <span class="mock-chip" style="background:linear-gradient(135deg,#fff,#fff5f5);color:#000;border:1.5px solid #ff4d4f;font-weight:800;">🇯🇵 JP</span>
