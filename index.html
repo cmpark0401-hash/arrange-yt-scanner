@@ -58,10 +58,14 @@ header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; 
 .h-chip.hot b { color:var(--hot); }
 .h-chip.info { border-color:var(--primary-bd); background:var(--primary-bg); color:var(--primary-hi); }
 .h-chip.info b { color:var(--primary-hi); }
-.h-chip.jp { background:#fff; border-color:#fff; color:#0a0a12; font-weight:700; cursor:pointer; transition:all .15s; }
-.h-chip.jp:hover { background:#e8e8f0; border-color:#e8e8f0; color:#000; text-decoration:none; }
+.h-chip.jp { background:linear-gradient(135deg,#fff 0%,#fff5f5 100%); border:1.5px solid #ff4d4f; color:#0a0a12; font-weight:800; cursor:pointer; transition:all .15s; box-shadow:0 1px 3px rgba(255,77,79,.18); }
+.h-chip.jp:hover { background:linear-gradient(135deg,#fff5f5 0%,#ffe0e0 100%); border-color:#e63030; text-decoration:none; transform:translateY(-1px); box-shadow:0 2px 6px rgba(255,77,79,.28); }
+.h-chip.white { background:#fff; border-color:#fff; color:#0a0a12; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.white:hover { background:#e8e8f0; border-color:#e8e8f0; color:#000; text-decoration:none; }
 .h-chip.secondary { background:transparent; border-color:var(--border); color:var(--text2); font-weight:600; cursor:pointer; transition:all .15s; text-decoration:none; }
 .h-chip.secondary:hover { background:var(--surface); border-color:var(--primary-bd); color:var(--text); text-decoration:none; }
+a.h-chip.warn, a.h-chip.hot, a.h-chip.info { cursor:pointer; transition:all .15s; text-decoration:none; }
+a.h-chip.warn:hover, a.h-chip.hot:hover, a.h-chip.info:hover { transform:translateY(-1px); text-decoration:none; filter:brightness(1.1); }
 a { color:var(--primary-hi); text-decoration:none; transition:color .15s; }
 a:hover { color:var(--primary); text-decoration:none; }
 
@@ -465,28 +469,33 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
        onclick="event.preventDefault(); location.hash=''; location.reload();"
        style="flex:1;min-width:0;text-decoration:none;color:inherit;cursor:pointer;">
       <h1><span class="brand-flag">🇰🇷</span><span class="brand-accent">TubeHacker</span><span class="brand-divider">·</span><span class="brand-slogan">유튜브 알고리즘 해킹의 모든 것</span></h1>
-      <div class="sub">최종 갱신: 2026-06-01 11:40 · 분석영상 <b style="color:var(--text);">1672</b> · 분석채널 <b style="color:var(--text);">121</b> · 추적 <b style="color:var(--text);">86</b> · 기준일 2026-06-01</div>
+      <div class="sub">최종 갱신: 2026-06-01 12:46 · 분석영상 <b style="color:var(--text);">1672</b> · 분석채널 <b style="color:var(--text);">121</b> · 추적 <b style="color:var(--text);">86</b> · 기준일 2026-06-01</div>
     </a>
     <div class="header-chips">
+      
+      <a href="dashboard.html" data-tab="dashboard" class="h-chip warn" title="시그널 채널로 이동">🚨 시그널 <b>10</b></a>
+      <a href="dashboard.html" data-tab="dashboard" class="h-chip hot" title="폭발 영상으로 이동">🔥 폭발 <b>159</b></a>
+      <a href="dashboard.html" data-tab="dashboard" class="h-chip info" title="24시간 신영상">🆕 24h <b>14</b></a>
+      
       <a href="candidates.html" data-tab="candidates" class="h-chip secondary" title="채널 분석 업데이트">🔄 분석 업데이트 <b style="color:var(--primary-hi);">264</b></a>
-      <a href="manual.html" data-tab="manual" class="h-chip secondary" title="사용 가이드">📖 가이드</a>
-      <a href="daily_2026-06-01.html" data-tab="daily" class="h-chip secondary" title="일별 아카이브">📅 일별</a>
+      <a href="manual.html" data-tab="manual" class="h-chip white" title="사용 가이드">📖 가이드</a>
+      <a href="daily_2026-06-01.html" data-tab="daily" class="h-chip white" title="일별 아카이브">📅 일별</a>
       <a href="jp/index.html" class="h-chip jp" title="🇯🇵 JP">🇯🇵 JP</a>
     </div>
   </header>
   <div class="nav-links" id="tabs">
-    <a href="recommendations.html" data-tab="recs" data-count="47" data-data-ts="2026-06-01 11:40" class="nav-primary">🎯 오늘의 주제<span class="nav-badge" data-tab-badge="recs">47</span></a>
+    <a href="recommendations.html" data-tab="recs" data-count="47" data-data-ts="2026-06-01 12:46" class="nav-primary">🎯 오늘의 주제<span class="nav-badge" data-tab-badge="recs">47</span></a>
     <a href="archive.html" data-tab="archive">🔥 Hot키워드</a>
     <a href="science_2026-05-29.html" data-tab="science">🔬 과학 트렌드</a>
     <a href="senior_2026-05-31.html" data-tab="senior">🎙️ 시니어랩</a>
     <a href="autopsy.html" data-tab="autopsy" class="nav-primary">🔥 왜 이 영상은 터졌는가?</a>
     <a href="library.html" data-tab="library">🏆 패턴 라이브러리</a>
-    <a href="news_headlines.html" data-tab="news" data-count="149" data-data-ts="2026-06-01 11:40">📰 뉴스 모니터링<span class="nav-badge" data-tab-badge="news">149</span></a>
+    <a href="news_headlines.html" data-tab="news" data-count="149" data-data-ts="2026-06-01 12:46">📰 뉴스 모니터링<span class="nav-badge" data-tab-badge="news">149</span></a>
     <a href="dashboard.html" data-tab="dashboard" style="display:none;"></a>
   </div>
 
   <div id="view"><div class="view-loading">불러오는 중…</div></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 11:40</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 12:46</footer>
 
   <script>
     const cache = {};

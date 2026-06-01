@@ -3,7 +3,7 @@
 **유튜브 알고리즘 해킹의 모든 것** — 발견 → 검증 → 청사진 → 제작까지 한 사이클.
 
 <div class="tldr">
-<div class="tldr-title">⚡ TL;DR — 3줄 요약</div>
+<div class="tldr-title">⚡ 한 줄 요약 (3가지)</div>
 <div class="tldr-body">
 ✅ <b>오늘 만들 영상 주제·구조·어휘</b>를 데이터 기반으로 추천<br>
 ✅ <b>YouTube URL을 던지면</b> 자막 분해 → Hook/구조/단조도 자동 분석<br>
@@ -982,6 +982,107 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
     </ul>
   </div>
 </div>
+
+---
+
+## 📜 튜브해커 개발 히스토리
+
+<details style="margin:16px 0;border:1px solid var(--border);border-radius:10px;padding:14px 18px;background:var(--surface);">
+<summary style="cursor:pointer;font-weight:700;color:var(--primary-hi);font-size:14px;">▶ 펼쳐서 보기 — 2주간의 빌드 여정</summary>
+
+<div style="margin-top:18px;color:var(--text2);font-size:13px;line-height:1.6;">
+
+거의 빈 화면에서 시작해 매일 새 페이지/기능이 쌓였습니다. 클코(Claude Code)와 함께 만든 2주간의 흔적.
+
+<div style="display:grid;gap:14px;margin-top:18px;">
+
+<div style="border-left:3px solid var(--text3);padding-left:14px;">
+<div style="font-size:11px;color:var(--text3);font-weight:700;">2026-05-27 (수요일) · 시작</div>
+<div style="font-weight:700;color:var(--text);margin-top:2px;">🌱 초기 빌드 — Day 0</div>
+<ul style="margin:6px 0;padding-left:20px;">
+<li>대시보드 첫 빌드 — "어레인지 유튜브 스캐너"</li>
+<li>카테고리·형식(롱폼/쇼츠) 분류 시작</li>
+<li>7일 트렌드 차트</li>
+</ul>
+<div style="background:var(--bg);border:1px dashed var(--border);border-radius:6px;padding:10px;font-family:monospace;font-size:11px;color:var(--text3);margin-top:6px;">
+어레인지 유튜브 스캐너<br>━━━━━━━━━━━━━━━<br>📊 채널 N개 모니터링<br>📈 7일 차트<br>(기본 카드 + 카테고리)
+</div>
+</div>
+
+<div style="border-left:3px solid var(--text3);padding-left:14px;">
+<div style="font-size:11px;color:var(--text3);font-weight:700;">2026-05-28 (목요일)</div>
+<div style="font-weight:700;color:var(--text);margin-top:2px;">🎨 UI 정비 — Pint급 대시보드</div>
+<ul style="margin:6px 0;padding-left:20px;">
+<li>채널 카드 UI 본격화 — 👑 1·2·3위 / ▲ 등락</li>
+<li>형식 토글 + 대형 제외 + 검색 박스</li>
+<li>🔬 과학 트렌드 페이지 신설</li>
+</ul>
+</div>
+
+<div style="border-left:3px solid var(--warn);padding-left:14px;">
+<div style="font-size:11px;color:var(--warn);font-weight:700;">2026-05-29 (금요일) · 폭발적 확장</div>
+<div style="font-weight:700;color:var(--text);margin-top:2px;">🚀 검증 주제 엔진 + 일본 확장 + SPA</div>
+<ul style="margin:6px 0;padding-left:20px;">
+<li>🎯 <b>오늘 만들 주제</b> 추천 보드 신설 (채널별 + 카테고리별)</li>
+<li>🔥 <b>Hot키워드</b> — 검증 주제 누적 아카이브 + 씨앗 검색</li>
+<li>🇯🇵 <b>일본 대시보드 /jp/</b> — Gemini 한국어 번역 병기</li>
+<li>📰 카테고리별 뉴스 헤드라인 (구글 뉴스 RSS)</li>
+<li>📅 일일 리포트 클린 테이블</li>
+<li>SPA 셸(핀트식) — 헤더+탭 고정, 탭별 lazy fetch</li>
+</ul>
+<div style="background:var(--bg);border:1px dashed var(--border);border-radius:6px;padding:10px;font-family:monospace;font-size:11px;color:var(--text3);margin-top:6px;">
+[🚨 9] [🔥 150] [🆕 65] [🇯🇵 JP]<br>━━━━━━━━━━━━━━━━━━━━<br>🏠 대시보드 · 🎯 오늘의 주제 · 🔥 Hot키워드 · 🔬 과학 · 📰 뉴스 · 📅 일별<br>━━━━━━━━━━━━━━━━━━━━<br>(SPA — 탭 클릭 = lazy fetch)
+</div>
+</div>
+
+<div style="border-left:3px solid var(--hot);padding-left:14px;">
+<div style="font-size:11px;color:var(--hot);font-weight:700;">2026-05-30 (토요일)</div>
+<div style="font-weight:700;color:var(--text);margin-top:2px;">🎙️ 시니어랩 (야담 워크플로)</div>
+<ul style="margin:6px 0;padding-left:20px;">
+<li>야담 카테고리 전용 watch list 10채널</li>
+<li>5종 분석 (벤치마크·제목패턴·교차변환·신규채널·사료가이드)</li>
+<li>활성도 필터 + 채널별 역대 TOP 분석</li>
+</ul>
+</div>
+
+<div style="border-left:3px solid var(--info);padding-left:14px;">
+<div style="font-size:11px;color:var(--info);font-weight:700;">2026-05-31 (일요일)</div>
+<div style="font-weight:700;color:var(--text);margin-top:2px;">🏆 패턴 라이브러리 + Autopsy + 가이드 1차</div>
+<ul style="margin:6px 0;padding-left:20px;">
+<li>🏆 <b>패턴 라이브러리</b> — 썸네일 60·제목 공식·Hook 풀 32</li>
+<li>🔥 <b>왜 이 영상은 터졌는가?</b> (Autopsy) — URL 던지면 분해</li>
+<li>📖 <b>사용 가이드 페이지</b> 1차 — 메트릭 사전 + FAQ</li>
+<li>LLM 썸네일 분석 72편 (Claude API)</li>
+<li>favicon (보라 T) + 페이지별 title</li>
+</ul>
+</div>
+
+<div style="border-left:3px solid var(--primary);padding-left:14px;background:var(--primary-bg);padding:12px 14px;border-radius:8px;">
+<div style="font-size:11px;color:var(--primary-hi);font-weight:700;">2026-06-01 (월요일) · 현재</div>
+<div style="font-weight:700;color:var(--text);margin-top:2px;">✨ 시각화 + 반자동 채널 관리</div>
+<ul style="margin:6px 0;padding-left:20px;">
+<li>📖 <b>가이드 시각화</b> — 미니어처 UI · 인포카드 · 흐름 다이어그램 · 비교박스</li>
+<li>🤖 <b>클코 자동화 가이드</b> 섹션</li>
+<li>🔄 <b>분석 업데이트</b> 페이지 — 추적 87 + 신규 후보 264, 일괄 추가/해제</li>
+<li>🔔 nav 알림 배지 (오늘의 주제 / 뉴스 모니터링 빨간 펄스)</li>
+<li>🏠 로고 클릭 = 홈 + 새로고침</li>
+<li>📂 카테고리 필터 + 50개 페이지네이션 (두 탭 모두)</li>
+<li>헤더 chip 시그널/폭발/24h 클릭 = 대시보드</li>
+<li>분석영상/분석채널/추적 3-카운터 정의</li>
+</ul>
+<div style="background:var(--bg);border:1px dashed var(--primary);border-radius:6px;padding:10px;font-family:monospace;font-size:11px;color:var(--text3);margin-top:8px;">
+[🚨9] [🔥150] [🆕65] [🔄 분석업데이트 264] [📖가이드][📅일별][🇯🇵JP]<br>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>🎯 오늘의 주제●7 · 📰 뉴스 모니터링●3 · 🔥 Hot · 🔬 과학 · 🎙️ 시니어랩 · 🔥 Autopsy · 🏆 패턴<br>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>(알림 배지 + 흰 chip + JP 일장기 강조)
+</div>
+</div>
+
+</div>
+
+<div style="margin-top:20px;padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--text2);">
+<b style="color:var(--text);">📊 2주 누적</b>: 페이지 9개 · 채널 추적 87 · 분석 영상 N편 · 일본 대시보드 별도 운영 · LLM 썸네일 분석 통합
+</div>
+
+</div>
+</details>
 
 ---
 

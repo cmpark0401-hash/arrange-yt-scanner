@@ -58,10 +58,14 @@ header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; 
 .h-chip.hot b { color:var(--hot); }
 .h-chip.info { border-color:var(--primary-bd); background:var(--primary-bg); color:var(--primary-hi); }
 .h-chip.info b { color:var(--primary-hi); }
-.h-chip.jp { background:#fff; border-color:#fff; color:#0a0a12; font-weight:700; cursor:pointer; transition:all .15s; }
-.h-chip.jp:hover { background:#e8e8f0; border-color:#e8e8f0; color:#000; text-decoration:none; }
+.h-chip.jp { background:linear-gradient(135deg,#fff 0%,#fff5f5 100%); border:1.5px solid #ff4d4f; color:#0a0a12; font-weight:800; cursor:pointer; transition:all .15s; box-shadow:0 1px 3px rgba(255,77,79,.18); }
+.h-chip.jp:hover { background:linear-gradient(135deg,#fff5f5 0%,#ffe0e0 100%); border-color:#e63030; text-decoration:none; transform:translateY(-1px); box-shadow:0 2px 6px rgba(255,77,79,.28); }
+.h-chip.white { background:#fff; border-color:#fff; color:#0a0a12; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.white:hover { background:#e8e8f0; border-color:#e8e8f0; color:#000; text-decoration:none; }
 .h-chip.secondary { background:transparent; border-color:var(--border); color:var(--text2); font-weight:600; cursor:pointer; transition:all .15s; text-decoration:none; }
 .h-chip.secondary:hover { background:var(--surface); border-color:var(--primary-bd); color:var(--text); text-decoration:none; }
+a.h-chip.warn, a.h-chip.hot, a.h-chip.info { cursor:pointer; transition:all .15s; text-decoration:none; }
+a.h-chip.warn:hover, a.h-chip.hot:hover, a.h-chip.info:hover { transform:translateY(-1px); text-decoration:none; filter:brightness(1.1); }
 a { color:var(--primary-hi); text-decoration:none; transition:color .15s; }
 a:hover { color:var(--primary); text-decoration:none; }
 
@@ -460,12 +464,12 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
 </head>
 <body>
   <header>
-    <div class="nav-links"><a href="index.html">← 대시보드로</a></div>
+    <div class="nav-links"><a href="index.html">←</a></div>
     <h1>🌐 뉴스 키워드 외부 영상 — 2026-05-27</h1>
     <div class="sub">키워드 8개 · 검색 0편 → 노출 0편 · 삼성전자, 가결, 잠정합의안, 레버리지, 삼성, 찬성률, 삼전, 삼전닉스</div>
   </header>
   
   <div class="rep-note">조건을 통과한 외부 영상이 없습니다.</div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 11:40</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 12:46</footer>
 </body>
 </html>
