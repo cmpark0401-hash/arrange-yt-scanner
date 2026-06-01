@@ -1,0 +1,23 @@
+# Cloudflare Pages cache control
+# SPA shell은 항상 최신 (JS 코드 변경 즉시 반영)
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/jp/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# 데이터 페이지도 항상 최신
+/candidates.html
+  Cache-Control: no-cache, max-age=0
+
+/dashboard.html
+  Cache-Control: no-cache, max-age=0
+
+# 정적 자산 (CSS·favicon·이미지)는 짧게 캐시
+/favicon.svg
+  Cache-Control: public, max-age=86400
+
+# 그 외 (마크다운 도큐 등)는 기본 cache
+/*
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
