@@ -48,7 +48,8 @@ header .brand-link:hover h1 .brand-slogan { color:var(--text); }
 header h1 .brand-divider { color:var(--text3); margin:0 2px; }
 header h1 .brand-slogan { font-size:13px; color:var(--text2); font-weight:400; }
 header .sub { color:var(--text3); font-size:12px; margin-top:4px; flex-basis:100%; }
-header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; align-items:center; }
+header .header-chips { display:flex; flex-direction:column; gap:6px; margin-left:auto; align-items:flex-end; }
+header .header-chips-row { display:flex; gap:6px; flex-wrap:wrap; align-items:center; justify-content:flex-end; }
 .h-chip { display:inline-flex; align-items:center; gap:5px; padding:5px 11px; border-radius:13px;
           background:var(--surface); border:1px solid var(--border); font-size:12px; color:var(--text2); font-weight:500; }
 .h-chip b { color:var(--text); font-weight:700; font-variant-numeric:tabular-nums; }
@@ -71,21 +72,23 @@ header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; 
 .h-chip.secondary:hover { background:var(--surface); border-color:var(--primary-bd); color:var(--text); text-decoration:none; }
 a.h-chip.warn, a.h-chip.hot, a.h-chip.info { cursor:pointer; transition:all .15s; text-decoration:none; }
 a.h-chip.warn:hover, a.h-chip.hot:hover, a.h-chip.info:hover { transform:translateY(-1px); text-decoration:none; filter:brightness(1.1); }
-/* chip hover 툴팁 */
-.h-chip[data-tip] { position:relative; }
-.h-chip[data-tip]:hover::after {
+/* chip/nav hover 툴팁 — 아래로 표시 (모든 [data-tip] 요소 공통) */
+header, header .header-chips, header .header-chips-row, .nav-links { overflow:visible !important; }
+[data-tip] { position:relative; }
+[data-tip]:hover { z-index:9999; }
+[data-tip]:hover::after {
   content: attr(data-tip);
-  position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%);
+  position:absolute; top:calc(100% + 10px); left:50%; transform:translateX(-50%);
   background:#0a0a12; color:#fff; padding:7px 11px; border-radius:7px;
   font-size:11px; font-weight:600; white-space:nowrap; letter-spacing:.2px;
-  border:1px solid rgba(255,255,255,.12); box-shadow:0 4px 14px rgba(0,0,0,.5);
-  z-index:1000; pointer-events:none;
+  border:1px solid rgba(255,255,255,.18); box-shadow:0 6px 18px rgba(0,0,0,.65);
+  z-index:9999; pointer-events:none;
   animation:tipFade .15s ease-out;
 }
-.h-chip[data-tip]:hover::before {
+[data-tip]:hover::before {
   content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%);
-  margin-top:2px; border:6px solid transparent; border-bottom-color:#0a0a12;
-  z-index:1001; pointer-events:none;
+  margin-top:4px; border:6px solid transparent; border-bottom-color:#0a0a12;
+  z-index:9999; pointer-events:none;
   animation:tipFade .15s ease-out;
 }
 @keyframes tipFade { from { opacity:0; transform:translateX(-50%) translateY(-3px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
@@ -493,6 +496,6 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
   </header>
   
   <div class="rep-note">조건을 통과한 외부 영상이 없습니다.</div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 13:39</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 18:46</footer>
 </body>
 </html>
