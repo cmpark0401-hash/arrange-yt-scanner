@@ -58,8 +58,10 @@ header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; 
 .h-chip.hot b { color:var(--hot); }
 .h-chip.info { border-color:var(--primary-bd); background:var(--primary-bg); color:var(--primary-hi); }
 .h-chip.info b { color:var(--primary-hi); }
-.h-chip.jp { background:var(--surface); border-color:var(--border); color:var(--text); font-weight:600; cursor:pointer; transition:all .15s; }
-.h-chip.jp:hover { background:var(--primary-bg); border-color:var(--primary); color:var(--primary-hi); text-decoration:none; }
+.h-chip.jp { background:#fff; border-color:#fff; color:#0a0a12; font-weight:700; cursor:pointer; transition:all .15s; }
+.h-chip.jp:hover { background:#e8e8f0; border-color:#e8e8f0; color:#000; text-decoration:none; }
+.h-chip.secondary { background:transparent; border-color:var(--border); color:var(--text2); font-weight:600; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.secondary:hover { background:var(--surface); border-color:var(--primary-bd); color:var(--text); text-decoration:none; }
 a { color:var(--primary-hi); text-decoration:none; transition:color .15s; }
 a:hover { color:var(--primary); text-decoration:none; }
 
