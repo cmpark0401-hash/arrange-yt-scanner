@@ -42,7 +42,9 @@ header { padding:14px 0 16px; border-bottom:1px solid var(--divider); margin-bot
 header .brand-block { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
 header h1 { font-size:13px; font-weight:400; color:var(--text2); line-height:1.3; letter-spacing:0; display:flex; align-items:baseline; gap:8px; }
 header h1 .brand-flag { font-size:18px; line-height:1; }
-header h1 .brand-accent { color:var(--primary); font-weight:800; font-size:22px; letter-spacing:-0.5px; }
+header h1 .brand-accent { color:var(--primary); font-weight:800; font-size:22px; letter-spacing:-0.5px; transition:color .15s; }
+header .brand-link:hover h1 .brand-accent { color:var(--primary-hi); }
+header .brand-link:hover h1 .brand-slogan { color:var(--text); }
 header h1 .brand-divider { color:var(--text3); margin:0 2px; }
 header h1 .brand-slogan { font-size:13px; color:var(--text2); font-weight:400; }
 header .sub { color:var(--text3); font-size:12px; margin-top:4px; flex-basis:100%; }
@@ -457,29 +459,31 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
 </head>
 <body>
   <header class="shell-head">
-    <div style="flex:1;min-width:0;">
+    <a href="./" class="brand-link" title="홈으로 (새로고침)"
+       onclick="event.preventDefault(); location.hash=''; location.reload();"
+       style="flex:1;min-width:0;text-decoration:none;color:inherit;cursor:pointer;">
       <h1><span class="brand-flag">🇰🇷</span><span class="brand-accent">TubeHacker</span><span class="brand-divider">·</span><span class="brand-slogan">유튜브 알고리즘 해킹의 모든 것</span></h1>
-      <div class="sub">최종 갱신: 2026-06-01 10:09 · 추적 채널 86개 · 기준일 2026-05-30</div>
-    </div>
+      <div class="sub">최종 갱신: 2026-06-01 10:12 · 추적 채널 86개 · 기준일 2026-05-30</div>
+    </a>
     <div class="header-chips">
       <a href="jp/index.html" class="h-chip jp" title="🇯🇵 JP">🇯🇵 JP</a>
     </div>
   </header>
   <div class="nav-links" id="tabs">
     <a href="dashboard.html" data-tab="dashboard">🏠 대시보드 홈</a>
-    <a href="recommendations.html" data-tab="recs" data-count="43" data-data-ts="2026-06-01 10:09" class="nav-primary">🎯 오늘의 주제<span class="nav-badge" data-tab-badge="recs">43</span></a>
+    <a href="recommendations.html" data-tab="recs" data-count="43" data-data-ts="2026-06-01 10:12" class="nav-primary">🎯 오늘의 주제<span class="nav-badge" data-tab-badge="recs">43</span></a>
     <a href="archive.html" data-tab="archive">🔥 Hot키워드</a>
     <a href="science_2026-05-29.html" data-tab="science">🔬 과학 트렌드</a>
     <a href="senior_2026-05-31.html" data-tab="senior">🎙️ 시니어랩</a>
     <a href="autopsy.html" data-tab="autopsy" class="nav-primary">🔥 왜 이 영상은 터졌는가?</a>
     <a href="library.html" data-tab="library">🏆 패턴 라이브러리</a>
     <a href="manual.html" data-tab="manual">📖 가이드</a>
-    <a href="news_headlines.html" data-tab="news" data-count="149" data-data-ts="2026-06-01 10:09">📰 뉴스 모니터링<span class="nav-badge" data-tab-badge="news">149</span></a>
+    <a href="news_headlines.html" data-tab="news" data-count="149" data-data-ts="2026-06-01 10:12">📰 뉴스 모니터링<span class="nav-badge" data-tab-badge="news">149</span></a>
     <a href="daily_2026-05-30.html" data-tab="daily">📅 일별 아카이브</a>
   </div>
 
   <div id="view"><div class="view-loading">불러오는 중…</div></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 10:09</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 10:12</footer>
 
   <script>
     const cache = {};
