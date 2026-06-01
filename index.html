@@ -175,6 +175,16 @@ section h2 { font-size:18px; font-weight:700; margin-bottom:14px; letter-spacing
 .nav-links a.nav-primary { background:rgba(168,85,247,.10); color:var(--primary-hi); border:2px solid var(--primary); font-weight:700; padding:7px 14px; }
 .nav-links a.nav-primary:hover { background:rgba(168,85,247,.18); color:var(--primary-hi); border-color:var(--primary-hi); }
 .nav-links a.nav-primary.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
+/* 새 메시지 알림 스타일 배지 */
+.nav-links a { position:relative; }
+.nav-badge { display:inline-flex; align-items:center; justify-content:center; min-width:18px; height:18px; padding:0 5px; margin-left:6px; border-radius:9px; background:var(--danger); color:#fff; font-size:10px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums; vertical-align:middle; }
+.nav-badge.fresh { background:var(--danger); box-shadow:0 0 0 0 rgba(239,68,68,.7); animation:nav-pulse 2s infinite; }
+@keyframes nav-pulse {
+  0% { box-shadow:0 0 0 0 rgba(239,68,68,.7); }
+  70% { box-shadow:0 0 0 8px rgba(239,68,68,0); }
+  100% { box-shadow:0 0 0 0 rgba(239,68,68,0); }
+}
+.nav-badge.dim { background:var(--surface2); color:var(--text2); border:1px solid var(--border); animation:none; box-shadow:none; }
 .rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
 .rec-group h3 { font-size:14px; font-weight:700; margin:6px 0 10px; }
 .rec-card { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:13px; margin-bottom:9px; transition:all .15s; }
@@ -449,7 +459,7 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
   <header class="shell-head">
     <div style="flex:1;min-width:0;">
       <h1><span class="brand-flag">🇰🇷</span><span class="brand-accent">TubeHacker</span><span class="brand-divider">·</span><span class="brand-slogan">유튜브 알고리즘 해킹의 모든 것</span></h1>
-      <div class="sub">최종 갱신: 2026-06-01 10:03 · 추적 채널 86개 · 기준일 2026-05-30</div>
+      <div class="sub">최종 갱신: 2026-06-01 10:09 · 추적 채널 86개 · 기준일 2026-05-30</div>
     </div>
     <div class="header-chips">
       <a href="jp/index.html" class="h-chip jp" title="🇯🇵 JP">🇯🇵 JP</a>
@@ -457,19 +467,19 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
   </header>
   <div class="nav-links" id="tabs">
     <a href="dashboard.html" data-tab="dashboard">🏠 대시보드 홈</a>
-    <a href="recommendations.html" data-tab="recs" class="nav-primary">🎯 오늘의 주제</a>
+    <a href="recommendations.html" data-tab="recs" data-count="43" data-data-ts="2026-06-01 10:09" class="nav-primary">🎯 오늘의 주제<span class="nav-badge" data-tab-badge="recs">43</span></a>
     <a href="archive.html" data-tab="archive">🔥 Hot키워드</a>
     <a href="science_2026-05-29.html" data-tab="science">🔬 과학 트렌드</a>
     <a href="senior_2026-05-31.html" data-tab="senior">🎙️ 시니어랩</a>
     <a href="autopsy.html" data-tab="autopsy" class="nav-primary">🔥 왜 이 영상은 터졌는가?</a>
     <a href="library.html" data-tab="library">🏆 패턴 라이브러리</a>
     <a href="manual.html" data-tab="manual">📖 가이드</a>
-    <a href="news_headlines.html" data-tab="news">📰 뉴스 모니터링</a>
+    <a href="news_headlines.html" data-tab="news" data-count="149" data-data-ts="2026-06-01 10:09">📰 뉴스 모니터링<span class="nav-badge" data-tab-badge="news">149</span></a>
     <a href="daily_2026-05-30.html" data-tab="daily">📅 일별 아카이브</a>
   </div>
 
   <div id="view"><div class="view-loading">불러오는 중…</div></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 10:03</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 10:09</footer>
 
   <script>
     const cache = {};
@@ -523,6 +533,40 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
         var el=document.getElementById(id); if(el) el.value="";
       });
     };
+
+    // 새 메시지 알림 — 마지막 방문 vs 데이터 timestamp 비교
+    (function(){
+      document.querySelectorAll('#tabs a[data-data-ts]').forEach(function(a){
+        var tab = a.dataset.tab;
+        var dataTs = a.dataset.dataTs;
+        if (!dataTs) return;
+        var badge = a.querySelector('.nav-badge');
+        if (!badge) return;
+        var key = 'tubehacker_visit_' + tab;
+        var lastVisit = '';
+        try { lastVisit = localStorage.getItem(key) || ''; } catch(e){}
+        if (lastVisit && lastVisit >= dataTs) {
+          // 마지막 방문 후 갱신 없음 → 회색 dim
+          badge.classList.add('dim');
+        } else {
+          // 신규 → 빨강 펄스
+          badge.classList.add('fresh');
+        }
+      });
+      // 탭 클릭 시 방문 기록
+      document.querySelectorAll('#tabs a').forEach(function(a){
+        a.addEventListener('click', function(){
+          var tab = a.dataset.tab;
+          if (!tab) return;
+          var dataTs = a.dataset.dataTs;
+          if (dataTs) {
+            try { localStorage.setItem('tubehacker_visit_' + tab, dataTs); } catch(e){}
+            var badge = a.querySelector('.nav-badge');
+            if (badge) { badge.classList.remove('fresh'); badge.classList.add('dim'); }
+          }
+        });
+      });
+    })();
 
     const tabTitles = {
       dashboard:'실시간 알고리즘 시그널', recs:'오늘의 주제', archive:'Hot키워드',

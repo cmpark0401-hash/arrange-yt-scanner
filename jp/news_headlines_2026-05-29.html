@@ -175,6 +175,16 @@ section h2 { font-size:18px; font-weight:700; margin-bottom:14px; letter-spacing
 .nav-links a.nav-primary { background:rgba(168,85,247,.10); color:var(--primary-hi); border:2px solid var(--primary); font-weight:700; padding:7px 14px; }
 .nav-links a.nav-primary:hover { background:rgba(168,85,247,.18); color:var(--primary-hi); border-color:var(--primary-hi); }
 .nav-links a.nav-primary.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
+/* 새 메시지 알림 스타일 배지 */
+.nav-links a { position:relative; }
+.nav-badge { display:inline-flex; align-items:center; justify-content:center; min-width:18px; height:18px; padding:0 5px; margin-left:6px; border-radius:9px; background:var(--danger); color:#fff; font-size:10px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums; vertical-align:middle; }
+.nav-badge.fresh { background:var(--danger); box-shadow:0 0 0 0 rgba(239,68,68,.7); animation:nav-pulse 2s infinite; }
+@keyframes nav-pulse {
+  0% { box-shadow:0 0 0 0 rgba(239,68,68,.7); }
+  70% { box-shadow:0 0 0 8px rgba(239,68,68,0); }
+  100% { box-shadow:0 0 0 0 rgba(239,68,68,0); }
+}
+.nav-badge.dim { background:var(--surface2); color:var(--text2); border:1px solid var(--border); animation:none; box-shadow:none; }
 .rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
 .rec-group h3 { font-size:14px; font-weight:700; margin:6px 0 10px; }
 .rec-card { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:13px; margin-bottom:9px; transition:all .15s; }
