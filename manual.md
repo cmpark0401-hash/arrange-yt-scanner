@@ -1004,8 +1004,19 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
 <li>카테고리·형식(롱폼/쇼츠) 분류 시작</li>
 <li>7일 트렌드 차트</li>
 </ul>
-<div style="background:var(--bg);border:1px dashed var(--border);border-radius:6px;padding:10px;font-family:monospace;font-size:11px;color:var(--text3);margin-top:6px;">
-어레인지 유튜브 스캐너<br>━━━━━━━━━━━━━━━<br>📊 채널 N개 모니터링<br>📈 7일 차트<br>(기본 카드 + 카테고리)
+<div class="mock">
+  <div class="mock-header">
+    <span class="mock-brand">어레인지 유튜브 스캐너</span>
+    <span class="mock-slogan">· v0.1 초기 빌드</span>
+  </div>
+  <div class="mock-tabs">
+    <span class="mock-tab on">📊 대시보드</span>
+  </div>
+  <div class="mock-card">
+    <span class="mock-ch-name">채널A</span>
+    <div class="mock-meta-line">구독 100만 · 카테고리: 지식 · 형식: 롱폼</div>
+    <div style="font-size:10px;color:var(--text3);margin-top:6px;">📈 7일 트렌드 차트 영역</div>
+  </div>
 </div>
 </div>
 
@@ -1017,6 +1028,28 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
 <li>형식 토글 + 대형 제외 + 검색 박스</li>
 <li>🔬 과학 트렌드 페이지 신설</li>
 </ul>
+<div class="mock">
+  <div class="mock-header">
+    <span class="mock-brand">어레인지 유튜브 스캐너</span>
+    <span class="mock-slogan">· Pint급 UI</span>
+  </div>
+  <div class="mock-tabs">
+    <span class="mock-tab on">📊 대시보드</span>
+    <span class="mock-tab">🔬 과학 트렌드</span>
+  </div>
+  <div style="font-size:10px;color:var(--text3);margin:6px 0;">[🔘 롱폼] [🔘 쇼츠] [☑ 대형 제외] [🔍 검색...]</div>
+  <div class="mock-card crown">
+    <span class="mock-rank-badge">👑 #1</span>
+    <span class="mock-ch-name">채널A</span>
+    <span class="mock-delta">▲3</span>
+    <div class="mock-meta-line">구독 384만 · 지식</div>
+  </div>
+  <div class="mock-card">
+    <span class="mock-rank-badge" style="background:#c0c0c0;">#2</span>
+    <span class="mock-ch-name">채널B</span>
+    <span class="mock-delta" style="color:var(--down);">▼1</span>
+  </div>
+</div>
 </div>
 
 <div style="border-left:3px solid var(--warn);padding-left:14px;">
@@ -1030,8 +1063,27 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
 <li>📅 일일 리포트 클린 테이블</li>
 <li>SPA 셸(핀트식) — 헤더+탭 고정, 탭별 lazy fetch</li>
 </ul>
-<div style="background:var(--bg);border:1px dashed var(--border);border-radius:6px;padding:10px;font-family:monospace;font-size:11px;color:var(--text3);margin-top:6px;">
-[🚨 9] [🔥 150] [🆕 65] [🇯🇵 JP]<br>━━━━━━━━━━━━━━━━━━━━<br>🏠 대시보드 · 🎯 오늘의 주제 · 🔥 Hot키워드 · 🔬 과학 · 📰 뉴스 · 📅 일별<br>━━━━━━━━━━━━━━━━━━━━<br>(SPA — 탭 클릭 = lazy fetch)
+<div class="mock">
+  <div class="mock-header">
+    <span style="font-size:18px;">🇰🇷</span>
+    <span class="mock-brand">TubeHacker</span>
+    <span class="mock-slogan">· by arrange · SPA 셸 도입</span>
+    <div class="mock-chips">
+      <span class="mock-chip warn">🚨 <b>9</b></span>
+      <span class="mock-chip hot">🔥 <b>150</b></span>
+      <span class="mock-chip">🆕 65</span>
+      <span class="mock-chip" style="background:#fff;color:#000;">🇯🇵 JP</span>
+    </div>
+  </div>
+  <div class="mock-tabs">
+    <span class="mock-tab on">🏠 대시보드</span>
+    <span class="mock-tab">🎯 오늘의 주제</span>
+    <span class="mock-tab">🔥 Hot키워드</span>
+    <span class="mock-tab">🔬 과학</span>
+    <span class="mock-tab">📰 뉴스</span>
+    <span class="mock-tab">📅 일별</span>
+  </div>
+  <div style="font-size:10px;color:var(--text3);margin-top:6px;">⚡ SPA — 탭 클릭 = lazy fetch (페이지 새로고침 X)</div>
 </div>
 </div>
 
@@ -1043,6 +1095,31 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
 <li>5종 분석 (벤치마크·제목패턴·교차변환·신규채널·사료가이드)</li>
 <li>활성도 필터 + 채널별 역대 TOP 분석</li>
 </ul>
+<div class="mock">
+  <div class="mock-header">
+    <span style="font-size:18px;">🇰🇷</span>
+    <span class="mock-brand">TubeHacker</span>
+    <div class="mock-chips">
+      <span class="mock-chip warn">🚨 <b>9</b></span>
+      <span class="mock-chip hot">🔥 <b>150</b></span>
+      <span class="mock-chip">🆕 65</span>
+      <span class="mock-chip" style="background:#fff;color:#000;">🇯🇵 JP</span>
+    </div>
+  </div>
+  <div class="mock-tabs">
+    <span class="mock-tab">🏠 대시보드</span>
+    <span class="mock-tab">🎯 오늘의 주제</span>
+    <span class="mock-tab">🔥 Hot키워드</span>
+    <span class="mock-tab">🔬 과학</span>
+    <span class="mock-tab on" style="background:#ff7a45;border-color:#ff7a45;">🎙️ 시니어랩 NEW</span>
+    <span class="mock-tab">📰 뉴스</span>
+    <span class="mock-tab">📅 일별</span>
+  </div>
+  <div class="mock-card">
+    <div style="font-size:11px;font-weight:700;color:var(--hot);">🎙️ 야담 watch list · 10채널</div>
+    <div style="font-size:10px;color:var(--text2);margin-top:4px;">[벤치마크] [제목패턴] [교차변환] [신규채널] [사료가이드]</div>
+  </div>
+</div>
 </div>
 
 <div style="border-left:3px solid var(--info);padding-left:14px;">
@@ -1055,6 +1132,34 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
 <li>LLM 썸네일 분석 72편 (Claude API)</li>
 <li>favicon (보라 T) + 페이지별 title</li>
 </ul>
+<div class="mock">
+  <div class="mock-header">
+    <span style="font-size:18px;">🇰🇷</span>
+    <span class="mock-brand">TubeHacker</span>
+    <span class="mock-slogan">· 알고리즘 해킹의 모든 것</span>
+    <div class="mock-chips">
+      <span class="mock-chip warn">🚨 <b>9</b></span>
+      <span class="mock-chip hot">🔥 <b>150</b></span>
+      <span class="mock-chip">🆕 65</span>
+      <span class="mock-chip" style="background:#fff;color:#000;">🇯🇵 JP</span>
+    </div>
+  </div>
+  <div class="mock-tabs">
+    <span class="mock-tab on">🏠 대시보드</span>
+    <span class="mock-tab">🎯 오늘의 주제</span>
+    <span class="mock-tab">🔥 Hot</span>
+    <span class="mock-tab">🔬 과학</span>
+    <span class="mock-tab">🎙️ 시니어랩</span>
+    <span class="mock-tab" style="background:#a855f7;color:#fff;border-color:#a855f7;">🔥 왜 터졌나? NEW</span>
+    <span class="mock-tab" style="background:#a855f7;color:#fff;border-color:#a855f7;">🏆 패턴 NEW</span>
+    <span class="mock-tab" style="background:#a855f7;color:#fff;border-color:#a855f7;">📖 가이드 NEW</span>
+  </div>
+  <div class="mock-card">
+    <div style="font-size:11px;font-weight:700;color:var(--info);">🔥 Autopsy — URL 던지기 분석</div>
+    <div style="font-size:10px;color:var(--text3);margin-top:4px;font-family:monospace;background:var(--bg);padding:5px;border-radius:4px;">https://youtube.com/watch?v=...</div>
+    <div style="font-size:10px;color:var(--text2);margin-top:4px;">→ Hook 분해 · 구조 · 단조도 · 썸네일 OCR · Claude 대본</div>
+  </div>
+</div>
 </div>
 
 <div style="border-left:3px solid var(--primary);padding-left:14px;background:var(--primary-bg);padding:12px 14px;border-radius:8px;">
@@ -1070,8 +1175,41 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
 <li>헤더 chip 시그널/폭발/24h 클릭 = 대시보드</li>
 <li>분석영상/분석채널/추적 3-카운터 정의</li>
 </ul>
-<div style="background:var(--bg);border:1px dashed var(--primary);border-radius:6px;padding:10px;font-family:monospace;font-size:11px;color:var(--text3);margin-top:8px;">
-[🚨9] [🔥150] [🆕65] [🔄 분석업데이트 264] [📖가이드][📅일별][🇯🇵JP]<br>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>🎯 오늘의 주제●7 · 📰 뉴스 모니터링●3 · 🔥 Hot · 🔬 과학 · 🎙️ 시니어랩 · 🔥 Autopsy · 🏆 패턴<br>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>(알림 배지 + 흰 chip + JP 일장기 강조)
+<div class="mock" style="border-color:var(--primary);">
+  <div class="mock-header">
+    <span style="font-size:18px;">🇰🇷</span>
+    <span class="mock-brand">TubeHacker</span>
+    <span class="mock-slogan">· 유튜브 알고리즘 해킹의 모든 것</span>
+    <div class="mock-chips">
+      <span class="mock-chip warn">🚨 시그널 <b>10</b></span>
+      <span class="mock-chip hot">🔥 폭발 <b>159</b></span>
+      <span class="mock-chip" style="background:var(--primary-bg);color:var(--primary-hi);border-color:var(--primary-bd);">🆕 24h <b>14</b></span>
+      <span class="mock-chip" style="background:var(--primary-bg);color:var(--primary-hi);border-color:var(--primary-bd);">🔄 업데이트 <b>264</b></span>
+      <span class="mock-chip" style="background:#fff;color:#000;">📖 가이드</span>
+      <span class="mock-chip" style="background:#fff;color:#000;">📅 일별</span>
+      <span class="mock-chip" style="background:linear-gradient(135deg,#fff,#fff5f5);color:#000;border:1.5px solid #ff4d4f;font-weight:800;">🇯🇵 JP</span>
+    </div>
+  </div>
+  <div class="mock-tabs">
+    <span class="mock-tab on" style="position:relative;">🎯 오늘의 주제 <span style="position:absolute;top:-5px;right:-5px;background:#ef4444;color:#fff;border-radius:50%;width:14px;height:14px;font-size:9px;line-height:14px;text-align:center;font-weight:800;">7</span></span>
+    <span class="mock-tab" style="position:relative;">📰 뉴스 모니터링 <span style="position:absolute;top:-5px;right:-5px;background:#ef4444;color:#fff;border-radius:50%;width:14px;height:14px;font-size:9px;line-height:14px;text-align:center;font-weight:800;">3</span></span>
+    <span class="mock-tab">🔥 Hot</span>
+    <span class="mock-tab">🔬 과학</span>
+    <span class="mock-tab">🎙️ 시니어랩</span>
+    <span class="mock-tab">🔥 Autopsy</span>
+    <span class="mock-tab">🏆 패턴</span>
+  </div>
+  <div class="mock-card crown">
+    <span class="mock-rank-badge">👑 #1</span>
+    <span class="mock-ch-name">지식인사이드</span>
+    <span class="mock-delta">▲5</span>
+    <div class="mock-meta-line">구독 384만 · 21년 8월 개설 · 4년 9개월차</div>
+    <div class="mock-stats-row">
+      <div class="mock-stat sig"><b>3</b>🚨 시그널</div>
+      <div class="mock-stat hot"><b>5</b>🔥 폭발</div>
+      <div class="mock-stat"><b>1</b>🆕 24h</div>
+    </div>
+  </div>
 </div>
 </div>
 
