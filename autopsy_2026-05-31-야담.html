@@ -352,6 +352,38 @@ section table { margin:10px 0; }
 .tldr-title { font-size:13px; font-weight:800; color:var(--primary-hi); margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
 .tldr-body { font-size:13px; color:var(--text); line-height:1.65; }
 
+/* 클코 자동화 가이드 (접이식 details) */
+details.auto-guide { background:linear-gradient(135deg, var(--primary-bg), rgba(132,204,22,.04)); border:2px solid var(--primary-bd); border-radius:14px; padding:0; margin:18px 0; overflow:hidden; }
+details.auto-guide > summary { cursor:pointer; list-style:none; padding:18px 22px; font-size:16px; font-weight:800; color:var(--primary-hi); display:flex; align-items:center; gap:10px; user-select:none; transition:background .15s; }
+details.auto-guide > summary::-webkit-details-marker { display:none; }
+details.auto-guide > summary:hover { background:rgba(168,85,247,.08); }
+details.auto-guide > summary::after { content:"▼ 펼쳐서 보기"; margin-left:auto; font-size:11px; font-weight:600; color:var(--text2); padding:5px 11px; background:var(--surface); border:1px solid var(--border); border-radius:14px; }
+details.auto-guide[open] > summary::after { content:"▲ 접기"; }
+details.auto-guide .auto-body { padding:6px 22px 24px; border-top:1px solid var(--primary-bd); }
+details.auto-guide h3 { margin-top:22px; font-size:16px; color:var(--text); }
+details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi); }
+
+/* 액션 흐름 — 사용자 vs Claude 구분 */
+.action-flow { display:flex; flex-direction:column; gap:10px; margin:14px 0; }
+.action-row { display:flex; align-items:flex-start; gap:12px; }
+.action-actor { flex-shrink:0; width:80px; padding:8px 10px; border-radius:10px; text-align:center; font-size:11px; font-weight:700; }
+.action-actor.user { background:rgba(255,122,69,.15); color:var(--warn); border:1px solid var(--warn-bd); }
+.action-actor.claude { background:var(--primary-bg); color:var(--primary-hi); border:1px solid var(--primary-bd); }
+.action-actor.system { background:rgba(96,165,250,.13); color:#60a5fa; border:1px solid rgba(96,165,250,.4); }
+.action-actor .who { display:block; font-size:9px; opacity:.7; text-transform:uppercase; letter-spacing:.5px; margin-bottom:2px; }
+.action-arrow { flex-shrink:0; color:var(--text3); font-size:18px; align-self:center; }
+.action-body { flex:1; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:13px; color:var(--text); line-height:1.55; }
+.action-body code { background:var(--surface2); color:var(--primary-hi); padding:1px 5px; border-radius:4px; font-size:11.5px; }
+.action-body .step-name { font-weight:700; color:var(--text); display:block; margin-bottom:3px; font-size:12px; }
+.action-body ul { margin:4px 0 0 16px; }
+.action-body li { font-size:12px; color:var(--text2); margin:2px 0; }
+
+/* 명령어 예시 카드 */
+.cmd-card { display:flex; align-items:center; gap:12px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 14px; margin:6px 0; }
+.cmd-card .cmd-input { flex:1; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; color:var(--primary-hi); background:var(--surface2); padding:6px 10px; border-radius:6px; }
+.cmd-card .cmd-arrow { color:var(--text3); font-size:16px; }
+.cmd-card .cmd-result { flex:1; font-size:12px; color:var(--text2); }
+
 /* 강조 인용 박스 (인사이트 예시) */
 .insight { background:var(--surface); border-left:4px solid var(--hot); border-radius:0 10px 10px 0; padding:13px 16px; margin:14px 0; }
 .insight-tag { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:var(--hot); margin-bottom:5px; }
@@ -450,6 +482,6 @@ section table { margin:10px 0; }
 <div class="rep-note" style="margin-top:12px;"><b>📖 First plot 90~180s</b> <code>첫 사건 전개</code></div><div class="info-bar" style="white-space:pre-wrap;line-height:1.6;"><i style='color:rgba(255,255,255,.4)'>(텍스트 없음)</i></div>
 <div class="rep-note" style="margin-top:12px;"><b>🔥 Climax (40~70%)</b> </div><div class="info-bar" style="white-space:pre-wrap;line-height:1.6;">끼는 일은 성시하게 하겠습니다. 관리는 벽에 붙은 명패를 가리키며 말했지요. 그을 안다고? 그럼 저기 적힌 이름 샘만 읽어 봐라. 봐라. 하지는 숨을 가다듬고 익었습니다. 좌의정 창고, 내수사 별, 약재창, 관리의 눈빛이 조금 달라졌어요. 그때 비단 도포를 입은 중년 사내 하나가 하나가 마당으로 들어왔지요. 좌의정 집안의 총관이었습니다. 그는 새하인들을 쭉 훑어 보더니 소년 앞에서 멈췄어요. 어린 것이 겁은 없느냐? 소녀는 고개를 숙인 채 또렷이 말했지요. 겁분 납니다. 하지만 시키는 일은 끝까지 하겠습니다. 높은 사람 밑에서 일하게 해 주시면 허튼짓하지 않고 성시하게 배우겠습니다. 총관은 한참 그를 내려다 보다가 하인 하나를 불렀습니다.이 아이에게 쌀포대 하나를 지워 모아라. 하진의 어깨에 쌀포대가 얹쳤어요. 비틀거릴 정도로 무거웠지요. 저 마당 끝까지 옮겨라. 중간에 놓치면 데려가지 않겠다. 하지는 숨이 턱까지 차 올랐습니다. 몇 걸음 못과 포대가 미끄러지자 그는 무릎으로 받쳐 가까으로 다시 일으켰어요. 마당 끝까지 다달았을 때 총과는 무심하게 말했지요. 힘은 모자라도 악착같이 버티는군. 총관이 마지막 질문을 던졌습니다. 높은 사람 집에서 일하면 늘은 것도 못들은 척하고 본 것도 못 본 척해야 한다. 괜난 호기심으로 살아남을 수 있는 곳이 아니다. 하지는 가슴이 철렁했어요. 얼굴에는 아무것도 드러내지 않으려 했었지요. 네. 저는 제게 맡겨진 일만 하겠습니다. 총은 고개를 끄덕였습니다. 좋다. 좌의정 대감의 외원 별에서 자비를 시켜 보겠다. 질수하면 바로 내 쫓을 것이다. 소년은 속으로 숨을 길게 내쉬었어요</div>
 <div class="rep-note" style="margin-top:12px;"><b>🎯 Outro (마지막 60s)</b> <code>`여운형`</code></div><div class="info-bar" style="white-space:pre-wrap;line-height:1.6;">무겁지만 또렷한 목소리로 말했지요. 나는 숨겨져 태어나고 숨어서 자랐으며 뒤늦게 진실을 알게 되었다. 그래서 더 잘 안다. 권력이 진실을 가리면 가장 먼저 다치는 것은 힘없는 사람들이다. 나는 그런 나라를 두지 않겠다. 왕비는 아래에서 아들을 바라보며 눈물을 훔쳤습니다. 이모도 먼 자리에서 두 손을 모은 채 그 관경을 지켜보았어요. 산속에서 장작을 하던 아이는 이제 왕이 되었지요. 하지만 그는 자신이 어디에서 왔는지 잊지 않는 왕이었습니다. 그리고 그 시작은 암살당의 산속에 버려진 어머니를 알아본 그날의 한마디에서 시작되었어요. 어, 우리 엄마랑 똑같이 생겼네. M.</div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 00:08</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 09:09</footer>
 </body>
 </html>

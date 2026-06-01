@@ -35,6 +35,271 @@
 
 ---
 
+<details class="auto-guide">
+<summary>🤖 클코 자동화 가이드</summary>
+<div class="auto-body">
+
+<div class="tldr">
+<div class="tldr-title">⚡ 한 줄 요약</div>
+<div class="tldr-body">
+Claude Code에 <code>"OOO 채널 주제 찾아서 대본 만들어줘"</code> 한마디 → <b>TubeHacker 데이터 자동 분석 → 주제 추천 → 사용자 선택 → 대본 작업</b>까지 자동.
+</div>
+</div>
+
+<h3>🎬 시나리오 1: 채널이 이미 있을 때</h3>
+
+<div class="action-flow">
+
+<div class="action-row">
+<div class="action-actor user"><span class="who">👤 사용자</span>명령</div>
+<div class="action-arrow">→</div>
+<div class="action-body">
+<span class="step-name">한 줄 명령</span>
+<code>"잘듣네 채널 주제 찾아서 대본 만들어줘"</code>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor claude"><span class="who">🤖 Claude</span>자동</div>
+<div class="action-arrow">⤵</div>
+<div class="action-body">
+<span class="step-name">📂 채널 컨텍스트 파악</span>
+<ul>
+<li><code>channels/jaldeunne/config/profile.md</code> — 채널 톤·카테고리</li>
+<li><code>channels/jaldeunne/config/thumbnail-strategy.json</code> — 썸네일 전략</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor claude"><span class="who">🤖 Claude</span>자동</div>
+<div class="action-arrow">⤵</div>
+<div class="action-body">
+<span class="step-name">📊 TubeHacker 데이터 조회</span>
+<ul>
+<li>검증 주제 아카이브 (오래 검증된 주제)</li>
+<li>오늘 폭발 주제 + 재편집 시그널</li>
+<li>패턴 라이브러리 (제목 공식·Hook 풀)</li>
+<li>시니어랩 corpus (해당 카테고리면)</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor claude"><span class="who">🤖 Claude</span>제안</div>
+<div class="action-arrow">⤵</div>
+<div class="action-body">
+<span class="step-name">🎯 주제 3~5개 추천 + 학습 영상</span>
+<ul>
+<li>1. 효·가족: "어머니 시한부..." (효율 6.2x · 학습 영상 3편)</li>
+<li>2. 권선징악: "사기당한 노부부..." (효율 5.8x)</li>
+<li>3. 혼인·치정: "신혼 첫날밤..." (효율 5.5x)</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor user"><span class="who">👤 사용자</span>선택</div>
+<div class="action-arrow">→</div>
+<div class="action-body">
+<span class="step-name">주제 선택</span>
+<code>"2번으로 가자"</code>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor claude"><span class="who">🤖 Claude</span>자동</div>
+<div class="action-arrow">⤵</div>
+<div class="action-body">
+<span class="step-name">📝 script-pd 스킬 자동 진입</span>
+<ul>
+<li>레퍼런스 영상 자동 수집 + 분석</li>
+<li>패턴 라이브러리 인사이트 자동 주입</li>
+<li>전략·아우트라인·드래프트 작성</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor user"><span class="who">👤 사용자</span>결정</div>
+<div class="action-arrow">→</div>
+<div class="action-body">
+<span class="step-name">중간 결정 2~3회</span>
+<ul>
+<li>Hook 3후보 중 선택</li>
+<li>컨셉 확정</li>
+<li>최종 검토 OK</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor system"><span class="who">📄 산출</span>완료</div>
+<div class="action-arrow">✅</div>
+<div class="action-body">
+<span class="step-name">최종 산출물</span>
+<ul>
+<li><code>{project}_script.txt</code> — TTS·영상 제작 가능</li>
+<li><code>youtube.md</code> — 제목·설명·태그</li>
+<li><code>thumbnails/prompts.json</code> — 썸네일 AI 프롬프트</li>
+<li><code>sources.md</code> — 출처 타임라인</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<h3>🆕 시나리오 2: 채널이 아직 없을 때 (예: 새 야담 채널)</h3>
+
+<div class="action-flow">
+
+<div class="action-row">
+<div class="action-actor user"><span class="who">👤 사용자</span>명령</div>
+<div class="action-arrow">→</div>
+<div class="action-body">
+<code>"새 야담 채널 만들어서 첫 영상 대본 만들어줘"</code>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor claude"><span class="who">🤖 Claude</span>자동</div>
+<div class="action-arrow">⤵</div>
+<div class="action-body">
+<span class="step-name">🔧 channel-setup 스킬 진입</span>
+<ul>
+<li><code>channels/_shared_corpus/yadam/BRIEF.md</code> 자동 로드</li>
+<li>벤치마크 분석 단계 자동 스킵 (이미 28편 corpus 있음)</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor claude"><span class="who">🤖 Claude</span>질문</div>
+<div class="action-arrow">⤵</div>
+<div class="action-body">
+<span class="step-name">최소 질문 2~3개</span>
+<ul>
+<li>채널 이름 (예: 야담의 향기)</li>
+<li>세부 톤 (낭독 톤 OR 대화 톤)</li>
+<li>발행 빈도</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor claude"><span class="who">🤖 Claude</span>자동</div>
+<div class="action-arrow">⤵</div>
+<div class="action-body">
+<span class="step-name">📁 채널 폴더·설정 자동 생성</span>
+<ul>
+<li><code>profile.md</code> (조선야담처녀 톤 자동 반영)</li>
+<li><code>settings.json</code> · <code>workflow.json</code></li>
+<li><code>thumbnail-strategy.json</code> (어두운 흙색·인물 클로즈업·노란 굵은 텍스트 등 패턴 라이브러리 반영)</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor claude"><span class="who">🤖 Claude</span>제안</div>
+<div class="action-arrow">⤵</div>
+<div class="action-body">
+<span class="step-name">시니어랩 추천 TOP3로 주제 자동 제안</span>
+<ul>
+<li>1. 효·가족 (점수 11,804)</li>
+<li>2. 권선징악·사이다 (11,176)</li>
+<li>3. 혼인·치정 (10,704)</li>
+</ul>
+</div>
+</div>
+
+<div class="action-row">
+<div class="action-actor user"><span class="who">👤 사용자</span>선택</div>
+<div class="action-arrow">→</div>
+<div class="action-body">
+주제 선택 → 시나리오 1의 <b>script-pd 진입</b> 흐름으로 합류
+</div>
+</div>
+
+</div>
+
+<h3>📋 추천 명령어 패턴</h3>
+
+<div class="cmd-card">
+<div class="cmd-input">"잘듣네 채널 주제 5개 추천해줘"</div>
+<span class="cmd-arrow">→</span>
+<div class="cmd-result">추천만 (대본 X)</div>
+</div>
+
+<div class="cmd-card">
+<div class="cmd-input">"잘듣네 채널 주제 찾아서 대본 만들어줘"</div>
+<span class="cmd-arrow">→</span>
+<div class="cmd-result">추천 + 사용자 선택 + 대본 풀세트</div>
+</div>
+
+<div class="cmd-card">
+<div class="cmd-input">"잘듣네 채널 효·가족 주제로 대본 만들어줘"</div>
+<span class="cmd-arrow">→</span>
+<div class="cmd-result">주제 명시 → 바로 대본 작업</div>
+</div>
+
+<div class="cmd-card">
+<div class="cmd-input">"이 영상 분석하고 잘듣네 톤으로 대본 만들어줘: URL"</div>
+<span class="cmd-arrow">→</span>
+<div class="cmd-result">autopsy + script-pd 한 흐름</div>
+</div>
+
+<div class="cmd-card">
+<div class="cmd-input">"오늘 가장 잘 나갈 만한 잘듣네 영상 1편 만들어줘"</div>
+<span class="cmd-arrow">→</span>
+<div class="cmd-result">추천 자동 선택 + 대본 (사용자 결정 최소)</div>
+</div>
+
+<h3>⚠️ 한계 (정직하게)</h3>
+
+<div class="compare">
+  <div class="compare-box good">
+    <div class="head">✅ 자동화되는 것</div>
+    <ul>
+      <li>TubeHacker 데이터 분석</li>
+      <li>채널 컨텍스트·corpus·패턴 자동 로드</li>
+      <li>주제 추천 + 학습 영상 매칭</li>
+      <li>script-pd 스킬 자동 진입</li>
+      <li>레퍼런스 수집·분석·전략·아웃라인·드래프트</li>
+      <li>썸네일 프롬프트 자동 생성</li>
+    </ul>
+  </div>
+  <div class="compare-box bad">
+    <div class="head">⚠️ 사용자가 결정해야 하는 것</div>
+    <ul>
+      <li>주제 선택 (3~5개 중 1)</li>
+      <li>Hook 3후보 중 1 선택</li>
+      <li>컨셉 확정·검토</li>
+      <li>발행 OK</li>
+      <li>채널이 없으면 채널명·톤 (질문 2~3회)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="insight">
+  <div class="insight-tag">💡 핵심 포인트</div>
+  <div class="insight-section">완전 무인 자동화 X — <b>의도된 설계</b></div>
+  <div class="insight-section">script-pd가 사용자 결정 단계를 두는 이유: <b>채널 톤·주제 방향성은 사람만 알 수 있기 때문</b></div>
+  <div class="insight-section">총 소요 시간: <b>30분~1시간</b> (데이터 분석 자동 + 사용자 결정 2~3회)</div>
+</div>
+
+<h3>🎯 지금 바로 시도해보기</h3>
+
+<div class="cmd-card" style="border-color:var(--primary-bd);background:var(--primary-bg);">
+<div class="cmd-input" style="background:var(--bg);color:var(--text);">"새 야담 채널 만들어서 첫 영상 대본 만들어줘"</div>
+<span class="cmd-arrow">→</span>
+<div class="cmd-result"><b style="color:var(--primary-hi);">현재 가장 데이터 풍부 (시니어랩 28편 corpus + 72편 야담)</b></div>
+</div>
+
+</div>
+</details>
+
+---
+
 ## 🖼️ 사이트 한눈에 보기
 
 <div class="mock">
