@@ -29,31 +29,37 @@ document.getElementById("candTabTracked").addEventListener("click", function(){ 
 document.querySelectorAll(".cand-check").forEach(function(cb){ cb.addEventListener("change", updateBar); });
 document.querySelectorAll(".trk-check").forEach(function(cb){ cb.addEventListener("change", updateBar); });
 
-var PAGE_SIZE = 50; var currentPage = 1; var currentCat = "";
-function matchFilter(card){
-  if (!currentCat) return true;
+var PAGE_SIZE = 50;
+var state = {
+  pending: { page: 1, cat: "", cardSel: ".cand-card", pagId: "candPagination" },
+  tracked: { page: 1, cat: "", cardSel: ".trk-card", pagId: "trkPagination" }
+};
+function matchFilter(card, cat){
+  if (!cat) return true;
   var cats = (card.dataset.catsFilter || "").split("|");
-  return cats.indexOf(currentCat) >= 0;
+  return cats.indexOf(cat) >= 0;
 }
-function applyDisplay(){
-  var allCards = document.querySelectorAll(".cand-card");
+function applyDisplay(tab){
+  var s = state[tab];
+  var allCards = document.querySelectorAll(s.cardSel);
   var matched = [];
-  allCards.forEach(function(card){ if (matchFilter(card)) matched.push(card); else card.style.display = "none"; });
+  allCards.forEach(function(card){ if (matchFilter(card, s.cat)) matched.push(card); else card.style.display = "none"; });
   var totalPages = Math.max(1, Math.ceil(matched.length / PAGE_SIZE));
-  if (currentPage > totalPages) currentPage = totalPages;
-  var start = (currentPage - 1) * PAGE_SIZE; var end = start + PAGE_SIZE;
+  if (s.page > totalPages) s.page = totalPages;
+  var start = (s.page - 1) * PAGE_SIZE; var end = start + PAGE_SIZE;
   matched.forEach(function(card, idx){ card.style.display = (idx >= start && idx < end) ? "block" : "none"; });
-  renderPagination(totalPages, matched.length);
+  renderPagination(tab, totalPages, matched.length);
 }
-function renderPagination(total, totalItems){
-  var pag = document.getElementById("candPagination"); if (!pag) return;
+function renderPagination(tab, total, totalItems){
+  var s = state[tab];
+  var pag = document.getElementById(s.pagId); if (!pag) return;
   pag.innerHTML = "";
-  if (totalItems === 0) { pag.textContent = "표시할 후보 없음"; return; }
+  if (totalItems === 0) { pag.textContent = "표시할 항목 없음"; return; }
   var info = document.createElement("span");
   info.style.color = "var(--text2)"; info.style.fontSize = "11px"; info.style.marginRight = "10px";
-  var s = (currentPage - 1) * PAGE_SIZE + 1;
-  var e = Math.min(currentPage * PAGE_SIZE, totalItems);
-  info.textContent = s + "~" + e + " / " + totalItems + "개";
+  var sStart = (s.page - 1) * PAGE_SIZE + 1;
+  var sEnd = Math.min(s.page * PAGE_SIZE, totalItems);
+  info.textContent = sStart + "~" + sEnd + " / " + totalItems + "개";
   pag.appendChild(info);
   function makeBtn(label, page, disabled, isCurrent){
     var b = document.createElement("button");
@@ -64,34 +70,39 @@ function renderPagination(total, totalItems){
     if (isCurrent) { b.style.background = "var(--primary)"; b.style.color = "#fff"; b.style.border = "1px solid var(--primary)"; }
     else { b.style.background = "var(--surface)"; b.style.color = "var(--text2)"; b.style.border = "1px solid var(--border)"; }
     if (disabled) b.style.opacity = "0.4";
-    if (!disabled && !isCurrent) b.addEventListener("click", function(){ currentPage = page; applyDisplay(); window.scrollTo({top:0, behavior:"smooth"}); });
+    if (!disabled && !isCurrent) b.addEventListener("click", function(){ s.page = page; applyDisplay(tab); window.scrollTo({top:0, behavior:"smooth"}); });
     return b;
   }
-  pag.appendChild(makeBtn("← 이전", currentPage - 1, currentPage <= 1));
+  pag.appendChild(makeBtn("← 이전", s.page - 1, s.page <= 1));
   var maxPagesShow = 7;
-  var startP = Math.max(1, currentPage - 3);
+  var startP = Math.max(1, s.page - 3);
   var endP = Math.min(total, startP + maxPagesShow - 1);
   startP = Math.max(1, endP - maxPagesShow + 1);
   if (startP > 1) { pag.appendChild(makeBtn("1", 1, false, false)); if (startP > 2) { var ell = document.createElement("span"); ell.textContent = "..."; ell.style.color = "var(--text3)"; pag.appendChild(ell); } }
-  for (var p = startP; p <= endP; p++) pag.appendChild(makeBtn(String(p), p, false, p === currentPage));
+  for (var p = startP; p <= endP; p++) pag.appendChild(makeBtn(String(p), p, false, p === s.page));
   if (endP < total) { if (endP < total - 1) { var ell2 = document.createElement("span"); ell2.textContent = "..."; ell2.style.color = "var(--text3)"; pag.appendChild(ell2); } pag.appendChild(makeBtn(String(total), total, false, false)); }
-  pag.appendChild(makeBtn("다음 →", currentPage + 1, currentPage >= total));
+  pag.appendChild(makeBtn("다음 →", s.page + 1, s.page >= total));
 }
-document.querySelectorAll(".pend-cat-filter").forEach(function(btn){
-  btn.addEventListener("click", function(){
-    document.querySelectorAll(".pend-cat-filter").forEach(function(b){
-      b.classList.remove("on");
-      b.style.background = "var(--surface)"; b.style.color = "var(--text2)";
-      b.style.border = "1px solid var(--border)"; b.style.fontWeight = "600";
+function wireCatFilter(selector, tab){
+  document.querySelectorAll(selector).forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelectorAll(selector).forEach(function(b){
+        b.classList.remove("on");
+        b.style.background = "var(--surface)"; b.style.color = "var(--text2)";
+        b.style.border = "1px solid var(--border)"; b.style.fontWeight = "600";
+      });
+      btn.classList.add("on");
+      btn.style.background = "var(--primary)"; btn.style.color = "#fff";
+      btn.style.border = "1px solid var(--primary)"; btn.style.fontWeight = "700";
+      state[tab].cat = btn.dataset.cat; state[tab].page = 1; applyDisplay(tab);
     });
-    btn.classList.add("on");
-    btn.style.background = "var(--primary)"; btn.style.color = "#fff";
-    btn.style.border = "1px solid var(--primary)"; btn.style.fontWeight = "700";
-    currentCat = btn.dataset.cat; currentPage = 1; applyDisplay();
   });
-});
+}
+wireCatFilter(".pend-cat-filter", "pending");
+wireCatFilter(".trk-cat-filter", "tracked");
 
-applyDisplay();
+applyDisplay("pending");
+applyDisplay("tracked");
 
 document.getElementById("candStickyClear").addEventListener("click", function(){
   document.querySelectorAll(".cand-check:checked, .trk-check:checked").forEach(function(cb){ cb.checked = false; });
