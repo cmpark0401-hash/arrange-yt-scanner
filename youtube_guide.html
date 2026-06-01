@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#a855f7">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>🎓 유튜브 최신 가이드</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+:root {
+  /* 다크 베이스 */
+  --bg:#0a0a12; --surface:#13131c; --surface2:#1a1a26;
+  --border:#26263a; --divider:#1f1f30; --hover:#1e1e2e;
+  /* 텍스트 */
+  --text:#ededf2; --text2:#9696a6; --text3:#6c6c80;
+  /* 키 컬러 — 보라 (알고리즘 해킹) */
+  --primary:#a855f7; --primary-hi:#c084fc; --primary-bg:rgba(168,85,247,.12); --primary-bd:rgba(168,85,247,.35);
+  /* 보조 강조 */
+  --hot:#84cc16;        /* 라임 — 폭발/검증 */
+  --hot-bg:rgba(132,204,22,.10); --hot-bd:rgba(132,204,22,.35);
+  --warn:#ff7a45;       /* 오렌지 — 시그널 */
+  --warn-bg:rgba(255,122,69,.10); --warn-bd:rgba(255,122,69,.35);
+  --danger:#ef4444;     /* 빨강 — 폭락 */
+  --danger-bg:rgba(239,68,68,.10); --danger-bd:rgba(239,68,68,.35);
+  --up:#4ade80; --down:#ef4444;  /* 등락 */
+  --info:#60a5fa; --info-bg:rgba(96,165,250,.10);
+  /* 호환 (구 변수명) */
+  --blue:var(--primary); --green:var(--up); --red:var(--danger); --purple:var(--primary-hi);
+  --chip:rgba(168,85,247,.13);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Inter','Noto Sans KR',-apple-system,sans-serif;
+  line-height:1.5; color:var(--text); background:var(--bg);
+  max-width:1320px; margin:0 auto; padding:18px 20px 48px;
+  -webkit-font-smoothing:antialiased; font-feature-settings:'cv11','ss01';
+}
+header { padding:14px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px;
+         display:flex; flex-wrap:wrap; align-items:center; gap:14px; }
+header .brand-block { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+header h1 { font-size:13px; font-weight:400; color:var(--text2); line-height:1.3; letter-spacing:0; display:flex; align-items:baseline; gap:8px; }
+header h1 .brand-flag { font-size:18px; line-height:1; }
+header h1 .brand-accent { color:var(--primary); font-weight:800; font-size:22px; letter-spacing:-0.5px; transition:color .15s; }
+header .brand-link:hover h1 .brand-accent { color:var(--primary-hi); }
+header .brand-link:hover h1 .brand-slogan { color:var(--text); }
+header h1 .brand-divider { color:var(--text3); margin:0 2px; }
+header h1 .brand-slogan { font-size:13px; color:var(--text2); font-weight:400; }
+header .sub { color:var(--text3); font-size:12px; margin-top:4px; flex-basis:100%; }
+header .header-chips { display:flex; gap:6px; margin-left:auto; flex-wrap:wrap; align-items:center; }
+.h-chip { display:inline-flex; align-items:center; gap:5px; padding:5px 11px; border-radius:13px;
+          background:var(--surface); border:1px solid var(--border); font-size:12px; color:var(--text2); font-weight:500; }
+.h-chip b { color:var(--text); font-weight:700; font-variant-numeric:tabular-nums; }
+.h-chip.warn { border-color:var(--warn-bd); background:var(--warn-bg); color:var(--warn); }
+.h-chip.warn b { color:var(--warn); }
+.h-chip.hot { border-color:var(--hot-bd); background:var(--hot-bg); color:var(--hot); }
+.h-chip.hot b { color:var(--hot); }
+.h-chip.info { border-color:var(--primary-bd); background:var(--primary-bg); color:var(--primary-hi); }
+.h-chip.info b { color:var(--primary-hi); }
+.h-chip.jp { background:linear-gradient(135deg,#fff 0%,#fff5f5 100%); border:1.5px solid #ff4d4f; color:#0a0a12; font-weight:800; cursor:pointer; transition:all .15s; box-shadow:0 1px 3px rgba(255,77,79,.18); }
+.h-chip.jp:hover { background:linear-gradient(135deg,#fff5f5 0%,#ffe0e0 100%); border-color:#e63030; text-decoration:none; transform:translateY(-1px); box-shadow:0 2px 6px rgba(255,77,79,.28); }
+.h-chip.white { background:#fff; border-color:#fff; color:#0a0a12; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.white:hover { background:#e8e8f0; border-color:#e8e8f0; color:#000; text-decoration:none; }
+.h-chip.pulse { background:rgba(34,197,94,.13); border-color:rgba(34,197,94,.55); color:#22c55e; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.pulse b { color:#22c55e; }
+.h-chip.pulse:hover { background:rgba(34,197,94,.22); border-color:#22c55e; transform:translateY(-1px); text-decoration:none; }
+.h-chip.ytg { background:linear-gradient(135deg,rgba(245,158,11,.15) 0%,rgba(251,191,36,.15) 100%); border:1.5px solid rgba(245,158,11,.6); color:#fbbf24; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.ytg:hover { background:linear-gradient(135deg,rgba(245,158,11,.25) 0%,rgba(251,191,36,.25) 100%); border-color:#fbbf24; transform:translateY(-1px); text-decoration:none; }
+.h-chip.secondary { background:transparent; border-color:var(--border); color:var(--text2); font-weight:600; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.secondary:hover { background:var(--surface); border-color:var(--primary-bd); color:var(--text); text-decoration:none; }
+a.h-chip.warn, a.h-chip.hot, a.h-chip.info { cursor:pointer; transition:all .15s; text-decoration:none; }
+a.h-chip.warn:hover, a.h-chip.hot:hover, a.h-chip.info:hover { transform:translateY(-1px); text-decoration:none; filter:brightness(1.1); }
+/* chip hover 툴팁 */
+.h-chip[data-tip] { position:relative; }
+.h-chip[data-tip]:hover::after {
+  content: attr(data-tip);
+  position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%);
+  background:#0a0a12; color:#fff; padding:7px 11px; border-radius:7px;
+  font-size:11px; font-weight:600; white-space:nowrap; letter-spacing:.2px;
+  border:1px solid rgba(255,255,255,.12); box-shadow:0 4px 14px rgba(0,0,0,.5);
+  z-index:1000; pointer-events:none;
+  animation:tipFade .15s ease-out;
+}
+.h-chip[data-tip]:hover::before {
+  content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  margin-top:2px; border:6px solid transparent; border-bottom-color:#0a0a12;
+  z-index:1001; pointer-events:none;
+  animation:tipFade .15s ease-out;
+}
+@keyframes tipFade { from { opacity:0; transform:translateX(-50%) translateY(-3px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+a { color:var(--primary-hi); text-decoration:none; transition:color .15s; }
+a:hover { color:var(--primary); text-decoration:none; }
+
+/* 요약 카드 */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:22px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px 18px; transition:transform .15s, border-color .15s; }
+.card:hover { transform:translateY(-1px); border-color:var(--primary-bd); }
+.card .label { font-size:12px; color:var(--text2); margin-bottom:8px; font-weight:600; display:flex; align-items:center; gap:5px; text-transform:none; letter-spacing:0; }
+.card .value { font-size:30px; font-weight:800; letter-spacing:-0.6px; line-height:1.05; font-variant-numeric:tabular-nums; }
+.card.tone-red { background:var(--danger-bg); border-color:var(--danger-bd); }
+.card.tone-red .value { color:var(--danger); }
+.card.tone-green { background:var(--hot-bg); border-color:var(--hot-bd); }
+.card.tone-green .value { color:var(--hot); }
+.card.tone-blue { background:var(--primary-bg); border-color:var(--primary-bd); }
+.card.tone-blue .value { color:var(--primary-hi); }
+.card.tone-purple { background:rgba(168,85,247,.18); border-color:rgba(168,85,247,.4); }
+.card.tone-purple .value { color:var(--primary-hi); }
+.card.tone-warn { background:var(--warn-bg); border-color:var(--warn-bd); }
+.card.tone-warn .value { color:var(--warn); }
+
+/* 카테고리 탭 */
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:18px 0 14px; }
+.tab { padding:6px 13px; border-radius:16px; background:var(--surface); color:var(--text2);
+       font-size:13px; font-weight:600; cursor:pointer; border:1px solid var(--border); transition:all .15s; }
+.tab:hover { border-color:var(--primary-bd); color:var(--text); }
+.tab.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+.tab .cnt { font-size:11px; opacity:.85; margin-left:5px; padding:1px 6px; background:rgba(255,255,255,.15); border-radius:8px; }
+
+/* 필터 바 */
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:18px;
+           padding:12px 16px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
+.filter-group { display:flex; gap:5px; align-items:center; }
+.filter-group .lbl { font-size:11px; color:var(--text2); margin-right:5px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--bg); }
+.seg button { padding:6px 12px; border:none; background:transparent; font-size:13px; cursor:pointer; color:var(--text2); font-weight:500; transition:all .15s; }
+.seg button:hover { color:var(--text); background:var(--hover); }
+.seg button.active { background:var(--primary); color:#fff; }
+.toggle { display:flex; align-items:center; gap:7px; font-size:13px; color:var(--text); cursor:pointer; }
+.toggle input[type=checkbox] { appearance:none; width:32px; height:18px; background:var(--border); border-radius:9px; position:relative; cursor:pointer; transition:background .2s; }
+.toggle input[type=checkbox]::after { content:''; position:absolute; top:2px; left:2px; width:14px; height:14px; background:#fff; border-radius:50%; transition:transform .2s; }
+.toggle input[type=checkbox]:checked { background:var(--primary); }
+.toggle input[type=checkbox]:checked::after { transform:translateX(14px); }
+#search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
+          border-radius:18px; font-size:13px; background:var(--bg); color:var(--text); }
+#search::placeholder { color:var(--text3); }
+#search:focus { outline:none; border-color:var(--primary); background:var(--surface); }
+
+/* 채널 카드 그리드 */
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:16px; }
+.ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+           padding:18px; transition:all .18s; position:relative; }
+.ch-card:hover { border-color:var(--primary-bd); transform:translateY(-2px); box-shadow:0 8px 24px rgba(168,85,247,.12); }
+.ch-card.rank-1 { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.ch-card.rank-2 { border-color:rgba(196,196,196,.45); background:linear-gradient(180deg, rgba(196,196,196,.05) 0%, var(--surface) 60%); }
+.ch-card.rank-3 { border-color:rgba(205,127,50,.45); background:linear-gradient(180deg, rgba(205,127,50,.05) 0%, var(--surface) 60%); }
+.ch-rank-badge { position:absolute; top:-9px; left:16px; padding:2px 9px; border-radius:10px;
+                 background:var(--surface2); border:1px solid var(--border); font-size:11px; font-weight:700; color:var(--text2); font-variant-numeric:tabular-nums; }
+.ch-rank-badge.rank-1 { background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; border-color:#ffd700; }
+.ch-rank-badge.rank-2 { background:linear-gradient(135deg,#e0e0e0,#a8a8a8); color:#000; border-color:#c0c0c0; }
+.ch-rank-badge.rank-3 { background:linear-gradient(135deg,#cd7f32,#8b4513); color:#fff; border-color:#cd7f32; }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:10px; }
+.ch-name { font-size:16px; font-weight:700; line-height:1.3; flex:1; min-width:0; color:var(--text); }
+.ch-name .delta { font-size:11px; margin-left:6px; vertical-align:middle; font-weight:700; }
+.ch-name .delta.up { color:var(--up); }
+.ch-name .delta.down { color:var(--down); }
+.ch-name .delta.flat { color:var(--text3); }
+.ch-meta { font-size:12px; color:var(--text2); margin-top:3px; font-weight:500; }
+.ch-type { font-size:10px; padding:2px 8px; border-radius:8px; background:var(--bg); color:var(--text2); white-space:nowrap; font-weight:700; border:1px solid var(--border); text-transform:uppercase; letter-spacing:.3px; }
+.ch-cats { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0; }
+.ch-cat { font-size:11px; padding:2px 9px; border-radius:9px; background:var(--primary-bg); color:var(--primary-hi); font-weight:600; border:1px solid var(--primary-bd); }
+.ch-stats { display:flex; gap:14px; margin:12px 0; padding:10px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:11px; color:var(--text2); flex:1; min-width:0; font-weight:500; }
+.ch-stat b { font-size:18px; color:var(--text); font-weight:800; display:block; font-variant-numeric:tabular-nums; line-height:1.1; margin-bottom:2px; letter-spacing:-0.3px; }
+.ch-stat.sig b { color:var(--danger); }
+.ch-stat.hot b { color:var(--hot); }
+.ch-vid { margin-top:10px; font-size:12px; }
+.ch-vid .vlabel { font-size:10px; color:var(--text2); font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.ch-vid .vlabel.popular { color:var(--warn); }
+.ch-vid .vlabel.latest { color:var(--hot); }
+.ch-vid .vtitle { font-size:13px; font-weight:500; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:4px; color:var(--text); line-height:1.4; }
+.ch-vid .vmeta { font-size:11px; color:var(--text3); margin-top:3px; }
+.ch-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; padding-top:12px; border-top:1px solid var(--divider); }
+.ch-vid-col { min-width:0; }
+.ch-thumb-mini { width:100%; aspect-ratio:16/9; background:var(--bg); border-radius:6px; overflow:hidden; margin-bottom:6px; border:1px solid var(--border); position:relative; }
+.ch-thumb-mini img { width:100%; height:100%; object-fit:cover; display:block; }
+.ch-thumb-mini .views-badge { position:absolute; bottom:4px; right:4px; font-size:10px; padding:1px 5px; border-radius:4px; background:rgba(0,0,0,.78); color:#fff; font-weight:700; font-variant-numeric:tabular-nums; }
+/* 스파크라인 (7일 추세) */
+.ch-spark { margin-top:6px; padding-top:6px; border-top:1px dashed var(--divider); display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; color:var(--text2); }
+.ch-spark canvas { flex:1; height:24px !important; max-width:140px; }
+.ch-spark .spark-val { font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
+.ch-freq { font-size:11px; color:var(--text2); display:inline-flex; align-items:center; gap:4px; padding:2px 7px; border-radius:8px; background:var(--bg); border:1px solid var(--border); white-space:nowrap; font-weight:600; }
+.empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
+
+section { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; margin-bottom:18px; }
+section h2 { font-size:18px; font-weight:700; margin-bottom:14px; letter-spacing:-0.3px; }
+.archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:11px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:600; transition:all .15s; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.archive-grid a.today { background:var(--primary); border-color:var(--primary); color:#fff; }
+.nav-links { margin:14px 0; display:flex; gap:7px; flex-wrap:wrap; }
+.nav-links a { background:var(--surface); padding:8px 15px; border-radius:18px; font-size:13px; font-weight:600; color:var(--text2); border:1px solid var(--border); transition:all .15s; }
+.nav-links a:hover { border-color:var(--primary-bd); color:var(--text); }
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:7px 14px; border:1px solid var(--border);
+  border-radius:18px; font-size:13px; font-weight:700; color:var(--text); background:var(--surface); transition:all .15s; }
+.country-switch:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.shell-head { position:sticky; top:0; z-index:50; background:var(--bg); padding-top:6px; border-bottom:1px solid var(--divider); backdrop-filter:blur(8px); }
+.nav-links a.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
+#view { min-height:60vh; }
+.view-loading { padding:60px 20px; text-align:center; color:var(--text2); font-size:14px; }
+.info-bar { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:13px 16px; margin:8px 0 18px; font-size:12px; color:var(--text2); line-height:1.8; }
+.info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:600; font-size:13px; }
+.info-bar b { color:var(--text); font-weight:700; }
+.legend-item { display:inline-block; margin-right:14px; white-space:nowrap; font-size:12px; }
+.nav-links a.nav-primary { background:rgba(168,85,247,.10); color:var(--primary-hi); border:2px solid var(--primary); font-weight:700; padding:7px 14px; }
+.nav-links a.nav-primary:hover { background:rgba(168,85,247,.18); color:var(--primary-hi); border-color:var(--primary-hi); }
+.nav-links a.nav-primary.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
+/* 새 메시지 알림 스타일 배지 */
+.nav-links a { position:relative; }
+.nav-badge { display:inline-flex; align-items:center; justify-content:center; min-width:18px; height:18px; padding:0 5px; margin-left:6px; border-radius:9px; background:var(--danger); color:#fff; font-size:10px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums; vertical-align:middle; }
+.nav-badge.fresh { background:var(--danger); box-shadow:0 0 0 0 rgba(239,68,68,.7); animation:nav-pulse 2s infinite; }
+@keyframes nav-pulse {
+  0% { box-shadow:0 0 0 0 rgba(239,68,68,.7); }
+  70% { box-shadow:0 0 0 8px rgba(239,68,68,0); }
+  100% { box-shadow:0 0 0 0 rgba(239,68,68,0); }
+}
+.nav-badge.dim { background:var(--surface2); color:var(--text2); border:1px solid var(--border); animation:none; box-shadow:none; }
+.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
+.rec-group h3 { font-size:14px; font-weight:700; margin:6px 0 10px; }
+.rec-card { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:13px; margin-bottom:9px; transition:all .15s; }
+.rec-card:hover { border-color:var(--primary-bd); }
+.rec-rank { color:var(--text3); font-weight:600; font-size:11px; margin-right:5px; }
+.rec-topic { font-size:14px; font-weight:700; margin-bottom:4px; color:var(--text); }
+.rec-date { font-size:11px; color:var(--hot); font-weight:600; margin-bottom:3px; }
+.rec-why { font-size:11px; color:var(--text2); margin-bottom:6px; }
+.rec-ref { font-size:11px; display:inline-block; }
+.rec-empty { color:var(--text2); padding:16px; font-size:12px; }
+.hot-flag { display:inline-block; font-size:10px; font-weight:700; padding:1px 7px; border-radius:8px; background:var(--danger-bg); color:var(--danger); white-space:nowrap; border:1px solid var(--danger-bd); }
+.reedit-box { background:var(--danger-bg); border:1px solid var(--danger-bd); border-radius:12px; padding:13px 16px; margin:10px 0 18px; }
+.reedit-head { font-size:15px; font-weight:700; color:var(--text); }
+.reedit-sub { display:block; font-size:11px; font-weight:500; color:var(--text2); margin-top:3px; }
+.reedit-card { padding:9px 0; border-top:1px solid rgba(239,68,68,.18); }
+.reedit-card:first-of-type { border-top:none; }
+.reedit-line1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.reedit-line1 .row-title { max-width:420px; font-weight:600; }
+.reedit-meta { font-size:11px; color:var(--text2); margin-top:3px; padding-left:24px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } header { flex-direction:column; align-items:flex-start; } header .header-chips { margin-left:0; } }
+footer { text-align:center; color:var(--text3); font-size:11px; padding:24px 0 8px; }
+
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:auto; margin:10px 0 16px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+thead th { text-align:left; font-weight:700; font-size:11px; color:var(--text2);
+  padding:10px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:var(--surface2); text-transform:uppercase; letter-spacing:.3px; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; color:var(--text); }
+tbody tr:last-child td { border-bottom:none; }
+tbody tr:hover { background:var(--hover); }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:700; font-variant-numeric:tabular-nums; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.num.lead { color:var(--text); font-weight:700; }
+.muted { color:var(--text2); }
+.cat-badge { display:inline-block; font-size:10px; padding:2px 9px; border-radius:10px; font-weight:700; white-space:nowrap; background:var(--primary-bg); color:var(--primary-hi); border:1px solid var(--primary-bd); }
+.kw { font-weight:700; font-size:14px; }
+.cellv { display:flex; flex-direction:column; gap:1px; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; color:var(--text); font-weight:500; }
+.row-sub { font-size:11px; color:var(--text2); }
+.ch-tag { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--bg); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.vid-list { display:flex; flex-direction:column; gap:6px; }
+.vd-row { display:flex; flex-direction:column; gap:1px; max-width:560px; }
+.vd-title { font-size:12px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
+.vd-meta { font-size:11px; color:var(--text2); }
+.vd-date { color:var(--hot); font-weight:600; }
+.rep-sec { margin:24px 0 6px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:17px; font-weight:800; color:var(--text); letter-spacing:-0.3px; }
+.rep-sec .cnt { font-size:12px; color:var(--text2); font-weight:500; }
+.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
+section table { margin:10px 0; }
+
+.news-list { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+.news-row { display:flex; gap:12px; align-items:baseline; padding:13px 16px; border-bottom:1px solid var(--divider); }
+.news-row:last-child { border-bottom:none; }
+.news-row:hover { background:var(--hover); }
+.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; }
+.news-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.news-title { font-size:13px; font-weight:600; color:var(--text); white-space:normal; }
+.news-title:hover { color:var(--primary-hi); }
+.news-meta { font-size:11px; color:var(--text2); display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.news-src { color:var(--hot); font-weight:700; }
+.news-cat { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; border:1px solid var(--primary-bd); }
+.news-orig { font-size:11px; color:var(--text2); }
+.date-nav { display:flex; flex-wrap:wrap; gap:5px; margin:10px 0 14px; align-items:center; font-size:12px; }
+.date-nav .lbl { color:var(--text2); margin-right:4px; font-weight:700; text-transform:uppercase; letter-spacing:.3px; font-size:11px; }
+.date-nav a { padding:4px 10px; border-radius:13px; background:var(--surface); color:var(--text2); font-weight:600; border:1px solid var(--border); transition:all .15s; }
+.date-nav a:hover { border-color:var(--primary-bd); color:var(--text); }
+.date-nav a.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+
+.subtab-nav { display:flex; gap:6px; margin:6px 0 14px; }
+.subtab { padding:7px 14px; border-radius:18px; background:var(--surface); color:var(--text2); font-size:13px; font-weight:600; border:1px solid var(--border); cursor:pointer; }
+.subtab:hover { border-color:var(--primary-bd); color:var(--text); }
+.subtab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+.subtab.dim { opacity:.45; cursor:not-allowed; }
+.chan-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:10px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; margin:3px 4px 0 0; border:1px solid var(--primary-bd); }
+
+/* Manual (사용 가이드) — 시각 컴포넌트 */
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
+
+/* 단계 카드 (1→2→3 가로 흐름) */
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin:14px 0; }
+.step { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; position:relative; }
+.step .step-num { position:absolute; top:-10px; left:14px; background:var(--primary); color:#fff; font-weight:800; font-size:12px; padding:3px 10px; border-radius:10px; }
+.step .step-title { font-weight:700; color:var(--text); font-size:14px; margin:6px 0 6px; }
+.step .step-body { font-size:12px; color:var(--text2); line-height:1.6; }
+.step.hot { border-color:var(--hot-bd); background:var(--hot-bg); }
+.step.hot .step-num { background:var(--hot); color:#000; }
+.step.warn { border-color:var(--warn-bd); background:var(--warn-bg); }
+.step.warn .step-num { background:var(--warn); color:#000; }
+
+/* 사이트 UI 미니어처 — 실제 페이지처럼 */
+.mock { background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:12px; margin:14px 0; }
+.mock-header { display:flex; align-items:baseline; gap:8px; padding-bottom:8px; border-bottom:1px solid var(--divider); margin-bottom:10px; }
+.mock-brand { font-size:14px; font-weight:800; color:var(--primary); }
+.mock-slogan { font-size:10px; color:var(--text2); }
+.mock-chips { margin-left:auto; display:flex; gap:5px; }
+.mock-chip { font-size:10px; padding:3px 8px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--text2); font-weight:600; }
+.mock-chip.warn { color:var(--warn); border-color:var(--warn-bd); background:var(--warn-bg); }
+.mock-chip.hot { color:var(--hot); border-color:var(--hot-bd); background:var(--hot-bg); }
+.mock-chip b { color:var(--text); }
+.mock-chip.warn b { color:var(--warn); }
+.mock-chip.hot b { color:var(--hot); }
+.mock-tabs { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0 10px; }
+.mock-tab { font-size:11px; padding:5px 10px; border-radius:13px; background:var(--surface); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.mock-tab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+.mock-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 13px; margin:6px 0; position:relative; }
+.mock-card.crown { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.mock-rank-badge { display:inline-block; background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; font-size:11px; font-weight:800; padding:2px 8px; border-radius:8px; margin-right:6px; }
+.mock-ch-name { font-size:13px; font-weight:700; color:var(--text); display:inline; }
+.mock-delta { color:var(--up); font-weight:700; font-size:11px; margin-left:6px; }
+.mock-meta-line { font-size:11px; color:var(--text2); margin-top:3px; }
+.mock-stats-row { display:flex; gap:14px; margin:7px 0; padding:6px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.mock-stat { font-size:10px; color:var(--text2); }
+.mock-stat b { display:block; font-size:13px; font-weight:800; color:var(--text); }
+.mock-stat.sig b { color:var(--danger); }
+.mock-stat.hot b { color:var(--hot); }
+.mock-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; padding-top:8px; border-top:1px solid var(--divider); }
+.mock-vid-mini { font-size:10px; }
+.mock-vid-mini .lbl { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.mock-vid-mini .lbl.pop { color:var(--warn); }
+.mock-vid-mini .lbl.latest { color:var(--hot); }
+.mock-vid-thumb { background:linear-gradient(135deg, #3a3a4a, #1a1a26); height:55px; border-radius:5px; margin:3px 0; display:flex; align-items:center; justify-content:center; color:var(--text3); font-size:9px; }
+.mock-vid-mini .title { font-size:11px; color:var(--text); line-height:1.3; }
+.mock-pointer { display:inline-block; background:var(--primary); color:#fff; font-size:10px; font-weight:700; padding:3px 9px; border-radius:5px; position:absolute; }
+.mock-pointer::before { content:"👉 "; }
+
+/* 인포그래픽 게이지 */
+.gauge { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; }
+.gauge-title { font-size:13px; font-weight:700; color:var(--text); margin-bottom:8px; }
+.gauge-bar { height:24px; border-radius:8px; background:linear-gradient(90deg, #4ade80 0%, #4ade80 30%, #facc15 30%, #facc15 60%, #ff7a45 60%, #ff7a45 80%, #ef4444 80%); position:relative; overflow:hidden; }
+.gauge-labels { display:flex; justify-content:space-between; margin-top:4px; font-size:10px; color:var(--text2); }
+.gauge-pointer { position:absolute; top:-2px; bottom:-2px; width:3px; background:var(--text); border-radius:2px; box-shadow:0 0 0 2px var(--surface); }
+
+/* 메트릭 인포그래픽 카드 */
+.metric-card { display:flex; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:10px 0; }
+.metric-icon { font-size:26px; flex-shrink:0; }
+.metric-body { flex:1; min-width:0; }
+.metric-body .name { font-size:14px; font-weight:800; color:var(--text); }
+.metric-body .formula { font-size:11px; color:var(--text2); margin:3px 0; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+.metric-body .meaning { font-size:12px; color:var(--text); margin-top:5px; }
+.metric-grades { display:flex; gap:6px; margin-top:8px; }
+.metric-grades .grade { font-size:10px; padding:3px 8px; border-radius:6px; font-weight:700; }
+.metric-grades .grade.good { background:rgba(74,222,128,.15); color:var(--up); border:1px solid rgba(74,222,128,.4); }
+.metric-grades .grade.mid { background:rgba(250,204,21,.15); color:#facc15; border:1px solid rgba(250,204,21,.4); }
+.metric-grades .grade.bad { background:rgba(239,68,68,.15); color:var(--danger); border:1px solid rgba(239,68,68,.4); }
+
+/* 시간 룰러 (첫 사건 시점) */
+.ruler { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; position:relative; }
+.ruler-track { height:50px; background:linear-gradient(90deg, var(--hot) 0%, var(--hot) 33%, var(--warn) 33%, var(--warn) 66%, var(--danger) 66%); border-radius:8px; position:relative; }
+.ruler-marker { position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--text); box-shadow:0 0 0 2px var(--surface); }
+.ruler-marker::after { content:attr(data-label); position:absolute; top:-22px; left:50%; transform:translateX(-50%); background:var(--text); color:var(--bg); font-size:10px; font-weight:700; padding:2px 7px; border-radius:5px; white-space:nowrap; }
+.ruler-scale { display:flex; justify-content:space-between; margin-top:6px; font-size:10px; color:var(--text2); }
+.ruler-labels { display:flex; justify-content:space-between; margin-top:3px; font-size:9px; color:var(--text2); font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+
+/* 흐름 다이어그램 (큰 화살표 박스) */
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px; align-items:stretch; margin:14px 0; }
+.flow-node { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; position:relative; }
+.flow-node .icon { font-size:24px; display:block; margin-bottom:5px; }
+.flow-node .title { font-size:12px; font-weight:700; color:var(--text); }
+.flow-node .sub { font-size:10px; color:var(--text2); margin-top:3px; }
+.flow-node.primary { background:var(--primary-bg); border-color:var(--primary-bd); }
+.flow-node.primary .title { color:var(--primary-hi); }
+
+/* 좋은 예 vs 나쁜 예 박스 */
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0; }
+.compare-box { padding:14px; border-radius:10px; border:1px solid; }
+.compare-box.good { background:rgba(74,222,128,.07); border-color:rgba(74,222,128,.35); }
+.compare-box.bad { background:rgba(239,68,68,.07); border-color:rgba(239,68,68,.35); }
+.compare-box .head { font-size:13px; font-weight:800; margin-bottom:6px; }
+.compare-box.good .head { color:var(--up); }
+.compare-box.bad .head { color:var(--danger); }
+.compare-box ul { margin:5px 0 0 18px; }
+.compare-box li { font-size:12px; line-height:1.55; margin:3px 0; }
+
+/* TL;DR callout */
+.tldr { background:linear-gradient(135deg, var(--primary-bg), var(--info-bg)); border:1px solid var(--primary-bd); border-radius:10px; padding:14px 16px; margin:14px 0; }
+.tldr-title { font-size:13px; font-weight:800; color:var(--primary-hi); margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
+.tldr-body { font-size:13px; color:var(--text); line-height:1.65; }
+
+/* 클코 자동화 가이드 (접이식 details) */
+details.auto-guide { background:linear-gradient(135deg, var(--primary-bg), rgba(132,204,22,.04)); border:2px solid var(--primary-bd); border-radius:14px; padding:0; margin:18px 0; overflow:hidden; }
+details.auto-guide > summary { cursor:pointer; list-style:none; padding:18px 22px; font-size:16px; font-weight:800; color:var(--primary-hi); display:flex; align-items:center; gap:10px; user-select:none; transition:background .15s; }
+details.auto-guide > summary::-webkit-details-marker { display:none; }
+details.auto-guide > summary:hover { background:rgba(168,85,247,.08); }
+details.auto-guide > summary::after { content:"▼ 펼쳐서 보기"; margin-left:auto; font-size:11px; font-weight:600; color:var(--text2); padding:5px 11px; background:var(--surface); border:1px solid var(--border); border-radius:14px; }
+details.auto-guide[open] > summary::after { content:"▲ 접기"; }
+details.auto-guide .auto-body { padding:6px 22px 24px; border-top:1px solid var(--primary-bd); }
+details.auto-guide h3 { margin-top:22px; font-size:16px; color:var(--text); }
+details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi); }
+
+/* 액션 흐름 — 사용자 vs Claude 구분 */
+.action-flow { display:flex; flex-direction:column; gap:10px; margin:14px 0; }
+.action-row { display:flex; align-items:flex-start; gap:12px; }
+.action-actor { flex-shrink:0; width:80px; padding:8px 10px; border-radius:10px; text-align:center; font-size:11px; font-weight:700; }
+.action-actor.user { background:rgba(255,122,69,.15); color:var(--warn); border:1px solid var(--warn-bd); }
+.action-actor.claude { background:var(--primary-bg); color:var(--primary-hi); border:1px solid var(--primary-bd); }
+.action-actor.system { background:rgba(96,165,250,.13); color:#60a5fa; border:1px solid rgba(96,165,250,.4); }
+.action-actor .who { display:block; font-size:9px; opacity:.7; text-transform:uppercase; letter-spacing:.5px; margin-bottom:2px; }
+.action-arrow { flex-shrink:0; color:var(--text3); font-size:18px; align-self:center; }
+.action-body { flex:1; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:13px; color:var(--text); line-height:1.55; }
+.action-body code { background:var(--surface2); color:var(--primary-hi); padding:1px 5px; border-radius:4px; font-size:11.5px; }
+.action-body .step-name { font-weight:700; color:var(--text); display:block; margin-bottom:3px; font-size:12px; }
+.action-body ul { margin:4px 0 0 16px; }
+.action-body li { font-size:12px; color:var(--text2); margin:2px 0; }
+
+/* 명령어 예시 카드 */
+.cmd-card { display:flex; align-items:center; gap:12px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 14px; margin:6px 0; }
+.cmd-card .cmd-input { flex:1; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; color:var(--primary-hi); background:var(--surface2); padding:6px 10px; border-radius:6px; }
+.cmd-card .cmd-arrow { color:var(--text3); font-size:16px; }
+.cmd-card .cmd-result { flex:1; font-size:12px; color:var(--text2); }
+
+/* 강조 인용 박스 (인사이트 예시) */
+.insight { background:var(--surface); border-left:4px solid var(--hot); border-radius:0 10px 10px 0; padding:13px 16px; margin:14px 0; }
+.insight-tag { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:var(--hot); margin-bottom:5px; }
+.insight-section { margin:6px 0; font-size:12.5px; line-height:1.6; }
+.insight-section b { color:var(--hot); }
+
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
+.manual-body h1 { font-size:28px; font-weight:800; margin:24px 0 12px; color:var(--text); letter-spacing:-0.5px; }
+.manual-body h2 { font-size:22px; font-weight:800; margin:32px 0 12px; padding-top:16px; border-top:1px solid var(--divider); color:var(--primary-hi); letter-spacing:-0.3px; }
+.manual-body h3 { font-size:17px; font-weight:700; margin:20px 0 8px; color:var(--text); }
+.manual-body h4 { font-size:15px; font-weight:700; margin:14px 0 6px; color:var(--text2); }
+.manual-body p { margin:10px 0; }
+.manual-body ul, .manual-body ol { margin:10px 0 14px 22px; }
+.manual-body li { margin:5px 0; }
+.manual-body strong, .manual-body b { color:var(--text); font-weight:700; }
+.manual-body code { background:var(--surface2); color:var(--primary-hi); padding:1px 6px; border-radius:5px; font-size:0.92em; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; border:1px solid var(--border); }
+.manual-body pre { background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:14px 16px; overflow-x:auto; margin:14px 0; line-height:1.55; font-size:12.5px; }
+.manual-body pre code { background:none; border:none; padding:0; color:var(--text); }
+.manual-body blockquote { border-left:3px solid var(--primary); background:var(--primary-bg); padding:10px 14px; margin:14px 0; border-radius:0 8px 8px 0; color:var(--text); font-size:13px; }
+.manual-body table { width:100%; border-collapse:collapse; margin:14px 0; font-size:13px; background:var(--surface); border-radius:8px; overflow:hidden; }
+.manual-body th { background:var(--surface2); color:var(--text); font-weight:700; padding:9px 12px; text-align:left; border-bottom:1px solid var(--border); }
+.manual-body td { padding:8px 12px; border-bottom:1px solid var(--divider); }
+.manual-body td:first-child { color:var(--text); font-weight:600; }
+.manual-body hr { border:none; border-top:1px solid var(--divider); margin:24px 0; }
+.manual-body a { color:var(--primary-hi); }
+.manual-body a:hover { color:var(--primary); }
+
+/* Autopsy 페이지 폼 */
+.autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
+.autopsy-form .ah { font-size:15px; font-weight:800; color:var(--text); margin-bottom:4px; }
+.autopsy-form .asub { font-size:12px; color:var(--text2); margin-bottom:14px; }
+.autopsy-form textarea { width:100%; min-height:110px; padding:11px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; resize:vertical; }
+.autopsy-form textarea:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .row2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+.autopsy-form input[type=text] { padding:9px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; }
+.autopsy-form input[type=text]:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .actions { display:flex; gap:8px; margin-top:14px; align-items:center; }
+.autopsy-form button { padding:10px 22px; background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border:none; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer; box-shadow:0 0 16px rgba(168,85,247,.3); transition:all .15s; }
+.autopsy-form button:hover { box-shadow:0 0 22px rgba(168,85,247,.5); transform:translateY(-1px); }
+.autopsy-form button.ghost { background:var(--surface2); color:var(--text2); box-shadow:none; }
+.autopsy-form button.ghost:hover { color:var(--text); }
+.autopsy-form .hint { font-size:11px; color:var(--text3); margin-left:auto; }
+.autopsy-card { display:flex; flex-direction:column; min-height:130px; transition:all .18s; }
+.autopsy-card:hover { border-color:var(--primary) !important; box-shadow:0 4px 16px rgba(168,85,247,.18); }
+
+@media (max-width:600px) {
+  body { padding:14px; }
+  header h1 { font-size:20px; }
+  .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .card .value { font-size:22px; }
+  .ch-grid { grid-template-columns:1fr; }
+  .filters { flex-direction:column; align-items:stretch; }
+  .row-title { max-width:200px; }
+  tbody td, thead th { padding:9px 8px; }
+  .ch-vid-dual { grid-template-columns:1fr; }
+  .autopsy-form .row2 { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-links"><a href="index.html">←</a></div>
+    <h1>🎓 유튜브 최신 가이드</h1>
+    <div class="sub">버터떡 2026 알고리즘·전략·정책 시트 — 시트 7개 · 총 251항목</div>
+  </header>
+  
+  <div class="info-bar"><span class="desc">📚 시트 기반 유튜브 알고리즘·정책·전략 가이드</span><span class="legend-item">최종 갱신: <b>2026-06-01 13:36</b></span><span class="legend-item">총 시트 <b>7</b></span></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px;padding-bottom:14px;border-bottom:1px solid var(--divider);"><button class="ytg-tab on" data-tab="algorithm-2026" style="font-size:13px;padding:8px 14px;border-radius:18px;background:var(--primary);color:#fff;border:1px solid var(--primary);font-weight:700;cursor:pointer;transition:all .15s;">🧭 2026 알고리즘 정리 <span style="opacity:.7;font-size:11px;">(18)</span></button><button class="ytg-tab " data-tab="algorithm-extra" style="font-size:13px;padding:8px 14px;border-radius:18px;background:var(--surface);color:var(--text2);border:1px solid var(--border);font-weight:600;cursor:pointer;transition:all .15s;">🔄 알고리즘 변화 추가 <span style="opacity:.7;font-size:11px;">(14)</span></button><button class="ytg-tab " data-tab="growth" style="font-size:13px;padding:8px 14px;border-radius:18px;background:var(--surface);color:var(--text2);border:1px solid var(--border);font-weight:600;cursor:pointer;transition:all .15s;">📈 채널 성장 전략 <span style="opacity:.7;font-size:11px;">(17)</span></button><button class="ytg-tab " data-tab="thumbnail-title" style="font-size:13px;padding:8px 14px;border-radius:18px;background:var(--surface);color:var(--text2);border:1px solid var(--border);font-weight:600;cursor:pointer;transition:all .15s;">🎨 썸네일·제목 전략 <span style="opacity:.7;font-size:11px;">(14)</span></button><button class="ytg-tab " data-tab="studio" style="font-size:13px;padding:8px 14px;border-radius:18px;background:var(--surface);color:var(--text2);border:1px solid var(--border);font-weight:600;cursor:pointer;transition:all .15s;">🛠️ 유튜브 스튜디오 기능 <span style="opacity:.7;font-size:11px;">(22)</span></button><button class="ytg-tab " data-tab="policy" style="font-size:13px;padding:8px 14px;border-radius:18px;background:var(--surface);color:var(--text2);border:1px solid var(--border);font-weight:600;cursor:pointer;transition:all .15s;">⚖️ 유튜브 정책 가이드 <span style="opacity:.7;font-size:11px;">(99)</span></button><button class="ytg-tab " data-tab="policy-summary" style="font-size:13px;padding:8px 14px;border-radius:18px;background:var(--surface);color:var(--text2);border:1px solid var(--border);font-weight:600;cursor:pointer;transition:all .15s;">📋 정책 한눈에 보기 <span style="opacity:.7;font-size:11px;">(67)</span></button></div>
+<div class="ytg-pane" data-pane="algorithm-2026" style="display:block;">
+<div class="rep-sec"><h2>🧭 2026 알고리즘 정리</h2><span class="cnt">18개 항목</span></div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">1. 생존 세팅 (채널 신뢰도 확보)</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">핵심: 알고리즘은 스팸 채널부터 걸러냄 → 기본 세팅 미비 시 노출 페널티</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">고급 인증 (3단계)</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">유튜브 스튜디오 → 설정 → 채널 → 기능 사용 자격 3단계<br>신분증 또는 영상 인증 (5분 소요)<br>AI 영상·개성 약한 채널일수록 미인증 시 노출 약화</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">고급 인증</span><span class="chan-chip" style="font-size:10px;">썸네일 테스트 자격</span><span class="chan-chip" style="font-size:10px;">스팸 방지</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">채널 키워드 &amp; 카테고리</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">핵심 키워드 10~20개 입력 (관련성 &gt; 개수)<br>유튜브 자동완성, VidIQ, TubeBuddy로 리서치<br>업로드 기본 설정 → 고급 설정에서 카테고리도 반드시 설정</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">채널 키워드</span><span class="chan-chip" style="font-size:10px;">카테고리</span><span class="chan-chip" style="font-size:10px;">연관 검색어</span><span class="chan-chip" style="font-size:10px;">VidIQ</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">꾸준한 업로드 주기</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">빈도보다 일정함이 핵심 (주 1회든 2회든 OK)<br>줄이는 건 위험 → 알고리즘 신뢰 하락<br>늘리는 건 OK (1회→3회)</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">업로드 일관성</span><span class="chan-chip" style="font-size:10px;">성실 신호</span><span class="chan-chip" style="font-size:10px;">알고리즘 신뢰</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">2. 업로드 실전 세팅</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">비공개 대기 전략</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">업로드 후 비공개 상태 유지 → 최소 2시간~24시간 후 공개 예약<br>알고리즘이 제목/설명/썸네일/태그 분석할 시간 확보<br>즉시 공개 시 초기 추천 불안정</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">비공개 대기</span><span class="chan-chip" style="font-size:10px;">초기 추천 안정화</span><span class="chan-chip" style="font-size:10px;">예약 공개</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">썸네일 A/B 테스트</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">최대 3개 썸네일 업로드 → 유튜브 자동 비교 → 클릭률 높은 것 선택<br>감이 아닌 데이터 기반 판단<br>※ 고급 인증 필수</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">썸네일 테스트</span><span class="chan-chip" style="font-size:10px;">클릭률</span><span class="chan-chip" style="font-size:10px;">데이터 기반</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">업로드 기본값 설정</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">스튜디오에서 설명란·링크·공개상태(비공개) 기본값 미리 세팅<br>반복 작업 제거 + 실수 방지 + 비공개 대기 자동 적용</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">업로드 효율</span><span class="chan-chip" style="font-size:10px;">기본값</span><span class="chan-chip" style="font-size:10px;">실수 방지</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">3. 채널 성장 가속 디테일</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">재생목록 전략</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">주제별 재생목록 분류 → 연속 시청 유도 → 시청 시간 증가<br>정리 폴더가 아니라 성장 도구로 활용</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">재생목록</span><span class="chan-chip" style="font-size:10px;">시청 시간</span><span class="chan-chip" style="font-size:10px;">연속 재생</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">수동 챕터</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">자동 챕터 대신 직접 타임스탬프·제목 입력<br>자동 챕터의 잘못된 분류 방지 → 시청 지속 시간 향상</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">챕터</span><span class="chan-chip" style="font-size:10px;">타임스탬프</span><span class="chan-chip" style="font-size:10px;">시청 지속률</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">쇼츠 리믹스 허용</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">타인이 내 영상으로 쇼츠 제작 가능하게 설정<br>쇼츠에 원본 영상 링크 자동 노출 = 무료 홍보<br>초보 채널일수록 노출 기회 확대 필수</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">리믹스</span><span class="chan-chip" style="font-size:10px;">쇼츠</span><span class="chan-chip" style="font-size:10px;">노출 확대</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">4. 알고리즘 작동 원리 (2026년)</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">핵심 변화: 검색 비중 30% → 5% 미만, 홈 추천·관련 영상이 핵심 유입 경로</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">알고리즘 실험</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">소형 채널 영상을 랜덤 대량 노출 테스트<br>반응 데이터 분석 → 3~4개 영상 후 재테스트<br>테스트 시 노출량 점진 증가 (1,000 → 2,000)<br><br>쭉 같은 카테고리로 영상 업로드 <br>채널 분석 &gt; 유입경로 확인시 내가 업로드한 카테고리와<br>다른 경로로 유입된 경우<br>내 채널을 유튜브에서 잘못 분석하고 인식한 상태로 유추 가능</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">알고리즘 테스트</span><span class="chan-chip" style="font-size:10px;">노출 실험</span><span class="chan-chip" style="font-size:10px;">점진 확대</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">죽음의 계곡</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">테스트 사이 대기 구간 (수주~수개월)<br>영상 올려도 50뷰, 30뷰 → 대부분 여기서 포기<br>침묵 ≠ 실패, 알고리즘이 데이터 처리 중</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">죽음의 계곡</span><span class="chan-chip" style="font-size:10px;">대기 구간</span><span class="chan-chip" style="font-size:10px;">포기 방지</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">돌파법</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">대기 시간에 콘텐츠 제작 + 공부에 집중</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">생산적 대기</span><span class="chan-chip" style="font-size:10px;">콘텐츠 양산</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">5. 살아남는 채널의 3대 공통점</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">콘텐츠 일관성 (≠ 업로드 빈도)</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">황금 법칙: "이 영상이 최근 영상을 좋아한 사람을 또 끌어들일 것이 확실한가?"<br>톤·주제·스타일·분위기 일관 유지<br>니치 탐색: 한 유형당 최소 8~10개 영상은 만들어보고 판단<br>확신 없으면 올리지 마라</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">니치</span><span class="chan-chip" style="font-size:10px;">일관성</span><span class="chan-chip" style="font-size:10px;">채널 정체성</span><span class="chan-chip" style="font-size:10px;">황금 법칙</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">제목 + 썸네일 = 팀 플레이</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">역할 분담: 썸네일 → 감정 자극 / 제목 → 구체적 약속<br>❌ 썸네일 "다이어트 꿀팁" + 제목 "다이어트 꿀팁 총정리" (같은 말 반복)<br>✅ 썸네일 "3kg가 그냥 빠졌다" + 제목 "공복 루틴 하나로 체지방 녹이는 법"<br>서브 커뮤니케이션: 극단적 수식어로 뒤의 이야기를 상상하게 만들기<br>전제: 포장보다 소재(아이디어)가 먼저</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">제목-썸네일 역할 분담</span><span class="chan-chip" style="font-size:10px;">감정+약속</span><span class="chan-chip" style="font-size:10px;">서브 커뮤니케이션</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">수요↑ 공급↓ 주제 찾기 (골든 스팟)</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">인기 영상 주제 = 수요 증명됨<br>같은 주제를 나만의 경험·관점으로 재해석 (표절 ❌)<br>AI가 대체 못하는 것 = 개인 경험과 감정<br>질문: "관심 있는 사람은 있는데 제대로 다룬 영상이 없는가?"</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">골든 스팟</span><span class="chan-chip" style="font-size:10px;">수요 공급</span><span class="chan-chip" style="font-size:10px;">경험 콘텐츠</span><span class="chan-chip" style="font-size:10px;">AI 차별화</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">6. 실행 마인드셋</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">6-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">"많이 만들어라"의 진짜 의미</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">완벽하게 만들겠다고 미루지 말고 올리면서 실력 키워라<br>80점짜리 10개 &gt; 100점 노리다 못 올린 0개<br>구독자 1,000명 달성 평균: 롱폼 77개</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">실행 우선</span><span class="chan-chip" style="font-size:10px;">완벽주의 탈피</span><span class="chan-chip" style="font-size:10px;">77개</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">6-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">빈도 규칙과의 균형</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">유지 가능한 주기를 정하고 지키는 것이 핵심<br>주 1회 가능하면 주 1회로 시작 → 여유 생기면 증가 OK<br>❌ 주 3회 시작 → 힘들어서 주 1회로 줄이기 = 알고리즘 신뢰 하락<br>낮은 빈도에서 시작 → 유지 → 점진적 증가가 정답</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">유지 가능한 주기</span><span class="chan-chip" style="font-size:10px;">점진적 증가</span><span class="chan-chip" style="font-size:10px;">알고리즘 신뢰</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">6-1과 6-2에서 생길수있는 혼선체크 : 웰 메이드보다 규칙적인 업로드 주기 설정 후 잘 지켜 실행하는것이 중요</span><span style="font-size:14px;font-weight:700;color:var(--text);"></span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;"></div></div>
+</div>
+</div>
+<div class="ytg-pane" data-pane="algorithm-extra" style="display:none;">
+<div class="rep-sec"><h2>🔄 알고리즘 변화 추가</h2><span class="cnt">14개 항목</span></div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">1. 제미나이(Gemini) &amp; 시맨틱 ID — AI가 영상의 "의도"까지 읽는다</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">구글 AI 제미나이가 유튜브에 통합. 키워드 도배 시대 종료, 맥락·분위기·제작 의도까지 분석</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">시맨틱 ID</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">모든 영상에 부여되는 ID가 요약뿐 아니라 에너지·분위기·의도를 이해<br>검색 엔진 → "답변 엔진"으로 전환<br>시청자 상황(스트레스, 급함 등)에 맞는 영상을 예측 추천</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">시맨틱 ID</span><span class="chan-chip" style="font-size:10px;">제미나이</span><span class="chan-chip" style="font-size:10px;">답변 엔진</span><span class="chan-chip" style="font-size:10px;">맥락 추천</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">플랫폼 간 추론</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">제미나이가 구글 드라이브·지메일·검색 데이터를 종합 분석<br>유튜브 밖 행동까지 반영하여 홈 화면 추천 결정</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">크로스 플랫폼</span><span class="chan-chip" style="font-size:10px;">구글 생태계</span><span class="chan-chip" style="font-size:10px;">행동 분석</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">클릭베이트 무효화</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">자극적 제목이어도 내용이 검색 의도와 다르면 추천 제외<br>AI에게 타겟 오디언스를 명확히 전달하는 것이 핵심</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">클릭베이트 금지</span><span class="chan-chip" style="font-size:10px;">검색 의도 일치</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">2. 시청 지속 시간의 몰락 &amp; 착한 이탈(Good Abandonment)</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">얼마나 오래 보느냐"보다 "시청자가 해결책을 얻었는가"가 핵심 지표로 변화</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">착한 이탈</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">시청자가 2분 만에 답을 얻고 만족해서 나감 → 성공적 영상으로 판단<br>짧게 보고 나가도 만족했으면 OK</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">착한 이탈</span><span class="chan-chip" style="font-size:10px;">시청자 만족</span><span class="chan-chip" style="font-size:10px;">Good Abandonment</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">나쁜 이탈</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">시청자가 영상 보다 나가서 같은 질문을 다시 검색 → 영상에 벌칙<br>답을 못 줬다는 증거로 판단</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">나쁜 이탈</span><span class="chan-chip" style="font-size:10px;">재검색 패널티</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">3. 세션 시간(Session Time) — 2026 최강 랭킹 요소</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">내 영상 시청 후 시청자가 유튜브에 계속 머무르면, 세션을 시작한 공로를 인정받음</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">세션 시간의 힘</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">10만뷰인데 시청자가 앱 끄는 영상 &lt; 1만뷰인데 매주 시청자를 불러들이는 채널<br>시청자당 평균 3.2분 세션 연장 효과 (최종 화면 활용 시)</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">세션 시간</span><span class="chan-chip" style="font-size:10px;">플랫폼 체류</span><span class="chan-chip" style="font-size:10px;">알고리즘 보상</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">최종 화면(End Card) 전략</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">최신 영상이 아니라 "가장 관련성 높은 영상" 연결<br>구두 안내(Verbal Handoff)로 자연스럽게 다음 영상 유도<br>파스타 영상 끝 → 소스 레시피 영상 연결</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">최종 화면</span><span class="chan-chip" style="font-size:10px;">관련성</span><span class="chan-chip" style="font-size:10px;">구두 안내</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">4. 감정적 속도(Emotional Velocity) &amp; 공동 방문(Co-visitation)</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">감정적 유지</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">시청자가 흥분하거나 반복 재생하는 "스파이크" 지점이 없으면 죽은 콘텐츠<br>평탄하게 끝나는 영상 → 노출 급감<br>패턴 브레이크(시각·청각 자극)로 집중력 유지</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">감정적 속도</span><span class="chan-chip" style="font-size:10px;">스파이크</span><span class="chan-chip" style="font-size:10px;">패턴 브레이크</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">공동 방문(이웃 배치)</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">시청자가 31일간 본 영상 패턴으로 채널을 "동네"에 배치<br>대형 유튜버 시청자가 내 영상을 보면 → 그 동네에 편입 → 스노우볼 효과<br>⚠️ 가족·친구에게 링크 공유, 봇 구매 → 엉뚱한 동네 배치 → 채널 사망</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">공동 방문</span><span class="chan-chip" style="font-size:10px;">이웃</span><span class="chan-chip" style="font-size:10px;">오디언스 패턴</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">부정적 댓글 패널티</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">댓글 감정 분석 도입: 싸움·비난 많으면 영상 처벌<br>어그로(Rage Bait) 전략 종말<br>긍정적·행복한 댓글이 달리는 영상이 성과 좋음</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">감정 분석</span><span class="chan-chip" style="font-size:10px;">어그로 종말</span><span class="chan-chip" style="font-size:10px;">긍정 댓글</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">5. 홈 화면 레이아웃 변화 &amp; 롱폼의 위기</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">2016년: 홈 화면 상단 30개 영상 노출 → 2026년: 3개로 축소. 쇼츠가 롱폼 공간 잠식</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">홈 화면 변화</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">롱폼 노출 슬롯 8→3개로 감소<br>쇼츠가 프라임 공간 차지<br>검색 결과에서도 쇼츠 우세</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">홈 레이아웃</span><span class="chan-chip" style="font-size:10px;">노출 감소</span><span class="chan-chip" style="font-size:10px;">쇼츠 우선</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">울트라 롱폼의 부상</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">2시간+ 영상이 20분 영상보다 100배 수익 가능<br>30분 이상 영상: 업로드 39% → 시청 시간 82%, 수익 70%<br>Z세대 83%가 긴 콘텐츠로 휴식<br>TV 시청 트렌드: 60분 영상 1개 &gt; 10분 영상 6개</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">울트라 롱폼</span><span class="chan-chip" style="font-size:10px;">TV 시청</span><span class="chan-chip" style="font-size:10px;">시청 시간 점유</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">롱폼 vs 쇼츠 균형</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">전체 시청 시간의 70%는 여전히 롱폼<br>쇼츠는 에버그린(검색) 가능성 있음<br>두 포맷 병행이 최적</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">롱폼 70%</span><span class="chan-chip" style="font-size:10px;">쇼츠 에버그린</span><span class="chan-chip" style="font-size:10px;">병행 전략</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">6. 알고리즘 테스트 사이클 (영상 업로드 후 흐름)</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">6-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">4단계 테스트</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">① AI 분석: 제미나이가 맥락·주제·의도·언어 학습<br>② 초기 타겟팅: 구독자가 아니라 주제 관심자에게 먼저 노출<br>③ 1차 테스트: CTR, 만족도, 시청 시간 평가<br>④ 2차 테스트(최종): 재방문율, 감정 스파이크, 세션 시간 → 통과 시 폭발 확산</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">4단계 테스트</span><span class="chan-chip" style="font-size:10px;">CTR</span><span class="chan-chip" style="font-size:10px;">재방문율</span><span class="chan-chip" style="font-size:10px;">폭발 확산</span></div></div>
+</div>
+</div>
+<div class="ytg-pane" data-pane="growth" style="display:none;">
+<div class="rep-sec"><h2>📈 채널 성장 전략</h2><span class="cnt">17개 항목</span></div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">1. 첫 100명 달성법 (VidIQ)</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">2026년 시작한 약 40만 채널 중 2.5만 개가 3개월 내 100명 달성</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">한 우물만 파라 (Pick a Lane)</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">모든 사람에게 어필 → 아무에게도 어필 못함<br>"운동"이 아니라 "버피 싫어하는 사람 홈트"처럼 구체적으로<br>구독은 단일 영상이 아니라 "지속적 특정 콘텐츠" 때문에 발생</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">니치</span><span class="chan-chip" style="font-size:10px;">구체화</span><span class="chan-chip" style="font-size:10px;">시청자 약속</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">촬영 전 썸네일·제목 먼저</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">매력적인 썸네일과 제목이 안 떠오르면 아이디어가 불분명한 것<br>썸네일·제목 = 설계도이자 시청자와의 약속<br>약속을 먼저 하고 영상에서 이행</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">썸네일 먼저</span><span class="chan-chip" style="font-size:10px;">설계도</span><span class="chan-chip" style="font-size:10px;">약속 이행</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">대형 유튜버의 "왜"를 공부</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">"어떻게" 만드는지가 아니라 "왜" 통하는지 분석<br>구체적 약속 제목, 호기심 초반 15초, 지루할 틈 없는 전개<br>팬이 아닌 "학생" 자세로 분석</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">벤치마킹</span><span class="chan-chip" style="font-size:10px;">왜 분석</span><span class="chan-chip" style="font-size:10px;">전략 추출</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-4</span><span style="font-size:14px;font-weight:700;color:var(--text);">빈도 &lt; 꾸준함</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">주 1회 정해진 요일 &gt; 주 3회 몰아올리고 잠수<br>유튜브는 신뢰할 수 있는 채널을 밀어줌<br>유지 가능한 속도 정하고 깨지 않기</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">꾸준함</span><span class="chan-chip" style="font-size:10px;">번아웃 방지</span><span class="chan-chip" style="font-size:10px;">신뢰</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1-5</span><span style="font-size:14px;font-weight:700;color:var(--text);">모든 댓글에 답글</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">댓글 적을 때가 기회 — 100% 답글 가능<br>댓글 공간 → 커뮤니티 대화 → 팬·구독자 전환</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">댓글 소통</span><span class="chan-chip" style="font-size:10px;">커뮤니티</span><span class="chan-chip" style="font-size:10px;">팬 전환</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">2. 구독자 1,000명 전략</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">니치 확장(Niche Expansion)</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">모든 분야에 천장(TAM)이 있음 → 정체 시 확장 필요<br>시청자의 "다음 고민"을 분석 → 인접 주제로 확장<br>기존 팬 유지 + 새 시청자 유입 동시 달성</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">니치 확장</span><span class="chan-chip" style="font-size:10px;">TAM</span><span class="chan-chip" style="font-size:10px;">인접 시청자</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">콜라보 도구 활용</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">1번의 콜라보 &gt; 6개월 꾸준한 업로드<br>크기보다 타겟 일치(Alignment)가 중요<br>경쟁자가 아닌 동료로 접근 → 댓글·소통부터 시작</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">콜라보</span><span class="chan-chip" style="font-size:10px;">신뢰 전이</span><span class="chan-chip" style="font-size:10px;">타겟 일치</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">3. 채널 폭발 직전 8가지 징후</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">특정 시청자에게 말하기 시작</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">불특정 다수 → 친한 친구에게 말하듯 구체적 타겟<br>알고리즘이 레이저처럼 정밀 배달 시작</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">타겟 시청자</span><span class="chan-chip" style="font-size:10px;">정밀 배달</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">댓글 질 변화</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">"좋아요" → "딱 찾던 거예요" 같은 장문 댓글<br>단순 시청자 → 팬 전환 신호</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">댓글 질</span><span class="chan-chip" style="font-size:10px;">팬 전환</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">재방문 시청자 증가</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">다시 볼만한 채널로 인식 → 정주행 유도<br>유튜브 데이터에서 가장 중요한 지표 중 하나</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">재방문</span><span class="chan-chip" style="font-size:10px;">정주행</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-4</span><span style="font-size:14px;font-weight:700;color:var(--text);">추천 영상 비중 상승</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">검색(SEO) → 추천(알고리즘 보증)으로 전환<br>100만 구독은 추천 없이 불가능</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">추천 비중</span><span class="chan-chip" style="font-size:10px;">알고리즘 보증</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-5</span><span style="font-size:14px;font-weight:700;color:var(--text);">청사진 영상 등장</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">1~2개 영상이 월등한 조회수 → 요행이 아닌 단서<br>그 주제를 더 깊이 파고들어 "두 배" 공략</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">청사진</span><span class="chan-chip" style="font-size:10px;">주제 심화</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-6</span><span style="font-size:14px;font-weight:700;color:var(--text);">평상시 심박수 상승</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">영상 안 올려도 실시간 조회수가 지난달보다 높음<br>조용한 모멘텀 축적 = 가장 강력한 성장 신호</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">모멘텀</span><span class="chan-chip" style="font-size:10px;">기본 조회수</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-7</span><span style="font-size:14px;font-weight:700;color:var(--text);">오래된 영상 부활</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">과거 영상이 갑자기 조회수 상승 → 연쇄 반응<br>주제·스타일 일관성이 있어야 발생</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">에버그린</span><span class="chan-chip" style="font-size:10px;">연쇄 반응</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3-8</span><span style="font-size:14px;font-weight:700;color:var(--text);">꼴찌 성적에 화남</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">10/10 성적에 속 쓰림 = 진심 + 독기 = 다음 대박 원동력</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">진심</span><span class="chan-chip" style="font-size:10px;">개선 의지</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">4. "쇼(Show)"를 만들어라</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">시리즈화</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">특정 요일·시간에 시리즈물 업로드<br>시청자가 다음 편 보러 재방문하는 구조 설계</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">시리즈</span><span class="chan-chip" style="font-size:10px;">재방문 구조</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">컴필레이션 활용</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">기존 짧은 시리즈를 하나로 묶어 울트라 롱폼으로 재구성<br>시청자가 플레이리스트 헤맬 필요 없이 쭉 시청</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">컴필레이션</span><span class="chan-chip" style="font-size:10px;">재구성</span></div></div>
+</div>
+</div>
+<div class="ytg-pane" data-pane="thumbnail-title" style="display:none;">
+<div class="rep-sec"><h2>🎨 썸네일·제목 전략</h2><span class="cnt">14개 항목</span></div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">1. 2026 썸네일 11가지 필승 스타일</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">예뻐서 클릭하는 것이 아니라, 내 분야에서 새롭고 신선한 패턴이기 때문에 클릭한다</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1</span><span style="font-size:14px;font-weight:700;color:var(--text);">네오 미니멀리즘</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">배경 50%+ 비움(네거티브 스페이스), 최대 2색<br>90%가 복잡할 때 깔끔함이 시각적 충격</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">미니멀</span><span class="chan-chip" style="font-size:10px;">여백</span><span class="chan-chip" style="font-size:10px;">2색</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2</span><span style="font-size:14px;font-weight:700;color:var(--text);">서라운드 스타일</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">주인공 정중앙 + 주변에 관련 물건 원형/그리드 배치<br>"정돈된 혼돈" — 비교·대량 테스트 영상에 효과적</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">서라운드</span><span class="chan-chip" style="font-size:10px;">비교 영상</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3</span><span style="font-size:14px;font-weight:700;color:var(--text);">무지개 랭킹/티어 리스트</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">빨강→파랑 그라데이션 랭킹<br>"1등이 뭐지?" 궁금증 + 참여 유도</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">무지개</span><span class="chan-chip" style="font-size:10px;">티어 리스트</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4</span><span style="font-size:14px;font-weight:700;color:var(--text);">화이트보드</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">손으로 그린 도표/글씨 → 교육적 가치 + 진정성<br>유튜브 역사상 꾸준히 통하는 스타일</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">화이트보드</span><span class="chan-chip" style="font-size:10px;">교육</span><span class="chan-chip" style="font-size:10px;">진정성</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5</span><span style="font-size:14px;font-weight:700;color:var(--text);">인터페이스 프레이밍</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">트위터·레딧·아마존 등 익숙한 UI 복제<br>플랫폼의 권위를 빌려오는 전략</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">인터페이스</span><span class="chan-chip" style="font-size:10px;">권위 차용</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">6</span><span style="font-size:14px;font-weight:700;color:var(--text);">시네마틱 텍스트</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">텍스트가 장면 "안에" 배치 (피사체 뒤, 조명 효과)<br>3~4단어 이내, 넷플릭스 느낌</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">시네마틱</span><span class="chan-chip" style="font-size:10px;">영화적 텍스트</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">7</span><span style="font-size:14px;font-weight:700;color:var(--text);">왜곡된 얼굴</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">얼굴 비틀기/겹치기 → 인지 부조화로 스크롤 멈춤<br>자기계발·심리·불편한 진실 주제에 적합</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">왜곡</span><span class="chan-chip" style="font-size:10px;">패턴 중단</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">8</span><span style="font-size:14px;font-weight:700;color:var(--text);">맥시멀리스트</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">수집품·도구를 화면 가득 채움<br>"컬렉션" 자체가 주인공 → 시각적 권위</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">맥시멀리스트</span><span class="chan-chip" style="font-size:10px;">컬렉션</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">9</span><span style="font-size:14px;font-weight:700;color:var(--text);">그리드/백과사전형</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">중립 배경 + 고대비 아이콘 + 라벨링<br>"이 영상 하나면 다 안다" 정보 신뢰감</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">그리드</span><span class="chan-chip" style="font-size:10px;">백과사전</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">10</span><span style="font-size:14px;font-weight:700;color:var(--text);">캔디드 페이크</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">완벽 연출이지만 찰나 포착처럼 보이는 구도<br>과보정 미소 시대 종료 → 자연스러움이 대세</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">캔디드</span><span class="chan-chip" style="font-size:10px;">자연스러움</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">11</span><span style="font-size:14px;font-weight:700;color:var(--text);">안티 썸네일</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">어두운 배경 + 정면 응시 + 구체적 시간 명시(예: 59초)<br>"시간 안 뺏겠다" 약속 → 심리적 장벽 낮춤</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">안티 썸네일</span><span class="chan-chip" style="font-size:10px;">시간 약속</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">2. 썸네일 정책 업데이트 (2026.03 시행)</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">다국어 썸네일</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">멀티 오디오 영상에 언어별 썸네일 개별 설정 가능<br>AI가 시청자 언어에 맞춰 자동 표시 → CTR 상승</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">다국어</span><span class="chan-chip" style="font-size:10px;">CTR</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">TV 프로모션</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">TV에서 인기 영상 → 알고리즘이 썸네일 크게 표시 = 무료 프로모션</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">TV</span><span class="chan-chip" style="font-size:10px;">대형 썸네일</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">용량 제한 확대</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">2MB → 최대 50MB로 확대<br>4K 고화질 썸네일 가능 → TV 화면에서 선명</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">50MB</span><span class="chan-chip" style="font-size:10px;">4K 썸네일</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">3. 니치 벤딩(Niche Bending) — 2026 핵심 전략</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">다른 분야에서 검증된 시각 시스템을 가져와 내 분야에 맞게 변형하는 것</div>
+</div>
+<div class="ytg-pane" data-pane="studio" style="display:none;">
+<div class="rep-sec"><h2>🛠️ 유튜브 스튜디오 기능</h2><span class="cnt">22개 항목</span></div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">1. 채널 기본 세팅 10가지 (알고리즘이 버리는 채널 방지)</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">1</span><span style="font-size:14px;font-weight:700;color:var(--text);">고급 인증</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">3단계 인증 필수 (영상 인증 추천, 신분증은 반려 잦음)<br>AI/개성 약한 채널일수록 미인증 시 노출 급감</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">고급 인증</span><span class="chan-chip" style="font-size:10px;">영상 인증</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2</span><span style="font-size:14px;font-weight:700;color:var(--text);">채널 키워드</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">시크릿 모드에서 검색 → 진짜 인기 키워드 확인<br>내 알고리즘 아닌 실제 검색 트렌드 반영</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">시크릿 모드</span><span class="chan-chip" style="font-size:10px;">키워드 리서치</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">3</span><span style="font-size:14px;font-weight:700;color:var(--text);">국가 선택</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">거주 국가 정확히 설정 → 알고리즘에 타겟 명확히 전달</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">국가 설정</span><span class="chan-chip" style="font-size:10px;">타겟 명확화</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4</span><span style="font-size:14px;font-weight:700;color:var(--text);">아동용 설정 해제</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">아동용 분류 시 댓글·알림·맞춤 광고 전부 제한<br>아동 콘텐츠 아니면 반드시 해제</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">아동용 해제</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5</span><span style="font-size:14px;font-weight:700;color:var(--text);">카테고리 지정</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">잘못된 카테고리 → 엉뚱한 시청자 노출 → 클릭 안 함 → 노출 하락 악순환<br>동영상 언어·제목 언어도 한국어로 설정</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">카테고리</span><span class="chan-chip" style="font-size:10px;">언어 설정</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">6</span><span style="font-size:14px;font-weight:700;color:var(--text);">악플 필터링</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">업로드 기본 설정 &gt; 고급 &gt; 댓글 검토<br>기본/엄격 모드 선택 가능 (민감하면 엄격 추천)</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">악플 필터</span><span class="chan-chip" style="font-size:10px;">댓글 관리</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">7</span><span style="font-size:14px;font-weight:700;color:var(--text);">구독 정보 비공개</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">공개 시 경쟁 채널이 벤치마킹 대상 파악 가능<br>전략 노트를 펼쳐놓고 다니는 것과 같음</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">구독 비공개</span><span class="chan-chip" style="font-size:10px;">전략 보호</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">8</span><span style="font-size:14px;font-weight:700;color:var(--text);">채널 설명</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">첫 문장에 핵심 키워드 자연스럽게 삽입<br>알고리즘 + 시청자 모두 채널 주제 정확히 인식</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">채널 설명</span><span class="chan-chip" style="font-size:10px;">키워드 삽입</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">9</span><span style="font-size:14px;font-weight:700;color:var(--text);">비즈니스 이메일</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">채널 이메일과 별도로 비즈니스용 이메일 등록<br>협찬·인터뷰 기회 창구 + 해킹 방지</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">비즈니스 이메일</span><span class="chan-chip" style="font-size:10px;">해킹 방지</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">10</span><span style="font-size:14px;font-weight:700;color:var(--text);">워터마크</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">맞춤 설정에서 워터마크 이미지 업로드<br>표시 시간 "전체 동영상" → 우측 하단 노출 → 구독 전환율 향상</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">워터마크</span><span class="chan-chip" style="font-size:10px;">구독 전환</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">2. 신규 기능 &amp; 업데이트</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">Ask Studio (AI 파트너)</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">스튜디오 내 대화형 AI → 분석 데이터 쉽게 이해<br>영상 아이디어 제안 + 저장 + ChatGPT 연동 가능<br>콘텐츠 &gt; 영감 탭 &gt; 저장된 아이디어 관리</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">Ask Studio</span><span class="chan-chip" style="font-size:10px;">AI 아이디어</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">초상권 감지(Likeness Detection)</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">AI 얼굴 합성 콘텐츠로부터 보호<br>유사성 탭에서 무단 사용 감지 → 삭제 요청 가능<br>신분증 + 셀피 인증 필요</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">초상권</span><span class="chan-chip" style="font-size:10px;">AI 합성 보호</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-3</span><span style="font-size:14px;font-weight:700;color:var(--text);">A/B 테스트 확대</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">모든 크리에이터 사용 가능 (썸네일 최대 3개)<br>시청 시간 점유율 기준으로 최적 선정<br>공개 롱폼 영상에서만 작동</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">A/B 테스트</span><span class="chan-chip" style="font-size:10px;">시청 시간 점유율</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-4</span><span style="font-size:14px;font-weight:700;color:var(--text);">스마트 답글</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">AI 기반 댓글 답장 제안 (크리에이터 말투 반영)<br>100개+ 언어 지원, 게시 전 수정 가능</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">스마트 답글</span><span class="chan-chip" style="font-size:10px;">AI 답장</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-5</span><span style="font-size:14px;font-weight:700;color:var(--text);">연령 AI 감지</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">AI가 시청 패턴으로 18세 미만 정확히 감지<br>애널리틱스 인구통계 정확도 향상 → 브랜드 딜 유리</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">연령 감지</span><span class="chan-chip" style="font-size:10px;">인구통계</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-6</span><span style="font-size:14px;font-weight:700;color:var(--text);">브랜드 파트너 액세스</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">브랜드에 성과 지표 자동 공유 (스크린샷 불필요)<br>파트너십 광고 캠페인으로 새 시청자 유입<br>언제든 액세스 제거 가능</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">브랜드 파트너</span><span class="chan-chip" style="font-size:10px;">파트너십 광고</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-7</span><span style="font-size:14px;font-weight:700;color:var(--text);">라이브 → 멤버 전용 전환</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">공개 라이브 중 멤버 전용으로 즉시 전환 가능<br>구독자 1,000명 이상 채널</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">라이브</span><span class="chan-chip" style="font-size:10px;">멤버 전용</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">2-8</span><span style="font-size:14px;font-weight:700;color:var(--text);">커뮤니티 기능 확대</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">데스크톱에서도 사용 가능<br>게시물 고정, 하트 표시, 공유 링크 복사<br>채널 가이드라인(웰컴 메시지·규칙) 설정</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">커뮤니티</span><span class="chan-chip" style="font-size:10px;">게시물 고정</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">3. 광고주 친화적 가이드라인 업데이트</div>
+<div style="font-size:12px;color:var(--text2);background:var(--surface);padding:9px 13px;border-left:3px solid var(--primary);border-radius:0 6px 6px 0;margin:6px 0 14px;line-height:1.6;">낙태·자해·자살·학대 주제도 비그래픽·드라마틱 방식이면 전체 광고 수익 가능
+단, 아동 학대·섭식 장애는 여전히 제한</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">4. 저작권 학교</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">저작권 경고 대응</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">저작권 학교 수료 → 활성 경고 3회 미만 시 90일 후 소멸<br>4가지 상황 시뮬레이션 완료해야 수료 (중간 이탈 시 초기화)</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">저작권 학교</span><span class="chan-chip" style="font-size:10px;">경고 소멸</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">4-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">대응 옵션</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">① 저작권자에게 철회 요청<br>② 반론 통지(Counter Notification) 제출<br>출처 밝히기만으로는 허가 아님 주의</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">철회 요청</span><span class="chan-chip" style="font-size:10px;">반론 통지</span></div></div>
+</div>
+<div style="margin:24px 0 6px;font-size:15px;font-weight:800;color:var(--primary-hi);">5. 커뮤니티 관리 설정</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:14px;">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5-1</span><span style="font-size:14px;font-weight:700;color:var(--text);">콘텐츠 관리</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">차단 단어 리스트 설정 → 자동 검토 대기<br>링크 차단 옵션 → 스팸 방지</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">차단 단어</span><span class="chan-chip" style="font-size:10px;">링크 차단</span></div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px 15px;"><div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;"><span style="font-size:11px;font-weight:800;color:var(--primary);background:var(--primary-bg);padding:2px 8px;border-radius:6px;">5-2</span><span style="font-size:14px;font-weight:700;color:var(--text);">사용자 관리</span></div><div style="font-size:12px;color:var(--text2);line-height:1.65;margin:8px 0;">운영자(모데레이터) 추가/삭제<br>승인된 사용자: 검토 없이 자동 게시<br>숨겨진 사용자: 자동 차단</div><div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;"><span class="chan-chip" style="font-size:10px;">모데레이터</span><span class="chan-chip" style="font-size:10px;">승인/숨김</span></div></div>
+</div>
+</div>
+<div class="ytg-pane" data-pane="policy" style="display:none;">
+<div class="rep-sec"><h2>⚖️ 유튜브 정책 가이드</h2><span class="cnt">99개 항목</span></div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">개요</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• YouTube 정책 가이드 완전 정리</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">PART 1. 경고 시스템 이해 (먼저 알아야 할 기본)</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 위반 경고 3단계</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 단계 / 조치</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 최초 위반 / 주의만 부여 (채널 제재 없음) / 90일 후 자동 소멸</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 1차 경고 / 2주간 업로드·라이브 불가</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 90일 내 3차 경고 / 채널 영구 폐쇄</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 심각한 위반 1회 / 경고 없이 즉시 채널 폐쇄</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 공식 출처: 커뮤니티 가이드 위반 경고 기본사항</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">PART 2. 콘텐츠 금지 정책 (삭제·채널 폐쇄 위험)</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">1. 증오심 표현</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 금지: 인종·성별·종교·국적 등 보호 집단을 향한 폭력 조장, 비인간화 표현</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• "저들은 사람도 아닙니다" / "나가서 한 대 치세요" 류 표현</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 혐오 단체 상징물 사용, 나치즘 찬양</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 허용: 교육·다큐·반박·풍자 맥락이 명확한 경우, 공익적 토론</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 증오심 표현 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">2. 괴롭힘 &amp; 사이버 폭력</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 금지 : 특정 개인을 대상으로 한 조직적 괴롭힘 조장 (좌표 찍기)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 미성년자에게 수치심·고통 유발 콘텐츠</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 동의 없는 사적 이미지 공유 링크</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 다른 채널 댓글란에 악성 댓글 유도</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 중요: 반복적으로 타인을 표적 삼을 경우 경고 없이 채널 제재 가능</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 괴롭힘 및 사이버 폭력 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">3. 유해·위험 콘텐츠</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 금지 : 타인을 죽이거나 심각한 부상을 입히는 방법 안내</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 폭발물·독극물 제조 방법</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 해킹·피싱·개인정보 탈취 방법 상세 설명</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 질식 게임 등 신체 위험 행동</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 허용: 교육·과학·예술 맥락이 영상 자체에 명시된 경우 (제목·설명만으로는 불충분)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 유해하거나 위험한 콘텐츠 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">4. 폭력·노골적 콘텐츠</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 금지 : 맥락 없이 유혈·부상·폭력만 집중 묘사</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 가해자 시점으로 촬영한 폭력 사건 영상</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 충격·혐오 유발 자체가 목적인 콘텐츠</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 성폭력 묘사</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 허용: 전쟁·재난·뉴스 다큐 맥락 + 교육적 설명이 영상 내 포함된 경우 (연령제한 가능)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 폭력적이거나 노골적인 콘텐츠 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">5. 성적 콘텐츠</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 즉시 삭제:</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 음란물, 미성년자 성적 착취 콘텐츠 (CSAM)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 아동 성적 학대 이미지 → NCMEC 자동 신고</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 연령제한 적용:</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 페티시즘 관련 콘텐츠</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 성적 흥분 유발이 의도된 선정적 영상</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 크리에이터 주의: 썸네일에 선정적 이미지 사용 시도 제재 대상</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 과도한 노출 및 성적 콘텐츠 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">6. 아동 보호 (COPPA)</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 크리에이터 의무:</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 자신의 영상이 아동용인지 반드시 직접 설정 (YouTube 스튜디오)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 미설정 시 FTC 제재 + YouTube 계정 조치 가능</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 아동용 설정 시 제한사항:</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 개인 맞춤 광고 게재 불가 → 수익 대폭 감소</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 댓글·알림 기능 비활성화</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• YouTube Kids PPL·직접 광고 금지</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 금지: 아동 대상 콘텐츠에 성인 주제 혼합, 미성년자 출연자 사전 동의 없는 업로드</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 아동 보호 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">7. 잘못된 정보</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 금지 : WHO·현지 보건당국 지침에 반하는 허위 의료 정보</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 선거·민주적 절차 방해 콘텐츠</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 기술적으로 조작된 딥페이크 등</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 알고리즘 불이익 (삭제 아님): 음모론·유사과학 콘텐츠 → 추천 피드에서 대폭 억제</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 잘못된 정보 관련 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">8. 스팸·기만·사기</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 금지 : 조회수·구독자·좋아요 수 판매·구매</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 다단계·벼락부자 사기 콘텐츠</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 시청자를 외부 사이트로 유인하는 목적의 콘텐츠</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 피싱·개인정보 수집 댓글</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 결과: 수익창출 정지 또는 채널 폐쇄</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 스팸, 기만 행위, 사기 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">9. 폭력적 극단주의·범죄 조직</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 금지: 테러 조직 모집·자금 조달·찬양, 범죄 조직 홍보 결과: 경고 없이 즉시 채널 폐쇄</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 폭력적 극단주의 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">PART 3. 수익창출 정책 (YPP &amp; 광고)</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• YPP 가입 조건</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 조건 / 기준</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 구독자 / 1,000명 이상</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 시청 시간 / 최근 12개월 4,000시간 OR Shorts 최근 90일 1,000만 뷰</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 커뮤니티 경고 / 활성 경고 없음</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 2단계 인증 / Google 계정 필수</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 수익창출이 완전히 끊기는 콘텐츠</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 카테고리 / 세부 기준</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 극단적 욕설 / 영상 전반·제목·썸네일에 심한 욕설</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 노골적 폭력 / 맥락 없는 유혈·부상 집중 묘사</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 성적 콘텐츠 / 제목·썸네일·영상 전반에 성적 테마</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 약물 조장 / 불법 약물 판매·사용 상세 묘사</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 아동 착취 / 모든 형태</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• AI 대량생산 / 자동화·반복 템플릿 콘텐츠 (2025.7 신설)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 6개월 비활성 / 업로드 없음 → 수익창출 자격 박탈</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 출처: 광고주 친화적 콘텐츠 가이드라인 / YPP 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">PART 4. 저작권</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• Content ID 작동 방식</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 저작권자가 설정 → 내 영상에 자동 클레임</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 수익 전환: 광고 수익이 저작권자에게 귀속</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 차단: 특정 국가 또는 전 세계 접근 불가</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 추적: 영상은 유지, 통계만 수집</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 저작권 경고 (Copyright Strike)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 횟수 / 결과</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 1회 / 2주간 업로드·라이브 제한</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 90일 내 3회 / 채널 영구 해지 + 전체 영상 삭제</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 공정사용 4가지 판단 기준</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 목적·성격 — 변형적 사용인가 (논평·비평·패러디)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 원본 성격 — 사실 vs 허구 (사실 기반이 유리)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 사용 분량 — 원본의 얼마나 썼는가 (핵심 부분은 소량도 위험)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 시장 영향 — 원본 저작권자의 수익을 해치는가</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 중요: 출처 명시, 교육 목적 표시만으로는 공정사용 인정 안 됨 출처: 공정 사용 정책</div>
+</div>
+<div style="margin:18px 0 6px;font-size:14px;font-weight:800;color:var(--primary-hi);">PART 5. 실전 체크리스트</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:12px;">
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 업로드 전 확인사항:</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 특정 집단 혐오·비하 표현 없는가</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 배경음악 저작권 확인 (유튜브 오디오 라이브러리 또는 라이선스 확보)</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 썸네일에 선정적·폭력적 이미지 없는가</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• 아동 대상 콘텐츠라면 시청자층 설정 완료했는가</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• PPL·협찬이 있다면 유료 광고 포함 표시했는가</div>
+<div style="font-size:12.5px;color:var(--text);line-height:1.7;padding:3px 0;">• AI 생성 콘텐츠라면 라벨 표시했는가</div>
+</div>
+</div>
+<div class="ytg-pane" data-pane="policy-summary" style="display:none;">
+<div class="rep-sec"><h2>📋 정책 한눈에 보기</h2><span class="cnt">67개 항목</span></div>
+<div class="tbl-wrap"><table><thead><tr><th>파트</th><th>정책 분류</th><th>구분</th><th>내용</th><th>비고/출처</th></tr></thead><tbody><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART1 경고시스템</td><td>위반 경고 단계</td><td>최초 위반</td><td>주의만 부여 (채널 제재 없음) / 90일 후 자동 소멸</td><td>정책 교육 수료 시 조기 소멸 가능</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART1 경고시스템</td><td>위반 경고 단계</td><td>1차 경고</td><td>2주간 업로드·라이브 불가</td><td>90일 내 누적</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART1 경고시스템</td><td>위반 경고 단계</td><td>3차 경고</td><td>채널 영구 폐쇄</td><td>90일 내 3회 누적 시</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART1 경고시스템</td><td>위반 경고 단계</td><td>심각한 위반 1회</td><td>경고 없이 즉시 채널 폐쇄</td><td>테러·아동착취 등</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>증오심 표현</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>인종·성별·종교·국적 보호 집단 향한 폭력 조장, 비인간화 표현</td><td><a href="https://support.google.com/youtube/answer/2801939" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>증오심 표현</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>혐오 단체 상징물 사용, 나치즘 찬양</td><td>삭제 및 경고 조치</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>증오심 표현</td><td style="color:#22c55e;font-weight:700;white-space:nowrap;">✅ 허용</td><td>교육·다큐·반박·풍자 맥락이 명확한 경우, 공익적 토론</td><td>맥락이 영상 내 명시되어야 함</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>괴롭힘·사이버폭력</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>특정 개인 조직적 괴롭힘 조장 (좌표 찍기)</td><td><a href="https://support.google.com/youtube/answer/2802268" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>괴롭힘·사이버폭력</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>미성년자에게 수치심·고통 유발 콘텐츠</td><td>경고 없이 제재 가능</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>괴롭힘·사이버폭력</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>동의 없는 사적 이미지 공유 링크</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>괴롭힘·사이버폭력</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>다른 채널 댓글란에 악성 댓글 유도</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>유해·위험 콘텐츠</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>타인을 죽이거나 심각한 부상 방법 안내</td><td><a href="https://support.google.com/youtube/answer/2801964" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>유해·위험 콘텐츠</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>폭발물·독극물 제조 방법, 해킹·피싱 방법 상세 설명</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>유해·위험 콘텐츠</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>질식 게임 등 신체 위험 행동</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>유해·위험 콘텐츠</td><td style="color:#22c55e;font-weight:700;white-space:nowrap;">✅ 허용</td><td>교육·과학·예술 맥락이 영상 자체에 명시된 경우</td><td>제목·설명만으로는 불충분</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>폭력·노골적 콘텐츠</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>맥락 없이 유혈·부상·폭력만 집중 묘사</td><td><a href="https://support.google.com/youtube/answer/2802008" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>폭력·노골적 콘텐츠</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>가해자 시점으로 촬영한 폭력 사건 영상</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>폭력·노골적 콘텐츠</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>충격·혐오 유발 자체가 목적인 콘텐츠</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>폭력·노골적 콘텐츠</td><td style="color:#22c55e;font-weight:700;white-space:nowrap;">✅ 허용</td><td>전쟁·재난·뉴스 다큐 맥락 + 교육적 설명이 영상 내 포함된 경우</td><td>연령제한 적용 가능</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>성적 콘텐츠</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 즉시삭제</td><td>음란물, 미성년자 성적 착취 콘텐츠 (CSAM)</td><td><a href="https://support.google.com/youtube/answer/2802002" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>성적 콘텐츠</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 즉시삭제</td><td>아동 성적 학대 이미지 → NCMEC 자동 신고</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>성적 콘텐츠</td><td style="color:var(--warn);font-weight:700;white-space:nowrap;">⚠️ 연령제한</td><td>페티시즘 관련 콘텐츠</td><td>수익 대폭 감소</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>성적 콘텐츠</td><td style="color:var(--warn);font-weight:700;white-space:nowrap;">⚠️ 연령제한</td><td>성적 흥분 유발이 의도된 선정적 영상</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>성적 콘텐츠</td><td style="color:var(--warn);font-weight:700;white-space:nowrap;">⚠️ 주의</td><td>썸네일에 선정적 이미지 사용 시 제재 대상</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>아동 보호 (COPPA)</td><td>🔴 의무</td><td>자신의 영상이 아동용인지 직접 설정 필수</td><td><a href="https://support.google.com/youtube/answer/2801999" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>아동 보호 (COPPA)</td><td style="color:var(--warn);font-weight:700;white-space:nowrap;">⚠️ 주의</td><td>아동용 설정 시 개인맞춤 광고 불가 → 수익 대폭 감소</td><td>댓글·알림 기능도 비활성화</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>아동 보호 (COPPA)</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>아동 대상 콘텐츠에 성인 주제 혼합</td><td>FTC 제재 가능</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>아동 보호 (COPPA)</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>YouTube Kids에서 PPL·직접 광고 금지</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>잘못된 정보</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>WHO·현지 보건당국 지침에 반하는 허위 의료 정보</td><td><a href="https://support.google.com/youtube/answer/10834785" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>잘못된 정보</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>선거·민주적 절차 방해 콘텐츠</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>잘못된 정보</td><td style="color:var(--warn);font-weight:700;white-space:nowrap;">⚠️ 알고리즘 불이익</td><td>음모론·유사과학 콘텐츠 → 추천 피드에서 억제 (삭제 아님)</td><td>추천 노출 70% 이상 감소</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>스팸·기만·사기</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>조회수·구독자·좋아요 수 판매·구매 (어뷰징)</td><td><a href="https://support.google.com/youtube/answer/2801973" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>스팸·기만·사기</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>다단계·벼락부자 사기 콘텐츠, 피싱 댓글</td><td>수익창출 정지 또는 채널 폐쇄</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>스팸·기만·사기</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>시청자를 외부 사이트로 유인하는 목적의 콘텐츠</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>폭력적 극단주의</td><td style="color:var(--danger);font-weight:700;white-space:nowrap;">🚫 금지</td><td>테러 조직 모집·자금 조달·찬양, 범죄 조직 홍보</td><td><a href="https://support.google.com/youtube/answer/9229472" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART2 콘텐츠 정책</td><td>폭력적 극단주의</td><td>🔴 즉시폐쇄</td><td>경고 없이 즉시 채널 폐쇄</td><td>가장 엄격한 적용</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>YPP 가입 조건</td><td>구독자</td><td>1000명 이상</td><td><a href="https://support.google.com/youtube/answer/72851" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>YPP 가입 조건</td><td>시청 시간</td><td>최근 12개월 4000시간 OR Shorts 최근 90일 1000만 뷰</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>YPP 가입 조건</td><td>커뮤니티 경고</td><td>활성 경고 없음</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>YPP 가입 조건</td><td>기타</td><td>Google 계정 2단계 인증 필수</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>광고 수익 완전 차단</td><td>극단적 욕설</td><td>영상 전반·제목·썸네일에 심한 욕설</td><td><a href="https://support.google.com/youtube/answer/6162278" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>광고 수익 완전 차단</td><td>노골적 폭력</td><td>맥락 없는 유혈·부상 집중 묘사</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>광고 수익 완전 차단</td><td>성적 콘텐츠</td><td>제목·썸네일·영상 전반에 성적 테마</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>광고 수익 완전 차단</td><td>약물 조장</td><td>불법 약물 판매·사용 상세 묘사</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>광고 수익 완전 차단</td><td>AI 대량생산 콘텐츠</td><td>자동화·반복 템플릿 콘텐츠 (2025.7 신설)</td><td>채널 전체 수익창출 제거 가능</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>광고 수익 완전 차단</td><td>6개월 비활성</td><td>업로드 없음 → 수익창출 자격 박탈</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>수익 감소 요인</td><td>부적절한 언어</td><td>영상 시작부 욕설 반복 등장</td><td>일부 광고주 광고 미게재</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>수익 감소 요인</td><td>논란 주제</td><td>낙태·안락사·가정폭력 등 민감 주제</td><td>맥락에 따라 제한</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART3 수익창출</td><td>수익 감소 요인</td><td>연령제한 적용</td><td>광고 수익 대폭 감소</td><td>비로그인·미성년자 비노출</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>Content ID</td><td>수익 전환</td><td>광고 수익이 저작권자에게 귀속</td><td><a href="https://support.google.com/youtube/answer/6013276" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>Content ID</td><td>차단</td><td>특정 국가 또는 전 세계 접근 불가</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>Content ID</td><td>추적</td><td>영상 유지되나 통계만 저작권자에게 수집</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>저작권 경고</td><td>1회</td><td>2주간 업로드·라이브 제한</td><td><a href="https://support.google.com/youtube/answer/2814000" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>저작권 경고</td><td>90일 내 3회</td><td>채널 영구 해지 + 전체 영상 삭제</td><td>복구 불가</td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>공정사용 판단기준</td><td>목적·성격</td><td>변형적 사용인가 (논평·비평·패러디)</td><td><a href="https://support.google.com/youtube/answer/9783148" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>공정사용 판단기준</td><td>원본 성격</td><td>사실 기반이 허구보다 유리</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>공정사용 판단기준</td><td>사용 분량</td><td>원본 핵심 부분은 소량도 위험</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>공정사용 판단기준</td><td>시장 영향</td><td>저작권자 수익을 해치면 공정사용 인정 어려움</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>공정사용 오해</td><td>❌ 오해1</td><td>출처 명시만으로는 공정사용 인정 안 됨</td><td><a href="https://support.google.com/youtube/answer/2797449" target="_blank" style="font-size:11px;color:var(--text3);text-decoration:underline;">출처 ↗</a></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>공정사용 오해</td><td>❌ 오해2</td><td>교육 목적 표시만으로는 공정사용 인정 안 됨</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART4 저작권</td><td>공정사용 오해</td><td>❌ 오해3</td><td>비영리라도 공정사용 자동 인정 아님</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART5 업로드 체크리스트</td><td>업로드 전 확인</td><td>저작권</td><td>배경음악 저작권 확인 (유튜브 오디오 라이브러리 또는 라이선스 확보)</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART5 업로드 체크리스트</td><td>업로드 전 확인</td><td>혐오표현</td><td>특정 집단 혐오·비하 표현 없는가</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART5 업로드 체크리스트</td><td>업로드 전 확인</td><td>썸네일</td><td>선정적·폭력적 이미지 없는가</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART5 업로드 체크리스트</td><td>업로드 전 확인</td><td>아동콘텐츠</td><td>아동 대상이라면 시청자층 설정 완료했는가</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART5 업로드 체크리스트</td><td>업로드 전 확인</td><td>광고표시</td><td>PPL·협찬이 있다면 유료 광고 포함 표시했는가</td><td></td></tr><tr><td style="font-weight:700;color:var(--primary-hi);white-space:nowrap;">PART5 업로드 체크리스트</td><td>업로드 전 확인</td><td>AI 콘텐츠</td><td>AI 생성 콘텐츠라면 라벨 표시했는가</td><td></td></tr></tbody></table></div>
+</div>
+<script>(function(){document.querySelectorAll(".ytg-tab").forEach(function(btn){  btn.addEventListener("click", function(){    var tab = btn.dataset.tab;    document.querySelectorAll(".ytg-tab").forEach(function(b){      b.classList.remove("on");      b.style.background = "var(--surface)"; b.style.color = "var(--text2)";      b.style.border = "1px solid var(--border)"; b.style.fontWeight = "600";    });    btn.classList.add("on");    btn.style.background = "var(--primary)"; btn.style.color = "#fff";    btn.style.border = "1px solid var(--primary)"; btn.style.fontWeight = "700";    document.querySelectorAll(".ytg-pane").forEach(function(p){      p.style.display = (p.dataset.pane === tab) ? "block" : "none";    });    window.scrollTo({top:0, behavior:"smooth"});  });});})();</script>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 13:39</footer>
+</body>
+</html>
