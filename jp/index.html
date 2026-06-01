@@ -172,8 +172,9 @@ section h2 { font-size:18px; font-weight:700; margin-bottom:14px; letter-spacing
 .info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:600; font-size:13px; }
 .info-bar b { color:var(--text); font-weight:700; }
 .legend-item { display:inline-block; margin-right:14px; white-space:nowrap; font-size:12px; }
-.nav-links a.nav-primary { background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border-color:var(--primary); font-weight:700; box-shadow:0 0 16px rgba(168,85,247,.25); }
-.nav-links a.nav-primary:hover { box-shadow:0 0 22px rgba(168,85,247,.4); }
+.nav-links a.nav-primary { background:rgba(168,85,247,.10); color:var(--primary-hi); border:2px solid var(--primary); font-weight:700; padding:7px 14px; }
+.nav-links a.nav-primary:hover { background:rgba(168,85,247,.18); color:var(--primary-hi); border-color:var(--primary-hi); }
+.nav-links a.nav-primary.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
 .rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
 .rec-group h3 { font-size:14px; font-weight:700; margin:6px 0 10px; }
 .rec-card { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:13px; margin-bottom:9px; transition:all .15s; }
@@ -448,7 +449,7 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
   <header class="shell-head">
     <div style="flex:1;min-width:0;">
       <h1><span class="brand-flag">🇯🇵</span><span class="brand-accent">TubeHacker JP</span><span class="brand-divider">·</span><span class="brand-slogan">유튜브 알고리즘 해킹의 모든 것</span></h1>
-      <div class="sub">최종 갱신: 2026-06-01 09:09 · 추적 채널 26개 · 기준일 2026-05-31</div>
+      <div class="sub">최종 갱신: 2026-06-01 10:03 · 추적 채널 26개 · 기준일 2026-05-31</div>
     </div>
     <div class="header-chips">
       <a href="../index.html" class="h-chip jp" title="🇰🇷 KR">🇰🇷 KR</a>
@@ -468,7 +469,7 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
   </div>
 
   <div id="view"><div class="view-loading">불러오는 중…</div></div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 09:09</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-01 10:03</footer>
 
   <script>
     const cache = {};
