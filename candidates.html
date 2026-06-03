@@ -460,6 +460,26 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
 .manual-body hr { border:none; border-top:1px solid var(--divider); margin:24px 0; }
 .manual-body a { color:var(--primary-hi); }
 .manual-body a:hover { color:var(--primary); }
+/* 부드러운 스크롤 + h2 anchor 위치 보정 */
+html { scroll-behavior:smooth; }
+.manual-body h2 { scroll-margin-top:20px; }
+/* TOC 박스 (상단 sticky 가능) */
+.manual-toc { background:linear-gradient(135deg,rgba(168,85,247,.10) 0%,rgba(99,102,241,.08) 100%); border:1.5px solid rgba(168,85,247,.45); border-radius:12px; padding:14px 18px; margin:8px 0 28px; position:sticky; top:8px; z-index:5; backdrop-filter:blur(8px); max-height:calc(100vh - 24px); overflow-y:auto; }
+.manual-toc::-webkit-scrollbar { width:6px; }
+.manual-toc::-webkit-scrollbar-thumb { background:rgba(168,85,247,.4); border-radius:3px; }
+.manual-toc summary { font-size:14px; color:var(--text); cursor:pointer; padding:4px 0; user-select:none; list-style:none; outline:none; }
+.manual-toc summary::-webkit-details-marker { display:none; }
+.manual-toc summary::before { content:"▼ "; color:#c084fc; font-size:11px; margin-right:6px; transition:transform .2s; display:inline-block; }
+.manual-toc details:not([open]) summary::before { transform:rotate(-90deg); }
+.manual-toc summary b { color:#c084fc; font-weight:800; }
+.manual-toc .toc-count { color:var(--text3); font-size:11px; font-weight:600; margin-left:4px; }
+.manual-toc .toc-hint { color:var(--text3); font-size:11px; font-weight:400; margin-left:6px; }
+.manual-toc .toc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:6px 10px; margin-top:12px; padding-top:10px; border-top:1px dashed rgba(168,85,247,.3); }
+.manual-toc .toc-item { display:flex; align-items:center; gap:8px; padding:6px 10px; background:var(--surface); border:1px solid var(--border); border-radius:7px; font-size:12.5px; color:var(--text); text-decoration:none; transition:all .15s; line-height:1.35; }
+.manual-toc .toc-item:hover { background:rgba(168,85,247,.12); border-color:#c084fc; color:var(--text); transform:translateX(2px); text-decoration:none; }
+.manual-toc .toc-num { font-size:10px; font-weight:800; color:#c084fc; background:rgba(168,85,247,.15); padding:2px 6px; border-radius:4px; flex-shrink:0; min-width:22px; text-align:center; letter-spacing:.3px; }
+.manual-toc .toc-title { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+@media (max-width:600px) { .manual-toc { position:static; padding:10px 12px; } .manual-toc .toc-grid { grid-template-columns:1fr; } }
 
 /* Autopsy 페이지 폼 */
 .autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
@@ -513,7 +533,7 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
 <div id="candPagination" style="display:flex;justify-content:center;align-items:center;gap:6px;margin:20px 0 80px;flex-wrap:wrap;"></div>
 </div>
 <div id="candStickyBar" style="position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:1000;background:var(--surface);border:2px solid var(--primary);border-radius:14px;padding:12px 18px;display:inline-flex;gap:10px;align-items:center;box-shadow:0 8px 32px rgba(168,85,247,.4);max-width:95vw;flex-wrap:wrap;justify-content:center;"><span id="candStickyCount" style="font-weight:800;color:var(--primary-hi);font-size:14px;">📋 선택 0개</span><button id="candStickySelectTop10" style="padding:7px 14px;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;">⚡ 상위 10개</button><button id="candStickyClear" style="padding:7px 12px;background:transparent;color:var(--text2);border:1px solid var(--border);border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;">초기화</button><button id="candStickyAdd" disabled style="padding:9px 22px;background:linear-gradient(135deg,var(--primary),var(--primary-hi));color:#fff;border:none;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;opacity:0.4;">✅ <span id="candStickyAddText">체크박스 선택 필요</span></button><button id="candStickyRemove" disabled style="padding:9px 22px;background:linear-gradient(135deg,var(--danger),#f87171);color:#fff;border:none;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;opacity:0.4;display:none;">✗ <span id="candStickyRemoveText">해제할 채널 선택</span></button></div>
-<script src="candidates_logic.js?v=20260604011109"></script>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-04 01:11</footer>
+<script src="candidates_logic.js?v=20260604012738"></script>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-04 01:27</footer>
 </body>
 </html>

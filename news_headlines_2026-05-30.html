@@ -460,6 +460,26 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
 .manual-body hr { border:none; border-top:1px solid var(--divider); margin:24px 0; }
 .manual-body a { color:var(--primary-hi); }
 .manual-body a:hover { color:var(--primary); }
+/* 부드러운 스크롤 + h2 anchor 위치 보정 */
+html { scroll-behavior:smooth; }
+.manual-body h2 { scroll-margin-top:20px; }
+/* TOC 박스 (상단 sticky 가능) */
+.manual-toc { background:linear-gradient(135deg,rgba(168,85,247,.10) 0%,rgba(99,102,241,.08) 100%); border:1.5px solid rgba(168,85,247,.45); border-radius:12px; padding:14px 18px; margin:8px 0 28px; position:sticky; top:8px; z-index:5; backdrop-filter:blur(8px); max-height:calc(100vh - 24px); overflow-y:auto; }
+.manual-toc::-webkit-scrollbar { width:6px; }
+.manual-toc::-webkit-scrollbar-thumb { background:rgba(168,85,247,.4); border-radius:3px; }
+.manual-toc summary { font-size:14px; color:var(--text); cursor:pointer; padding:4px 0; user-select:none; list-style:none; outline:none; }
+.manual-toc summary::-webkit-details-marker { display:none; }
+.manual-toc summary::before { content:"▼ "; color:#c084fc; font-size:11px; margin-right:6px; transition:transform .2s; display:inline-block; }
+.manual-toc details:not([open]) summary::before { transform:rotate(-90deg); }
+.manual-toc summary b { color:#c084fc; font-weight:800; }
+.manual-toc .toc-count { color:var(--text3); font-size:11px; font-weight:600; margin-left:4px; }
+.manual-toc .toc-hint { color:var(--text3); font-size:11px; font-weight:400; margin-left:6px; }
+.manual-toc .toc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:6px 10px; margin-top:12px; padding-top:10px; border-top:1px dashed rgba(168,85,247,.3); }
+.manual-toc .toc-item { display:flex; align-items:center; gap:8px; padding:6px 10px; background:var(--surface); border:1px solid var(--border); border-radius:7px; font-size:12.5px; color:var(--text); text-decoration:none; transition:all .15s; line-height:1.35; }
+.manual-toc .toc-item:hover { background:rgba(168,85,247,.12); border-color:#c084fc; color:var(--text); transform:translateX(2px); text-decoration:none; }
+.manual-toc .toc-num { font-size:10px; font-weight:800; color:#c084fc; background:rgba(168,85,247,.15); padding:2px 6px; border-radius:4px; flex-shrink:0; min-width:22px; text-align:center; letter-spacing:.3px; }
+.manual-toc .toc-title { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+@media (max-width:600px) { .manual-toc { position:static; padding:10px 12px; } .manual-toc .toc-grid { grid-template-columns:1fr; } }
 
 /* Autopsy 페이지 폼 */
 .autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
