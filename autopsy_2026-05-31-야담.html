@@ -463,23 +463,29 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
 /* 부드러운 스크롤 + h2 anchor 위치 보정 */
 html { scroll-behavior:smooth; }
 .manual-body h2 { scroll-margin-top:20px; }
-/* TOC 박스 (상단 sticky 가능) */
+/* TOC 박스 (카테고리 그룹 2단) */
 .manual-toc { background:linear-gradient(135deg,rgba(168,85,247,.10) 0%,rgba(99,102,241,.08) 100%); border:1.5px solid rgba(168,85,247,.45); border-radius:12px; padding:14px 18px; margin:8px 0 28px; position:sticky; top:8px; z-index:5; backdrop-filter:blur(8px); max-height:calc(100vh - 24px); overflow-y:auto; }
 .manual-toc::-webkit-scrollbar { width:6px; }
 .manual-toc::-webkit-scrollbar-thumb { background:rgba(168,85,247,.4); border-radius:3px; }
-.manual-toc summary { font-size:14px; color:var(--text); cursor:pointer; padding:4px 0; user-select:none; list-style:none; outline:none; }
+.manual-toc summary { font-size:14px; color:var(--text); cursor:pointer; padding:6px 0; user-select:none; list-style:none; outline:none; }
 .manual-toc summary::-webkit-details-marker { display:none; }
 .manual-toc summary::before { content:"▼ "; color:#c084fc; font-size:11px; margin-right:6px; transition:transform .2s; display:inline-block; }
 .manual-toc details:not([open]) summary::before { transform:rotate(-90deg); }
-.manual-toc summary b { color:#c084fc; font-weight:800; }
-.manual-toc .toc-count { color:var(--text3); font-size:11px; font-weight:600; margin-left:4px; }
-.manual-toc .toc-hint { color:var(--text3); font-size:11px; font-weight:400; margin-left:6px; }
-.manual-toc .toc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:6px 10px; margin-top:12px; padding-top:10px; border-top:1px dashed rgba(168,85,247,.3); }
-.manual-toc .toc-item { display:flex; align-items:center; gap:8px; padding:6px 10px; background:var(--surface); border:1px solid var(--border); border-radius:7px; font-size:12.5px; color:var(--text); text-decoration:none; transition:all .15s; line-height:1.35; }
-.manual-toc .toc-item:hover { background:rgba(168,85,247,.12); border-color:#c084fc; color:var(--text); transform:translateX(2px); text-decoration:none; }
-.manual-toc .toc-num { font-size:10px; font-weight:800; color:#c084fc; background:rgba(168,85,247,.15); padding:2px 6px; border-radius:4px; flex-shrink:0; min-width:22px; text-align:center; letter-spacing:.3px; }
-.manual-toc .toc-title { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-@media (max-width:600px) { .manual-toc { position:static; padding:10px 12px; } .manual-toc .toc-grid { grid-template-columns:1fr; } }
+.manual-toc summary b { color:#c084fc; font-weight:800; font-size:15px; }
+.manual-toc .toc-count { color:var(--text2); font-size:11px; font-weight:600; margin-left:6px; background:rgba(168,85,247,.15); padding:2px 8px; border-radius:10px; }
+.manual-toc .toc-hint { color:var(--text3); font-size:11px; font-weight:400; margin-left:8px; font-style:italic; }
+/* 카테고리 그룹 2단 grid */
+.manual-toc .toc-groups { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 18px; margin-top:14px; padding-top:12px; border-top:1px dashed rgba(168,85,247,.3); }
+.manual-toc .toc-group { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:10px 12px; }
+.manual-toc .toc-cat { font-size:13px; font-weight:800; color:#c084fc; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid rgba(168,85,247,.2); display:flex; align-items:center; gap:6px; }
+.manual-toc .toc-cat-emoji { font-size:15px; }
+.manual-toc .toc-cat-count { color:var(--text3); font-size:10.5px; font-weight:600; margin-left:auto; background:rgba(168,85,247,.1); padding:1px 6px; border-radius:8px; }
+.manual-toc ul { list-style:none; margin:0; padding:0; }
+.manual-toc li { margin:0; padding:0; }
+.manual-toc li a { display:flex; align-items:center; gap:8px; padding:5px 8px; font-size:12.5px; color:var(--text); text-decoration:none; border-radius:5px; transition:all .12s; line-height:1.4; }
+.manual-toc li a:hover { background:rgba(168,85,247,.12); color:var(--text); text-decoration:none; padding-left:11px; }
+.manual-toc .toc-num { font-size:10px; font-weight:800; color:#c084fc; background:rgba(168,85,247,.15); padding:2px 5px; border-radius:3px; flex-shrink:0; min-width:20px; text-align:center; letter-spacing:.3px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+@media (max-width:700px) { .manual-toc { position:static; padding:10px 12px; } .manual-toc .toc-groups { grid-template-columns:1fr; } }
 
 /* Autopsy 페이지 폼 */
 .autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
@@ -552,6 +558,6 @@ html { scroll-behavior:smooth; }
 <div class="rep-note" style="margin-top:12px;"><b>📖 First plot 90~180s</b> <code>첫 사건 전개</code></div><div class="info-bar" style="white-space:pre-wrap;line-height:1.6;"><i style='color:rgba(255,255,255,.4)'>(텍스트 없음)</i></div>
 <div class="rep-note" style="margin-top:12px;"><b>🔥 Climax (40~70%)</b> </div><div class="info-bar" style="white-space:pre-wrap;line-height:1.6;">끼는 일은 성시하게 하겠습니다. 관리는 벽에 붙은 명패를 가리키며 말했지요. 그을 안다고? 그럼 저기 적힌 이름 샘만 읽어 봐라. 봐라. 하지는 숨을 가다듬고 익었습니다. 좌의정 창고, 내수사 별, 약재창, 관리의 눈빛이 조금 달라졌어요. 그때 비단 도포를 입은 중년 사내 하나가 하나가 마당으로 들어왔지요. 좌의정 집안의 총관이었습니다. 그는 새하인들을 쭉 훑어 보더니 소년 앞에서 멈췄어요. 어린 것이 겁은 없느냐? 소녀는 고개를 숙인 채 또렷이 말했지요. 겁분 납니다. 하지만 시키는 일은 끝까지 하겠습니다. 높은 사람 밑에서 일하게 해 주시면 허튼짓하지 않고 성시하게 배우겠습니다. 총관은 한참 그를 내려다 보다가 하인 하나를 불렀습니다.이 아이에게 쌀포대 하나를 지워 모아라. 하진의 어깨에 쌀포대가 얹쳤어요. 비틀거릴 정도로 무거웠지요. 저 마당 끝까지 옮겨라. 중간에 놓치면 데려가지 않겠다. 하지는 숨이 턱까지 차 올랐습니다. 몇 걸음 못과 포대가 미끄러지자 그는 무릎으로 받쳐 가까으로 다시 일으켰어요. 마당 끝까지 다달았을 때 총과는 무심하게 말했지요. 힘은 모자라도 악착같이 버티는군. 총관이 마지막 질문을 던졌습니다. 높은 사람 집에서 일하면 늘은 것도 못들은 척하고 본 것도 못 본 척해야 한다. 괜난 호기심으로 살아남을 수 있는 곳이 아니다. 하지는 가슴이 철렁했어요. 얼굴에는 아무것도 드러내지 않으려 했었지요. 네. 저는 제게 맡겨진 일만 하겠습니다. 총은 고개를 끄덕였습니다. 좋다. 좌의정 대감의 외원 별에서 자비를 시켜 보겠다. 질수하면 바로 내 쫓을 것이다. 소년은 속으로 숨을 길게 내쉬었어요</div>
 <div class="rep-note" style="margin-top:12px;"><b>🎯 Outro (마지막 60s)</b> <code>`여운형`</code></div><div class="info-bar" style="white-space:pre-wrap;line-height:1.6;">무겁지만 또렷한 목소리로 말했지요. 나는 숨겨져 태어나고 숨어서 자랐으며 뒤늦게 진실을 알게 되었다. 그래서 더 잘 안다. 권력이 진실을 가리면 가장 먼저 다치는 것은 힘없는 사람들이다. 나는 그런 나라를 두지 않겠다. 왕비는 아래에서 아들을 바라보며 눈물을 훔쳤습니다. 이모도 먼 자리에서 두 손을 모은 채 그 관경을 지켜보았어요. 산속에서 장작을 하던 아이는 이제 왕이 되었지요. 하지만 그는 자신이 어디에서 왔는지 잊지 않는 왕이었습니다. 그리고 그 시작은 암살당의 산속에 버려진 어머니를 알아본 그날의 한마디에서 시작되었어요. 어, 우리 엄마랑 똑같이 생겼네. M.</div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-04 01:27</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-04 01:33</footer>
 </body>
 </html>

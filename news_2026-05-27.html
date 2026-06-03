@@ -463,23 +463,29 @@ details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi)
 /* 부드러운 스크롤 + h2 anchor 위치 보정 */
 html { scroll-behavior:smooth; }
 .manual-body h2 { scroll-margin-top:20px; }
-/* TOC 박스 (상단 sticky 가능) */
+/* TOC 박스 (카테고리 그룹 2단) */
 .manual-toc { background:linear-gradient(135deg,rgba(168,85,247,.10) 0%,rgba(99,102,241,.08) 100%); border:1.5px solid rgba(168,85,247,.45); border-radius:12px; padding:14px 18px; margin:8px 0 28px; position:sticky; top:8px; z-index:5; backdrop-filter:blur(8px); max-height:calc(100vh - 24px); overflow-y:auto; }
 .manual-toc::-webkit-scrollbar { width:6px; }
 .manual-toc::-webkit-scrollbar-thumb { background:rgba(168,85,247,.4); border-radius:3px; }
-.manual-toc summary { font-size:14px; color:var(--text); cursor:pointer; padding:4px 0; user-select:none; list-style:none; outline:none; }
+.manual-toc summary { font-size:14px; color:var(--text); cursor:pointer; padding:6px 0; user-select:none; list-style:none; outline:none; }
 .manual-toc summary::-webkit-details-marker { display:none; }
 .manual-toc summary::before { content:"▼ "; color:#c084fc; font-size:11px; margin-right:6px; transition:transform .2s; display:inline-block; }
 .manual-toc details:not([open]) summary::before { transform:rotate(-90deg); }
-.manual-toc summary b { color:#c084fc; font-weight:800; }
-.manual-toc .toc-count { color:var(--text3); font-size:11px; font-weight:600; margin-left:4px; }
-.manual-toc .toc-hint { color:var(--text3); font-size:11px; font-weight:400; margin-left:6px; }
-.manual-toc .toc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:6px 10px; margin-top:12px; padding-top:10px; border-top:1px dashed rgba(168,85,247,.3); }
-.manual-toc .toc-item { display:flex; align-items:center; gap:8px; padding:6px 10px; background:var(--surface); border:1px solid var(--border); border-radius:7px; font-size:12.5px; color:var(--text); text-decoration:none; transition:all .15s; line-height:1.35; }
-.manual-toc .toc-item:hover { background:rgba(168,85,247,.12); border-color:#c084fc; color:var(--text); transform:translateX(2px); text-decoration:none; }
-.manual-toc .toc-num { font-size:10px; font-weight:800; color:#c084fc; background:rgba(168,85,247,.15); padding:2px 6px; border-radius:4px; flex-shrink:0; min-width:22px; text-align:center; letter-spacing:.3px; }
-.manual-toc .toc-title { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-@media (max-width:600px) { .manual-toc { position:static; padding:10px 12px; } .manual-toc .toc-grid { grid-template-columns:1fr; } }
+.manual-toc summary b { color:#c084fc; font-weight:800; font-size:15px; }
+.manual-toc .toc-count { color:var(--text2); font-size:11px; font-weight:600; margin-left:6px; background:rgba(168,85,247,.15); padding:2px 8px; border-radius:10px; }
+.manual-toc .toc-hint { color:var(--text3); font-size:11px; font-weight:400; margin-left:8px; font-style:italic; }
+/* 카테고리 그룹 2단 grid */
+.manual-toc .toc-groups { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 18px; margin-top:14px; padding-top:12px; border-top:1px dashed rgba(168,85,247,.3); }
+.manual-toc .toc-group { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:10px 12px; }
+.manual-toc .toc-cat { font-size:13px; font-weight:800; color:#c084fc; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid rgba(168,85,247,.2); display:flex; align-items:center; gap:6px; }
+.manual-toc .toc-cat-emoji { font-size:15px; }
+.manual-toc .toc-cat-count { color:var(--text3); font-size:10.5px; font-weight:600; margin-left:auto; background:rgba(168,85,247,.1); padding:1px 6px; border-radius:8px; }
+.manual-toc ul { list-style:none; margin:0; padding:0; }
+.manual-toc li { margin:0; padding:0; }
+.manual-toc li a { display:flex; align-items:center; gap:8px; padding:5px 8px; font-size:12.5px; color:var(--text); text-decoration:none; border-radius:5px; transition:all .12s; line-height:1.4; }
+.manual-toc li a:hover { background:rgba(168,85,247,.12); color:var(--text); text-decoration:none; padding-left:11px; }
+.manual-toc .toc-num { font-size:10px; font-weight:800; color:#c084fc; background:rgba(168,85,247,.15); padding:2px 5px; border-radius:3px; flex-shrink:0; min-width:20px; text-align:center; letter-spacing:.3px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+@media (max-width:700px) { .manual-toc { position:static; padding:10px 12px; } .manual-toc .toc-groups { grid-template-columns:1fr; } }
 
 /* Autopsy 페이지 폼 */
 .autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
@@ -521,6 +527,6 @@ html { scroll-behavior:smooth; }
   </header>
   
   <div class="rep-note">조건을 통과한 외부 영상이 없습니다.</div>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-04 01:27</footer>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-04 01:33</footer>
 </body>
 </html>
