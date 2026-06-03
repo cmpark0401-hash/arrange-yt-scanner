@@ -1,7 +1,16 @@
 {
-  "schema_version": "1.0",
-  "updated_at": "2026-06-03 16:00",
+  "schema_version": "2.0",
+  "updated_at": "2026-06-03 17:00",
   "today": "2026-06-03",
+  "categories_def": {
+    "single_explosion": {"label": "🔥 단일 폭발", "desc": "타채널 2일 이내 폭발 영상 (시의성 단발)", "color": "var(--hot)", "border": "var(--hot-bd)"},
+    "timeliness": {"label": "🚨 시의성", "desc": "현재 트렌드·뉴스 기반 (오늘 만들면 골든타임)", "color": "var(--warn)", "border": "var(--warn-bd)"},
+    "series": {"label": "📚 시리즈 다음 회차", "desc": "메인 시리즈 IP EP.N (AI 양산이 못 함)", "color": "var(--primary-hi)", "border": "var(--primary-bd)"},
+    "evergreen": {"label": "✨ 검증 evergreen", "desc": "Hot키워드 누적 검증 (시기 무관)", "color": "#22c55e", "border": "rgba(34,197,94,.55)"},
+    "reedit": {"label": "🔁 재편집 재폭발", "desc": "같은 주제 다시 신호 (변형 기회)", "color": "var(--info)", "border": "rgba(96,165,250,.55)"},
+    "cross_category": {"label": "🔀 카테고리 교차", "desc": "다른 분야 폭발 → 우리 채널 톤으로", "color": "#a855f7", "border": "rgba(168,85,247,.55)"},
+    "owned_draft": {"label": "💎 보유 대본 우선", "desc": "이미 작성된 미발행 대본", "color": "var(--primary)", "border": "var(--primary)"}
+  },
   "channels": [
     {
       "slug": "knowledge-archive",
@@ -9,94 +18,110 @@
       "icon": "📈",
       "tone": "경제(주)·시사(부) 시니어",
       "open_status": "active",
+      "series_ip": {
+        "main": "오늘 동시에 터진 영상 5편이 가리키는 한국",
+        "essence": "TubeHacker 매일 데이터 → 통찰 (개인 못 봄)",
+        "ep_count": 0
+      },
       "topics": [
         {
-          "id": "kn-20260603-01",
-          "rank": 1,
-          "title": "세녹스 990원 + 한국 독자기술 일본 패닉",
+          "id": "kn-20260603-se",
+          "category": "single_explosion",
+          "title": "경제대부 \"세녹스 990원\" (62.6x · 6/2 폭발 1위)",
           "type": "신규",
           "rating": 5,
-          "tags": ["시의성", "한일 비교", "5중검증", "제우스 노하우 1"],
-          "merge_angle": "환경부도 인정한 세녹스와 일본을 패닉시킨 한국 독자기술 — 일본이 100년 걸린다던 그 분야",
-          "sources_a": {
-            "channel": "경제대부",
-            "title": "\"환경부도, 카이스트도 전부 인정했는데...\" 전국 주유소 뒤흔든 990원 세녹스",
-            "efficiency": 62.6,
-            "views": 184123,
-            "url": ""
-          },
-          "sources_b": {
-            "channel": "코믹스 경제",
-            "title": "\"100년은 걸린다\" 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉",
-            "efficiency": 25.2,
-            "views": 47642,
-            "url": ""
-          },
+          "tags": ["폭발 1위", "62.6x", "환경부 인정", "시의성"],
+          "merge_angle": "세녹스 단일 + 한국 독자기술 일본 패닉 → \"환경부도 인정한 세녹스와 일본 패닉시킨 한국 기술\"",
+          "sources_a": {"channel": "경제대부", "title": "전국 주유소 뒤흔든 990원 세녹스", "efficiency": 62.6, "views": 184123},
+          "sources_b": {"channel": "코믹스 경제", "title": "100년 걸린다던 한국 독자 기술에 일본 패닉", "efficiency": 25.2, "views": 47642},
           "status": "pending",
-          "checklist": {
-            "collect": false,
-            "analyze": false,
-            "data_prep": false,
-            "strategy": false,
-            "outline": false,
-            "draft": false,
-            "review_finalize": false,
-            "self_diagnosis": false,
-            "shorts": false,
-            "published": false
-          },
-          "events": [
-            {"ts": "2026-06-03 16:00", "type": "proposed", "note": "오늘 추천 1순위 — 6/2 폭발 풀에서 최고"}
-          ],
-          "started_at": null,
-          "completed_at": null,
-          "published_at": null,
-          "video_url": null,
-          "notes": ""
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "6/2 폭발 1위 시의성 강력"}]
         },
         {
-          "id": "kn-20260603-02",
-          "rank": 2,
-          "title": "엔비디아 무명회사 + 삼성 평택 노조 해체",
-          "type": "대안",
+          "id": "kn-20260603-tm",
+          "category": "timeliness",
+          "title": "젠슨황 방한 + 삼성 평택 노조 해체 (시점 교차)",
+          "type": "신규",
           "rating": 5,
-          "tags": ["시점교차", "한국 반도체", "3중검증", "제우스 노하우 1"],
-          "merge_angle": "엔비디아 1000억 vs 삼성 평택 해체 — 한국 반도체 두 신화의 동시 균열",
-          "sources_a": {
-            "channel": "경제읽음이",
-            "title": "엔비디아가 삼성·SK 놔두고 1000억 베팅한 무명 회사의 진짜 정체",
-            "efficiency": 25.9,
-            "views": 352477,
-            "url": ""
-          },
-          "sources_b": {
-            "channel": "경제균열",
-            "title": "삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언",
-            "efficiency": 23.7,
-            "views": 417996,
-            "url": ""
-          },
+          "tags": ["젠슨황", "평택 해체", "한국 반도체", "이번 주 핫"],
+          "merge_angle": "젠슨황이 한국에 온 그 시간, 평택 삼성은 노조 해체로 답했다",
+          "sources_a": {"channel": "815머니톡", "title": "Jensen Huang Visit to Korea", "efficiency": null, "views": 107200},
+          "sources_b": {"channel": "깊은 경제", "title": "삼성 귀족 노조의 몰락, 평택 공장 해체", "efficiency": null, "views": 115947},
           "status": "pending",
-          "checklist": {
-            "collect": false,
-            "analyze": false,
-            "data_prep": false,
-            "strategy": false,
-            "outline": false,
-            "draft": false,
-            "review_finalize": false,
-            "self_diagnosis": false,
-            "shorts": false,
-            "published": false
-          },
-          "events": [
-            {"ts": "2026-06-03 16:00", "type": "proposed", "note": "1순위 대안 — 한국 반도체 트렌드 강력"}
-          ],
-          "started_at": null,
-          "completed_at": null,
-          "published_at": null,
-          "video_url": null,
-          "notes": ""
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "이번 주 시의성 강력"}]
+        },
+        {
+          "id": "kn-20260603-sr",
+          "category": "series",
+          "title": "EP.1 — 오늘 5편 폭발이 가리키는 \"한국 반도체의 진짜 위기\"",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["시리즈 EP.1", "메인 IP", "데이터 통찰", "AI 못함"],
+          "merge_angle": "엔비디아 무명회사+삼성 노조 해체+세녹스+한국 독자기술+영국 몰락 = 5편이 동시 말하는 한국 산업의 진짜 균열",
+          "sources_a": null,
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "메인 시리즈 EP.1 — 데이터 통찰 첫 영상"}]
+        },
+        {
+          "id": "kn-20260603-ev",
+          "category": "evergreen",
+          "title": "자산 8계급 (이미 14.6x 검증 + 보유 대본)",
+          "type": "보유",
+          "rating": 4,
+          "tags": ["evergreen", "검증된 시니어 자산", "보유 대본 8번"],
+          "merge_angle": "5/19 작성 대본 8번. 오늘도 14.6x로 검증 중",
+          "sources_a": null,
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {"collect": true, "analyze": true, "strategy": true, "draft": true, "review_finalize": true, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-05-19", "type": "drafted", "note": "보유 대본 작성"}, {"ts": "2026-06-03 17:00", "type": "proposed", "note": "오늘도 14.6x 검증 — evergreen"}]
+        },
+        {
+          "id": "kn-20260603-re",
+          "category": "reedit",
+          "title": "이지한 경제학 \"식민지보다 못한 영국의 몰락\" (6/2 재편집)",
+          "type": "신규",
+          "rating": 4,
+          "tags": ["재편집 신호", "영국 몰락", "한국 추월"],
+          "merge_angle": "영국 몰락 + 한밤의 한국사 우암 송시열 (23.7x) = 시점 교차",
+          "sources_a": {"channel": "이지한 경제학", "title": "식민지보다 못 살게 된 영국의 몰락", "efficiency": null, "views": 137339},
+          "sources_b": {"channel": "한밤의 한국사", "title": "우암 송시열 (실록 3000번 등장)", "efficiency": 23.7, "views": 131993},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "재편집 풀 + 시점 교차"}]
+        },
+        {
+          "id": "kn-20260603-cc",
+          "category": "cross_category",
+          "title": "[과학→경제] 세모과학 \"쥐 천국 → 멸종\" (26.9x) → 시장 환각 통찰",
+          "type": "신규",
+          "rating": 4,
+          "tags": ["행동 과학", "집단 심리", "시장 패턴"],
+          "merge_angle": "쥐 천국이 가져온 멸종 + 시장의 환각 = 집단이 스스로 무너지는 패턴",
+          "sources_a": {"channel": "세모과학", "title": "쥐들에게 천국을 만들어주자, 스스로 멸종을 선택했다", "efficiency": 26.9, "views": 4176814},
+          "sources_b": {"channel": "지식인사이드", "title": "Don't get drunk on the bull market (시장 시그널)", "efficiency": null, "views": 1341646},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "과학 폭발 → 시니어 시사 통찰"}]
+        },
+        {
+          "id": "kn-20260603-od",
+          "category": "owned_draft",
+          "title": "12번 \"중국 댐 리스크\" (5/28, 오늘도 17.1x 트렌드)",
+          "type": "보유",
+          "rating": 4,
+          "tags": ["보유 12번", "5일 전", "오늘도 검증"],
+          "merge_angle": "5/28 작성 대본. 단 세계경제 돋보기 4편 점령 중 — 차별점 강화 필요",
+          "sources_a": null,
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {"collect": true, "analyze": true, "strategy": true, "draft": true, "review_finalize": true, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-05-28", "type": "drafted", "note": "보유 대본 작성"}, {"ts": "2026-06-03 17:00", "type": "proposed", "note": "오늘 17.1x — 단 과포화 주의"}],
+          "notes": "사용자 우려: 중국 댐 시리즈 과포화"
         }
       ]
     },
@@ -106,39 +131,95 @@
       "icon": "🌙",
       "tone": "인물(주)·교양(부) 잠들기 전 위로",
       "open_status": "active",
+      "series_ip": {
+        "main": "당신 부모님이 살아냈던 그날",
+        "essence": "시청자 ↔ 부모 세대 ↔ 한 인물 3중 교차",
+        "ep_count": 0
+      },
       "topics": [
         {
-          "id": "nn-20260603-01",
-          "rank": 1,
-          "title": "보유 5/23 돔 페리뇽 47년 (수도사)",
-          "type": "보유",
-          "rating": 4,
-          "tags": ["evergreen", "보유 대본 우선", "16~17분"],
-          "merge_angle": "5/23 작성된 보유 대본. 9일 지났지만 evergreen 인물이라 그대로 발행 가능",
+          "id": "nn-20260603-tm",
+          "category": "timeliness",
+          "title": "(evergreen 채널이라 시의성 X — 보유 대본 우선)",
+          "type": "안내",
+          "rating": 0,
+          "tags": ["evergreen", "시의성 무관"],
+          "merge_angle": "잘듣네는 위로 톤 evergreen. 시의성 카테고리는 비활성",
+          "sources_a": null,
+          "sources_b": null,
+          "status": "hold",
+          "checklist": {},
+          "events": [{"ts": "2026-06-03 17:00", "type": "info", "note": "evergreen 채널 — 시의성 카테고리 비활성"}]
+        },
+        {
+          "id": "nn-20260603-sr",
+          "category": "series",
+          "title": "EP.1 — \"당신 어머니가 25살이던 1955년, 한 사람이 있었습니다\" (헬렌 켈러)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["시리즈 EP.1", "메인 IP", "1955년 + 헬렌 켈러", "세대 교차"],
+          "merge_angle": "시청자 어머니 1955년 청년 시절 ↔ 헬렌 켈러가 한국 방문한 그 해. 잠들기 전 어머니를 떠올리며",
           "sources_a": null,
           "sources_b": null,
           "status": "pending",
-          "checklist": {
-            "collect": true,
-            "analyze": true,
-            "data_prep": true,
-            "strategy": true,
-            "outline": true,
-            "draft": true,
-            "review_finalize": true,
-            "self_diagnosis": false,
-            "shorts": false,
-            "published": false
-          },
-          "events": [
-            {"ts": "2026-05-23", "type": "drafted", "note": "보유 대본 작성"},
-            {"ts": "2026-06-03 16:00", "type": "proposed", "note": "오늘 추천 — 가장 신선한 보유 대본"}
-          ],
-          "started_at": "2026-05-23",
-          "completed_at": "2026-05-23",
-          "published_at": null,
-          "video_url": null,
-          "notes": "/Users/chris/Desktop/autoworkers/autoworkers-script/channels/nn-flix/projects/20260521_02_van-gogh-letters-theo/ — 사실 4번이 가장 신선한 5/23 돔 페리뇽이지만 폴더명은 21일자"
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "메인 시리즈 EP.1 — 부모 세대 교차"}]
+        },
+        {
+          "id": "nn-20260603-ev",
+          "category": "evergreen",
+          "title": "빅터 프랭클 (의미치료 — 시니어 인물 통찰)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["evergreen", "위인", "의미치료", "시니어 본질"],
+          "merge_angle": "죽음의 수용소에서 그가 끝까지 지킨 한 가지 — 잠들기 전 인생의 의미를 묻다",
+          "sources_a": null,
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "evergreen 인물 풀 — 1순위 후보"}]
+        },
+        {
+          "id": "nn-20260603-re",
+          "category": "reedit",
+          "title": "지식인사이드 \"차인표 60년 깨달음\" (887K · 6/2 재편집)",
+          "type": "신규",
+          "rating": 4,
+          "tags": ["재편집 신호", "60년 깨달음", "시니어 인물 통찰"],
+          "merge_angle": "차인표가 60년 살아보고 깨달은 한 가지 + Life's Crossroads 1 Rule = 인생 갈림길 통찰",
+          "sources_a": {"channel": "지식인사이드", "title": "Cha In-pyo 60 years realization", "efficiency": null, "views": 887609},
+          "sources_b": {"channel": "지식인사이드", "title": "Life's Crossroads 1 Rule", "efficiency": null, "views": 316173},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "재편집 + 위로 톤"}]
+        },
+        {
+          "id": "nn-20260603-cc",
+          "category": "cross_category",
+          "title": "[과학→인물] 김상욱 교수의 인생 통찰 (6/2 재편집)",
+          "type": "신규",
+          "rating": 4,
+          "tags": ["과학자 인생", "톤 변환", "시니어 통찰"],
+          "merge_angle": "물리학자 김상욱이 정치에 던진 한 마디 + 그의 인생 — 한 사람이 살아낸 과학자의 길",
+          "sources_a": {"channel": "JTV뉴스", "title": "김상욱 후보님 김두겸 대폭발", "efficiency": null, "views": 52246},
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "과학 인물 → 잘듣네 톤"}]
+        },
+        {
+          "id": "nn-20260603-od",
+          "category": "owned_draft",
+          "title": "보유 5/23 돔 페리뇽 47년 (가장 신선)",
+          "type": "보유",
+          "rating": 5,
+          "tags": ["보유 4번", "9일 전", "evergreen 인물"],
+          "merge_angle": "한 수도사가 47년을 바친 한 가지. 잠들기 전 그의 인생을 듣다",
+          "sources_a": null,
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {"collect": true, "analyze": true, "strategy": true, "draft": true, "review_finalize": true, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-05-23", "type": "drafted", "note": "보유 대본 작성"}, {"ts": "2026-06-03 17:00", "type": "proposed", "note": "가장 신선한 보유 대본"}]
         }
       ]
     },
@@ -148,51 +229,96 @@
       "icon": "🔬",
       "tone": "과학(주)·건강(부) 시니어",
       "open_status": "not_opened",
+      "series_ip": {
+        "main": "AI도 못 푼 우리 몸/우주의 한 가지",
+        "essence": "AI 시대 메타 모순 (AI가 못 만듦)",
+        "ep_count": 0
+      },
       "topics": [
         {
-          "id": "sw-20260603-01",
-          "rank": 1,
-          "title": "[채널 개설 후] 3I/ATLAS + 나스카 라인",
+          "id": "sw-20260603-se",
+          "category": "single_explosion",
+          "title": "우주생각 \"프록시마 센타우리 못 가는 10가지\" (16.8x · 1일 전)",
           "type": "신규",
           "rating": 5,
-          "tags": ["우주+미스터리", "신규 추적 채널", "evergreen"],
-          "merge_angle": "외계 손님 3I/ATLAS의 고향과 AI가 푼 나스카 라인 — 우주가 우리에게 보낸 두 편지",
-          "sources_a": {
-            "channel": "우주먼지의 현자타임즈",
-            "title": "천문학자들이 드디어 3I/ATLAS의 고향을 추적하기 시작했다",
-            "efficiency": 5.5,
-            "views": 66413,
-            "url": ""
-          },
-          "sources_b": {
-            "channel": "과학드림",
-            "title": "Has AI finally solved the mystery of the Nazca Lines!?",
-            "efficiency": 6.2,
-            "views": 1529598,
-            "url": ""
-          },
+          "tags": ["폭발 1일", "16.8x", "신규 추적 채널"],
+          "merge_angle": "우주생각 두 영상 합치기 — 프록시마 못 가는 이유 + 페르미 역설 = 우주에 우리뿐",
+          "sources_a": {"channel": "우주생각", "title": "프록시마 센타우리에 절대 갈 수 없는 10가지 이유", "efficiency": 16.8, "views": 65999},
+          "sources_b": {"channel": "우주생각", "title": "우주에 우리뿐이라면 (페르미 역설)", "efficiency": 8.2, "views": 31965},
           "status": "blocked",
-          "checklist": {
-            "channel_setup": false,
-            "collect": false,
-            "analyze": false,
-            "data_prep": false,
-            "strategy": false,
-            "outline": false,
-            "draft": false,
-            "review_finalize": false,
-            "self_diagnosis": false,
-            "shorts": false,
-            "published": false
-          },
-          "events": [
-            {"ts": "2026-06-03 16:00", "type": "proposed", "note": "선결 조건: 채널 개설 (channel-setup 스킬)"}
-          ],
-          "started_at": null,
-          "completed_at": null,
-          "published_at": null,
-          "video_url": null,
-          "notes": "유튜브 채널 미개설. '과만세 채널 만들어줘' 명령 → channel-setup 스킬 자동 진입"
+          "checklist": {"channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "선결: 채널 개설"}],
+          "notes": "채널 개설 후 발행 가능"
+        },
+        {
+          "id": "sw-20260603-sr",
+          "category": "series",
+          "title": "EP.1 — \"AI도 답 못 한 우주의 끝은 무엇인가\"",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["시리즈 EP.1", "메인 IP", "AI 메타", "우주 미스테리"],
+          "merge_angle": "수면다큐 우주의 끝 (401x) + 우주생각 페르미 역설 → AI도 답 못 한 우주의 진짜 끝",
+          "sources_a": {"channel": "[수면다큐]", "title": "우주의 끝을 찾아서", "efficiency": 401.5, "views": 6343728},
+          "sources_b": {"channel": "우주생각", "title": "페르미 역설", "efficiency": 8.2, "views": 31965},
+          "status": "blocked",
+          "checklist": {"channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "메인 시리즈 EP.1"}]
+        },
+        {
+          "id": "sw-20260603-ev",
+          "category": "evergreen",
+          "title": "수면다큐 \"우주의 끝을 찾아서\" (401.5x · 634만뷰)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["evergreen", "압도적 폭발", "시니어 안내자"],
+          "merge_angle": "단일 활용도 가능 (401x 자체 검증) — 시리즈 EP.1과 별도 운영 가능",
+          "sources_a": {"channel": "[수면다큐]", "title": "우주의 끝을 찾아서", "efficiency": 401.5, "views": 6343728},
+          "sources_b": null,
+          "status": "blocked",
+          "checklist": {"channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "evergreen — 401x 압도적"}]
+        },
+        {
+          "id": "sw-20260603-re",
+          "category": "reedit",
+          "title": "우주먼지 \"3I/ATLAS 고향 추적\" + 과학드림 \"AI 나스카 라인\"",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["재편집", "우주+미스테리"],
+          "merge_angle": "외계 손님 3I/ATLAS의 고향과 AI가 푼 나스카 라인 — 우주가 우리에게 보낸 두 편지",
+          "sources_a": {"channel": "우주먼지의 현자타임즈", "title": "3I/ATLAS의 고향 추적", "efficiency": null, "views": 66413},
+          "sources_b": {"channel": "과학드림", "title": "AI Nazca Lines mystery", "efficiency": null, "views": 1529598},
+          "status": "blocked",
+          "checklist": {"channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "재편집 풀 + 우주 미스테리"}]
+        },
+        {
+          "id": "sw-20260603-cc",
+          "category": "cross_category",
+          "title": "[심리→과학] 세모과학 \"쥐 천국 → 멸종\" (26.9x · 418만뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": ["행동 과학", "사회 통찰", "시니어 깊이"],
+          "merge_angle": "쥐 유토피아 실험 + 자연의 비밀 노트 부족 약초 = 현대 인간의 단순함 잃음",
+          "sources_a": {"channel": "세모과학", "title": "쥐 천국 → 멸종", "efficiency": 26.9, "views": 4176814},
+          "sources_b": {"channel": "자연의 비밀 노트", "title": "부족이 지킨 약초", "efficiency": 5.9, "views": 23261},
+          "status": "blocked",
+          "checklist": {"channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "심리 + 자연 = 시니어 통찰"}]
+        },
+        {
+          "id": "sw-20260603-od",
+          "category": "owned_draft",
+          "title": "보유 5/28 \"장수의 몸\" (longevity-body)",
+          "type": "보유",
+          "rating": 4,
+          "tags": ["보유 1번", "evergreen 건강", "채널 첫 영상 후보"],
+          "merge_angle": "채널 첫 영상으로 발행 가능. 단일 주제로 OK",
+          "sources_a": null,
+          "sources_b": null,
+          "status": "blocked",
+          "checklist": {"channel_setup": false, "collect": true, "analyze": true, "strategy": true, "draft": true, "review_finalize": true, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-05-28", "type": "drafted", "note": "보유 대본 작성"}, {"ts": "2026-06-03 17:00", "type": "proposed", "note": "채널 개설 후 첫 영상"}]
         }
       ]
     },
@@ -202,53 +328,67 @@
       "icon": "📜",
       "tone": "조선시대 사료·교차변환",
       "open_status": "not_created",
+      "series_ip": {
+        "main": "당신 고향에서 살았던 그 사람",
+        "essence": "지역 사료 = AI 학습 데이터 빈약",
+        "ep_count": 0
+      },
       "topics": [
         {
-          "id": "yd-20260603-01",
-          "rank": 1,
-          "title": "[채널 개설부터] 7살 노비 + 14살 망치",
+          "id": "yd-20260603-sr",
+          "category": "series",
+          "title": "EP.1 — \"충북 청주에 살았던 7살 노비\"",
           "type": "신규",
           "rating": 5,
-          "tags": ["인물 교차", "시니어랩 검증", "어린 영웅"],
-          "merge_angle": "조선의 어린 영웅 두 사람 — 7살의 지혜와 14살의 망치, 이름 없이 사라진 진짜 영웅들",
-          "sources_a": {
-            "channel": "조선야담처녀",
-            "title": "영의정도 못 푼 수수께끼를 7살 노비 소년이 단번에 풀어버린 사건",
-            "efficiency": null,
-            "views": null,
-            "url": "",
-            "note": "시니어랩 검증 3관왕 (양반vs천민·효·가족·권선징악)"
-          },
-          "sources_b": {
-            "channel": "조선야담처녀",
-            "title": "아버지가 강물에 던져진 그날, 14살 아들의 망치가 움직이기 시작했다",
-            "efficiency": null,
-            "views": null,
-            "url": "",
-            "note": "이미 Autopsy 완료 (closes #5)"
-          },
+          "tags": ["시리즈 EP.1", "메인 IP", "지역 사료", "충북 청주"],
+          "merge_angle": "조선야담처녀 7살 노비 영상 + 충북 청주 지역 사료 (향토지) → 본인 고향 영상",
+          "sources_a": {"channel": "조선야담처녀", "title": "영의정도 못 푼 수수께끼를 7살 노비 소년이", "efficiency": null, "views": null, "note": "시니어랩 3관왕"},
+          "sources_b": null,
           "status": "blocked",
-          "checklist": {
-            "channel_create": false,
-            "collect": false,
-            "analyze": false,
-            "data_prep": false,
-            "strategy": false,
-            "outline": false,
-            "draft": false,
-            "review_finalize": false,
-            "self_diagnosis": false,
-            "shorts": false,
-            "published": false
-          },
-          "events": [
-            {"ts": "2026-06-03 16:00", "type": "proposed", "note": "선결: 채널 폴더 자체 없음 → 채널 생성부터"}
-          ],
-          "started_at": null,
-          "completed_at": null,
-          "published_at": null,
-          "video_url": null,
-          "notes": "채널 폴더 없음. '야담 채널 만들어줘' → channel-setup → 시니어랩 corpus 자동 로드 → 첫 영상 작업"
+          "checklist": {"channel_create": false, "channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "메인 시리즈 EP.1 — 지역 사료"}]
+        },
+        {
+          "id": "yd-20260603-ev",
+          "category": "evergreen",
+          "title": "시니어랩 효·가족 클러스터 (26,412점)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["evergreen", "시니어랩 1위", "19회 검증"],
+          "merge_angle": "버려진 아기를 품은 여종의 20년 — 효·가족 클러스터 대표 영상",
+          "sources_a": {"channel": "조선야담처녀", "title": "버려진 아기를 품은 여종의 20년", "efficiency": null, "views": null, "note": "클러스터 4관왕"},
+          "sources_b": null,
+          "status": "blocked",
+          "checklist": {"channel_create": false, "channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "evergreen — 가장 검증된 클러스터"}]
+        },
+        {
+          "id": "yd-20260603-re",
+          "category": "reedit",
+          "title": "어바웃타임 \"정체 숨긴 무림 초고수\" (107K · 6/2 재편집)",
+          "type": "신규",
+          "rating": 4,
+          "tags": ["재편집", "권선징악", "사이다"],
+          "merge_angle": "무림 초고수 + 7살 노비 = 진짜 강한 사람은 자신을 숨긴다 (인물 교차)",
+          "sources_a": {"channel": "어바웃타임", "title": "정체 숨긴 무림 초고수의 최후", "efficiency": null, "views": 107200},
+          "sources_b": null,
+          "status": "blocked",
+          "checklist": {"channel_create": false, "channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "사이다 결 + 야담 톤 매치"}]
+        },
+        {
+          "id": "yd-20260603-cc",
+          "category": "cross_category",
+          "title": "[역사→야담] 한밤의 한국사 \"우암 송시열\" (24.6x · 폭발 1위 역사)",
+          "type": "신규",
+          "rating": 4,
+          "tags": ["역사 폭발", "야담 변환", "조선 인물"],
+          "merge_angle": "송시열의 실록 3000번 등장 + 야담 결로 풀어내기 (사료 인용 + 인물 깊이)",
+          "sources_a": {"channel": "한밤의 한국사", "title": "조선왕조실록에 3000번 등장하는 단 한 사람 (우암 송시열)", "efficiency": 24.6, "views": 141891},
+          "sources_b": null,
+          "status": "blocked",
+          "checklist": {"channel_create": false, "channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "역사 폭발 → 야담 톤 변환"}]
         }
       ]
     }
