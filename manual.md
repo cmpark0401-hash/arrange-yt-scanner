@@ -1636,6 +1636,226 @@ Phase 1~5 = <b>45분</b> (의사결정·분석) + <b>대본 작성</b> (script-p
 
 ---
 
+## 🔬 20개 메트릭·엔진 정의 사전 (코드 근거 + 발견 알고리즘)
+
+> **TubeHacker 시스템에서 다루는 모든 메트릭의 정의·임계값·발견 방법.** 헤더 chip 7개 외에 시스템 내부에서 작동하는 파생 엔진 13개까지 총 20개. 모든 숫자는 코드 인용 기반.
+
+<details>
+<summary><b>📖 펼쳐서 보기 — 헤더 chip 7개 + 파생 엔진 13개 = 총 20개</b></summary>
+
+### 🎯 A. 헤더 chip 7개 (사용자 직접 접근)
+
+#### 1. 🚨 알고리즘 시그널 (algorithm signal)
+
+- **정의**: 시속 5,000회+ OR 측정 간격 내 조회 5만+ 증가, 발행 3일 이내
+- **입력**: `monitor_channels.py`의 영상별 조회수 시계열 (channels/*/`_monitor_history/{video_id}.json`)
+- **공식**: `VELOCITY_THRESHOLD = 5000` (monitor_channels.py:43), `SIGNAL_DELTA_THRESHOLD = 50000` · `velocity_per_hour = delta_views / interval_hours`
+- **발견**: ① 시계열 로드 → ② 직전 vs 현재 측정 차이 계산 → ③ 시속 ≥5000 OR 절대증가 ≥50000 → ④ 업로드 3일 이내 → ⑤ 시속 내림차순
+- **시각화**: `daily_{date}.html` 최상단 "🚨 알고리즘 시그널" 섹션
+- **활용**: 재현 불가능한 현상 → 즉시 "왜 뜨는가" 분석 + 같은 톤 제작
+
+#### 2. 🔥 소형 채널 폭발 (small explosion)
+
+- **정의**: 구독 5만 이하 채널 + 효율 5배+ 또는 시속 1,000+ 또는 절대 2만+
+- **입력**: 일일 채널 점검 결과 (`fetch_video_stats`)
+- **공식** (monitor_channels.py:49~55): `SMALL_SUBS_LIMIT = 50_000` · `SMALL_EFF_THR = 5.0` · `SMALL_VEL_THR = 1000` · `SMALL_VIEWS_THR = 20_000`
+- **발견**: 구독 ≤50K 채널 → efficiency = views/subscribers → 3조건 중 하나 만족 시 `is_hot=true, tier="small"`
+- **시각화**: `daily_{date}.html` "🔬 소형 채널 폭발" 섹션 (Top 40)
+- **활용**: 작은 채널의 "뉘앙스 있는 주제" 발견 → 재편집 후보
+
+#### 3. 🐳 대형 채널 폭발 (large explosion)
+
+- **정의**: 구독 5만 초과 + 시속 5,000+ 또는 절대 20만+
+- **공식**: `LARGE_VEL_THR = 5000` · `LARGE_VIEWS_THR = 200_000`
+- **발견**: 구독 >50K → tier="large" → 시속 내림차순 (효율보다 속도 중시)
+- **시각화**: `daily_{date}.html` "🐳 대형 채널 폭발" (Top 40)
+- **활용**: 플랫폼 전체 트렌드 반영 → 따라가면 성장 용이
+
+#### 4. 🆕 신영상 (new video, 24h)
+
+- **정의**: 모니터링 29개 채널의 24시간 이내 업로드
+- **공식**: `is_new = upload_date >= one_day_ago` (monitor_channels.py:533)
+- **시각화**: `daily_{date}.html` "🆕 신영상" (Top 40, 효율 표기)
+- **활용**: 채널 현재 활동성 + 신선한 발행 트래킹
+
+#### 5. 🎯 오늘의 주제 (today topics)
+
+- **정의**: 검증 아카이브(proven) × 오늘 폭발 영상 교차 분석 → 카테고리별 추천
+- **입력**: (a) `_proven_topics_archive.json`, (b) 오늘 모니터 결과
+- **공식** (build_site.py:3420~3458): 키워드 길이 ≥2 + noisy 제외, 효율 + (시그널이면 +50) + 재업 보너스로 정렬
+- **발견**: ① CATEGORIES(경제·역사·지식·심리·과학·시사·정치·인문) 순회 → ② 검증 주제 추출 (최대 8개) → ③ 오늘 폭발 제목과 substring 매칭 → ④ 스코어 정렬
+- **시각화**: `recommendations.html` 카테고리별 "검증 금광" + "오늘 뜬 주제" 카드
+- **활용**: 두 섹션 교집합 = "타이밍 좋은 주제"
+
+#### 6. 🔥 Hot 키워드 (hot keywords)
+
+- **정의**: 오늘 폭발 영상 제목 × proven 아카이브 키워드 substring 매칭
+- **공식**: 키워드 길이 ≥2, `_topic_noise()` 제외 (build_site.py:3420)
+- **발견**: 아카이브 키워드 풀 → 오늘 폭발 제목 substring 매칭 → 빈도 집계
+- **활용**: "지금 알고리즘+사용자가 동시에 좋아하는" 정확한 신호
+
+#### 7. 🧪 과학 트렌드 (science trends)
+
+- **정의**: 과학 시드 키워드로 검색한 신규 채널 + 폭발 영상
+- **공식** (explore_science.py:28~29): `EXPLOSION_VIEWS = 100_000` · `PER_KEYWORD = 15` · 롱폼 ≥60초
+- **발견**: ① 과학 시드 로드 → ② ytsearch (키워드당 15편) → ③ 등록·블록 제외 → ④ hit_count ≥2 채널 = "반복 검색되는 채널" → ⑤ 조회 100K+ 영상만 폭발 분류
+- **시각화**: `science_{date}.html` (상단 신규 채널 TOP, 하단 폭발 영상 TOP 30)
+- **활용**: 새 시드 추가하면 미발견 채널 발굴 가능
+
+---
+
+### 🛠️ B. 파생 엔진 13개 (자동 백그라운드)
+
+#### 8. ⚠️ 발행 중단·둔화 경고 (decline warning)
+
+- **정의**: 평소(14일) 대비 최근(7일) 발행 빈도 20% 이하 급감 채널
+- **공식** (monitor_channels.py:45~47): `DECLINE_THRESHOLD = 0.20` · `BASELINE_WINDOW = 14` · `RECENT_WINDOW = 7`
+- **발견**: EMA(지수이동평균) 발행율 갱신 (0.7×기존 + 0.3×신규) → `recent_ratio = recent_weekly / baseline_weekly` → ≤0.20 → 경고
+- **시각화**: `daily_{date}.html` "⚠️ 발행 중단 경고"
+- **활용**: 채널 휴면 징후 즉시 감지
+
+#### 9. 📺 외부 폭발 영상 (external explosion via news)
+
+- **정의**: 오늘 뉴스 키워드로 검색한 등록 채널 外 폭발 영상
+- **공식** (search_news_videos.py:29~33): `EXTERNAL_VIEWS_THR = 50_000` · `KEYWORDS_TOP = 8` · `PER_KEYWORD = 10`
+- **발견**: ① 뉴스 RSS 로드 → ② 명사 빈도 상위 8 키워드 → ③ ytsearch × 10편 → ④ 등록·블록·5만 미달 제외 → ⑤ 상위 20편 stats
+- **시각화**: `news_{date}.html` "📺 뉴스 키워드 外部 영상"
+- **활용**: 뉴스 직결 타채널 폭발 = 같은 주제 제작 골든타임
+
+#### 10. 🏷️ 자동 카테고리 분류 (auto categories)
+
+- **정의**: 채널이 categories 명시 없으면 영상 제목 기반 자동 추정
+- **공식**: 카테고리당 매칭 카운트 ≥2 → `auto_categories` 배열에 추가
+- **발견**: 영상 제목 → 명사 tokenize → discover_classify_keywords.json 시드 매칭 → 카테고리 합산
+- **시각화**: 채널 카드 "카테고리" 배지
+- **활용**: 신규 채널 주제 영역 빠른 파악
+
+#### 11. 👴 야담·시니어 탐사 (senior exploration)
+
+- **정의**: 야담 시드 11개로 ytsearch → 시니어 관심층 폭발 영상 발굴
+- **공식** (explore_senior.py:36~42): `CHANNEL_ACTIVE_DAYS = 60` · `VIDEO_RECENT_DAYS = 30` · `MIN_VIEWS = 5_000` (니치라 낮춤)
+- **발견**: ① 야담 watch list 채널 → ② 최신 100편 → ③ 30일·5천뷰·롱폼 필터 → ④ velocity = views / age_hours
+- **시각화**: `senior_{date}.html`
+- **활용**: 야담 "조선야담처녀" 톤 학습 + 시니어 어휘 풀
+
+#### 12. 🔁 재편집 재폭발 (reedit re-explosion)
+
+- **정의**: 검증 키워드가 최근 7일 내 재업로드 → 다시 터지는 현상
+- **공식** (detect_reedit_yt.py:25~29): `TOP_KEYWORDS = 120` · `PER_KW_SEARCH = 12` · `MIN_VIEWS = 50_000` · `RECENT_DAYS = 7` · `score = archive_score + (7-days) * 3 + views/100_000`
+- **발견**: ① 아카이브 상위 120 키워드 → ② ytsearch × 12편 → ③ 5만뷰+ 필터 → ④ yt-dlp로 업로드일 풀추출 → ⑤ 7일 이내 = 점수 계산
+- **시각화**: `daily_{date}.html` "🔥 지금 폭발 중"
+- **활용**: "검증 주제 → 즉시 재업로드" 최강 ROI 전략
+
+#### 13. 🏆 검증 주제 엔진 (proven topic engine)
+
+- **정의**: 여러 채널·여러 영상이 같은 키워드로 반복 폭발 = "검증 금광"
+- **공식** (detect_proven_topics.py:31~58): `RECENT_DAYS = 14` · `MIN_CHANNELS = 2` · `MIN_VIDEOS = 3` · `archive_score = sum(views) + channels_count * 50_000`
+- **발견**: ① 14일 폭발 영상 + science + 후보 풀 + 시드 topics → ② 한글 명사 추출 + 별칭 정규화 → ③ 채널/영상/조회 집계 → ④ 채널 ≥2 & 영상 ≥3 필터 → ⑤ 아카이브 누적 병합
+- **시각화**: `proven_{date}.html`
+- **활용**: 4채널 IP 공통 발견 + 카테고리 교차 후보 발굴
+
+#### 14. 🏷️ 채널 타입 분류 (channel type, 6종)
+
+- **정의**: 채널명 키워드 + 구독자 기반 6가지 자동 분류
+- **공식** (estimate_candidate_type.py:27~82):
+  - `대형` (구독 1M+) / `일반,뉴스` (뉴스 키워드 + <1M) / `일반+AI` (AI 키워드 + 100K+) / `AI` (AI만) / `일반` (10K~1M) / `제외` (성인·키즈·도박)
+- **발견**: NEWS_KW → AI_KW → 구독자 우선순위
+- **시각화**: 후보·모니터링 리포트 "타입" 배지
+- **활용**: 타입별 다른 폭발 임계 적용 (소형/대형 분리)
+
+#### 15. 🔁 단조도 점수 (monotony score)
+
+- **정의**: 채널 영상마다 반복되는 표현·Hook 중복도 (0~100, 낮을수록 다양)
+- **공식** (channel_repetition.py): `jaccard(a,b) = |a∩b|/|a∪b|` · `monotony_score = 100 - vocab_renewal*50 - avg_jaccard_hook*50`
+- **발견**: ① N편 자막 로드 → ② 영상 쌍별 3-gram Jaccard → ③ Hook 0:00~0:30 + 본문 텍스트 → ④ 어휘 갱신율
+- **시각화**: `candidates.html` 채널 벤치마크
+- **활용**: 같은 패턴 반복 = 거부감 → 다양화 체크리스트
+
+#### 16. 📋 제목 공식 분석 (title formula)
+
+- **정의**: 카테고리별 효율 TOP 제목의 구조·길이·클릭베이트 정량화
+- **공식** (title_formula.py:30~76):
+  - 구조: `has_question/exclaim/colon/dash/pipe/emoji/number/brackets/quote`
+  - 클릭베이트 8종: 충격·비밀·반전·금기·VS·위협·신분역전·시간점프
+  - n-gram: 2-gram, 3-gram 빈도 TOP 20
+- **시각화**: `library.html` "📋 제목 공식"
+- **활용**: 카테고리별 효율 제목 공통 구조 학습
+
+#### 17. 🏆 패턴 라이브러리 (pattern library)
+
+- **정의**: 모든 검증 데이터 통합 카탈로그 (autopsy + 시니어 + 모니터 + proven)
+- **공식**: `hook_pool` + `outro_pool` + `title_formulas` + `thumbnail_index` + `vocab_signatures` + `first_event_norms` + `top_videos`
+- **발견**: 모든 소스 JSON 로드 → 영상 ID 중복 제거 → 효율 정렬 → 항목별 추출
+- **시각화**: `library.html` 전용 페이지
+- **활용**: 신영상 제작 시 직접 참고 (Hook·제목·Outro 템플릿)
+
+#### 18. 🖼️ 썸네일 LLM 시각 분석 (thumbnail visual)
+
+- **정의**: Claude API로 썸네일 OCR·시각요소·클릭베이트 점수·제목 일치도 분석
+- **공식** (analyze_thumbnails_llm.py): 클릭베이트 1~10점 + 제목 일치도 % + 카테고리 추정. Claude 3.5 Haiku 사용 (영상당 $0.005~0.01)
+- **발견**: ① library.json 썸네일 URL → ② base64 인코딩 → ③ API vision 호출 → ④ JSON 응답 파싱
+- **시각화**: `library.html` 썸네일 갤러리 + 시각 팝업
+- **활용**: 효율 높은 썸네일 공통 시각 요소 학습 + 자체 디자인 참고
+
+#### 19. 🔀 카테고리 교차 (cross-category transfer)
+
+- **정의**: A 카테고리 폭발 주제를 B 채널 톤으로 재편집
+- **발견**: proven_topics → 채널 category 매핑 → 다른 카테고리 폭발 추출 → 채널별 변환 제안
+- **시각화**: `workboard.html` "🔀 카테고리 교차" (7카테고리 중 6번)
+- **활용**: 한 주제 다채널 활용 → ROI 극대화
+
+#### 20. 📚 메인 시리즈 IP + 💎 보유 대본 추적
+
+- **정의**: 4채널의 메인 시리즈 EP.N 진행 + 미발행 대본 우선 추천
+- **공식** (build_site.py:3090~3138): `series_ip` 필드(main·essence·ep_count) → `ep_next = ep_count + 1` · type "보유" = 강조색
+- **시각화**: `workboard.html` 채널별 보라 박스 "📚 메인 시리즈 IP" + "💎 보유 대본 우선"
+- **활용**: 다음 회차 자동 추천 + 시간 절감 (대본 있는 것부터 발행)
+
+---
+
+### 📊 메트릭 분류표 (한눈에)
+
+| # | 메트릭 | 카테고리 | 핵심 임계값 | 시각화 |
+|---|---|---|---|---|
+| 1 | 🚨 알고리즘 시그널 | 등록채널 신호 | velocity ≥5,000/h | daily |
+| 2 | 🔬 소형 폭발 | 등록채널 폭발 | eff ≥5x, vel ≥1,000 | daily |
+| 3 | 🐳 대형 폭발 | 등록채널 폭발 | vel ≥5,000, views ≥200K | daily |
+| 4 | 🆕 신영상 | 등록채널 이벤트 | upload ≤24h | daily |
+| 5 | 🎯 오늘의 주제 | 추천 통합 | proven × 오늘 교차 | recommendations |
+| 6 | 🔥 Hot 키워드 | 트렌딩 | substring 빈도 | recommendations |
+| 7 | 🧪 과학 트렌드 | 전문 탐사 | views ≥100K | science |
+| 8 | ⚠️ 발행 중단 | 채널 모니터 | recent/baseline ≤0.20 | daily |
+| 9 | 📺 외부 폭발 | 뉴스 연계 | views ≥50K | news |
+| 10 | 🏷️ 자동 카테고리 | 분류 엔진 | match ≥2 | candidates |
+| 11 | 👴 야담·시니어 | 전문 탐사 | views ≥5K, ≤30일 | senior |
+| 12 | 🔁 재편집 재폭발 | 검증 기반 | days ≤7 | daily |
+| 13 | 🏆 검증 주제 | 크로스채널 | channels ≥2, videos ≥3 | proven |
+| 14 | 🏷️ 채널 타입 | 후보 분석 | 6가지 타입 | candidates |
+| 15 | 🔁 단조도 점수 | 채널 분석 | 0~100 (낮을수록 다양) | candidates |
+| 16 | 📋 제목 공식 | 패턴 분석 | 구조 + 클릭베이트 8종 | library |
+| 17 | 🏆 패턴 라이브러리 | 통합 카탈로그 | hook/outro/vocab | library |
+| 18 | 🖼️ 썸네일 LLM | 시각 분석 | 클릭베이트 1~10점 | library |
+| 19 | 🔀 카테고리 교차 | 전략 엔진 | 다카테 폭발 감지 | workboard |
+| 20 | 📚 시리즈 IP + 💎 보유 | 채널 관리 | ep_count + type="보유" | workboard |
+
+### 🌟 시스템 아키텍처 한 줄 요약
+
+```
+29개 채널 모니터링 → 시속·효율 계산 → 6가지 신호(폭발·시그널·신영상·중단·재편집·검증)
+        ↓                                ↓
+     뉴스 RSS 수집 → 외부 폭발 발굴    채널 분석(타입·단조도·제목공식)
+        ↓                                ↓
+     시드 ytsearch(과학·시니어) → 신규 채널 발견
+        ↓                                ↓
+     검증 주제 아카이브 누적 → 패턴 라이브러리 → 썸네일 LLM 분석
+        ↓                                ↓
+     Daily Workboard 7카테고리 통합 → 4채널 의사결정 → "오늘 만들 주제"
+```
+
+</details>
+
+---
+
 ## ❓ FAQ (초보자가 자주 묻는 것)
 
 <details>

@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-03 17:00",
-  "today": "2026-06-03",
+  "updated_at": "2026-06-04 02:00",
+  "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {"label": "🔥 단일 폭발", "desc": "타채널 2일 이내 폭발 영상 (시의성 단발)", "color": "var(--hot)", "border": "var(--hot-bd)"},
     "timeliness": {"label": "🚨 시의성", "desc": "현재 트렌드·뉴스 기반 (오늘 만들면 골든타임)", "color": "var(--warn)", "border": "var(--warn-bd)"},
