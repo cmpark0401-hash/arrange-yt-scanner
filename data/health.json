@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04 22:54",
+  "generated_at": "2026-06-04 23:25",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,8 +9,8 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "12시간 전",
-      "updated_at": "2026-06-04 09:57",
+      "ago": "22분 전",
+      "updated_at": "2026-06-04 23:02",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-04.json",
       "severity": "critical"
     },
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "12분 전",
+      "ago": "43분 전",
       "updated_at": "2026-06-04 22:41",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-04.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "12분 전",
+      "ago": "43분 전",
       "updated_at": "2026-06-04 22:41",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-04.json",
       "severity": "warning"
@@ -39,8 +39,8 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "12시간 전",
-      "updated_at": "2026-06-04 10:18",
+      "ago": "1분 전",
+      "updated_at": "2026-06-04 23:24",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-04.json",
       "severity": "warning"
     },
@@ -54,12 +54,12 @@
     },
     {
       "label": "🧪 과학 트렌드",
-      "status": "dead",
-      "icon": "🔴",
-      "status_label": "파이프라인 점검 필요",
-      "ago": "6일 전",
-      "updated_at": "2026-05-29 16:13",
-      "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-05-29.json",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "30분 전",
+      "updated_at": "2026-06-04 22:54",
+      "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-04.json",
       "severity": "info"
     },
     {
@@ -77,18 +77,18 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "3분 전",
-      "updated_at": "2026-06-04 22:51",
-      "last_auto_run": "2026-06-04 22:51",
-      "detail": "마지막 자동 추천: 2026-06-04 22:51"
+      "ago": "0분 전",
+      "updated_at": "2026-06-04 23:25",
+      "last_auto_run": "2026-06-04 23:25",
+      "detail": "마지막 자동 추천: 2026-06-04 23:25"
     },
     {
       "label": "🏗️ 사이트 빌드",
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2분 전",
-      "updated_at": "2026-06-04 22:51"
+      "ago": "0분 전",
+      "updated_at": "2026-06-04 23:25"
     }
   ]
 }

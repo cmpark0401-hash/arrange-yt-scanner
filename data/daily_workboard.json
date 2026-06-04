@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 22:51",
+  "updated_at": "2026-06-04 23:25",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {
@@ -1437,14 +1437,14 @@
           "merge_angle": "한 수도사가 47년을 바친 한 가지. 잠들기 전 그의 인생을 듣다",
           "sources_a": null,
           "sources_b": null,
-          "status": "pending",
+          "status": "ready_to_publish",
           "checklist": {
             "collect": true,
             "analyze": true,
             "strategy": true,
             "draft": true,
             "review_finalize": true,
-            "self_diagnosis": false,
+            "self_diagnosis": true,
             "published": false
           },
           "events": [
@@ -1457,6 +1457,16 @@
               "ts": "2026-06-03 17:00",
               "type": "proposed",
               "note": "가장 신선한 보유 대본"
+            },
+            {
+              "at": "2026-06-04 12:00",
+              "type": "in_progress_start",
+              "note": "클로 작업 시작 — 밤 트랙 재구성 (C 각도: 잠들기 전 그의 인생을 듣다). 35분 분량. 새 프로젝트 20260604_05_dom-perignon-night-life"
+            },
+            {
+              "at": "2026-06-04 14:30",
+              "type": "script_complete",
+              "note": "대본 제작 완료. 밤 트랙 [그 사람 시리즈] 37.8분 / 18,469자 / 1차 사료 4건 + 자가진단 통과. 새 프로젝트 폴더: 20260604_05_dom-perignon-night-life"
             }
           ]
         },
@@ -1640,6 +1650,46 @@
               "ts": "2026-06-04 17:03",
               "type": "ai_signal",
               "note": "AI 채널 폭발 자동 검출 (score=2325)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260604-auto-re-novid",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 와이스트릿 - 지식과 자산의 복리효과: Fewer People Are Earning Money Now / Monthly Lee Seon-yeop J (189,289뷰 · 0일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "이제"
+          ],
+          "merge_angle": "검증 키워드 '이제' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "와이스트릿 - 지식과 자산의 복리효과",
+            "title": "Fewer People Are Earning Money Now / Monthly Lee Seon-yeop June 1926 Issue (Part 1)",
+            "views": 189289,
+            "url": "",
+            "days_since": 0
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-04 23:25",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
             }
           ]
         }
@@ -2637,6 +2687,6 @@
       ]
     }
   ],
-  "last_auto_run": "2026-06-04 22:51",
-  "last_ai_detect_run": "2026-06-04 22:51"
+  "last_auto_run": "2026-06-04 23:25",
+  "last_ai_detect_run": "2026-06-04 23:25"
 }
