@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04 23:46",
+  "generated_at": "2026-06-04 23:48",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "44분 전",
+      "ago": "45분 전",
       "updated_at": "2026-06-04 23:02",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-04.json",
       "severity": "critical"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "22분 전",
+      "ago": "23분 전",
       "updated_at": "2026-06-04 23:24",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-04.json",
       "severity": "warning"
@@ -57,7 +57,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "52분 전",
+      "ago": "53분 전",
       "updated_at": "2026-06-04 22:54",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-04.json",
       "severity": "info"
@@ -67,7 +67,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "16분 전",
+      "ago": "17분 전",
       "updated_at": "2026-06-04 23:30",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-04.json",
       "severity": "info"
@@ -77,10 +77,10 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "21분 전",
-      "updated_at": "2026-06-04 23:25",
-      "last_auto_run": "2026-06-04 23:25",
-      "detail": "마지막 자동 추천: 2026-06-04 23:25"
+      "ago": "0분 전",
+      "updated_at": "2026-06-04 23:48",
+      "last_auto_run": "2026-06-04 23:48",
+      "detail": "마지막 자동 추천: 2026-06-04 23:48"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -88,7 +88,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-04 23:46"
+      "updated_at": "2026-06-04 23:48"
     }
   ]
 }
