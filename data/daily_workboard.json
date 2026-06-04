@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 17:55",
+  "updated_at": "2026-06-04 18:30",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {
@@ -102,6 +102,57 @@
             {"ts": "2026-06-04 17:30", "type": "proposed", "note": "사용자 발굴: [이득비교] 시리즈 IP 첫 토픽 — 한국인 손해 회피 본능 직격"}
           ],
           "notes": "[이득비교] 시리즈 IP 1호. 시리즈 라벨 자체 검증 목적 우선순위 1."
+        },
+        {
+          "id": "kn-20260604-iv-food",
+          "category": "series",
+          "title": "[이득비교] 🥇 마트 vs 전통시장 vs 새벽배송 — 시니어 한 주 장보기 10종 (본능 매트릭스 8.9점)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["[이득비교] 시리즈 IP", "본능 매트릭스 1위 8.9", "식료품", "매주 시리즈 확장 가능", "가성비+행동+반복 직격"],
+          "merge_angle": "한 주 장보기 10종 (라면·세제·생수·계란·과일·고기·우유·쌀·야채·간식) 3채널 비교 → 교통비·시간·신선도 포함 총비용. 시즌별·명절별 확장 무한",
+          "sources_a": {"channel": "(가격 비교 자료)", "title": "TBD — 마트·전통시장·새벽배송 동일 품목 가격 자료", "note": "이마트·홈플러스 vs 동네 재래시장 vs 쿠팡프레시·컬리"},
+          "sources_b": {"channel": "(시니어 장보기 패턴)", "title": "TBD", "note": "시니어 60대 이상 1주 평균 장보기 예산·품목"},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [
+            {"ts": "2026-06-04 18:30", "type": "proposed", "note": "본능 매트릭스 1위 (8.9점) — 가성비·행동·반복 직격. 시리즈 검증 1순위"}
+          ],
+          "notes": "🥇 [이득비교] 시리즈 검증 1순위. 점수 8.9 (식료품 카테고리). 매주 1편 1년 운영 가능. 변형: 시즌·명절·동네·마감시간"
+        },
+        {
+          "id": "kn-20260604-iv-med",
+          "category": "series",
+          "title": "[이득비교] 🥈 약국 vs 다이소 vs 쿠팡 — 진통제·소화제·연고 5종 시니어 이득 (8.7점)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["[이득비교] 시리즈 IP", "본능 매트릭스 2위 8.7", "약·건강식품", "시니어 건강 직격", "통념 반전 가능"],
+          "merge_angle": "진통제(타이레놀·이부프로펜)·소화제(베아제·훼스탈)·연고(후시딘·메디폼) 등 5종 3채널 비교. 시니어 매달 반복 구매 = 1편 보면 평생 활용",
+          "sources_a": {"channel": "(약값 비교)", "title": "TBD — 약국·다이소·쿠팡 동일 품목 가격", "note": "약사 도움 + 가격 자료"},
+          "sources_b": {"channel": "(법규 검토)", "title": "TBD", "note": "비처방·일반의약품 판매 가능 범위 (다이소·온라인 제한)"},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [
+            {"ts": "2026-06-04 18:30", "type": "proposed", "note": "본능 매트릭스 2위 (8.7점) — 시니어 건강 직격"}
+          ],
+          "notes": "🥈 [이득비교] 시리즈 검증 2순위. 점수 8.7 (약·건강). 시니어 건강 직격 + 매달 반복 + 통념 반전 (다이소가 비싼 약 5종) 가능"
+        },
+        {
+          "id": "kn-20260604-iv-life",
+          "category": "series",
+          "title": "[이득비교] 🥉 다이소 vs 재래시장 vs 온라인 — 청소·욕실·주방 용품 10종 (8.3점 · 사용자 발굴)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["[이득비교] 시리즈 IP", "본능 매트릭스 3위 8.3", "생활용품", "사용자 직접 발굴", "시즌 확장 가능"],
+          "merge_angle": "청소(세제·물티슈·휴지·고무장갑·종량제봉투) + 욕실(샴푸·바디워시·치약) + 주방(밀폐용기·키친타올·랩) 10종 3채널 비교. 통념 반전 가능 ('다이소가 비싼 5종')",
+          "sources_a": {"channel": "(가격 비교)", "title": "TBD — 다이소·재래시장·온라인 동일 품목 가격", "note": "사용자 발굴 카테고리"},
+          "sources_b": {"channel": "(시즌 변동 자료)", "title": "TBD", "note": "봄·여름·가을·겨울 별 추가 품목 (모기·에어컨 필터·옷장 정리 등)"},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [
+            {"ts": "2026-06-04 18:30", "type": "proposed", "note": "사용자 직접 발굴 카테고리 + 본능 매트릭스 3위 (8.3점)"}
+          ],
+          "notes": "🥉 [이득비교] 시리즈 검증 3순위. 점수 8.3 (생활용품). 사용자 직접 발굴 + 시즌 확장 4편 가능 + 통념 반전 결"
         },
         {
           "id": "kn-20260604-iv3",
