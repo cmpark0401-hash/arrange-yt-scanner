@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 17:03",
+  "updated_at": "2026-06-04 17:30",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {
@@ -62,19 +62,57 @@
       "tone": "경제(주)·시사(부) 시니어",
       "open_status": "active",
       "series_ip": {
-        "main": "[숨은한국] + [가격해부] (원가공개 결)",
-        "essence": "시의성 키워드 + 시리즈 라벨 = 시의성·깊이·인지도 동시 (제우스 노하우 변형)",
+        "main": "[가격해부] + [이득비교] + [숨은한국] (원가공개 결)",
+        "essence": "시의성 키워드 + 시리즈 라벨 = 시의성·깊이·인지도 동시. [이득비교]는 한국인 손해 회피 본능 직격 (의사결정 도구)",
         "ep_count": 0,
         "sub_labels": [
-          "[숨은한국]",
-          "[가격해부]"
+          "[가격해부]",
+          "[이득비교]",
+          "[숨은한국]"
         ],
+        "operation_ratio": "40 / 40 / 20",
         "examples": [
-          "[숨은한국] 엔비디아 1000억이 향한 한국 회사의 진짜 정체",
-          "[가격해부] 6.3 지방선거 구청장 4년 진짜 수익 구조"
+          "[가격해부] 6.3 지방선거 구청장 4년 진짜 수익 구조",
+          "[이득비교] 삼성핸드폰 vs 애플, 시니어가 살 때 어디가 이득?",
+          "[이득비교] 슈카 대상승 — 주식 vs 부동산, 시니어 자산 어디가 이득?",
+          "[숨은한국] 엔비디아 1000억이 향한 한국 회사의 진짜 정체"
         ]
       },
       "topics": [
+        {
+          "id": "kn-20260604-iv1",
+          "category": "series",
+          "title": "[이득비교] 슈카 외친 '대상승 시대' — 주식 vs 부동산, 시니어 자산 어디 두는 게 진짜 이득?",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["[이득비교] 시리즈 IP", "한국인 손해 회피 본능", "시니어 의사결정", "시의성+라벨 결합"],
+          "merge_angle": "슈카월드 시그널(3308/h, 6/4 폭발) + 시니어 자산 의사결정 도구화 = '대상승 외쳐도 진짜 시니어가 이득 보는 곳은 어디?'",
+          "sources_a": {"channel": "슈카월드", "title": "대한민국에 온 大상승의 시대", "views": 265083, "velocity": 3308},
+          "sources_b": {"channel": "(부동산 검증 영상 1편 발굴 필요)", "title": "TBD", "note": "시니어 부동산 vs 주식 5년 수익률 비교 자료"},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [
+            {"ts": "2026-06-04 17:30", "type": "proposed", "note": "사용자 발굴: [이득비교] 시리즈 IP 첫 토픽 — 한국인 손해 회피 본능 직격"}
+          ],
+          "notes": "[이득비교] 시리즈 IP 1호. 시리즈 라벨 자체 검증 목적 우선순위 1."
+        },
+        {
+          "id": "kn-20260604-iv2",
+          "category": "series",
+          "title": "[이득비교] 삼성 vs 애플, 시니어가 살 때 어디가 진짜 이득? (1년 총 비용 + AS + 중고가)",
+          "type": "신규",
+          "rating": 4,
+          "tags": ["[이득비교] 시리즈 IP", "삼성 시의성", "시니어 의사결정"],
+          "merge_angle": "삼성 SK 매도 시그널(경제 원탑 6535/h) + 핸드폰 선택 = '삼성 폭락 우려에 핸드폰도 애플로 갈아탈까?' 시니어 의사결정 도구",
+          "sources_a": {"channel": "경제 원탑", "title": "삼성전자 SK하이닉스 '이때' 싹 다 파세요", "views": 205475, "velocity": 6535},
+          "sources_b": {"channel": "(핸드폰 가격 비교 자료)", "title": "TBD", "note": "삼성 갤럭시 vs 아이폰 5년 총 비용 (초기·AS·중고가) 자료"},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [
+            {"ts": "2026-06-04 17:30", "type": "proposed", "note": "사용자 예시 직접 발전: 삼성 시의성 + [이득비교] 라벨 결합"}
+          ],
+          "notes": "[이득비교] 시리즈 IP 2호. 사용자가 명시한 예시. 작업 시 1년 총 비용 표로 시각화 필수."
+        },
         {
           "id": "kn-20260604-se",
           "category": "single_explosion",
