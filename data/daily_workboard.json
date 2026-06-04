@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 19:10",
+  "updated_at": "2026-06-04 22:51",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {
@@ -92,14 +92,40 @@
           "title": "[이득비교] 슈카 외친 '대상승 시대' — 주식 vs 부동산, 시니어 자산 어디 두는 게 진짜 이득?",
           "type": "신규",
           "rating": 5,
-          "tags": ["[이득비교] 시리즈 IP", "한국인 손해 회피 본능", "시니어 의사결정", "시의성+라벨 결합"],
+          "tags": [
+            "[이득비교] 시리즈 IP",
+            "한국인 손해 회피 본능",
+            "시니어 의사결정",
+            "시의성+라벨 결합"
+          ],
           "merge_angle": "슈카월드 시그널(3308/h, 6/4 폭발) + 시니어 자산 의사결정 도구화 = '대상승 외쳐도 진짜 시니어가 이득 보는 곳은 어디?'",
-          "sources_a": {"channel": "슈카월드", "title": "대한민국에 온 大상승의 시대", "views": 265083, "velocity": 3308},
-          "sources_b": {"channel": "(부동산 검증 영상 1편 발굴 필요)", "title": "TBD", "note": "시니어 부동산 vs 주식 5년 수익률 비교 자료"},
+          "sources_a": {
+            "channel": "슈카월드",
+            "title": "대한민국에 온 大상승의 시대",
+            "views": 265083,
+            "velocity": 3308
+          },
+          "sources_b": {
+            "channel": "(부동산 검증 영상 1편 발굴 필요)",
+            "title": "TBD",
+            "note": "시니어 부동산 vs 주식 5년 수익률 비교 자료"
+          },
           "status": "pending",
-          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
           "events": [
-            {"ts": "2026-06-04 17:30", "type": "proposed", "note": "사용자 발굴: [이득비교] 시리즈 IP 첫 토픽 — 한국인 손해 회피 본능 직격"}
+            {
+              "ts": "2026-06-04 17:30",
+              "type": "proposed",
+              "note": "사용자 발굴: [이득비교] 시리즈 IP 첫 토픽 — 한국인 손해 회피 본능 직격"
+            }
           ],
           "notes": "[이득비교] 시리즈 IP 1호. 시리즈 라벨 자체 검증 목적 우선순위 1."
         },
@@ -109,10 +135,24 @@
           "title": "[숨은한국] 🥇 정부가 줄여주는 대출 7가지 — 모르면 지나치는 한국인 돈 (본능 점수 9.0)",
           "type": "신규",
           "rating": 5,
-          "tags": ["[숨은한국] 시리즈 IP", "본능 매트릭스 공동 1위 9.0", "사용자 직접 발굴", "정책 폭로", "시니어 직격"],
+          "tags": [
+            "[숨은한국] 시리즈 IP",
+            "본능 매트릭스 공동 1위 9.0",
+            "사용자 직접 발굴",
+            "정책 폭로",
+            "시니어 직격"
+          ],
           "merge_angle": "정부가 줄여주는 대출이자/원금/보증 7가지(햇살론·새출발기금·디딤돌·보금자리론·청년도약계좌·시니어주택연금·세금우대) → 시청자가 모르고 지나친 돈 = '내가 받을 수 있던 혜택을 못 받았네'",
-          "sources_a": {"channel": "(정책 자료)", "title": "TBD — 서민금융진흥원·한국주택금융공사·금융위 공식 자료", "note": "정확한 조건·한도·신청처 표기 필수"},
-          "sources_b": {"channel": "(검증 영상)", "title": "TBD — 슈카월드·이지한 경제학 등 폭발 채널에서 같은 주제 검증", "note": "재편집 가능한 검증 영상 발굴"},
+          "sources_a": {
+            "channel": "(정책 자료)",
+            "title": "TBD — 서민금융진흥원·한국주택금융공사·금융위 공식 자료",
+            "note": "정확한 조건·한도·신청처 표기 필수"
+          },
+          "sources_b": {
+            "channel": "(검증 영상)",
+            "title": "TBD — 슈카월드·이지한 경제학 등 폭발 채널에서 같은 주제 검증",
+            "note": "재편집 가능한 검증 영상 발굴"
+          },
           "title_candidates": [
             "정부가 줄여주는 대출 7가지 — 모르면 지나치는 한국인 돈",
             "당신이 못 받은 정부 대출 혜택 7가지 — 시니어가 꼭 알아야 할 것",
@@ -126,9 +166,21 @@
             "EP5: 정부 보증 갈아타기 — 같은 대출 1년 100만원 절약"
           ],
           "status": "pending",
-          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
           "events": [
-            {"ts": "2026-06-04 19:10", "type": "proposed", "note": "사용자 발굴: [숨은한국] 시리즈 1호 — 정부 대출 줄여주기. 본능 매트릭스 9.0점 (식료품 8.9 능가)"}
+            {
+              "ts": "2026-06-04 19:10",
+              "type": "proposed",
+              "note": "사용자 발굴: [숨은한국] 시리즈 1호 — 정부 대출 줄여주기. 본능 매트릭스 9.0점 (식료품 8.9 능가)"
+            }
           ],
           "notes": "🥇 [숨은한국] 시리즈 1호. 본능 매트릭스 공동 1위 (9.0점). 한 토픽 → 5편 시리즈 확장 가능 (EP1~5 명시). 정확한 정책 자료 검증 필수 (틀린 정보 = 채널 신뢰 추락)."
         },
@@ -138,14 +190,40 @@
           "title": "[이득비교] 🥇 마트 vs 전통시장 vs 새벽배송 — 시니어 한 주 장보기 10종 (본능 매트릭스 8.9점)",
           "type": "신규",
           "rating": 5,
-          "tags": ["[이득비교] 시리즈 IP", "본능 매트릭스 1위 8.9", "식료품", "매주 시리즈 확장 가능", "가성비+행동+반복 직격"],
+          "tags": [
+            "[이득비교] 시리즈 IP",
+            "본능 매트릭스 1위 8.9",
+            "식료품",
+            "매주 시리즈 확장 가능",
+            "가성비+행동+반복 직격"
+          ],
           "merge_angle": "한 주 장보기 10종 (라면·세제·생수·계란·과일·고기·우유·쌀·야채·간식) 3채널 비교 → 교통비·시간·신선도 포함 총비용. 시즌별·명절별 확장 무한",
-          "sources_a": {"channel": "(가격 비교 자료)", "title": "TBD — 마트·전통시장·새벽배송 동일 품목 가격 자료", "note": "이마트·홈플러스 vs 동네 재래시장 vs 쿠팡프레시·컬리"},
-          "sources_b": {"channel": "(시니어 장보기 패턴)", "title": "TBD", "note": "시니어 60대 이상 1주 평균 장보기 예산·품목"},
+          "sources_a": {
+            "channel": "(가격 비교 자료)",
+            "title": "TBD — 마트·전통시장·새벽배송 동일 품목 가격 자료",
+            "note": "이마트·홈플러스 vs 동네 재래시장 vs 쿠팡프레시·컬리"
+          },
+          "sources_b": {
+            "channel": "(시니어 장보기 패턴)",
+            "title": "TBD",
+            "note": "시니어 60대 이상 1주 평균 장보기 예산·품목"
+          },
           "status": "pending",
-          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
           "events": [
-            {"ts": "2026-06-04 18:30", "type": "proposed", "note": "본능 매트릭스 1위 (8.9점) — 가성비·행동·반복 직격. 시리즈 검증 1순위"}
+            {
+              "ts": "2026-06-04 18:30",
+              "type": "proposed",
+              "note": "본능 매트릭스 1위 (8.9점) — 가성비·행동·반복 직격. 시리즈 검증 1순위"
+            }
           ],
           "notes": "🥇 [이득비교] 시리즈 검증 1순위. 점수 8.9 (식료품 카테고리). 매주 1편 1년 운영 가능. 변형: 시즌·명절·동네·마감시간"
         },
@@ -155,14 +233,40 @@
           "title": "[이득비교] 🥈 약국 vs 다이소 vs 쿠팡 — 진통제·소화제·연고 5종 시니어 이득 (8.7점)",
           "type": "신규",
           "rating": 5,
-          "tags": ["[이득비교] 시리즈 IP", "본능 매트릭스 2위 8.7", "약·건강식품", "시니어 건강 직격", "통념 반전 가능"],
+          "tags": [
+            "[이득비교] 시리즈 IP",
+            "본능 매트릭스 2위 8.7",
+            "약·건강식품",
+            "시니어 건강 직격",
+            "통념 반전 가능"
+          ],
           "merge_angle": "진통제(타이레놀·이부프로펜)·소화제(베아제·훼스탈)·연고(후시딘·메디폼) 등 5종 3채널 비교. 시니어 매달 반복 구매 = 1편 보면 평생 활용",
-          "sources_a": {"channel": "(약값 비교)", "title": "TBD — 약국·다이소·쿠팡 동일 품목 가격", "note": "약사 도움 + 가격 자료"},
-          "sources_b": {"channel": "(법규 검토)", "title": "TBD", "note": "비처방·일반의약품 판매 가능 범위 (다이소·온라인 제한)"},
+          "sources_a": {
+            "channel": "(약값 비교)",
+            "title": "TBD — 약국·다이소·쿠팡 동일 품목 가격",
+            "note": "약사 도움 + 가격 자료"
+          },
+          "sources_b": {
+            "channel": "(법규 검토)",
+            "title": "TBD",
+            "note": "비처방·일반의약품 판매 가능 범위 (다이소·온라인 제한)"
+          },
           "status": "pending",
-          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
           "events": [
-            {"ts": "2026-06-04 18:30", "type": "proposed", "note": "본능 매트릭스 2위 (8.7점) — 시니어 건강 직격"}
+            {
+              "ts": "2026-06-04 18:30",
+              "type": "proposed",
+              "note": "본능 매트릭스 2위 (8.7점) — 시니어 건강 직격"
+            }
           ],
           "notes": "🥈 [이득비교] 시리즈 검증 2순위. 점수 8.7 (약·건강). 시니어 건강 직격 + 매달 반복 + 통념 반전 (다이소가 비싼 약 5종) 가능"
         },
@@ -172,14 +276,40 @@
           "title": "[이득비교] 🥉 다이소 vs 재래시장 vs 온라인 — 청소·욕실·주방 용품 10종 (8.3점 · 사용자 발굴)",
           "type": "신규",
           "rating": 5,
-          "tags": ["[이득비교] 시리즈 IP", "본능 매트릭스 3위 8.3", "생활용품", "사용자 직접 발굴", "시즌 확장 가능"],
+          "tags": [
+            "[이득비교] 시리즈 IP",
+            "본능 매트릭스 3위 8.3",
+            "생활용품",
+            "사용자 직접 발굴",
+            "시즌 확장 가능"
+          ],
           "merge_angle": "청소(세제·물티슈·휴지·고무장갑·종량제봉투) + 욕실(샴푸·바디워시·치약) + 주방(밀폐용기·키친타올·랩) 10종 3채널 비교. 통념 반전 가능 ('다이소가 비싼 5종')",
-          "sources_a": {"channel": "(가격 비교)", "title": "TBD — 다이소·재래시장·온라인 동일 품목 가격", "note": "사용자 발굴 카테고리"},
-          "sources_b": {"channel": "(시즌 변동 자료)", "title": "TBD", "note": "봄·여름·가을·겨울 별 추가 품목 (모기·에어컨 필터·옷장 정리 등)"},
+          "sources_a": {
+            "channel": "(가격 비교)",
+            "title": "TBD — 다이소·재래시장·온라인 동일 품목 가격",
+            "note": "사용자 발굴 카테고리"
+          },
+          "sources_b": {
+            "channel": "(시즌 변동 자료)",
+            "title": "TBD",
+            "note": "봄·여름·가을·겨울 별 추가 품목 (모기·에어컨 필터·옷장 정리 등)"
+          },
           "status": "pending",
-          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
           "events": [
-            {"ts": "2026-06-04 18:30", "type": "proposed", "note": "사용자 직접 발굴 카테고리 + 본능 매트릭스 3위 (8.3점)"}
+            {
+              "ts": "2026-06-04 18:30",
+              "type": "proposed",
+              "note": "사용자 직접 발굴 카테고리 + 본능 매트릭스 3위 (8.3점)"
+            }
           ],
           "notes": "🥉 [이득비교] 시리즈 검증 3순위. 점수 8.3 (생활용품). 사용자 직접 발굴 + 시즌 확장 4편 가능 + 통념 반전 결"
         },
@@ -189,14 +319,39 @@
           "title": "[이득비교] 다이소 vs 쿠팡 vs 재래시장 — 시니어 매주 장보기 어디가 진짜 이득?",
           "type": "신규",
           "rating": 5,
-          "tags": ["[이득비교] 시리즈 IP", "일상 구매 비교 결", "시니어 매주 장보기", "한국인 가성비 직격"],
+          "tags": [
+            "[이득비교] 시리즈 IP",
+            "일상 구매 비교 결",
+            "시니어 매주 장보기",
+            "한국인 가성비 직격"
+          ],
           "merge_angle": "다이소·쿠팡·재래시장 3곳 동일 품목 10종(라면·세제·생수·계란·과일 등) 한 주 장보기 = 시니어가 매주 어디 가야 진짜 이득?",
-          "sources_a": {"channel": "(시장 가격 비교 자료)", "title": "TBD", "note": "다이소·쿠팡·재래시장 동일 품목 가격 비교 자료 발굴"},
-          "sources_b": {"channel": "(시니어 장보기 패턴)", "title": "TBD", "note": "시니어 일주일 장보기 평균 품목·예산 자료"},
+          "sources_a": {
+            "channel": "(시장 가격 비교 자료)",
+            "title": "TBD",
+            "note": "다이소·쿠팡·재래시장 동일 품목 가격 비교 자료 발굴"
+          },
+          "sources_b": {
+            "channel": "(시니어 장보기 패턴)",
+            "title": "TBD",
+            "note": "시니어 일주일 장보기 평균 품목·예산 자료"
+          },
           "status": "pending",
-          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
           "events": [
-            {"ts": "2026-06-04 17:55", "type": "proposed", "note": "사용자 발굴: [이득비교] 일상 구매 결 — 다이소·쿠팡·재래시장 한국인 가성비 직격"}
+            {
+              "ts": "2026-06-04 17:55",
+              "type": "proposed",
+              "note": "사용자 발굴: [이득비교] 일상 구매 결 — 다이소·쿠팡·재래시장 한국인 가성비 직격"
+            }
           ],
           "notes": "[이득비교] 일상 구매 결 1호. 시각화: 10종 품목 가격 비교표 + 배송비·교통비 포함 총비용. 매주 시리즈 가능 (동네별·계절별)."
         },
@@ -206,14 +361,39 @@
           "title": "[이득비교] 삼성 vs 애플, 시니어가 살 때 어디가 진짜 이득? (1년 총 비용 + AS + 중고가)",
           "type": "신규",
           "rating": 4,
-          "tags": ["[이득비교] 시리즈 IP", "삼성 시의성", "시니어 의사결정"],
+          "tags": [
+            "[이득비교] 시리즈 IP",
+            "삼성 시의성",
+            "시니어 의사결정"
+          ],
           "merge_angle": "삼성 SK 매도 시그널(경제 원탑 6535/h) + 핸드폰 선택 = '삼성 폭락 우려에 핸드폰도 애플로 갈아탈까?' 시니어 의사결정 도구",
-          "sources_a": {"channel": "경제 원탑", "title": "삼성전자 SK하이닉스 '이때' 싹 다 파세요", "views": 205475, "velocity": 6535},
-          "sources_b": {"channel": "(핸드폰 가격 비교 자료)", "title": "TBD", "note": "삼성 갤럭시 vs 아이폰 5년 총 비용 (초기·AS·중고가) 자료"},
+          "sources_a": {
+            "channel": "경제 원탑",
+            "title": "삼성전자 SK하이닉스 '이때' 싹 다 파세요",
+            "views": 205475,
+            "velocity": 6535
+          },
+          "sources_b": {
+            "channel": "(핸드폰 가격 비교 자료)",
+            "title": "TBD",
+            "note": "삼성 갤럭시 vs 아이폰 5년 총 비용 (초기·AS·중고가) 자료"
+          },
           "status": "pending",
-          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
           "events": [
-            {"ts": "2026-06-04 17:30", "type": "proposed", "note": "사용자 예시 직접 발전: 삼성 시의성 + [이득비교] 라벨 결합"}
+            {
+              "ts": "2026-06-04 17:30",
+              "type": "proposed",
+              "note": "사용자 예시 직접 발전: 삼성 시의성 + [이득비교] 라벨 결합"
+            }
           ],
           "notes": "[이득비교] 시리즈 IP 2호. 사용자가 명시한 예시. 작업 시 1년 총 비용 표로 시각화 필수."
         },
@@ -2457,6 +2637,6 @@
       ]
     }
   ],
-  "last_auto_run": "2026-06-04 16:06",
-  "last_ai_detect_run": "2026-06-04 17:03"
+  "last_auto_run": "2026-06-04 22:51",
+  "last_ai_detect_run": "2026-06-04 22:51"
 }
