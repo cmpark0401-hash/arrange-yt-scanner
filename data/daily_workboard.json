@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 02:00",
+  "updated_at": "2026-06-04 09:40",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {"label": "🔥 단일 폭발", "desc": "타채널 2일 이내 폭발 영상 (시의성 단발)", "color": "var(--hot)", "border": "var(--hot-bd)"},
@@ -25,32 +25,35 @@
       },
       "topics": [
         {
-          "id": "kn-20260603-se",
+          "id": "kn-20260604-se",
           "category": "single_explosion",
-          "title": "경제대부 \"세녹스 990원\" (62.6x · 6/2 폭발 1위)",
+          "title": "경제대부 \"세녹스 990원\" (62.8x · 6/4도 폭발 지속) + 일본 패닉 54.8x",
           "type": "신규",
           "rating": 5,
-          "tags": ["폭발 1위", "62.6x", "환경부 인정", "시의성"],
-          "merge_angle": "세녹스 단일 + 한국 독자기술 일본 패닉 → \"환경부도 인정한 세녹스와 일본 패닉시킨 한국 기술\"",
-          "sources_a": {"channel": "경제대부", "title": "전국 주유소 뒤흔든 990원 세녹스", "efficiency": 62.6, "views": 184123},
-          "sources_b": {"channel": "코믹스 경제", "title": "100년 걸린다던 한국 독자 기술에 일본 패닉", "efficiency": 25.2, "views": 47642},
+          "tags": ["폭발 지속", "62.8x", "일본 패닉 54.8x", "검증 완료"],
+          "merge_angle": "세녹스(62.8x) + 한국 독자기술 일본 패닉(54.8x → 6/4 2배 확대) = '환경부도 인정한 세녹스와 일본 패닉시킨 한국 기술'",
+          "sources_a": {"channel": "경제대부", "title": "전국 주유소 뒤흔든 990원 세녹스", "efficiency": 62.8, "views": 184125},
+          "sources_b": {"channel": "코믹스 경제", "title": "100년 걸린다던 한국 조롱하던 일본, 독자 개발 성공하자 패닉", "efficiency": 54.8, "views": 115622},
           "status": "pending",
           "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
-          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "6/2 폭발 1위 시의성 강력"}]
+          "events": [
+            {"ts": "2026-06-03 17:00", "type": "proposed", "note": "6/2 폭발 1위"},
+            {"ts": "2026-06-04 09:40", "type": "refresh", "note": "6/4 검증 지속 — 세녹스 62.8x, 일본 패닉 54.8x로 확대"}
+          ]
         },
         {
-          "id": "kn-20260603-tm",
+          "id": "kn-20260604-tm",
           "category": "timeliness",
-          "title": "젠슨황 방한 + 삼성 평택 노조 해체 (시점 교차)",
+          "title": "슈카월드 \"대상승의 시대\" (시그널 3308/h) + 경제 원탑 \"삼성 SK 매도\" (6535/h)",
           "type": "신규",
           "rating": 5,
-          "tags": ["젠슨황", "평택 해체", "한국 반도체", "이번 주 핫"],
-          "merge_angle": "젠슨황이 한국에 온 그 시간, 평택 삼성은 노조 해체로 답했다",
-          "sources_a": {"channel": "815머니톡", "title": "Jensen Huang Visit to Korea", "efficiency": null, "views": 107200},
-          "sources_b": {"channel": "깊은 경제", "title": "삼성 귀족 노조의 몰락, 평택 공장 해체", "efficiency": null, "views": 115947},
+          "tags": ["시그널 6/4", "슈카월드 26.5만뷰", "삼성 SK 매도", "오늘 골든타임"],
+          "merge_angle": "슈카월드가 외친 대상승 시대 + 경제 원탑이 외친 매도 타이밍 = \"지금이 진짜 대상승의 시작일까, 마지막 환각일까\"",
+          "sources_a": {"channel": "슈카월드", "title": "대한민국에 온 大상승의 시대", "efficiency": null, "views": 265083, "velocity": 3308},
+          "sources_b": {"channel": "경제 원탑", "title": "삼성전자 SK하이닉스 '이때' 싹 다 파세요", "efficiency": null, "views": 205475, "velocity": 6535},
           "status": "pending",
           "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
-          "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "이번 주 시의성 강력"}]
+          "events": [{"ts": "2026-06-04 09:40", "type": "proposed", "note": "6/4 시그널 2편 동시 — 매수 vs 매도 극단 시점"}]
         },
         {
           "id": "kn-20260603-sr",
