@@ -1,16 +1,17 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 10:20",
+  "updated_at": "2026-06-04 10:40",
   "today": "2026-06-04",
   "categories_def": {
-    "single_explosion": {"label": "🔥 단일 폭발", "desc": "타채널 2일 이내 폭발 영상 (시의성 단발)", "color": "var(--hot)", "border": "var(--hot-bd)"},
-    "timeliness": {"label": "🚨 시의성", "desc": "현재 트렌드·뉴스 기반 (오늘 만들면 골든타임)", "color": "var(--warn)", "border": "var(--warn-bd)"},
-    "series": {"label": "📚 시리즈 다음 회차", "desc": "메인 시리즈 IP EP.N (AI 양산이 못 함)", "color": "var(--primary-hi)", "border": "var(--primary-bd)"},
-    "evergreen": {"label": "✨ 검증 evergreen", "desc": "Hot키워드 누적 검증 (시기 무관)", "color": "#22c55e", "border": "rgba(34,197,94,.55)"},
-    "reedit": {"label": "🔁 재편집 재폭발", "desc": "같은 주제 다시 신호 (변형 기회)", "color": "var(--info)", "border": "rgba(96,165,250,.55)"},
-    "cross_category": {"label": "🔀 카테고리 교차", "desc": "다른 분야 폭발 → 우리 채널 톤으로", "color": "#a855f7", "border": "rgba(168,85,247,.55)"},
-    "owned_draft": {"label": "💎 보유 대본 우선", "desc": "이미 작성된 미발행 대본", "color": "var(--primary)", "border": "var(--primary)"}
+    "single_explosion": {"label": "🔥 단일 폭발", "desc": "타채널 2일 이내 폭발 영상 (시의성 단발)", "color": "var(--hot)", "border": "var(--hot-bd)", "archive_days": 2},
+    "timeliness": {"label": "🚨 시의성", "desc": "현재 트렌드·뉴스 기반 (오늘 만들면 골든타임)", "color": "var(--warn)", "border": "var(--warn-bd)", "archive_days": 1},
+    "series": {"label": "📚 시리즈 다음 회차", "desc": "메인 시리즈 IP EP.N (AI 양산이 못 함)", "color": "var(--primary-hi)", "border": "var(--primary-bd)", "archive_days": null},
+    "evergreen": {"label": "✨ 검증 evergreen", "desc": "Hot키워드 누적 검증 (시기 무관)", "color": "#22c55e", "border": "rgba(34,197,94,.55)", "archive_days": null},
+    "reedit": {"label": "🔁 재편집 재폭발", "desc": "같은 주제 다시 신호 (변형 기회)", "color": "var(--info)", "border": "rgba(96,165,250,.55)", "archive_days": 3},
+    "cross_category": {"label": "🔀 카테고리 교차", "desc": "다른 분야 폭발 → 우리 채널 톤으로", "color": "#a855f7", "border": "rgba(168,85,247,.55)", "archive_days": 3},
+    "owned_draft": {"label": "💎 보유 대본 우선", "desc": "이미 작성된 미발행 대본", "color": "var(--primary)", "border": "var(--primary)", "archive_days": null}
   },
+  "archived_topics": [],
   "channels": [
     {
       "slug": "knowledge-archive",
@@ -155,18 +156,22 @@
       },
       "topics": [
         {
-          "id": "nn-20260603-tm",
-          "category": "timeliness",
-          "title": "(evergreen 채널이라 시의성 X — 보유 대본 우선)",
-          "type": "안내",
-          "rating": 0,
-          "tags": ["evergreen", "시의성 무관"],
-          "merge_angle": "잘듣네는 위로 톤 evergreen. 시의성 카테고리는 비활성",
-          "sources_a": null,
-          "sources_b": null,
-          "status": "hold",
-          "checklist": {},
-          "events": [{"ts": "2026-06-03 17:00", "type": "info", "note": "evergreen 채널 — 시의성 카테고리 비활성"}]
+          "id": "nn-20260604-day1",
+          "category": "single_explosion",
+          "title": "[낮 트랙 START] KBS 생로병사 \"2주 만에 시력 0.5→1.0\" (177만뷰 · 시니어 건강 직격)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["낮 트랙 시작", "KBS 생로병사 177만뷰", "시니어 건강", "8분 컴팩트", "실용 정보 톤"],
+          "merge_angle": "KBS 2주 시력 회복 + (B 영상 — 우주생각/세모과학/안될과학 등 시니어 건강·노화 검증 영상 1편) → '점심 후 차 한 잔 — 오늘 알게 된 노화 시계 되돌리는 한 가지'",
+          "sources_a": {"channel": "KBS 생로병사의 비밀", "title": "[2주 프로젝트] 시력이 0.5에서 1.0으로? 단 2주 만에 눈 노화 시계를 되돌린 기적의 습관", "efficiency": 2.1, "views": 1769253, "subs": 857000, "duration": "8분12초", "uploaded": "2026-04-04", "url": "https://www.youtube.com/watch?v=M27IIf6TX0c"},
+          "sources_b": {"channel": "(미정 — 시니어 건강 검증 영상 1편 추가 발굴 필요)", "title": "TBD", "note": "수면다큐·세모과학·안될과학·우주생각 등 시니어 톤 폭발 영상 풀에서 매칭"},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [
+            {"ts": "2026-06-04 10:40", "type": "proposed", "note": "사용자 발굴: KBS 시력 영상 + 시니어 타겟 매치"},
+            {"ts": "2026-06-04 10:40", "type": "branch_start", "note": "잘듣네 낮 트랙 분기 시작 (project_jaldeunne_daytime_branch 실행)"}
+          ],
+          "notes": "낮 트랙 = 점심 후 차분한 실용 정보. 밤 트랙(잠들기 전 위로)과 시그너처·BGM·톤 분리. 첫 영상이므로 낮 트랙 시그너처 정립 필요."
         },
         {
           "id": "nn-20260603-sr",
