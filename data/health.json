@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-06-04 16:02",
+  "overall_icon": "🔴",
+  "overall_label": "일부 dead",
+  "overall_severity": "warning",
+  "items": [
+    {
+      "label": "📊 모니터링 (KR)",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "6시간 전",
+      "updated_at": "2026-06-04 09:57",
+      "file": "channels/knowledge-archive/_monitor_logs/2026-06-04.json",
+      "severity": "critical"
+    },
+    {
+      "label": "📰 뉴스 RSS (KR)",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "6시간 전",
+      "updated_at": "2026-06-04 09:36",
+      "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-04.json",
+      "severity": "warning"
+    },
+    {
+      "label": "🏆 검증 주제",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "6시간 전",
+      "updated_at": "2026-06-04 09:36",
+      "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-04.json",
+      "severity": "warning"
+    },
+    {
+      "label": "🔁 재편집 (KR)",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "5시간 전",
+      "updated_at": "2026-06-04 10:18",
+      "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-04.json",
+      "severity": "warning"
+    },
+    {
+      "label": "🌏 모니터링 (JP)",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파일 없음",
+      "ago": "N/A",
+      "severity": "warning"
+    },
+    {
+      "label": "🧪 과학 트렌드",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파이프라인 점검 필요",
+      "ago": "5일 전",
+      "updated_at": "2026-05-29 16:13",
+      "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-05-29.json",
+      "severity": "info"
+    },
+    {
+      "label": "👴 시니어 탐사",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파이프라인 점검 필요",
+      "ago": "4일 전",
+      "updated_at": "2026-05-31 09:01",
+      "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-05-31.json",
+      "severity": "info"
+    },
+    {
+      "label": "📋 워크보드",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "5분 전",
+      "updated_at": "2026-06-04 15:57",
+      "last_auto_run": "2026-06-04 15:57",
+      "detail": "마지막 자동 추천: 2026-06-04 15:57"
+    },
+    {
+      "label": "🏗️ 사이트 빌드",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "0분 전",
+      "updated_at": "2026-06-04 16:02"
+    }
+  ]
+}
