@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 09:40",
+  "updated_at": "2026-06-04 10:20",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {"label": "🔥 단일 폭발", "desc": "타채널 2일 이내 폭발 영상 (시의성 단발)", "color": "var(--hot)", "border": "var(--hot-bd)"},
@@ -86,7 +86,7 @@
         {
           "id": "kn-20260603-re",
           "category": "reedit",
-          "title": "이지한 경제학 \"식민지보다 못한 영국의 몰락\" (6/2 재편집)",
+          "title": "이지한 경제학 \"식민지보다 못한 영국의 몰락\" (6/2 재편집) — 옵션 A",
           "type": "신규",
           "rating": 4,
           "tags": ["재편집 신호", "영국 몰락", "한국 추월"],
@@ -96,6 +96,20 @@
           "status": "pending",
           "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
           "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "재편집 풀 + 시점 교차"}]
+        },
+        {
+          "id": "kn-20260604-re2",
+          "category": "reedit",
+          "title": "엔비디아 GTC Taipei 키노트 (505만뷰 0일) + 젠슨황·삼성 깐부 회동 (한국증권TV)",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["재편집 6/4 NEW", "엔비디아 GTC", "젠슨황 삼성", "0일 폭발"],
+          "merge_angle": "젠슨황이 GTC에서 외친 한 가지(키노트) + 한국 와서 삼성과 깐부 맺은 한 가지 → \"젠슨황이 한국에서 가장 먼저 찾은 그 한 사람\"",
+          "sources_a": {"channel": "NVIDIA", "title": "NVIDIA GTC Taipei 2026 Keynote (Full Replay)", "efficiency": null, "views": 5054676},
+          "sources_b": {"channel": "한국증권TV", "title": "젠슨 황의 두 번째 깐부 회동! 삼성전자, 없다면 무조건 담으세요", "efficiency": null, "views": 139722},
+          "status": "pending",
+          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [{"ts": "2026-06-04 10:20", "type": "proposed", "note": "6/4 reedit 폭발 1위 + 시의성 강력 (젠슨황 시리즈 회동)"}]
         },
         {
           "id": "kn-20260603-cc",
