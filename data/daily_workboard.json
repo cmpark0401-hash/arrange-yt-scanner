@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 16:06",
+  "updated_at": "2026-06-04 17:03",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {
@@ -62,9 +62,17 @@
       "tone": "경제(주)·시사(부) 시니어",
       "open_status": "active",
       "series_ip": {
-        "main": "오늘 동시에 터진 영상 5편이 가리키는 한국",
-        "essence": "TubeHacker 매일 데이터 → 통찰 (개인 못 봄)",
-        "ep_count": 0
+        "main": "[숨은한국] + [가격해부] (원가공개 결)",
+        "essence": "시의성 키워드 + 시리즈 라벨 = 시의성·깊이·인지도 동시 (제우스 노하우 변형)",
+        "ep_count": 0,
+        "sub_labels": [
+          "[숨은한국]",
+          "[가격해부]"
+        ],
+        "examples": [
+          "[숨은한국] 엔비디아 1000억이 향한 한국 회사의 진짜 정체",
+          "[가격해부] 6.3 지방선거 구청장 4년 진짜 수익 구조"
+        ]
       },
       "topics": [
         {
@@ -655,6 +663,237 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "kn-20260604-ai-시사-EeSG7l",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: 20대 예비군은 왜 집에 돌아오지 못했을까?｜크랩 (657,487뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.7x",
+            "3일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "20대 예비군은 왜 집에 돌아오지 못했을까?｜크랩",
+            "efficiency": 0.6509772277227722,
+            "views": 657487,
+            "velocity": 4751,
+            "url": "https://www.youtube.com/watch?v=EeSG7laRyOw",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=11559)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260604-ai-시사-1Vcv-p",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: 엔비디아 독주가 끝난다고?;; 진짠지 알아봄｜크랩 (200,842뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.2x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "엔비디아 독주가 끝난다고?;; 진짠지 알아봄｜크랩",
+            "efficiency": 0.19885346534653464,
+            "views": 200842,
+            "velocity": 2769,
+            "url": "https://www.youtube.com/watch?v=1Vcv-pv_WZY",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=9169)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260604-ai-경제-uFq-sr",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 코믹스 경제: &quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 (115,622뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 54.8x",
+            "4일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "코믹스 경제",
+            "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
+            "efficiency": 54.79715639810426,
+            "views": 115622,
+            "velocity": 956,
+            "url": "https://www.youtube.com/watch?v=uFq-sr_ia6o",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=60869)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260604-ai-경제-DBAtIN",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 경제읽음이: 엔비디아가 삼성·SK 놔두고 1000억 베팅한 무명 회사의 진짜 정체 (354,807뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 25.9x",
+            "12일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "경제읽음이",
+            "title": "엔비디아가 삼성·SK 놔두고 1000억 베팅한 무명 회사의 진짜 정체",
+            "efficiency": 25.89832116788321,
+            "views": 354807,
+            "velocity": 63,
+            "url": "https://www.youtube.com/watch?v=DBAtINf_tDQ",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=27316)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260604-ai-심리-QEKSZU",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 이클립스: 헐 다운 전술 (167,199뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 심리학",
+            "효율 1.1x",
+            "12일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "이클립스",
+            "title": "헐 다운 전술",
+            "efficiency": 1.0857077922077922,
+            "views": 167199,
+            "velocity": 72,
+            "url": "https://www.youtube.com/watch?v=QEKSZUsF89M",
+            "ch_type": "AI",
+            "categories": [
+              "심리학",
+              "지식"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=2325)"
+            }
+          ]
         }
       ]
     },
@@ -1032,6 +1271,53 @@
               "ts": "2026-06-04 15:57",
               "type": "auto_proposed",
               "note": "자동 추천 (score=468)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260604-ai-심리-QEKSZU",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 이클립스: 헐 다운 전술 (167,199뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 심리학",
+            "효율 1.1x",
+            "12일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "이클립스",
+            "title": "헐 다운 전술",
+            "efficiency": 1.0857077922077922,
+            "views": 167199,
+            "velocity": 72,
+            "url": "https://www.youtube.com/watch?v=QEKSZUsF89M",
+            "ch_type": "AI",
+            "categories": [
+              "심리학",
+              "지식"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=2325)"
             }
           ]
         }
@@ -1577,6 +1863,98 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "sw-20260604-ai-과학-Rp0v0K",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 방구석 과학: 한국인 대상으로 하는 일본 사기 수법 (383,838뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 2.1x",
+            "4일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "한국인 대상으로 하는 일본 사기 수법",
+            "efficiency": 2.109,
+            "views": 383838,
+            "velocity": 5383,
+            "url": "https://www.youtube.com/watch?v=Rp0v0KJ6gB0",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=12876)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260604-ai-과학-P-zT0j",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 세모과학: 이중슬릿 실험에서 드러난 양자역학의 기묘함 (313,872뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 2.0x",
+            "4일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "세모과학",
+            "title": "이중슬릿 실험에서 드러난 양자역학의 기묘함",
+            "efficiency": 2.012,
+            "views": 313872,
+            "velocity": 2878,
+            "url": "https://www.youtube.com/watch?v=P-zT0jwLWH4",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=10204)"
+            }
+          ]
         }
       ]
     },
@@ -1841,9 +2219,102 @@
               "note": "자동 추천 (score=27927)"
             }
           ]
+        },
+        {
+          "id": "yd-20260604-ai-역사-NRtLHr",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시 (174,106뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 역사",
+            "효율 27.0x",
+            "10일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열",
+            "efficiency": 26.95139318885449,
+            "views": 174106,
+            "velocity": 802,
+            "url": "https://www.youtube.com/watch?v=NRtLHrlkspU",
+            "ch_type": "AI",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=29927)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260604-ai-역사-4XEvn9",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 써에이스쇼 sirace show: 마오쩌둥 비공개 일대기 몰아보기 (151,789뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 역사",
+            "효율 0.2x",
+            "13일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "써에이스쇼 sirace show",
+            "title": "마오쩌둥 비공개 일대기 몰아보기",
+            "efficiency": 0.2375414710485133,
+            "views": 151789,
+            "velocity": 207,
+            "url": "https://www.youtube.com/watch?v=4XEvn9flmKA",
+            "ch_type": "AI",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-04 17:03",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=1096)"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-04 16:06"
+  "last_auto_run": "2026-06-04 16:06",
+  "last_ai_detect_run": "2026-06-04 17:03"
 }
