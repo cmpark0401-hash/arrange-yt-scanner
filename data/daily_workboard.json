@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 10:40",
+  "updated_at": "2026-06-04 11:10",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {"label": "🔥 단일 폭발", "desc": "타채널 2일 이내 폭발 영상 (시의성 단발)", "color": "var(--hot)", "border": "var(--hot-bd)", "archive_days": 2},
@@ -158,20 +158,20 @@
         {
           "id": "nn-20260604-day1",
           "category": "single_explosion",
-          "title": "[낮 트랙 START] KBS 생로병사 \"2주 만에 시력 0.5→1.0\" (177만뷰 · 시니어 건강 직격)",
-          "type": "신규",
+          "title": "[낮 트랙 START] 돔 페리뇽 47년 한 수도사 — [오늘 한 줄 시리즈] 첫 회 (5/23 합의)",
+          "type": "보유",
           "rating": 5,
-          "tags": ["낮 트랙 시작", "KBS 생로병사 177만뷰", "시니어 건강", "8분 컴팩트", "실용 정보 톤"],
-          "merge_angle": "KBS 2주 시력 회복 + (B 영상 — 우주생각/세모과학/안될과학 등 시니어 건강·노화 검증 영상 1편) → '점심 후 차 한 잔 — 오늘 알게 된 노화 시계 되돌리는 한 가지'",
-          "sources_a": {"channel": "KBS 생로병사의 비밀", "title": "[2주 프로젝트] 시력이 0.5에서 1.0으로? 단 2주 만에 눈 노화 시계를 되돌린 기적의 습관", "efficiency": 2.1, "views": 1769253, "subs": 857000, "duration": "8분12초", "uploaded": "2026-04-04", "url": "https://www.youtube.com/watch?v=M27IIf6TX0c"},
-          "sources_b": {"channel": "(미정 — 시니어 건강 검증 영상 1편 추가 발굴 필요)", "title": "TBD", "note": "수면다큐·세모과학·안될과학·우주생각 등 시니어 톤 폭발 영상 풀에서 매칭"},
+          "tags": ["낮 트랙 1호", "[오늘 한 줄 시리즈]", "Hook 시안 A/B 작성됨", "1차 자료 5종 매핑"],
+          "merge_angle": "최고급 호텔의 그 화려한 한 병, 사실은 17세기 한 수도사가 47년을 보낸 한 우물의 이름이었답니다 (브랜드 인지도 → 통념 반전 → 한 사람의 헌신으로 회귀)",
+          "sources_a": {"channel": "잘듣네 낮 트랙 첫 영상", "title": "돔 페리뇽 47년 — 한 수도사의 한 우물", "note": "5/23 합의된 1호 영상, daytime-track-plan.md + next-daytime-dom-perignon.md 베이스"},
+          "sources_b": {"channel": "1차 자료", "title": "Hautvillers Abbey 회계장부 + Dom Grossard 1821 서신 + Bertin du Rocheret 1718 서신", "note": "본문 자료 5종, 후대 윤색('별을 마시는 것 같아') 제거 가이드 명시"},
           "status": "pending",
-          "checklist": {"collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "checklist": {"collect": true, "analyze": true, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
           "events": [
-            {"ts": "2026-06-04 10:40", "type": "proposed", "note": "사용자 발굴: KBS 시력 영상 + 시니어 타겟 매치"},
-            {"ts": "2026-06-04 10:40", "type": "branch_start", "note": "잘듣네 낮 트랙 분기 시작 (project_jaldeunne_daytime_branch 실행)"}
+            {"ts": "2026-05-23 13:47", "type": "proposed", "note": "낮 트랙 1호 영상으로 합의 (daytime-track-plan.md 베이스)"},
+            {"ts": "2026-06-04 11:10", "type": "branch_start", "note": "잘듣네 낮 트랙 분기 시작 — 돔 페리뇽 1호 진행 (KBS 시력은 과만세로 이동)"}
           ],
-          "notes": "낮 트랙 = 점심 후 차분한 실용 정보. 밤 트랙(잠들기 전 위로)과 시그너처·BGM·톤 분리. 첫 영상이므로 낮 트랙 시그너처 정립 필요."
+          "notes": "톤: [오늘 한 줄 시리즈] 12~15분, 11:30~12:30 발행, 크림 배경 + 차잎 그린. STRATEGY/Phase3에서 Hook 3후보 의무 (시안 A/B + C 추가). 자료: channels/nn-flix/projects/_ideas/next-daytime-dom-perignon.md + config/_internal/daytime-track-plan.md"
         },
         {
           "id": "nn-20260603-sr",
@@ -271,6 +271,25 @@
           "checklist": {"channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
           "events": [{"ts": "2026-06-03 17:00", "type": "proposed", "note": "선결: 채널 개설"}],
           "notes": "채널 개설 후 발행 가능"
+        },
+        {
+          "id": "sw-20260604-health",
+          "category": "single_explosion",
+          "title": "KBS 생로병사 \"2주 만에 시력 0.5→1.0\" (177만뷰 · 시니어 건강 직격) + 메인 IP 연결",
+          "type": "신규",
+          "rating": 5,
+          "tags": ["KBS 177만뷰", "시니어 건강 직격", "메인 시리즈 IP 매치", "노화 시계", "잘듣네→과만세 재배치"],
+          "merge_angle": "KBS 2주 시력 회복 + 노화 메커니즘 검증 영상 1편 → 메인 시리즈 IP 매치 'AI도 못 푼 우리 몸의 한 가지 — AI보다 단순한 2주 습관이 노화 시계를 되돌렸다'",
+          "sources_a": {"channel": "KBS 생로병사의 비밀", "title": "[2주 프로젝트] 시력이 0.5에서 1.0으로? 단 2주 만에 눈 노화 시계를 되돌린 기적의 습관", "efficiency": 2.1, "views": 1769253, "subs": 857000, "duration": "8분12초", "uploaded": "2026-04-04", "url": "https://www.youtube.com/watch?v=M27IIf6TX0c"},
+          "sources_b": {"channel": "(미정 — 노화 메커니즘·시신경 회복 검증 영상 1편 추가 발굴 필요)", "title": "TBD", "note": "수면다큐·세모과학·안될과학·이오 IO 등 시니어 건강·과학 검증 영상 풀에서 매칭. 시신경 회복·NAD+ 등 키워드"},
+          "status": "blocked",
+          "checklist": {"channel_setup": false, "collect": false, "analyze": false, "strategy": false, "draft": false, "review_finalize": false, "self_diagnosis": false, "published": false},
+          "events": [
+            {"ts": "2026-06-04 10:40", "type": "discovered", "note": "사용자 발굴: KBS 시력 영상 (M27IIf6TX0c)"},
+            {"ts": "2026-06-04 10:40", "type": "tried", "note": "잘듣네 낮 트랙으로 시도"},
+            {"ts": "2026-06-04 11:10", "type": "relocated", "note": "잘듣네 결과 톤 불일치 — 과만세로 재배치 (의학·실용 정보 결 = 과만세 적합)"}
+          ],
+          "notes": "채널 개설 후 우선순위 1순위 후보. 메인 시리즈 IP 'AI도 못 푼 우리 몸/우주의 한 가지' EP 후보."
         },
         {
           "id": "sw-20260603-sr",
