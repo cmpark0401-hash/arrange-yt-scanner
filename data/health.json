@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "58분 전",
+      "ago": "59분 전",
       "updated_at": "2026-06-05 09:49",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-05.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "58분 전",
+      "ago": "59분 전",
       "updated_at": "2026-06-05 09:49",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-05.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "23분 전",
+      "ago": "24분 전",
       "updated_at": "2026-06-05 10:24",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-05.json",
       "severity": "warning"
@@ -77,10 +77,10 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
-      "updated_at": "2026-06-05 09:31",
-      "last_auto_run": "2026-06-05 09:31",
-      "detail": "마지막 자동 추천: 2026-06-05 09:31"
+      "ago": "0분 전",
+      "updated_at": "2026-06-05 10:48",
+      "last_auto_run": "2026-06-05 10:48",
+      "detail": "마지막 자동 추천: 2026-06-05 10:48"
     },
     {
       "label": "🏗️ 사이트 빌드",

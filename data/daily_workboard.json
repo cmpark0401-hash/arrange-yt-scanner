@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-05 09:31",
+  "updated_at": "2026-06-05 10:48",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {
@@ -1581,6 +1581,86 @@
               "note": "AI 채널 폭발 자동 검출 (score=16332)"
             }
           ]
+        },
+        {
+          "id": "kn-20260605-auto-re-novid",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 투데이경제TV: [ 삼성전자 ] '7분전 속보' 젠슨 황 오늘 밤 한국 입국하는데 이재용 회장 잠적… 삼성전자 주주들이 모르 (57,514뷰 · 1일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "삼성"
+          ],
+          "merge_angle": "검증 키워드 '삼성' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "투데이경제TV",
+            "title": "[ 삼성전자 ] \"7분전 속보\" 젠슨 황 오늘 밤 한국 입국하는데 이재용 회장 잠적… 삼성전자 주주들이 모르는 일이 벌어지고 있습니다",
+            "views": 57514,
+            "url": "",
+            "days_since": 1
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 10:48",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260605-auto-re-novid",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 815머니톡: HANMI Semiconductor, a massive momentum shift is coming to d (67,972뷰 · 1일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "반도체"
+          ],
+          "merge_angle": "검증 키워드 '반도체' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "815머니톡",
+            "title": "HANMI Semiconductor, a massive momentum shift is coming to drive the stock price. / If I had to p...",
+            "views": 67972,
+            "url": "",
+            "days_since": 1
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 10:48",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
         }
       ]
     },
@@ -3015,6 +3095,86 @@
               "note": "AI 채널 폭발 자동 검출 (score=2451)"
             }
           ]
+        },
+        {
+          "id": "sw-20260605-auto-re-novid",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] EBS 지식: The moment I realized the size of the universe, my worries b (116,934뷰 · 4일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "우주"
+          ],
+          "merge_angle": "검증 키워드 '우주' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "EBS 지식",
+            "title": "The moment I realized the size of the universe, my worries began to look like dust. The true scal...",
+            "views": 116934,
+            "url": "",
+            "days_since": 4
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 10:48",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260605-auto-re-novid",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] EBSDocumentary (EBS 다큐): 돈 아끼지 않고 최고급으로 집 지었더니 회장님 뺨치는 80대 노부부의 상위 1% 시골집 클래스✨｜상속 대신  (226,754뷰 · 1일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "다큐멘터리"
+          ],
+          "merge_angle": "검증 키워드 '다큐멘터리' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "EBSDocumentary (EBS 다큐)",
+            "title": "돈 아끼지 않고 최고급으로 집 지었더니 회장님 뺨치는 80대 노부부의 상위 1% 시골집 클래스✨｜상속 대신 노후 자금 아낌없이 쏟아부어 완성한 잡지 속 집｜건축탐구 집｜#골라듄다큐",
+            "views": 226754,
+            "url": "",
+            "days_since": 1
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 10:48",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
         }
       ]
     },
@@ -3461,10 +3621,90 @@
               "note": "자동 추천 (score=8360)"
             }
           ]
+        },
+        {
+          "id": "yd-20260605-auto-re-novid",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 슈카월드: 상장 앞둔 스페이스X 실적 공개 (262,328뷰 · 1일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "상장"
+          ],
+          "merge_angle": "검증 키워드 '상장' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "슈카월드",
+            "title": "상장 앞둔 스페이스X 실적 공개",
+            "views": 262328,
+            "url": "",
+            "days_since": 1
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 10:48",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260605-auto-re-novid",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 재테크읽어주는 파일럿: SpaceX IPO Price Confirmed! Post-Listing Forecast Scenarios (123,210뷰 · 1일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "상장"
+          ],
+          "merge_angle": "검증 키워드 '상장' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "재테크읽어주는 파일럿",
+            "title": "SpaceX IPO Price Confirmed! Post-Listing Forecast Scenarios",
+            "views": 123210,
+            "url": "",
+            "days_since": 1
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 10:48",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-05 09:31",
-  "last_ai_detect_run": "2026-06-05 09:31"
+  "last_auto_run": "2026-06-05 10:48",
+  "last_ai_detect_run": "2026-06-05 10:48"
 }
