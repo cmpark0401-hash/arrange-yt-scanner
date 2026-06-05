@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-05 10:48",
-  "today": "2026-06-04",
+  "updated_at": "2026-06-05 11:04",
+  "today": "2026-06-05",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -726,7 +726,7 @@
           "notes": "사용자 우려: 중국 댐 시리즈 과포화"
         },
         {
-          "id": "kn-20260604-auto-se-novid",
+          "id": "kn-20260604-auto-se-h3d484e",
           "category": "single_explosion",
           "title": "[자동🤖] 경제대부: &quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히 (184,125뷰 · 효율 62.8x)",
           "type": "신규",
@@ -771,7 +771,7 @@
           ]
         },
         {
-          "id": "kn-20260604-auto-se-novid",
+          "id": "kn-20260604-auto-se-h5b91f5",
           "category": "single_explosion",
           "title": "[자동🤖] 경제 원탑: 삼성전자 SK하이닉스 '이때' 싹 다 파세요. '이것' 눈치챈 사람이 떼돈 번다. ( 조진표 대표 ) (205,475뷰 · 효율 0.4x)",
           "type": "신규",
@@ -817,7 +817,7 @@
           ]
         },
         {
-          "id": "kn-20260604-auto-cc-novid",
+          "id": "kn-20260604-auto-cc-h5e2129",
           "category": "cross_category",
           "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,347,698뷰 · 효율 401.8x)",
           "type": "신규",
@@ -862,7 +862,7 @@
           ]
         },
         {
-          "id": "kn-20260604-auto-cc-novid",
+          "id": "kn-20260604-auto-cc-h85654e",
           "category": "cross_category",
           "title": "[자동🤖] EBSDocumentary (EBS 다큐): 세관이 뚫릴 줄 알고 밀수 시도했다가 이렇게 됐다. 부산으로 들어온 수상한 컨테이너 박스 뜯어봤더니│극한직업 (141,400뷰 · 효율 0.0x)",
           "type": "신규",
@@ -907,7 +907,7 @@
           ]
         },
         {
-          "id": "kn-20260604-auto-re-novid",
+          "id": "kn-20260604-auto-re-h500df1",
           "category": "reedit",
           "title": "[자동🤖 재편집] NVIDIA: NVIDIA GTC Taipei 2026 Keynote | Full Replay (5,054,676뷰 · 3일 전)",
           "type": "신규",
@@ -947,7 +947,7 @@
           ]
         },
         {
-          "id": "kn-20260604-auto-re-novid",
+          "id": "kn-20260604-auto-re-h96bbfe",
           "category": "reedit",
           "title": "[자동🤖 재편집] 유니버설 픽쳐스: [Disclosure Day] to reveal the identity of an unknown entity (286,207뷰 · 1일 전)",
           "type": "신규",
@@ -1218,7 +1218,7 @@
           ]
         },
         {
-          "id": "kn-20260605-auto-se-novid",
+          "id": "kn-20260605-auto-se-h12ba51",
           "category": "single_explosion",
           "title": "[자동🤖] 경제대부: &quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히 (184,127뷰 · 효율 62.6x)",
           "type": "신규",
@@ -1263,7 +1263,7 @@
           ]
         },
         {
-          "id": "kn-20260605-auto-se-novid",
+          "id": "kn-20260605-auto-se-h0ae1f8",
           "category": "single_explosion",
           "title": "[자동🤖] 시사저널TV: 한동훈, 초선 배지 다나? &quot;최적의 모범 답안 보여줬으니...&quot; (350,990뷰 · 효율 0.5x)",
           "type": "신규",
@@ -1309,7 +1309,7 @@
           ]
         },
         {
-          "id": "kn-20260605-auto-cc-novid",
+          "id": "kn-20260605-auto-cc-hef80bb",
           "category": "cross_category",
           "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,348,010뷰 · 효율 401.8x)",
           "type": "신규",
@@ -1354,7 +1354,7 @@
           ]
         },
         {
-          "id": "kn-20260605-auto-cc-novid",
+          "id": "kn-20260605-auto-cc-h8fb4c5",
           "category": "cross_category",
           "title": "[자동🤖] 언더스탠딩 : 세상의 모든 지식: 삼성·하이닉스 턱밑 중국 HBM 무서운 추격 (성균관대 화학공학부 권석준 교수) (187,120뷰 · 효율 0.1x)",
           "type": "신규",
@@ -1583,7 +1583,7 @@
           ]
         },
         {
-          "id": "kn-20260605-auto-re-novid",
+          "id": "kn-20260605-auto-re-hb16bb4",
           "category": "reedit",
           "title": "[자동🤖 재편집] 투데이경제TV: [ 삼성전자 ] '7분전 속보' 젠슨 황 오늘 밤 한국 입국하는데 이재용 회장 잠적… 삼성전자 주주들이 모르 (57,514뷰 · 1일 전)",
           "type": "신규",
@@ -1623,7 +1623,7 @@
           ]
         },
         {
-          "id": "kn-20260605-auto-re-novid",
+          "id": "kn-20260605-auto-re-h1ff972",
           "category": "reedit",
           "title": "[자동🤖 재편집] 815머니톡: HANMI Semiconductor, a massive momentum shift is coming to d (67,972뷰 · 1일 전)",
           "type": "신규",
@@ -1921,7 +1921,7 @@
           ]
         },
         {
-          "id": "nn-20260604-auto-se-novid",
+          "id": "nn-20260604-auto-se-h922f07",
           "category": "single_explosion",
           "title": "[자동🤖] 당신이 몰랐던 이야기: '일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소' (242,651뷰 · 효율 0.2x)",
           "type": "신규",
@@ -1966,7 +1966,7 @@
           ]
         },
         {
-          "id": "nn-20260604-auto-se-novid",
+          "id": "nn-20260604-auto-se-h48aeee",
           "category": "single_explosion",
           "title": "[자동🤖] 당신이 몰랐던 이야기: '노예시장이 돌아왔다' 몇십만원에 거래되는 흑인 노예들 '리비아 흑인 노예시장' (477,498뷰 · 효율 0.4x)",
           "type": "신규",
@@ -2011,7 +2011,7 @@
           ]
         },
         {
-          "id": "nn-20260604-auto-cc-novid",
+          "id": "nn-20260604-auto-cc-hc779a2",
           "category": "cross_category",
           "title": "[자동🤖] 14F 일사에프: 나이키, 아디다스 말고 다이소? 스포츠판 흔드는 다이소 근황 / 14F (329,202뷰 · 효율 0.1x)",
           "type": "신규",
@@ -2104,7 +2104,7 @@
           ]
         },
         {
-          "id": "nn-20260604-auto-re-novid",
+          "id": "nn-20260604-auto-re-h207df9",
           "category": "reedit",
           "title": "[자동🤖 재편집] 와이스트릿 - 지식과 자산의 복리효과: Fewer People Are Earning Money Now / Monthly Lee Seon-yeop J (189,289뷰 · 0일 전)",
           "type": "신규",
@@ -2144,7 +2144,7 @@
           ]
         },
         {
-          "id": "nn-20260605-auto-se-novid",
+          "id": "nn-20260605-auto-se-hfcf825",
           "category": "single_explosion",
           "title": "[자동🤖] 당신이 몰랐던 이야기: '일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소' (263,784뷰 · 효율 0.2x)",
           "type": "신규",
@@ -2189,7 +2189,7 @@
           ]
         },
         {
-          "id": "nn-20260605-auto-se-novid",
+          "id": "nn-20260605-auto-se-h82f7c0",
           "category": "single_explosion",
           "title": "[자동🤖] 당신이 몰랐던 이야기: '배려가 권리가 됐다' 이제 말장난은 끝났다...오만과 도덕적 우월감으로 더럽혀진 'PC주의의 몰락' (423,946뷰 · 효율 0.3x)",
           "type": "신규",
@@ -2234,7 +2234,7 @@
           ]
         },
         {
-          "id": "nn-20260605-auto-cc-novid",
+          "id": "nn-20260605-auto-cc-hd2e244",
           "category": "cross_category",
           "title": "[자동🤖] 14F 일사에프: 나이키, 아디다스 말고 다이소? 스포츠판 흔드는 다이소 근황 / 14F (335,908뷰 · 효율 0.1x)",
           "type": "신규",
@@ -2653,7 +2653,7 @@
           ]
         },
         {
-          "id": "sw-20260604-auto-se-novid",
+          "id": "sw-20260604-auto-se-h5893dc",
           "category": "single_explosion",
           "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,347,698뷰 · 효율 401.8x)",
           "type": "신규",
@@ -2698,7 +2698,7 @@
           ]
         },
         {
-          "id": "sw-20260604-auto-se-novid",
+          "id": "sw-20260604-auto-se-ha22379",
           "category": "single_explosion",
           "title": "[자동🤖] EBSDocumentary (EBS 다큐): 세관이 뚫릴 줄 알고 밀수 시도했다가 이렇게 됐다. 부산으로 들어온 수상한 컨테이너 박스 뜯어봤더니│극한직업 (141,400뷰 · 효율 0.0x)",
           "type": "신규",
@@ -2743,7 +2743,7 @@
           ]
         },
         {
-          "id": "sw-20260604-auto-re-novid",
+          "id": "sw-20260604-auto-re-h480a4b",
           "category": "reedit",
           "title": "[자동🤖 재편집] 조한범TV: “줄도산 위기 직면했다” BYD가 던진 핵폭탄 중국 전기차 죄다 망했다 | 강준영 교수 2부 (56,574뷰 · 1일 전)",
           "type": "신규",
@@ -2783,7 +2783,7 @@
           ]
         },
         {
-          "id": "sw-20260604-auto-re-novid",
+          "id": "sw-20260604-auto-re-h71c4d5",
           "category": "reedit",
           "title": "[자동🤖 재편집] 환경스페셜: Endangered Korean rat snake spots the camera and charges in  (126,319뷰 · 2일 전)",
           "type": "신규",
@@ -2915,7 +2915,7 @@
           ]
         },
         {
-          "id": "sw-20260605-auto-se-novid",
+          "id": "sw-20260605-auto-se-h213bb7",
           "category": "single_explosion",
           "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,348,010뷰 · 효율 401.8x)",
           "type": "신규",
@@ -2960,7 +2960,7 @@
           ]
         },
         {
-          "id": "sw-20260605-auto-se-novid",
+          "id": "sw-20260605-auto-se-h24ef5b",
           "category": "single_explosion",
           "title": "[자동🤖] 언더스탠딩 : 세상의 모든 지식: 삼성·하이닉스 턱밑 중국 HBM 무서운 추격 (성균관대 화학공학부 권석준 교수) (187,120뷰 · 효율 0.1x)",
           "type": "신규",
@@ -3097,7 +3097,7 @@
           ]
         },
         {
-          "id": "sw-20260605-auto-re-novid",
+          "id": "sw-20260605-auto-re-h74c402",
           "category": "reedit",
           "title": "[자동🤖 재편집] EBS 지식: The moment I realized the size of the universe, my worries b (116,934뷰 · 4일 전)",
           "type": "신규",
@@ -3137,7 +3137,7 @@
           ]
         },
         {
-          "id": "sw-20260605-auto-re-novid",
+          "id": "sw-20260605-auto-re-hde7b24",
           "category": "reedit",
           "title": "[자동🤖 재편집] EBSDocumentary (EBS 다큐): 돈 아끼지 않고 최고급으로 집 지었더니 회장님 뺨치는 80대 노부부의 상위 1% 시골집 클래스✨｜상속 대신  (226,754뷰 · 1일 전)",
           "type": "신규",
@@ -3350,7 +3350,7 @@
           ]
         },
         {
-          "id": "yd-20260604-auto-se-novid",
+          "id": "yd-20260604-auto-se-hd89df9",
           "category": "single_explosion",
           "title": "[자동🤖] 보다 BODA: 지구 생태계를 쥐고 흔드는 미스터리한 비밀을 찾아 떠나는 과학 탐험 (숙면 ASMR) (90,401뷰 · 효율 0.0x)",
           "type": "신규",
@@ -3396,7 +3396,7 @@
           ]
         },
         {
-          "id": "yd-20260604-auto-se-novid",
+          "id": "yd-20260604-auto-se-h7cee51",
           "category": "single_explosion",
           "title": "[자동🤖] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열 (174,106뷰 · 효율 27.0x)",
           "type": "신규",
@@ -3533,7 +3533,7 @@
           ]
         },
         {
-          "id": "yd-20260605-auto-se-novid",
+          "id": "yd-20260605-auto-se-hdc7782",
           "category": "single_explosion",
           "title": "[자동🤖] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열 (181,538뷰 · 효율 27.4x)",
           "type": "신규",
@@ -3578,7 +3578,7 @@
           ]
         },
         {
-          "id": "yd-20260605-auto-se-novid",
+          "id": "yd-20260605-auto-se-h17137a",
           "category": "single_explosion",
           "title": "[자동🤖] 한밤의 한국사: 세종은 진짜 성군이었나ㅣ 조선왕조실록이 기록한 9가지 충격적 진실 (54,422뷰 · 효율 8.2x)",
           "type": "신규",
@@ -3623,7 +3623,7 @@
           ]
         },
         {
-          "id": "yd-20260605-auto-re-novid",
+          "id": "yd-20260605-auto-re-h6b4bd1",
           "category": "reedit",
           "title": "[자동🤖 재편집] 슈카월드: 상장 앞둔 스페이스X 실적 공개 (262,328뷰 · 1일 전)",
           "type": "신규",
@@ -3663,7 +3663,7 @@
           ]
         },
         {
-          "id": "yd-20260605-auto-re-novid",
+          "id": "yd-20260605-auto-re-h0e5229",
           "category": "reedit",
           "title": "[자동🤖 재편집] 재테크읽어주는 파일럿: SpaceX IPO Price Confirmed! Post-Listing Forecast Scenarios (123,210뷰 · 1일 전)",
           "type": "신규",
@@ -3705,6 +3705,6 @@
       ]
     }
   ],
-  "last_auto_run": "2026-06-05 10:48",
-  "last_ai_detect_run": "2026-06-05 10:48"
+  "last_auto_run": "2026-06-05 11:04",
+  "last_ai_detect_run": "2026-06-05 11:04"
 }
