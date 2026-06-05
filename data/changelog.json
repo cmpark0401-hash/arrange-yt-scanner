@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-06-05 11:29",
+  "generated_at": "2026-06-05 11:32",
   "total_commits": 80,
   "by_category": {
-    "data": 15,
+    "data": 16,
     "feat": 37,
     "docs": 7,
     "style": 4,
     "fix": 2,
     "refactor": 2,
-    "other": 13
+    "other": 12
   },
   "recent_by_date": [
     {
       "date": "2026-06-05",
-      "count": 7,
+      "count": 8,
       "commits": [
+        {
+          "hash": "8f6e83f",
+          "full_hash": "8f6e83f1fbec4de06c655fbad1adf3b20a01c2ec",
+          "ts": "2026-06-05 11:29",
+          "ts_iso": "2026-06-05T11:29:10",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-05 11:29:10",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "74c32fb",
           "full_hash": "74c32fbdad6ba21a8d33657b3e40f633c7dc1a1b",
@@ -487,7 +497,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 35,
+      "count": 34,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +838,21 @@
           "subject": "nav 알림 배지: 🎯 오늘의 주제 / 📰 뉴스 모니터링에 카운트 빨간 펄스 배지 + localStorage 최종방문 추적 (회색 dim 전환)",
           "category": "style",
           "category_label": "🎨 디자인"
-        },
-        {
-          "hash": "63202d9",
-          "full_hash": "63202d9de0b347a0a32eaeaa731df8b63296dac3",
-          "ts": "2026-06-01 10:03",
-          "ts_iso": "2026-06-01T10:03:44",
-          "author": "cmpark0401-hash",
-          "subject": "nav-primary: outline 스타일 (연한 보라 + 굵은 테두리) — 활성 탭(진한 채우기)과 시각 구분",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "8f6e83f",
+      "full_hash": "8f6e83f1fbec4de06c655fbad1adf3b20a01c2ec",
+      "ts": "2026-06-05 11:29",
+      "ts_iso": "2026-06-05T11:29:10",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-05 11:29:10",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "74c32fb",
       "full_hash": "74c32fbdad6ba21a8d33657b3e40f633c7dc1a1b",
@@ -1632,16 +1642,6 @@
       "subject": "nav 알림 배지: 🎯 오늘의 주제 / 📰 뉴스 모니터링에 카운트 빨간 펄스 배지 + localStorage 최종방문 추적 (회색 dim 전환)",
       "category": "style",
       "category_label": "🎨 디자인"
-    },
-    {
-      "hash": "63202d9",
-      "full_hash": "63202d9de0b347a0a32eaeaa731df8b63296dac3",
-      "ts": "2026-06-01 10:03",
-      "ts_iso": "2026-06-01T10:03:44",
-      "author": "cmpark0401-hash",
-      "subject": "nav-primary: outline 스타일 (연한 보라 + 굵은 테두리) — 활성 탭(진한 채우기)과 시각 구분",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }

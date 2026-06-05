@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05 11:29",
+  "generated_at": "2026-06-05 11:32",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -78,9 +78,9 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-05 11:29",
-      "last_auto_run": "2026-06-05 11:29",
-      "detail": "마지막 자동 추천: 2026-06-05 11:29"
+      "updated_at": "2026-06-05 11:32",
+      "last_auto_run": "2026-06-05 11:32",
+      "detail": "마지막 자동 추천: 2026-06-05 11:32"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -88,7 +88,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-05 11:29"
+      "updated_at": "2026-06-05 11:32"
     }
   ]
 }
