@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-05 12:12",
+  "generated_at": "2026-06-05 17:10",
   "total_commits": 80,
   "by_category": {
-    "data": 18,
+    "data": 19,
     "feat": 37,
-    "docs": 7,
+    "docs": 6,
     "style": 3,
     "fix": 2,
     "refactor": 2,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-05",
-      "count": 10,
+      "count": 11,
       "commits": [
+        {
+          "hash": "e42cef4",
+          "full_hash": "e42cef47715ee82be48eac1c917620f1f4af3304",
+          "ts": "2026-06-05 12:12",
+          "ts_iso": "2026-06-05T12:12:57",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-05 12:12:57",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "7079626",
           "full_hash": "7079626da1a0021b38776954b57d5a0338f91499",
@@ -517,7 +527,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 32,
+      "count": 31,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +838,21 @@
           "subject": "JP 헤더 동일 적용 + jp/manual.html 복사 + 가이드 우측 칩 작동",
           "category": "docs",
           "category_label": "📖 문서"
-        },
-        {
-          "hash": "ab4fa96",
-          "full_hash": "ab4fa965deba7a2682896ac044a9bcc77cd860f2",
-          "ts": "2026-06-01 10:20",
-          "ts_iso": "2026-06-01T10:20:45",
-          "author": "cmpark0401-hash",
-          "subject": "헤더 재배치: 🏠 대시보드 홈 탭 삭제(로고가 대체) + 가이드·일별 JP 옆 secondary 칩으로 이동 + JP 흰 배경",
-          "category": "docs",
-          "category_label": "📖 문서"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "e42cef4",
+      "full_hash": "e42cef47715ee82be48eac1c917620f1f4af3304",
+      "ts": "2026-06-05 12:12",
+      "ts_iso": "2026-06-05T12:12:57",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-05 12:12:57",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "7079626",
       "full_hash": "7079626da1a0021b38776954b57d5a0338f91499",
@@ -1630,16 +1640,6 @@
       "ts_iso": "2026-06-01T10:25:23",
       "author": "cmpark0401-hash",
       "subject": "JP 헤더 동일 적용 + jp/manual.html 복사 + 가이드 우측 칩 작동",
-      "category": "docs",
-      "category_label": "📖 문서"
-    },
-    {
-      "hash": "ab4fa96",
-      "full_hash": "ab4fa965deba7a2682896ac044a9bcc77cd860f2",
-      "ts": "2026-06-01 10:20",
-      "ts_iso": "2026-06-01T10:20:45",
-      "author": "cmpark0401-hash",
-      "subject": "헤더 재배치: 🏠 대시보드 홈 탭 삭제(로고가 대체) + 가이드·일별 JP 옆 secondary 칩으로 이동 + JP 흰 배경",
       "category": "docs",
       "category_label": "📖 문서"
     }

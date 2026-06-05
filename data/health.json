@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05 12:12",
+  "generated_at": "2026-06-05 17:10",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "7시간 전",
       "updated_at": "2026-06-05 10:07",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-05.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "7시간 전",
       "updated_at": "2026-06-05 09:49",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-05.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "7시간 전",
       "updated_at": "2026-06-05 09:49",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-05.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "6시간 전",
       "updated_at": "2026-06-05 10:24",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-05.json",
       "severity": "warning"
@@ -57,7 +57,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "7시간 전",
       "updated_at": "2026-06-05 09:51",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-05.json",
       "severity": "info"
@@ -67,7 +67,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "6시간 전",
       "updated_at": "2026-06-05 10:22",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-05.json",
       "severity": "info"
@@ -77,7 +77,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "0분 전",
+      "ago": "4시간 전",
       "updated_at": "2026-06-05 12:12",
       "last_auto_run": "2026-06-05 12:12",
       "detail": "마지막 자동 추천: 2026-06-05 12:12"
@@ -88,7 +88,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-05 12:12"
+      "updated_at": "2026-06-05 17:10"
     }
   ]
 }

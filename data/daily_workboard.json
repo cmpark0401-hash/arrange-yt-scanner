@@ -2433,11 +2433,11 @@
       "name": "과만세",
       "icon": "🔬",
       "tone": "과학(주)·건강(부) 시니어",
-      "open_status": "not_opened",
+      "open_status": "opened",
       "series_ip": {
         "main": "AI도 못 푼 우리 몸/우주의 한 가지",
         "essence": "AI 시대 메타 모순 (AI가 못 만듦)",
-        "ep_count": 0
+        "ep_count": 1
       },
       "topics": [
         {
@@ -2559,7 +2559,7 @@
             "안과 의사들도 빠뜨렸던, 시력이 0.5에서 1.0이 된 단 한 가지",
             "176만이 본 KBS의 2주, 102만이 본 EBS의 한 시간 — 누구도 말 안 한 한 가지"
           ],
-          "status": "blocked",
+          "status": "published",
           "checklist": {
             "channel_setup": false,
             "collect": true,
@@ -2592,7 +2592,11 @@
               "note": "사용자 자료 추가 5편 검토 완료 → KBS + EBS#1 베스트 조합 확정 + 보너스 4편 fact-check 풀로 보존"
             }
           ],
-          "notes": "📌 채널 개설 후 최우선순위 1번 영상. checklist.collect=true (자료 6편 확보 완료). 다음: STRATEGY 단계 (Hook 3후보 + 챕터 구성)."
+          "notes": "📌 채널 개설 후 최우선순위 1번 영상. checklist.collect=true (자료 6편 확보 완료). 다음: STRATEGY 단계 (Hook 3후보 + 챕터 구성).",
+          "publication_date": "2026-06-05",
+          "publication_url": null,
+          "production_project": "20260605_02_vision-restoration",
+          "production_note": "어머님 신문 사연 + 5대 통념 부수기 합본 (C+D+A+E+B). 30분 6파트, ultracode 풀파이프라인 ~53 에이전트."
         },
         {
           "id": "sw-20260603-sr",

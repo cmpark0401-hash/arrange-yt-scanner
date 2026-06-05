@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-06-05 12:12",
+  "checked_at": "2026-06-05 17:10",
   "overall": "warning",
   "overall_icon": "🟡",
-  "overall_label": "경고 2건",
+  "overall_label": "경고 3건",
   "summary": {
-    "ok": 6,
-    "warning": 2,
+    "ok": 5,
+    "warning": 3,
     "error": 0
   },
   "checks": [
@@ -46,8 +46,8 @@
     },
     {
       "name": "published_urls",
-      "status": "ok",
-      "msg": "published 토픽 모두 정상 (또는 없음)"
+      "status": "warning",
+      "msg": "published 토픽 1개의 video_url 누락/잘못됨: ['sw-20260604-health']"
     }
   ]
 }
