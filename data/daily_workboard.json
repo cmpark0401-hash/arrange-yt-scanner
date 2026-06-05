@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-05 11:04",
+  "updated_at": "2026-06-05 11:14",
   "today": "2026-06-05",
   "categories_def": {
     "single_explosion": {
@@ -86,6 +86,153 @@
         ]
       },
       "topics": [
+        {
+          "id": "kn-20260605-pr-idol",
+          "category": "series",
+          "title": "[가격해부] 🥈 SM·JYP·HYBE 아이돌 수익 구조 — 멤버는 얼마, 회사는 얼마? (본능 9.0+)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "[가격해부] 시리즈 IP",
+            "아이돌 기획사 수익",
+            "통념 반전",
+            "사용자 발굴"
+          ],
+          "merge_angle": "SM·JYP·HYBE·YG 4대 기획사 + 신생 기획사 차이. 멤버 분배율, 정산 시점, 콘서트·앨범·MD·광고별 수익 구조 폭로",
+          "sources_a": {
+            "channel": "(기획사 공시)",
+            "title": "TBD — SM·JYP·HYBE 사업보고서",
+            "note": "공시 자료 + 멤버 정산 인터뷰"
+          },
+          "sources_b": {
+            "channel": "(분배율 자료)",
+            "title": "TBD",
+            "note": "표준 분배율·이중 수익·세금 공제 후 실제 멤버 수령액"
+          },
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "events": [
+            {
+              "ts": "2026-06-05 11:14",
+              "type": "proposed",
+              "note": "사용자 발굴: 연예계 수익 구조 시리즈 2호 — 아이돌 기획사"
+            }
+          ],
+          "notes": "🥈 [가격해부] 연예계 수익 결 2호. 시청 대상 시니어+자녀 세대 동시."
+        },
+        {
+          "id": "kn-20260605-pr-trot",
+          "category": "series",
+          "title": "[가격해부] 🥇 미스트롯 가수 수익 구조 — 등수별·아마추어·왜 개그맨·배우들이 트로트로? (본능 점수 9.0+)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "[가격해부] 시리즈 IP",
+            "사용자 직접 발굴",
+            "트로트·연예계 수익",
+            "시니어 본능 직격",
+            "통념 반전"
+          ],
+          "merge_angle": "미스트롯 결승 등수별(1~7위) 수익 + 아마추어 가수 시절 수익 + 개그맨·배우들이 왜 트로트 지원? 행사·CF·앨범 수익 구조 전부 분해",
+          "sources_a": {
+            "channel": "(연예계 수익 자료)",
+            "title": "TBD — 미스트롯 우승·준우승·예선 등수별 행사료·CF·앨범",
+            "note": "TV조선·소속사 공개 자료"
+          },
+          "sources_b": {
+            "channel": "(개그맨·배우 트로트 진출)",
+            "title": "TBD",
+            "note": "박세미·홍자·임영웅 등 진출 이유·수익 변화"
+          },
+          "series_expansion": [
+            "EP1 (이 영상): 미스트롯 등수별 + 개그맨·배우 트로트 진출",
+            "EP2: 아이돌 기획사 멤버 분배 구조 (다음 토픽)",
+            "EP3: 드라마 주연·조연·단역 출연료 차이",
+            "EP4: 야구·축구·골프 1~3군 연봉 격차",
+            "EP5: 유튜버·MCN·광고 수익 구조"
+          ],
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "events": [
+            {
+              "ts": "2026-06-05 11:14",
+              "type": "proposed",
+              "note": "사용자 발굴: 연예계 수익 구조 시리즈 1호 — 트로트"
+            }
+          ],
+          "notes": "🥇 [가격해부] 연예계 수익 결 1호. 시니어 트로트 관심 + 통념 반전 (개그맨·배우 진출 이유). 5편 시리즈 풀 명시."
+        },
+        {
+          "id": "kn-20260605-iv-frozen",
+          "category": "series",
+          "title": "[이득비교] 🥇 냉동식품 (족발·피자·만두) vs 음식점 vs 배달 — 시니어가 진짜 이득 보는 곳 (본능 점수 9.0+)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "[이득비교] 시리즈 IP",
+            "사용자 직접 발굴",
+            "냉동식품 가성비",
+            "한국인 본능 직격",
+            "음식·매주 반복"
+          ],
+          "merge_angle": "족발·피자·만두·요리 5종 → 냉동식품 vs 음식점 vs 배달 가격·맛·양·시간·1인분 분량 비교. 시니어 1인 가구 매주 의사결정 도구",
+          "sources_a": {
+            "channel": "(가격 비교 자료)",
+            "title": "TBD — 5종 냉동·음식점·배달 가격 자료",
+            "note": "CJ·풀무원·동원 등 냉동식품 vs 동네 음식점 vs 배달앱 같은 메뉴 가격"
+          },
+          "sources_b": {
+            "channel": "(맛·양·1인분 비교)",
+            "title": "TBD",
+            "note": "1인분 분량·조리시간·총 비용(전기+가스 포함) 비교"
+          },
+          "title_candidates": [
+            "냉동식품이 음식점보다 이득? 시니어가 모르고 손해 본 진실",
+            "족발 만 원? 냉동·음식점·배달 같은 메뉴 5종 진짜 비용 비교",
+            "냉동식품 vs 배달 vs 음식점 — 시니어 1인 가구가 매주 골라야 하는 한 가지"
+          ],
+          "series_expansion": [
+            "EP1 (이 영상): 냉동 vs 음식점 vs 배달 5종 종합",
+            "EP2: 명절 음식 — 냉동 차례상 vs 직접 만들기 vs 마트 완제품",
+            "EP3: 시니어 1인 가구 1주일 식비 — 냉동 위주 vs 직접 조리",
+            "EP4: 배달앱 할인의 진짜 비용 — 시니어 구독 본전 뽑는 양",
+            "EP5: 한국 냉동식품 1위 5개 브랜드 — 시니어 입맛에 맞는 한 가지"
+          ],
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "events": [
+            {
+              "ts": "2026-06-05 11:11",
+              "type": "proposed",
+              "note": "사용자 직접 발굴: 냉동식품 vs 음식점 vs 배달 — 한국인 가성비 + 시니어 식비 직격 (예상 본능 9.0+)"
+            }
+          ],
+          "notes": "🥇 [이득비교] 시리즈 검증 4순위 (식료품·약·생활용품 다음). 사용자 직접 발굴. 시리즈 5편 확장 풀 명시. 시각화: 5종 × 3채널 = 15셀 가격+맛+양 표 의무."
+        },
         {
           "id": "kn-20260604-iv1",
           "category": "series",

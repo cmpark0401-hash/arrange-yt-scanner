@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-06-05 11:17",
+  "overall": "warning",
+  "overall_icon": "🟡",
+  "overall_label": "경고 3건",
+  "summary": {
+    "ok": 5,
+    "warning": 3,
+    "error": 0
+  },
+  "checks": [
+    {
+      "name": "today_chip_match",
+      "status": "warning",
+      "msg": "chip badge 못 찾음"
+    },
+    {
+      "name": "topic_id_unique",
+      "status": "ok",
+      "msg": "총 84개 토픽 · 고유 ID 100%"
+    },
+    {
+      "name": "html_element_ids",
+      "status": "ok",
+      "msg": "textarea ID 68개 · 중복 0"
+    },
+    {
+      "name": "required_files",
+      "status": "ok",
+      "msg": "필수 파일 6개 모두 존재"
+    },
+    {
+      "name": "health_summary",
+      "status": "warning",
+      "msg": "dead 1 · stale 0 · fresh 8"
+    },
+    {
+      "name": "build_freshness",
+      "status": "ok",
+      "msg": "빌드 0분 전"
+    },
+    {
+      "name": "internal_links",
+      "status": "warning",
+      "msg": "깨진 링크 1: ['index.html → updates.html']"
+    },
+    {
+      "name": "published_urls",
+      "status": "ok",
+      "msg": "published 토픽 모두 정상 (또는 없음)"
+    }
+  ]
+}
