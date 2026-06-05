@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-05 21:53",
+  "generated_at": "2026-06-05 23:56",
   "total_commits": 80,
   "by_category": {
+    "data": 20,
     "other": 12,
-    "data": 19,
-    "feat": 37,
+    "feat": 36,
     "docs": 5,
     "style": 3,
     "fix": 2,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-05",
-      "count": 12,
+      "count": 13,
       "commits": [
+        {
+          "hash": "b165e4f",
+          "full_hash": "b165e4fa3e8dedcb75418b96fa13e35d33a21306",
+          "ts": "2026-06-05 21:53",
+          "ts_iso": "2026-06-05T21:53:59",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-05 21:53:59",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "9fd2751",
           "full_hash": "9fd275197b643b6810fc8983e964998f6ec1f8a7",
@@ -537,7 +547,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 30,
+      "count": 29,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +838,21 @@
           "subject": "fix: candidates_data 로드 위치를 SHELL 렌더 이전으로 이동",
           "category": "fix",
           "category_label": "🐛 오류 수정"
-        },
-        {
-          "hash": "4ab68c2",
-          "full_hash": "4ab68c26eaa0d41d35122a9b9d8f41d176cc5593",
-          "ts": "2026-06-01 10:36",
-          "ts_iso": "2026-06-01T10:36:02",
-          "author": "cmpark0401-hash",
-          "subject": "신규 채널 후보 풀세트: 후보 페이지 + [+추적]·[✗거부] 버튼 → Issue 자동 + monitor extra 통합 + poller add-channel 처리",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "b165e4f",
+      "full_hash": "b165e4fa3e8dedcb75418b96fa13e35d33a21306",
+      "ts": "2026-06-05 21:53",
+      "ts_iso": "2026-06-05T21:53:59",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-05 21:53:59",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "9fd2751",
       "full_hash": "9fd275197b643b6810fc8983e964998f6ec1f8a7",
@@ -1632,16 +1642,6 @@
       "subject": "fix: candidates_data 로드 위치를 SHELL 렌더 이전으로 이동",
       "category": "fix",
       "category_label": "🐛 오류 수정"
-    },
-    {
-      "hash": "4ab68c2",
-      "full_hash": "4ab68c26eaa0d41d35122a9b9d8f41d176cc5593",
-      "ts": "2026-06-01 10:36",
-      "ts_iso": "2026-06-01T10:36:02",
-      "author": "cmpark0401-hash",
-      "subject": "신규 채널 후보 풀세트: 후보 페이지 + [+추적]·[✗거부] 버튼 → Issue 자동 + monitor extra 통합 + poller add-channel 처리",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
