@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05 11:32",
+  "generated_at": "2026-06-05 11:35",
   "total_commits": 80,
   "by_category": {
-    "data": 16,
+    "data": 17,
     "feat": 37,
     "docs": 7,
-    "style": 4,
+    "style": 3,
     "fix": 2,
     "refactor": 2,
     "other": 12
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-05",
-      "count": 8,
+      "count": 9,
       "commits": [
+        {
+          "hash": "f3cb161",
+          "full_hash": "f3cb161f42c2d905e28707276d336fdfa61d7bb7",
+          "ts": "2026-06-05 11:32",
+          "ts_iso": "2026-06-05T11:32:38",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-05 11:32:38",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "8f6e83f",
           "full_hash": "8f6e83f1fbec4de06c655fbad1adf3b20a01c2ec",
@@ -497,7 +507,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 34,
+      "count": 33,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +838,21 @@
           "subject": "로고: 홈 링크 + 새로고침 (location.hash 비우고 location.reload) + hover 효과",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "be6f16e",
-          "full_hash": "be6f16e7f8f3dc5dfbcaf57f9e8ae554ae08e38f",
-          "ts": "2026-06-01 10:09",
-          "ts_iso": "2026-06-01T10:09:45",
-          "author": "cmpark0401-hash",
-          "subject": "nav 알림 배지: 🎯 오늘의 주제 / 📰 뉴스 모니터링에 카운트 빨간 펄스 배지 + localStorage 최종방문 추적 (회색 dim 전환)",
-          "category": "style",
-          "category_label": "🎨 디자인"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "f3cb161",
+      "full_hash": "f3cb161f42c2d905e28707276d336fdfa61d7bb7",
+      "ts": "2026-06-05 11:32",
+      "ts_iso": "2026-06-05T11:32:38",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-05 11:32:38",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "8f6e83f",
       "full_hash": "8f6e83f1fbec4de06c655fbad1adf3b20a01c2ec",
@@ -1632,16 +1642,6 @@
       "subject": "로고: 홈 링크 + 새로고침 (location.hash 비우고 location.reload) + hover 효과",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "be6f16e",
-      "full_hash": "be6f16e7f8f3dc5dfbcaf57f9e8ae554ae08e38f",
-      "ts": "2026-06-01 10:09",
-      "ts_iso": "2026-06-01T10:09:45",
-      "author": "cmpark0401-hash",
-      "subject": "nav 알림 배지: 🎯 오늘의 주제 / 📰 뉴스 모니터링에 카운트 빨간 펄스 배지 + localStorage 최종방문 추적 (회색 dim 전환)",
-      "category": "style",
-      "category_label": "🎨 디자인"
     }
   ]
 }
