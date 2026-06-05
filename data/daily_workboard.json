@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-04 23:48",
+  "updated_at": "2026-06-05 09:31",
   "today": "2026-06-04",
   "categories_def": {
     "single_explosion": {
@@ -1216,6 +1216,371 @@
               "note": "AI 채널 폭발 자동 검출 (score=2325)"
             }
           ]
+        },
+        {
+          "id": "kn-20260605-auto-se-novid",
+          "category": "single_explosion",
+          "title": "[자동🤖] 경제대부: &quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히 (184,127뷰 · 효율 62.6x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 62.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "경제대부",
+            "title": "&quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히 사라진 진짜 이유",
+            "efficiency": 62.62823129251701,
+            "views": 184127,
+            "velocity": 0,
+            "url": "",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=62812)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260605-auto-se-novid",
+          "category": "single_explosion",
+          "title": "[자동🤖] 시사저널TV: 한동훈, 초선 배지 다나? &quot;최적의 모범 답안 보여줬으니...&quot; (350,990뷰 · 효율 0.5x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.5x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "시사저널TV",
+            "title": "한동훈, 초선 배지 다나? &quot;최적의 모범 답안 보여줬으니...&quot;",
+            "efficiency": 0.45881045751633986,
+            "views": 350990,
+            "velocity": 7366,
+            "url": "",
+            "categories": [
+              "시사",
+              "정치"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=58176)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260605-auto-cc-novid",
+          "category": "cross_category",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,348,010뷰 · 효율 401.8x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 401.8x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 401.7727848101266,
+            "views": 6348010,
+            "velocity": 23,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408144)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260605-auto-cc-novid",
+          "category": "cross_category",
+          "title": "[자동🤖] 언더스탠딩 : 세상의 모든 지식: 삼성·하이닉스 턱밑 중국 HBM 무서운 추격 (성균관대 화학공학부 권석준 교수) (187,120뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "언더스탠딩 : 세상의 모든 지식",
+            "title": "삼성·하이닉스 턱밑 중국 HBM 무서운 추격 (성균관대 화학공학부 권석준 교수)",
+            "efficiency": 0.1386074074074074,
+            "views": 187120,
+            "velocity": 8448,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=58774)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260605-ai-시사-V2n0uI",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: 서로가 '승점자판기'?! 월드컵 A조 분석 기사 모아봤습니다. ｜크랩 (294,876뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.3x",
+            "5일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "서로가 '승점자판기'?! 월드컵 A조 분석 기사 모아봤습니다. ｜크랩",
+            "efficiency": 0.2919564356435644,
+            "views": 294876,
+            "velocity": 740,
+            "url": "https://www.youtube.com/watch?v=V2n0uI6kkBk",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=5827)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260605-ai-시사-FqO6jp",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: 치열했던 북구갑 한동훈 VS 하정우 TV 토론｜크랩 (103,990뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.1x",
+            "6일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "치열했던 북구갑 한동훈 VS 하정우 TV 토론｜크랩",
+            "efficiency": 0.10296039603960395,
+            "views": 103990,
+            "velocity": 245,
+            "url": "https://www.youtube.com/watch?v=FqO6jp3h5dI",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=4452)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260605-ai-경제-BC08qm",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 원가 공개 경제학: [원가공개] 6.3 지방선거 구청장 당선, 실제로 얼마 버나, 임기 4년 수익 구조 전부 공개 (175,114뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 12.7x",
+            "4일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "원가 공개 경제학",
+            "title": "[원가공개] 6.3 지방선거 구청장 당선, 실제로 얼마 버나, 임기 4년 수익 구조 전부 공개",
+            "efficiency": 12.689420289855072,
+            "views": 175114,
+            "velocity": 2227,
+            "url": "https://www.youtube.com/watch?v=BC08qmkUUNg",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=20092)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260605-ai-경제-Nc5PCu",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 원가 공개 경제학: [원가공개] 선거비용 원가공개 — 피켓 아줌마 일당부터 출구조사 비용까지 다 뜯어봤습니다 (116,832뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 8.5x",
+            "3일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "원가 공개 경제학",
+            "title": "[원가공개] 선거비용 원가공개 — 피켓 아줌마 일당부터 출구조사 비용까지 다 뜯어봤습니다",
+            "efficiency": 8.466086956521739,
+            "views": 116832,
+            "velocity": 2249,
+            "url": "https://www.youtube.com/watch?v=Nc5PCuSf7Co",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=16332)"
+            }
+          ]
         }
       ]
     },
@@ -1254,14 +1619,14 @@
             "title": "Hautvillers Abbey 회계장부 + Dom Grossard 1821 서신 + Bertin du Rocheret 1718 서신",
             "note": "본문 자료 5종, 후대 윤색('별을 마시는 것 같아') 제거 가이드 명시"
           },
-          "status": "pending",
+          "status": "ready_to_publish",
           "checklist": {
             "collect": true,
             "analyze": true,
-            "strategy": false,
-            "draft": false,
-            "review_finalize": false,
-            "self_diagnosis": false,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
             "published": false
           },
           "events": [
@@ -1274,9 +1639,14 @@
               "ts": "2026-06-04 11:10",
               "type": "branch_start",
               "note": "잘듣네 낮 트랙 분기 시작 — 돔 페리뇽 1호 진행 (KBS 시력은 과만세로 이동)"
+            },
+            {
+              "at": "2026-06-05 21:30",
+              "type": "matched_existing_project",
+              "note": "반 고흐 발행 후 다음 낮 슬롯 매칭. 실제 대본은 5/23에 완성된 20260523_04 프로젝트. 영상화만 진행하면 내일 점심(11:30~12:30) 발행 가능."
             }
           ],
-          "notes": "톤: [오늘 한 줄 시리즈] 12~15분, 11:30~12:30 발행, 크림 배경 + 차잎 그린. STRATEGY/Phase3에서 Hook 3후보 의무 (시안 A/B + C 추가). 자료: channels/nn-flix/projects/_ideas/next-daytime-dom-perignon.md + config/_internal/daytime-track-plan.md"
+          "notes": "톤: [오늘 한 줄 시리즈] 12~15분, 11:30~12:30 발행, 크림 배경 + 차잎 그린. STRATEGY/Phase3에서 Hook 3후보 의무 (시안 A/B + C 추가). 자료: channels/nn-flix/projects/_ideas/next-daytime-dom-perignon.md + config/_internal/daytime-track-plan.md / 실제 산출물: channels/nn-flix/projects/20260523_04_dom-perignon-real-47years (5/23 완성, 16분, 7,796자, sources.md + youtube.md + thumbnails/prompts.json 모두 준비됨)"
         },
         {
           "id": "nn-20260603-sr",
@@ -1690,6 +2060,142 @@
               "ts": "2026-06-04 23:25",
               "type": "auto_proposed",
               "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260605-auto-se-novid",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소' (263,784뷰 · 효율 0.2x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소'",
+            "efficiency": 0.2013618320610687,
+            "views": 263784,
+            "velocity": 1615,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=2080)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260605-auto-se-novid",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '배려가 권리가 됐다' 이제 말장난은 끝났다...오만과 도덕적 우월감으로 더럽혀진 'PC주의의 몰락' (423,946뷰 · 효율 0.3x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'배려가 권리가 됐다' 이제 말장난은 끝났다...오만과 도덕적 우월감으로 더럽혀진 'PC주의의 몰락'",
+            "efficiency": 0.32362290076335876,
+            "views": 423946,
+            "velocity": 218,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=966)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260605-auto-cc-novid",
+          "category": "cross_category",
+          "title": "[자동🤖] 14F 일사에프: 나이키, 아디다스 말고 다이소? 스포츠판 흔드는 다이소 근황 / 14F (335,908뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "14F 일사에프",
+            "title": "나이키, 아디다스 말고 다이소? 스포츠판 흔드는 다이소 근황 / 14F",
+            "efficiency": 0.14113781512605042,
+            "views": 335908,
+            "velocity": 512,
+            "url": "",
+            "categories": [
+              "시사",
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=989)"
             }
           ]
         }
@@ -2327,6 +2833,188 @@
               "note": "AI 채널 폭발 자동 검출 (score=10204)"
             }
           ]
+        },
+        {
+          "id": "sw-20260605-auto-se-novid",
+          "category": "single_explosion",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,348,010뷰 · 효율 401.8x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 401.8x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 401.7727848101266,
+            "views": 6348010,
+            "velocity": 23,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408144)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260605-auto-se-novid",
+          "category": "single_explosion",
+          "title": "[자동🤖] 언더스탠딩 : 세상의 모든 지식: 삼성·하이닉스 턱밑 중국 HBM 무서운 추격 (성균관대 화학공학부 권석준 교수) (187,120뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "언더스탠딩 : 세상의 모든 지식",
+            "title": "삼성·하이닉스 턱밑 중국 HBM 무서운 추격 (성균관대 화학공학부 권석준 교수)",
+            "efficiency": 0.1386074074074074,
+            "views": 187120,
+            "velocity": 8448,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=58774)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260605-ai-과학-SM4gtm",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 방구석 과학: 식사하다가 영국 경찰에게 이유없이 단속 당한 한국인 (351,934뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 1.9x",
+            "3일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "식사하다가 영국 경찰에게 이유없이 단속 당한 한국인",
+            "efficiency": 1.9337032967032968,
+            "views": 351934,
+            "velocity": 5734,
+            "url": "https://www.youtube.com/watch?v=SM4gtmavyYs",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=13520)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260605-ai-과학-MH4cK2",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 세모과학: 과학자들이 아직도 보이저 1호와 통신이 가능한 이유 (261,181뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 1.7x",
+            "13일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "세모과학",
+            "title": "과학자들이 아직도 보이저 1호와 통신이 가능한 이유",
+            "efficiency": 1.6742371794871795,
+            "views": 261181,
+            "velocity": 16,
+            "url": "https://www.youtube.com/watch?v=MH4cK20eUzI",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=2451)"
+            }
+          ]
         }
       ]
     },
@@ -2683,10 +3371,100 @@
               "note": "AI 채널 폭발 자동 검출 (score=1096)"
             }
           ]
+        },
+        {
+          "id": "yd-20260605-auto-se-novid",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열 (181,538뷰 · 효율 27.4x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 27.4x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열",
+            "efficiency": 27.422658610271903,
+            "views": 181538,
+            "velocity": 568,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=28172)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260605-auto-se-novid",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 세종은 진짜 성군이었나ㅣ 조선왕조실록이 기록한 9가지 충격적 진실 (54,422뷰 · 효율 8.2x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 8.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "세종은 진짜 성군이었나ㅣ 조선왕조실록이 기록한 9가지 충격적 진실",
+            "efficiency": 8.22084592145015,
+            "views": 54422,
+            "velocity": 85,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-05 09:31",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=8360)"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-04 23:48",
-  "last_ai_detect_run": "2026-06-04 23:48"
+  "last_auto_run": "2026-06-05 09:31",
+  "last_ai_detect_run": "2026-06-05 09:31"
 }
