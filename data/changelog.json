@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-06-05 11:35",
+  "generated_at": "2026-06-05 12:12",
   "total_commits": 80,
   "by_category": {
-    "data": 17,
+    "data": 18,
     "feat": 37,
     "docs": 7,
     "style": 3,
     "fix": 2,
     "refactor": 2,
-    "other": 12
+    "other": 11
   },
   "recent_by_date": [
     {
       "date": "2026-06-05",
-      "count": 9,
+      "count": 10,
       "commits": [
+        {
+          "hash": "7079626",
+          "full_hash": "7079626da1a0021b38776954b57d5a0338f91499",
+          "ts": "2026-06-05 11:35",
+          "ts_iso": "2026-06-05T11:35:39",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-05 11:35:39",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "f3cb161",
           "full_hash": "f3cb161f42c2d905e28707276d336fdfa61d7bb7",
@@ -507,7 +517,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 33,
+      "count": 32,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +838,21 @@
           "subject": "헤더 재배치: 🏠 대시보드 홈 탭 삭제(로고가 대체) + 가이드·일별 JP 옆 secondary 칩으로 이동 + JP 흰 배경",
           "category": "docs",
           "category_label": "📖 문서"
-        },
-        {
-          "hash": "144afe7",
-          "full_hash": "144afe76da6eb92784149fd18c56b16d299f01c8",
-          "ts": "2026-06-01 10:12",
-          "ts_iso": "2026-06-01T10:12:24",
-          "author": "cmpark0401-hash",
-          "subject": "로고: 홈 링크 + 새로고침 (location.hash 비우고 location.reload) + hover 효과",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "7079626",
+      "full_hash": "7079626da1a0021b38776954b57d5a0338f91499",
+      "ts": "2026-06-05 11:35",
+      "ts_iso": "2026-06-05T11:35:39",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-05 11:35:39",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "f3cb161",
       "full_hash": "f3cb161f42c2d905e28707276d336fdfa61d7bb7",
@@ -1632,16 +1642,6 @@
       "subject": "헤더 재배치: 🏠 대시보드 홈 탭 삭제(로고가 대체) + 가이드·일별 JP 옆 secondary 칩으로 이동 + JP 흰 배경",
       "category": "docs",
       "category_label": "📖 문서"
-    },
-    {
-      "hash": "144afe7",
-      "full_hash": "144afe76da6eb92784149fd18c56b16d299f01c8",
-      "ts": "2026-06-01 10:12",
-      "ts_iso": "2026-06-01T10:12:24",
-      "author": "cmpark0401-hash",
-      "subject": "로고: 홈 링크 + 새로고침 (location.hash 비우고 location.reload) + hover 효과",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }
