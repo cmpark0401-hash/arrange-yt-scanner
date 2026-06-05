@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-05 11:17",
+  "generated_at": "2026-06-05 11:18",
   "total_commits": 80,
   "by_category": {
+    "feat": 38,
     "data": 14,
-    "docs": 8,
-    "feat": 37,
+    "docs": 7,
     "style": 4,
     "fix": 2,
     "refactor": 2,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-05",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "2add95b",
+          "full_hash": "2add95b438c0b8acc3f656e9ec529d99962a5813",
+          "ts": "2026-06-05 11:17",
+          "ts_iso": "2026-06-05T11:17:13",
+          "author": "cmpark0401-hash",
+          "subject": "feat: 업데이트·오류 관리 시스템 (D 풀세트) + 4토픽 추가",
+          "category": "feat",
+          "category_label": "✨ 신규 기능"
+        },
         {
           "hash": "cdaf4e1",
           "full_hash": "cdaf4e12e17ae7cf185a1dba0133cd7f7049a99d",
@@ -467,7 +477,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 37,
+      "count": 36,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +838,21 @@
           "subject": "🤖 가이드: 클코 자동화 가이드 섹션 추가 (시나리오 2개 도식 + 명령어 패턴 + 한계 + 접이식)",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "2c96986",
-          "full_hash": "2c96986ca26d091ba528dfaaef31fe8595163a7d",
-          "ts": "2026-06-01 00:08",
-          "ts_iso": "2026-06-01T00:08:15",
-          "author": "cmpark0401-hash",
-          "subject": "📖 가이드 시각화: 사이트 UI 미니어처 + 메트릭 인포카드 + 시간 룰러 + 단조도 게이지 + 흐름 다이어그램 + Good/Bad 비교박스 + FAQ 아코디언",
-          "category": "docs",
-          "category_label": "📖 문서"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "2add95b",
+      "full_hash": "2add95b438c0b8acc3f656e9ec529d99962a5813",
+      "ts": "2026-06-05 11:17",
+      "ts_iso": "2026-06-05T11:17:13",
+      "author": "cmpark0401-hash",
+      "subject": "feat: 업데이트·오류 관리 시스템 (D 풀세트) + 4토픽 추가",
+      "category": "feat",
+      "category_label": "✨ 신규 기능"
+    },
     {
       "hash": "cdaf4e1",
       "full_hash": "cdaf4e12e17ae7cf185a1dba0133cd7f7049a99d",
@@ -1632,16 +1642,6 @@
       "subject": "🤖 가이드: 클코 자동화 가이드 섹션 추가 (시나리오 2개 도식 + 명령어 패턴 + 한계 + 접이식)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "2c96986",
-      "full_hash": "2c96986ca26d091ba528dfaaef31fe8595163a7d",
-      "ts": "2026-06-01 00:08",
-      "ts_iso": "2026-06-01T00:08:15",
-      "author": "cmpark0401-hash",
-      "subject": "📖 가이드 시각화: 사이트 UI 미니어처 + 메트릭 인포카드 + 시간 룰러 + 단조도 게이지 + 흐름 다이어그램 + Good/Bad 비교박스 + FAQ 아코디언",
-      "category": "docs",
-      "category_label": "📖 문서"
     }
   ]
 }
