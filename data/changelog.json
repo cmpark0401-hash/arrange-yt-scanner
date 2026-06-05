@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-06-05 17:10",
+  "generated_at": "2026-06-05 21:53",
   "total_commits": 80,
   "by_category": {
+    "other": 12,
     "data": 19,
     "feat": 37,
-    "docs": 6,
+    "docs": 5,
     "style": 3,
     "fix": 2,
-    "refactor": 2,
-    "other": 11
+    "refactor": 2
   },
   "recent_by_date": [
     {
       "date": "2026-06-05",
-      "count": 11,
+      "count": 12,
       "commits": [
+        {
+          "hash": "9fd2751",
+          "full_hash": "9fd275197b643b6810fc8983e964998f6ec1f8a7",
+          "ts": "2026-06-05 17:10",
+          "ts_iso": "2026-06-05T17:10:40",
+          "author": "cmpark0401-hash",
+          "subject": "과만세 첫 영상 발행 — sw-20260604-health published (시력회복)",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "e42cef4",
           "full_hash": "e42cef47715ee82be48eac1c917620f1f4af3304",
@@ -527,7 +537,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 31,
+      "count": 30,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +838,21 @@
           "subject": "신규 채널 후보 풀세트: 후보 페이지 + [+추적]·[✗거부] 버튼 → Issue 자동 + monitor extra 통합 + poller add-channel 처리",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "89a2e26",
-          "full_hash": "89a2e268da18d8cb990719f415fbe35884f05365",
-          "ts": "2026-06-01 10:25",
-          "ts_iso": "2026-06-01T10:25:23",
-          "author": "cmpark0401-hash",
-          "subject": "JP 헤더 동일 적용 + jp/manual.html 복사 + 가이드 우측 칩 작동",
-          "category": "docs",
-          "category_label": "📖 문서"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "9fd2751",
+      "full_hash": "9fd275197b643b6810fc8983e964998f6ec1f8a7",
+      "ts": "2026-06-05 17:10",
+      "ts_iso": "2026-06-05T17:10:40",
+      "author": "cmpark0401-hash",
+      "subject": "과만세 첫 영상 발행 — sw-20260604-health published (시력회복)",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "e42cef4",
       "full_hash": "e42cef47715ee82be48eac1c917620f1f4af3304",
@@ -1632,16 +1642,6 @@
       "subject": "신규 채널 후보 풀세트: 후보 페이지 + [+추적]·[✗거부] 버튼 → Issue 자동 + monitor extra 통합 + poller add-channel 처리",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "89a2e26",
-      "full_hash": "89a2e268da18d8cb990719f415fbe35884f05365",
-      "ts": "2026-06-01 10:25",
-      "ts_iso": "2026-06-01T10:25:23",
-      "author": "cmpark0401-hash",
-      "subject": "JP 헤더 동일 적용 + jp/manual.html 복사 + 가이드 우측 칩 작동",
-      "category": "docs",
-      "category_label": "📖 문서"
     }
   ]
 }
