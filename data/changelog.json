@@ -1,16 +1,32 @@
 {
-  "generated_at": "2026-06-06 09:30",
+  "generated_at": "2026-06-06 09:59",
   "total_commits": 80,
   "by_category": {
-    "data": 21,
+    "data": 22,
     "other": 12,
-    "feat": 36,
+    "feat": 35,
     "docs": 5,
     "style": 3,
     "fix": 1,
     "refactor": 2
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-06",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "c37931c",
+          "full_hash": "c37931c993f9db54b49e83afd743a3374ee29823",
+          "ts": "2026-06-06 09:30",
+          "ts_iso": "2026-06-06T09:30:12",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-06 09:30:12",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        }
+      ]
+    },
     {
       "date": "2026-06-05",
       "count": 14,
@@ -557,7 +573,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 28,
+      "count": 27,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +844,21 @@
           "subject": "후보 일괄 추가 + 분석채널·분석영상 카운트: 체크박스 + sticky bar + batch poller + 헤더 3종 카운트",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "4559d2a",
-          "full_hash": "4559d2a4283442b2ca80c2e164b51becd12c0394",
-          "ts": "2026-06-01 10:44",
-          "ts_iso": "2026-06-01T10:44:49",
-          "author": "cmpark0401-hash",
-          "subject": "autopsy: add channel #6 (closes #6)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "c37931c",
+      "full_hash": "c37931c993f9db54b49e83afd743a3374ee29823",
+      "ts": "2026-06-06 09:30",
+      "ts_iso": "2026-06-06T09:30:12",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-06 09:30:12",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "8063ea6",
       "full_hash": "8063ea6cefd04713e264c69a471db3b8b15c5e2e",
@@ -1630,16 +1646,6 @@
       "ts_iso": "2026-06-01T10:53:21",
       "author": "cmpark0401-hash",
       "subject": "후보 일괄 추가 + 분석채널·분석영상 카운트: 체크박스 + sticky bar + batch poller + 헤더 3종 카운트",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "4559d2a",
-      "full_hash": "4559d2a4283442b2ca80c2e164b51becd12c0394",
-      "ts": "2026-06-01 10:44",
-      "ts_iso": "2026-06-01T10:44:49",
-      "author": "cmpark0401-hash",
-      "subject": "autopsy: add channel #6 (closes #6)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
