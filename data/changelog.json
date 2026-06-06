@@ -1,16 +1,32 @@
 {
-  "generated_at": "2026-06-07 00:11",
+  "generated_at": "2026-06-07 00:51",
   "total_commits": 80,
   "by_category": {
-    "data": 29,
+    "data": 30,
     "docs": 6,
-    "other": 8,
+    "other": 7,
     "feat": 31,
     "style": 3,
     "fix": 1,
     "refactor": 2
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-07",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "f313865",
+          "full_hash": "f313865660ec4b311f5b449aa01d6470dca42dc8",
+          "ts": "2026-06-07 00:11",
+          "ts_iso": "2026-06-07T00:11:30",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 00:11:30",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        }
+      ]
+    },
     {
       "date": "2026-06-06",
       "count": 9,
@@ -653,7 +669,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 19,
+      "count": 18,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -834,21 +850,21 @@
           "subject": "manual JP: 2026-06-01 11:36",
           "category": "docs",
           "category_label": "📖 문서"
-        },
-        {
-          "hash": "d808dde",
-          "full_hash": "d808ddee943362a46290257028bc5e11a18ae5b7",
-          "ts": "2026-06-01 11:32",
-          "ts_iso": "2026-06-01T11:32:32",
-          "author": "cmpark0401-hash",
-          "subject": "후보 페이지: 50개씩 페이지네이션 (← 1 2 3 ... 6 →) + 카테고리 필터 연동 + 스크롤 top 자동",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "f313865",
+      "full_hash": "f313865660ec4b311f5b449aa01d6470dca42dc8",
+      "ts": "2026-06-07 00:11",
+      "ts_iso": "2026-06-07T00:11:30",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 00:11:30",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "7b1e158",
       "full_hash": "7b1e158cf9ee6be94faabebb79669633f103b0f6",
@@ -1638,16 +1654,6 @@
       "subject": "manual JP: 2026-06-01 11:36",
       "category": "docs",
       "category_label": "📖 문서"
-    },
-    {
-      "hash": "d808dde",
-      "full_hash": "d808ddee943362a46290257028bc5e11a18ae5b7",
-      "ts": "2026-06-01 11:32",
-      "ts_iso": "2026-06-01T11:32:32",
-      "author": "cmpark0401-hash",
-      "subject": "후보 페이지: 50개씩 페이지네이션 (← 1 2 3 ... 6 →) + 카테고리 필터 연동 + 스크롤 top 자동",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }

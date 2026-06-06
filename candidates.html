@@ -70,6 +70,8 @@ header .header-chips-row { display:flex; gap:6px; flex-wrap:wrap; align-items:ce
 .h-chip.ytg:hover { background:linear-gradient(135deg,rgba(245,158,11,.25) 0%,rgba(251,191,36,.25) 100%); border-color:#fbbf24; transform:translateY(-1px); text-decoration:none; }
 .h-chip.workboard { background:linear-gradient(135deg,rgba(168,85,247,.18) 0%,rgba(217,70,239,.15) 100%); border:1.5px solid rgba(168,85,247,.65); color:#c084fc; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; position:relative; }
 .h-chip.workboard:hover { background:linear-gradient(135deg,rgba(168,85,247,.28) 0%,rgba(217,70,239,.25) 100%); border-color:#c084fc; transform:translateY(-1px); text-decoration:none; }
+.h-chip.clicklab { background:linear-gradient(135deg,rgba(236,72,153,.18) 0%,rgba(244,114,182,.15) 100%); border:1.5px solid rgba(236,72,153,.65); color:#f472b6; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; position:relative; }
+.h-chip.clicklab:hover { background:linear-gradient(135deg,rgba(236,72,153,.28) 0%,rgba(244,114,182,.25) 100%); border-color:#f472b6; transform:translateY(-1px); text-decoration:none; }
 .chip-date-badge { position:absolute; top:-7px; right:-8px; background:#ef4444; color:#fff; font-size:9.5px; font-weight:800; padding:2px 6px; border-radius:9px; line-height:1.2; letter-spacing:.2px; box-shadow:0 1px 4px rgba(239,68,68,.45); border:1.5px solid rgba(0,0,0,.7); white-space:nowrap; min-width:14px; text-align:center; pointer-events:none; }
 .chip-date-badge.pulse { animation:badgePulse 1.8s ease-in-out infinite; }
 @keyframes badgePulse { 0%,100% { transform:scale(1); box-shadow:0 1px 4px rgba(239,68,68,.45); } 50% { transform:scale(1.08); box-shadow:0 2px 8px rgba(239,68,68,.7); } }
@@ -539,7 +541,7 @@ html { scroll-behavior:smooth; }
 <div id="candPagination" style="display:flex;justify-content:center;align-items:center;gap:6px;margin:20px 0 80px;flex-wrap:wrap;"></div>
 </div>
 <div id="candStickyBar" style="position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:1000;background:var(--surface);border:2px solid var(--primary);border-radius:14px;padding:12px 18px;display:inline-flex;gap:10px;align-items:center;box-shadow:0 8px 32px rgba(168,85,247,.4);max-width:95vw;flex-wrap:wrap;justify-content:center;"><span id="candStickyCount" style="font-weight:800;color:var(--primary-hi);font-size:14px;">📋 선택 0개</span><button id="candStickySelectTop10" style="padding:7px 14px;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;">⚡ 상위 10개</button><button id="candStickyClear" style="padding:7px 12px;background:transparent;color:var(--text2);border:1px solid var(--border);border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;">초기화</button><button id="candStickyAdd" disabled style="padding:9px 22px;background:linear-gradient(135deg,var(--primary),var(--primary-hi));color:#fff;border:none;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;opacity:0.4;">✅ <span id="candStickyAddText">체크박스 선택 필요</span></button><button id="candStickyRemove" disabled style="padding:9px 22px;background:linear-gradient(135deg,var(--danger),#f87171);color:#fff;border:none;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;opacity:0.4;display:none;">✗ <span id="candStickyRemoveText">해제할 채널 선택</span></button></div>
-<script src="candidates_logic.js?v=20260607001127"></script>
-  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-07 00:11</footer>
+<script src="candidates_logic.js?v=20260607005102"></script>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-07 00:50</footer>
 </body>
 </html>
