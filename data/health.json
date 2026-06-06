@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-06 12:35",
+  "generated_at": "2026-06-06 21:30",
   "overall_icon": "🔴",
-  "overall_label": "일부 dead",
-  "overall_severity": "warning",
+  "overall_label": "긴급 점검",
+  "overall_severity": "critical",
   "items": [
     {
       "label": "📊 모니터링 (KR)",
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-06 10:18",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-06.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-06 09:59",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-06.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-06 09:59",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-06.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-06 10:36",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-06.json",
       "severity": "warning"
@@ -57,7 +57,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-06 10:01",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-06.json",
       "severity": "info"
@@ -67,7 +67,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-06 10:34",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-06.json",
       "severity": "info"
@@ -78,9 +78,9 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-06 12:35",
-      "last_auto_run": "2026-06-06 12:35",
-      "detail": "마지막 자동 추천: 2026-06-06 12:35"
+      "updated_at": "2026-06-06 21:30",
+      "last_auto_run": "2026-06-06 21:30",
+      "detail": "마지막 자동 추천: 2026-06-06 21:30"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -88,7 +88,75 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-06 12:35"
+      "updated_at": "2026-06-06 21:30"
+    },
+    {
+      "label": "🛡️ 데이터 신뢰도",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "데이터 차단 의심",
+      "ago": "실시간",
+      "detail": "전일대비 폭락 9개 채널",
+      "block_events_24h": 0,
+      "flagged_drops": [
+        {
+          "name": "주식원샷",
+          "yest_avg": 78359,
+          "today_avg": 158
+        },
+        {
+          "name": "얄궂은 경제학",
+          "yest_avg": 78359,
+          "today_avg": 380
+        },
+        {
+          "name": "까칠한 밍광의 경제학",
+          "yest_avg": 78359,
+          "today_avg": 155
+        },
+        {
+          "name": "세상의 모든 다큐",
+          "yest_avg": 78359,
+          "today_avg": 724
+        },
+        {
+          "name": "주식곳간TV",
+          "yest_avg": 78359,
+          "today_avg": 140
+        }
+      ],
+      "severity": "critical"
     }
-  ]
+  ],
+  "data_trust": {
+    "block_events_24h": 0,
+    "flagged_drops": [
+      {
+        "name": "주식원샷",
+        "yest_avg": 78359,
+        "today_avg": 158
+      },
+      {
+        "name": "얄궂은 경제학",
+        "yest_avg": 78359,
+        "today_avg": 380
+      },
+      {
+        "name": "까칠한 밍광의 경제학",
+        "yest_avg": 78359,
+        "today_avg": 155
+      },
+      {
+        "name": "세상의 모든 다큐",
+        "yest_avg": 78359,
+        "today_avg": 724
+      },
+      {
+        "name": "주식곳간TV",
+        "yest_avg": 78359,
+        "today_avg": 140
+      }
+    ],
+    "status": "dead"
+  }
 }

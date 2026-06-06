@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-06 12:35",
+  "generated_at": "2026-06-06 21:30",
   "total_commits": 80,
   "by_category": {
-    "data": 26,
+    "data": 27,
     "docs": 6,
-    "other": 9,
+    "other": 8,
     "feat": 33,
     "style": 3,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-06",
-      "count": 6,
+      "count": 7,
       "commits": [
+        {
+          "hash": "247aeeb",
+          "full_hash": "247aeebee0e419df5068cd3a48970f4128a03032",
+          "ts": "2026-06-06 12:35",
+          "ts_iso": "2026-06-06T12:35:38",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-06 12:35:37",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "4bfd490",
           "full_hash": "4bfd49092f2da3595824767add1400c3f6a01522",
@@ -623,7 +633,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 22,
+      "count": 21,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -834,21 +844,21 @@
           "subject": "추적 채널 카드: 신규 추가 채널(데이터 없음) [🆕 신규] 배지 + 안내 박스 — 21:00 모니터링부터 자동 채워짐",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "08596d1",
-          "full_hash": "08596d14766b309a161aab6cdbe8c117e490d5d2",
-          "ts": "2026-06-01 11:22",
-          "ts_iso": "2026-06-01T11:22:26",
-          "author": "cmpark0401-hash",
-          "subject": "헤더 sub 순서 변경: 분석영상 → 분석채널 → 추적 (큰 숫자부터 좁은 범위로)",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "247aeeb",
+      "full_hash": "247aeebee0e419df5068cd3a48970f4128a03032",
+      "ts": "2026-06-06 12:35",
+      "ts_iso": "2026-06-06T12:35:38",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-06 12:35:37",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "4bfd490",
       "full_hash": "4bfd49092f2da3595824767add1400c3f6a01522",
@@ -1638,16 +1648,6 @@
       "subject": "추적 채널 카드: 신규 추가 채널(데이터 없음) [🆕 신규] 배지 + 안내 박스 — 21:00 모니터링부터 자동 채워짐",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "08596d1",
-      "full_hash": "08596d14766b309a161aab6cdbe8c117e490d5d2",
-      "ts": "2026-06-01 11:22",
-      "ts_iso": "2026-06-01T11:22:26",
-      "author": "cmpark0401-hash",
-      "subject": "헤더 sub 순서 변경: 분석영상 → 분석채널 → 추적 (큰 숫자부터 좁은 범위로)",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }

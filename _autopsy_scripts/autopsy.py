@@ -25,8 +25,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT / "scripts" / "src"))
 from transcribe_yadam import fetch_subtitle  # 자막 다운로드 + dedup
 from analyze_yadam_structure import analyze_one, STOP  # 구조 분해 + stopword
+from yt_safety import canary_check, check_stderr, RateLimiter, BlockedError, record_block_event
 try:
     from channel_repetition import ngrams, jaccard, vocab as _vocab_set
 except ImportError:
@@ -34,6 +36,10 @@ except ImportError:
 
 AUTOPSY_DIR = ROOT / "channels" / "_autopsy"
 AUTOPSY_DIR.mkdir(parents=True, exist_ok=True)
+HEALTH_PATH = ROOT / "docs" / "data" / "health.json"
+
+_RATE = RateLimiter(per_min=30, per_hour=600, per_call_sleep=0.6,
+                    batch_size=20, batch_cooldown=6)
 
 
 def slugify(text: str, max_len: int = 50) -> str:
@@ -54,11 +60,13 @@ def fetch_video_meta(vid: str) -> dict:
     venv_yt = ROOT / ".venv" / "bin" / "yt-dlp"
     yt = str(venv_yt) if venv_yt.exists() else "yt-dlp"
     fields = "%(title)s|||%(channel)s|||%(channel_follower_count)s|||%(view_count)s|||%(upload_date)s|||%(duration)s|||%(like_count)s|||%(comment_count)s"
+    _RATE.wait()
     try:
         r = subprocess.run([yt, f"https://www.youtube.com/watch?v={vid}", "--skip-download",
                             "--print", fields, "--no-warnings",
                             "--extractor-args", "youtube:player_client=web,android,ios"],
                            capture_output=True, text=True, timeout=60)
+        check_stderr(r.stderr or "", context=f"meta {vid}")
         parts = (r.stdout or "").strip().split("|||")
         if len(parts) >= 6:
             def to_int(s):
@@ -493,6 +501,15 @@ def main():
     if not urls:
         print("❌ URL이 없습니다. 예: .venv/bin/python scripts/autopsy.py URL1 URL2 --label '...'")
         sys.exit(1)
+
+    # ── 카나리 사전 검증 ──
+    venv_yt = ROOT / ".venv" / "bin" / "yt-dlp"
+    ok, msg = canary_check(yt_path=str(venv_yt) if venv_yt.exists() else "yt-dlp")
+    if not ok:
+        print(f"⛔ {msg} — autopsy 중단 (IP 차단 의심)")
+        record_block_event(HEALTH_PATH, "canary_fail", f"autopsy: {msg}")
+        sys.exit(2)
+    print(f"✅ {msg}")
 
     now = datetime.now()
     date = now.strftime("%Y-%m-%d")

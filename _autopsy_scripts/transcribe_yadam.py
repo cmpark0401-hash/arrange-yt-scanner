@@ -142,7 +142,13 @@ def ts_to_sec(ts: str) -> float:
 
 def fetch_subtitle(vid: str) -> dict:
     """수동 → 자동 자막 다운로드 시도. dict 또는 빈 dict."""
-    import os
+    import os, sys as _sys
+    from pathlib import Path as _P
+    _sys.path.insert(0, str(_P(__file__).parent / "src"))
+    try:
+        from yt_safety import check_stderr as _check_stderr
+    except ImportError:
+        _check_stderr = lambda *a, **k: None
     url = f"https://www.youtube.com/watch?v={vid}"
     debug = bool(os.environ.get("AUTOPSY_DEBUG"))
     with tempfile.TemporaryDirectory() as tmp:
@@ -162,6 +168,8 @@ def fetch_subtitle(vid: str) -> dict:
         except subprocess.TimeoutExpired:
             if debug: print(f"          ⚠️  timeout 180s")
             return {}
+        # IP 차단 조기 감지 — BlockedError raise → 상위에서 cleanup
+        _check_stderr(r.stderr or "", context=f"transcribe {vid}")
         # 다운된 vtt 찾기
         vtts = sorted(tmp_path.glob(f"{vid}.*.vtt"))
         if not vtts:
