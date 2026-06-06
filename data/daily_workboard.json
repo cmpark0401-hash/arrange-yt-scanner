@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-06 21:50",
-  "today": "2026-06-06",
+  "updated_at": "2026-06-07 00:11",
+  "today": "2026-06-07",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -2295,6 +2295,279 @@
               "note": "AI 채널 폭발 자동 검출 (score=7470)"
             }
           ]
+        },
+        {
+          "id": "kn-20260607-auto-se-h656753",
+          "category": "single_explosion",
+          "title": "[자동🤖] 경제대부: &quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히 (184,134뷰 · 효율 62.6x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 62.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "경제대부",
+            "title": "&quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히 사라진 진짜 이유",
+            "efficiency": 62.63061224489796,
+            "views": 184134,
+            "velocity": 0,
+            "url": "",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=62815)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260607-auto-se-ha12914",
+          "category": "single_explosion",
+          "title": "[자동🤖] 시사저널TV: 한동훈 '무적함대' 하정우 격파 비결은 (345,204뷰 · 효율 0.4x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.4x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "시사저널TV",
+            "title": "한동훈 '무적함대' 하정우 격파 비결은",
+            "efficiency": 0.449484375,
+            "views": 345204,
+            "velocity": 7725,
+            "url": "",
+            "categories": [
+              "시사",
+              "정치"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=58520)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260607-auto-cc-hb27e54",
+          "category": "cross_category",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,350,202뷰 · 효율 401.9x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 401.9x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 401.91151898734176,
+            "views": 6350202,
+            "velocity": 47,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408309)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260607-auto-cc-ha3bbd7",
+          "category": "cross_category",
+          "title": "[자동🤖] 언더스탠딩 : 세상의 모든 지식: 벽돌보다 태양광이 싸다 유럽의 '기괴한 담장' (권효재 대표) (102,270뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "언더스탠딩 : 세상의 모든 지식",
+            "title": "벽돌보다 태양광이 싸다 유럽의 '기괴한 담장' (권효재 대표)",
+            "efficiency": 0.07575555555555556,
+            "views": 102270,
+            "velocity": 2745,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=52923)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260607-ai-경제-QYO_uW",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 팬더경제학: 한국인이 등 돌렸다.&quot; 벤츠가 끝까지 숨기고 있던 1억짜리 자동차의 진짜 정체 (127,818뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 4.0x",
+            "5일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "팬더경제학",
+            "title": "한국인이 등 돌렸다.&quot; 벤츠가 끝까지 숨기고 있던 1억짜리 자동차의 진짜 정체",
+            "efficiency": 3.9572136222910217,
+            "views": 127818,
+            "velocity": 1235,
+            "url": "https://www.youtube.com/watch?v=QYO_uWTLLPk",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=9820)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260607-ai-경제-iVAAUJ",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 모두의 경제학: “중국과 손만 잡으면 쑥대밭이 되는 자국경제” 호주 정부의 최후통첩... 중국 자본 쫓아낸 소름돋는 (119,438뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 3.3x",
+            "7일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "모두의 경제학",
+            "title": "“중국과 손만 잡으면 쑥대밭이 되는 자국경제” 호주 정부의 최후통첩... 중국 자본 쫓아낸 소름돋는 이유",
+            "efficiency": 3.254441416893733,
+            "views": 119438,
+            "velocity": 671,
+            "url": "https://www.youtube.com/watch?v=iVAAUJZwvzA",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=7545)"
+            }
+          ]
         }
       ]
     },
@@ -3046,6 +3319,96 @@
               "ts": "2026-06-06 09:30",
               "type": "auto_proposed",
               "note": "자동 추천 (score=761)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260607-auto-se-h1a67d1",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소' (313,490뷰 · 효율 0.2x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소'",
+            "efficiency": 0.23930534351145039,
+            "views": 313490,
+            "velocity": 1500,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=2053)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260607-auto-se-h500097",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '노예시장이 돌아왔다' 몇십만원에 거래되는 흑인 노예들 '리비아 흑인 노예시장' (481,945뷰 · 효율 0.4x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.4x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'노예시장이 돌아왔다' 몇십만원에 거래되는 흑인 노예들 '리비아 흑인 노예시장'",
+            "efficiency": 0.3678969465648855,
+            "views": 481945,
+            "velocity": 87,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=937)"
             }
           ]
         }
@@ -4165,12 +4528,102 @@
               "note": "AI 채널 폭발 자동 검출 (score=7835)"
             }
           ]
+        },
+        {
+          "id": "sw-20260607-auto-se-hb27e54",
+          "category": "single_explosion",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,350,202뷰 · 효율 401.9x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 401.9x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 401.91151898734176,
+            "views": 6350202,
+            "velocity": 47,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408309)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260607-auto-se-ha3bbd7",
+          "category": "single_explosion",
+          "title": "[자동🤖] 언더스탠딩 : 세상의 모든 지식: 벽돌보다 태양광이 싸다 유럽의 '기괴한 담장' (권효재 대표) (102,270뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "언더스탠딩 : 세상의 모든 지식",
+            "title": "벽돌보다 태양광이 싸다 유럽의 '기괴한 담장' (권효재 대표)",
+            "efficiency": 0.07575555555555556,
+            "views": 102270,
+            "velocity": 2745,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=52923)"
+            }
+          ]
         }
       ]
     },
     {
       "slug": "yadam",
-      "name": "야담 (이름 미정)",
+      "name": "깊은밤야담",
       "icon": "📜",
       "tone": "조선시대 사료·교차변환",
       "open_status": "not_created",
@@ -4861,10 +5314,100 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "yd-20260607-auto-se-h22d72b",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열 (207,966뷰 · 효율 29.4x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 29.4x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열",
+            "efficiency": 29.37372881355932,
+            "views": 207966,
+            "velocity": 693,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=30275)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260607-auto-se-h403729",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 세종은 진짜 성군이었나ㅣ 조선왕조실록이 기록한 9가지 충격적 진실 (57,220뷰 · 효율 8.1x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 8.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "세종은 진짜 성군이었나ㅣ 조선왕조실록이 기록한 9가지 충격적 진실",
+            "efficiency": 8.081920903954803,
+            "views": 57220,
+            "velocity": 56,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-07 00:11",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=8195)"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-06 21:50",
-  "last_ai_detect_run": "2026-06-06 21:50"
+  "last_auto_run": "2026-06-07 00:11",
+  "last_ai_detect_run": "2026-06-07 00:11"
 }

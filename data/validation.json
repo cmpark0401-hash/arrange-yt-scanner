@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-06 21:50",
+  "checked_at": "2026-06-07 00:11",
   "overall": "warning",
   "overall_icon": "🟡",
   "overall_label": "경고 3건",
@@ -17,7 +17,7 @@
     {
       "name": "topic_id_unique",
       "status": "ok",
-      "msg": "총 106개 토픽 · 고유 ID 100%"
+      "msg": "총 118개 토픽 · 고유 ID 100%"
     },
     {
       "name": "html_element_ids",
@@ -32,7 +32,7 @@
     {
       "name": "health_summary",
       "status": "warning",
-      "msg": "dead 2 · stale 0 · fresh 8"
+      "msg": "dead 1 · stale 0 · fresh 9"
     },
     {
       "name": "build_freshness",

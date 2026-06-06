@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-06 21:50",
+  "generated_at": "2026-06-07 00:11",
   "total_commits": 80,
   "by_category": {
-    "data": 28,
+    "data": 29,
     "docs": 6,
     "other": 8,
-    "feat": 32,
+    "feat": 31,
     "style": 3,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-06",
-      "count": 8,
+      "count": 9,
       "commits": [
+        {
+          "hash": "7b1e158",
+          "full_hash": "7b1e158cf9ee6be94faabebb79669633f103b0f6",
+          "ts": "2026-06-06 21:50",
+          "ts_iso": "2026-06-06T21:50:39",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-06 21:50:39",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "54dab4a",
           "full_hash": "54dab4a19f5c38ec05ea9686429a8d8f3fedd1bb",
@@ -643,7 +653,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 20,
+      "count": 19,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -834,21 +844,21 @@
           "subject": "후보 페이지: 50개씩 페이지네이션 (← 1 2 3 ... 6 →) + 카테고리 필터 연동 + 스크롤 top 자동",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "f46952f",
-          "full_hash": "f46952f9b769a0c9592152519f4d2d98249cd79a",
-          "ts": "2026-06-01 11:30",
-          "ts_iso": "2026-06-01T11:30:26",
-          "author": "cmpark0401-hash",
-          "subject": "후보 페이지: 120개 제한 제거 (264 전체 표시) + 카테고리 필터 칩 추가 (전체/심리학/과학/경제/지식 등 1클릭 분할)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "7b1e158",
+      "full_hash": "7b1e158cf9ee6be94faabebb79669633f103b0f6",
+      "ts": "2026-06-06 21:50",
+      "ts_iso": "2026-06-06T21:50:39",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-06 21:50:39",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "54dab4a",
       "full_hash": "54dab4a19f5c38ec05ea9686429a8d8f3fedd1bb",
@@ -1638,16 +1648,6 @@
       "subject": "후보 페이지: 50개씩 페이지네이션 (← 1 2 3 ... 6 →) + 카테고리 필터 연동 + 스크롤 top 자동",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "f46952f",
-      "full_hash": "f46952f9b769a0c9592152519f4d2d98249cd79a",
-      "ts": "2026-06-01 11:30",
-      "ts_iso": "2026-06-01T11:30:26",
-      "author": "cmpark0401-hash",
-      "subject": "후보 페이지: 120개 제한 제거 (264 전체 표시) + 카테고리 필터 칩 추가 (전체/심리학/과학/경제/지식 등 1클릭 분할)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
