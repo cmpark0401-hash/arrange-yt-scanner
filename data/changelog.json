@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-06 11:01",
+  "generated_at": "2026-06-06 11:02",
   "total_commits": 80,
   "by_category": {
+    "docs": 6,
     "data": 23,
-    "other": 12,
+    "other": 11,
     "feat": 34,
-    "docs": 5,
     "style": 3,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-06",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "40b56be",
+          "full_hash": "40b56be23f1662d2241533e43f0c09510a67a08e",
+          "ts": "2026-06-06 11:01",
+          "ts_iso": "2026-06-06T11:01:50",
+          "author": "cmpark0401-hash",
+          "subject": "manual JP: 2026-06-06 11:01",
+          "category": "docs",
+          "category_label": "📖 문서"
+        },
         {
           "hash": "116bda7",
           "full_hash": "116bda743baf03a28417400131bde9bcb0fd5563",
@@ -583,7 +593,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 26,
+      "count": 25,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -834,21 +844,21 @@
           "subject": "채널 관리 페이지: 추적 중 (87) + 신규 후보 (264) 두 섹션 + [추적 해제] + blocklist 시스템 + poller remove-channel 처리",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "89bca3d",
-          "full_hash": "89bca3d81cc948dca50c9916c4c578e92a2e04bf",
-          "ts": "2026-06-01 11:01",
-          "ts_iso": "2026-06-01T11:01:23",
-          "author": "cmpark0401-hash",
-          "subject": "후보 sticky bar: 항상 보임 + 0개 선택 시 안내·비활성화 / N개 선택 시 활성화",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "40b56be",
+      "full_hash": "40b56be23f1662d2241533e43f0c09510a67a08e",
+      "ts": "2026-06-06 11:01",
+      "ts_iso": "2026-06-06T11:01:50",
+      "author": "cmpark0401-hash",
+      "subject": "manual JP: 2026-06-06 11:01",
+      "category": "docs",
+      "category_label": "📖 문서"
+    },
     {
       "hash": "116bda7",
       "full_hash": "116bda743baf03a28417400131bde9bcb0fd5563",
@@ -1638,16 +1648,6 @@
       "subject": "채널 관리 페이지: 추적 중 (87) + 신규 후보 (264) 두 섹션 + [추적 해제] + blocklist 시스템 + poller remove-channel 처리",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "89bca3d",
-      "full_hash": "89bca3d81cc948dca50c9916c4c578e92a2e04bf",
-      "ts": "2026-06-01 11:01",
-      "ts_iso": "2026-06-01T11:01:23",
-      "author": "cmpark0401-hash",
-      "subject": "후보 sticky bar: 항상 보임 + 0개 선택 시 안내·비활성화 / N개 선택 시 활성화",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }

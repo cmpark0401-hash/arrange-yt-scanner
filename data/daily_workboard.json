@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-06 09:30",
+  "updated_at": "2026-06-06 11:02",
   "today": "2026-06-05",
   "categories_def": {
     "single_explosion": {
@@ -2081,6 +2081,178 @@
               "note": "AI 채널 폭발 자동 검출 (score=10247)"
             }
           ]
+        },
+        {
+          "id": "kn-20260606-auto-re-h648d20",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 투데이경제TV: [ 삼성전자 ] 삼성전자 내다 판 개미들만 피눈물 흘립니다, 외국인 7조 폭탄 매도 뒤에 숨은 일론 머스크의 (139,816뷰 · 1일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "삼성"
+          ],
+          "merge_angle": "검증 키워드 '삼성' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "투데이경제TV",
+            "title": "[ 삼성전자 ] 삼성전자 내다 판 개미들만 피눈물 흘립니다, 외국인 7조 폭탄 매도 뒤에 숨은 일론 머스크의 소름 돋는 계획",
+            "views": 139816,
+            "url": "",
+            "days_since": 1
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260606-auto-re-h303b2f",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 박종훈의 지식한방: 코스피 폭등과 하락의 비밀 (박종훈의 지식한방) (260,843뷰 · 1일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "경제"
+          ],
+          "merge_angle": "검증 키워드 '경제' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "박종훈의 지식한방",
+            "title": "코스피 폭등과 하락의 비밀 (박종훈의 지식한방)",
+            "views": 260843,
+            "url": "",
+            "days_since": 1
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260606-ai-시사-XJNqTp",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: &quot;강성재, 도와줘!&quot; 매끼 2,000인분씩 만들던 '전설의 취사병' 모음｜크랩 (121,510뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.1x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "&quot;강성재, 도와줘!&quot; 매끼 2,000인분씩 만들던 '전설의 취사병' 모음｜크랩",
+            "efficiency": 0.1203069306930693,
+            "views": 121510,
+            "velocity": 2921,
+            "url": "https://www.youtube.com/watch?v=XJNqTpCYtVA",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=9163)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260606-ai-시사-eLDUd9",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: 살다 살다 '투표용지 부족'으로 투표 못 한 2026년 대한민국 근황｜크랩 (487,650뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.5x",
+            "1일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "살다 살다 '투표용지 부족'으로 투표 못 한 2026년 대한민국 근황｜크랩",
+            "efficiency": 0.4828217821782178,
+            "views": 487650,
+            "velocity": 0,
+            "url": "https://www.youtube.com/watch?v=eLDUd9n7Lxc",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=7470)"
+            }
+          ]
         }
       ]
     },
@@ -3825,6 +3997,132 @@
               "note": "자동 추천 (score=59540)"
             }
           ]
+        },
+        {
+          "id": "sw-20260606-auto-re-h501f4e",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 엠키타카 MKTK: 울산시장 당선증 받자마자 김상욱이 찾아간 그곳에서 한참을 오열.. (98,485뷰 · 2일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "김상욱"
+          ],
+          "merge_angle": "검증 키워드 '김상욱' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "엠키타카 MKTK",
+            "title": "울산시장 당선증 받자마자 김상욱이 찾아간 그곳에서 한참을 오열..",
+            "views": 98485,
+            "url": "",
+            "days_since": 2
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260606-auto-re-he2df4f",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 엠키타카 MKTK: 쉽지 않았던 울산시장 지방선거.. 승리 후 노무현 대통령 찾아간 김상욱 한참동안 오열.. 어떤 감정? (94,170뷰 · 2일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "김상욱"
+          ],
+          "merge_angle": "검증 키워드 '김상욱' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "엠키타카 MKTK",
+            "title": "쉽지 않았던 울산시장 지방선거.. 승리 후 노무현 대통령 찾아간 김상욱 한참동안 오열.. 어떤 감정?",
+            "views": 94170,
+            "url": "",
+            "days_since": 2
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260606-ai-과학-GMngFG",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 방구석 과학: 독일 렌터카 업체에서 차종 바꿔치기 당한 한국인 (121,070뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 0.7x",
+            "4일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "독일 렌터카 업체에서 차종 바꿔치기 당한 한국인",
+            "efficiency": 0.6652197802197802,
+            "views": 121070,
+            "velocity": 2049,
+            "url": "https://www.youtube.com/watch?v=GMngFGPGjPk",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=7835)"
+            }
+          ]
         }
       ]
     },
@@ -4441,10 +4739,90 @@
               "note": "자동 추천 (score=8424)"
             }
           ]
+        },
+        {
+          "id": "yd-20260606-auto-re-hd2b0ff",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 슈카월드: 상장 앞둔 스페이스X 실적 공개 (398,340뷰 · 2일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "상장"
+          ],
+          "merge_angle": "검증 키워드 '상장' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "슈카월드",
+            "title": "상장 앞둔 스페이스X 실적 공개",
+            "views": 398340,
+            "url": "",
+            "days_since": 2
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260606-auto-re-h1e83cf",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 재테크읽어주는 파일럿: SpaceX IPO Price Confirmed! Post-Listing Forecast Scenarios (194,167뷰 · 2일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "상장"
+          ],
+          "merge_angle": "검증 키워드 '상장' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "재테크읽어주는 파일럿",
+            "title": "SpaceX IPO Price Confirmed! Post-Listing Forecast Scenarios",
+            "views": 194167,
+            "url": "",
+            "days_since": 2
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-06 11:02",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-06 09:30",
-  "last_ai_detect_run": "2026-06-06 09:30"
+  "last_auto_run": "2026-06-06 11:02",
+  "last_ai_detect_run": "2026-06-06 11:02"
 }
