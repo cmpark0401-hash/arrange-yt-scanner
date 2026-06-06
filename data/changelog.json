@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-06 09:59",
+  "generated_at": "2026-06-06 11:01",
   "total_commits": 80,
   "by_category": {
-    "data": 22,
+    "data": 23,
     "other": 12,
-    "feat": 35,
+    "feat": 34,
     "docs": 5,
     "style": 3,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-06",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "116bda7",
+          "full_hash": "116bda743baf03a28417400131bde9bcb0fd5563",
+          "ts": "2026-06-06 09:59",
+          "ts_iso": "2026-06-06T09:59:12",
+          "author": "cmpark0401-hash",
+          "subject": "auto: build 2026-06-06 09:59",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "c37931c",
           "full_hash": "c37931c993f9db54b49e83afd743a3374ee29823",
@@ -573,7 +583,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 27,
+      "count": 26,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -834,21 +844,21 @@
           "subject": "후보 sticky bar: 항상 보임 + 0개 선택 시 안내·비활성화 / N개 선택 시 활성화",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "936a4ad",
-          "full_hash": "936a4ad600ed14d2731f121b7062d1294d2c548f",
-          "ts": "2026-06-01 10:53",
-          "ts_iso": "2026-06-01T10:53:21",
-          "author": "cmpark0401-hash",
-          "subject": "후보 일괄 추가 + 분석채널·분석영상 카운트: 체크박스 + sticky bar + batch poller + 헤더 3종 카운트",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "116bda7",
+      "full_hash": "116bda743baf03a28417400131bde9bcb0fd5563",
+      "ts": "2026-06-06 09:59",
+      "ts_iso": "2026-06-06T09:59:12",
+      "author": "cmpark0401-hash",
+      "subject": "auto: build 2026-06-06 09:59",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "c37931c",
       "full_hash": "c37931c993f9db54b49e83afd743a3374ee29823",
@@ -1638,16 +1648,6 @@
       "subject": "후보 sticky bar: 항상 보임 + 0개 선택 시 안내·비활성화 / N개 선택 시 활성화",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "936a4ad",
-      "full_hash": "936a4ad600ed14d2731f121b7062d1294d2c548f",
-      "ts": "2026-06-01 10:53",
-      "ts_iso": "2026-06-01T10:53:21",
-      "author": "cmpark0401-hash",
-      "subject": "후보 일괄 추가 + 분석채널·분석영상 카운트: 체크박스 + sticky bar + batch poller + 헤더 3종 카운트",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
