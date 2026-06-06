@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-06 11:20",
+  "generated_at": "2026-06-06 12:35",
   "total_commits": 80,
   "by_category": {
-    "data": 25,
+    "data": 26,
     "docs": 6,
-    "other": 10,
+    "other": 9,
     "feat": 33,
     "style": 3,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-06",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "4bfd490",
+          "full_hash": "4bfd49092f2da3595824767add1400c3f6a01522",
+          "ts": "2026-06-06 11:20",
+          "ts_iso": "2026-06-06T11:20:58",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-06 11:20:58",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "1ffa364",
           "full_hash": "1ffa3642c246458fbfacaac278aa4b173fae2224",
@@ -613,7 +623,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 23,
+      "count": 22,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -834,21 +844,21 @@
           "subject": "헤더 sub 순서 변경: 분석영상 → 분석채널 → 추적 (큰 숫자부터 좁은 범위로)",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "12bf48a",
-          "full_hash": "12bf48ac3a7f5427b11ccdbcdbbf929120a7563c",
-          "ts": "2026-06-01 11:19",
-          "ts_iso": "2026-06-01T11:19:23",
-          "author": "cmpark0401-hash",
-          "subject": "헤더 칩: '🆕 후보' → '🔄 분석 업데이트' (페이지 title + tab title 통일)",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "4bfd490",
+      "full_hash": "4bfd49092f2da3595824767add1400c3f6a01522",
+      "ts": "2026-06-06 11:20",
+      "ts_iso": "2026-06-06T11:20:58",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-06 11:20:58",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "1ffa364",
       "full_hash": "1ffa3642c246458fbfacaac278aa4b173fae2224",
@@ -1636,16 +1646,6 @@
       "ts_iso": "2026-06-01T11:22:26",
       "author": "cmpark0401-hash",
       "subject": "헤더 sub 순서 변경: 분석영상 → 분석채널 → 추적 (큰 숫자부터 좁은 범위로)",
-      "category": "other",
-      "category_label": "📌 기타"
-    },
-    {
-      "hash": "12bf48a",
-      "full_hash": "12bf48ac3a7f5427b11ccdbcdbbf929120a7563c",
-      "ts": "2026-06-01 11:19",
-      "ts_iso": "2026-06-01T11:19:23",
-      "author": "cmpark0401-hash",
-      "subject": "헤더 칩: '🆕 후보' → '🔄 분석 업데이트' (페이지 title + tab title 통일)",
       "category": "other",
       "category_label": "📌 기타"
     }
