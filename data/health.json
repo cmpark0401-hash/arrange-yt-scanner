@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06 11:02",
+  "generated_at": "2026-06-06 11:17",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "44분 전",
+      "ago": "59분 전",
       "updated_at": "2026-06-06 10:18",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-06.json",
       "severity": "critical"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "25분 전",
+      "ago": "40분 전",
       "updated_at": "2026-06-06 10:36",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-06.json",
       "severity": "warning"
@@ -67,7 +67,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "27분 전",
+      "ago": "42분 전",
       "updated_at": "2026-06-06 10:34",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-06.json",
       "severity": "info"
@@ -78,9 +78,9 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-06 11:02",
-      "last_auto_run": "2026-06-06 11:02",
-      "detail": "마지막 자동 추천: 2026-06-06 11:02"
+      "updated_at": "2026-06-06 11:17",
+      "last_auto_run": "2026-06-06 11:17",
+      "detail": "마지막 자동 추천: 2026-06-06 11:17"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -88,7 +88,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-06 11:02"
+      "updated_at": "2026-06-06 11:17"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-06 11:02",
+  "generated_at": "2026-06-06 11:17",
   "total_commits": 80,
   "by_category": {
+    "data": 24,
     "docs": 6,
-    "data": 23,
     "other": 11,
-    "feat": 34,
+    "feat": 33,
     "style": 3,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-06",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "57eb86b",
+          "full_hash": "57eb86b87bcfbf4f8ebfc2c8b5341afab58d501e",
+          "ts": "2026-06-06 11:02",
+          "ts_iso": "2026-06-06T11:02:19",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-06 11:02:19",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "40b56be",
           "full_hash": "40b56be23f1662d2241533e43f0c09510a67a08e",
@@ -593,7 +603,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 25,
+      "count": 24,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -834,21 +844,21 @@
           "subject": "추적 채널 카드 강화: 구독·개설일·연차·30일 시그널/폭발·편/주·인기/최신 영상 + 활성도순 정렬",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "631c1fc",
-          "full_hash": "631c1fc85434253bfeb82b14be7359c8ed4cd4a8",
-          "ts": "2026-06-01 11:12",
-          "ts_iso": "2026-06-01T11:12:03",
-          "author": "cmpark0401-hash",
-          "subject": "채널 관리 페이지: 추적 중 (87) + 신규 후보 (264) 두 섹션 + [추적 해제] + blocklist 시스템 + poller remove-channel 처리",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "57eb86b",
+      "full_hash": "57eb86b87bcfbf4f8ebfc2c8b5341afab58d501e",
+      "ts": "2026-06-06 11:02",
+      "ts_iso": "2026-06-06T11:02:19",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-06 11:02:19",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "40b56be",
       "full_hash": "40b56be23f1662d2241533e43f0c09510a67a08e",
@@ -1638,16 +1648,6 @@
       "subject": "추적 채널 카드 강화: 구독·개설일·연차·30일 시그널/폭발·편/주·인기/최신 영상 + 활성도순 정렬",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "631c1fc",
-      "full_hash": "631c1fc85434253bfeb82b14be7359c8ed4cd4a8",
-      "ts": "2026-06-01 11:12",
-      "ts_iso": "2026-06-01T11:12:03",
-      "author": "cmpark0401-hash",
-      "subject": "채널 관리 페이지: 추적 중 (87) + 신규 후보 (264) 두 섹션 + [추적 해제] + blocklist 시스템 + poller remove-channel 처리",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
