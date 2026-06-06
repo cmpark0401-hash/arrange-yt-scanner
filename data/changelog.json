@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-06 21:30",
+  "generated_at": "2026-06-06 21:50",
   "total_commits": 80,
   "by_category": {
-    "data": 27,
+    "data": 28,
     "docs": 6,
     "other": 8,
-    "feat": 33,
+    "feat": 32,
     "style": 3,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-06",
-      "count": 7,
+      "count": 8,
       "commits": [
+        {
+          "hash": "54dab4a",
+          "full_hash": "54dab4a19f5c38ec05ea9686429a8d8f3fedd1bb",
+          "ts": "2026-06-06 21:30",
+          "ts_iso": "2026-06-06T21:30:10",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-06 21:30:10",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "247aeeb",
           "full_hash": "247aeebee0e419df5068cd3a48970f4128a03032",
@@ -633,7 +643,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 21,
+      "count": 20,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -834,21 +844,21 @@
           "subject": "후보 페이지: 120개 제한 제거 (264 전체 표시) + 카테고리 필터 칩 추가 (전체/심리학/과학/경제/지식 등 1클릭 분할)",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "6fc0cb0",
-          "full_hash": "6fc0cb00afce4ed27606c0305e4c8295575dd7e8",
-          "ts": "2026-06-01 11:26",
-          "ts_iso": "2026-06-01T11:26:41",
-          "author": "cmpark0401-hash",
-          "subject": "추적 채널 카드: 신규 추가 채널(데이터 없음) [🆕 신규] 배지 + 안내 박스 — 21:00 모니터링부터 자동 채워짐",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "54dab4a",
+      "full_hash": "54dab4a19f5c38ec05ea9686429a8d8f3fedd1bb",
+      "ts": "2026-06-06 21:30",
+      "ts_iso": "2026-06-06T21:30:10",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-06 21:30:10",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "247aeeb",
       "full_hash": "247aeebee0e419df5068cd3a48970f4128a03032",
@@ -1636,16 +1646,6 @@
       "ts_iso": "2026-06-01T11:30:26",
       "author": "cmpark0401-hash",
       "subject": "후보 페이지: 120개 제한 제거 (264 전체 표시) + 카테고리 필터 칩 추가 (전체/심리학/과학/경제/지식 등 1클릭 분할)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "6fc0cb0",
-      "full_hash": "6fc0cb00afce4ed27606c0305e4c8295575dd7e8",
-      "ts": "2026-06-01 11:26",
-      "ts_iso": "2026-06-01T11:26:41",
-      "author": "cmpark0401-hash",
-      "subject": "추적 채널 카드: 신규 추가 채널(데이터 없음) [🆕 신규] 배지 + 안내 박스 — 21:00 모니터링부터 자동 채워짐",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
