@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-06-05 23:56",
+  "generated_at": "2026-06-06 09:30",
   "total_commits": 80,
   "by_category": {
-    "data": 20,
+    "data": 21,
     "other": 12,
     "feat": 36,
     "docs": 5,
     "style": 3,
-    "fix": 2,
+    "fix": 1,
     "refactor": 2
   },
   "recent_by_date": [
     {
       "date": "2026-06-05",
-      "count": 13,
+      "count": 14,
       "commits": [
+        {
+          "hash": "8063ea6",
+          "full_hash": "8063ea6cefd04713e264c69a471db3b8b15c5e2e",
+          "ts": "2026-06-05 23:56",
+          "ts_iso": "2026-06-05T23:56:45",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-05 23:56:45",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "b165e4f",
           "full_hash": "b165e4fa3e8dedcb75418b96fa13e35d33a21306",
@@ -547,7 +557,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 29,
+      "count": 28,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -828,21 +838,21 @@
           "subject": "autopsy: add channel #6 (closes #6)",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "724fd1f",
-          "full_hash": "724fd1f114f3115077b0fbc8e7e4d2f59fcff6fa",
-          "ts": "2026-06-01 10:36",
-          "ts_iso": "2026-06-01T10:36:52",
-          "author": "cmpark0401-hash",
-          "subject": "fix: candidates_data 로드 위치를 SHELL 렌더 이전으로 이동",
-          "category": "fix",
-          "category_label": "🐛 오류 수정"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "8063ea6",
+      "full_hash": "8063ea6cefd04713e264c69a471db3b8b15c5e2e",
+      "ts": "2026-06-05 23:56",
+      "ts_iso": "2026-06-05T23:56:45",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-05 23:56:45",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "b165e4f",
       "full_hash": "b165e4fa3e8dedcb75418b96fa13e35d33a21306",
@@ -1632,16 +1642,6 @@
       "subject": "autopsy: add channel #6 (closes #6)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "724fd1f",
-      "full_hash": "724fd1f114f3115077b0fbc8e7e4d2f59fcff6fa",
-      "ts": "2026-06-01 10:36",
-      "ts_iso": "2026-06-01T10:36:52",
-      "author": "cmpark0401-hash",
-      "subject": "fix: candidates_data 로드 위치를 SHELL 렌더 이전으로 이동",
-      "category": "fix",
-      "category_label": "🐛 오류 수정"
     }
   ]
 }

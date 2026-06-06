@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-05 23:56",
+  "generated_at": "2026-06-06 09:30",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
   "items": [
     {
       "label": "📊 모니터링 (KR)",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "13시간 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "23시간 전",
       "updated_at": "2026-06-05 10:07",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-05.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "14시간 전",
+      "ago": "23시간 전",
       "updated_at": "2026-06-05 09:49",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-05.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "14시간 전",
+      "ago": "23시간 전",
       "updated_at": "2026-06-05 09:49",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-05.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "13시간 전",
+      "ago": "23시간 전",
       "updated_at": "2026-06-05 10:24",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-05.json",
       "severity": "warning"
@@ -57,7 +57,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-05 22:32",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-05.json",
       "severity": "info"
@@ -67,7 +67,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-05 22:37",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-05.json",
       "severity": "info"
@@ -78,9 +78,9 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-05 23:56",
-      "last_auto_run": "2026-06-05 23:56",
-      "detail": "마지막 자동 추천: 2026-06-05 23:56"
+      "updated_at": "2026-06-06 09:30",
+      "last_auto_run": "2026-06-06 09:30",
+      "detail": "마지막 자동 추천: 2026-06-06 09:30"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -88,7 +88,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-05 23:56"
+      "updated_at": "2026-06-06 09:30"
     }
   ]
 }
