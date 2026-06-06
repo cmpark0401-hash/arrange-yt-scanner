@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-07 00:51",
+  "generated_at": "2026-06-07 03:29",
   "total_commits": 80,
   "by_category": {
-    "data": 30,
-    "docs": 6,
+    "data": 31,
+    "docs": 5,
     "other": 7,
     "feat": 31,
     "style": 3,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "a238b30",
+          "full_hash": "a238b309bc69e5cd6f117badb988aeef319a6bcd",
+          "ts": "2026-06-07 00:51",
+          "ts_iso": "2026-06-07T00:51:05",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 00:51:05",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "f313865",
           "full_hash": "f313865660ec4b311f5b449aa01d6470dca42dc8",
@@ -669,7 +679,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 18,
+      "count": 17,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "data refresh: KR+JP 즉시 갱신",
           "category": "data",
           "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "d1bdff0",
-          "full_hash": "d1bdff0449c3e4c9ff528abfc5a12ed465ab11e1",
-          "ts": "2026-06-01 11:36",
-          "ts_iso": "2026-06-01T11:36:53",
-          "author": "cmpark0401-hash",
-          "subject": "manual JP: 2026-06-01 11:36",
-          "category": "docs",
-          "category_label": "📖 문서"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "a238b30",
+      "full_hash": "a238b309bc69e5cd6f117badb988aeef319a6bcd",
+      "ts": "2026-06-07 00:51",
+      "ts_iso": "2026-06-07T00:51:05",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 00:51:05",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "f313865",
       "full_hash": "f313865660ec4b311f5b449aa01d6470dca42dc8",
@@ -1644,16 +1654,6 @@
       "subject": "data refresh: KR+JP 즉시 갱신",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "d1bdff0",
-      "full_hash": "d1bdff0449c3e4c9ff528abfc5a12ed465ab11e1",
-      "ts": "2026-06-01 11:36",
-      "ts_iso": "2026-06-01T11:36:53",
-      "author": "cmpark0401-hash",
-      "subject": "manual JP: 2026-06-01 11:36",
-      "category": "docs",
-      "category_label": "📖 문서"
     }
   ]
 }

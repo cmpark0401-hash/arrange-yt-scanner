@@ -1,0 +1,272 @@
+{
+  "total_clusters": 10,
+  "generated_at": "2026-06-07",
+  "input_video_count": 53,
+  "clusters": [
+    {
+      "cluster_name": "조선 며느리·시어머니·신분역전 야담",
+      "theme_description": "거지아이·며느리·천재아이의 반전 사이다 설화",
+      "videos": [
+        "9RAy2i7kvvs",
+        "aI8A973spEw",
+        "t-lRlnmPkL0",
+        "EX5f3lsKRls"
+      ],
+      "efficiency_winner": {
+        "vid": "t-lRlnmPkL0",
+        "efficiency": 140.18,
+        "channel": "담담소담 민담",
+        "title_short": "가시덤불 심는 며느리"
+      },
+      "view_winner": {
+        "vid": "9RAy2i7kvvs",
+        "views": 624922,
+        "channel": "밤마실야담",
+        "title_short": "거지아이 소금장수"
+      },
+      "click_insight": "야담 카테고리에서 가장 강력한 클릭 결. 4편 모두 '무시당하던 약자(거지아이·며느리·천재아이)가 한마디·한 행동으로 권력자를 뒤집는' 동일한 사이다 서사다. 효율 폭발 핵심은 (1)1만명 미만 작은 채널이라 도달 대비 노출 효율이 천장을 뚫고 (2)'문틈 속 낯익은 얼굴'·'가시덤불 심는 며느리'·'자객 쫓던 왕비를 절벽으로' 같은 미스터리형 제목이 끝까지 결말을 안 풀어줘 호기심 갭이 극대화된 결과. 같은 신분역전 결 안에서 '며느리·시어머니' 가족갈등 축(t-lRlnmPkL0, EX5f3lsKRls)이 단순 거지아이 축(9RAy2i7kvvs)보다 효율은 더 높지만 절대 조회수는 낮아 — 절대 트래픽은 '소금장수' 같은 직관적 직업 키워드가 강하고, 효율 폭발은 '며느리·시어머니' 가정 갈등 정서가 강하다.",
+      "lesson_for_us": "깊은밤야담의 메인 시리즈는 '며느리·시어머니 신분역전' 축으로, 결말은 끝까지 미스터리로 가둘 것"
+    },
+    {
+      "cluster_name": "동물보은·왕조실록 사료 야담",
+      "theme_description": "호랑이 보은 + 조선실록 인물 + 한국사 사건",
+      "videos": [
+        "StI2eX5WKWk",
+        "NRtLHrlkspU",
+        "jLIIU2MwBvc",
+        "pQSw_SdrTaE"
+      ],
+      "efficiency_winner": {
+        "vid": "NRtLHrlkspU",
+        "efficiency": 29.37,
+        "channel": "한밤의 한국사",
+        "title_short": "조선왕조실록 송시열"
+      },
+      "view_winner": {
+        "vid": "jLIIU2MwBvc",
+        "views": 588552,
+        "channel": "지식해적단",
+        "title_short": "몽골이 한국을 좋아하는 이유"
+      },
+      "click_insight": "사료·역사 인물·동물 보은처럼 '검증된 콘텐츠'를 새 각도로 재편집한 결. 작은 채널(한밤의 한국사 7천·구수한 야담 1.4만)이 29x·16x 효율을 찍은 비결은 '3000번 등장하는 단 한 사람'·'사약을 세 사발 마신'·'눈보라 속 백호'처럼 단정형 숫자/이미지 한 줄로 호기심 갭을 빠르게 닫아준 점. 반대로 지식해적단·보다 BODA의 대형 채널 사료 콘텐츠는 절대 조회수는 높지만 효율은 0.4x 이하로 — 같은 사료라도 '소형 채널이 한 인물을 정밀 해부'할 때 효율이 폭발한다는 시그널.",
+      "lesson_for_us": "깊은밤야담은 사료 인용·교차변환을 무기로 '단 한 인물·단 한 사건 정밀 해부' 포맷 추가 검토"
+    },
+    {
+      "cluster_name": "지식인사이드 시니어 인생철학·처세",
+      "theme_description": "60대·끊어낼 인간·인생 진리·중년 자존감",
+      "videos": [
+        "hreiLyP9yVA",
+        "UY_5u8K6_gw",
+        "x_5g8eAz424",
+        "vgYAHX4BtAM",
+        "kV3AHq165xo"
+      ],
+      "efficiency_winner": {
+        "vid": "hreiLyP9yVA",
+        "efficiency": 0.34,
+        "channel": "지식인사이드",
+        "title_short": "차인표 60년 인맥 정리"
+      },
+      "view_winner": {
+        "vid": "hreiLyP9yVA",
+        "views": 1321127,
+        "channel": "지식인사이드",
+        "title_short": "차인표 60년 인맥 정리"
+      },
+      "click_insight": "동일 채널 5편 모두 '인생론·인간관계·중년 자존감' 결. 효율은 0.12~0.34x로 채널 평균 수준이지만 모두 50만~130만 절대 조회수를 안정적으로 찍는 '검증된 주제 엔진'의 전형. 효율을 가른 건 (1)셀럽(차인표) > 일반 PD/스님, (2)'정리·끊어냄·진리' 같은 결단형 키워드 > '깨달음·기준' 같은 통찰형 키워드. 차인표 1부 0.12x → 2부 0.34x 차이는 1부의 추상적 '오판 줄이는 기준' vs 2부의 구체적 '인맥 필요없는 이유' — 같은 셀럽이라도 카피의 구체성이 효율을 3배 가른다.",
+      "lesson_for_us": "지식록의 [숨은값공개]도 추상('기준·이유') 대신 결단('정리·끊어냄') 키워드로 카피 재구성"
+    },
+    {
+      "cluster_name": "주식·부동산·경제 시황",
+      "theme_description": "코스피 1만·금리·주가폭락·집값",
+      "videos": [
+        "YNAR4AiiiRU",
+        "W3cAt1jCwUo",
+        "RdmbJa9u9C0",
+        "NHwkKAKR8Ds",
+        "-nXLqdgNHho",
+        "UwWG6NLGidU"
+      ],
+      "efficiency_winner": {
+        "vid": "YNAR4AiiiRU",
+        "efficiency": 0.4,
+        "channel": "지식인사이드",
+        "title_short": "강세장에 취하지 마세요"
+      },
+      "view_winner": {
+        "vid": "YNAR4AiiiRU",
+        "views": 1543674,
+        "channel": "지식인사이드",
+        "title_short": "강세장에 취하지 마세요"
+      },
+      "click_insight": "주식·시황 결은 절대 조회수는 100만~150만급으로 강하지만 효율은 일제히 0.12~0.4x로 깔린다 — 대형 채널 시청자 풀이 '오늘 시황'을 습관 소비할 뿐 신규 유입 폭발은 안 일어난다는 뜻. 같은 시황 안에서 효율 차이는 (1)정점 신호('강세장에 취하지 마세요'·'코스피 1만') > 단순 시황('계좌에 비 오네'·'금리 급등'), (2)구체 숫자/카피 > 추상 카피. AI로봇 집짓기(0.38x)는 시황 아닌 'AI 산업 충격' 결인데 시황과 같은 풀에 노출돼 효율은 비슷.",
+      "lesson_for_us": "경제 시의성 키워드는 골든타임 폭로형으로 가되, 효율보다 절대 조회수 노릴 때만 사용"
+    },
+    {
+      "cluster_name": "정치·시사 고발",
+      "theme_description": "한동훈·선관위·예비군 사망 등 시사 이슈",
+      "videos": [
+        "s9ryceRzgZE",
+        "EeSG7laRyOw",
+        "eLDUd9n7Lxc"
+      ],
+      "efficiency_winner": {
+        "vid": "s9ryceRzgZE",
+        "efficiency": 0.96,
+        "channel": "시사저널TV",
+        "title_short": "한동훈 초선 배지 다나"
+      },
+      "view_winner": {
+        "vid": "s9ryceRzgZE",
+        "views": 739102,
+        "channel": "시사저널TV",
+        "title_short": "한동훈 초선 배지 다나"
+      },
+      "click_insight": "정치·시사 3편 모두 0.48~0.96x로 카테고리 평균보다 강함. 효율을 가른 건 (1)빅네임(한동훈) + 시점 직격(선거 직후) 콤보가 가장 강력하고 (2)SNS 밈 인용 + 풍자형('맛집 조기마감')이 그다음 (3)감성 질문형('왜 집에 못 돌아왔나')이 가장 약함. 시사는 '사실 요약+빅네임 인용'이 풍자보다 안정적이라는 시그널.",
+      "lesson_for_us": "확장 채널은 시사보다 '빅네임 + 시점 직격 + 따옴표 인용' 공식을 적용한 인물 콘텐츠 우선"
+    },
+    {
+      "cluster_name": "삼성·반도체·AI 산업",
+      "theme_description": "HBM·휴머노이드·AI로봇 산업 충격",
+      "videos": [
+        "mJCB-wk82gg",
+        "79VpEZ2qQ8c"
+      ],
+      "efficiency_winner": {
+        "vid": "mJCB-wk82gg",
+        "efficiency": 0.19,
+        "channel": "언더스탠딩",
+        "title_short": "중국 HBM 추격"
+      },
+      "view_winner": {
+        "vid": "mJCB-wk82gg",
+        "views": 263131,
+        "channel": "언더스탠딩",
+        "title_short": "중국 HBM 추격"
+      },
+      "click_insight": "삼성·반도체·휴머노이드 결은 효율 0.14~0.19x로 묶음 자체가 약함 — '교수 인터뷰 + 산업 분석' 토킹헤드 포맷이 클릭률을 누른다. 같은 'AI·산업 충격' 주제라도 W3cAt1jCwUo(4시간에 집 한 채)는 147만 조회를 찍는데, 차이는 '실증 결과물+가격 충격' 시각화 여부. 산업 콘텐츠는 결과물 미리보기 없이 분석만 보여주면 효율이 죽는다.",
+      "lesson_for_us": "과만세에서 AI/산업 주제 다룰 때 '결과물 시각화+가격/숫자 충격'을 썸네일에 의무 포함"
+    },
+    {
+      "cluster_name": "우주·물리·과학 통찰",
+      "theme_description": "양자역학·우주·핵무기·수명·은하 규모",
+      "videos": [
+        "Q-U_4zV407U",
+        "P-zT0jwLWH4",
+        "aVIvvXHuWj4",
+        "jo9ORyZU6JA",
+        "MH4cK20eUzI",
+        "ErNXiZrP5z8",
+        "pqNK8zqgtDQ",
+        "h43Y_hlUOGk",
+        "I16JskJJXVY",
+        "CW4JtlzXyj4",
+        "PsjQvm9TJAg",
+        "EkSpu-OZ4FQ",
+        "9ymrAtIfBrs"
+      ],
+      "efficiency_winner": {
+        "vid": "P-zT0jwLWH4",
+        "efficiency": 2.48,
+        "channel": "세모과학",
+        "title_short": "이중슬릿 양자역학"
+      },
+      "view_winner": {
+        "vid": "Q-U_4zV407U",
+        "views": 1875835,
+        "channel": "과학드림",
+        "title_short": "AI가 나스카 지상화 풀었다"
+      },
+      "click_insight": "과만세가 직접 경쟁하는 핵심 클러스터. 효율 천장을 깨는 건 작은 AI 과학 채널 2곳(세모과학 2.48x·1.68x, 방구석 과학 4.21x — 영국 경찰 단속). 폭발 공식은 (1)'AI가 나스카를 풀었다'처럼 시의성 + 미스터리 해결 약속 (2)'이중슬릿·보이저 1호'처럼 검증된 사이언스 미스터리 재해석 (3)'핵무기가 서울 한복판에' 처럼 가정형 시뮬레이션. 반대로 '지구 바다 사라진다면'·'티라노가 사실은 닭'은 0.10~0.12x로 죽는데, 이는 가정형이라도 결과가 뻔하거나 결말이 시시한 주제는 폭발 안 한다는 시그널. 보다 BODA의 우주/과학 EP는 50만 조회수에도 효율 0.17~0.18x로 채널 인기로 먹고 들어가는 케이스.",
+      "lesson_for_us": "과만세는 'AI가 검증된 미스터리를 새로 풀었다' + 시의성 결합한 폭발 공식 강화"
+    },
+    {
+      "cluster_name": "음모론·외계·다큐 미스터리",
+      "theme_description": "외계인·UFO·기밀폭로·해외 미제",
+      "videos": [
+        "Xw1A-79a6uc",
+        "SM4gtmavyYs",
+        "6W5dkObyOPQ",
+        "pWOHwW7hxZ0"
+      ],
+      "efficiency_winner": {
+        "vid": "SM4gtmavyYs",
+        "efficiency": 4.21,
+        "channel": "방구석 과학",
+        "title_short": "영국 경찰 단속 한국인"
+      },
+      "view_winner": {
+        "vid": "SM4gtmavyYs",
+        "views": 766834,
+        "channel": "방구석 과학",
+        "title_short": "영국 경찰 단속 한국인"
+      },
+      "click_insight": "'기밀·미제·금기' 결. 방구석 과학(18만 구독)의 4.21x는 '식사하다가 영국 경찰에 단속당한 한국인'이라는 일상 디테일+권력 충돌이라는 미스터리 후킹이 통한 결과. 반대로 리뷰엉이 0.22x(외계인 80년 기밀)는 같은 결인데 채널이 크고 외계인 키워드 피로도가 누적된 점이 효율을 깎음. '당신이 몰랐던 이야기'의 흑인 노예시장·쾌락혼은 충격 정도는 큰데 효율 0.35~0.37x — 해외 미제 콘텐츠는 절대 조회수는 안정적이나 효율 폭발은 어려움.",
+      "lesson_for_us": "지식록·확장 채널에서 음모론 결 다룰 땐 '거대 음모'보다 '일상 디테일 + 권력 충돌' 후킹 우선"
+    },
+    {
+      "cluster_name": "고대문명·중동·기후 다큐",
+      "theme_description": "보다 BODA의 역사·고대문명·중동·기후 EP 묶음",
+      "videos": [
+        "KSw7CuSoNy0",
+        "cIDNBw3QHus",
+        "xihlxwwEiIA",
+        "S4ixQ_DjrLQ",
+        "9BobXAiJ5MU",
+        "B7_VywdVC6U"
+      ],
+      "efficiency_winner": {
+        "vid": "KSw7CuSoNy0",
+        "efficiency": 0.28,
+        "channel": "보다 BODA",
+        "title_short": "일본 왕 무덤 유물"
+      },
+      "view_winner": {
+        "vid": "KSw7CuSoNy0",
+        "views": 859869,
+        "channel": "보다 BODA",
+        "title_short": "일본 왕 무덤 유물"
+      },
+      "click_insight": "보다 BODA(311만 구독)의 '역사를 보다·그날을 보다·과학을 보다' 시리즈가 평균 50~85만 조회를 안정 흡수하는 채널 IP형 콘텐츠 결. 효율은 0.10~0.28x로 모두 채널 평균 미만 — 시청자가 '시리즈 EP를 습관 구독'하는 구조라 신규 폭발은 없다. 효율을 가른 건 '일본 왕 무덤 + 출신이 우리쪽?' 같은 한국인 정체성 자극형(0.28x) > '중국 고대문명 증발'·'기후 폭염'·'호르무즈 석유' 같은 일반 글로벌 이슈형(0.10~0.18x). 같은 다큐 결이라도 '한국 관점·우리쪽 떡밥'이 효율 2~3배.",
+      "lesson_for_us": "확장 채널에서 글로벌 다큐 다룰 땐 '한국 시청자 정체성 떡밥(우리쪽·한국 관련)'을 반드시 박을 것"
+    },
+    {
+      "cluster_name": "심리·자기계발·불안 처방",
+      "theme_description": "불안·심리·자기계발 책 리뷰형 콘텐츠",
+      "videos": [
+        "gndzRKYlIco",
+        "dn5qweYiF-Y",
+        "QEKSZUsF89M",
+        "JdGV5aZ6mmU",
+        "8-725AtY49s",
+        "5KzogM__XAs"
+      ],
+      "efficiency_winner": {
+        "vid": "QEKSZUsF89M",
+        "efficiency": 1.09,
+        "channel": "이클립스",
+        "title_short": "헐 다운 전술"
+      },
+      "view_winner": {
+        "vid": "gndzRKYlIco",
+        "views": 287924,
+        "channel": "너진똑 NJT BOOK",
+        "title_short": "이야기 철회하겠습니다"
+      },
+      "click_insight": "심리·자기계발 결 6편 중 효율 1x를 넘긴 건 작은 채널(이클립스 15.4만) 1편뿐. 너진똑(156만 구독) 4편은 0.05~0.18x로 채널 평균 미달 — '드디어 밝히는 입장'·'우리가 불안한 이유' 같은 추상·모호 제목이 검색·노출 둘 다 죽인다. 이클립스의 '헐 다운 전술'·'당신은 이미 무언가를 숭배'는 군사용어/종교 메타포로 호기심 갭을 만든 점이 1.09x·0.55x로 차이를 가름.",
+      "lesson_for_us": "심리 결은 추상 카피 대신 '구체 사물·전술·메타포'를 카피 후킹에 박을 것"
+    }
+  ],
+  "high_efficiency_examples": [
+    "t-lRlnmPkL0",
+    "NRtLHrlkspU",
+    "EX5f3lsKRls",
+    "9RAy2i7kvvs",
+    "aI8A973spEw",
+    "StI2eX5WKWk",
+    "SM4gtmavyYs",
+    "P-zT0jwLWH4"
+  ],
+  "high_efficiency_threshold": "5x 이상 (작은 채널 폭발 = 진짜 클릭력)",
+  "efficiency_vs_views_observation": "효율(views/subs)과 절대 조회수는 사실상 다른 게임이다. 보다 BODA 일본 왕 무덤(85.9만 조회)은 효율 0.28x로 '채널 인기 흡수형 콘텐츠'에 가깝고, 산골야담 며느리(22.3만 조회)는 효율 24.33x로 '진짜 클릭력 폭발형'이다. 더 극단적으로 담담소담 민담 가시덤불 며느리(1840 구독)는 25.8만 조회로 효율 140.18x — 도달 자체가 알고리즘 폭발의 결과물이다. 5x+ 효율 클러스터는 전부 야담(며느리·신분역전·동물보은·왕조실록)과 일부 AI과학(이중슬릿·영국 경찰)에 몰려있고, 100만+ 절대 조회수는 모두 지식인사이드·과학드림 같은 100만+ 대형 채널에서 나온다. 우리 5채널 전략은 절대 조회수 1순위가 아니라 효율 1순위 — 잘듣네·과만세·야담은 5x+ 폭발 클러스터 카피 공식(미스터리 결말·구체 숫자·일상 디테일+권력 충돌)을 우선 흡수해야 한다."
+}
