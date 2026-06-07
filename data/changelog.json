@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07 03:29",
+  "generated_at": "2026-06-07 09:30",
   "total_commits": 80,
   "by_category": {
     "data": 31,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "24b8cb1",
+          "full_hash": "24b8cb1f58c2a9d00800b7b520ea0fa5c5421d79",
+          "ts": "2026-06-07 03:29",
+          "ts_iso": "2026-06-07T03:29:53",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 03:29:53",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "a238b30",
           "full_hash": "a238b309bc69e5cd6f117badb988aeef319a6bcd",
@@ -679,7 +689,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 17,
+      "count": 16,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "SPA cache 완전 해결: fetch cache-bust query + cache:no-store + Cloudflare _headers (index.html no-cache) — 페이지네이션·필터 즉시 반영",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "a8947fd",
-          "full_hash": "a8947fd29ddc136f192cb33de351e82894118c9f",
-          "ts": "2026-06-01 11:36",
-          "ts_iso": "2026-06-01T11:36:58",
-          "author": "cmpark0401-hash",
-          "subject": "data refresh: KR+JP 즉시 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "24b8cb1",
+      "full_hash": "24b8cb1f58c2a9d00800b7b520ea0fa5c5421d79",
+      "ts": "2026-06-07 03:29",
+      "ts_iso": "2026-06-07T03:29:53",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 03:29:53",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "a238b30",
       "full_hash": "a238b309bc69e5cd6f117badb988aeef319a6bcd",
@@ -1644,16 +1654,6 @@
       "subject": "SPA cache 완전 해결: fetch cache-bust query + cache:no-store + Cloudflare _headers (index.html no-cache) — 페이지네이션·필터 즉시 반영",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "a8947fd",
-      "full_hash": "a8947fd29ddc136f192cb33de351e82894118c9f",
-      "ts": "2026-06-01 11:36",
-      "ts_iso": "2026-06-01T11:36:58",
-      "author": "cmpark0401-hash",
-      "subject": "data refresh: KR+JP 즉시 갱신",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }
