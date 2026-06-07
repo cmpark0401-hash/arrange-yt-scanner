@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-07 09:30",
+  "checked_at": "2026-06-07 10:00",
   "base_url": "https://arrange-yt-scanner.pages.dev",
   "overall": "error",
   "overall_icon": "🔴",
@@ -13,7 +13,7 @@
       "label": "🏠 홈",
       "url": "https://arrange-yt-scanner.pages.dev/",
       "http_status": 0,
-      "elapsed_ms": 63,
+      "elapsed_ms": 85,
       "status": "dead",
       "icon": "🔴",
       "msg": "HTTP 0"
@@ -31,7 +31,7 @@
       "label": "📖 가이드",
       "url": "https://arrange-yt-scanner.pages.dev/manual.html",
       "http_status": 0,
-      "elapsed_ms": 132,
+      "elapsed_ms": 22,
       "status": "dead",
       "icon": "🔴",
       "msg": "HTTP 0"

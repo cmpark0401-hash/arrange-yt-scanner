@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-07 09:30",
+  "generated_at": "2026-06-07 10:00",
   "total_commits": 80,
   "by_category": {
-    "data": 31,
+    "data": 32,
     "docs": 5,
-    "other": 7,
+    "other": 6,
     "feat": 31,
     "style": 3,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "19baae5",
+          "full_hash": "19baae5af6f49613f17705c55b104cb4800e4225",
+          "ts": "2026-06-07 09:30",
+          "ts_iso": "2026-06-07T09:30:09",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 09:30:09",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "24b8cb1",
           "full_hash": "24b8cb1f58c2a9d00800b7b520ea0fa5c5421d79",
@@ -689,7 +699,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 16,
+      "count": 15,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "fix(candidates): extract inline JS to candidates_logic.js — JS syntax error 해결",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "18a0613",
-          "full_hash": "18a061363ad386cb2297ef67f72cd1e5c928cbaf",
-          "ts": "2026-06-01 11:40",
-          "ts_iso": "2026-06-01T11:40:41",
-          "author": "cmpark0401-hash",
-          "subject": "SPA cache 완전 해결: fetch cache-bust query + cache:no-store + Cloudflare _headers (index.html no-cache) — 페이지네이션·필터 즉시 반영",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "19baae5",
+      "full_hash": "19baae5af6f49613f17705c55b104cb4800e4225",
+      "ts": "2026-06-07 09:30",
+      "ts_iso": "2026-06-07T09:30:09",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 09:30:09",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "24b8cb1",
       "full_hash": "24b8cb1f58c2a9d00800b7b520ea0fa5c5421d79",
@@ -1642,16 +1652,6 @@
       "ts_iso": "2026-06-01T12:07:49",
       "author": "cmpark0401-hash",
       "subject": "fix(candidates): extract inline JS to candidates_logic.js — JS syntax error 해결",
-      "category": "other",
-      "category_label": "📌 기타"
-    },
-    {
-      "hash": "18a0613",
-      "full_hash": "18a061363ad386cb2297ef67f72cd1e5c928cbaf",
-      "ts": "2026-06-01 11:40",
-      "ts_iso": "2026-06-01T11:40:41",
-      "author": "cmpark0401-hash",
-      "subject": "SPA cache 완전 해결: fetch cache-bust query + cache:no-store + Cloudflare _headers (index.html no-cache) — 페이지네이션·필터 즉시 반영",
       "category": "other",
       "category_label": "📌 기타"
     }
