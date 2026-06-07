@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-06-07 17:08",
+  "generated_at": "2026-06-07 17:32",
   "total_commits": 80,
   "by_category": {
-    "data": 35,
+    "data": 36,
     "docs": 5,
     "other": 5,
     "feat": 29,
-    "style": 3,
+    "style": 2,
     "fix": 1,
     "refactor": 2
   },
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 8,
+      "count": 9,
       "commits": [
+        {
+          "hash": "4e99aaa",
+          "full_hash": "4e99aaa572cdcb72f5b4aee7f0302e0c1dfc7aee",
+          "ts": "2026-06-07 17:08",
+          "ts_iso": "2026-06-07T17:08:29",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 17:08:29",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "922d5b6",
           "full_hash": "922d5b6a727785859bae657a8610b1d786404d91",
@@ -739,7 +749,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 11,
+      "count": 10,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "fix(shell): 헤더 chip 클릭 시 SPA로 view만 교체 (탭 활성 유지)",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "0daf4dc",
-          "full_hash": "0daf4dc806ab6b7386c22189f25bfac7ac4f0cf4",
-          "ts": "2026-06-01 12:51",
-          "ts_iso": "2026-06-01T12:51:35",
-          "author": "cmpark0401-hash",
-          "subject": "히스토리 mock 화면 실제 디자인으로 — 각 날짜별 헤더+탭+카드 미니어처",
-          "category": "style",
-          "category_label": "🎨 디자인"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "4e99aaa",
+      "full_hash": "4e99aaa572cdcb72f5b4aee7f0302e0c1dfc7aee",
+      "ts": "2026-06-07 17:08",
+      "ts_iso": "2026-06-07T17:08:29",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 17:08:29",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "922d5b6",
       "full_hash": "922d5b6a727785859bae657a8610b1d786404d91",
@@ -1644,16 +1654,6 @@
       "subject": "fix(shell): 헤더 chip 클릭 시 SPA로 view만 교체 (탭 활성 유지)",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "0daf4dc",
-      "full_hash": "0daf4dc806ab6b7386c22189f25bfac7ac4f0cf4",
-      "ts": "2026-06-01 12:51",
-      "ts_iso": "2026-06-01T12:51:35",
-      "author": "cmpark0401-hash",
-      "subject": "히스토리 mock 화면 실제 디자인으로 — 각 날짜별 헤더+탭+카드 미니어처",
-      "category": "style",
-      "category_label": "🎨 디자인"
     }
   ]
 }

@@ -1,0 +1,328 @@
+{
+  "지식록": {
+    "slug": "knowledge-archive",
+    "category_filter": [
+      "경제·시사",
+      "경제",
+      "시사"
+    ],
+    "ideal_person_type": [
+      "유명인_실제얼굴",
+      "유명인_AI생성"
+    ],
+    "color": "#fbbf24",
+    "icon": "📈",
+    "subtitle": "경제·시사 시니어 친근톤",
+    "today_action": [
+      "🎯 권력자 얼굴 좌측 클로즈업 (이재용·정의선·구광모·트럼프·젠슨황 중 1명)",
+      "💬 따옴표 인용 발언 30pt 상단 좌측 (예: \"노조 상종 않겠다\")",
+      "🚨 빨강 결말 스포일러 1단어 (몰락·붕괴·충격·끝)",
+      "📐 좌인물(50%) + 우텍스트(50%) 대비 구도",
+      "🔢 제목에 구체 숫자 1개 + 따옴표 인용 1개"
+    ],
+    "title_formulas": [
+      "\"[권력자 발언]\" [한국 기업/경제] [붕괴/몰락/충격] [숫자] [반전결말]",
+      "\"[권력자 발언]\" [숨겨진 진짜 이유] [숫자조]"
+    ],
+    "thumbnail_recipe": {
+      "구도": "좌인물+우텍스트 (또는 좌인물+우인물 대립)",
+      "메인텍스트": "100pt 굵은 고딕 2줄 + 흰색 본문 + 빨강 1단어 강조 + 검정 외곽선 3-4px",
+      "따옴표": "상단 좌측 30pt 흰색",
+      "인물": "권력자 정면 얼굴 클로즈업 (식별 0.3초)",
+      "보조": "우상단 배지 40pt 시리즈 라벨"
+    },
+    "expected_eff": "20~60x (이재용 케이스 29.7x · 트럼프 케이스 20.4x · 타카이치 56.8x)",
+    "benchmarks": [
+      {
+        "vid": "uFq-sr_ia6o",
+        "channel": "코믹스 경제",
+        "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
+        "views": 128876,
+        "ch_subs": 2270,
+        "efficiency": 56.77,
+        "person_type": "유명인_실제얼굴",
+        "person_names": [
+          "타카이치 사나에(일본 정치인 추정)",
+          "이름 모를 일본 남성(좌절 자세)"
+        ],
+        "text_main": "한국 독자 개발에 일본 오열",
+        "title_pattern": "따옴표인용",
+        "thumb_url": "https://i.ytimg.com/vi/uFq-sr_ia6o/hqdefault.jpg"
+      },
+      {
+        "vid": "xpz_QLv8060",
+        "channel": "손안의 경제학",
+        "title": "2026년 대한민국 자산 계급 8개층 — 당신은 지금 몇 층에 살고 있습니까? | 순자산 8층 구조 완전 공개 | 4050 자산 생존 지도 | 손안의 경제학",
+        "views": 59140,
+        "ch_subs": 1380,
+        "efficiency": 42.86,
+        "person_type": "일러스트_현대인물",
+        "person_names": [
+          "스틱맨 화자(이름 없는 일러스트 진행자)",
+          "각 계급층 캐릭터(돈가방·차트·요트 든 익명 인물들)"
+        ],
+        "text_main": "2026년 대한민국 자산 계급 8개 층",
+        "title_pattern": "반문도발",
+        "thumb_url": "https://i.ytimg.com/vi/xpz_QLv8060/hqdefault.jpg"
+      },
+      {
+        "vid": "25tCUGqi6tY",
+        "channel": "농부의 경제학",
+        "title": "&quot;반도체 독식은 지속 불가능하다&quot; 월가가 조용히 매집 중인 AI 다음 수혜주",
+        "views": 109124,
+        "ch_subs": 4290,
+        "efficiency": 25.44,
+        "person_type": "유명인_AI생성",
+        "person_names": [
+          "젠슨 황(NVIDIA CEO, AI생성 일러스트)",
+          "농부 마스코트(채널 캐릭터)",
+          "월가 큰손 3인(AI생성 일러스트, 익명 백인 남성)"
+        ],
+        "text_main": "\"반도체 폭등은 이제 어렵다\"",
+        "title_pattern": "따옴표인용",
+        "thumb_url": "https://i.ytimg.com/vi/25tCUGqi6tY/hqdefault.jpg"
+      }
+    ]
+  },
+  "잘듣네": {
+    "slug": "nn-flix",
+    "category_filter": [
+      "역사·야담",
+      "지식·교양"
+    ],
+    "ideal_person_type": [
+      "유명인_실제얼굴"
+    ],
+    "color": "#a5b4fc",
+    "icon": "🌙",
+    "subtitle": "인물·교양 잠들기 전 라디오",
+    "today_action": [
+      "🎯 인물 본인 사진 중앙 또는 좌측 (반 고흐·푸미폰·다이애나·아인슈타인 등)",
+      "📝 인물 시그니처 발언(편지·일기) 30pt 따옴표 인용",
+      "🌙 우상단 달 뱃지 + 시리즈 라벨",
+      "🎨 컬러: 노랑·하늘색·네이비 따뜻한 톤 (격앙·갈등 금지)",
+      "✍️ 표정: 차분한 측면샷 또는 고요한 정면샷"
+    ],
+    "title_formulas": [
+      "\"[인물 발언]\" [인물명] [N년/시대] [위로 결말]",
+      "[잠들기 전 듣는] [인물명]의 [한 줄 인생/마지막]"
+    ],
+    "thumbnail_recipe": {
+      "구도": "상단 인물 + 하단 풀폭 텍스트 2줄 (잘듣네 표준)",
+      "메인텍스트": "80pt 굵은 세리프 2줄 (라디오 결)",
+      "따옴표": "인물의 실제 글·발언",
+      "인물": "본인 사진 (격앙·갈등 표정 절대 금지)",
+      "보조": "달 뱃지·시그니처 발광"
+    },
+    "expected_eff": "5~25x (인물 본인 IP 차용)",
+    "benchmarks": [
+      {
+        "vid": "t-lRlnmPkL0",
+        "channel": "담담소담 민담",
+        "title": "가시덤불 심는 며느리를 모두가 비웃었는데… 장마 뒤 마을이 뒤집힌 이유 | 야담 | 옛날이야기 | 조선시대 | 민담",
+        "views": 262646,
+        "ch_subs": 1860,
+        "efficiency": 141.21,
+        "person_type": "일러스트_조선인물",
+        "person_names": [
+          "이름 모를 며느리",
+          "분노한 시아버지(양반)",
+          "구경꾼 남성들"
+        ],
+        "text_main": "가시덤불 심는 며느리 모두가 비웃었는데",
+        "title_pattern": "대비반전",
+        "thumb_url": "https://i.ytimg.com/vi/t-lRlnmPkL0/hqdefault.jpg"
+      },
+      {
+        "vid": "ATna0gvP4Us",
+        "channel": "달빛 아래 이야기",
+        "title": "&quot;내가 먹여살리겠소&quot; 산골 약초꾼 처녀가 눈 속에서 업고 온 사내, 알고 보니.. | 야담 옛날이야기 민담 전설 설화",
+        "views": 113533,
+        "ch_subs": 3070,
+        "efficiency": 36.98,
+        "person_type": "일러스트_조선인물",
+        "person_names": [
+          "이름 모를 약초꾼 처녀",
+          "이름 모를 미남 사내"
+        ],
+        "text_main": "눈길에 쓰러진 미남 사내를 주워온 약초꾼 처녀",
+        "title_pattern": "따옴표인용",
+        "thumb_url": "https://i.ytimg.com/vi/ATna0gvP4Us/hqdefault.jpg"
+      },
+      {
+        "vid": "9Lh3WLA9yJY",
+        "channel": "뒷골목 야담",
+        "title": "&quot;아버님, 거지에게 시집가란 말이옵니까?&quot; 마지막 유언에 거지 굴로 걸어간 아씨... | 야담 | 옛날이야기 | 민담 | 수면동화 | 오디오북",
+        "views": 33291,
+        "ch_subs": 1080,
+        "efficiency": 30.82,
+        "person_type": "일러스트_조선인물",
+        "person_names": [
+          "이름 모를 양반가 아씨(눈물 한복 여인)",
+          "이름 모를 거지 남편(누더기 사내)",
+          "배경 그림자 군중"
+        ],
+        "text_main": "사약 받은 아비의 유언 \"거지에게 시집가라\" / 첫날밤 누더기를 벗은 남편에 숨 멈춘 아씨",
+        "title_pattern": "따옴표인용",
+        "thumb_url": "https://i.ytimg.com/vi/9Lh3WLA9yJY/hqdefault.jpg"
+      }
+    ]
+  },
+  "과만세": {
+    "slug": "science-world-life",
+    "category_filter": [
+      "과학·건강",
+      "과학"
+    ],
+    "ideal_person_type": [
+      "얼굴없음",
+      "유명인_실제얼굴"
+    ],
+    "color": "#22c55e",
+    "icon": "🔬",
+    "subtitle": "과학·건강 시니어",
+    "today_action": [
+      "🌌 거대 풍경 단독 우선 (우주·인체·기관 클로즈업) — 평균 효율 113x",
+      "🚫 텍스트 0 또는 거대 카피 1줄 (스케일·철학 주제)",
+      "👨‍⚕️ 인물 사용 시 의사 가운+청진기 권위 신호 필수",
+      "💬 따옴표 \"하버드 연구진\"·\"서울대 교수\" 기관 권위형",
+      "📐 강대비 (주황·빨강 vs 검정 우주)"
+    ],
+    "title_formulas": [
+      "[수면다큐] [과학 주제]의 [거대 진실/끝/한계]",
+      "\"[기관 권위자 발언]\" [건강/노화] [구체 숫자]"
+    ],
+    "thumbnail_recipe": {
+      "구도": "전체 풍경 (텍스트 0) 또는 중앙 단일 풍경 + 거대 카피 1줄",
+      "메인텍스트": "최소 또는 0",
+      "따옴표": "기관 권위형 (선택)",
+      "인물": "선택 (의사 가운+청진기 권위 신호)",
+      "보조": "[수면다큐] 시리즈 라벨"
+    },
+    "expected_eff": "10~100x (우주 풍경 401x · 의사 권위 30x)",
+    "benchmarks": [
+      {
+        "vid": "5e3hCLw900A",
+        "channel": "자연의 비밀 노트",
+        "title": "연료·식량·약을 모두 만드는 기적의 나무, 왜 우리는 몰랐을까?",
+        "views": 26011,
+        "ch_subs": 4190,
+        "efficiency": 6.21,
+        "person_type": null,
+        "person_names": [],
+        "text_main": "",
+        "title_pattern": "",
+        "thumb_url": "https://i.ytimg.com/vi/5e3hCLw900A/hqdefault.jpg"
+      },
+      {
+        "vid": "9_j0h3typyM",
+        "channel": "밤의 우주",
+        "title": "제임스 웹이 발견한 것: 빅뱅 이전에 이미 존재했던 은하 — 우주론이 완전히 무너진다 | 다큐멘터리",
+        "views": 38433,
+        "ch_subs": 6440,
+        "efficiency": 5.97,
+        "person_type": null,
+        "person_names": [],
+        "text_main": "",
+        "title_pattern": "",
+        "thumb_url": "https://i.ytimg.com/vi/9_j0h3typyM/hqdefault.jpg"
+      },
+      {
+        "vid": "Z4uQzU2fKw4",
+        "channel": "자연의 비밀 노트",
+        "title": "1년에 4.5m 자라는 괴물 나무, 석탄보다 뜨겁게 타는데 왜 금지됐을까?",
+        "views": 24484,
+        "ch_subs": 4190,
+        "efficiency": 5.84,
+        "person_type": null,
+        "person_names": [],
+        "text_main": "",
+        "title_pattern": "",
+        "thumb_url": "https://i.ytimg.com/vi/Z4uQzU2fKw4/hqdefault.jpg"
+      }
+    ]
+  },
+  "깊은밤야담": {
+    "slug": "yadam",
+    "category_filter": [
+      "역사·야담"
+    ],
+    "ideal_person_type": [
+      "일러스트_조선인물"
+    ],
+    "color": "#ec4899",
+    "icon": "📜",
+    "subtitle": "시니어 청취형 야담 (여 49% / 남 26%)",
+    "today_action": [
+      "🎯 좌(약자: 며느리/거지/소년) + 우(권위자: 시아버지/양반/시어머니) 대립 구도",
+      "🎨 한복·갓·기와집·눈밭·감나무 장르 시그널 필수",
+      "💬 캐릭터 대사 따옴표 인용 (예: \"내가 먹여살리겠소\" / \"거지에게 시집가라\")",
+      "✍️ 회화적 디테일 (머리카락·한복 주름·표정) — AI 양산 의심 회피",
+      "🔴 컬러 하이라이트 1~2개 (연두·빨강) — 야담 평균 세피아 톤 회피"
+    ],
+    "title_formulas": [
+      "\"[캐릭터 발언]\" [며느리/노비/거지아이] [반전 미스터리]",
+      "[기괴한 행위 명사] [등장인물]을 모두가 [부정형]… [반전 결과]"
+    ],
+    "thumbnail_recipe": {
+      "구도": "좌약자+우권위자 대립 또는 좌인물+우텍스트 (가시덤불 며느리 패턴)",
+      "메인텍스트": "95~105pt 매우 굵은 고딕 2줄 + 흰색 + 컬러 하이라이트 2개 (연두/빨강)",
+      "따옴표": "캐릭터 대사형",
+      "인물": "조선 한복 일러스트 (회화적 마감 필수)",
+      "보조": "[조선반전야담] 시리즈 라벨"
+    },
+    "expected_eff": "20~140x (담담소담 141x · 산골야담 24x · 밤마실 22.5x · 야담 평균 33.95x)",
+    "benchmarks": [
+      {
+        "vid": "t-lRlnmPkL0",
+        "channel": "담담소담 민담",
+        "title": "가시덤불 심는 며느리를 모두가 비웃었는데… 장마 뒤 마을이 뒤집힌 이유 | 야담 | 옛날이야기 | 조선시대 | 민담",
+        "views": 262646,
+        "ch_subs": 1860,
+        "efficiency": 141.21,
+        "person_type": "일러스트_조선인물",
+        "person_names": [
+          "이름 모를 며느리",
+          "분노한 시아버지(양반)",
+          "구경꾼 남성들"
+        ],
+        "text_main": "가시덤불 심는 며느리 모두가 비웃었는데",
+        "title_pattern": "대비반전",
+        "thumb_url": "https://i.ytimg.com/vi/t-lRlnmPkL0/hqdefault.jpg"
+      },
+      {
+        "vid": "ATna0gvP4Us",
+        "channel": "달빛 아래 이야기",
+        "title": "&quot;내가 먹여살리겠소&quot; 산골 약초꾼 처녀가 눈 속에서 업고 온 사내, 알고 보니.. | 야담 옛날이야기 민담 전설 설화",
+        "views": 113533,
+        "ch_subs": 3070,
+        "efficiency": 36.98,
+        "person_type": "일러스트_조선인물",
+        "person_names": [
+          "이름 모를 약초꾼 처녀",
+          "이름 모를 미남 사내"
+        ],
+        "text_main": "눈길에 쓰러진 미남 사내를 주워온 약초꾼 처녀",
+        "title_pattern": "따옴표인용",
+        "thumb_url": "https://i.ytimg.com/vi/ATna0gvP4Us/hqdefault.jpg"
+      },
+      {
+        "vid": "9Lh3WLA9yJY",
+        "channel": "뒷골목 야담",
+        "title": "&quot;아버님, 거지에게 시집가란 말이옵니까?&quot; 마지막 유언에 거지 굴로 걸어간 아씨... | 야담 | 옛날이야기 | 민담 | 수면동화 | 오디오북",
+        "views": 33291,
+        "ch_subs": 1080,
+        "efficiency": 30.82,
+        "person_type": "일러스트_조선인물",
+        "person_names": [
+          "이름 모를 양반가 아씨(눈물 한복 여인)",
+          "이름 모를 거지 남편(누더기 사내)",
+          "배경 그림자 군중"
+        ],
+        "text_main": "사약 받은 아비의 유언 \"거지에게 시집가라\" / 첫날밤 누더기를 벗은 남편에 숨 멈춘 아씨",
+        "title_pattern": "따옴표인용",
+        "thumb_url": "https://i.ytimg.com/vi/9Lh3WLA9yJY/hqdefault.jpg"
+      }
+    ]
+  }
+}

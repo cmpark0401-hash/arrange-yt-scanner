@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07 17:08",
+  "generated_at": "2026-06-07 17:32",
   "overall_icon": "🔴",
   "overall_label": "긴급 점검",
   "overall_severity": "critical",
@@ -69,7 +69,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "18시간 전",
+      "ago": "19시간 전",
       "updated_at": "2026-06-06 22:27",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-06.json",
       "severity": "info"
@@ -80,9 +80,9 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-07 17:08",
-      "last_auto_run": "2026-06-07 17:08",
-      "detail": "마지막 자동 추천: 2026-06-07 17:08"
+      "updated_at": "2026-06-07 17:32",
+      "last_auto_run": "2026-06-07 17:32",
+      "detail": "마지막 자동 추천: 2026-06-07 17:32"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-07 17:08"
+      "updated_at": "2026-06-07 17:32"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
