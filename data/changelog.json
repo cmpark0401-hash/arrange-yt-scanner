@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-06-07 17:42",
+  "generated_at": "2026-06-07 21:30",
   "total_commits": 80,
   "by_category": {
-    "data": 37,
+    "data": 38,
     "docs": 5,
     "other": 4,
     "feat": 29,
-    "style": 2,
+    "style": 1,
     "fix": 1,
     "refactor": 2
   },
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 10,
+      "count": 11,
       "commits": [
+        {
+          "hash": "7c03432",
+          "full_hash": "7c03432cca6cb1fbd349dbd6d23e874b1fd33ec1",
+          "ts": "2026-06-07 17:42",
+          "ts_iso": "2026-06-07T17:42:20",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 17:42:20",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "c942e01",
           "full_hash": "c942e01def50be159a50c4180d461355748cd64a",
@@ -759,7 +769,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 9,
+      "count": 8,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "헤더 chip 마우스 오버 툴팁 — CSS-only (애니메이션 + 다크 박스)",
           "category": "other",
           "category_label": "📌 기타"
-        },
-        {
-          "hash": "b992386",
-          "full_hash": "b992386eaa3682ca28c4b856b18cd1abf5849ab0",
-          "ts": "2026-06-01 13:23",
-          "ts_iso": "2026-06-01T13:23:10",
-          "author": "cmpark0401-hash",
-          "subject": "헤더 chip 정리: 라벨 제거 + 분석업데이트 아이콘/색 변별력 강화",
-          "category": "style",
-          "category_label": "🎨 디자인"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "7c03432",
+      "full_hash": "7c03432cca6cb1fbd349dbd6d23e874b1fd33ec1",
+      "ts": "2026-06-07 17:42",
+      "ts_iso": "2026-06-07T17:42:20",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 17:42:20",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "c942e01",
       "full_hash": "c942e01def50be159a50c4180d461355748cd64a",
@@ -1644,16 +1654,6 @@
       "subject": "헤더 chip 마우스 오버 툴팁 — CSS-only (애니메이션 + 다크 박스)",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "b992386",
-      "full_hash": "b992386eaa3682ca28c4b856b18cd1abf5849ab0",
-      "ts": "2026-06-01 13:23",
-      "ts_iso": "2026-06-01T13:23:10",
-      "author": "cmpark0401-hash",
-      "subject": "헤더 chip 정리: 라벨 제거 + 분석업데이트 아이콘/색 변별력 강화",
-      "category": "style",
-      "category_label": "🎨 디자인"
     }
   ]
 }
