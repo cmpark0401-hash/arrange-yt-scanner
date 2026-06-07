@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-07 10:01",
+  "generated_at": "2026-06-07 10:58",
   "total_commits": 80,
   "by_category": {
-    "data": 33,
+    "data": 34,
     "docs": 5,
     "other": 5,
-    "feat": 31,
+    "feat": 30,
     "style": 3,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "7bab3b5",
+          "full_hash": "7bab3b52da81336269fb813a0742ecc2753dbb3e",
+          "ts": "2026-06-07 10:01",
+          "ts_iso": "2026-06-07T10:01:26",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 10:01:25",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "2dab05d",
           "full_hash": "2dab05d0d7ec8b6654e7976a7392807d2d685402",
@@ -709,7 +719,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 14,
+      "count": 13,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "docs(manual): 신규 페이지/기능 가이드 추가",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "d520a5e",
-          "full_hash": "d520a5edad4001b9ca39e4cf193de32648447f99",
-          "ts": "2026-06-01 12:13",
-          "ts_iso": "2026-06-01T12:13:33",
-          "author": "cmpark0401-hash",
-          "subject": "feat(candidates): 추적 중 탭에도 카테고리 필터 + 페이지네이션 추가",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "7bab3b5",
+      "full_hash": "7bab3b52da81336269fb813a0742ecc2753dbb3e",
+      "ts": "2026-06-07 10:01",
+      "ts_iso": "2026-06-07T10:01:26",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 10:01:25",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "2dab05d",
       "full_hash": "2dab05d0d7ec8b6654e7976a7392807d2d685402",
@@ -1642,16 +1652,6 @@
       "ts_iso": "2026-06-01T12:23:14",
       "author": "cmpark0401-hash",
       "subject": "docs(manual): 신규 페이지/기능 가이드 추가",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "d520a5e",
-      "full_hash": "d520a5edad4001b9ca39e4cf193de32648447f99",
-      "ts": "2026-06-01 12:13",
-      "ts_iso": "2026-06-01T12:13:33",
-      "author": "cmpark0401-hash",
-      "subject": "feat(candidates): 추적 중 탭에도 카테고리 필터 + 페이지네이션 추가",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
