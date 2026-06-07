@@ -82,7 +82,8 @@
         "title_pattern": "따옴표인용",
         "thumb_url": "https://i.ytimg.com/vi/25tCUGqi6tY/hqdefault.jpg"
       }
-    ]
+    ],
+    "last_refresh": "2026-06-07"
   },
   "잘듣네": {
     "slug": "nn-flix",
@@ -166,7 +167,8 @@
         "title_pattern": "따옴표인용",
         "thumb_url": "https://i.ytimg.com/vi/9Lh3WLA9yJY/hqdefault.jpg"
       }
-    ]
+    ],
+    "last_refresh": "2026-06-07"
   },
   "과만세": {
     "slug": "science-world-life",
@@ -240,7 +242,8 @@
         "title_pattern": "",
         "thumb_url": "https://i.ytimg.com/vi/Z4uQzU2fKw4/hqdefault.jpg"
       }
-    ]
+    ],
+    "last_refresh": "2026-06-07"
   },
   "깊은밤야담": {
     "slug": "yadam",
@@ -323,6 +326,7 @@
         "title_pattern": "따옴표인용",
         "thumb_url": "https://i.ytimg.com/vi/9Lh3WLA9yJY/hqdefault.jpg"
       }
-    ]
+    ],
+    "last_refresh": "2026-06-07"
   }
 }
