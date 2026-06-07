@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07 10:58",
+  "generated_at": "2026-06-07 10:59",
   "overall_icon": "🔴",
   "overall_label": "긴급 점검",
   "overall_severity": "critical",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "58분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-07 09:59",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-07.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "58분 전",
+      "ago": "59분 전",
       "updated_at": "2026-06-07 10:00",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-07.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "58분 전",
+      "ago": "59분 전",
       "updated_at": "2026-06-07 10:00",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-07.json",
       "severity": "warning"
@@ -46,10 +46,12 @@
     },
     {
       "label": "🌏 모니터링 (JP)",
-      "status": "dead",
-      "icon": "🔴",
-      "status_label": "파일 없음",
-      "ago": "N/A",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "51분 전",
+      "updated_at": "2026-06-07 10:07",
+      "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-07.json",
       "severity": "warning"
     },
     {
@@ -77,10 +79,10 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "57분 전",
-      "updated_at": "2026-06-07 10:01",
-      "last_auto_run": "2026-06-07 10:01",
-      "detail": "마지막 자동 추천: 2026-06-07 10:01"
+      "ago": "0분 전",
+      "updated_at": "2026-06-07 10:59",
+      "last_auto_run": "2026-06-07 10:59",
+      "detail": "마지막 자동 추천: 2026-06-07 10:59"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -88,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-07 10:58"
+      "updated_at": "2026-06-07 10:59"
     },
     {
       "label": "🛡️ 데이터 신뢰도",

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-07 10:58",
+  "generated_at": "2026-06-07 10:59",
   "total_commits": 80,
   "by_category": {
+    "docs": 6,
     "data": 34,
-    "docs": 5,
     "other": 5,
-    "feat": 30,
+    "feat": 29,
     "style": 3,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 6,
+      "count": 7,
       "commits": [
+        {
+          "hash": "2afaccc",
+          "full_hash": "2afaccc121503d320032d1cc899cfbf438ca2852",
+          "ts": "2026-06-07 10:58",
+          "ts_iso": "2026-06-07T10:58:21",
+          "author": "cmpark0401-hash",
+          "subject": "manual JP: 2026-06-07 10:58",
+          "category": "docs",
+          "category_label": "📖 문서"
+        },
         {
           "hash": "7bab3b5",
           "full_hash": "7bab3b52da81336269fb813a0742ecc2753dbb3e",
@@ -719,7 +729,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 13,
+      "count": 12,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "헤더/가이드 개편: 시그널·폭발·24h 클릭 가능 chip + 가이드/일별 흰 배경 + JP 일장기 강조 + 개발 히스토리 + TL;DR 한글화",
           "category": "docs",
           "category_label": "📖 문서"
-        },
-        {
-          "hash": "c7a58fb",
-          "full_hash": "c7a58fb3512e5cd2a704e065eef4f8409ba78de7",
-          "ts": "2026-06-01 12:23",
-          "ts_iso": "2026-06-01T12:23:14",
-          "author": "cmpark0401-hash",
-          "subject": "docs(manual): 신규 페이지/기능 가이드 추가",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "2afaccc",
+      "full_hash": "2afaccc121503d320032d1cc899cfbf438ca2852",
+      "ts": "2026-06-07 10:58",
+      "ts_iso": "2026-06-07T10:58:21",
+      "author": "cmpark0401-hash",
+      "subject": "manual JP: 2026-06-07 10:58",
+      "category": "docs",
+      "category_label": "📖 문서"
+    },
     {
       "hash": "7bab3b5",
       "full_hash": "7bab3b52da81336269fb813a0742ecc2753dbb3e",
@@ -1644,16 +1654,6 @@
       "subject": "헤더/가이드 개편: 시그널·폭발·24h 클릭 가능 chip + 가이드/일별 흰 배경 + JP 일장기 강조 + 개발 히스토리 + TL;DR 한글화",
       "category": "docs",
       "category_label": "📖 문서"
-    },
-    {
-      "hash": "c7a58fb",
-      "full_hash": "c7a58fb3512e5cd2a704e065eef4f8409ba78de7",
-      "ts": "2026-06-01 12:23",
-      "ts_iso": "2026-06-01T12:23:14",
-      "author": "cmpark0401-hash",
-      "subject": "docs(manual): 신규 페이지/기능 가이드 추가",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
