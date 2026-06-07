@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-07 10:59",
+  "generated_at": "2026-06-07 17:08",
   "total_commits": 80,
   "by_category": {
-    "docs": 6,
-    "data": 34,
+    "data": 35,
+    "docs": 5,
     "other": 5,
     "feat": 29,
     "style": 3,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 7,
+      "count": 8,
       "commits": [
+        {
+          "hash": "922d5b6",
+          "full_hash": "922d5b6a727785859bae657a8610b1d786404d91",
+          "ts": "2026-06-07 10:59",
+          "ts_iso": "2026-06-07T10:59:30",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 10:59:30",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "2afaccc",
           "full_hash": "2afaccc121503d320032d1cc899cfbf438ca2852",
@@ -729,7 +739,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 12,
+      "count": 11,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "히스토리 mock 화면 실제 디자인으로 — 각 날짜별 헤더+탭+카드 미니어처",
           "category": "style",
           "category_label": "🎨 디자인"
-        },
-        {
-          "hash": "1eb15d3",
-          "full_hash": "1eb15d34f70566f4c9040969b333e9a961f1e925",
-          "ts": "2026-06-01 12:46",
-          "ts_iso": "2026-06-01T12:46:21",
-          "author": "cmpark0401-hash",
-          "subject": "헤더/가이드 개편: 시그널·폭발·24h 클릭 가능 chip + 가이드/일별 흰 배경 + JP 일장기 강조 + 개발 히스토리 + TL;DR 한글화",
-          "category": "docs",
-          "category_label": "📖 문서"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "922d5b6",
+      "full_hash": "922d5b6a727785859bae657a8610b1d786404d91",
+      "ts": "2026-06-07 10:59",
+      "ts_iso": "2026-06-07T10:59:30",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 10:59:30",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "2afaccc",
       "full_hash": "2afaccc121503d320032d1cc899cfbf438ca2852",
@@ -1644,16 +1654,6 @@
       "subject": "히스토리 mock 화면 실제 디자인으로 — 각 날짜별 헤더+탭+카드 미니어처",
       "category": "style",
       "category_label": "🎨 디자인"
-    },
-    {
-      "hash": "1eb15d3",
-      "full_hash": "1eb15d34f70566f4c9040969b333e9a961f1e925",
-      "ts": "2026-06-01 12:46",
-      "ts_iso": "2026-06-01T12:46:21",
-      "author": "cmpark0401-hash",
-      "subject": "헤더/가이드 개편: 시그널·폭발·24h 클릭 가능 chip + 가이드/일별 흰 배경 + JP 일장기 강조 + 개발 히스토리 + TL;DR 한글화",
-      "category": "docs",
-      "category_label": "📖 문서"
     }
   ]
 }
