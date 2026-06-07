@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-07 09:30",
+  "updated_at": "2026-06-07 10:01",
   "today": "2026-06-07",
   "categories_def": {
     "single_explosion": {
@@ -4618,6 +4618,98 @@
               "note": "자동 추천 (score=52923)"
             }
           ]
+        },
+        {
+          "id": "sw-20260607-ai-과학-BqRwq6",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 방구석 과학: 페루 축제에서 한국인 소매치기하고 ㅈ된 외국인 (115,994뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 0.6x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "페루 축제에서 한국인 소매치기하고 ㅈ된 외국인",
+            "efficiency": 0.6338469945355191,
+            "views": 115994,
+            "velocity": 4010,
+            "url": "https://www.youtube.com/watch?v=BqRwq6Iy404",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-07 10:00",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=10760)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260607-ai-과학-ZH4YdB",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 방구석 과학: 한국인에게 인종차별한 미국 여성의 최후 (111,765뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 0.6x",
+            "1일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "한국인에게 인종차별한 미국 여성의 최후",
+            "efficiency": 0.6107377049180328,
+            "views": 111765,
+            "velocity": 0,
+            "url": "https://www.youtube.com/watch?v=ZH4YdBpi57c",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-07 10:00",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=7223)"
+            }
+          ]
         }
       ]
     },
@@ -5408,6 +5500,6 @@
       ]
     }
   ],
-  "last_auto_run": "2026-06-07 09:30",
-  "last_ai_detect_run": "2026-06-07 09:30"
+  "last_auto_run": "2026-06-07 10:01",
+  "last_ai_detect_run": "2026-06-07 10:01"
 }

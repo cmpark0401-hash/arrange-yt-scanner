@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-07 10:00",
+  "generated_at": "2026-06-07 10:01",
   "total_commits": 80,
   "by_category": {
-    "data": 32,
+    "data": 33,
     "docs": 5,
-    "other": 6,
+    "other": 5,
     "feat": 31,
     "style": 3,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 4,
+      "count": 5,
       "commits": [
+        {
+          "hash": "2dab05d",
+          "full_hash": "2dab05d0d7ec8b6654e7976a7392807d2d685402",
+          "ts": "2026-06-07 10:00",
+          "ts_iso": "2026-06-07T10:00:24",
+          "author": "cmpark0401-hash",
+          "subject": "auto: build 2026-06-07 10:00",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "19baae5",
           "full_hash": "19baae5af6f49613f17705c55b104cb4800e4225",
@@ -699,7 +709,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 15,
+      "count": 14,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "feat(candidates): 추적 중 탭에도 카테고리 필터 + 페이지네이션 추가",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "8ddec06",
-          "full_hash": "8ddec06ee79060fe5c7d830273ca52adadd0f985",
-          "ts": "2026-06-01 12:07",
-          "ts_iso": "2026-06-01T12:07:49",
-          "author": "cmpark0401-hash",
-          "subject": "fix(candidates): extract inline JS to candidates_logic.js — JS syntax error 해결",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "2dab05d",
+      "full_hash": "2dab05d0d7ec8b6654e7976a7392807d2d685402",
+      "ts": "2026-06-07 10:00",
+      "ts_iso": "2026-06-07T10:00:24",
+      "author": "cmpark0401-hash",
+      "subject": "auto: build 2026-06-07 10:00",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "19baae5",
       "full_hash": "19baae5af6f49613f17705c55b104cb4800e4225",
@@ -1644,16 +1654,6 @@
       "subject": "feat(candidates): 추적 중 탭에도 카테고리 필터 + 페이지네이션 추가",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "8ddec06",
-      "full_hash": "8ddec06ee79060fe5c7d830273ca52adadd0f985",
-      "ts": "2026-06-01 12:07",
-      "ts_iso": "2026-06-01T12:07:49",
-      "author": "cmpark0401-hash",
-      "subject": "fix(candidates): extract inline JS to candidates_logic.js — JS syntax error 해결",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }
