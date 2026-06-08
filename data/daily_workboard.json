@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-09 02:32",
+  "updated_at": "2026-06-09 03:27",
   "today": "2026-06-09",
   "categories_def": {
     "single_explosion": {
@@ -6544,8 +6544,8 @@
       ]
     }
   ],
-  "last_auto_run": "2026-06-09 02:32",
-  "last_ai_detect_run": "2026-06-09 02:32",
+  "last_auto_run": "2026-06-09 03:27",
+  "last_ai_detect_run": "2026-06-09 03:27",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [

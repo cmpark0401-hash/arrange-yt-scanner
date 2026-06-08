@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "55분 전",
+      "ago": "56분 전",
       "updated_at": "2026-06-09 02:31",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-09.json",
       "severity": "critical"
@@ -79,10 +79,10 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "55분 전",
-      "updated_at": "2026-06-09 02:32",
-      "last_auto_run": "2026-06-09 02:32",
-      "detail": "마지막 자동 추천: 2026-06-09 02:32"
+      "ago": "0분 전",
+      "updated_at": "2026-06-09 03:27",
+      "last_auto_run": "2026-06-09 03:27",
+      "detail": "마지막 자동 추천: 2026-06-09 03:27"
     },
     {
       "label": "🏗️ 사이트 빌드",

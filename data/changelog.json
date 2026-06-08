@@ -2,10 +2,10 @@
   "generated_at": "2026-06-09 03:27",
   "total_commits": 80,
   "by_category": {
+    "docs": 6,
     "data": 44,
-    "docs": 5,
     "other": 1,
-    "feat": 26,
+    "feat": 25,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-09",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "3a676d7",
+          "full_hash": "3a676d7f90a18c7c4616ab8a33dcfe5c7d765c87",
+          "ts": "2026-06-09 03:27",
+          "ts_iso": "2026-06-09T03:27:31",
+          "author": "cmpark0401-hash",
+          "subject": "manual JP: 2026-06-09 03:27",
+          "category": "docs",
+          "category_label": "📖 문서"
+        },
         {
           "hash": "435e654",
           "full_hash": "435e6546610666cb36b8ae7f09308a4722eef2f5",
@@ -765,6 +775,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "3a676d7",
+      "full_hash": "3a676d7f90a18c7c4616ab8a33dcfe5c7d765c87",
+      "ts": "2026-06-09 03:27",
+      "ts_iso": "2026-06-09T03:27:31",
+      "author": "cmpark0401-hash",
+      "subject": "manual JP: 2026-06-09 03:27",
+      "category": "docs",
+      "category_label": "📖 문서"
+    },
     {
       "hash": "435e654",
       "full_hash": "435e6546610666cb36b8ae7f09308a4722eef2f5",
@@ -1552,16 +1572,6 @@
       "ts_iso": "2026-06-01T19:36:34",
       "author": "cmpark0401-hash",
       "subject": "data refresh: 신규 26채널 첫 데이터 수집 (총 112채널)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "680b916",
-      "full_hash": "680b91675d1ab48c270a42b1d1d91939e4052924",
-      "ts": "2026-06-01 18:46",
-      "ts_iso": "2026-06-01T18:46:45",
-      "author": "cmpark0401-hash",
-      "subject": "autopsy: add channel #7 (closes #7)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
