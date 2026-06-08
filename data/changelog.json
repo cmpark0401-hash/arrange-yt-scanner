@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-08 21:30",
+  "generated_at": "2026-06-09 02:32",
   "total_commits": 80,
   "by_category": {
-    "data": 42,
+    "data": 43,
     "docs": 5,
     "other": 1,
-    "feat": 28,
+    "feat": 27,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-08",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "de8a9a5",
+          "full_hash": "de8a9a586fc374915032113df71efd13dae9ba8a",
+          "ts": "2026-06-08 21:30",
+          "ts_iso": "2026-06-08T21:30:11",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-08 21:30:11",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "3e94737",
           "full_hash": "3e947374e554c49913cb101ea3957ef8bb4ab2e1",
@@ -816,6 +826,16 @@
   ],
   "all_commits": [
     {
+      "hash": "de8a9a5",
+      "full_hash": "de8a9a586fc374915032113df71efd13dae9ba8a",
+      "ts": "2026-06-08 21:30",
+      "ts_iso": "2026-06-08T21:30:11",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-08 21:30:11",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
+    {
       "hash": "3e94737",
       "full_hash": "3e947374e554c49913cb101ea3957ef8bb4ab2e1",
       "ts": "2026-06-08 10:36",
@@ -1602,16 +1622,6 @@
       "ts_iso": "2026-06-01T16:17:23",
       "author": "cmpark0401-hash",
       "subject": "feat(manual): 💎 제우스 노하우 1+2 섹션 추가 (오토워커 1기 1달 750만원 검증)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "1859d8c",
-      "full_hash": "1859d8c7e0f5ec38fdae24349aa6cb01da35ddc2",
-      "ts": "2026-06-01 13:56",
-      "ts_iso": "2026-06-01T13:56:07",
-      "author": "cmpark0401-hash",
-      "subject": "툴팁 아래로 + nav 메뉴에도 hover 설명 추가",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
