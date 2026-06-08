@@ -1,16 +1,32 @@
 {
-  "generated_at": "2026-06-09 02:32",
+  "generated_at": "2026-06-09 03:27",
   "total_commits": 80,
   "by_category": {
-    "data": 43,
+    "data": 44,
     "docs": 5,
     "other": 1,
-    "feat": 27,
+    "feat": 26,
     "style": 1,
     "fix": 1,
     "refactor": 2
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-09",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "435e654",
+          "full_hash": "435e6546610666cb36b8ae7f09308a4722eef2f5",
+          "ts": "2026-06-09 02:32",
+          "ts_iso": "2026-06-09T02:32:35",
+          "author": "cmpark0401-hash",
+          "subject": "auto: build 2026-06-09 02:32",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        }
+      ]
+    },
     {
       "date": "2026-06-08",
       "count": 4,
@@ -746,85 +762,19 @@
           "category_label": "✨ 신규 기능"
         }
       ]
-    },
-    {
-      "date": "2026-06-02",
-      "count": 7,
-      "commits": [
-        {
-          "hash": "b750bf3",
-          "full_hash": "b750bf35e541e95336155da0515e3e35ceb2eea9",
-          "ts": "2026-06-02 19:44",
-          "ts_iso": "2026-06-02T19:44:39",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 버터떡 노하우 — 제목·썸네일 체크리스트 + 1분 후킹·엔딩X·본인 의견 강제",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "89d4056",
-          "full_hash": "89d4056e5a42fc7fc3852746bd967c78dee6dd4c",
-          "ts": "2026-06-02 14:06",
-          "ts_iso": "2026-06-02T14:06:45",
-          "author": "cmpark0401-hash",
-          "subject": "data: 126채널 모니터링 + 채널 포커스 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "6db02b2",
-          "full_hash": "6db02b28f0d7890017a3f7f53010fa4aad365dbc",
-          "ts": "2026-06-02 13:07",
-          "ts_iso": "2026-06-02T13:07:12",
-          "author": "cmpark0401-hash",
-          "subject": "autopsy: add channel #8 (closes #8)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "a217978",
-          "full_hash": "a21797815a2dc86d3baf955bf902a27d4dbab2a6",
-          "ts": "2026-06-02 12:29",
-          "ts_iso": "2026-06-02T12:29:32",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 위인·인문 카테고리 신설 + 잘듣네 전용 풀 구축",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "7b0355d",
-          "full_hash": "7b0355d6de343ffcb470b39cd2abbdcca4d959a0",
-          "ts": "2026-06-02 09:30",
-          "ts_iso": "2026-06-02T09:30:22",
-          "author": "cmpark0401-hash",
-          "subject": "data: KR 재편집 재폭발 30건 + JP 풀세트 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "9de4aab",
-          "full_hash": "9de4aab78181144c3e69ba2b37d4b83e7f1a925e",
-          "ts": "2026-06-02 09:29",
-          "ts_iso": "2026-06-02T09:29:40",
-          "author": "cmpark0401-hash",
-          "subject": "manual JP: 2026-06-02 09:29",
-          "category": "docs",
-          "category_label": "📖 문서"
-        },
-        {
-          "hash": "1fa68bc",
-          "full_hash": "1fa68bc81b262f44971b2f41afaf442c5c733491",
-          "ts": "2026-06-02 08:38",
-          "ts_iso": "2026-06-02T08:38:21",
-          "author": "cmpark0401-hash",
-          "subject": "auto: build 2026-06-02 08:38",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "435e654",
+      "full_hash": "435e6546610666cb36b8ae7f09308a4722eef2f5",
+      "ts": "2026-06-09 02:32",
+      "ts_iso": "2026-06-09T02:32:35",
+      "author": "cmpark0401-hash",
+      "subject": "auto: build 2026-06-09 02:32",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "de8a9a5",
       "full_hash": "de8a9a586fc374915032113df71efd13dae9ba8a",
@@ -1612,16 +1562,6 @@
       "ts_iso": "2026-06-01T18:46:45",
       "author": "cmpark0401-hash",
       "subject": "autopsy: add channel #7 (closes #7)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "2406f17",
-      "full_hash": "2406f17b3694e156c88dd0c01eb50140aa0de4ed",
-      "ts": "2026-06-01 16:17",
-      "ts_iso": "2026-06-01T16:17:23",
-      "author": "cmpark0401-hash",
-      "subject": "feat(manual): 💎 제우스 노하우 1+2 섹션 추가 (오토워커 1기 1달 750만원 검증)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
