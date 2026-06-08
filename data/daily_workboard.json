@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-07 21:30",
-  "today": "2026-06-07",
+  "updated_at": "2026-06-08 09:30",
+  "today": "2026-06-08",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -2568,6 +2568,233 @@
               "note": "AI 채널 폭발 자동 검출 (score=7545)"
             }
           ]
+        },
+        {
+          "id": "kn-20260608-auto-se-h5aa5b9",
+          "category": "single_explosion",
+          "title": "[자동🤖] 경제우체부: &quot;이란 1500만 대피&quot; 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피 (1,741,463뷰 · 효율 276.0x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 276.0x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "경제우체부",
+            "title": "&quot;이란 1500만 대피&quot; 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피아의 실체",
+            "efficiency": 275.98462757527733,
+            "views": 1741463,
+            "velocity": 0,
+            "url": "",
+            "categories": [
+              "경제",
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=277726)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260608-auto-se-h89f6b9",
+          "category": "single_explosion",
+          "title": "[자동🤖] 크랩 KLAB: 살다 살다 '투표용지 부족'으로 투표 못 한 2026년 대한민국 근황｜크랩 (786,387뷰 · 효율 0.8x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.8x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "살다 살다 '투표용지 부족'으로 투표 못 한 2026년 대한민국 근황｜크랩",
+            "efficiency": 0.7786009900990098,
+            "views": 786387,
+            "velocity": 12667,
+            "url": "",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=64232)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260608-auto-cc-hb27e54",
+          "category": "cross_category",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,351,508뷰 · 효율 402.0x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 402.0x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 401.9941772151899,
+            "views": 6351508,
+            "velocity": 55,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408401)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260608-auto-cc-h68cfc2",
+          "category": "cross_category",
+          "title": "[자동🤖] 방구석 과학: 페루 축제에서 한국인 소매치기하고 ㅈ된 외국인 (115,994뷰 · 효율 0.6x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "페루 축제에서 한국인 소매치기하고 ㅈ된 외국인",
+            "efficiency": 0.6338469945355191,
+            "views": 115994,
+            "velocity": 4010,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=54760)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260608-ai-경제-8A-34z",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 만화 경제학: SK하이닉스·삼성전자 HBM 전망과 이수페타시스·삼성전기 기판 관련주 총정리 삼성전자 세계 톱4 전 (168,362뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 2.0x",
+            "6일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "만화 경제학",
+            "title": "SK하이닉스·삼성전자 HBM 전망과 이수페타시스·삼성전기 기판 관련주 총정리 삼성전자 세계 톱4 전망 내놓은 월가?…하이닉스는 상승 여력 제한 이미 시장에 금리 반영됐다!",
+            "efficiency": 2.0309047044632087,
+            "views": 168362,
+            "velocity": 221,
+            "url": "https://www.youtube.com/watch?v=8A-34zFRoZg",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=6420)"
+            }
+          ]
         }
       ]
     },
@@ -3409,6 +3636,96 @@
               "ts": "2026-06-07 00:11",
               "type": "auto_proposed",
               "note": "자동 추천 (score=937)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260608-auto-se-h30d387",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '복지축제는 끝났다' 사회주의 실험은 실패했다...복지천국에서 자본주의 천국으로 방향을 바꾼 스웨덴 (160,847뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'복지축제는 끝났다' 사회주의 실험은 실패했다...복지천국에서 자본주의 천국으로 방향을 바꾼 스웨덴",
+            "efficiency": 0.12278396946564886,
+            "views": 160847,
+            "velocity": 3652,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=53936)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260608-auto-se-h1a67d1",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소' (334,908뷰 · 효율 0.3x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소'",
+            "efficiency": 0.25565496183206105,
+            "views": 334908,
+            "velocity": 903,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=1494)"
             }
           ]
         }
@@ -4710,6 +5027,96 @@
               "note": "AI 채널 폭발 자동 검출 (score=7223)"
             }
           ]
+        },
+        {
+          "id": "sw-20260608-auto-se-hb27e54",
+          "category": "single_explosion",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,351,508뷰 · 효율 402.0x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 402.0x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 401.9941772151899,
+            "views": 6351508,
+            "velocity": 55,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408401)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260608-auto-se-h68cfc2",
+          "category": "single_explosion",
+          "title": "[자동🤖] 방구석 과학: 페루 축제에서 한국인 소매치기하고 ㅈ된 외국인 (115,994뷰 · 효율 0.6x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "페루 축제에서 한국인 소매치기하고 ㅈ된 외국인",
+            "efficiency": 0.6338469945355191,
+            "views": 115994,
+            "velocity": 4010,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=54760)"
+            }
+          ]
         }
       ]
     },
@@ -5496,12 +5903,103 @@
               "note": "자동 추천 (score=8195)"
             }
           ]
+        },
+        {
+          "id": "yd-20260608-auto-se-h320d14",
+          "category": "single_explosion",
+          "title": "[자동🤖] 보다 BODA: 과학자들을 뉴질랜드로 보내버리면 생기는 일ㅣ여행인 줄 알았나보다 Ep.01 (213,367뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "보다 BODA",
+            "title": "과학자들을 뉴질랜드로 보내버리면 생기는 일ㅣ여행인 줄 알았나보다 Ep.01",
+            "efficiency": 0.06860675241157556,
+            "views": 213367,
+            "velocity": 5011,
+            "url": "",
+            "categories": [
+              "지식",
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=55293)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260608-auto-se-h22d72b",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열 (222,979뷰 · 효율 29.8x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 29.8x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열",
+            "efficiency": 29.849933065595717,
+            "views": 222979,
+            "velocity": 635,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-08 09:30",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=30708)"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-07 21:30",
-  "last_ai_detect_run": "2026-06-07 21:30",
+  "last_auto_run": "2026-06-08 09:30",
+  "last_ai_detect_run": "2026-06-08 09:30",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [

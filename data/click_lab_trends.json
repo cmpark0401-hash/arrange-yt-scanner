@@ -140,69 +140,93 @@
         "숫자충격": 2,
         "금기위반": 1
       }
+    },
+    {
+      "date": "2026-06-08",
+      "total_videos": 75,
+      "by_category": {
+        "경제·시사": {
+          "count": 18,
+          "avg_efficiency": 16.97,
+          "max_efficiency": 56.77,
+          "explosive_5x": 18
+        },
+        "역사·야담": {
+          "count": 18,
+          "avg_efficiency": 24.9,
+          "max_efficiency": 141.21,
+          "explosive_5x": 18
+        },
+        "과학·건강": {
+          "count": 18,
+          "avg_efficiency": 3.32,
+          "max_efficiency": 6.21,
+          "explosive_5x": 5
+        },
+        "지식·교양": {
+          "count": 18,
+          "avg_efficiency": 0.57,
+          "max_efficiency": 2.07,
+          "explosive_5x": 0
+        },
+        "심리·인물": {
+          "count": 3,
+          "avg_efficiency": 0.13,
+          "max_efficiency": 0.19,
+          "explosive_5x": 0
+        }
+      },
+      "top_efficiency_pioneers": [
+        {
+          "vid": "t-lRlnmPkL0",
+          "channel": "담담소담 민담",
+          "title": "가시덤불 심는 며느리를 모두가 비웃었는데… 장마 뒤 마을이 뒤집힌 이유 | 야담 | 옛날이야기 | 조선시대 ",
+          "efficiency": 141.21
+        },
+        {
+          "vid": "uFq-sr_ia6o",
+          "channel": "코믹스 경제",
+          "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열",
+          "efficiency": 56.77
+        },
+        {
+          "vid": "xpz_QLv8060",
+          "channel": "손안의 경제학",
+          "title": "2026년 대한민국 자산 계급 8개층 — 당신은 지금 몇 층에 살고 있습니까? | 순자산 8층 구조 완전 공",
+          "efficiency": 42.86
+        },
+        {
+          "vid": "ATna0gvP4Us",
+          "channel": "달빛 아래 이야기",
+          "title": "&quot;내가 먹여살리겠소&quot; 산골 약초꾼 처녀가 눈 속에서 업고 온 사내, 알고 보니.. | 야담",
+          "efficiency": 36.98
+        },
+        {
+          "vid": "9Lh3WLA9yJY",
+          "channel": "뒷골목 야담",
+          "title": "&quot;아버님, 거지에게 시집가란 말이옵니까?&quot; 마지막 유언에 거지 굴로 걸어간 아씨... | ",
+          "efficiency": 30.82
+        }
+      ],
+      "person_type_distribution": {
+        "일러스트_조선인물": 8,
+        "유명인_실제얼굴": 2,
+        "일러스트_현대인물": 1,
+        "유명인_AI생성": 2
+      },
+      "title_pattern_distribution": {
+        "대비반전": 1,
+        "따옴표인용": 6,
+        "반문도발": 3,
+        "숫자충격": 2,
+        "금기위반": 1
+      }
     }
   ],
   "latest_diff": {
-    "new_pioneers": [
-      {
-        "vid": "t-lRlnmPkL0",
-        "channel": "담담소담 민담",
-        "title": "가시덤불 심는 며느리를 모두가 비웃었는데… 장마 뒤 마을이 뒤집힌 이유 | 야담 | 옛날이야기 | 조선시대 ",
-        "efficiency": 141.21
-      },
-      {
-        "vid": "uFq-sr_ia6o",
-        "channel": "코믹스 경제",
-        "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열",
-        "efficiency": 56.77
-      },
-      {
-        "vid": "xpz_QLv8060",
-        "channel": "손안의 경제학",
-        "title": "2026년 대한민국 자산 계급 8개층 — 당신은 지금 몇 층에 살고 있습니까? | 순자산 8층 구조 완전 공",
-        "efficiency": 42.86
-      },
-      {
-        "vid": "ATna0gvP4Us",
-        "channel": "달빛 아래 이야기",
-        "title": "&quot;내가 먹여살리겠소&quot; 산골 약초꾼 처녀가 눈 속에서 업고 온 사내, 알고 보니.. | 야담",
-        "efficiency": 36.98
-      },
-      {
-        "vid": "9Lh3WLA9yJY",
-        "channel": "뒷골목 야담",
-        "title": "&quot;아버님, 거지에게 시집가란 말이옵니까?&quot; 마지막 유언에 거지 굴로 걸어간 아씨... | ",
-        "efficiency": 30.82
-      }
-    ],
-    "category_movement": {
-      "경제·시사": {
-        "yesterday": 14.5,
-        "today": 16.97,
-        "delta": 2.47,
-        "direction": "↑"
-      },
-      "역사·야담": {
-        "yesterday": 20.0,
-        "today": 24.9,
-        "delta": 4.9,
-        "direction": "↑"
-      },
-      "과학·건강": {
-        "yesterday": 2.1,
-        "today": 3.32,
-        "delta": 1.22,
-        "direction": "↑"
-      }
-    },
-    "person_type_shift": {
-      "유명인_실제얼굴": {
-        "yesterday": 4,
-        "today": 2,
-        "delta": -2,
-        "direction": "↓"
-      }
-    }
+    "new_pioneers": [],
+    "category_movement": {},
+    "person_type_shift": {}
   },
-  "last_refresh": "2026-06-07 17:41:39"
+  "last_refresh": "2026-06-08 06:30:00"
 }

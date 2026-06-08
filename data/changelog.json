@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-07 21:30",
+  "generated_at": "2026-06-08 09:30",
   "total_commits": 80,
   "by_category": {
-    "data": 38,
+    "data": 39,
     "docs": 5,
-    "other": 4,
+    "other": 3,
     "feat": 29,
     "style": 1,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-07",
-      "count": 11,
+      "count": 12,
       "commits": [
+        {
+          "hash": "1dee479",
+          "full_hash": "1dee479254b081b3a1b2d6471f9565eaec18e532",
+          "ts": "2026-06-07 21:30",
+          "ts_iso": "2026-06-07T21:30:11",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-07 21:30:11",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "7c03432",
           "full_hash": "7c03432cca6cb1fbd349dbd6d23e874b1fd33ec1",
@@ -769,7 +779,7 @@
     },
     {
       "date": "2026-06-01",
-      "count": 8,
+      "count": 7,
       "commits": [
         {
           "hash": "6a6bd6d",
@@ -840,21 +850,21 @@
           "subject": "feat: 🎓 유튜브 최신 가이드 — Google Sheet 기반 페이지",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "866445f",
-          "full_hash": "866445fe4a80b7938b84f3d01ab34699ef079080",
-          "ts": "2026-06-01 13:25",
-          "ts_iso": "2026-06-01T13:25:59",
-          "author": "cmpark0401-hash",
-          "subject": "헤더 chip 마우스 오버 툴팁 — CSS-only (애니메이션 + 다크 박스)",
-          "category": "other",
-          "category_label": "📌 기타"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "1dee479",
+      "full_hash": "1dee479254b081b3a1b2d6471f9565eaec18e532",
+      "ts": "2026-06-07 21:30",
+      "ts_iso": "2026-06-07T21:30:11",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-07 21:30:11",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "7c03432",
       "full_hash": "7c03432cca6cb1fbd349dbd6d23e874b1fd33ec1",
@@ -1644,16 +1654,6 @@
       "subject": "feat: 🎓 유튜브 최신 가이드 — Google Sheet 기반 페이지",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "866445f",
-      "full_hash": "866445fe4a80b7938b84f3d01ab34699ef079080",
-      "ts": "2026-06-01 13:25",
-      "ts_iso": "2026-06-01T13:25:59",
-      "author": "cmpark0401-hash",
-      "subject": "헤더 chip 마우스 오버 툴팁 — CSS-only (애니메이션 + 다크 박스)",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }
