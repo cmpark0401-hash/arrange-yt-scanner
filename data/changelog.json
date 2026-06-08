@@ -1,16 +1,32 @@
 {
-  "generated_at": "2026-06-08 09:30",
+  "generated_at": "2026-06-08 10:31",
   "total_commits": 80,
   "by_category": {
-    "data": 39,
+    "data": 40,
     "docs": 5,
     "other": 3,
-    "feat": 29,
+    "feat": 28,
     "style": 1,
     "fix": 1,
     "refactor": 2
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-08",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "0f05820",
+          "full_hash": "0f05820b17c7523f922b097f0add9e9fa08034b4",
+          "ts": "2026-06-08 09:30",
+          "ts_iso": "2026-06-08T09:30:14",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-08 09:30:14",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        }
+      ]
+    },
     {
       "date": "2026-06-07",
       "count": 12,
@@ -776,85 +792,19 @@
           "category_label": "📊 데이터 갱신"
         }
       ]
-    },
-    {
-      "date": "2026-06-01",
-      "count": 7,
-      "commits": [
-        {
-          "hash": "6a6bd6d",
-          "full_hash": "6a6bd6d3f8f4f1e8a7e55c68e66aa09077dcbdfa",
-          "ts": "2026-06-01 19:36",
-          "ts_iso": "2026-06-01T19:36:34",
-          "author": "cmpark0401-hash",
-          "subject": "data refresh: 신규 26채널 첫 데이터 수집 (총 112채널)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "680b916",
-          "full_hash": "680b91675d1ab48c270a42b1d1d91939e4052924",
-          "ts": "2026-06-01 18:46",
-          "ts_iso": "2026-06-01T18:46:45",
-          "author": "cmpark0401-hash",
-          "subject": "autopsy: add channel #7 (closes #7)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "2406f17",
-          "full_hash": "2406f17b3694e156c88dd0c01eb50140aa0de4ed",
-          "ts": "2026-06-01 16:17",
-          "ts_iso": "2026-06-01T16:17:23",
-          "author": "cmpark0401-hash",
-          "subject": "feat(manual): 💎 제우스 노하우 1+2 섹션 추가 (오토워커 1기 1달 750만원 검증)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "1859d8c",
-          "full_hash": "1859d8c7e0f5ec38fdae24349aa6cb01da35ddc2",
-          "ts": "2026-06-01 13:56",
-          "ts_iso": "2026-06-01T13:56:07",
-          "author": "cmpark0401-hash",
-          "subject": "툴팁 아래로 + nav 메뉴에도 hover 설명 추가",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "026bf54",
-          "full_hash": "026bf54a0bd0c9968e5adee92828173ab9ad5c8a",
-          "ts": "2026-06-01 13:50",
-          "ts_iso": "2026-06-01T13:50:50",
-          "author": "cmpark0401-hash",
-          "subject": "헤더 chip 2단 재배치 + 툴팁 위쪽 표시 (메뉴 가림 해결)",
-          "category": "other",
-          "category_label": "📌 기타"
-        },
-        {
-          "hash": "b05ae22",
-          "full_hash": "b05ae22927156809c5c7c8f4dd933dbe7f8d5709",
-          "ts": "2026-06-01 13:46",
-          "ts_iso": "2026-06-01T13:46:46",
-          "author": "cmpark0401-hash",
-          "subject": "헤더 chip 2단 분리",
-          "category": "other",
-          "category_label": "📌 기타"
-        },
-        {
-          "hash": "52f3933",
-          "full_hash": "52f3933707c003fff6bc5776de12683db4dab245",
-          "ts": "2026-06-01 13:39",
-          "ts_iso": "2026-06-01T13:39:56",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 🎓 유튜브 최신 가이드 — Google Sheet 기반 페이지",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "0f05820",
+      "full_hash": "0f05820b17c7523f922b097f0add9e9fa08034b4",
+      "ts": "2026-06-08 09:30",
+      "ts_iso": "2026-06-08T09:30:14",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-08 09:30:14",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "1dee479",
       "full_hash": "1dee479254b081b3a1b2d6471f9565eaec18e532",
@@ -1644,16 +1594,6 @@
       "subject": "헤더 chip 2단 분리",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "52f3933",
-      "full_hash": "52f3933707c003fff6bc5776de12683db4dab245",
-      "ts": "2026-06-01 13:39",
-      "ts_iso": "2026-06-01T13:39:56",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 🎓 유튜브 최신 가이드 — Google Sheet 기반 페이지",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }

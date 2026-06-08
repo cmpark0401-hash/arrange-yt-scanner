@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-08 09:30",
+  "updated_at": "2026-06-08 10:31",
   "today": "2026-06-08",
   "categories_def": {
     "single_explosion": {
@@ -2795,6 +2795,52 @@
               "note": "AI 채널 폭발 자동 검출 (score=6420)"
             }
           ]
+        },
+        {
+          "id": "kn-20260608-ai-경제-NyYPAY",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 만화 경제학: 35만전자 이제 시작이다? 하락에 삼성 판 '개미들 눈물'.. 내일 아침 무서운 일 터진다!  삼성 (116,790뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 1.4x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "만화 경제학",
+            "title": "35만전자 이제 시작이다? 하락에 삼성 판 '개미들 눈물'.. 내일 아침 무서운 일 터진다!  삼성전자에 흐르는 묘한 분위기, '이것' 아는 사람이 때 돈 번다!",
+            "efficiency": 1.4020408163265305,
+            "views": 116790,
+            "velocity": 1891,
+            "url": "https://www.youtube.com/watch?v=NyYPAY9ezr8",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-08 10:31",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=9410)"
+            }
+          ]
         }
       ]
     },
@@ -5117,6 +5163,52 @@
               "note": "자동 추천 (score=54760)"
             }
           ]
+        },
+        {
+          "id": "sw-20260608-ai-과학-2P7E0C",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 방구석 과학: 한국인 호구 잡으려던 일본 식당의 최후 (176,630뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 1.0x",
+            "3일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "한국인 호구 잡으려던 일본 식당의 최후",
+            "efficiency": 0.9651912568306011,
+            "views": 176630,
+            "velocity": 4165,
+            "url": "https://www.youtube.com/watch?v=2P7E0CZ1qWo",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-08 10:31",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=10807)"
+            }
+          ]
         }
       ]
     },
@@ -5999,7 +6091,7 @@
     }
   ],
   "last_auto_run": "2026-06-08 09:30",
-  "last_ai_detect_run": "2026-06-08 09:30",
+  "last_ai_detect_run": "2026-06-08 10:31",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [
