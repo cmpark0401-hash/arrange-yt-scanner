@@ -1049,6 +1049,60 @@
       "watch_url": "https://www.youtube.com/watch?v=JdGV5aZ6mmU",
       "efficiency": 0.07,
       "days_ago": 16
+    },
+    {
+      "vid": "1TzMzxQWy_w",
+      "channel": "투데이경제TV",
+      "ch_subs": 8250,
+      "title": "[ 삼성전자 ] \"7분전 속보\" 젠슨 황 오늘 밤 한국 입국하는데 이재용 회장 잠적… 삼성전자 주주들이 모르는 일이 벌어지고 있습니다",
+      "views": 71501,
+      "upload": "20260604",
+      "days_ago": 4,
+      "category": "경제·시사",
+      "efficiency": 8.67,
+      "duration_min": 19,
+      "thumbnail_url": "https://i.ytimg.com/vi/1TzMzxQWy_w/maxresdefault.jpg",
+      "watch_url": "https://www.youtube.com/watch?v=1TzMzxQWy_w",
+      "source": "keyword_search",
+      "source_keyword": "이재용",
+      "source_channel_slug": "knowledge-archive",
+      "ch_type": "AI양산_검색발견"
+    },
+    {
+      "vid": "GNSIG0fd3yA",
+      "channel": "지식의 신",
+      "ch_subs": 1060,
+      "title": "“끝났다던 삼성의 대반격” HBM4E 세계 최초 공개에 반도체 판이 뒤집혔다",
+      "views": 52985,
+      "upload": "20260606",
+      "days_ago": 2,
+      "category": "경제·시사",
+      "efficiency": 49.99,
+      "duration_min": 32,
+      "thumbnail_url": "https://i.ytimg.com/vi/GNSIG0fd3yA/maxresdefault.jpg",
+      "watch_url": "https://www.youtube.com/watch?v=GNSIG0fd3yA",
+      "source": "keyword_search",
+      "source_keyword": "삼성HBM",
+      "source_channel_slug": "knowledge-archive",
+      "ch_type": "AI양산_검색발견"
+    },
+    {
+      "vid": "wWDyn5vMcZQ",
+      "channel": "지방자치TV",
+      "ch_subs": 10100,
+      "title": "4년 만에 뒤집힌 민심｜6·3 지방선거 개표 결과 총정리  |  2026 지방선거 미리보기  |  광역단체장  |  서울구청장",
+      "views": 50850,
+      "upload": "20260604",
+      "days_ago": 4,
+      "category": "경제·시사",
+      "efficiency": 5.03,
+      "duration_min": 12,
+      "thumbnail_url": "https://i.ytimg.com/vi/wWDyn5vMcZQ/maxresdefault.jpg",
+      "watch_url": "https://www.youtube.com/watch?v=wWDyn5vMcZQ",
+      "source": "keyword_search",
+      "source_keyword": "지방선거 2026",
+      "source_channel_slug": "knowledge-archive",
+      "ch_type": "AI양산_검색발견"
     }
   ],
   "perThumb": [
@@ -3653,7 +3707,7 @@
     ]
   },
   "generated_at": "2026-06-08",
-  "n_videos": 75,
+  "n_videos": 78,
   "n_thumb_analyzed": 66,
   "n_categories": 5,
   "deeps": [
@@ -5485,5 +5539,6 @@
       }
     ]
   },
-  "last_refresh": "2026-06-08 10:31:25"
+  "last_refresh": "2026-06-08 10:31:25",
+  "last_keyword_search": "2026-06-08 10:36:10"
 }

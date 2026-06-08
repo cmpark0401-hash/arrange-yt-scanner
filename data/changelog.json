@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-08 10:31",
+  "generated_at": "2026-06-08 10:36",
   "total_commits": 80,
   "by_category": {
-    "data": 40,
+    "data": 41,
     "docs": 5,
-    "other": 3,
+    "other": 2,
     "feat": 28,
     "style": 1,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-08",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "e3efedb",
+          "full_hash": "e3efedbf411919eb6ef4dcda417472bc39cf2d86",
+          "ts": "2026-06-08 10:31",
+          "ts_iso": "2026-06-08T10:31:37",
+          "author": "cmpark0401-hash",
+          "subject": "auto: build 2026-06-08 10:31",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "0f05820",
           "full_hash": "0f05820b17c7523f922b097f0add9e9fa08034b4",
@@ -795,6 +805,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "e3efedb",
+      "full_hash": "e3efedbf411919eb6ef4dcda417472bc39cf2d86",
+      "ts": "2026-06-08 10:31",
+      "ts_iso": "2026-06-08T10:31:37",
+      "author": "cmpark0401-hash",
+      "subject": "auto: build 2026-06-08 10:31",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "0f05820",
       "full_hash": "0f05820b17c7523f922b097f0add9e9fa08034b4",
@@ -1582,16 +1602,6 @@
       "ts_iso": "2026-06-01T13:50:50",
       "author": "cmpark0401-hash",
       "subject": "헤더 chip 2단 재배치 + 툴팁 위쪽 표시 (메뉴 가림 해결)",
-      "category": "other",
-      "category_label": "📌 기타"
-    },
-    {
-      "hash": "b05ae22",
-      "full_hash": "b05ae22927156809c5c7c8f4dd933dbe7f8d5709",
-      "ts": "2026-06-01 13:46",
-      "ts_iso": "2026-06-01T13:46:46",
-      "author": "cmpark0401-hash",
-      "subject": "헤더 chip 2단 분리",
       "category": "other",
       "category_label": "📌 기타"
     }

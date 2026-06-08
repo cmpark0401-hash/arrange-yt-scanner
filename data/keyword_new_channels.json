@@ -1,0 +1,34 @@
+{
+  "channels": {
+    "투데이경제TV": {
+      "channel": "투데이경제TV",
+      "channel_url": "https://www.youtube.com/channel/UC1TyPTHrJ7wsq_hhRBri0Sw",
+      "subs": 8250,
+      "first_seen": "2026-06-08",
+      "first_keyword": "이재용",
+      "first_explosive_video": "1TzMzxQWy_w",
+      "for_channel": "knowledge-archive",
+      "evidence_eff": 8.67
+    },
+    "지식의 신": {
+      "channel": "지식의 신",
+      "channel_url": "https://www.youtube.com/channel/UChhjTakY69hZynLBvC3FErw",
+      "subs": 1060,
+      "first_seen": "2026-06-08",
+      "first_keyword": "삼성HBM",
+      "first_explosive_video": "GNSIG0fd3yA",
+      "for_channel": "knowledge-archive",
+      "evidence_eff": 49.99
+    },
+    "지방자치TV": {
+      "channel": "지방자치TV",
+      "channel_url": "https://www.youtube.com/channel/UCQSWmQeQpH_cYzq6wKGMFfA",
+      "subs": 10100,
+      "first_seen": "2026-06-08",
+      "first_keyword": "지방선거 2026",
+      "first_explosive_video": "wWDyn5vMcZQ",
+      "for_channel": "knowledge-archive",
+      "evidence_eff": 5.03
+    }
+  }
+}
