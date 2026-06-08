@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-08 10:36",
+  "generated_at": "2026-06-08 21:30",
   "total_commits": 80,
   "by_category": {
-    "data": 41,
+    "data": 42,
     "docs": 5,
-    "other": 2,
+    "other": 1,
     "feat": 28,
     "style": 1,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-08",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "3e94737",
+          "full_hash": "3e947374e554c49913cb101ea3957ef8bb4ab2e1",
+          "ts": "2026-06-08 10:36",
+          "ts_iso": "2026-06-08T10:36:38",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-08 10:36:37",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "e3efedb",
           "full_hash": "e3efedbf411919eb6ef4dcda417472bc39cf2d86",
@@ -806,6 +816,16 @@
   ],
   "all_commits": [
     {
+      "hash": "3e94737",
+      "full_hash": "3e947374e554c49913cb101ea3957ef8bb4ab2e1",
+      "ts": "2026-06-08 10:36",
+      "ts_iso": "2026-06-08T10:36:38",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-08 10:36:37",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
+    {
       "hash": "e3efedb",
       "full_hash": "e3efedbf411919eb6ef4dcda417472bc39cf2d86",
       "ts": "2026-06-08 10:31",
@@ -1594,16 +1614,6 @@
       "subject": "툴팁 아래로 + nav 메뉴에도 hover 설명 추가",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "026bf54",
-      "full_hash": "026bf54a0bd0c9968e5adee92828173ab9ad5c8a",
-      "ts": "2026-06-01 13:50",
-      "ts_iso": "2026-06-01T13:50:50",
-      "author": "cmpark0401-hash",
-      "subject": "헤더 chip 2단 재배치 + 툴팁 위쪽 표시 (메뉴 가림 해결)",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }
