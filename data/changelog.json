@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-09 22:42",
+  "generated_at": "2026-06-09 22:53",
   "total_commits": 80,
   "by_category": {
-    "data": 46,
+    "data": 47,
     "other": 2,
     "docs": 5,
-    "feat": 23,
+    "feat": 22,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-09",
-      "count": 7,
+      "count": 8,
       "commits": [
+        {
+          "hash": "bb07114",
+          "full_hash": "bb071142548b02175c74a7b7c37d2eac19f79351",
+          "ts": "2026-06-09 22:42",
+          "ts_iso": "2026-06-09T22:42:53",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-09 22:42:52",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "4b99557",
           "full_hash": "4b995576498a1eddfd8345401301d3b525021018",
@@ -826,6 +836,16 @@
   ],
   "all_commits": [
     {
+      "hash": "bb07114",
+      "full_hash": "bb071142548b02175c74a7b7c37d2eac19f79351",
+      "ts": "2026-06-09 22:42",
+      "ts_iso": "2026-06-09T22:42:53",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-09 22:42:52",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
+    {
       "hash": "4b99557",
       "full_hash": "4b995576498a1eddfd8345401301d3b525021018",
       "ts": "2026-06-09 21:35",
@@ -1614,16 +1634,6 @@
       "subject": "data: 126채널 모니터링 + 채널 포커스 갱신",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "6db02b2",
-      "full_hash": "6db02b28f0d7890017a3f7f53010fa4aad365dbc",
-      "ts": "2026-06-02 13:07",
-      "ts_iso": "2026-06-02T13:07:12",
-      "author": "cmpark0401-hash",
-      "subject": "autopsy: add channel #8 (closes #8)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
