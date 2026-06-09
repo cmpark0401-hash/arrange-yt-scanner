@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-09 21:35",
+  "generated_at": "2026-06-09 22:42",
   "total_commits": 80,
   "by_category": {
+    "data": 46,
     "other": 2,
-    "data": 45,
     "docs": 5,
-    "feat": 24,
+    "feat": 23,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-09",
-      "count": 6,
+      "count": 7,
       "commits": [
+        {
+          "hash": "4b99557",
+          "full_hash": "4b995576498a1eddfd8345401301d3b525021018",
+          "ts": "2026-06-09 21:35",
+          "ts_iso": "2026-06-09T21:35:39",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-09 21:35:39",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "bef008d",
           "full_hash": "bef008d250b23b06409a946d679ddeca7c240854",
@@ -816,6 +826,16 @@
   ],
   "all_commits": [
     {
+      "hash": "4b99557",
+      "full_hash": "4b995576498a1eddfd8345401301d3b525021018",
+      "ts": "2026-06-09 21:35",
+      "ts_iso": "2026-06-09T21:35:39",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-09 21:35:39",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
+    {
       "hash": "bef008d",
       "full_hash": "bef008d250b23b06409a946d679ddeca7c240854",
       "ts": "2026-06-09 12:59",
@@ -1602,16 +1622,6 @@
       "ts_iso": "2026-06-02T13:07:12",
       "author": "cmpark0401-hash",
       "subject": "autopsy: add channel #8 (closes #8)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "a217978",
-      "full_hash": "a21797815a2dc86d3baf955bf902a27d4dbab2a6",
-      "ts": "2026-06-02 12:29",
-      "ts_iso": "2026-06-02T12:29:32",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 위인·인문 카테고리 신설 + 잘듣네 전용 풀 구축",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
