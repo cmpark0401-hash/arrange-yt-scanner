@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-09 03:27",
+  "generated_at": "2026-06-09 09:13",
   "total_commits": 80,
   "by_category": {
+    "data": 45,
     "docs": 6,
-    "data": 44,
     "other": 1,
-    "feat": 25,
+    "feat": 24,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-09",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "407861c",
+          "full_hash": "407861c873364b330c6eab3bf79d757af6c86e6a",
+          "ts": "2026-06-09 03:28",
+          "ts_iso": "2026-06-09T03:28:01",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-09 03:28:01",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "3a676d7",
           "full_hash": "3a676d7f90a18c7c4616ab8a33dcfe5c7d765c87",
@@ -775,6 +785,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "407861c",
+      "full_hash": "407861c873364b330c6eab3bf79d757af6c86e6a",
+      "ts": "2026-06-09 03:28",
+      "ts_iso": "2026-06-09T03:28:01",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-09 03:28:01",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "3a676d7",
       "full_hash": "3a676d7f90a18c7c4616ab8a33dcfe5c7d765c87",
@@ -1564,16 +1584,6 @@
       "subject": "auto: build 2026-06-02 08:38",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "6a6bd6d",
-      "full_hash": "6a6bd6d3f8f4f1e8a7e55c68e66aa09077dcbdfa",
-      "ts": "2026-06-01 19:36",
-      "ts_iso": "2026-06-01T19:36:34",
-      "author": "cmpark0401-hash",
-      "subject": "data refresh: 신규 26채널 첫 데이터 수집 (총 112채널)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
