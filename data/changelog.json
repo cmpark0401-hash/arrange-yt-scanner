@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-09 09:30",
+  "generated_at": "2026-06-09 12:59",
   "total_commits": 80,
   "by_category": {
-    "data": 45,
-    "docs": 6,
+    "data": 46,
+    "docs": 5,
     "other": 1,
     "feat": 24,
     "style": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-09",
-      "count": 4,
+      "count": 5,
       "commits": [
+        {
+          "hash": "2d96523",
+          "full_hash": "2d965232ee68a322a9e2ce774924fc64bbaba9cf",
+          "ts": "2026-06-09 09:30",
+          "ts_iso": "2026-06-09T09:30:12",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-09 09:30:12",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "505685b",
           "full_hash": "505685b7bfc67e437b9e32ef0d2b6b82be475a89",
@@ -795,6 +805,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "2d96523",
+      "full_hash": "2d965232ee68a322a9e2ce774924fc64bbaba9cf",
+      "ts": "2026-06-09 09:30",
+      "ts_iso": "2026-06-09T09:30:12",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-09 09:30:12",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "505685b",
       "full_hash": "505685b7bfc67e437b9e32ef0d2b6b82be475a89",
@@ -1584,16 +1604,6 @@
       "subject": "data: KR 재편집 재폭발 30건 + JP 풀세트 갱신",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "9de4aab",
-      "full_hash": "9de4aab78181144c3e69ba2b37d4b83e7f1a925e",
-      "ts": "2026-06-02 09:29",
-      "ts_iso": "2026-06-02T09:29:40",
-      "author": "cmpark0401-hash",
-      "subject": "manual JP: 2026-06-02 09:29",
-      "category": "docs",
-      "category_label": "📖 문서"
     }
   ]
 }

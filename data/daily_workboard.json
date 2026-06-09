@@ -4093,7 +4093,7 @@
       "series_ip": {
         "main": "AI도 못 푼 우리 몸/우주의 한 가지",
         "essence": "AI 시대 메타 모순 (AI가 못 만듦)",
-        "ep_count": 1
+        "ep_count": 2
       },
       "topics": [
         {
@@ -5732,6 +5732,16 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "sw-20260605-sleep-science",
+          "title": "잠은 사치가 아니랍니다 — 잠든 사이 뇌가 매일 밤 하는 놀라운 일 (40분 수면용 다큐) — [내 몸의 과학] EP.2",
+          "status": "published",
+          "category": "series",
+          "publication_date": "2026-06-09",
+          "publication_url": null,
+          "production_project": "20260605_03_sleep-science",
+          "production_note": "ultracode 풀파이프라인 (~56 에이전트, 5 워크플로). 합본 A+C+B+D+E. 8 권위 다층(AASM·Nedergaard 2013 Science·KAIST 고규영 Nature 2019·Walker·대한수면학회·Windred 2024 SRI·CBT-I·EMA Circadin). 19,090자/8파트."
         }
       ]
     },
