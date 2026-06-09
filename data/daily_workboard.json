@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-09 22:53",
-  "today": "2026-06-09",
+  "updated_at": "2026-06-10 01:34",
+  "today": "2026-06-10",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -3058,6 +3058,187 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "kn-20260610-auto-se-h5aa5b9",
+          "category": "single_explosion",
+          "title": "[자동🤖] 경제우체부: &quot;이란 1500만 대피&quot; 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피 (1,762,105뷰 · 효율 275.3x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 275.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "경제우체부",
+            "title": "&quot;이란 1500만 대피&quot; 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피아의 실체",
+            "efficiency": 275.32890625,
+            "views": 1762105,
+            "velocity": 287,
+            "url": "",
+            "categories": [
+              "경제",
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=277378)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260610-auto-se-h0ef0ad",
+          "category": "single_explosion",
+          "title": "[자동🤖] 삼프로TV 3PROTV: [26.06.08 긴급 라이브 전체보기] 겁먹지 않는 시장, 환율도 17년 3개월 만에 최고치…쌓인 악재에  (925,746뷰 · 효율 0.3x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "삼프로TV 3PROTV",
+            "title": "[26.06.08 긴급 라이브 전체보기] 겁먹지 않는 시장, 환율도 17년 3개월 만에 최고치…쌓인 악재에 1,600원 시대는 시간 문제? [3PROTV 시장 진단]",
+            "efficiency": 0.3116989898989899,
+            "views": 925746,
+            "velocity": 40426,
+            "url": "",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=91663)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260610-auto-cc-hb27e54",
+          "category": "cross_category",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,353,700뷰 · 효율 402.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 402.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 402.13291139240505,
+            "views": 6353700,
+            "velocity": 37,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408524)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260610-auto-cc-h13a49e",
+          "category": "cross_category",
+          "title": "[자동🤖] 방구석 과학: 영국 길거리 인터뷰에서 인종차별하는 영국인 모녀 (115,000뷰 · 효율 0.6x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "영국 길거리 인터뷰에서 인종차별하는 영국인 모녀",
+            "efficiency": 0.6284153005464481,
+            "views": 115000,
+            "velocity": 3477,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=54220)"
+            }
+          ]
         }
       ]
     },
@@ -4077,6 +4258,96 @@
           "events": [
             {
               "ts": "2026-06-09 02:32",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=1361)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260610-auto-se-h1a67d1",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소' (367,076뷰 · 효율 0.3x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소'",
+            "efficiency": 0.28021068702290075,
+            "views": 367076,
+            "velocity": 832,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=1479)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260610-auto-se-h30d387",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '복지축제는 끝났다' 사회주의 실험은 실패했다...복지천국에서 자본주의 천국으로 방향을 바꾼 스웨덴 (223,958뷰 · 효율 0.2x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'복지축제는 끝났다' 사회주의 실험은 실패했다...복지천국에서 자본주의 천국으로 방향을 바꾼 스웨덴",
+            "efficiency": 0.17096030534351145,
+            "views": 223958,
+            "velocity": 966,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
               "type": "auto_proposed",
               "note": "자동 추천 (score=1361)"
             }
@@ -5743,6 +6014,96 @@
           "publication_url": null,
           "production_project": "20260605_03_sleep-science",
           "production_note": "ultracode 풀파이프라인 (~56 에이전트, 5 워크플로). 합본 A+C+B+D+E. 8 권위 다층(AASM·Nedergaard 2013 Science·KAIST 고규영 Nature 2019·Walker·대한수면학회·Windred 2024 SRI·CBT-I·EMA Circadin). 19,090자/8파트."
+        },
+        {
+          "id": "sw-20260610-auto-se-hb27e54",
+          "category": "single_explosion",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,353,700뷰 · 효율 402.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 402.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 402.13291139240505,
+            "views": 6353700,
+            "velocity": 37,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408524)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260610-auto-se-h13a49e",
+          "category": "single_explosion",
+          "title": "[자동🤖] 방구석 과학: 영국 길거리 인터뷰에서 인종차별하는 영국인 모녀 (115,000뷰 · 효율 0.6x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "영국 길거리 인터뷰에서 인종차별하는 영국인 모녀",
+            "efficiency": 0.6284153005464481,
+            "views": 115000,
+            "velocity": 3477,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=54220)"
+            }
+          ]
         }
       ]
     },
@@ -6791,12 +7152,103 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "yd-20260610-auto-se-h4053a2",
+          "category": "single_explosion",
+          "title": "[자동🤖] 보다 BODA: 중국인들이 자주 씻는 걸 경계하는 이유(오히려 병든다..?)ㅣ역사를 보다 EP.143 (460,784뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "보다 BODA",
+            "title": "중국인들이 자주 씻는 걸 경계하는 이유(오히려 병든다..?)ㅣ역사를 보다 EP.143",
+            "efficiency": 0.1481620578778135,
+            "views": 460784,
+            "velocity": 5451,
+            "url": "",
+            "categories": [
+              "지식",
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=56060)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260610-auto-se-h22d72b",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열 (241,350뷰 · 효율 30.4x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 30.4x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열",
+            "efficiency": 30.435056746532155,
+            "views": 241350,
+            "velocity": 357,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 01:34",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=31033)"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-09 22:53",
-  "last_ai_detect_run": "2026-06-09 22:53",
+  "last_auto_run": "2026-06-10 01:34",
+  "last_ai_detect_run": "2026-06-10 01:34",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [
