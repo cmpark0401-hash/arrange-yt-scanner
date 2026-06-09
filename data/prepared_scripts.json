@@ -1,26 +1,38 @@
 {
-  "generated_at": "2026-06-10 01:34:00",
+  "generated_at": "2026-06-10 01:44:47",
   "total": 29,
   "by_channel": {
     "knowledge-archive": {
       "name": "지식록",
       "count": 16,
-      "completed": 16
+      "completed": 16,
+      "published": 15,
+      "unpublished": 1,
+      "unknown": 0
     },
     "nn-flix": {
       "name": "잘듣네",
       "count": 7,
-      "completed": 6
+      "completed": 6,
+      "published": 5,
+      "unpublished": 1,
+      "unknown": 1
     },
     "science-world-life": {
       "name": "과만세",
       "count": 4,
-      "completed": 4
+      "completed": 4,
+      "published": 3,
+      "unpublished": 1,
+      "unknown": 0
     },
     "yadam": {
       "name": "깊은밤야담",
       "count": 2,
-      "completed": 2
+      "completed": 2,
+      "published": 1,
+      "unpublished": 1,
+      "unknown": 0
     }
   },
   "scripts": [
@@ -45,7 +57,9 @@
       "command": "지식록 funeral-cost 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "미완료",
+      "publish_source": "latest-heuristic"
     },
     {
       "channel_slug": "nn-flix",
@@ -69,7 +83,9 @@
       "command": "잘듣네 beethoven-symphony-9 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "미완료",
+      "publish_source": "latest-heuristic"
     },
     {
       "channel_slug": "science-world-life",
@@ -93,7 +109,9 @@
       "command": "과만세 longevity-body 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "미완료",
+      "publish_source": "latest-heuristic"
     },
     {
       "channel_slug": "yadam",
@@ -117,7 +135,9 @@
       "command": "깊은밤야담 cliff-queen-child 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "미완료",
+      "publish_source": "latest-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -140,7 +160,9 @@
       "command": "지식록 grocery-compare 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "yadam",
@@ -164,7 +186,9 @@
       "command": "깊은밤야담 silver-needle-bride 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -187,7 +211,9 @@
       "command": "지식록 med-price-compare 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "nn-flix",
@@ -206,7 +232,9 @@
       "command": "잘듣네 grandma-moses-76 결과물 보여줘",
       "has_final": false,
       "has_thumbnails": true,
-      "has_youtube_md": false
+      "has_youtube_md": false,
+      "publish_status": "Unknown",
+      "publish_source": "no-final"
     },
     {
       "channel_slug": "science-world-life",
@@ -230,7 +258,9 @@
       "command": "과만세 sleep-science 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "science-world-life",
@@ -254,7 +284,9 @@
       "command": "과만세 vision-restoration 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -277,7 +309,9 @@
       "command": "지식록 sell-signal 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "nn-flix",
@@ -301,7 +335,9 @@
       "command": "잘듣네 dom-perignon-night 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -324,7 +360,9 @@
       "command": "지식록 china-dam-risk 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "science-world-life",
@@ -347,7 +385,9 @@
       "command": "과만세 longevity-body 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "nn-flix",
@@ -371,7 +411,9 @@
       "command": "잘듣네 dom-perignon-real 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -394,7 +436,9 @@
       "command": "지식록 kospi-checklist-7 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "nn-flix",
@@ -417,7 +461,9 @@
       "command": "잘듣네 phumiphon-and-mother 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "nn-flix",
@@ -440,7 +486,9 @@
       "command": "잘듣네 van-gogh-letters 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "nn-flix",
@@ -463,7 +511,9 @@
       "command": "잘듣네 kimjangha-scholarship 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -486,7 +536,9 @@
       "command": "지식록 starbucks-tank-day 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -509,7 +561,9 @@
       "command": "지식록 drama-history-distortion 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -532,7 +586,9 @@
       "command": "지식록 assets-8-class 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -555,7 +611,9 @@
       "command": "지식록 one-year-trap 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -578,7 +636,9 @@
       "command": "지식록 kospi-crash 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -601,7 +661,9 @@
       "command": "지식록 digital-tariff 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -624,7 +686,9 @@
       "command": "지식록 youth-account-vs 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -646,7 +710,9 @@
       "command": "지식록 sk-vs-joseon 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -669,7 +735,9 @@
       "command": "지식록 kospi-warning 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "knowledge-archive",
@@ -691,7 +759,9 @@
       "command": "지식록 samsung-union 결과물 보여줘",
       "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": true
+      "has_youtube_md": true,
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     }
   ]
 }

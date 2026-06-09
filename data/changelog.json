@@ -1,16 +1,32 @@
 {
-  "generated_at": "2026-06-10 01:34",
+  "generated_at": "2026-06-10 01:44",
   "total_commits": 80,
   "by_category": {
-    "data": 47,
+    "data": 48,
     "other": 2,
     "docs": 5,
-    "feat": 22,
+    "feat": 21,
     "style": 1,
     "fix": 1,
     "refactor": 2
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-10",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "eb70241",
+          "full_hash": "eb702419a9d51790d64595f6a1d7326f620d341d",
+          "ts": "2026-06-10 01:34",
+          "ts_iso": "2026-06-10T01:34:12",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-10 01:34:12",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        }
+      ]
+    },
     {
       "date": "2026-06-09",
       "count": 9,
@@ -796,55 +812,19 @@
           "category_label": "✨ 신규 기능"
         }
       ]
-    },
-    {
-      "date": "2026-06-03",
-      "count": 4,
-      "commits": [
-        {
-          "hash": "1b205be",
-          "full_hash": "1b205bed89c7cfe980dd428c5f4afe25d3ff4017",
-          "ts": "2026-06-03 16:44",
-          "ts_iso": "2026-06-03T16:44:31",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 워크보드 chip 빨간 날짜 배지 (카톡 알람 스타일) + manual 통합 갱신",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "3dadbff",
-          "full_hash": "3dadbff65d25afee9f07586f382b0e0e7b300fad",
-          "ts": "2026-06-03 16:38",
-          "ts_iso": "2026-06-03T16:38:12",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 데일리 워크보드 v2.0 — 7카테고리 분류 + 시리즈 IP",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "59afca5",
-          "full_hash": "59afca5c5a6930d173d9b91f4354fb85c368febd",
-          "ts": "2026-06-03 16:04",
-          "ts_iso": "2026-06-03T16:04:42",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 📋 데일리 워크보드 신설 — 4채널 오늘의 주제·작업 상태·체크리스트·히스토리",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "1d0ed3b",
-          "full_hash": "1d0ed3b2a6b7b7555f8376f9a6dbcf71b512f477",
-          "ts": "2026-06-03 15:43",
-          "ts_iso": "2026-06-03T15:43:11",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 김히엉 트리거롱폼 강의 학습 적용 (확정 5 + 검토 1~4)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "eb70241",
+      "full_hash": "eb702419a9d51790d64595f6a1d7326f620d341d",
+      "ts": "2026-06-10 01:34",
+      "ts_iso": "2026-06-10T01:34:12",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-10 01:34:12",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "41dc095",
       "full_hash": "41dc095015031b7510aedccb7b3fbb109ce6030e",
@@ -1632,16 +1612,6 @@
       "ts_iso": "2026-06-03T15:43:11",
       "author": "cmpark0401-hash",
       "subject": "feat: 김히엉 트리거롱폼 강의 학습 적용 (확정 5 + 검토 1~4)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "b750bf3",
-      "full_hash": "b750bf35e541e95336155da0515e3e35ceb2eea9",
-      "ts": "2026-06-02 19:44",
-      "ts_iso": "2026-06-02T19:44:39",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 버터떡 노하우 — 제목·썸네일 체크리스트 + 1분 후킹·엔딩X·본인 의견 강제",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
