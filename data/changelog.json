@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-09 12:59",
+  "generated_at": "2026-06-09 21:35",
   "total_commits": 80,
   "by_category": {
-    "data": 46,
+    "other": 2,
+    "data": 45,
     "docs": 5,
-    "other": 1,
     "feat": 24,
     "style": 1,
     "fix": 1,
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-09",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "bef008d",
+          "full_hash": "bef008d250b23b06409a946d679ddeca7c240854",
+          "ts": "2026-06-09 12:59",
+          "ts_iso": "2026-06-09T12:59:47",
+          "author": "cmpark0401-hash",
+          "subject": "과만세 EP.2 잠의 과학 발행 (2026-06-09)",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "2d96523",
           "full_hash": "2d965232ee68a322a9e2ce774924fc64bbaba9cf",
@@ -806,6 +816,16 @@
   ],
   "all_commits": [
     {
+      "hash": "bef008d",
+      "full_hash": "bef008d250b23b06409a946d679ddeca7c240854",
+      "ts": "2026-06-09 12:59",
+      "ts_iso": "2026-06-09T12:59:47",
+      "author": "cmpark0401-hash",
+      "subject": "과만세 EP.2 잠의 과학 발행 (2026-06-09)",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
+    {
       "hash": "2d96523",
       "full_hash": "2d965232ee68a322a9e2ce774924fc64bbaba9cf",
       "ts": "2026-06-09 09:30",
@@ -1594,16 +1614,6 @@
       "subject": "feat: 위인·인문 카테고리 신설 + 잘듣네 전용 풀 구축",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "7b0355d",
-      "full_hash": "7b0355d6de343ffcb470b39cd2abbdcca4d959a0",
-      "ts": "2026-06-02 09:30",
-      "ts_iso": "2026-06-02T09:30:22",
-      "author": "cmpark0401-hash",
-      "subject": "data: KR 재편집 재폭발 30건 + JP 풀세트 갱신",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }

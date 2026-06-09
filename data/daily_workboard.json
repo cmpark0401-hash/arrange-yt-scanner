@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-09 09:30",
+  "updated_at": "2026-06-09 21:35",
   "today": "2026-06-09",
   "categories_def": {
     "single_explosion": {
@@ -4423,8 +4423,8 @@
         },
         {
           "id": "sw-20260603-od",
-          "category": "owned_draft",
-          "title": "보유 5/28 \"장수의 몸\" (longevity-body)",
+          "category": "series",
+          "title": "장수의 몸 — 70대에 갈리는 진짜 이유 (보유 자산 없음, 처음부터 제작 — 20260609_04로 진행)",
           "type": "보유",
           "rating": 4,
           "tags": [
@@ -4435,7 +4435,7 @@
           "merge_angle": "채널 첫 영상으로 발행 가능. 단일 주제로 OK",
           "sources_a": null,
           "sources_b": null,
-          "status": "blocked",
+          "status": "pending",
           "checklist": {
             "channel_setup": false,
             "collect": true,
@@ -4457,7 +4457,8 @@
               "type": "proposed",
               "note": "채널 개설 후 첫 영상"
             }
-          ]
+          ],
+          "note": "2026-06-09 정정: owned_draft 표시였으나 실제 폴더 없음. EP.3로 처음부터 풀파이프라인 제작."
         },
         {
           "id": "sw-20260604-auto-se-h5893dc",
@@ -6794,8 +6795,8 @@
       ]
     }
   ],
-  "last_auto_run": "2026-06-09 09:30",
-  "last_ai_detect_run": "2026-06-09 09:30",
+  "last_auto_run": "2026-06-09 21:35",
+  "last_ai_detect_run": "2026-06-09 21:35",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [
