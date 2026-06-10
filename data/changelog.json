@@ -2,10 +2,10 @@
   "generated_at": "2026-06-10 23:30",
   "total_commits": 80,
   "by_category": {
+    "docs": 6,
     "data": 53,
     "other": 2,
-    "docs": 5,
-    "feat": 16,
+    "feat": 15,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-10",
-      "count": 6,
+      "count": 7,
       "commits": [
+        {
+          "hash": "a41cd5a",
+          "full_hash": "a41cd5a650081e611ce51b0eaaec0973c0aa1700",
+          "ts": "2026-06-10 23:30",
+          "ts_iso": "2026-06-10T23:30:04",
+          "author": "cmpark0401-hash",
+          "subject": "manual JP: 2026-06-10 23:30",
+          "category": "docs",
+          "category_label": "📖 문서"
+        },
         {
           "hash": "ac41499",
           "full_hash": "ac4149961c555ded71710004eb8a1d90ff4e1356",
@@ -589,7 +599,7 @@
     },
     {
       "date": "2026-06-04",
-      "count": 26,
+      "count": 25,
       "commits": [
         {
           "hash": "275a021",
@@ -840,21 +850,21 @@
           "subject": "refactor: 시도남 노멀쇼츠 별도 섹션 제거 → 채널 구매 가이드에 통합",
           "category": "refactor",
           "category_label": "♻️ 리팩토링"
-        },
-        {
-          "hash": "b4ab972",
-          "full_hash": "b4ab9728531f00135c1134a541fb6b88cf8572d0",
-          "ts": "2026-06-04 00:50",
-          "ts_iso": "2026-06-04T00:50:37",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 시도남 노멀쇼츠 강의 채널 직구 4단계 추가 (manual.md + 스킬)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "a41cd5a",
+      "full_hash": "a41cd5a650081e611ce51b0eaaec0973c0aa1700",
+      "ts": "2026-06-10 23:30",
+      "ts_iso": "2026-06-10T23:30:04",
+      "author": "cmpark0401-hash",
+      "subject": "manual JP: 2026-06-10 23:30",
+      "category": "docs",
+      "category_label": "📖 문서"
+    },
     {
       "hash": "ac41499",
       "full_hash": "ac4149961c555ded71710004eb8a1d90ff4e1356",
@@ -1644,16 +1654,6 @@
       "subject": "refactor: 시도남 노멀쇼츠 별도 섹션 제거 → 채널 구매 가이드에 통합",
       "category": "refactor",
       "category_label": "♻️ 리팩토링"
-    },
-    {
-      "hash": "b4ab972",
-      "full_hash": "b4ab9728531f00135c1134a541fb6b88cf8572d0",
-      "ts": "2026-06-04 00:50",
-      "ts_iso": "2026-06-04T00:50:37",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 시도남 노멀쇼츠 강의 채널 직구 4단계 추가 (manual.md + 스킬)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }

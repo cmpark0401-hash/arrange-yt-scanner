@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-10 22:52",
+  "updated_at": "2026-06-10 23:30",
   "today": "2026-06-10",
   "categories_def": {
     "single_explosion": {
@@ -3377,6 +3377,86 @@
               "note": "AI 채널 폭발 자동 검출 (score=8723)"
             }
           ]
+        },
+        {
+          "id": "kn-20260610-auto-re-h64e86e",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 경제 원탑: 'It's going to be really scary starting in July.' If you hol (109,656뷰 · 0일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "삼성"
+          ],
+          "merge_angle": "검증 키워드 '삼성' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "경제 원탑",
+            "title": "\"It's going to be really scary starting in July.\" If you hold Samsung Electronics and SK Hynix, d...",
+            "views": 109656,
+            "url": "",
+            "days_since": 0
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 23:30",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260610-auto-re-h9164e7",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 불방맹이TV: GET IT TOGETHER, BATS!! (June 9th Samsung vs. KT Live Commen (63,143뷰 · 1일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "삼성"
+          ],
+          "merge_angle": "검증 키워드 '삼성' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "불방맹이TV",
+            "title": "GET IT TOGETHER, BATS!! (June 9th Samsung vs. KT Live Commentary Highlight & Review)",
+            "views": 63143,
+            "url": "",
+            "days_since": 1
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 23:30",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
         }
       ]
     },
@@ -6242,6 +6322,86 @@
               "note": "자동 추천 (score=54220)"
             }
           ]
+        },
+        {
+          "id": "sw-20260610-auto-re-he5a164",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 마카다TV: 자연인에 나온  사람들은 방송 이후 왜 대부분 사라지는 걸까? (92,250뷰 · 0일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "걸까"
+          ],
+          "merge_angle": "검증 키워드 '걸까' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "마카다TV",
+            "title": "자연인에 나온  사람들은 방송 이후 왜 대부분 사라지는 걸까?",
+            "views": 92250,
+            "url": "",
+            "days_since": 0
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 23:30",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260610-auto-re-h42864b",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 엠바고: 한참을 오열한 김상욱, 울산시장 당선증 받자마자 찾아간 곳은 ⋯ | 김상욱TV 라이브 방송 (260604) (361,439뷰 · 5일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "김상욱"
+          ],
+          "merge_angle": "검증 키워드 '김상욱' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "엠바고",
+            "title": "한참을 오열한 김상욱, 울산시장 당선증 받자마자 찾아간 곳은 ⋯ | 김상욱TV 라이브 방송 (260604)",
+            "views": 361439,
+            "url": "",
+            "days_since": 5
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 23:30",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
         }
       ]
     },
@@ -7381,12 +7541,52 @@
               "note": "자동 추천 (score=31033)"
             }
           ]
+        },
+        {
+          "id": "yd-20260610-auto-re-h4db7fc",
+          "category": "reedit",
+          "title": "[자동🤖 재편집] 머니인사이드: '역사상 본 적 없는 상황' 이란 사태, 일본이 만들어낸 전세계 충격 시나리오 (오건영 단장 1부) l 머니 (655,527뷰 · 2일 전)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "🔁 재편집 재폭발",
+            "역사상"
+          ],
+          "merge_angle": "검증 키워드 '역사상' 재업로드 신호 — 새 각도로 재편집",
+          "sources_a": {
+            "channel": "머니인사이드",
+            "title": "\"역사상 본 적 없는 상황\" 이란 사태, 일본이 만들어낸 전세계 충격 시나리오 (오건영 단장 1부) l 머니포커스",
+            "views": 655527,
+            "url": "",
+            "days_since": 2
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-10 23:30",
+              "type": "auto_proposed",
+              "note": "재편집 재폭발 자동 검출"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-10 21:43",
-  "last_ai_detect_run": "2026-06-10 22:52",
+  "last_auto_run": "2026-06-10 23:30",
+  "last_ai_detect_run": "2026-06-10 23:30",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [
