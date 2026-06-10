@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-10 21:55",
+  "generated_at": "2026-06-10 22:53",
   "total_commits": 80,
   "by_category": {
-    "data": 51,
+    "data": 52,
     "other": 2,
     "docs": 5,
-    "feat": 18,
+    "feat": 17,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-10",
-      "count": 4,
+      "count": 5,
       "commits": [
+        {
+          "hash": "40939ea",
+          "full_hash": "40939eaee5834fbe50fc770e90bf4b663cb4d824",
+          "ts": "2026-06-10 21:55",
+          "ts_iso": "2026-06-10T21:55:19",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-10 21:55:18",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "d893a37",
           "full_hash": "d893a3719cb0c23e5190c00f44227bede02362c4",
@@ -846,6 +856,16 @@
   ],
   "all_commits": [
     {
+      "hash": "40939ea",
+      "full_hash": "40939eaee5834fbe50fc770e90bf4b663cb4d824",
+      "ts": "2026-06-10 21:55",
+      "ts_iso": "2026-06-10T21:55:19",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-10 21:55:18",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
+    {
       "hash": "d893a37",
       "full_hash": "d893a3719cb0c23e5190c00f44227bede02362c4",
       "ts": "2026-06-10 09:50",
@@ -1632,16 +1652,6 @@
       "ts_iso": "2026-06-04T00:02:26",
       "author": "cmpark0401-hash",
       "subject": "feat: 에드센스 운영 + 채널 구매 가이드 (manual.md 2종) + channel-acquisition 스킬",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "1b205be",
-      "full_hash": "1b205bed89c7cfe980dd428c5f4afe25d3ff4017",
-      "ts": "2026-06-03 16:44",
-      "ts_iso": "2026-06-03T16:44:31",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 워크보드 chip 빨간 날짜 배지 (카톡 알람 스타일) + manual 통합 갱신",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }

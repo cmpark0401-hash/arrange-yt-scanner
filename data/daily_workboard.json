@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-10 21:43",
+  "updated_at": "2026-06-10 22:52",
   "today": "2026-06-10",
   "categories_def": {
     "single_explosion": {
@@ -3237,6 +3237,144 @@
               "ts": "2026-06-10 01:34",
               "type": "auto_proposed",
               "note": "자동 추천 (score=54220)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260610-ai-시사-V0_JdB",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: 전 세계 배들이 몰려온다고? 세계 2위 환적항 된 부산항 근황｜크랩 (189,878뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.2x",
+            "1일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "전 세계 배들이 몰려온다고? 세계 2위 환적항 된 부산항 근황｜크랩",
+            "efficiency": 0.1879980198019802,
+            "views": 189878,
+            "velocity": 0,
+            "url": "https://www.youtube.com/watch?v=V0_JdBnumNs",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-10 22:52",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=6878)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260610-ai-경제-QaCsvr",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 귀에쏙쏙경제학: 삼성,LG,현대 국내 대기업  해외에서도 줄서서 주문하는 전 세계 단 하나뿐인 기업 (223,370뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 14.7x",
+            "1일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "귀에쏙쏙경제학",
+            "title": "삼성,LG,현대 국내 대기업  해외에서도 줄서서 주문하는 전 세계 단 하나뿐인 기업",
+            "efficiency": 14.695394736842106,
+            "views": 223370,
+            "velocity": 0,
+            "url": "https://www.youtube.com/watch?v=QaCsvrHZ8mU",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-10 22:52",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=21419)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260610-ai-경제-ZKCgJJ",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 팬더경제학: 67조원이 휴지조각 됐다&quot; 중국 조선소 몰락의 진짜 이유 (111,689뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 3.3x",
+            "4일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "팬더경제학",
+            "title": "67조원이 휴지조각 됐다&quot; 중국 조선소 몰락의 진짜 이유",
+            "efficiency": 3.2753372434017596,
+            "views": 111689,
+            "velocity": 336,
+            "url": "https://www.youtube.com/watch?v=ZKCgJJ0iO28",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-10 22:52",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=8723)"
             }
           ]
         }
@@ -7248,7 +7386,7 @@
     }
   ],
   "last_auto_run": "2026-06-10 21:43",
-  "last_ai_detect_run": "2026-06-10 21:43",
+  "last_ai_detect_run": "2026-06-10 22:52",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [

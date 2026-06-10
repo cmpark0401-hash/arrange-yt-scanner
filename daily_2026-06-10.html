@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#a855f7">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>일별 리포트 2026-06-10 · TubeHacker</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+:root {
+  /* 다크 베이스 */
+  --bg:#0a0a12; --surface:#13131c; --surface2:#1a1a26;
+  --border:#26263a; --divider:#1f1f30; --hover:#1e1e2e;
+  /* 텍스트 */
+  --text:#ededf2; --text2:#9696a6; --text3:#6c6c80;
+  /* 키 컬러 — 보라 (알고리즘 해킹) */
+  --primary:#a855f7; --primary-hi:#c084fc; --primary-bg:rgba(168,85,247,.12); --primary-bd:rgba(168,85,247,.35);
+  /* 보조 강조 */
+  --hot:#84cc16;        /* 라임 — 폭발/검증 */
+  --hot-bg:rgba(132,204,22,.10); --hot-bd:rgba(132,204,22,.35);
+  --warn:#ff7a45;       /* 오렌지 — 시그널 */
+  --warn-bg:rgba(255,122,69,.10); --warn-bd:rgba(255,122,69,.35);
+  --danger:#ef4444;     /* 빨강 — 폭락 */
+  --danger-bg:rgba(239,68,68,.10); --danger-bd:rgba(239,68,68,.35);
+  --up:#4ade80; --down:#ef4444;  /* 등락 */
+  --info:#60a5fa; --info-bg:rgba(96,165,250,.10);
+  /* 호환 (구 변수명) */
+  --blue:var(--primary); --green:var(--up); --red:var(--danger); --purple:var(--primary-hi);
+  --chip:rgba(168,85,247,.13);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body {
+  font-family:'Inter','Noto Sans KR',-apple-system,sans-serif;
+  line-height:1.5; color:var(--text); background:var(--bg);
+  max-width:1320px; margin:0 auto; padding:18px 20px 48px;
+  -webkit-font-smoothing:antialiased; font-feature-settings:'cv11','ss01';
+}
+header { padding:14px 0 16px; border-bottom:1px solid var(--divider); margin-bottom:20px;
+         display:flex; flex-wrap:wrap; align-items:center; gap:14px; }
+header .brand-block { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+header h1 { font-size:13px; font-weight:400; color:var(--text2); line-height:1.3; letter-spacing:0; display:flex; align-items:baseline; gap:8px; }
+header h1 .brand-flag { font-size:18px; line-height:1; }
+header h1 .brand-accent { color:var(--primary); font-weight:800; font-size:22px; letter-spacing:-0.5px; transition:color .15s; }
+header .brand-link:hover h1 .brand-accent { color:var(--primary-hi); }
+header .brand-link:hover h1 .brand-slogan { color:var(--text); }
+header h1 .brand-divider { color:var(--text3); margin:0 2px; }
+header h1 .brand-slogan { font-size:13px; color:var(--text2); font-weight:400; }
+header .sub { color:var(--text3); font-size:12px; margin-top:4px; flex-basis:100%; }
+header .header-chips { display:flex; flex-direction:column; gap:6px; margin-left:auto; align-items:flex-end; }
+header .header-chips-row { display:flex; gap:6px; flex-wrap:wrap; align-items:center; justify-content:flex-end; }
+.h-chip { display:inline-flex; align-items:center; gap:5px; padding:5px 11px; border-radius:13px;
+          background:var(--surface); border:1px solid var(--border); font-size:12px; color:var(--text2); font-weight:500; }
+.h-chip b { color:var(--text); font-weight:700; font-variant-numeric:tabular-nums; }
+.h-chip.warn { border-color:var(--warn-bd); background:var(--warn-bg); color:var(--warn); }
+.h-chip.warn b { color:var(--warn); }
+.h-chip.hot { border-color:var(--hot-bd); background:var(--hot-bg); color:var(--hot); }
+.h-chip.hot b { color:var(--hot); }
+.h-chip.info { border-color:var(--primary-bd); background:var(--primary-bg); color:var(--primary-hi); }
+.h-chip.info b { color:var(--primary-hi); }
+.h-chip.jp { background:linear-gradient(135deg,#fff 0%,#fff5f5 100%); border:1.5px solid #ff4d4f; color:#0a0a12; font-weight:800; cursor:pointer; transition:all .15s; box-shadow:0 1px 3px rgba(255,77,79,.18); }
+.h-chip.jp:hover { background:linear-gradient(135deg,#fff5f5 0%,#ffe0e0 100%); border-color:#e63030; text-decoration:none; transform:translateY(-1px); box-shadow:0 2px 6px rgba(255,77,79,.28); }
+.h-chip.white { background:#fff; border-color:#fff; color:#0a0a12; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.white:hover { background:#e8e8f0; border-color:#e8e8f0; color:#000; text-decoration:none; }
+.h-chip.pulse { background:rgba(34,197,94,.13); border-color:rgba(34,197,94,.55); color:#22c55e; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.pulse b { color:#22c55e; }
+.h-chip.pulse:hover { background:rgba(34,197,94,.22); border-color:#22c55e; transform:translateY(-1px); text-decoration:none; }
+.h-chip.ytg { background:linear-gradient(135deg,rgba(245,158,11,.15) 0%,rgba(251,191,36,.15) 100%); border:1.5px solid rgba(245,158,11,.6); color:#fbbf24; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.ytg:hover { background:linear-gradient(135deg,rgba(245,158,11,.25) 0%,rgba(251,191,36,.25) 100%); border-color:#fbbf24; transform:translateY(-1px); text-decoration:none; }
+.h-chip.workboard { background:linear-gradient(135deg,rgba(168,85,247,.18) 0%,rgba(217,70,239,.15) 100%); border:1.5px solid rgba(168,85,247,.65); color:#c084fc; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; position:relative; }
+.h-chip.workboard:hover { background:linear-gradient(135deg,rgba(168,85,247,.28) 0%,rgba(217,70,239,.25) 100%); border-color:#c084fc; transform:translateY(-1px); text-decoration:none; }
+.h-chip.clicklab { background:linear-gradient(135deg,rgba(236,72,153,.18) 0%,rgba(244,114,182,.15) 100%); border:1.5px solid rgba(236,72,153,.65); color:#f472b6; font-weight:700; cursor:pointer; transition:all .15s; text-decoration:none; position:relative; }
+.h-chip.clicklab:hover { background:linear-gradient(135deg,rgba(236,72,153,.28) 0%,rgba(244,114,182,.25) 100%); border-color:#f472b6; transform:translateY(-1px); text-decoration:none; }
+.chip-date-badge { position:absolute; top:-7px; right:-8px; background:#ef4444; color:#fff; font-size:9.5px; font-weight:800; padding:2px 6px; border-radius:9px; line-height:1.2; letter-spacing:.2px; box-shadow:0 1px 4px rgba(239,68,68,.45); border:1.5px solid rgba(0,0,0,.7); white-space:nowrap; min-width:14px; text-align:center; pointer-events:none; }
+.chip-date-badge.pulse { animation:badgePulse 1.8s ease-in-out infinite; }
+@keyframes badgePulse { 0%,100% { transform:scale(1); box-shadow:0 1px 4px rgba(239,68,68,.45); } 50% { transform:scale(1.08); box-shadow:0 2px 8px rgba(239,68,68,.7); } }
+.h-chip.secondary { background:transparent; border-color:var(--border); color:var(--text2); font-weight:600; cursor:pointer; transition:all .15s; text-decoration:none; }
+.h-chip.secondary:hover { background:var(--surface); border-color:var(--primary-bd); color:var(--text); text-decoration:none; }
+a.h-chip.warn, a.h-chip.hot, a.h-chip.info { cursor:pointer; transition:all .15s; text-decoration:none; }
+a.h-chip.warn:hover, a.h-chip.hot:hover, a.h-chip.info:hover { transform:translateY(-1px); text-decoration:none; filter:brightness(1.1); }
+/* chip/nav hover 툴팁 — 아래로 표시 (모든 [data-tip] 요소 공통) */
+header, header .header-chips, header .header-chips-row, .nav-links { overflow:visible !important; }
+[data-tip] { position:relative; }
+[data-tip]:hover { z-index:9999; }
+[data-tip]:hover::after {
+  content: attr(data-tip);
+  position:absolute; top:calc(100% + 10px); left:50%; transform:translateX(-50%);
+  background:#0a0a12; color:#fff; padding:7px 11px; border-radius:7px;
+  font-size:11px; font-weight:600; white-space:nowrap; letter-spacing:.2px;
+  border:1px solid rgba(255,255,255,.18); box-shadow:0 6px 18px rgba(0,0,0,.65);
+  z-index:9999; pointer-events:none;
+  animation:tipFade .15s ease-out;
+}
+[data-tip]:hover::before {
+  content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+  margin-top:4px; border:6px solid transparent; border-bottom-color:#0a0a12;
+  z-index:9999; pointer-events:none;
+  animation:tipFade .15s ease-out;
+}
+@keyframes tipFade { from { opacity:0; transform:translateX(-50%) translateY(-3px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+a { color:var(--primary-hi); text-decoration:none; transition:color .15s; }
+a:hover { color:var(--primary); text-decoration:none; }
+
+/* 요약 카드 */
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:22px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px 18px; transition:transform .15s, border-color .15s; }
+.card:hover { transform:translateY(-1px); border-color:var(--primary-bd); }
+.card .label { font-size:12px; color:var(--text2); margin-bottom:8px; font-weight:600; display:flex; align-items:center; gap:5px; text-transform:none; letter-spacing:0; }
+.card .value { font-size:30px; font-weight:800; letter-spacing:-0.6px; line-height:1.05; font-variant-numeric:tabular-nums; }
+.card.tone-red { background:var(--danger-bg); border-color:var(--danger-bd); }
+.card.tone-red .value { color:var(--danger); }
+.card.tone-green { background:var(--hot-bg); border-color:var(--hot-bd); }
+.card.tone-green .value { color:var(--hot); }
+.card.tone-blue { background:var(--primary-bg); border-color:var(--primary-bd); }
+.card.tone-blue .value { color:var(--primary-hi); }
+.card.tone-purple { background:rgba(168,85,247,.18); border-color:rgba(168,85,247,.4); }
+.card.tone-purple .value { color:var(--primary-hi); }
+.card.tone-warn { background:var(--warn-bg); border-color:var(--warn-bd); }
+.card.tone-warn .value { color:var(--warn); }
+
+/* 카테고리 탭 */
+.tabs { display:flex; flex-wrap:wrap; gap:6px; margin:18px 0 14px; }
+.tab { padding:6px 13px; border-radius:16px; background:var(--surface); color:var(--text2);
+       font-size:13px; font-weight:600; cursor:pointer; border:1px solid var(--border); transition:all .15s; }
+.tab:hover { border-color:var(--primary-bd); color:var(--text); }
+.tab.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+.tab .cnt { font-size:11px; opacity:.85; margin-left:5px; padding:1px 6px; background:rgba(255,255,255,.15); border-radius:8px; }
+
+/* 필터 바 */
+.filters { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-bottom:18px;
+           padding:12px 16px; background:var(--surface); border:1px solid var(--border); border-radius:10px; }
+.filter-group { display:flex; gap:5px; align-items:center; }
+.filter-group .lbl { font-size:11px; color:var(--text2); margin-right:5px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.seg { display:flex; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:var(--bg); }
+.seg button { padding:6px 12px; border:none; background:transparent; font-size:13px; cursor:pointer; color:var(--text2); font-weight:500; transition:all .15s; }
+.seg button:hover { color:var(--text); background:var(--hover); }
+.seg button.active { background:var(--primary); color:#fff; }
+.toggle { display:flex; align-items:center; gap:7px; font-size:13px; color:var(--text); cursor:pointer; }
+.toggle input[type=checkbox] { appearance:none; width:32px; height:18px; background:var(--border); border-radius:9px; position:relative; cursor:pointer; transition:background .2s; }
+.toggle input[type=checkbox]::after { content:''; position:absolute; top:2px; left:2px; width:14px; height:14px; background:#fff; border-radius:50%; transition:transform .2s; }
+.toggle input[type=checkbox]:checked { background:var(--primary); }
+.toggle input[type=checkbox]:checked::after { transform:translateX(14px); }
+#search { flex:1; min-width:160px; padding:8px 14px; border:1px solid var(--border);
+          border-radius:18px; font-size:13px; background:var(--bg); color:var(--text); }
+#search::placeholder { color:var(--text3); }
+#search:focus { outline:none; border-color:var(--primary); background:var(--surface); }
+
+/* 채널 카드 그리드 */
+.ch-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:16px; }
+.ch-card { background:var(--surface); border:1px solid var(--border); border-radius:12px;
+           padding:18px; transition:all .18s; position:relative; }
+.ch-card:hover { border-color:var(--primary-bd); transform:translateY(-2px); box-shadow:0 8px 24px rgba(168,85,247,.12); }
+.ch-card.rank-1 { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.ch-card.rank-2 { border-color:rgba(196,196,196,.45); background:linear-gradient(180deg, rgba(196,196,196,.05) 0%, var(--surface) 60%); }
+.ch-card.rank-3 { border-color:rgba(205,127,50,.45); background:linear-gradient(180deg, rgba(205,127,50,.05) 0%, var(--surface) 60%); }
+.ch-rank-badge { position:absolute; top:-9px; left:16px; padding:2px 9px; border-radius:10px;
+                 background:var(--surface2); border:1px solid var(--border); font-size:11px; font-weight:700; color:var(--text2); font-variant-numeric:tabular-nums; }
+.ch-rank-badge.rank-1 { background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; border-color:#ffd700; }
+.ch-rank-badge.rank-2 { background:linear-gradient(135deg,#e0e0e0,#a8a8a8); color:#000; border-color:#c0c0c0; }
+.ch-rank-badge.rank-3 { background:linear-gradient(135deg,#cd7f32,#8b4513); color:#fff; border-color:#cd7f32; }
+.ch-head { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px; gap:10px; }
+.ch-name { font-size:16px; font-weight:700; line-height:1.3; flex:1; min-width:0; color:var(--text); }
+.ch-name .delta { font-size:11px; margin-left:6px; vertical-align:middle; font-weight:700; }
+.ch-name .delta.up { color:var(--up); }
+.ch-name .delta.down { color:var(--down); }
+.ch-name .delta.flat { color:var(--text3); }
+.ch-meta { font-size:12px; color:var(--text2); margin-top:3px; font-weight:500; }
+.ch-type { font-size:10px; padding:2px 8px; border-radius:8px; background:var(--bg); color:var(--text2); white-space:nowrap; font-weight:700; border:1px solid var(--border); text-transform:uppercase; letter-spacing:.3px; }
+.ch-cats { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0; }
+.ch-cat { font-size:11px; padding:2px 9px; border-radius:9px; background:var(--primary-bg); color:var(--primary-hi); font-weight:600; border:1px solid var(--primary-bd); }
+.ch-stats { display:flex; gap:14px; margin:12px 0; padding:10px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.ch-stat { font-size:11px; color:var(--text2); flex:1; min-width:0; font-weight:500; }
+.ch-stat b { font-size:18px; color:var(--text); font-weight:800; display:block; font-variant-numeric:tabular-nums; line-height:1.1; margin-bottom:2px; letter-spacing:-0.3px; }
+.ch-stat.sig b { color:var(--danger); }
+.ch-stat.hot b { color:var(--hot); }
+.ch-vid { margin-top:10px; font-size:12px; }
+.ch-vid .vlabel { font-size:10px; color:var(--text2); font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.ch-vid .vlabel.popular { color:var(--warn); }
+.ch-vid .vlabel.latest { color:var(--hot); }
+.ch-vid .vtitle { font-size:13px; font-weight:500; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin-top:4px; color:var(--text); line-height:1.4; }
+.ch-vid .vmeta { font-size:11px; color:var(--text3); margin-top:3px; }
+.ch-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; padding-top:12px; border-top:1px solid var(--divider); }
+.ch-vid-col { min-width:0; }
+.ch-thumb-mini { width:100%; aspect-ratio:16/9; background:var(--bg); border-radius:6px; overflow:hidden; margin-bottom:6px; border:1px solid var(--border); position:relative; }
+.ch-thumb-mini img { width:100%; height:100%; object-fit:cover; display:block; }
+.ch-thumb-mini .views-badge { position:absolute; bottom:4px; right:4px; font-size:10px; padding:1px 5px; border-radius:4px; background:rgba(0,0,0,.78); color:#fff; font-weight:700; font-variant-numeric:tabular-nums; }
+/* 스파크라인 (7일 추세) */
+.ch-spark { margin-top:6px; padding-top:6px; border-top:1px dashed var(--divider); display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:11px; color:var(--text2); }
+.ch-spark canvas { flex:1; height:24px !important; max-width:140px; }
+.ch-spark .spark-val { font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
+.ch-freq { font-size:11px; color:var(--text2); display:inline-flex; align-items:center; gap:4px; padding:2px 7px; border-radius:8px; background:var(--bg); border:1px solid var(--border); white-space:nowrap; font-weight:600; }
+.empty { text-align:center; color:var(--text2); padding:40px; grid-column:1/-1; }
+
+section { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; margin-bottom:18px; }
+section h2 { font-size:18px; font-weight:700; margin-bottom:14px; letter-spacing:-0.3px; }
+.archive-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); gap:8px; }
+.archive-grid a { display:block; background:var(--surface); border:1px solid var(--border); padding:11px;
+                  border-radius:8px; text-align:center; font-size:13px; color:var(--text); font-weight:600; transition:all .15s; }
+.archive-grid a:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.archive-grid a.today { background:var(--primary); border-color:var(--primary); color:#fff; }
+.nav-links { margin:14px 0; display:flex; gap:7px; flex-wrap:wrap; }
+.nav-links a { background:var(--surface); padding:8px 15px; border-radius:18px; font-size:13px; font-weight:600; color:var(--text2); border:1px solid var(--border); transition:all .15s; }
+.nav-links a:hover { border-color:var(--primary-bd); color:var(--text); }
+.country-switch { display:inline-flex; align-items:center; gap:7px; padding:7px 14px; border:1px solid var(--border);
+  border-radius:18px; font-size:13px; font-weight:700; color:var(--text); background:var(--surface); transition:all .15s; }
+.country-switch:hover { background:var(--hover); border-color:var(--primary); color:var(--primary-hi); }
+.shell-head { position:sticky; top:0; z-index:50; background:var(--bg); padding-top:6px; border-bottom:1px solid var(--divider); backdrop-filter:blur(8px); }
+.nav-links a.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
+#view { min-height:60vh; }
+.view-loading { padding:60px 20px; text-align:center; color:var(--text2); font-size:14px; }
+.info-bar { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:13px 16px; margin:8px 0 18px; font-size:12px; color:var(--text2); line-height:1.8; }
+.info-bar .desc { display:block; margin-bottom:6px; color:var(--text); font-weight:600; font-size:13px; }
+.info-bar b { color:var(--text); font-weight:700; }
+.legend-item { display:inline-block; margin-right:14px; white-space:nowrap; font-size:12px; }
+.nav-links a.nav-primary { background:rgba(168,85,247,.10); color:var(--primary-hi); border:2px solid var(--primary); font-weight:700; padding:7px 14px; }
+.nav-links a.nav-primary:hover { background:rgba(168,85,247,.18); color:var(--primary-hi); border-color:var(--primary-hi); }
+.nav-links a.nav-primary.tab-on { background:var(--primary); color:#fff; border-color:var(--primary); }
+/* 새 메시지 알림 스타일 배지 */
+.nav-links a { position:relative; }
+.nav-badge { display:inline-flex; align-items:center; justify-content:center; min-width:18px; height:18px; padding:0 5px; margin-left:6px; border-radius:9px; background:var(--danger); color:#fff; font-size:10px; font-weight:800; line-height:1; font-variant-numeric:tabular-nums; vertical-align:middle; }
+.nav-badge.fresh { background:var(--danger); box-shadow:0 0 0 0 rgba(239,68,68,.7); animation:nav-pulse 2s infinite; }
+@keyframes nav-pulse {
+  0% { box-shadow:0 0 0 0 rgba(239,68,68,.7); }
+  70% { box-shadow:0 0 0 8px rgba(239,68,68,0); }
+  100% { box-shadow:0 0 0 0 rgba(239,68,68,0); }
+}
+.nav-badge.dim { background:var(--surface2); color:var(--text2); border:1px solid var(--border); animation:none; box-shadow:none; }
+.rec-cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
+.rec-group h3 { font-size:14px; font-weight:700; margin:6px 0 10px; }
+.rec-card { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:13px; margin-bottom:9px; transition:all .15s; }
+.rec-card:hover { border-color:var(--primary-bd); }
+.rec-rank { color:var(--text3); font-weight:600; font-size:11px; margin-right:5px; }
+.rec-topic { font-size:14px; font-weight:700; margin-bottom:4px; color:var(--text); }
+.rec-date { font-size:11px; color:var(--hot); font-weight:600; margin-bottom:3px; }
+.rec-why { font-size:11px; color:var(--text2); margin-bottom:6px; }
+.rec-ref { font-size:11px; display:inline-block; }
+.rec-empty { color:var(--text2); padding:16px; font-size:12px; }
+.hot-flag { display:inline-block; font-size:10px; font-weight:700; padding:1px 7px; border-radius:8px; background:var(--danger-bg); color:var(--danger); white-space:nowrap; border:1px solid var(--danger-bd); }
+.reedit-box { background:var(--danger-bg); border:1px solid var(--danger-bd); border-radius:12px; padding:13px 16px; margin:10px 0 18px; }
+.reedit-head { font-size:15px; font-weight:700; color:var(--text); }
+.reedit-sub { display:block; font-size:11px; font-weight:500; color:var(--text2); margin-top:3px; }
+.reedit-card { padding:9px 0; border-top:1px solid rgba(239,68,68,.18); }
+.reedit-card:first-of-type { border-top:none; }
+.reedit-line1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.reedit-line1 .row-title { max-width:420px; font-weight:600; }
+.reedit-meta { font-size:11px; color:var(--text2); margin-top:3px; padding-left:24px; }
+@media (max-width:600px){ .rec-cols{ grid-template-columns:1fr; } .reedit-line1 .row-title{ max-width:200px; } header { flex-direction:column; align-items:flex-start; } header .header-chips { margin-left:0; } }
+footer { text-align:center; color:var(--text3); font-size:11px; padding:24px 0 8px; }
+
+.tbl-wrap { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:auto; margin:10px 0 16px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+thead th { text-align:left; font-weight:700; font-size:11px; color:var(--text2);
+  padding:10px 14px; border-bottom:1px solid var(--border); white-space:nowrap; background:var(--surface2); text-transform:uppercase; letter-spacing:.3px; }
+tbody td { padding:11px 14px; border-bottom:1px solid var(--divider); vertical-align:middle; color:var(--text); }
+tbody tr:last-child td { border-bottom:none; }
+tbody tr:hover { background:var(--hover); }
+td.rank, th.rank { width:34px; text-align:center; color:var(--text2); font-weight:700; font-variant-numeric:tabular-nums; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+td.num.lead { color:var(--text); font-weight:700; }
+.muted { color:var(--text2); }
+.cat-badge { display:inline-block; font-size:10px; padding:2px 9px; border-radius:10px; font-weight:700; white-space:nowrap; background:var(--primary-bg); color:var(--primary-hi); border:1px solid var(--primary-bd); }
+.kw { font-weight:700; font-size:14px; }
+.cellv { display:flex; flex-direction:column; gap:1px; }
+.row-title { display:inline-block; max-width:520px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:bottom; color:var(--text); font-weight:500; }
+.row-sub { font-size:11px; color:var(--text2); }
+.ch-tag { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--bg); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.vid-list { display:flex; flex-direction:column; gap:6px; }
+.vd-row { display:flex; flex-direction:column; gap:1px; max-width:560px; }
+.vd-title { font-size:12px; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--text); }
+.vd-meta { font-size:11px; color:var(--text2); }
+.vd-date { color:var(--hot); font-weight:600; }
+.rep-sec { margin:24px 0 6px; display:flex; align-items:baseline; gap:8px; }
+.rep-sec h2 { font-size:17px; font-weight:800; color:var(--text); letter-spacing:-0.3px; }
+.rep-sec .cnt { font-size:12px; color:var(--text2); font-weight:500; }
+.rep-note { font-size:12px; color:var(--text2); margin:0 0 6px; }
+section table { margin:10px 0; }
+
+.news-list { background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+.news-row { display:flex; gap:12px; align-items:baseline; padding:13px 16px; border-bottom:1px solid var(--divider); }
+.news-row:last-child { border-bottom:none; }
+.news-row:hover { background:var(--hover); }
+.news-rank { width:22px; flex-shrink:0; color:var(--text2); font-size:13px; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; }
+.news-body { display:flex; flex-direction:column; gap:3px; min-width:0; }
+.news-title { font-size:13px; font-weight:600; color:var(--text); white-space:normal; }
+.news-title:hover { color:var(--primary-hi); }
+.news-meta { font-size:11px; color:var(--text2); display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.news-src { color:var(--hot); font-weight:700; }
+.news-cat { font-size:10px; padding:1px 7px; border-radius:8px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; border:1px solid var(--primary-bd); }
+.news-orig { font-size:11px; color:var(--text2); }
+.date-nav { display:flex; flex-wrap:wrap; gap:5px; margin:10px 0 14px; align-items:center; font-size:12px; }
+.date-nav .lbl { color:var(--text2); margin-right:4px; font-weight:700; text-transform:uppercase; letter-spacing:.3px; font-size:11px; }
+.date-nav a { padding:4px 10px; border-radius:13px; background:var(--surface); color:var(--text2); font-weight:600; border:1px solid var(--border); transition:all .15s; }
+.date-nav a:hover { border-color:var(--primary-bd); color:var(--text); }
+.date-nav a.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+
+.subtab-nav { display:flex; gap:6px; margin:6px 0 14px; }
+.subtab { padding:7px 14px; border-radius:18px; background:var(--surface); color:var(--text2); font-size:13px; font-weight:600; border:1px solid var(--border); cursor:pointer; }
+.subtab:hover { border-color:var(--primary-bd); color:var(--text); }
+.subtab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+.subtab.dim { opacity:.45; cursor:not-allowed; }
+.chan-chip { display:inline-block; font-size:10px; padding:2px 8px; border-radius:10px; background:var(--primary-bg); color:var(--primary-hi); font-weight:700; margin:3px 4px 0 0; border:1px solid var(--primary-bd); }
+
+/* Manual (사용 가이드) — 시각 컴포넌트 */
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
+
+/* 단계 카드 (1→2→3 가로 흐름) */
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; margin:14px 0; }
+.step { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; position:relative; }
+.step .step-num { position:absolute; top:-10px; left:14px; background:var(--primary); color:#fff; font-weight:800; font-size:12px; padding:3px 10px; border-radius:10px; }
+.step .step-title { font-weight:700; color:var(--text); font-size:14px; margin:6px 0 6px; }
+.step .step-body { font-size:12px; color:var(--text2); line-height:1.6; }
+.step.hot { border-color:var(--hot-bd); background:var(--hot-bg); }
+.step.hot .step-num { background:var(--hot); color:#000; }
+.step.warn { border-color:var(--warn-bd); background:var(--warn-bg); }
+.step.warn .step-num { background:var(--warn); color:#000; }
+
+/* 사이트 UI 미니어처 — 실제 페이지처럼 */
+.mock { background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:12px; margin:14px 0; }
+.mock-header { display:flex; align-items:baseline; gap:8px; padding-bottom:8px; border-bottom:1px solid var(--divider); margin-bottom:10px; }
+.mock-brand { font-size:14px; font-weight:800; color:var(--primary); }
+.mock-slogan { font-size:10px; color:var(--text2); }
+.mock-chips { margin-left:auto; display:flex; gap:5px; }
+.mock-chip { font-size:10px; padding:3px 8px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--text2); font-weight:600; }
+.mock-chip.warn { color:var(--warn); border-color:var(--warn-bd); background:var(--warn-bg); }
+.mock-chip.hot { color:var(--hot); border-color:var(--hot-bd); background:var(--hot-bg); }
+.mock-chip b { color:var(--text); }
+.mock-chip.warn b { color:var(--warn); }
+.mock-chip.hot b { color:var(--hot); }
+.mock-tabs { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0 10px; }
+.mock-tab { font-size:11px; padding:5px 10px; border-radius:13px; background:var(--surface); color:var(--text2); border:1px solid var(--border); font-weight:600; }
+.mock-tab.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+.mock-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 13px; margin:6px 0; position:relative; }
+.mock-card.crown { border-color:rgba(255,193,7,.55); background:linear-gradient(180deg, rgba(255,193,7,.06) 0%, var(--surface) 60%); }
+.mock-rank-badge { display:inline-block; background:linear-gradient(135deg,#ffd700,#ffb300); color:#000; font-size:11px; font-weight:800; padding:2px 8px; border-radius:8px; margin-right:6px; }
+.mock-ch-name { font-size:13px; font-weight:700; color:var(--text); display:inline; }
+.mock-delta { color:var(--up); font-weight:700; font-size:11px; margin-left:6px; }
+.mock-meta-line { font-size:11px; color:var(--text2); margin-top:3px; }
+.mock-stats-row { display:flex; gap:14px; margin:7px 0; padding:6px 0; border-top:1px solid var(--divider); border-bottom:1px solid var(--divider); }
+.mock-stat { font-size:10px; color:var(--text2); }
+.mock-stat b { display:block; font-size:13px; font-weight:800; color:var(--text); }
+.mock-stat.sig b { color:var(--danger); }
+.mock-stat.hot b { color:var(--hot); }
+.mock-vid-dual { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; padding-top:8px; border-top:1px solid var(--divider); }
+.mock-vid-mini { font-size:10px; }
+.mock-vid-mini .lbl { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.mock-vid-mini .lbl.pop { color:var(--warn); }
+.mock-vid-mini .lbl.latest { color:var(--hot); }
+.mock-vid-thumb { background:linear-gradient(135deg, #3a3a4a, #1a1a26); height:55px; border-radius:5px; margin:3px 0; display:flex; align-items:center; justify-content:center; color:var(--text3); font-size:9px; }
+.mock-vid-mini .title { font-size:11px; color:var(--text); line-height:1.3; }
+.mock-pointer { display:inline-block; background:var(--primary); color:#fff; font-size:10px; font-weight:700; padding:3px 9px; border-radius:5px; position:absolute; }
+.mock-pointer::before { content:"👉 "; }
+
+/* 인포그래픽 게이지 */
+.gauge { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; }
+.gauge-title { font-size:13px; font-weight:700; color:var(--text); margin-bottom:8px; }
+.gauge-bar { height:24px; border-radius:8px; background:linear-gradient(90deg, #4ade80 0%, #4ade80 30%, #facc15 30%, #facc15 60%, #ff7a45 60%, #ff7a45 80%, #ef4444 80%); position:relative; overflow:hidden; }
+.gauge-labels { display:flex; justify-content:space-between; margin-top:4px; font-size:10px; color:var(--text2); }
+.gauge-pointer { position:absolute; top:-2px; bottom:-2px; width:3px; background:var(--text); border-radius:2px; box-shadow:0 0 0 2px var(--surface); }
+
+/* 메트릭 인포그래픽 카드 */
+.metric-card { display:flex; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:10px 0; }
+.metric-icon { font-size:26px; flex-shrink:0; }
+.metric-body { flex:1; min-width:0; }
+.metric-body .name { font-size:14px; font-weight:800; color:var(--text); }
+.metric-body .formula { font-size:11px; color:var(--text2); margin:3px 0; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+.metric-body .meaning { font-size:12px; color:var(--text); margin-top:5px; }
+.metric-grades { display:flex; gap:6px; margin-top:8px; }
+.metric-grades .grade { font-size:10px; padding:3px 8px; border-radius:6px; font-weight:700; }
+.metric-grades .grade.good { background:rgba(74,222,128,.15); color:var(--up); border:1px solid rgba(74,222,128,.4); }
+.metric-grades .grade.mid { background:rgba(250,204,21,.15); color:#facc15; border:1px solid rgba(250,204,21,.4); }
+.metric-grades .grade.bad { background:rgba(239,68,68,.15); color:var(--danger); border:1px solid rgba(239,68,68,.4); }
+
+/* 시간 룰러 (첫 사건 시점) */
+.ruler { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; margin:14px 0; position:relative; }
+.ruler-track { height:50px; background:linear-gradient(90deg, var(--hot) 0%, var(--hot) 33%, var(--warn) 33%, var(--warn) 66%, var(--danger) 66%); border-radius:8px; position:relative; }
+.ruler-marker { position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--text); box-shadow:0 0 0 2px var(--surface); }
+.ruler-marker::after { content:attr(data-label); position:absolute; top:-22px; left:50%; transform:translateX(-50%); background:var(--text); color:var(--bg); font-size:10px; font-weight:700; padding:2px 7px; border-radius:5px; white-space:nowrap; }
+.ruler-scale { display:flex; justify-content:space-between; margin-top:6px; font-size:10px; color:var(--text2); }
+.ruler-labels { display:flex; justify-content:space-between; margin-top:3px; font-size:9px; color:var(--text2); font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
+
+/* 흐름 다이어그램 (큰 화살표 박스) */
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px; align-items:stretch; margin:14px 0; }
+.flow-node { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; position:relative; }
+.flow-node .icon { font-size:24px; display:block; margin-bottom:5px; }
+.flow-node .title { font-size:12px; font-weight:700; color:var(--text); }
+.flow-node .sub { font-size:10px; color:var(--text2); margin-top:3px; }
+.flow-node.primary { background:var(--primary-bg); border-color:var(--primary-bd); }
+.flow-node.primary .title { color:var(--primary-hi); }
+
+/* 좋은 예 vs 나쁜 예 박스 */
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0; }
+.compare-box { padding:14px; border-radius:10px; border:1px solid; }
+.compare-box.good { background:rgba(74,222,128,.07); border-color:rgba(74,222,128,.35); }
+.compare-box.bad { background:rgba(239,68,68,.07); border-color:rgba(239,68,68,.35); }
+.compare-box .head { font-size:13px; font-weight:800; margin-bottom:6px; }
+.compare-box.good .head { color:var(--up); }
+.compare-box.bad .head { color:var(--danger); }
+.compare-box ul { margin:5px 0 0 18px; }
+.compare-box li { font-size:12px; line-height:1.55; margin:3px 0; }
+
+/* TL;DR callout */
+.tldr { background:linear-gradient(135deg, var(--primary-bg), var(--info-bg)); border:1px solid var(--primary-bd); border-radius:10px; padding:14px 16px; margin:14px 0; }
+.tldr-title { font-size:13px; font-weight:800; color:var(--primary-hi); margin-bottom:6px; text-transform:uppercase; letter-spacing:.5px; }
+.tldr-body { font-size:13px; color:var(--text); line-height:1.65; }
+
+/* 클코 자동화 가이드 (접이식 details) */
+details.auto-guide { background:linear-gradient(135deg, var(--primary-bg), rgba(132,204,22,.04)); border:2px solid var(--primary-bd); border-radius:14px; padding:0; margin:18px 0; overflow:hidden; }
+details.auto-guide > summary { cursor:pointer; list-style:none; padding:18px 22px; font-size:16px; font-weight:800; color:var(--primary-hi); display:flex; align-items:center; gap:10px; user-select:none; transition:background .15s; }
+details.auto-guide > summary::-webkit-details-marker { display:none; }
+details.auto-guide > summary:hover { background:rgba(168,85,247,.08); }
+details.auto-guide > summary::after { content:"▼ 펼쳐서 보기"; margin-left:auto; font-size:11px; font-weight:600; color:var(--text2); padding:5px 11px; background:var(--surface); border:1px solid var(--border); border-radius:14px; }
+details.auto-guide[open] > summary::after { content:"▲ 접기"; }
+details.auto-guide .auto-body { padding:6px 22px 24px; border-top:1px solid var(--primary-bd); }
+details.auto-guide h3 { margin-top:22px; font-size:16px; color:var(--text); }
+details.auto-guide h4 { margin-top:14px; font-size:14px; color:var(--primary-hi); }
+
+/* 액션 흐름 — 사용자 vs Claude 구분 */
+.action-flow { display:flex; flex-direction:column; gap:10px; margin:14px 0; }
+.action-row { display:flex; align-items:flex-start; gap:12px; }
+.action-actor { flex-shrink:0; width:80px; padding:8px 10px; border-radius:10px; text-align:center; font-size:11px; font-weight:700; }
+.action-actor.user { background:rgba(255,122,69,.15); color:var(--warn); border:1px solid var(--warn-bd); }
+.action-actor.claude { background:var(--primary-bg); color:var(--primary-hi); border:1px solid var(--primary-bd); }
+.action-actor.system { background:rgba(96,165,250,.13); color:#60a5fa; border:1px solid rgba(96,165,250,.4); }
+.action-actor .who { display:block; font-size:9px; opacity:.7; text-transform:uppercase; letter-spacing:.5px; margin-bottom:2px; }
+.action-arrow { flex-shrink:0; color:var(--text3); font-size:18px; align-self:center; }
+.action-body { flex:1; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:13px; color:var(--text); line-height:1.55; }
+.action-body code { background:var(--surface2); color:var(--primary-hi); padding:1px 5px; border-radius:4px; font-size:11.5px; }
+.action-body .step-name { font-weight:700; color:var(--text); display:block; margin-bottom:3px; font-size:12px; }
+.action-body ul { margin:4px 0 0 16px; }
+.action-body li { font-size:12px; color:var(--text2); margin:2px 0; }
+
+/* 명령어 예시 카드 */
+.cmd-card { display:flex; align-items:center; gap:12px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:11px 14px; margin:6px 0; }
+.cmd-card .cmd-input { flex:1; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; color:var(--primary-hi); background:var(--surface2); padding:6px 10px; border-radius:6px; }
+.cmd-card .cmd-arrow { color:var(--text3); font-size:16px; }
+.cmd-card .cmd-result { flex:1; font-size:12px; color:var(--text2); }
+
+/* 강조 인용 박스 (인사이트 예시) */
+.insight { background:var(--surface); border-left:4px solid var(--hot); border-radius:0 10px 10px 0; padding:13px 16px; margin:14px 0; }
+.insight-tag { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.5px; color:var(--hot); margin-bottom:5px; }
+.insight-section { margin:6px 0; font-size:12.5px; line-height:1.6; }
+.insight-section b { color:var(--hot); }
+
+.manual-body { font-size:14px; line-height:1.75; color:var(--text); padding:8px 4px; max-width:920px; }
+.manual-body h1 { font-size:28px; font-weight:800; margin:24px 0 12px; color:var(--text); letter-spacing:-0.5px; }
+.manual-body h2 { font-size:22px; font-weight:800; margin:32px 0 12px; padding-top:16px; border-top:1px solid var(--divider); color:var(--primary-hi); letter-spacing:-0.3px; }
+.manual-body h3 { font-size:17px; font-weight:700; margin:20px 0 8px; color:var(--text); }
+.manual-body h4 { font-size:15px; font-weight:700; margin:14px 0 6px; color:var(--text2); }
+.manual-body p { margin:10px 0; }
+.manual-body ul, .manual-body ol { margin:10px 0 14px 22px; }
+.manual-body li { margin:5px 0; }
+.manual-body strong, .manual-body b { color:var(--text); font-weight:700; }
+.manual-body code { background:var(--surface2); color:var(--primary-hi); padding:1px 6px; border-radius:5px; font-size:0.92em; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; border:1px solid var(--border); }
+.manual-body pre { background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:14px 16px; overflow-x:auto; margin:14px 0; line-height:1.55; font-size:12.5px; }
+.manual-body pre code { background:none; border:none; padding:0; color:var(--text); }
+.manual-body blockquote { border-left:3px solid var(--primary); background:var(--primary-bg); padding:10px 14px; margin:14px 0; border-radius:0 8px 8px 0; color:var(--text); font-size:13px; }
+.manual-body table { width:100%; border-collapse:collapse; margin:14px 0; font-size:13px; background:var(--surface); border-radius:8px; overflow:hidden; }
+.manual-body th { background:var(--surface2); color:var(--text); font-weight:700; padding:9px 12px; text-align:left; border-bottom:1px solid var(--border); }
+.manual-body td { padding:8px 12px; border-bottom:1px solid var(--divider); }
+.manual-body td:first-child { color:var(--text); font-weight:600; }
+.manual-body hr { border:none; border-top:1px solid var(--divider); margin:24px 0; }
+.manual-body a { color:var(--primary-hi); }
+.manual-body a:hover { color:var(--primary); }
+/* 부드러운 스크롤 + h2 anchor 위치 보정 */
+html { scroll-behavior:smooth; }
+.manual-body h2 { scroll-margin-top:20px; }
+/* TOC 박스 (카테고리 그룹 2단) */
+.manual-toc { background:linear-gradient(135deg,rgba(168,85,247,.10) 0%,rgba(99,102,241,.08) 100%); border:1.5px solid rgba(168,85,247,.45); border-radius:12px; padding:14px 18px; margin:8px 0 28px; position:sticky; top:8px; z-index:5; backdrop-filter:blur(8px); max-height:calc(100vh - 24px); overflow-y:auto; }
+.manual-toc::-webkit-scrollbar { width:6px; }
+.manual-toc::-webkit-scrollbar-thumb { background:rgba(168,85,247,.4); border-radius:3px; }
+.manual-toc summary { font-size:14px; color:var(--text); cursor:pointer; padding:6px 0; user-select:none; list-style:none; outline:none; }
+.manual-toc summary::-webkit-details-marker { display:none; }
+.manual-toc summary::before { content:"▼ "; color:#c084fc; font-size:11px; margin-right:6px; transition:transform .2s; display:inline-block; }
+.manual-toc details:not([open]) summary::before { transform:rotate(-90deg); }
+.manual-toc summary b { color:#c084fc; font-weight:800; font-size:15px; }
+.manual-toc .toc-count { color:var(--text2); font-size:11px; font-weight:600; margin-left:6px; background:rgba(168,85,247,.15); padding:2px 8px; border-radius:10px; }
+.manual-toc .toc-hint { color:var(--text3); font-size:11px; font-weight:400; margin-left:8px; font-style:italic; }
+/* 카테고리 그룹 2단 grid */
+.manual-toc .toc-groups { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 18px; margin-top:14px; padding-top:12px; border-top:1px dashed rgba(168,85,247,.3); }
+.manual-toc .toc-group { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:10px 12px; }
+.manual-toc .toc-cat { font-size:13px; font-weight:800; color:#c084fc; margin-bottom:8px; padding-bottom:6px; border-bottom:1px solid rgba(168,85,247,.2); display:flex; align-items:center; gap:6px; }
+.manual-toc .toc-cat-emoji { font-size:15px; }
+.manual-toc .toc-cat-count { color:var(--text3); font-size:10.5px; font-weight:600; margin-left:auto; background:rgba(168,85,247,.1); padding:1px 6px; border-radius:8px; }
+.manual-toc ul { list-style:none; margin:0; padding:0; }
+.manual-toc li { margin:0; padding:0; }
+.manual-toc li a { display:flex; align-items:center; gap:8px; padding:5px 8px; font-size:12.5px; color:var(--text); text-decoration:none; border-radius:5px; transition:all .12s; line-height:1.4; }
+.manual-toc li a:hover { background:rgba(168,85,247,.12); color:var(--text); text-decoration:none; padding-left:11px; }
+.manual-toc .toc-num { font-size:10px; font-weight:800; color:#c084fc; background:rgba(168,85,247,.15); padding:2px 5px; border-radius:3px; flex-shrink:0; min-width:20px; text-align:center; letter-spacing:.3px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+@media (max-width:700px) { .manual-toc { position:static; padding:10px 12px; } .manual-toc .toc-groups { grid-template-columns:1fr; } }
+
+/* Autopsy 페이지 폼 */
+.autopsy-form { background:var(--surface); border:2px solid var(--primary-bd); border-radius:12px; padding:18px; margin:6px 0 20px; }
+.autopsy-form .ah { font-size:15px; font-weight:800; color:var(--text); margin-bottom:4px; }
+.autopsy-form .asub { font-size:12px; color:var(--text2); margin-bottom:14px; }
+.autopsy-form textarea { width:100%; min-height:110px; padding:11px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; resize:vertical; }
+.autopsy-form textarea:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .row2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+.autopsy-form input[type=text] { padding:9px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13px; }
+.autopsy-form input[type=text]:focus { outline:none; border-color:var(--primary); }
+.autopsy-form .actions { display:flex; gap:8px; margin-top:14px; align-items:center; }
+.autopsy-form button { padding:10px 22px; background:linear-gradient(135deg,var(--primary) 0%, var(--primary-hi) 100%); color:#fff; border:none; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer; box-shadow:0 0 16px rgba(168,85,247,.3); transition:all .15s; }
+.autopsy-form button:hover { box-shadow:0 0 22px rgba(168,85,247,.5); transform:translateY(-1px); }
+.autopsy-form button.ghost { background:var(--surface2); color:var(--text2); box-shadow:none; }
+.autopsy-form button.ghost:hover { color:var(--text); }
+.autopsy-form .hint { font-size:11px; color:var(--text3); margin-left:auto; }
+.autopsy-card { display:flex; flex-direction:column; min-height:130px; transition:all .18s; }
+.autopsy-card:hover { border-color:var(--primary) !important; box-shadow:0 4px 16px rgba(168,85,247,.18); }
+
+@media (max-width:600px) {
+  body { padding:14px; }
+  header h1 { font-size:20px; }
+  .cards { grid-template-columns:repeat(2,1fr); gap:8px; }
+  .card .value { font-size:22px; }
+  .ch-grid { grid-template-columns:1fr; }
+  .filters { flex-direction:column; align-items:stretch; }
+  .row-title { max-width:200px; }
+  tbody td, thead th { padding:9px 8px; }
+  .ch-vid-dual { grid-template-columns:1fr; }
+  .autopsy-form .row2 { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-links"><a href="index.html">←</a></div>
+    <h1>📋 일일 리포트 — 2026-06-10</h1>
+    <div class="sub">시그널 7 · 소형 폭발 163 · 대형 폭발 117 · 신영상 207 · 2026-06-10 22:53</div>
+  </header>
+
+  <div class="info-bar">
+    <span class="desc">📋 그날 무엇이 터졌는지 섹션별 전체 디테일 — 시그널·폭발·신영상·발행둔화.</span>
+    <span class="legend-item">🚨 <b>시그널</b> = 시속 5천+/h (지금 뜨는 중)</span>
+    <span class="legend-item">🔥 <b>폭발</b> = 효율 5배+ (검증)</span>
+    <span class="legend-item"><b>효율</b> = 조회÷구독 · <b>시속</b> = 시간당 조회 증가</span>
+  </div>
+
+  <div class="cards">
+    <div class="card tone-red"><div class="label">🚨 알고리즘 시그널</div><div class="value">7</div></div>
+    <div class="card tone-green"><div class="label">🔬 소형 폭발</div><div class="value">163</div></div>
+    <div class="card tone-blue"><div class="label">🐳 대형 폭발</div><div class="value">117</div></div>
+    <div class="card tone-purple"><div class="label">🆕 신영상 24h</div><div class="value">207</div></div>
+  </div>
+  <div class="rep-sec"><h2>🚨 알고리즘 시그널 (시속 5,000+ 즉시 검토)</h2><span class="cnt">7편</span></div><div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>채널</th><th>제목</th><th class="num">시속</th><th class="num">증가</th><th class="num">누적</th></tr></thead><tbody><tr><td class="rank">1</td><td><div class="cellv"><b>크랩 KLAB</b><span class="row-sub">일반+AI</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=ignRvQAnt6I" target="_blank">🎬 아이고 애기야....｜크랩</a></td><td class="num lead" style="color:var(--hot)">16,093/h</td><td class="num">+711,852</td><td class="num">970,500</td></tr><tr><td class="rank">2</td><td><div class="cellv"><b>머니인사이드</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=FsACGEn4aaw" target="_blank">🎬 "역사상 본 적 없는 상황" 이란 사태, 일본이 만들어낸 전세계 충격 시나리오 (오건영 단장 1부) l 머니포커스</a></td><td class="num lead" style="color:var(--hot)">10,682/h</td><td class="num">+472,542</td><td class="num">652,377</td></tr><tr><td class="rank">3</td><td><div class="cellv"><b>지식인사이드</b><span class="row-sub">대형</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=0RaFhUP7Zbs" target="_blank">🎬 똘똘한 아이를 만드는 부모의 개입은 ‘1가지’가 다릅니다ㅣ지식인초대석 EP.140 (폴 킴 교수 2부)</a></td><td class="num lead" style="color:var(--hot)">4,310/h</td><td class="num">+190,667</td><td class="num">220,164</td></tr><tr><td class="rank">4</td><td><div class="cellv"><b>슈카월드</b><span class="row-sub">대형</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=6VMGVcmh1sM" target="_blank">🎬 삼성전자 -10%, 건강한 조정이어야만 한다</a></td><td class="num lead" style="color:var(--hot)">4,153/h</td><td class="num">+184,122</td><td class="num">395,180</td></tr><tr><td class="rank">5</td><td><div class="cellv"><b>당신이 몰랐던 이야기</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=hu8ZJGWfZkg" target="_blank">🎬 '피부가 썩고 좀비처럼 변한다' 단 한번으로 몸과 뇌가 망가지는 가장 위험한 약 '크로코딜'</a></td><td class="num lead" style="color:var(--hot)">3,837/h</td><td class="num">+170,117</td><td class="num">234,859</td></tr><tr><td class="rank">6</td><td><div class="cellv"><b>이지영 [Leejiyoung Official]</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=oX9nbU9FBV0" target="_blank">🎬 타인의 위로보다 강력한 '나를 믿는 힘'</a></td><td class="num lead" style="color:var(--hot)">1,274/h</td><td class="num">+56,507</td><td class="num">63,957</td></tr><tr><td class="rank">7</td><td><div class="cellv"><b>머니코믹스</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=mNLdcVlQgeU" target="_blank">📱 수익률 20,833% 넘어봤어?</a></td><td class="num lead" style="color:var(--hot)">1,133/h</td><td class="num">+50,147</td><td class="num">81,045</td></tr></tbody></table></div>
+<div class="rep-sec"><h2>🐳 대형 채널 폭발 (구독 50,000+)</h2><span class="cnt">117편</span></div><div class="rep-note">상위 40편 표시 (총 117편)</div><div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>채널</th><th>제목</th><th class="num">효율</th><th class="num">시속</th><th class="num">조회</th></tr></thead><tbody><tr><td class="rank">1</td><td><div class="cellv"><b>과학드림</b><span class="row-sub">구독 1,140,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=Q-U_4zV407U" target="_blank">🎬 AI가 마침내 나스카 지상화의 미스터리를 풀었다!?</a></td><td class="num lead">1.8x</td><td class="num">1,455/h</td><td class="num">2,086,822</td></tr><tr><td class="rank">2</td><td><div class="cellv"><b>지식인사이드</b><span class="row-sub">구독 3,870,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=YNAR4AiiiRU" target="_blank">🎬 "강세장에 취하지 마세요." 주식 고수들이 주목하는 시그널ㅣ지식인초대석: 합석 EP.5 (이선엽 X 윤지호)</a></td><td class="num lead">0.4x</td><td class="num">673/h</td><td class="num">1,645,008</td></tr><tr><td class="rank">3</td><td><div class="cellv"><b>지식인사이드</b><span class="row-sub">구독 3,870,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=hreiLyP9yVA" target="_blank">🎬 차인표가 60년 살아보고 깨달은 많은 인맥이 전혀 필요없는 이유ㅣ지식인초대석 EP.138 (차인표 2부)</a></td><td class="num lead">0.4x</td><td class="num">1,596/h</td><td class="num">1,501,360</td></tr><tr><td class="rank">4</td><td><div class="cellv"><b>크랩 KLAB</b><span class="row-sub">구독 1,010,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=eLDUd9n7Lxc" target="_blank">🎬 살다 살다 '투표용지 부족'으로 투표 못 한 2026년 대한민국 근황｜크랩</a></td><td class="num lead">1.1x</td><td class="num">2,034/h</td><td class="num">1,154,351</td></tr><tr><td class="rank">5</td><td><div class="cellv"><b>과학드림</b><span class="row-sub">구독 1,140,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=hRTTUnNt8gw" target="_blank">🎬 미국이 매주 5천만 마리의 파리를 숲에 살포하는 이유!</a></td><td class="num lead">0.9x</td><td class="num">50/h</td><td class="num">1,002,397</td></tr><tr><td class="rank">6</td><td><div class="cellv"><b>크랩 KLAB</b><span class="row-sub">구독 1,010,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=ignRvQAnt6I" target="_blank">🎬 아이고 애기야....｜크랩</a></td><td class="num lead">1.0x</td><td class="num">16,093/h</td><td class="num">970,500</td></tr><tr><td class="rank">7</td><td><div class="cellv"><b>방구석 과학</b><span class="row-sub">구독 183,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=ZH4YdBpi57c" target="_blank">📱 한국인에게 인종차별한 미국 여성의 최후</a></td><td class="num lead">4.6x</td><td class="num">1,698/h</td><td class="num">846,500</td></tr><tr><td class="rank">8</td><td><div class="cellv"><b>지식해적단</b><span class="row-sub">구독 1,400,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=Ha562xil-_g" target="_blank">🎬 💀 미국이 이스라엘을 손절 못하는 이유 / 💀 기독교 시온주의의 정체</a></td><td class="num lead">0.6x</td><td class="num">12/h</td><td class="num">811,358</td></tr><tr><td class="rank">9</td><td><div class="cellv"><b>지식해적단</b><span class="row-sub">구독 1,400,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=IAxahflvzjU" target="_blank">🎬 💀 미국🇺🇸이 원유를 수입해야 하는 이유 / 💀 세계 1위 산유국인데…???</a></td><td class="num lead">0.6x</td><td class="num">19/h</td><td class="num">775,019</td></tr><tr><td class="rank">10</td><td><div class="cellv"><b>과학드림</b><span class="row-sub">구독 1,140,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=yviSHdii6f0" target="_blank">🎬 그것도 물고기가... 200마리도 안 남은 물고기의 사막 고립기!</a></td><td class="num lead">0.6x</td><td class="num">52/h</td><td class="num">692,444</td></tr><tr><td class="rank">11</td><td><div class="cellv"><b>지식해적단</b><span class="row-sub">구독 1,400,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=AMt1I2cCFnU" target="_blank">🎬 💀 에티오피아 경제를 먹여살리는 수출 효자 상품 / 💀 까트의 위험성</a></td><td class="num lead">0.5x</td><td class="num">35/h</td><td class="num">691,602</td></tr><tr><td class="rank">12</td><td><div class="cellv"><b>지식해적단</b><span class="row-sub">구독 1,400,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=2eA1LTWi0i4" target="_blank">🎬 💀 중동에서 싸우는데 한국이 처맞는 이유;; / 💀 호르무즈 해협의 중요성</a></td><td class="num lead">0.5x</td><td class="num">6/h</td><td class="num">686,266</td></tr><tr><td class="rank">13</td><td><div class="cellv"><b>보다 BODA</b><span class="row-sub">구독 3,110,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=cIDNBw3QHus" target="_blank">🎬 중국 역사에서 갑자기 증발해버린 고대 문명의 흔적(의도적으로..?)ㅣ역사를 보다 EP.141</a></td><td class="num lead">0.2x</td><td class="num">857/h</td><td class="num">663,738</td></tr><tr><td class="rank">14</td><td><div class="cellv"><b>과학드림</b><span class="row-sub">구독 1,140,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=P2Ft39GyQTc" target="_blank">🎬 거미는 어떻게 거미가 됐을까?｜알면 알수록 기묘한 동물, 거미!</a></td><td class="num lead">0.6x</td><td class="num">121/h</td><td class="num">654,747</td></tr><tr><td class="rank">15</td><td><div class="cellv"><b>머니인사이드</b><span class="row-sub">구독 2,080,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=FsACGEn4aaw" target="_blank">🎬 "역사상 본 적 없는 상황" 이란 사태, 일본이 만들어낸 전세계 충격 시나리오 (오건영 단장 1부) l 머니포커스</a></td><td class="num lead">0.3x</td><td class="num">10,682/h</td><td class="num">652,377</td></tr><tr><td class="rank">16</td><td><div class="cellv"><b>보다 BODA</b><span class="row-sub">구독 3,110,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=BX7sp1fqyMo" target="_blank">🎬 과학자들을 뉴질랜드로 보내버리면 생기는 일ㅣ여행인 줄 알았나보다 Ep.01</a></td><td class="num lead">0.2x</td><td class="num">4,351/h</td><td class="num">622,077</td></tr><tr><td class="rank">17</td><td><div class="cellv"><b>슈카월드</b><span class="row-sub">구독 3,710,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=B7_VywdVC6U" target="_blank">🎬 2026년 여름은 역사상 가장 뜨거운 해가 될 것인가</a></td><td class="num lead">0.2x</td><td class="num">213/h</td><td class="num">614,173</td></tr><tr><td class="rank">18</td><td><div class="cellv"><b>지식인사이드</b><span class="row-sub">구독 3,870,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=vgYAHX4BtAM" target="_blank">🎬 "아파트 아닙니다" '이 3가지' 있다면 이미 훌륭한 중년입니다ㅣ지식인클래스 EP.01 (김민식 PD)</a></td><td class="num lead">0.2x</td><td class="num">433/h</td><td class="num">609,127</td></tr><tr><td class="rank">19</td><td><div class="cellv"><b>지식해적단</b><span class="row-sub">구독 1,400,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=jLIIU2MwBvc" target="_blank">🎬 💀 몽골🇲🇳이 한국🇰🇷을 좋아하는 이유 / 💀 고려시대부터 시작됨 ㄷㄷ</a></td><td class="num lead">0.4x</td><td class="num">97/h</td><td class="num">603,416</td></tr><tr><td class="rank">20</td><td><div class="cellv"><b>정형돈의 제목없음TV</b><span class="row-sub">구독 873,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=UoF-5csNaK4" target="_blank">🎬 [황지성 탈북기 Ep.1] 끔찍한 수용소... 사랑... 그리고 나의 탈출이야기 ※독점공개※</a></td><td class="num lead">0.7x</td><td class="num">97/h</td><td class="num">584,686</td></tr><tr><td class="rank">21</td><td><div class="cellv"><b>청화수 chunghwasoo</b><span class="row-sub">구독 166,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=uL8teEI5cHo" target="_blank">🎬 고구려 최초의 이름은 '그 이름' 이었다! 고구려가 먼저였다!</a></td><td class="num lead">3.5x</td><td class="num">0/h</td><td class="num">572,962</td></tr><tr><td class="rank">22</td><td><div class="cellv"><b>보다 BODA</b><span class="row-sub">구독 3,110,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=iuLw1tpCkGY" target="_blank">🎬 중국인들이 자주 씻는 걸 경계하는 이유(오히려 병든다..?)ㅣ역사를 보다 EP.143</a></td><td class="num lead">0.2x</td><td class="num">2,275/h</td><td class="num">561,438</td></tr><tr><td class="rank">23</td><td><div class="cellv"><b>보다 BODA</b><span class="row-sub">구독 3,110,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=PsjQvm9TJAg" target="_blank">🎬 과학자들이 인생을 포기하고 싶은 순간마다 꼭 찾아 읽는 책 (과학자들의 인생책...) | 과학을 보다 EP.194</a></td><td class="num lead">0.2x</td><td class="num">420/h</td><td class="num">561,193</td></tr><tr><td class="rank">24</td><td><div class="cellv"><b>슈카월드</b><span class="row-sub">구독 3,710,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=jVRF2G4MTbU" target="_blank">🎬 상장 앞둔 스페이스X 실적 공개</a></td><td class="num lead">0.1x</td><td class="num">731/h</td><td class="num">546,555</td></tr><tr><td class="rank">25</td><td><div class="cellv"><b>슈카월드</b><span class="row-sub">구독 3,710,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=-nXLqdgNHho" target="_blank">🎬 "전국민이 주식에 취해있다."</a></td><td class="num lead">0.1x</td><td class="num">70/h</td><td class="num">544,293</td></tr><tr><td class="rank">26</td><td><div class="cellv"><b>정형돈의 제목없음TV</b><span class="row-sub">구독 873,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=XT3U3fX2IgA" target="_blank">🎬 ☠다음 중 김정은 기분상해죄로 사형인 것은?☠ 1. 술주정 2. 방귀 3. 입냄새 4. 회의 때 졸음 (김정은을 직접 만난 외교관 출신 탈북자 이일규 참사)</a></td><td class="num lead">0.6x</td><td class="num">1,962/h</td><td class="num">537,849</td></tr><tr><td class="rank">27</td><td><div class="cellv"><b>과학드림</b><span class="row-sub">구독 1,140,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=qIZZZlqRW5o" target="_blank">🎬 잠 못 이루는 밤 듣는 인류 진화 이야기! (고인류 몰아보기)</a></td><td class="num lead">0.5x</td><td class="num">108/h</td><td class="num">526,154</td></tr><tr><td class="rank">28</td><td><div class="cellv"><b>김지윤의 지식Play</b><span class="row-sub">구독 1,390,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=6l5Id1WK-n0" target="_blank">🎬 UAE의 OPEC탈퇴, 전쟁 중인 지금 또 왜..?</a></td><td class="num lead">0.4x</td><td class="num">5/h</td><td class="num">519,322</td></tr><tr><td class="rank">29</td><td><div class="cellv"><b>삼프로TV 3PROTV</b><span class="row-sub">구독 2,980,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=A8apLEtTZDU" target="_blank">🎬 [26.06.10 오전 방송 전체보기] 유가·금리 하락 속 뉴욕증시 하락 마감...장중 변동성 극심, 왜?</a></td><td class="num lead">0.2x</td><td class="num">0/h</td><td class="num">512,018</td></tr><tr><td class="rank">30</td><td><div class="cellv"><b>우주아저씨</b><span class="row-sub">구독 325,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=jo9ORyZU6JA" target="_blank">🎬 가장 가까운 별, 4.2광년</a></td><td class="num lead">1.5x</td><td class="num">1,174/h</td><td class="num">494,369</td></tr><tr><td class="rank">31</td><td><div class="cellv"><b>지식인사이드</b><span class="row-sub">구독 3,870,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=kV3AHq165xo" target="_blank">🎬 인생의 갈림길에서 오판을 줄이는 '1가지' 기준ㅣ지식인초대석 EP.137 (차인표 1부)</a></td><td class="num lead">0.1x</td><td class="num">380/h</td><td class="num">492,275</td></tr><tr><td class="rank">32</td><td><div class="cellv"><b>당신이 몰랐던 이야기</b><span class="row-sub">구독 1,310,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=6W5dkObyOPQ" target="_blank">🎬 '노예시장이 돌아왔다' 몇십만원에 거래되는 흑인 노예들 '리비아 흑인 노예시장'</a></td><td class="num lead">0.4x</td><td class="num">99/h</td><td class="num">491,654</td></tr><tr><td class="rank">33</td><td><div class="cellv"><b>지식인사이드</b><span class="row-sub">구독 3,870,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=UwWG6NLGidU" target="_blank">🎬 이 ‘2가지’만 알아도 집이 10배는 넓어보입니다ㅣ대외비 EP.24</a></td><td class="num lead">0.1x</td><td class="num">59/h</td><td class="num">491,142</td></tr><tr><td class="rank">34</td><td><div class="cellv"><b>세모과학</b><span class="row-sub">구독 157,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=P-zT0jwLWH4" target="_blank">🎬 이중슬릿 실험에서 드러난 양자역학의 기묘함</a></td><td class="num lead">3.1x</td><td class="num">287/h</td><td class="num">487,085</td></tr><tr><td class="rank">35</td><td><div class="cellv"><b>보다 BODA</b><span class="row-sub">구독 3,110,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=S4ixQ_DjrLQ" target="_blank">🎬 서로가 멸망할 때까지 싸우는 이스라엘과 레바논(헤즈볼라의 탄생..)ㅣ그날을 보다 EP.30</a></td><td class="num lead">0.2x</td><td class="num">384/h</td><td class="num">486,373</td></tr><tr><td class="rank">36</td><td><div class="cellv"><b>리뷰엉이: Owl's Review</b><span class="row-sub">구독 1,830,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=Xw1A-79a6uc" target="_blank">🎬 미국이 80년 동안 필사적으로 숨겨온 진실, 그들은 이미 지구에 와있다</a></td><td class="num lead">0.3x</td><td class="num">484/h</td><td class="num">479,116</td></tr><tr><td class="rank">37</td><td><div class="cellv"><b>김반월의미스터리</b><span class="row-sub">구독 167,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=EVd9-yl2vQk" target="_blank">🎬 '산인 줄 알았는데..' 이집트 피라미드 보다 4배 더 오래된 피라미드? [전설의 문명 하이퍼보리아] | 미스터리</a></td><td class="num lead">2.8x</td><td class="num">64/h</td><td class="num">470,513</td></tr><tr><td class="rank">38</td><td><div class="cellv"><b>당신이 몰랐던 이야기</b><span class="row-sub">구독 1,310,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=pWOHwW7hxZ0" target="_blank">🎬 '성직자가 포주다' 교리를 악용한 성매매 1시간짜리 결혼 '이라크 쾌락혼 무타아'</a></td><td class="num lead">0.4x</td><td class="num">68/h</td><td class="num">461,219</td></tr><tr><td class="rank">39</td><td><div class="cellv"><b>김지윤의 지식Play</b><span class="row-sub">구독 1,390,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=CXUPKNLZCZw" target="_blank">🎬 또 다시 언급된 나토 탈퇴! 전후 미국의 동맹 재편은 어떻게 될까 | 미국, 트럼프, 나토</a></td><td class="num lead">0.3x</td><td class="num">13/h</td><td class="num">460,267</td></tr><tr><td class="rank">40</td><td><div class="cellv"><b>보다 BODA</b><span class="row-sub">구독 3,110,000</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=_rZ0zjOfpJ8" target="_blank">🎬 물리학계가 중력을 설명하지 못하고 있는 이유 | 과학을 보다 EP.195</a></td><td class="num lead">0.1x</td><td class="num">0/h</td><td class="num">456,365</td></tr></tbody></table></div>
+<div class="rep-sec"><h2>🔬 소형 채널 폭발 (구독 ≤50,000)</h2><span class="cnt">163편</span></div><div class="rep-note">상위 40편 표시 (총 163편)</div><div class="tbl-wrap"><table><thead><tr><th class="rank">#</th><th>채널</th><th>제목</th><th class="num">효율</th><th class="num">시속</th><th class="num">조회</th></tr></thead><tbody><tr><td class="rank">1</td><td><div class="cellv"><b>[수면다큐]</b><span class="row-sub">구독 15,800</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=y78lBmYU0yE" target="_blank">🎬 [수면다큐] 우주의 끝을 찾아서</a></td><td class="num lead">402.3x</td><td class="num">61/h</td><td class="num">6,356,411</td></tr><tr><td class="rank">2</td><td><div class="cellv"><b>경제우체부</b><span class="row-sub">구독 6,440</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=VLowcwH5yMk" target="_blank">🎬 "이란 1500만 대피" 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피아의 실체</a></td><td class="num lead">274.6x</td><td class="num">142/h</td><td class="num">1,768,413</td></tr><tr><td class="rank">3</td><td><div class="cellv"><b>담담소담 민담</b><span class="row-sub">구독 2,020</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=t-lRlnmPkL0" target="_blank">🎬 가시덤불 심는 며느리를 모두가 비웃었는데… 장마 뒤 마을이 뒤집힌 이유 | 야담 | 옛날이야기 | 조선시대 | 민담</a></td><td class="num lead">149.9x</td><td class="num">351/h</td><td class="num">302,708</td></tr><tr><td class="rank">4</td><td><div class="cellv"><b>경제대부</b><span class="row-sub">구독 2,930</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=yT-_vXIIqRU" target="_blank">🎬 "환경부도, 카이스트도 전부 인정했는데..." 전국 주유소 뒤흔든 990원 세녹스가 완전히 사라진 진짜 이유</a></td><td class="num lead">62.8x</td><td class="num">0/h</td><td class="num">184,141</td></tr><tr><td class="rank">5</td><td><div class="cellv"><b>코믹스 경제</b><span class="row-sub">구독 2,390</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=uFq-sr_ia6o" target="_blank">🎬 "100년은 걸린다" 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도</a></td><td class="num lead">55.3x</td><td class="num">62/h</td><td class="num">132,218</td></tr><tr><td class="rank">6</td><td><div class="cellv"><b>손안의 경제학</b><span class="row-sub">구독 1,510</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=xpz_QLv8060" target="_blank">🎬 2026년 대한민국 자산 계급 8개층 — 당신은 지금 몇 층에 살고 있습니까? | 순자산 8층 구조 완전 공개 | 4050 자산 생존 지도 | 손안의 경제학</a></td><td class="num lead">47.0x</td><td class="num">110/h</td><td class="num">70,985</td></tr><tr><td class="rank">7</td><td><div class="cellv"><b>뒷골목 야담</b><span class="row-sub">구독 2,400</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=9Lh3WLA9yJY" target="_blank">🎬 "아버님, 거지에게 시집가란 말이옵니까?" 마지막 유언에 거지 굴로 걸어간 아씨... | 야담 | 옛날이야기 | 민담 | 수면동화 | 오디오북</a></td><td class="num lead">39.1x</td><td class="num">535/h</td><td class="num">93,887</td></tr><tr><td class="rank">8</td><td><div class="cellv"><b>달빛 아래 이야기</b><span class="row-sub">구독 3,450</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=ATna0gvP4Us" target="_blank">🎬 "내가 먹여살리겠소" 산골 약초꾼 처녀가 눈 속에서 업고 온 사내, 알고 보니.. | 야담 옛날이야기 민담 전설 설화</a></td><td class="num lead">38.6x</td><td class="num">215/h</td><td class="num">133,196</td></tr><tr><td class="rank">9</td><td><div class="cellv"><b>경제의 신호</b><span class="row-sub">구독 8,430</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=mSy7WVS4vBI" target="_blank">🎬 LG는 어떻게 까다로운 인도의 14억 국민가전이 되었나?</a></td><td class="num lead">34.1x</td><td class="num">180/h</td><td class="num">287,457</td></tr><tr><td class="rank">10</td><td><div class="cellv"><b>한밤의 한국사</b><span class="row-sub">구독 8,380</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=NRtLHrlkspU" target="_blank">🎬 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열</a></td><td class="num lead">31.3x</td><td class="num">478/h</td><td class="num">262,552</td></tr><tr><td class="rank">11</td><td><div class="cellv"><b>담담소담 민담</b><span class="row-sub">구독 2,020</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=w9rnjjL3y7U" target="_blank">🎬 한 푼도 없다는데 왜 국밥을? 공짜 국밥 내주던 노파에게 장터 사람들이 놀란 이유 | 야담 | 옛날이야기 | 조선시대 | 민담</a></td><td class="num lead">30.5x</td><td class="num">103/h</td><td class="num">61,682</td></tr><tr><td class="rank">12</td><td><div class="cellv"><b>경제균열</b><span class="row-sub">구독 17,600</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=0u3wHhqxceA" target="_blank">🎬 삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언에 진짜 이유</a></td><td class="num lead">23.8x</td><td class="num">0/h</td><td class="num">418,128</td></tr><tr><td class="rank">13</td><td><div class="cellv"><b>원가 공개 경제학</b><span class="row-sub">구독 16,500</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=BC08qmkUUNg" target="_blank">🎬 [원가공개] 6.3 지방선거 구청장 당선, 실제로 얼마 버나, 임기 4년 수익 구조 전부 공개</a></td><td class="num lead">23.6x</td><td class="num">399/h</td><td class="num">388,754</td></tr><tr><td class="rank">14</td><td><div class="cellv"><b>밤마실야담</b><span class="row-sub">구독 28,700</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=9RAy2i7kvvs" target="_blank">🎬 "아저씨 소금은 비올때 파세요." 거지아이 한마디에 대박난 소금장수 | 야담 | 수면동화 | 전래동화</a></td><td class="num lead">23.5x</td><td class="num">342/h</td><td class="num">673,129</td></tr><tr><td class="rank">15</td><td><div class="cellv"><b>경제의 시작</b><span class="row-sub">구독 7,810</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=QbUYDbj-u1I" target="_blank">🎬 90%가 속는 옷값의 비밀과 아울렛 할인의 함정 | 경제 애니메이션</a></td><td class="num lead">22.5x</td><td class="num">146/h</td><td class="num">175,548</td></tr><tr><td class="rank">16</td><td><div class="cellv"><b>탐정 경제학</b><span class="row-sub">구독 17,700</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=NXIcyN1WwSY" target="_blank">🎬 북한군 128만의 허상, 핵무기의 한계, 그리고 붕괴 72시간 시나리오 [통합본]</a></td><td class="num lead">20.1x</td><td class="num">1/h</td><td class="num">356,596</td></tr><tr><td class="rank">17</td><td><div class="cellv"><b>전해들은 야담</b><span class="row-sub">구독 31,500</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=aI8A973spEw" target="_blank">🎬 자객들에 쫓기던 왕비를 절벽으로 밀어버린 천재아이| 야담 | 조선시대 | 오디오북 | 전설 민담</a></td><td class="num lead">19.2x</td><td class="num">276/h</td><td class="num">605,540</td></tr><tr><td class="rank">18</td><td><div class="cellv"><b>쉽게이해되는 경제</b><span class="row-sub">구독 1,700</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=9poYKzIKaf8" target="_blank">🎬 일하는 60대와 쉬는 60대의 결정적 차이｜5년 후 건강과 인생이 완전히 갈렸습니다!</a></td><td class="num lead">18.6x</td><td class="num">106/h</td><td class="num">31,702</td></tr><tr><td class="rank">19</td><td><div class="cellv"><b>경제왕토끼</b><span class="row-sub">구독 23,500</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=czy8dA-NPCc" target="_blank">🎬 "시청률 0.5%" 갑질하던 방송국의 처참한 몰락, 외면당한 3가지 진짜 이유</a></td><td class="num lead">18.2x</td><td class="num">33/h</td><td class="num">426,610</td></tr><tr><td class="rank">20</td><td><div class="cellv"><b>구수한 야담</b><span class="row-sub">구독 14,400</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=StI2eX5WKWk" target="_blank">🎬 눈보라 속 백호를 살린 포수, 은혜는 이렇게 돌아왔습니다｜호랑이 보은 설화</a></td><td class="num lead">17.8x</td><td class="num">186/h</td><td class="num">256,166</td></tr><tr><td class="rank">21</td><td><div class="cellv"><b>옛고을야담</b><span class="row-sub">구독 5,500</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=aUfe229nxjs" target="_blank">🎬 거머리 떼 속에 핏덩이를 던진 친부, 18년 뒤 제 집안 피가 검게 썩었다  | 야담 | 옛날이야기</a></td><td class="num lead">17.8x</td><td class="num">34/h</td><td class="num">97,768</td></tr><tr><td class="rank">22</td><td><div class="cellv"><b>엄마의 밤책</b><span class="row-sub">구독 3</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=JbL0jovoNtI" target="_blank">🎬 🌜잠들기 전 듣는 위인전 | 장영실,허준,유관순,김구,안중근,신채호 6인의 삶 (1시간)</a></td><td class="num lead">17.7x</td><td class="num">0/h</td><td class="num">53</td></tr><tr><td class="rank">23</td><td><div class="cellv"><b>세계경제 돋보기</b><span class="row-sub">구독 9,280</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=Z_IzMPEKM8c" target="_blank">🎬 중국 고속철도 1140조 빚이 깔려 있습니다 세계 최대 철도의 진짜 속도</a></td><td class="num lead">17.4x</td><td class="num">239/h</td><td class="num">161,310</td></tr><tr><td class="rank">24</td><td><div class="cellv"><b>우주생각</b><span class="row-sub">구독 3,930</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=RANFYhxi9Cw" target="_blank">🎬 프록시마 센타우리에 절대 갈 수 없는 10가지 이유</a></td><td class="num lead">17.2x</td><td class="num">5/h</td><td class="num">67,538</td></tr><tr><td class="rank">25</td><td><div class="cellv"><b>경제대부</b><span class="row-sub">구독 2,930</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=_zx_iNC_7Zs" target="_blank">🎬 싹쓸이하던 한국 VS 반값으로 덤비는 중국. 수십조 중동 오일머니를 차지할 최후의 승자는 누가 될까?</a></td><td class="num lead">16.6x</td><td class="num">0/h</td><td class="num">48,556</td></tr><tr><td class="rank">26</td><td><div class="cellv"><b>탐정 경제학</b><span class="row-sub">구독 17,700</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=nF1KP1Gnd24" target="_blank">🎬 "13조를 퍼줬는데 1조도 못 받았다" 김정은이 푸틴한테 완전히 당한 소름돋는 전말</a></td><td class="num lead">14.8x</td><td class="num">35/h</td><td class="num">262,239</td></tr><tr><td class="rank">27</td><td><div class="cellv"><b>경제왕토끼</b><span class="row-sub">구독 23,500</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=EGF6neqw3hs" target="_blank">🎬 2026년 대한민국 자산별 8계급, 여러분은 몇 층에 계신가요?</a></td><td class="num lead">14.7x</td><td class="num">75/h</td><td class="num">345,792</td></tr><tr><td class="rank">28</td><td><div class="cellv"><b>귀에쏙쏙경제학</b><span class="row-sub">구독 15,200</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=QaCsvrHZ8mU" target="_blank">🎬 삼성,LG,현대 국내 대기업  해외에서도 줄서서 주문하는 전 세계 단 하나뿐인 기업</a></td><td class="num lead">14.7x</td><td class="num">0/h</td><td class="num">223,370</td></tr><tr><td class="rank">29</td><td><div class="cellv"><b>여우골 야담</b><span class="row-sub">구독 10,300</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=paQO8OPWGdw" target="_blank">🎬 자객에 쫓긴 버려진  왕비를  폭포 절벽으로 떨어뜨린  천재아이  | 야담 | 조선시대 | 오디오북 | 전설 민담</a></td><td class="num lead">14.6x</td><td class="num">615/h</td><td class="num">150,847</td></tr><tr><td class="rank">30</td><td><div class="cellv"><b>역사 너머</b><span class="row-sub">구독 1,740</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=sOPr0HbcXiw" target="_blank">🎬 [인물역사] 장자, 2400년 전 가난한 철학자가 알려주는 진정한 자유란? #시니어역사</a></td><td class="num lead">13.3x</td><td class="num">22/h</td><td class="num">23,212</td></tr><tr><td class="rank">31</td><td><div class="cellv"><b>옛고을야담</b><span class="row-sub">구독 5,500</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=xlwZkz7wqJ8" target="_blank">🎬 마패 든 암행어사를 강절벽서 밀어버린 10살 소녀, 사흘 뒤 남한강이 토해낸 충격적 증거 | 야담 | 옛날이야기</a></td><td class="num lead">13.0x</td><td class="num">10/h</td><td class="num">71,425</td></tr><tr><td class="rank">32</td><td><div class="cellv"><b>야담주유소</b><span class="row-sub">구독 8,840</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=HXx1JCPvbBU" target="_blank">🎬 "화살은 단 한발 적은 두명" 화살 하나로 왕을 살린 소년의 선택은? #야담 #옛날이야기 #민담 #전설 #수면동화</a></td><td class="num lead">12.6x</td><td class="num">44/h</td><td class="num">111,571</td></tr><tr><td class="rank">33</td><td><div class="cellv"><b>엄마의 밤책</b><span class="row-sub">구독 3</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=sTFbb80pR9k" target="_blank">🎬 🌜잠들기 전 듣는 위인전 | 수로왕부터 신사임당까지 6인의 삶 (1시간)</a></td><td class="num lead">12.3x</td><td class="num">0/h</td><td class="num">37</td></tr><tr><td class="rank">34</td><td><div class="cellv"><b>럭키경제학</b><span class="row-sub">구독 19,900</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=uXOTcLNWIsk" target="_blank">🎬 "45조 안 주면 멈춘다" 결국 터진 이재용의 한 마디</a></td><td class="num lead">12.0x</td><td class="num">26/h</td><td class="num">239,733</td></tr><tr><td class="rank">35</td><td><div class="cellv"><b>경제의 신호</b><span class="row-sub">구독 8,430</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=SD3ZriaG9N0" target="_blank">🎬 "창업 10년차 한국 벤처회사" 엔비디아를 움직였다.  세계가 탐내는 진짜 이유</a></td><td class="num lead">11.9x</td><td class="num">6/h</td><td class="num">100,684</td></tr><tr><td class="rank">36</td><td><div class="cellv"><b>코믹스 경제</b><span class="row-sub">구독 2,390</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=hJuTF2o6lzQ" target="_blank">🎬 "일본 꺾고 세계 1위" 한국 광반도체 독자 개발 기술에 전 세계가 난리난 이유</a></td><td class="num lead">11.3x</td><td class="num">25/h</td><td class="num">26,906</td></tr><tr><td class="rank">37</td><td><div class="cellv"><b>원가 공개 경제학</b><span class="row-sub">구독 16,500</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=Nc5PCuSf7Co" target="_blank">🎬 [원가공개] 선거비용 원가공개 — 피켓 아줌마 일당부터 출구조사 비용까지 다 뜯어봤습니다</a></td><td class="num lead">11.2x</td><td class="num">158/h</td><td class="num">184,115</td></tr><tr><td class="rank">38</td><td><div class="cellv"><b>농부의 경제학</b><span class="row-sub">구독 4,470</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=_CfiOeykmrQ" target="_blank">🎬 삼전·닉스 들고 계신가요? 이번주 27일, 29일 종가를 꼭 확인하셔야 합니다</a></td><td class="num lead">11.1x</td><td class="num">0/h</td><td class="num">49,419</td></tr><tr><td class="rank">39</td><td><div class="cellv"><b>옛고을야담</b><span class="row-sub">구독 5,500</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=UzXAwi_HHkU" target="_blank">🎬 다섯 해째 찾은 법당, 죽은 아들 위패 앞에 모르는 쌍둥이가 떡을 올리고 있었다| 야담 | 옛날이야기</a></td><td class="num lead">10.7x</td><td class="num">6/h</td><td class="num">59,099</td></tr><tr><td class="rank">40</td><td><div class="cellv"><b>탐정 경제학</b><span class="row-sub">구독 17,700</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=t_72L86c5kY" target="_blank">🎬 "북한 핵보유 싹다 거짓?"김정은이 절대 말 못하는 진실</a></td><td class="num lead">10.6x</td><td class="num">96/h</td><td class="num">187,308</td></tr></tbody></table></div>
+<div class="rep-sec"><h2>🆕 신영상 (24시간 내)</h2><span class="cnt">207편</span></div><div class="rep-note">상위 40편 표시 (총 207편)</div><div class="tbl-wrap"><table><thead><tr><th>채널</th><th>제목</th><th class="num">효율</th><th class="num">조회</th></tr></thead><tbody><tr><td><div class="cellv"><b>삼프로TV 3PROTV</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=A8apLEtTZDU" target="_blank">🎬 [26.06.10 오전 방송 전체보기] 유가·금리 하락 속 뉴욕증시 하락 마감...장중 변동성 극심, 왜?</a></td><td class="num">0.2x</td><td class="num">512,018</td></tr><tr><td><div class="cellv"><b>머니코믹스</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=0lpgS4LYkgs" target="_blank">📱 현재 살벌한 코스피</a></td><td class="num">0.2x</td><td class="num">286,711</td></tr><tr><td><div class="cellv"><b>삼프로TV 3PROTV</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=gKc4ZH2rjFk" target="_blank">🎬 [26.06.10 오후 방송 전체보기] 역대급 반등 하루만에 급락...'널뛰기' 국내 증시, 반대매매 쏟아진다 [클로징벨 라이브]</a></td><td class="num">0.1x</td><td class="num">236,232</td></tr><tr><td><div class="cellv"><b>머니코믹스</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=E8C2dLkHEoQ" target="_blank">📱 아 나 걱정해 주는 게 아니었어?</a></td><td class="num">0.2x</td><td class="num">230,769</td></tr><tr><td><div class="cellv"><b>시사저널TV</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=l8RcGJMFcC0" target="_blank"> [🔴신지호 윤희석 LIVE] 새 원내대표? 한동훈 복당 시나리오｜점점 커지는 투표용지 사태｜지선 결과에 따른 장동혁, 정청래 운명은? [전영기의 빅샷]</a></td><td class="num">0.2x</td><td class="num">141,949</td></tr><tr><td><div class="cellv"><b>경제사냥꾼</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=eojCXl1WDH0" target="_blank"> 6월 10일, 오늘 투자자들이 꼭 알아야 하는 투자 포인트</a></td><td class="num">0.2x</td><td class="num">133,004</td></tr><tr><td><div class="cellv"><b>경제 원탑</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=A_X5Ht66-jc" target="_blank"> "7월부터 정말 무서울 거예요", 삼성전자와 SK하이닉스 보유 중이라면 '이렇게' 하세요 ( 장우진 대표 )</a></td><td class="num">0.2x</td><td class="num">108,028</td></tr><tr><td><div class="cellv"><b>머니코믹스</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=bxE4_W-0JEw" target="_blank"> [버디버디] 나 지금... 팔고 있냐ㅣ꺾인 상승세가 불안을 불러온다</a></td><td class="num">0.1x</td><td class="num">77,193</td></tr><tr><td><div class="cellv"><b>삼프로TV 3PROTV</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=vqiQOKmaMGA" target="_blank"> "고점 예측 금지" 어차피 주도주 바뀌지 않습니다. 진짜 챙겨야 할 대응의 영역은?ㅣ홍선애, 박병창 MP파트너스 [여의도 인사이트]</a></td><td class="num">0.0x</td><td class="num">76,307</td></tr><tr><td><div class="cellv"><b>경제사냥꾼</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=CSU-BFYJF2g" target="_blank"> 한국 정부가 젠슨황 손잡고 2조 쏟아붓는다는 '한국 종목' 정체</a></td><td class="num">0.1x</td><td class="num">66,849</td></tr><tr><td><div class="cellv"><b>머니코믹스</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=7x_uYN5tYWs" target="_blank">🎬 룩삼, 쿠기ㅣ슈카님, 오늘부터 주식 시작해도 돼요?</a></td><td class="num">0.0x</td><td class="num">59,978</td></tr><tr><td><div class="cellv"><b>슈카월드</b><span class="row-sub">대형</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=ZbvnTXAFA3A" target="_blank">🎬 우리나라에 강제노동이 있나요?</a></td><td class="num">0.0x</td><td class="num">54,440</td></tr><tr><td><div class="cellv"><b>삼프로TV 3PROTV</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=WPJqgp-A0W8" target="_blank"> 추정치 계속 상향하는 이유가 따로 있다? | 김록호 하나증권 리서치센터 팀장 [더블 업]</a></td><td class="num">0.0x</td><td class="num">54,205</td></tr><tr><td><div class="cellv"><b>경제 원탑</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=kRrpIeTvU6A" target="_blank">🎬 삼성전자 SK하이닉스 정말 무서울 겁니다. '이 가격' 오면 죽어라 사세요 ( 김동엽 대표 )</a></td><td class="num">0.1x</td><td class="num">48,499</td></tr><tr><td><div class="cellv"><b>경제사냥꾼</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=Dm_CUSGe08Q" target="_blank"> 지금 '방산주' 투자자들이 놓치면 안 되는 하반기 '투자포인트' (+수혜주)</a></td><td class="num">0.1x</td><td class="num">48,360</td></tr><tr><td><div class="cellv"><b>머니코믹스</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=t93Ln5IVyUs" target="_blank"> 주식을 왜 그렇게 쉽게 생각해?</a></td><td class="num">0.0x</td><td class="num">47,647</td></tr><tr><td><div class="cellv"><b>삼프로TV 3PROTV</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=vZD2-70U_ts" target="_blank"> [6월 10일 마감시황] 삼전닉스 쉬어갈 때, 소부장을 봐야 하는 이유ㅣ홍선애, 이권희, 장우진 [클로징벨 라이브]</a></td><td class="num">0.0x</td><td class="num">44,170</td></tr><tr><td><div class="cellv"><b>이효석아카데미</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=SIx58eyEunU" target="_blank">🎬 [속보효] 지금은 V자 반등이 아닙니다. 투자자라면 지금 이런 행동 해서는 안됩니다</a></td><td class="num">0.1x</td><td class="num">44,067</td></tr><tr><td><div class="cellv"><b>방구석 과학</b><span class="row-sub">AI</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=HePolkKXmOU" target="_blank"> 스페인에서 조심해야하는 충격적인 소매치기 수법</a></td><td class="num">0.2x</td><td class="num">39,245</td></tr><tr><td><div class="cellv"><b>크랩 KLAB</b><span class="row-sub">일반+AI</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=zLgODu3j8Ho" target="_blank">🎬 공개 매각 실패한 왓챠, 앞으로 어떻게 돼요…?｜크랩</a></td><td class="num">0.0x</td><td class="num">38,775</td></tr><tr><td><div class="cellv"><b>이효석아카데미</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=KJwJTiXE7mc" target="_blank"> [속보효] 짜증나는 기간조정, 지치면 지는 겁니다</a></td><td class="num">0.1x</td><td class="num">37,815</td></tr><tr><td><div class="cellv"><b>시사저널TV</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=fCrd3uljRYs" target="_blank"> 진중권 "李, 기자회견 통해 공소취소 강행하겠다는 의지 보여준 것... 이에 대한 반발 대표할 건 한동훈 뿐"</a></td><td class="num">0.0x</td><td class="num">36,901</td></tr><tr><td><div class="cellv"><b>전인구경제연구소</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=0DdOIhaumYI" target="_blank">🎬 2008년 리먼은 망하고 골드만삭스는 살아남은 이유(ft.생존지능)</a></td><td class="num">0.0x</td><td class="num">35,393</td></tr><tr><td><div class="cellv"><b>손에잡히는경제</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=S5dD7p4oYN4" target="_blank"> [손경제] WWDC26 | 엔비디아 동맹 | 레버리지ETF | 20260610(수)</a></td><td class="num">0.1x</td><td class="num">33,938</td></tr><tr><td><div class="cellv"><b>엠키타카 MKTK</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=BQzel8Z5158" target="_blank"> 역사상 첫 벨기에 동포 간담회</a></td><td class="num">0.0x</td><td class="num">32,484</td></tr><tr><td><div class="cellv"><b>경제사냥꾼</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=RrLWdkeMXUA" target="_blank"> 스페이스X 상장 D-2', 일론 머스크가 기습 공개한 '미래 사업' 정체</a></td><td class="num">0.0x</td><td class="num">29,454</td></tr><tr><td><div class="cellv"><b>경제사냥꾼</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=8vt4SOzpqEE" target="_blank"> 한국 투자자들이 반드시 꼭 알아야 하는 '이번주' 주가 흐름 포인트</a></td><td class="num">0.0x</td><td class="num">28,826</td></tr><tr><td><div class="cellv"><b>언더스탠딩 : 세상의 모든 지식</b><span class="row-sub">대형</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=yg7hqo5l-kI" target="_blank"> 삼성도 달러 안 판다, 끝이 안 보이는 환율 (김준송TV 김준송 대표) | 2026년 06월 09일 녹화</a></td><td class="num">0.0x</td><td class="num">28,315</td></tr><tr><td><div class="cellv"><b>경제 원탑</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=_LpbceISrnw" target="_blank"> 3분기 삼성전자와 SK하이닉스 결국 ‘이 가격’ 찍을 겁니다 ( 안석현 기자 )</a></td><td class="num">0.1x</td><td class="num">27,716</td></tr><tr><td><div class="cellv"><b>EBSDocumentary (EBS 다큐)</b><span class="row-sub">대형</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=P3P-_SEP7U4" target="_blank"> 돈 있어도 못 산다는 평창동에 300평 집 지은 주인공 알고보니 유명 방송인｜서울 한복판 집이 알고보니 벨기에 땅? 거금 들여 평창동 집 산 이유｜건축탐구 집｜#골라듄다큐</a></td><td class="num">0.0x</td><td class="num">27,144</td></tr><tr><td><div class="cellv"><b>과학을보다</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=j6UI85sUZIs" target="_blank"> 우리가 아는모습과는 전혀 달랐던 원래 피라미드</a></td><td class="num">0.1x</td><td class="num">25,220</td></tr><tr><td><div class="cellv"><b>EBSDocumentary (EBS 다큐)</b><span class="row-sub">대형</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=oXvrICWPHJQ" target="_blank"> 잡식성 야생동물을 200마리 데려왔더니 꿀 농사 망치는 등검은말벌을 다 씹어 먹는다｜극한직업｜#골라듄다큐</a></td><td class="num">0.0x</td><td class="num">23,390</td></tr><tr><td><div class="cellv"><b>부읽남TV_내집마련부터건물주까지</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=aCiqjtESfYY" target="_blank">🎬 6.3 지방선거 끝, 앞으로 집값 이렇게 됩니다</a></td><td class="num">0.0x</td><td class="num">21,211</td></tr><tr><td><div class="cellv"><b>삼프로TV 3PROTV</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=ySmtmusOzjM" target="_blank"> 찐바닥 아니고 지하실 문 열기 직전? 비트코인 ETF 전례 없는 연속 유출, 전쟁 이슈에 흔들리는 글로벌 시장 | 김동환, 박상혁 디지털애셋 편집장 [크립토 PLUS]</a></td><td class="num">0.0x</td><td class="num">20,936</td></tr><tr><td><div class="cellv"><b>시사저널TV</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=9brGtFORYtA" target="_blank">📱 이재명 공소취소 추진하면? "한동훈 지도자 될 찬스"</a></td><td class="num">0.0x</td><td class="num">20,279</td></tr><tr><td><div class="cellv"><b>부읽남TV_내집마련부터건물주까지</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=xMdBsg2JWO4" target="_blank"> 삼성전자 지금 팔면 후회합니다, 상상 못한 일 벌어질 겁니다 [김동엽 대표 2부]</a></td><td class="num">0.0x</td><td class="num">20,024</td></tr><tr><td><div class="cellv"><b>머니인사이드</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=XdIlP3EGAjQ" target="_blank"> "상식을 갠 화폐가 나온다" 머스크의 인생을 건 새로운 돈의 시대 열린다 (김창익의 빅피처 풀버전)</a></td><td class="num">0.0x</td><td class="num">19,556</td></tr><tr><td><div class="cellv"><b>머니인사이드</b><span class="row-sub">일반</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=gW0obBhvlDw" target="_blank">🎬 “지금은 이렇게 봐야 합니다” 일본발 금리 쇼크 시작, 전세계 자금이 흔들린다 (오건영 단장 풀버전) I 머니포커스</a></td><td class="num">0.0x</td><td class="num">19,229</td></tr><tr><td><div class="cellv"><b>엠키타카 MKTK</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=EBke-XnLMh8" target="_blank"> 유럽 순방 첫 번째 나라!</a></td><td class="num">0.0x</td><td class="num">18,601</td></tr><tr><td><div class="cellv"><b>주식원샷</b><span class="row-sub">일반, 뉴스</span></div></td><td><a class="row-title" href="https://www.youtube.com/watch?v=IakRanV8bmc" target="_blank"> 진짜 무서운 건 내일 아침 터진다?…삼성전자·SK하이닉스 폭락 기회일까 덫일까 (기업공시연구소 변영인 대표)</a></td><td class="num">0.1x</td><td class="num">17,207</td></tr></tbody></table></div>
+<div class="rep-sec"><h2>⚠️ 발행 중단 / 둔화 경고</h2><span class="cnt">10편</span></div><div class="tbl-wrap"><table><thead><tr><th>채널</th><th>분류</th><th class="num">평소(주)</th><th class="num">최근 7일</th><th>상태</th></tr></thead><tbody><tr><td><b>방구석 경제학</b></td><td><span class="ch-tag">AI</span></td><td class="num">0.0편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>쉽게이해되는 경제</b></td><td><span class="ch-tag">AI</span></td><td class="num">0.7편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>까칠한 밍광의 경제학</b></td><td><span class="ch-tag">AI</span></td><td class="num">2.0편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>로빈의 역사 기록</b></td><td><span class="ch-tag">AI</span></td><td class="num">0.6편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>과학드림</b></td><td><span class="ch-tag">일반</span></td><td class="num">0.5편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>구수한 야담</b></td><td><span class="ch-tag">일반</span></td><td class="num">0.5편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>교양만두</b></td><td><span class="ch-tag">대형</span></td><td class="num">0.5편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>너진똑 NJT BOOK</b></td><td><span class="ch-tag">대형</span></td><td class="num">1.1편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>신박과학</b></td><td><span class="ch-tag">일반</span></td><td class="num">0.0편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr><tr><td><b>우주생각</b></td><td><span class="ch-tag">일반</span></td><td class="num">0.0편</td><td class="num">0편</td><td>🛑 발행 중단</td></tr></tbody></table></div>
+  <footer>TubeHacker · 유튜브 알고리즘 해킹의 모든 것 · 2026-06-10 22:53</footer>
+</body>
+</html>
