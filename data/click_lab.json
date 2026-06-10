@@ -1035,6 +1035,60 @@
       "watch_url": "https://www.youtube.com/watch?v=JdGV5aZ6mmU",
       "efficiency": 0.07,
       "days_ago": 18
+    },
+    {
+      "vid": "xfKhkQ9m3_w",
+      "channel": "백호신장 임목사주",
+      "ch_subs": 469,
+      "title": "삼성전자 '이재용' 사주만 드렸더니..? / x년에 대박이난다?! / 이재용신점",
+      "views": 18182,
+      "upload": "20260609",
+      "days_ago": 2,
+      "category": "경제·시사",
+      "efficiency": 38.77,
+      "duration_min": 6,
+      "thumbnail_url": "https://i.ytimg.com/vi/xfKhkQ9m3_w/maxresdefault.jpg",
+      "watch_url": "https://www.youtube.com/watch?v=xfKhkQ9m3_w",
+      "source": "keyword_search",
+      "source_keyword": "이재용",
+      "source_channel_slug": "knowledge-archive",
+      "ch_type": "AI양산_검색발견"
+    },
+    {
+      "vid": "3jCNLERdPSw",
+      "channel": "푸짐한 경제학",
+      "ch_subs": 38800,
+      "title": "세계 1위라더니... 중국 고속철이 갑자기 시속 70km로 기어 다니는 소름 돋는 이유",
+      "views": 81470,
+      "upload": "20260606",
+      "days_ago": 5,
+      "category": "경제·시사",
+      "efficiency": 2.1,
+      "duration_min": 18,
+      "thumbnail_url": "https://i.ytimg.com/vi/3jCNLERdPSw/maxresdefault.jpg",
+      "watch_url": "https://www.youtube.com/watch?v=3jCNLERdPSw",
+      "source": "keyword_search",
+      "source_keyword": "중국 경제",
+      "source_channel_slug": "knowledge-archive",
+      "ch_type": "AI양산_검색발견"
+    },
+    {
+      "vid": "ZKCgJJ0iO28",
+      "channel": "팬더경제학",
+      "ch_subs": 34200,
+      "title": "67조원이 휴지조각 됐다\" 중국 조선소 몰락의 진짜 이유",
+      "views": 112217,
+      "upload": "20260606",
+      "days_ago": 5,
+      "category": "경제·시사",
+      "efficiency": 3.28,
+      "duration_min": 27,
+      "thumbnail_url": "https://i.ytimg.com/vi/ZKCgJJ0iO28/maxresdefault.jpg",
+      "watch_url": "https://www.youtube.com/watch?v=ZKCgJJ0iO28",
+      "source": "keyword_search",
+      "source_keyword": "중국 경제",
+      "source_channel_slug": "knowledge-archive",
+      "ch_type": "AI양산_검색발견"
     }
   ],
   "perThumb": [
@@ -3639,7 +3693,7 @@
     ]
   },
   "generated_at": "2026-06-10",
-  "n_videos": 74,
+  "n_videos": 77,
   "n_thumb_analyzed": 66,
   "n_categories": 5,
   "deeps": [
@@ -5472,7 +5526,7 @@
     ]
   },
   "last_refresh": "2026-06-10 22:52:48",
-  "last_keyword_search": "2026-06-09 08:27:28",
+  "last_keyword_search": "2026-06-11 00:34:48",
   "stimulus_master": {
     "channel_application_summary": {
       "knowledge-archive": "[권위자 굴종 따옴표] + [한국/중국/미국 거인] + [부정형 반전] + [진짜 이유 봉인] — 결론은 정서로 노출, 메커니즘은 끝까지 봉인하는 2단 갭으로 통쾌·자긍심·공포 동시 격발",

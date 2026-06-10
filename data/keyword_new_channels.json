@@ -29,6 +29,36 @@
       "first_explosive_video": "wWDyn5vMcZQ",
       "for_channel": "knowledge-archive",
       "evidence_eff": 5.03
+    },
+    "백호신장 임목사주": {
+      "channel": "백호신장 임목사주",
+      "channel_url": "https://www.youtube.com/channel/UCqCn0DdvFbOJliD8KLaWhpg",
+      "subs": 469,
+      "first_seen": "2026-06-11",
+      "first_keyword": "이재용",
+      "first_explosive_video": "xfKhkQ9m3_w",
+      "for_channel": "knowledge-archive",
+      "evidence_eff": 38.77
+    },
+    "푸짐한 경제학": {
+      "channel": "푸짐한 경제학",
+      "channel_url": "https://www.youtube.com/channel/UCk1xIGPS2Sory5JT-oc74zQ",
+      "subs": 38800,
+      "first_seen": "2026-06-11",
+      "first_keyword": "중국 경제",
+      "first_explosive_video": "3jCNLERdPSw",
+      "for_channel": "knowledge-archive",
+      "evidence_eff": 2.1
+    },
+    "팬더경제학": {
+      "channel": "팬더경제학",
+      "channel_url": "https://www.youtube.com/channel/UC4x-T7FgY0-n8jPT1NWfg2A",
+      "subs": 34200,
+      "first_seen": "2026-06-11",
+      "first_keyword": "중국 경제",
+      "first_explosive_video": "ZKCgJJ0iO28",
+      "for_channel": "knowledge-archive",
+      "evidence_eff": 3.28
     }
   }
 }

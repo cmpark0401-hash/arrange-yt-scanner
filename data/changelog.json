@@ -1,16 +1,31 @@
 {
-  "generated_at": "2026-06-11 00:15",
+  "generated_at": "2026-06-11 00:35",
   "total_commits": 80,
   "by_category": {
-    "data": 55,
+    "data": 56,
     "docs": 6,
     "other": 2,
     "feat": 14,
     "style": 1,
-    "fix": 1,
-    "refactor": 1
+    "fix": 1
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-11",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "895ef65",
+          "full_hash": "895ef651c99fb8b79e8973b12df6ed85f195c7e6",
+          "ts": "2026-06-11 00:15",
+          "ts_iso": "2026-06-11T00:15:30",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-11 00:15:30",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        }
+      ]
+    },
     {
       "date": "2026-06-10",
       "count": 9,
@@ -616,245 +631,19 @@
           "category_label": "📊 데이터 갱신"
         }
       ]
-    },
-    {
-      "date": "2026-06-04",
-      "count": 23,
-      "commits": [
-        {
-          "hash": "275a021",
-          "full_hash": "275a021250a942ba75443e89863ebbed04231814",
-          "ts": "2026-06-04 23:48",
-          "ts_iso": "2026-06-04T23:48:08",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-04 23:48:08",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "ffa6275",
-          "full_hash": "ffa6275f60d6636dd0547b7a1bc17b5faa8df2f3",
-          "ts": "2026-06-04 23:47",
-          "ts_iso": "2026-06-04T23:47:00",
-          "author": "cmpark0401-hash",
-          "subject": "manual JP: 2026-06-04 23:47",
-          "category": "docs",
-          "category_label": "📖 문서"
-        },
-        {
-          "hash": "39b8bed",
-          "full_hash": "39b8bed7f814f3db8832e46f02090045ab0eab07",
-          "ts": "2026-06-04 23:25",
-          "ts_iso": "2026-06-04T23:25:29",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-04 23:25:29",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "7f95ea6",
-          "full_hash": "7f95ea62aa488f477dfaf24fa8bb9630a9cada35",
-          "ts": "2026-06-04 22:54",
-          "ts_iso": "2026-06-04T22:54:05",
-          "author": "cmpark0401-hash",
-          "subject": "feat: launchd 권한 해결 — Python wrapper + science·senior launchd 등록",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "2fc4258",
-          "full_hash": "2fc42586370bd942c93d67ea54b9e0bf3c231234",
-          "ts": "2026-06-04 22:51",
-          "ts_iso": "2026-06-04T22:51:12",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-04 22:51:12",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "19b3793",
-          "full_hash": "19b3793a6ebdea5ace6bec5c4ba5a006cb1ecb7c",
-          "ts": "2026-06-04 22:42",
-          "ts_iso": "2026-06-04T22:42:02",
-          "author": "cmpark0401-hash",
-          "subject": "auto: build 2026-06-04 22:42",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "945c39c",
-          "full_hash": "945c39cac7bd85ad7c5489e96b1849f8f64a8b4b",
-          "ts": "2026-06-04 18:35",
-          "ts_iso": "2026-06-04T18:35:49",
-          "author": "cmpark0401-hash",
-          "subject": "feat: [숨은한국] 시리즈 1호 추가 — 정부 대출 줄여주기 7가지 (본능 점수 9.0)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "27de6fe",
-          "full_hash": "27de6fe5641bd1ae231436bd0f4e097bf3ecc58f",
-          "ts": "2026-06-04 18:06",
-          "ts_iso": "2026-06-04T18:06:37",
-          "author": "cmpark0401-hash",
-          "subject": "feat: [이득비교] 시리즈 IP 풀 60+편 + 본능 매트릭스 + 워크보드 1·2·3순위 토픽",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "453c97b",
-          "full_hash": "453c97bfd9127c9c61c1e33eb6cd6235171b3f83",
-          "ts": "2026-06-04 17:55",
-          "ts_iso": "2026-06-04T17:55:00",
-          "author": "cmpark0401-hash",
-          "subject": "fix: [가격해부] 정의 정정 + [이득비교] 일상구매 결 토픽 추가",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "c16fece",
-          "full_hash": "c16fecebd6e1c6e3f63c1b11ea6dcac66103f6d3",
-          "ts": "2026-06-04 17:16",
-          "ts_iso": "2026-06-04T17:16:53",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 지식록 [이득비교] 시리즈 IP 추가 (한국인 손해 회피 본능 직격)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "96d894e",
-          "full_hash": "96d894e9f9ad53729c6d0fe60b3f20b4afa2952b",
-          "ts": "2026-06-04 17:04",
-          "ts_iso": "2026-06-04T17:04:16",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 지식록 [숨은한국]+[가격해부] 시리즈 IP + AI 채널 자동 분석 시스템",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "bfc0e43",
-          "full_hash": "bfc0e430739e7328e7cd5ba7cefcb78e72dbca35",
-          "ts": "2026-06-04 16:07",
-          "ts_iso": "2026-06-04T16:07:03",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-04 16:06:56 (자동 갱신)",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "bdd7411",
-          "full_hash": "bdd74115493cbc58d24c6658a14fdc6ac52f3b82",
-          "ts": "2026-06-04 16:03",
-          "ts_iso": "2026-06-04T16:03:35",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 워크보드 자동 채움 엔진 + 헬스체크 시스템",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "c676ccb",
-          "full_hash": "c676ccb0fd80095db49def70742c177f9dfd16f7",
-          "ts": "2026-06-04 15:42",
-          "ts_iso": "2026-06-04T15:42:01",
-          "author": "cmpark0401-hash",
-          "subject": "build: 6/4 11:40 전체 사이트 메타 최신화",
-          "category": "style",
-          "category_label": "🎨 디자인"
-        },
-        {
-          "hash": "e3eeb7f",
-          "full_hash": "e3eeb7f8025034b03d33b6a9f7e444fe5514fc9d",
-          "ts": "2026-06-04 15:03",
-          "ts_iso": "2026-06-04T15:03:15",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 과만세 KBS+EBS 시력 영상 베스트 조합 확정 (6편 검토)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "4afcacc",
-          "full_hash": "4afcacca1b19ef5eaf2568cb6ab716d43b08b1d8",
-          "ts": "2026-06-04 14:19",
-          "ts_iso": "2026-06-04T14:19:43",
-          "author": "cmpark0401-hash",
-          "subject": "fix: KBS 시력 → 과만세 재배치 / 잘듣네 day1 → 돔 페리뇽 (기존 합의대로)",
-          "category": "fix",
-          "category_label": "🐛 오류 수정"
-        },
-        {
-          "hash": "9b8ffe3",
-          "full_hash": "9b8ffe30ae9449a40d83a1f17c149cec894c01ba",
-          "ts": "2026-06-04 14:03",
-          "ts_iso": "2026-06-04T14:03:03",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 잘듣네 낮 트랙 START + 워크보드 아카이브 시스템 + 카테고리 만료 정책",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "93afaa3",
-          "full_hash": "93afaa32bc2e127a36c97a6cefcf7158553010f8",
-          "ts": "2026-06-04 10:20",
-          "ts_iso": "2026-06-04T10:20:52",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 6/4 reedit 재폭발 37건 반영 — 워크보드 지식록 reedit 신규 토픽",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "c91a6ce",
-          "full_hash": "c91a6ce35f6e96bee122e4f370c7e62ac95ea9d3",
-          "ts": "2026-06-04 10:05",
-          "ts_iso": "2026-06-04T10:05:24",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 가이드 상단 재구성 — 초보자도 따라 할 5단계 흐름 + 워크보드 6/4 갱신",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "e3afab8",
-          "full_hash": "e3afab823dededddc85dce17e8d8ec07b2a6840e",
-          "ts": "2026-06-04 09:55",
-          "ts_iso": "2026-06-04T09:55:52",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 워크보드 → 채팅창 통합 (Copy 명령 + script-pd 자동 참조)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "9cf0778",
-          "full_hash": "9cf07780d876366b3f0812a70d589251213b5c48",
-          "ts": "2026-06-04 09:42",
-          "ts_iso": "2026-06-04T09:42:01",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 20개 메트릭·엔진 정의 사전 + 6/4 데이터 1차 갱신",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "fa56e6c",
-          "full_hash": "fa56e6c9019d53f62862921ce60b8d7156b13f5a",
-          "ts": "2026-06-04 09:36",
-          "ts_iso": "2026-06-04T09:36:32",
-          "author": "cmpark0401-hash",
-          "subject": "auto: build 2026-06-04 09:36",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "86649e2",
-          "full_hash": "86649e2f3ece8c3c695a2b72f83a9a0046ebe204",
-          "ts": "2026-06-04 01:34",
-          "ts_iso": "2026-06-04T01:34:16",
-          "author": "cmpark0401-hash",
-          "subject": "refactor: TOC를 5개 카테고리 그룹 + 2단 블릿 리스트로 재정리",
-          "category": "refactor",
-          "category_label": "♻️ 리팩토링"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "895ef65",
+      "full_hash": "895ef651c99fb8b79e8973b12df6ed85f195c7e6",
+      "ts": "2026-06-11 00:15",
+      "ts_iso": "2026-06-11T00:15:30",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-11 00:15:30",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "f6e2554",
       "full_hash": "f6e2554a7961b73d85e5b2329a47f23f990437f8",
@@ -1644,16 +1433,6 @@
       "subject": "auto: build 2026-06-04 09:36",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "86649e2",
-      "full_hash": "86649e2f3ece8c3c695a2b72f83a9a0046ebe204",
-      "ts": "2026-06-04 01:34",
-      "ts_iso": "2026-06-04T01:34:16",
-      "author": "cmpark0401-hash",
-      "subject": "refactor: TOC를 5개 카테고리 그룹 + 2단 블릿 리스트로 재정리",
-      "category": "refactor",
-      "category_label": "♻️ 리팩토링"
     }
   ]
 }

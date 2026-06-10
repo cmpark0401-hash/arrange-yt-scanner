@@ -1,17 +1,17 @@
 {
-  "last_updated": "2026-06-11 00:12:49",
+  "last_updated": "2026-06-11 00:35:17",
   "stats": {
-    "total_videos_analyzed": 43,
+    "total_videos_analyzed": 45,
     "categories": {
-      "경제·시사": 18,
+      "경제·시사": 20,
       "역사·야담": 18,
       "과학·건강": 7
     }
   },
   "categories": {
     "경제·시사": {
-      "n_videos": 18,
-      "high_eff_count": 11,
+      "n_videos": 20,
+      "high_eff_count": 12,
       "thumb_text_formulas": [
         {
           "thumb_text": "한국 독자 개발에 일본 오열",
@@ -50,6 +50,12 @@
           "efficiency": 47.01,
           "vid": "xpz_QLv8060",
           "channel": "손안의 경제학"
+        },
+        {
+          "title": "삼성전자 '이재용' 사주만 드렸더니..? / x년에 대박이난다?! / 이재용신점",
+          "efficiency": 38.77,
+          "vid": "xfKhkQ9m3_w",
+          "channel": "백호신장 임목사주"
         },
         {
           "title": "[원가공개] 6.3 지방선거 구청장 당선, 실제로 얼마 버나, 임기 4년 수익 구조 전부 공개",
@@ -148,12 +154,14 @@
         }
       ],
       "sealing_words_top": {
-        "이유": 3,
+        "이유": 4,
         "비밀": 1,
-        "실체": 1
+        "실체": 1,
+        "진짜 이유": 1
       },
       "emotion_words_top": {
-        "몰락": 1
+        "몰락": 2,
+        "휴지조각": 1
       },
       "famous_face_pool_top": {
         "타카이치 사나에(일본 정치인 추정)": 1,
