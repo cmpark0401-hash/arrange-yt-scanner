@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10 22:53",
+  "generated_at": "2026-06-10 23:30",
   "overall_icon": "🟡",
   "overall_label": "일부 갱신 권장",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1분 전",
+      "ago": "37분 전",
       "updated_at": "2026-06-10 22:52",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-10.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "0분 전",
+      "ago": "36분 전",
       "updated_at": "2026-06-10 22:53",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-10.json",
       "severity": "warning"
@@ -29,19 +29,19 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "0분 전",
+      "ago": "36분 전",
       "updated_at": "2026-06-10 22:53",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-10.json",
       "severity": "warning"
     },
     {
       "label": "🔁 재편집 (KR)",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "갱신 권장",
-      "ago": "1일 전",
-      "updated_at": "2026-06-09 09:13",
-      "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-09.json",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "0분 전",
+      "updated_at": "2026-06-10 23:29",
+      "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-10.json",
       "severity": "warning"
     },
     {
@@ -49,7 +49,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "21분 전",
+      "ago": "58분 전",
       "updated_at": "2026-06-10 22:31",
       "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-10.json",
       "severity": "warning"
@@ -59,7 +59,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "55분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-10 21:58",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-10.json",
       "severity": "info"
@@ -69,7 +69,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "55분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-10 21:57",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-10.json",
       "severity": "info"
@@ -79,7 +79,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1분 전",
+      "ago": "38분 전",
       "updated_at": "2026-06-10 22:52",
       "last_auto_run": "2026-06-10 21:43",
       "detail": "마지막 자동 추천: 2026-06-10 21:43"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-10 22:53"
+      "updated_at": "2026-06-10 23:30"
     },
     {
       "label": "🛡️ 데이터 신뢰도",

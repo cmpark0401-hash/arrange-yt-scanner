@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-06-10 22:53",
+  "checked_at": "2026-06-10 23:30",
   "overall": "warning",
   "overall_icon": "🟡",
-  "overall_label": "경고 4건",
+  "overall_label": "경고 3건",
   "summary": {
-    "ok": 4,
-    "warning": 4,
+    "ok": 5,
+    "warning": 3,
     "error": 0
   },
   "checks": [
@@ -22,7 +22,7 @@
     {
       "name": "html_element_ids",
       "status": "ok",
-      "msg": "textarea ID 147개 · 중복 0"
+      "msg": "textarea ID 150개 · 중복 0"
     },
     {
       "name": "required_files",
@@ -32,7 +32,7 @@
     {
       "name": "health_summary",
       "status": "warning",
-      "msg": "dead 0 · stale 2 · fresh 8"
+      "msg": "dead 0 · stale 1 · fresh 9"
     },
     {
       "name": "build_freshness",
@@ -41,8 +41,8 @@
     },
     {
       "name": "internal_links",
-      "status": "warning",
-      "msg": "깨진 링크 2: ['index.html → science_2026-06-10.html', 'index.html → senior_2026-06-10.html']"
+      "status": "ok",
+      "msg": "내부 링크 모두 정상"
     },
     {
       "name": "published_urls",

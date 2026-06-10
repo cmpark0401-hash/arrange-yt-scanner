@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-10 22:53",
+  "generated_at": "2026-06-10 23:30",
   "total_commits": 80,
   "by_category": {
-    "data": 52,
+    "data": 53,
     "other": 2,
     "docs": 5,
-    "feat": 17,
+    "feat": 16,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-10",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "ac41499",
+          "full_hash": "ac4149961c555ded71710004eb8a1d90ff4e1356",
+          "ts": "2026-06-10 22:53",
+          "ts_iso": "2026-06-10T22:53:26",
+          "author": "cmpark0401-hash",
+          "subject": "auto: build 2026-06-10 22:53",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "40939ea",
           "full_hash": "40939eaee5834fbe50fc770e90bf4b663cb4d824",
@@ -579,7 +589,7 @@
     },
     {
       "date": "2026-06-04",
-      "count": 27,
+      "count": 26,
       "commits": [
         {
           "hash": "275a021",
@@ -840,21 +850,21 @@
           "subject": "feat: 시도남 노멀쇼츠 강의 채널 직구 4단계 추가 (manual.md + 스킬)",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "25d7084",
-          "full_hash": "25d7084b14b28aba0a46fc6e002f3627630e26cb",
-          "ts": "2026-06-04 00:02",
-          "ts_iso": "2026-06-04T00:02:26",
-          "author": "cmpark0401-hash",
-          "subject": "feat: 에드센스 운영 + 채널 구매 가이드 (manual.md 2종) + channel-acquisition 스킬",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "ac41499",
+      "full_hash": "ac4149961c555ded71710004eb8a1d90ff4e1356",
+      "ts": "2026-06-10 22:53",
+      "ts_iso": "2026-06-10T22:53:26",
+      "author": "cmpark0401-hash",
+      "subject": "auto: build 2026-06-10 22:53",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "40939ea",
       "full_hash": "40939eaee5834fbe50fc770e90bf4b663cb4d824",
@@ -1642,16 +1652,6 @@
       "ts_iso": "2026-06-04T00:50:37",
       "author": "cmpark0401-hash",
       "subject": "feat: 시도남 노멀쇼츠 강의 채널 직구 4단계 추가 (manual.md + 스킬)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "25d7084",
-      "full_hash": "25d7084b14b28aba0a46fc6e002f3627630e26cb",
-      "ts": "2026-06-04 00:02",
-      "ts_iso": "2026-06-04T00:02:26",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 에드센스 운영 + 채널 구매 가이드 (manual.md 2종) + channel-acquisition 스킬",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
