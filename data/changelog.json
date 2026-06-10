@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-10 09:50",
+  "generated_at": "2026-06-10 21:55",
   "total_commits": 80,
   "by_category": {
-    "data": 50,
+    "data": 51,
     "other": 2,
     "docs": 5,
-    "feat": 19,
+    "feat": 18,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-10",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "d893a37",
+          "full_hash": "d893a3719cb0c23e5190c00f44227bede02362c4",
+          "ts": "2026-06-10 09:50",
+          "ts_iso": "2026-06-10T09:50:29",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-10 09:50:29",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "f1dcfd4",
           "full_hash": "f1dcfd4638d0883ca4171169e4c83f7839a290bc",
@@ -836,6 +846,16 @@
   ],
   "all_commits": [
     {
+      "hash": "d893a37",
+      "full_hash": "d893a3719cb0c23e5190c00f44227bede02362c4",
+      "ts": "2026-06-10 09:50",
+      "ts_iso": "2026-06-10T09:50:29",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-10 09:50:29",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
+    {
       "hash": "f1dcfd4",
       "full_hash": "f1dcfd4638d0883ca4171169e4c83f7839a290bc",
       "ts": "2026-06-10 09:30",
@@ -1622,16 +1642,6 @@
       "ts_iso": "2026-06-03T16:44:31",
       "author": "cmpark0401-hash",
       "subject": "feat: 워크보드 chip 빨간 날짜 배지 (카톡 알람 스타일) + manual 통합 갱신",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "3dadbff",
-      "full_hash": "3dadbff65d25afee9f07586f382b0e0e7b300fad",
-      "ts": "2026-06-03 16:38",
-      "ts_iso": "2026-06-03T16:38:12",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 데일리 워크보드 v2.0 — 7카테고리 분류 + 시리즈 IP",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }

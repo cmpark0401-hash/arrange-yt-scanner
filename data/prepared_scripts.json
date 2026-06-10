@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-10 09:50:18",
-  "total": 29,
+  "generated_at": "2026-06-10 21:43:18",
+  "total": 30,
   "by_channel": {
     "knowledge-archive": {
       "name": "지식록",
-      "count": 16,
-      "completed": 16,
-      "published": 15,
+      "count": 17,
+      "completed": 17,
+      "published": 16,
       "unpublished": 1,
       "unknown": 0
     },
@@ -39,6 +39,31 @@
     {
       "channel_slug": "knowledge-archive",
       "channel": "지식록",
+      "date": "2026-06-10",
+      "num": "18",
+      "project_slug": "saudi-jeongeup",
+      "folder": "20260610_18_saudi-jeongeup",
+      "title": "YouTube 업로드 패키지 — 지식록 18화 [그 진짜 이유] 사우디·정읍",
+      "status": "완성",
+      "status_icon": "🟢",
+      "artifacts": {
+        "script": "channels/knowledge-archive/projects/20260610_18_saudi-jeongeup/_script/20260610_18_saudi-jeongeup_script.txt",
+        "draft": "channels/knowledge-archive/projects/20260610_18_saudi-jeongeup/_script/draft.md",
+        "concept": "channels/knowledge-archive/projects/20260610_18_saudi-jeongeup/_script/concept.md",
+        "youtube_md": "channels/knowledge-archive/projects/20260610_18_saudi-jeongeup/output/youtube.md",
+        "thumbnails": "channels/knowledge-archive/projects/20260610_18_saudi-jeongeup/output/thumbnails",
+        "sources": "channels/knowledge-archive/projects/20260610_18_saudi-jeongeup/_script/sources.md"
+      },
+      "command": "지식록 saudi-jeongeup 결과물 보여줘",
+      "has_final": true,
+      "has_thumbnails": true,
+      "has_youtube_md": true,
+      "publish_status": "미완료",
+      "publish_source": "latest-heuristic"
+    },
+    {
+      "channel_slug": "knowledge-archive",
+      "channel": "지식록",
       "date": "2026-06-09",
       "num": "17",
       "project_slug": "funeral-cost",
@@ -58,8 +83,8 @@
       "has_final": true,
       "has_thumbnails": true,
       "has_youtube_md": true,
-      "publish_status": "미완료",
-      "publish_source": "latest-heuristic"
+      "publish_status": "완료",
+      "publish_source": "older-heuristic"
     },
     {
       "channel_slug": "nn-flix",
