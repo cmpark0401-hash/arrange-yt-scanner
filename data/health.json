@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10 23:40",
+  "generated_at": "2026-06-11 00:15",
   "overall_icon": "🟡",
   "overall_label": "일부 갱신 권장",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "47분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-10 22:52",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-10.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "46분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-10 22:53",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-10.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "46분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-10 22:53",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-10.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "10분 전",
+      "ago": "45분 전",
       "updated_at": "2026-06-10 23:29",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-10.json",
       "severity": "warning"
@@ -59,7 +59,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "2시간 전",
       "updated_at": "2026-06-10 21:58",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-10.json",
       "severity": "info"
@@ -69,7 +69,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "2시간 전",
       "updated_at": "2026-06-10 21:57",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-10.json",
       "severity": "info"
@@ -80,9 +80,9 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-10 23:40",
-      "last_auto_run": "2026-06-10 23:40",
-      "detail": "마지막 자동 추천: 2026-06-10 23:40"
+      "updated_at": "2026-06-11 00:15",
+      "last_auto_run": "2026-06-11 00:15",
+      "detail": "마지막 자동 추천: 2026-06-11 00:15"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-10 23:40"
+      "updated_at": "2026-06-11 00:15"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
@@ -98,57 +98,15 @@
       "icon": "🟡",
       "status_label": "부분 의심",
       "ago": "실시간",
-      "detail": "24h 차단 1건 · 전일대비 폭락 4개 채널",
+      "detail": "24h 차단 1건",
       "block_events_24h": 1,
-      "flagged_drops": [
-        {
-          "name": "얄궂은 경제학",
-          "yest_avg": 44663,
-          "today_avg": 298
-        },
-        {
-          "name": "까칠한 밍광의 경제학",
-          "yest_avg": 44663,
-          "today_avg": 155
-        },
-        {
-          "name": "경제따라잡기",
-          "yest_avg": 44663,
-          "today_avg": 437
-        },
-        {
-          "name": "엄마의 밤책",
-          "yest_avg": 44663,
-          "today_avg": 45
-        }
-      ],
+      "flagged_drops": [],
       "severity": "critical"
     }
   ],
   "data_trust": {
     "block_events_24h": 1,
-    "flagged_drops": [
-      {
-        "name": "얄궂은 경제학",
-        "yest_avg": 44663,
-        "today_avg": 298
-      },
-      {
-        "name": "까칠한 밍광의 경제학",
-        "yest_avg": 44663,
-        "today_avg": 155
-      },
-      {
-        "name": "경제따라잡기",
-        "yest_avg": 44663,
-        "today_avg": 437
-      },
-      {
-        "name": "엄마의 밤책",
-        "yest_avg": 44663,
-        "today_avg": 45
-      }
-    ],
+    "flagged_drops": [],
     "status": "stale"
   },
   "block_events": [

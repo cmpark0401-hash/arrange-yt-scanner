@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-10 23:40",
-  "today": "2026-06-10",
+  "updated_at": "2026-06-11 00:15",
+  "today": "2026-06-11",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -3457,6 +3457,233 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "kn-20260611-auto-se-h5aa5b9",
+          "category": "single_explosion",
+          "title": "[자동🤖] 경제우체부: &quot;이란 1500만 대피&quot; 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피 (1,768,413뷰 · 효율 274.6x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 274.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "경제우체부",
+            "title": "&quot;이란 1500만 대피&quot; 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피아의 실체",
+            "efficiency": 274.59829192546584,
+            "views": 1768413,
+            "velocity": 142,
+            "url": "",
+            "categories": [
+              "경제",
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=276509)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260611-auto-se-hc8eaf7",
+          "category": "single_explosion",
+          "title": "[자동🤖] 크랩 KLAB: 아이고 애기야....｜크랩 (970,500뷰 · 효율 1.0x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 1.0x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "아이고 애기야....｜크랩",
+            "efficiency": 0.9608910891089109,
+            "views": 970500,
+            "velocity": 16093,
+            "url": "",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=68024)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260611-auto-cc-hb27e54",
+          "category": "cross_category",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,356,411뷰 · 효율 402.3x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 402.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 402.3044936708861,
+            "views": 6356411,
+            "velocity": 61,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408722)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260611-auto-cc-h94a9ff",
+          "category": "cross_category",
+          "title": "[자동🤖] 우주생각: 프록시마 센타우리에 절대 갈 수 없는 10가지 이유 (67,538뷰 · 효율 17.2x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 17.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "우주생각",
+            "title": "프록시마 센타우리에 절대 갈 수 없는 10가지 이유",
+            "efficiency": 17.1852417302799,
+            "views": 67538,
+            "velocity": 5,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=17258)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260611-ai-경제-EndsWP",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 만약에 머니: 부부 국민연금, 받는 순서 하나로 수천만원 갈립니다 | 외벌이·맞벌이 완전히 다릅니다 (110,159뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 3.4x",
+            "10일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "만약에 머니",
+            "title": "부부 국민연금, 받는 순서 하나로 수천만원 갈립니다 | 외벌이·맞벌이 완전히 다릅니다",
+            "efficiency": 3.389507692307692,
+            "views": 110159,
+            "velocity": 295,
+            "url": "https://www.youtube.com/watch?v=EndsWPoJmqc",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=5795)"
+            }
+          ]
         }
       ]
     },
@@ -4568,6 +4795,96 @@
               "ts": "2026-06-10 01:34",
               "type": "auto_proposed",
               "note": "자동 추천 (score=1361)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260611-auto-se-hfec9e7",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '피부가 썩고 좀비처럼 변한다' 단 한번으로 몸과 뇌가 망가지는 가장 위험한 약 '크로코딜' (234,859뷰 · 효율 0.2x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'피부가 썩고 좀비처럼 변한다' 단 한번으로 몸과 뇌가 망가지는 가장 위험한 약 '크로코딜'",
+            "efficiency": 0.17928167938931297,
+            "views": 234859,
+            "velocity": 3837,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=54251)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260611-auto-se-h1a67d1",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소' (391,849뷰 · 효율 0.3x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소'",
+            "efficiency": 0.2991213740458015,
+            "views": 391849,
+            "velocity": 558,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=1249)"
             }
           ]
         }
@@ -6402,6 +6719,96 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "sw-20260611-auto-se-hb27e54",
+          "category": "single_explosion",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,356,411뷰 · 효율 402.3x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 402.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 402.3044936708861,
+            "views": 6356411,
+            "velocity": 61,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408722)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260611-auto-se-h94a9ff",
+          "category": "single_explosion",
+          "title": "[자동🤖] 우주생각: 프록시마 센타우리에 절대 갈 수 없는 10가지 이유 (67,538뷰 · 효율 17.2x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 17.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "우주생각",
+            "title": "프록시마 센타우리에 절대 갈 수 없는 10가지 이유",
+            "efficiency": 17.1852417302799,
+            "views": 67538,
+            "velocity": 5,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=17258)"
+            }
+          ]
         }
       ]
     },
@@ -7581,12 +7988,102 @@
               "note": "재편집 재폭발 자동 검출"
             }
           ]
+        },
+        {
+          "id": "yd-20260611-auto-se-h22d72b",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열 (262,552뷰 · 효율 31.3x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 31.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열",
+            "efficiency": 31.330787589498808,
+            "views": 262552,
+            "velocity": 478,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=32071)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260611-auto-se-h3dd92a",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 광해군은 성군일까 폭군일까 | 단종보다 비참했던 19년의 생지옥 | 영웅에서 패륜아가 되기까지 (71,960뷰 · 효율 8.6x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 8.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "광해군은 성군일까 폭군일까 | 단종보다 비참했던 19년의 생지옥 | 영웅에서 패륜아가 되기까지",
+            "efficiency": 8.58711217183771,
+            "views": 71960,
+            "velocity": 191,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-11 00:15",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=8850)"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-10 23:40",
-  "last_ai_detect_run": "2026-06-10 23:40",
+  "last_auto_run": "2026-06-11 00:15",
+  "last_ai_detect_run": "2026-06-11 00:15",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [

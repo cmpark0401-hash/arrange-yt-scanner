@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-10 23:40",
+  "generated_at": "2026-06-11 00:15",
   "total_commits": 80,
   "by_category": {
-    "data": 54,
+    "data": 55,
     "docs": 6,
     "other": 2,
-    "feat": 15,
+    "feat": 14,
     "style": 1,
     "fix": 1,
     "refactor": 1
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-10",
-      "count": 8,
+      "count": 9,
       "commits": [
+        {
+          "hash": "f6e2554",
+          "full_hash": "f6e2554a7961b73d85e5b2329a47f23f990437f8",
+          "ts": "2026-06-10 23:40",
+          "ts_iso": "2026-06-10T23:40:16",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-10 23:40:15",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "da46c86",
           "full_hash": "da46c868321d3db02884310e02414029412c0c1f",
@@ -609,7 +619,7 @@
     },
     {
       "date": "2026-06-04",
-      "count": 24,
+      "count": 23,
       "commits": [
         {
           "hash": "275a021",
@@ -840,21 +850,21 @@
           "subject": "refactor: TOC를 5개 카테고리 그룹 + 2단 블릿 리스트로 재정리",
           "category": "refactor",
           "category_label": "♻️ 리팩토링"
-        },
-        {
-          "hash": "24eeaf2",
-          "full_hash": "24eeaf2244a6919d4c7e69a9a8377fde1cdb3efc",
-          "ts": "2026-06-04 01:28",
-          "ts_iso": "2026-06-04T01:28:02",
-          "author": "cmpark0401-hash",
-          "subject": "feat: manual.md 상단 자동 TOC (17개 섹션 점프 + sticky)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "f6e2554",
+      "full_hash": "f6e2554a7961b73d85e5b2329a47f23f990437f8",
+      "ts": "2026-06-10 23:40",
+      "ts_iso": "2026-06-10T23:40:16",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-10 23:40:15",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "da46c86",
       "full_hash": "da46c868321d3db02884310e02414029412c0c1f",
@@ -1644,16 +1654,6 @@
       "subject": "refactor: TOC를 5개 카테고리 그룹 + 2단 블릿 리스트로 재정리",
       "category": "refactor",
       "category_label": "♻️ 리팩토링"
-    },
-    {
-      "hash": "24eeaf2",
-      "full_hash": "24eeaf2244a6919d4c7e69a9a8377fde1cdb3efc",
-      "ts": "2026-06-04 01:28",
-      "ts_iso": "2026-06-04T01:28:02",
-      "author": "cmpark0401-hash",
-      "subject": "feat: manual.md 상단 자동 TOC (17개 섹션 점프 + sticky)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
