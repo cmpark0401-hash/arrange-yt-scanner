@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-06-10 23:30",
+  "generated_at": "2026-06-10 23:40",
   "total_commits": 80,
   "by_category": {
+    "data": 54,
     "docs": 6,
-    "data": 53,
     "other": 2,
     "feat": 15,
     "style": 1,
     "fix": 1,
-    "refactor": 2
+    "refactor": 1
   },
   "recent_by_date": [
     {
       "date": "2026-06-10",
-      "count": 7,
+      "count": 8,
       "commits": [
+        {
+          "hash": "da46c86",
+          "full_hash": "da46c868321d3db02884310e02414029412c0c1f",
+          "ts": "2026-06-10 23:30",
+          "ts_iso": "2026-06-10T23:30:59",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-10 23:30:59",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "a41cd5a",
           "full_hash": "a41cd5a650081e611ce51b0eaaec0973c0aa1700",
@@ -599,7 +609,7 @@
     },
     {
       "date": "2026-06-04",
-      "count": 25,
+      "count": 24,
       "commits": [
         {
           "hash": "275a021",
@@ -840,21 +850,21 @@
           "subject": "feat: manual.md 상단 자동 TOC (17개 섹션 점프 + sticky)",
           "category": "feat",
           "category_label": "✨ 신규 기능"
-        },
-        {
-          "hash": "19f9635",
-          "full_hash": "19f9635494dba6beb31ed618c874c4e9b7f036c8",
-          "ts": "2026-06-04 01:11",
-          "ts_iso": "2026-06-04T01:11:10",
-          "author": "cmpark0401-hash",
-          "subject": "refactor: 시도남 노멀쇼츠 별도 섹션 제거 → 채널 구매 가이드에 통합",
-          "category": "refactor",
-          "category_label": "♻️ 리팩토링"
         }
       ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "da46c86",
+      "full_hash": "da46c868321d3db02884310e02414029412c0c1f",
+      "ts": "2026-06-10 23:30",
+      "ts_iso": "2026-06-10T23:30:59",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-10 23:30:59",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "a41cd5a",
       "full_hash": "a41cd5a650081e611ce51b0eaaec0973c0aa1700",
@@ -1644,16 +1654,6 @@
       "subject": "feat: manual.md 상단 자동 TOC (17개 섹션 점프 + sticky)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "19f9635",
-      "full_hash": "19f9635494dba6beb31ed618c874c4e9b7f036c8",
-      "ts": "2026-06-04 01:11",
-      "ts_iso": "2026-06-04T01:11:10",
-      "author": "cmpark0401-hash",
-      "subject": "refactor: 시도남 노멀쇼츠 별도 섹션 제거 → 채널 구매 가이드에 통합",
-      "category": "refactor",
-      "category_label": "♻️ 리팩토링"
     }
   ]
 }

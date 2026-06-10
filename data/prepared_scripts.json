@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10 23:30:47",
+  "generated_at": "2026-06-10 23:40:04",
   "total": 30,
   "by_channel": {
     "knowledge-archive": {
@@ -59,7 +59,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "미완료",
-      "publish_source": "latest-heuristic"
+      "published_at": null,
+      "publish_source": "latest-heuristic",
+      "track_published": true
     },
     {
       "channel_slug": "knowledge-archive",
@@ -84,7 +86,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": null,
+      "publish_source": "older-heuristic",
+      "track_published": true
     },
     {
       "channel_slug": "nn-flix",
@@ -110,7 +114,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "미완료",
-      "publish_source": "latest-heuristic"
+      "published_at": null,
+      "publish_source": "latest-heuristic",
+      "track_published": true
     },
     {
       "channel_slug": "science-world-life",
@@ -136,7 +142,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "미완료",
-      "publish_source": "latest-heuristic"
+      "published_at": null,
+      "publish_source": "latest-heuristic",
+      "track_published": true
     },
     {
       "channel_slug": "yadam",
@@ -162,7 +170,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "미완료",
-      "publish_source": "latest-heuristic"
+      "published_at": null,
+      "publish_source": "latest-heuristic",
+      "track_published": true
     },
     {
       "channel_slug": "knowledge-archive",
@@ -187,7 +197,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": null,
+      "publish_source": "older-heuristic",
+      "track_published": true
     },
     {
       "channel_slug": "yadam",
@@ -213,7 +225,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": null,
+      "publish_source": "older-heuristic",
+      "track_published": true
     },
     {
       "channel_slug": "knowledge-archive",
@@ -238,7 +252,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "nn-flix",
@@ -259,7 +275,9 @@
       "has_thumbnails": true,
       "has_youtube_md": false,
       "publish_status": "Unknown",
-      "publish_source": "no-final"
+      "published_at": "이전",
+      "publish_source": "no-final",
+      "track_published": false
     },
     {
       "channel_slug": "science-world-life",
@@ -285,7 +303,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "science-world-life",
@@ -311,7 +331,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -336,7 +358,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "nn-flix",
@@ -362,7 +386,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -387,7 +413,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "science-world-life",
@@ -412,7 +440,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "nn-flix",
@@ -438,7 +468,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -463,7 +495,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "nn-flix",
@@ -488,7 +522,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "nn-flix",
@@ -513,7 +549,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "nn-flix",
@@ -538,7 +576,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -563,7 +603,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -588,7 +630,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -613,7 +657,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -638,7 +684,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -663,7 +711,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -688,7 +738,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -713,7 +765,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -737,7 +791,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -762,7 +818,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     },
     {
       "channel_slug": "knowledge-archive",
@@ -786,7 +844,9 @@
       "has_thumbnails": true,
       "has_youtube_md": true,
       "publish_status": "완료",
-      "publish_source": "older-heuristic"
+      "published_at": "이전",
+      "publish_source": "older-heuristic",
+      "track_published": false
     }
   ]
 }
