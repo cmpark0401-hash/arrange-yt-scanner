@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-10 09:30",
+  "generated_at": "2026-06-10 09:50",
   "total_commits": 80,
   "by_category": {
-    "data": 49,
+    "data": 50,
     "other": 2,
     "docs": 5,
-    "feat": 20,
+    "feat": 19,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-10",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "f1dcfd4",
+          "full_hash": "f1dcfd4638d0883ca4171169e4c83f7839a290bc",
+          "ts": "2026-06-10 09:30",
+          "ts_iso": "2026-06-10T09:30:11",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-10 09:30:11",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "ffde49e",
           "full_hash": "ffde49e69291d9f987d056f816d17d35ce9ecb67",
@@ -826,6 +836,16 @@
   ],
   "all_commits": [
     {
+      "hash": "f1dcfd4",
+      "full_hash": "f1dcfd4638d0883ca4171169e4c83f7839a290bc",
+      "ts": "2026-06-10 09:30",
+      "ts_iso": "2026-06-10T09:30:11",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-10 09:30:11",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
+    {
       "hash": "ffde49e",
       "full_hash": "ffde49e69291d9f987d056f816d17d35ce9ecb67",
       "ts": "2026-06-10 01:44",
@@ -1612,16 +1632,6 @@
       "ts_iso": "2026-06-03T16:38:12",
       "author": "cmpark0401-hash",
       "subject": "feat: 데일리 워크보드 v2.0 — 7카테고리 분류 + 시리즈 IP",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "59afca5",
-      "full_hash": "59afca5c5a6930d173d9b91f4354fb85c368febd",
-      "ts": "2026-06-03 16:04",
-      "ts_iso": "2026-06-03T16:04:42",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 📋 데일리 워크보드 신설 — 4채널 오늘의 주제·작업 상태·체크리스트·히스토리",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
