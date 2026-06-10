@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-10 01:44",
+  "checked_at": "2026-06-10 09:30",
   "overall": "warning",
   "overall_icon": "🟡",
   "overall_label": "경고 3건",
@@ -32,7 +32,7 @@
     {
       "name": "health_summary",
       "status": "warning",
-      "msg": "dead 0 · stale 1 · fresh 9"
+      "msg": "dead 1 · stale 4 · fresh 5"
     },
     {
       "name": "build_freshness",

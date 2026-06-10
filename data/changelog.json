@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-10 01:44",
+  "generated_at": "2026-06-10 09:30",
   "total_commits": 80,
   "by_category": {
-    "data": 48,
+    "data": 49,
     "other": 2,
     "docs": 5,
-    "feat": 21,
+    "feat": 20,
     "style": 1,
     "fix": 1,
     "refactor": 2
@@ -13,8 +13,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-10",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "ffde49e",
+          "full_hash": "ffde49e69291d9f987d056f816d17d35ce9ecb67",
+          "ts": "2026-06-10 01:44",
+          "ts_iso": "2026-06-10T01:44:58",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-10 01:44:58",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "eb70241",
           "full_hash": "eb702419a9d51790d64595f6a1d7326f620d341d",
@@ -816,6 +826,16 @@
   ],
   "all_commits": [
     {
+      "hash": "ffde49e",
+      "full_hash": "ffde49e69291d9f987d056f816d17d35ce9ecb67",
+      "ts": "2026-06-10 01:44",
+      "ts_iso": "2026-06-10T01:44:58",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-10 01:44:58",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
+    {
       "hash": "eb70241",
       "full_hash": "eb702419a9d51790d64595f6a1d7326f620d341d",
       "ts": "2026-06-10 01:34",
@@ -1602,16 +1622,6 @@
       "ts_iso": "2026-06-03T16:04:42",
       "author": "cmpark0401-hash",
       "subject": "feat: 📋 데일리 워크보드 신설 — 4채널 오늘의 주제·작업 상태·체크리스트·히스토리",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "1d0ed3b",
-      "full_hash": "1d0ed3b2a6b7b7555f8376f9a6dbcf71b512f477",
-      "ts": "2026-06-03 15:43",
-      "ts_iso": "2026-06-03T15:43:11",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 김히엉 트리거롱폼 강의 학습 적용 (확정 5 + 검토 1~4)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }

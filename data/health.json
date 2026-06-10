@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-06-10 01:44",
-  "overall_icon": "🟡",
-  "overall_label": "일부 갱신 권장",
-  "overall_severity": "warning",
+  "generated_at": "2026-06-10 09:30",
+  "overall_icon": "🔴",
+  "overall_label": "긴급 점검",
+  "overall_severity": "critical",
   "items": [
     {
       "label": "📊 모니터링 (KR)",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "갱신 권장",
-      "ago": "23시간 전",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파이프라인 점검 필요",
+      "ago": "1일 전",
       "updated_at": "2026-06-09 02:31",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-09.json",
       "severity": "critical"
     },
     {
       "label": "📰 뉴스 RSS (KR)",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "23시간 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "1일 전",
       "updated_at": "2026-06-09 02:32",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-09.json",
       "severity": "warning"
     },
     {
       "label": "🏆 검증 주제",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "23시간 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "1일 전",
       "updated_at": "2026-06-09 02:32",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-09.json",
       "severity": "warning"
@@ -39,17 +39,17 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "16시간 전",
+      "ago": "1일 전",
       "updated_at": "2026-06-09 09:13",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-09.json",
       "severity": "warning"
     },
     {
       "label": "🌏 모니터링 (JP)",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "23시간 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "1일 전",
       "updated_at": "2026-06-09 02:39",
       "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-09.json",
       "severity": "warning"
@@ -59,7 +59,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "3시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-09 21:56",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-09.json",
       "severity": "info"
@@ -69,7 +69,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "3시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-09 22:31",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-09.json",
       "severity": "info"
@@ -80,9 +80,9 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-10 01:44",
-      "last_auto_run": "2026-06-10 01:44",
-      "detail": "마지막 자동 추천: 2026-06-10 01:44"
+      "updated_at": "2026-06-10 09:30",
+      "last_auto_run": "2026-06-10 09:30",
+      "detail": "마지막 자동 추천: 2026-06-10 09:30"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -90,23 +90,35 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-10 01:44"
+      "updated_at": "2026-06-10 09:30"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "부분 의심",
       "ago": "실시간",
-      "detail": "카나리·diff 모두 정상",
-      "block_events_24h": 0,
+      "detail": "24h 차단 1건",
+      "block_events_24h": 1,
       "flagged_drops": [],
       "severity": "critical"
     }
   ],
   "data_trust": {
-    "block_events_24h": 0,
+    "block_events_24h": 1,
     "flagged_drops": [],
-    "status": "fresh"
+    "status": "stale"
+  },
+  "block_events": [
+    {
+      "ts": "2026-06-10 07:11:58",
+      "type": "canary_fail",
+      "detail": "keyword_search: canary 0뷰 — IP 차단 의심"
+    }
+  ],
+  "last_block_event": {
+    "ts": "2026-06-10 07:11:58",
+    "type": "canary_fail",
+    "detail": "keyword_search: canary 0뷰 — IP 차단 의심"
   }
 }
