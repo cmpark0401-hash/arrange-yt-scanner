@@ -4899,7 +4899,7 @@
       "series_ip": {
         "main": "AI도 못 푼 우리 몸/우주의 한 가지",
         "essence": "AI 시대 메타 모순 (AI가 못 만듦)",
-        "ep_count": 2
+        "ep_count": 3
       },
       "topics": [
         {
@@ -5241,7 +5241,7 @@
           "merge_angle": "채널 첫 영상으로 발행 가능. 단일 주제로 OK",
           "sources_a": null,
           "sources_b": null,
-          "status": "pending",
+          "status": "published",
           "checklist": {
             "channel_setup": false,
             "collect": true,
@@ -5264,7 +5264,8 @@
               "note": "채널 개설 후 첫 영상"
             }
           ],
-          "note": "2026-06-09 정정: owned_draft 표시였으나 실제 폴더 없음. EP.3로 처음부터 풀파이프라인 제작."
+          "note": "2026-06-09 정정: owned_draft 표시였으나 실제 폴더 없음. EP.3로 처음부터 풀파이프라인 제작. / 2026-06-11 발행 완료 (20260609_04_longevity-body로 EP.3)",
+          "publication_date": "2026-06-11"
         },
         {
           "id": "sw-20260604-auto-se-h5893dc",
@@ -6809,6 +6810,16 @@
               "note": "자동 추천 (score=17258)"
             }
           ]
+        },
+        {
+          "id": "sw-20260609-longevity-body",
+          "title": "오래 사는 게 아니라 잘 늙는 것 — 70대에 갈리는 진짜 이유 (의학 반전형 30분) — [내 몸의 과학] EP.3",
+          "status": "published",
+          "category": "series",
+          "publication_date": "2026-06-11",
+          "publication_url": null,
+          "production_project": "20260609_04_longevity-body",
+          "production_note": "ultracode 풀파이프라인. 합본 A+E+D+B. 8 권위 (NIH·NIA·Buettner·Newman 2024·NECS·Horvath·노벨 2009/2016·Cochrane·덴마크 쌍둥이·PROT-AGE·PREDIMED·Windred 2024). 의학 반전형 60% 변환. 시리즈 3연작 시그니처 완성 (시력·잠·장수). 12,877자/6파트."
         }
       ]
     },

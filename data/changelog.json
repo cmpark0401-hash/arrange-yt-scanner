@@ -1,19 +1,29 @@
 {
-  "generated_at": "2026-06-11 14:47",
+  "generated_at": "2026-06-11 15:02",
   "total_commits": 80,
   "by_category": {
-    "data": 57,
+    "data": 58,
     "docs": 6,
     "other": 2,
-    "feat": 13,
+    "feat": 12,
     "style": 1,
     "fix": 1
   },
   "recent_by_date": [
     {
       "date": "2026-06-11",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "891281e",
+          "full_hash": "891281e0a86c4ae0ac0741491321c85ffe30755e",
+          "ts": "2026-06-11 14:47",
+          "ts_iso": "2026-06-11T14:47:05",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-11 14:47:05",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "ec74759",
           "full_hash": "ec747593fb9a9655716bcb7b2a731a0c1da518c7",
@@ -654,6 +664,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "891281e",
+      "full_hash": "891281e0a86c4ae0ac0741491321c85ffe30755e",
+      "ts": "2026-06-11 14:47",
+      "ts_iso": "2026-06-11T14:47:05",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-11 14:47:05",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "ec74759",
       "full_hash": "ec747593fb9a9655716bcb7b2a731a0c1da518c7",
@@ -1441,16 +1461,6 @@
       "ts_iso": "2026-06-04T10:05:24",
       "author": "cmpark0401-hash",
       "subject": "feat: 가이드 상단 재구성 — 초보자도 따라 할 5단계 흐름 + 워크보드 6/4 갱신",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "e3afab8",
-      "full_hash": "e3afab823dededddc85dce17e8d8ec07b2a6840e",
-      "ts": "2026-06-04 09:55",
-      "ts_iso": "2026-06-04T09:55:52",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 워크보드 → 채팅창 통합 (Copy 명령 + script-pd 자동 참조)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
