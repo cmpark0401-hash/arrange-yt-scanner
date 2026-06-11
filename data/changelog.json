@@ -1,19 +1,29 @@
 {
-  "generated_at": "2026-06-11 09:30",
+  "generated_at": "2026-06-11 14:47",
   "total_commits": 80,
   "by_category": {
-    "data": 56,
+    "data": 57,
     "docs": 6,
     "other": 2,
-    "feat": 14,
+    "feat": 13,
     "style": 1,
     "fix": 1
   },
   "recent_by_date": [
     {
       "date": "2026-06-11",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "ec74759",
+          "full_hash": "ec747593fb9a9655716bcb7b2a731a0c1da518c7",
+          "ts": "2026-06-11 09:30",
+          "ts_iso": "2026-06-11T09:30:11",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-11 09:30:11",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "2dc5037",
           "full_hash": "2dc503798c6eeb5d4aaf937c6332032137180a9d",
@@ -644,6 +654,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "ec74759",
+      "full_hash": "ec747593fb9a9655716bcb7b2a731a0c1da518c7",
+      "ts": "2026-06-11 09:30",
+      "ts_iso": "2026-06-11T09:30:11",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-11 09:30:11",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "2dc5037",
       "full_hash": "2dc503798c6eeb5d4aaf937c6332032137180a9d",
@@ -1431,16 +1451,6 @@
       "ts_iso": "2026-06-04T09:55:52",
       "author": "cmpark0401-hash",
       "subject": "feat: 워크보드 → 채팅창 통합 (Copy 명령 + script-pd 자동 참조)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "9cf0778",
-      "full_hash": "9cf07780d876366b3f0812a70d589251213b5c48",
-      "ts": "2026-06-04 09:42",
-      "ts_iso": "2026-06-04T09:42:01",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 20개 메트릭·엔진 정의 사전 + 6/4 데이터 1차 갱신",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }

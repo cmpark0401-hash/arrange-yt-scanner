@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-11 09:30",
+  "updated_at": "2026-06-11 14:46",
   "today": "2026-06-11",
   "categories_def": {
     "single_explosion": {
@@ -6825,6 +6825,107 @@
       },
       "topics": [
         {
+          "id": "yd-20260609-pub-silver-needle",
+          "category": "cross_category",
+          "title": "[가문의 비밀] \"내일 다시 걷게 해드리지요\" 은침 의녀 며느리",
+          "type": "발행",
+          "rating": 5,
+          "tags": [
+            "발행완료",
+            "가문의 비밀",
+            "제우스 교차",
+            "은침·의녀",
+            "75분 롱폼"
+          ],
+          "merge_angle": "은침 첫날밤 반전(조선 야담집 36만뷰) × 소금꽃 아내 신분역전(이야기솔솔) → 버려질 처녀가 의녀로 가문 재건",
+          "sources_a": {
+            "channel": "조선 야담집",
+            "title": "가문에 버림받은 불구 후계자…첫날밤 은침",
+            "efficiency": null,
+            "views": 362594
+          },
+          "sources_b": {
+            "channel": "이야기솔솔",
+            "title": "소금꽃 아내의 통쾌한 복수",
+            "efficiency": null,
+            "views": 23693
+          },
+          "status": "published",
+          "checklist": {
+            "channel_setup": true,
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "events": [
+            {
+              "ts": "2026-06-08 01:30",
+              "type": "produced",
+              "note": "풀파이프라인 제작 (대본 23,119자/~77분)"
+            },
+            {
+              "ts": "2026-06-09 20:00",
+              "type": "published",
+              "note": "유튜브 발행 (2026-06-09)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260611-pub-cliff-queen",
+          "category": "cross_category",
+          "title": "[어린 지혜자] \"감히 왕비를!\" 벼랑으로 민 거지 아이",
+          "type": "발행",
+          "rating": 5,
+          "tags": [
+            "발행예약",
+            "어린 지혜자",
+            "제우스 교차",
+            "어전 친국·면천",
+            "자극 톤다운",
+            "80분 롱폼"
+          ],
+          "merge_angle": "절벽 천재아이(전해들은 야담 56만뷰) × 소금장수 거지아이(밤마실 62만뷰) → 어전 두뇌대결 + 면천 신분역전",
+          "sources_a": {
+            "channel": "전해들은 야담",
+            "title": "자객들에 쫓기던 왕비를 절벽으로 밀어버린 천재아이",
+            "efficiency": null,
+            "views": 563900
+          },
+          "sources_b": {
+            "channel": "밤마실야담",
+            "title": "소금은 비올때 파세요 거지아이 한마디",
+            "efficiency": null,
+            "views": 624922
+          },
+          "status": "published",
+          "checklist": {
+            "channel_setup": true,
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "events": [
+            {
+              "ts": "2026-06-09 18:30",
+              "type": "produced",
+              "note": "풀파이프라인 제작 (대본 25,049자/~80분, 자극 자가진단·톤다운 반영)"
+            },
+            {
+              "ts": "2026-06-11 09:30",
+              "type": "published",
+              "note": "오늘 밤 예약 발행 완료 (2026-06-11 밤)"
+            }
+          ]
+        },
+        {
           "id": "yd-20260603-sr",
           "category": "series",
           "title": "EP.1 — \"충북 청주에 살았던 7살 노비\"",
@@ -8082,8 +8183,8 @@
       ]
     }
   ],
-  "last_auto_run": "2026-06-11 09:30",
-  "last_ai_detect_run": "2026-06-11 09:30",
+  "last_auto_run": "2026-06-11 14:46",
+  "last_ai_detect_run": "2026-06-11 14:46",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [

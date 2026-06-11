@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-11 09:30",
+  "checked_at": "2026-06-11 14:47",
   "overall": "warning",
   "overall_icon": "🟡",
   "overall_label": "경고 2건",
@@ -17,7 +17,7 @@
     {
       "name": "topic_id_unique",
       "status": "ok",
-      "msg": "총 179개 토픽 · 고유 ID 100%"
+      "msg": "총 181개 토픽 · 고유 ID 100%"
     },
     {
       "name": "html_element_ids",
@@ -47,7 +47,7 @@
     {
       "name": "published_urls",
       "status": "warning",
-      "msg": "published 토픽 2개의 video_url 누락/잘못됨: ['sw-20260604-health', 'sw-20260605-sleep-science']"
+      "msg": "published 토픽 4개의 video_url 누락/잘못됨: ['sw-20260604-health', 'sw-20260605-sleep-science', 'yd-20260609-pub-silver-needle']"
     }
   ]
 }
