@@ -1,19 +1,29 @@
 {
-  "generated_at": "2026-06-11 21:41",
+  "generated_at": "2026-06-11 23:59",
   "total_commits": 80,
   "by_category": {
+    "data": 59,
     "other": 3,
-    "data": 58,
     "docs": 6,
-    "feat": 11,
+    "feat": 10,
     "style": 1,
     "fix": 1
   },
   "recent_by_date": [
     {
       "date": "2026-06-11",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "25eac9d",
+          "full_hash": "25eac9de14b6f806c554e0c73d616cae800ad6bd",
+          "ts": "2026-06-11 21:41",
+          "ts_iso": "2026-06-11T21:41:32",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-11 21:41:32",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "482d636",
           "full_hash": "482d636693af8df779d94ed265f66b20b5c39b65",
@@ -674,6 +684,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "25eac9d",
+      "full_hash": "25eac9de14b6f806c554e0c73d616cae800ad6bd",
+      "ts": "2026-06-11 21:41",
+      "ts_iso": "2026-06-11T21:41:32",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-11 21:41:32",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "482d636",
       "full_hash": "482d636693af8df779d94ed265f66b20b5c39b65",
@@ -1461,16 +1481,6 @@
       "ts_iso": "2026-06-04T14:03:03",
       "author": "cmpark0401-hash",
       "subject": "feat: 잘듣네 낮 트랙 START + 워크보드 아카이브 시스템 + 카테고리 만료 정책",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "93afaa3",
-      "full_hash": "93afaa32bc2e127a36c97a6cefcf7158553010f8",
-      "ts": "2026-06-04 10:20",
-      "ts_iso": "2026-06-04T10:20:52",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 6/4 reedit 재폭발 37건 반영 — 워크보드 지식록 reedit 신규 토픽",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }

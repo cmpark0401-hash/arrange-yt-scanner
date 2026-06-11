@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-11 21:41",
+  "updated_at": "2026-06-11T23:39:27",
   "today": "2026-06-11",
   "categories_def": {
     "single_explosion": {
@@ -3840,14 +3840,14 @@
             "title": "심태윤 화류계 진출 → 차인표 한 마디로 회심",
             "url": "https://www.youtube.com/watch?v=ZpncexsnsFw"
           },
-          "status": "in_progress",
+          "status": "ready_to_publish",
           "checklist": {
-            "collect": false,
-            "analyze": false,
-            "strategy": false,
-            "draft": false,
-            "review_finalize": false,
-            "self_diagnosis": false,
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
             "published": false
           },
           "events": [
@@ -3860,6 +3860,11 @@
               "ts": "2026-06-11 09:50",
               "type": "in_progress",
               "note": "20260611_08 프로젝트 생성, seed 파일 작성, 검증 영상 A·B 확정"
+            },
+            {
+              "ts": "2026-06-11 16:30",
+              "type": "ready_to_publish",
+              "note": "20260611_08 전체 파이프라인 완료. 16,447자 / 33.7분 / 자료 38개 / 썸네일 5종 / shorts 3편 / 시리즈 라벨 [그 사람 시리즈]"
             }
           ],
           "notes": "2026-06-11 진행 시작: 새 각도 = 차인표 60년 통찰 + 심태윤 한 마디 인생 전환 (인물·사건 교차 + 시의성). 프로젝트: 20260611_08_chainpyo-60-and-shimtaeyoon. 30분 밤 트랙, [그 사람 시리즈]."
