@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-11 00:35",
-  "overall_icon": "🟡",
-  "overall_label": "일부 갱신 권장",
-  "overall_severity": "warning",
+  "generated_at": "2026-06-11 09:30",
+  "overall_icon": "🟢",
+  "overall_label": "정상",
+  "overall_severity": "ok",
   "items": [
     {
       "label": "📊 모니터링 (KR)",
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-10 22:52",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-10.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-10 22:53",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-10.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-10 22:53",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-10.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-10 23:29",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-10.json",
       "severity": "warning"
@@ -49,7 +49,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-10 22:31",
       "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-10.json",
       "severity": "warning"
@@ -59,7 +59,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-10 21:58",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-10.json",
       "severity": "info"
@@ -69,7 +69,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-10 21:57",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-10.json",
       "severity": "info"
@@ -80,9 +80,9 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-11 00:35",
-      "last_auto_run": "2026-06-11 00:35",
-      "detail": "마지막 자동 추천: 2026-06-11 00:35"
+      "updated_at": "2026-06-11 09:30",
+      "last_auto_run": "2026-06-11 09:30",
+      "detail": "마지막 자동 추천: 2026-06-11 09:30"
     },
     {
       "label": "🏗️ 사이트 빌드",
@@ -90,24 +90,24 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-11 00:35"
+      "updated_at": "2026-06-11 09:30"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "부분 의심",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
       "ago": "실시간",
-      "detail": "24h 차단 1건",
-      "block_events_24h": 1,
+      "detail": "카나리·diff 모두 정상",
+      "block_events_24h": 0,
       "flagged_drops": [],
       "severity": "critical"
     }
   ],
   "data_trust": {
-    "block_events_24h": 1,
+    "block_events_24h": 0,
     "flagged_drops": [],
-    "status": "stale"
+    "status": "fresh"
   },
   "block_events": [
     {

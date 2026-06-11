@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11 00:35",
+  "generated_at": "2026-06-11 09:30",
   "total_commits": 80,
   "by_category": {
     "data": 56,
@@ -12,8 +12,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-11",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "2dc5037",
+          "full_hash": "2dc503798c6eeb5d4aaf937c6332032137180a9d",
+          "ts": "2026-06-11 00:35",
+          "ts_iso": "2026-06-11T00:35:29",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-11 00:35:28",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "895ef65",
           "full_hash": "895ef651c99fb8b79e8973b12df6ed85f195c7e6",
@@ -634,6 +644,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "2dc5037",
+      "full_hash": "2dc503798c6eeb5d4aaf937c6332032137180a9d",
+      "ts": "2026-06-11 00:35",
+      "ts_iso": "2026-06-11T00:35:29",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-11 00:35:28",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "895ef65",
       "full_hash": "895ef651c99fb8b79e8973b12df6ed85f195c7e6",
@@ -1423,16 +1443,6 @@
       "subject": "feat: 20개 메트릭·엔진 정의 사전 + 6/4 데이터 1차 갱신",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "fa56e6c",
-      "full_hash": "fa56e6c9019d53f62862921ce60b8d7156b13f5a",
-      "ts": "2026-06-04 09:36",
-      "ts_iso": "2026-06-04T09:36:32",
-      "author": "cmpark0401-hash",
-      "subject": "auto: build 2026-06-04 09:36",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }
