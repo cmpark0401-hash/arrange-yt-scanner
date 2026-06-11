@@ -1,19 +1,29 @@
 {
-  "generated_at": "2026-06-11 15:02",
+  "generated_at": "2026-06-11 21:41",
   "total_commits": 80,
   "by_category": {
+    "other": 3,
     "data": 58,
     "docs": 6,
-    "other": 2,
-    "feat": 12,
+    "feat": 11,
     "style": 1,
     "fix": 1
   },
   "recent_by_date": [
     {
       "date": "2026-06-11",
-      "count": 4,
+      "count": 5,
       "commits": [
+        {
+          "hash": "482d636",
+          "full_hash": "482d636693af8df779d94ed265f66b20b5c39b65",
+          "ts": "2026-06-11 15:02",
+          "ts_iso": "2026-06-11T15:02:25",
+          "author": "cmpark0401-hash",
+          "subject": "과만세 EP.3 장수 발행 (2026-06-11)",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "891281e",
           "full_hash": "891281e0a86c4ae0ac0741491321c85ffe30755e",
@@ -664,6 +674,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "482d636",
+      "full_hash": "482d636693af8df779d94ed265f66b20b5c39b65",
+      "ts": "2026-06-11 15:02",
+      "ts_iso": "2026-06-11T15:02:25",
+      "author": "cmpark0401-hash",
+      "subject": "과만세 EP.3 장수 발행 (2026-06-11)",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "891281e",
       "full_hash": "891281e0a86c4ae0ac0741491321c85ffe30755e",
@@ -1451,16 +1471,6 @@
       "ts_iso": "2026-06-04T10:20:52",
       "author": "cmpark0401-hash",
       "subject": "feat: 6/4 reedit 재폭발 37건 반영 — 워크보드 지식록 reedit 신규 토픽",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "c91a6ce",
-      "full_hash": "c91a6ce35f6e96bee122e4f370c7e62ac95ea9d3",
-      "ts": "2026-06-04 10:05",
-      "ts_iso": "2026-06-04T10:05:24",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 가이드 상단 재구성 — 초보자도 따라 할 5단계 흐름 + 워크보드 6/4 갱신",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }

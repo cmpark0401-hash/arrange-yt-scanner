@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-11 15:02",
+  "checked_at": "2026-06-11 21:41",
   "overall": "warning",
   "overall_icon": "🟡",
   "overall_label": "경고 3건",
@@ -22,7 +22,7 @@
     {
       "name": "html_element_ids",
       "status": "ok",
-      "msg": "textarea ID 166개 · 중복 0"
+      "msg": "textarea ID 165개 · 중복 0"
     },
     {
       "name": "required_files",

@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-11 14:46",
+  "updated_at": "2026-06-11 21:41",
   "today": "2026-06-11",
   "categories_def": {
     "single_explosion": {
@@ -3828,7 +3828,7 @@
             "60년 깨달음",
             "시니어 인물 통찰"
           ],
-          "merge_angle": "차인표가 60년 살아보고 깨달은 한 가지 + Life's Crossroads 1 Rule = 인생 갈림길 통찰",
+          "merge_angle": "60년을 살아온 한 사람이 깨달은 한 가지 — 영원한 관계 없다. 그러나 그 한 사람이 또 한 사람(심태윤)의 인생을 가만히 돌려세웠다. '생명을 살리는 일 같이 하자' 한 마디.",
           "sources_a": {
             "channel": "지식인사이드",
             "title": "Cha In-pyo 60 years realization",
@@ -3836,12 +3836,11 @@
             "views": 887609
           },
           "sources_b": {
-            "channel": "지식인사이드",
-            "title": "Life's Crossroads 1 Rule",
-            "efficiency": null,
-            "views": 316173
+            "channel": "새롭게하소서 (CGN TV) + 네이트 6/10 보도",
+            "title": "심태윤 화류계 진출 → 차인표 한 마디로 회심",
+            "url": "https://www.youtube.com/watch?v=ZpncexsnsFw"
           },
-          "status": "pending",
+          "status": "in_progress",
           "checklist": {
             "collect": false,
             "analyze": false,
@@ -3856,8 +3855,14 @@
               "ts": "2026-06-03 17:00",
               "type": "proposed",
               "note": "재편집 + 위로 톤"
+            },
+            {
+              "ts": "2026-06-11 09:50",
+              "type": "in_progress",
+              "note": "20260611_08 프로젝트 생성, seed 파일 작성, 검증 영상 A·B 확정"
             }
-          ]
+          ],
+          "notes": "2026-06-11 진행 시작: 새 각도 = 차인표 60년 통찰 + 심태윤 한 마디 인생 전환 (인물·사건 교차 + 시의성). 프로젝트: 20260611_08_chainpyo-60-and-shimtaeyoon. 30분 밤 트랙, [그 사람 시리즈]."
         },
         {
           "id": "nn-20260603-cc",
@@ -8194,8 +8199,8 @@
       ]
     }
   ],
-  "last_auto_run": "2026-06-11 14:46",
-  "last_ai_detect_run": "2026-06-11 14:46",
+  "last_auto_run": "2026-06-11 21:41",
+  "last_ai_detect_run": "2026-06-11 21:41",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [
