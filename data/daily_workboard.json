@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-12 09:33",
+  "updated_at": "2026-06-12T19:29:20",
   "today": "2026-06-12",
   "categories_def": {
     "single_explosion": {
@@ -4115,7 +4115,7 @@
             "title": "심태윤 화류계 진출 → 차인표 한 마디로 회심",
             "url": "https://www.youtube.com/watch?v=ZpncexsnsFw"
           },
-          "status": "ready_to_publish",
+          "status": "published",
           "checklist": {
             "collect": true,
             "analyze": true,
@@ -4123,7 +4123,7 @@
             "draft": true,
             "review_finalize": true,
             "self_diagnosis": true,
-            "published": false
+            "published": true
           },
           "events": [
             {
@@ -4140,6 +4140,11 @@
               "ts": "2026-06-11 16:30",
               "type": "ready_to_publish",
               "note": "20260611_08 전체 파이프라인 완료. 16,447자 / 33.7분 / 자료 38개 / 썸네일 5종 / shorts 3편 / 시리즈 라벨 [그 사람 시리즈]"
+            },
+            {
+              "ts": "2026-06-12 09:30",
+              "type": "scheduled",
+              "note": "오늘 밤(2026-06-12 22:00) 발행 예약 완료. 20260611_08_chainpyo-60-and-shimtaeyoon (33.7분, [그 사람 시리즈])"
             }
           ],
           "notes": "2026-06-11 진행 시작: 새 각도 = 차인표 60년 통찰 + 심태윤 한 마디 인생 전환 (인물·사건 교차 + 시의성). 프로젝트: 20260611_08_chainpyo-60-and-shimtaeyoon. 30분 밤 트랙, [그 사람 시리즈]."
@@ -5274,7 +5279,7 @@
       "series_ip": {
         "main": "AI도 못 푼 우리 몸/우주의 한 가지",
         "essence": "AI 시대 메타 모순 (AI가 못 만듦)",
-        "ep_count": 3
+        "ep_count": 4
       },
       "topics": [
         {
@@ -7377,6 +7382,16 @@
               "note": "자동 추천 (score=57488)"
             }
           ]
+        },
+        {
+          "id": "sw-20260611-immunity",
+          "title": "면역은 강한 게 아니라 균형이랍니다 — 평생 챙겨온 다섯 가지의 정직한 진실 — [내 몸의 과학] EP.4 (시리즈 4연작 완성)",
+          "status": "published",
+          "category": "series",
+          "publication_date": "2026-06-12",
+          "publication_url": null,
+          "production_project": "20260611_05_immunity",
+          "production_note": "ultracode 풀파이프라인 + 의학 반전형 60%. 합본 D+A+C+E. 12 권위(사카구치 2025 노벨·Ahuja Nature 2023·Cochrane·CDC·NIA·신의철·박상철 등). 11,870자/6파트. 시리즈 4연작 시그니처 완성: 시력 정직한 진실→잠 사치가 아니라→장수 잘 늙기→면역 강한 게 아니라 균형."
         }
       ]
     },
@@ -7392,6 +7407,58 @@
         "ep_count": 0
       },
       "topics": [
+        {
+          "id": "yd-20260612-pub-hidden-matriarch",
+          "category": "cross_category",
+          "title": "[조선반전야담] 거지 노파에게 밥 한 술 내어 준 며느리 — 알고 보니 곳간 쥔 대부인",
+          "type": "발행",
+          "rating": 5,
+          "tags": [
+            "발행예약",
+            "조선반전야담",
+            "제우스 교차",
+            "노부인 정체반전",
+            "적선보은",
+            "무자극",
+            "80분 롱폼"
+          ],
+          "merge_angle": "약초꾼 처녀 '알고 보니'(달빛아래 39x) × 늙은개 노인 정체반전(조선야담처녀) → 거지 노부인=거상 대부인+임금 봉인 적선보은",
+          "sources_a": {
+            "channel": "달빛 아래 이야기",
+            "title": "내가 먹여살리겠소 약초꾼 처녀 알고 보니",
+            "efficiency": "39x",
+            "views": 137439
+          },
+          "sources_b": {
+            "channel": "조선야담처녀",
+            "title": "늙은 개가 활을 잡았구나 비웃은 오랑캐",
+            "efficiency": null,
+            "views": 125846
+          },
+          "status": "published",
+          "checklist": {
+            "channel_setup": true,
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "events": [
+            {
+              "ts": "2026-06-11 19:00",
+              "type": "produced",
+              "note": "풀파이프라인 제작 (대본 24,547자/~80분, 무자극 균형)"
+            },
+            {
+              "ts": "2026-06-12 09:00",
+              "type": "published",
+              "note": "오늘 밤 8시 예약 발행 (2026-06-12)"
+            }
+          ]
+        },
         {
           "id": "yd-20260609-pub-silver-needle",
           "category": "cross_category",

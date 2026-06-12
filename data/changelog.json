@@ -1,17 +1,27 @@
 {
-  "generated_at": "2026-06-12 12:54",
+  "generated_at": "2026-06-12 19:31",
   "total_commits": 80,
   "by_category": {
+    "other": 4,
     "docs": 8,
-    "data": 61,
-    "feat": 8,
-    "other": 3
+    "data": 60,
+    "feat": 8
   },
   "recent_by_date": [
     {
       "date": "2026-06-12",
-      "count": 4,
+      "count": 5,
       "commits": [
+        {
+          "hash": "96aca8f",
+          "full_hash": "96aca8ffe41a97c2a651287963a96dbfea98bc6b",
+          "ts": "2026-06-12 12:55",
+          "ts_iso": "2026-06-12T12:55:04",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 공인 인물 사진 자동 합성 파이프라인 박음 — 위키미디어 커먼즈 PD/CC BY 사진 자동 수집·합성으로 시진핑·트럼프·이재용 식별 0.3초 회복",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "af1f66c",
           "full_hash": "af1f66cbf86af34890eced6f227507f1e5302ff2",
@@ -592,6 +602,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "96aca8f",
+      "full_hash": "96aca8ffe41a97c2a651287963a96dbfea98bc6b",
+      "ts": "2026-06-12 12:55",
+      "ts_iso": "2026-06-12T12:55:04",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 공인 인물 사진 자동 합성 파이프라인 박음 — 위키미디어 커먼즈 PD/CC BY 사진 자동 수집·합성으로 시진핑·트럼프·이재용 식별 0.3초 회복",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "af1f66c",
       "full_hash": "af1f66cbf86af34890eced6f227507f1e5302ff2",
@@ -1381,16 +1401,6 @@
       "subject": "feat: 지식록 [숨은한국]+[가격해부] 시리즈 IP + AI 채널 자동 분석 시스템",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "bfc0e43",
-      "full_hash": "bfc0e430739e7328e7cd5ba7cefcb78e72dbca35",
-      "ts": "2026-06-04 16:07",
-      "ts_iso": "2026-06-04T16:07:03",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-04 16:06:56 (자동 갱신)",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }
