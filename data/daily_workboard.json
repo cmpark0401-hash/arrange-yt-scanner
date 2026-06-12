@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-11T23:39:27",
-  "today": "2026-06-11",
+  "updated_at": "2026-06-12 09:21",
+  "today": "2026-06-12",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -3684,6 +3684,190 @@
               "note": "AI 채널 폭발 자동 검출 (score=5795)"
             }
           ]
+        },
+        {
+          "id": "kn-20260612-ai-시사-zLgODu",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: 공개 매각 실패한 왓챠, 앞으로 어떻게 돼요…?｜크랩 (188,053뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.2x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "공개 매각 실패한 왓챠, 앞으로 어떻게 돼요…?｜크랩",
+            "efficiency": 0.18619108910891088,
+            "views": 188053,
+            "velocity": 4318,
+            "url": "https://www.youtube.com/watch?v=zLgODu3j8Ho",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-12 09:21",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=10692)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260612-ai-시사-_JH80d",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 크랩 KLAB: 이번 월드컵에선 침대축구 못 본다고?｜크랩 (329,811뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 시사",
+            "효율 0.3x",
+            "1일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "크랩 KLAB",
+            "title": "이번 월드컵에선 침대축구 못 본다고?｜크랩",
+            "efficiency": 0.32654554455445545,
+            "views": 329811,
+            "velocity": 0,
+            "url": "https://www.youtube.com/watch?v=_JH80dkqOBY",
+            "ch_type": "일반+AI",
+            "categories": [
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-12 09:21",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=7156)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260612-ai-경제-vkgHKj",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 원가 공개 경제학: [원가공개] 선관위 직원 월급, 아무도 안 알려주는 진짜 수령액 공개합니다 (115,983뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 6.5x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "원가 공개 경제학",
+            "title": "[원가공개] 선관위 직원 월급, 아무도 안 알려주는 진짜 수령액 공개합니다",
+            "efficiency": 6.47949720670391,
+            "views": 115983,
+            "velocity": 3125,
+            "url": "https://www.youtube.com/watch?v=vkgHKjt1EBo",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-12 09:21",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=15720)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260612-ai-경제-Xkz3_O",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 만화 경제학: 충격! 삼성 조정 시작 진짜 중요한 신호가 나왔습니다! 환한 얼굴로 나온 전영현 삼성전자 부회장.. (179,842뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 경제",
+            "효율 2.1x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "만화 경제학",
+            "title": "충격! 삼성 조정 시작 진짜 중요한 신호가 나왔습니다! 환한 얼굴로 나온 전영현 삼성전자 부회장...젠슨 황과 무슨 얘기 나눴나 들어보니?",
+            "efficiency": 2.0887572590011616,
+            "views": 179842,
+            "velocity": 4937,
+            "url": "https://www.youtube.com/watch?v=Xkz3_OJ_0-g",
+            "ch_type": "AI",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-12 09:21",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=13206)"
+            }
+          ]
         }
       ]
     },
@@ -6830,6 +7014,98 @@
           "publication_url": null,
           "production_project": "20260609_04_longevity-body",
           "production_note": "ultracode 풀파이프라인. 합본 A+E+D+B. 8 권위 (NIH·NIA·Buettner·Newman 2024·NECS·Horvath·노벨 2009/2016·Cochrane·덴마크 쌍둥이·PROT-AGE·PREDIMED·Windred 2024). 의학 반전형 60% 변환. 시리즈 3연작 시그니처 완성 (시력·잠·장수). 12,877자/6파트."
+        },
+        {
+          "id": "sw-20260612-ai-과학-1y0XDV",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 방구석 과학: 북한이냐고 조롱하는 외국인 참교육 하는 법 (217,208뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 1.2x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "북한이냐고 조롱하는 외국인 참교육 하는 법",
+            "efficiency": 1.1869289617486338,
+            "views": 217208,
+            "velocity": 6084,
+            "url": "https://www.youtube.com/watch?v=1y0XDVGK4o0",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-12 09:21",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=13488)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260612-ai-과학-HePolk",
+          "category": "cross_category",
+          "title": "[🤖 AI 트렌드] 방구석 과학: 스페인에서 조심해야하는 충격적인 소매치기 수법 (190,862뷰)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 AI 채널 폭발",
+            "카테고리: 과학",
+            "효율 1.0x",
+            "2일 전"
+          ],
+          "merge_angle": "AI 양산 채널 폭발 신호 — 우리 시리즈 라벨([숨은한국]/[가격해부]/[AI도 못 푼])로 변환해서 시니어 톤·깊이 가산",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "스페인에서 조심해야하는 충격적인 소매치기 수법",
+            "efficiency": 1.0429617486338798,
+            "views": 190862,
+            "velocity": 4392,
+            "url": "https://www.youtube.com/watch?v=HePolkKXmOU",
+            "ch_type": "AI",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "detect_ai_channels",
+          "events": [
+            {
+              "ts": "2026-06-12 09:21",
+              "type": "ai_signal",
+              "note": "AI 채널 폭발 자동 검출 (score=11626)"
+            }
+          ]
         }
       ]
     },
@@ -8205,7 +8481,7 @@
     }
   ],
   "last_auto_run": "2026-06-11 21:41",
-  "last_ai_detect_run": "2026-06-11 21:41",
+  "last_ai_detect_run": "2026-06-12 09:21",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [

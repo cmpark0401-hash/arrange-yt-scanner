@@ -1,19 +1,29 @@
 {
-  "generated_at": "2026-06-11 23:59",
+  "generated_at": "2026-06-12 09:32",
   "total_commits": 80,
   "by_category": {
+    "feat": 10,
     "data": 59,
     "other": 3,
     "docs": 6,
-    "feat": 10,
     "style": 1,
     "fix": 1
   },
   "recent_by_date": [
     {
       "date": "2026-06-11",
-      "count": 6,
+      "count": 7,
       "commits": [
+        {
+          "hash": "f76ede9",
+          "full_hash": "f76ede95efcb6c2a73f4a9dbd580203193d44282",
+          "ts": "2026-06-11 23:59",
+          "ts_iso": "2026-06-11T23:59:05",
+          "author": "cmpark0401-hash",
+          "subject": "feat: 절약 모드 + 검증된 공식 픽 도구 + 조회수 표시",
+          "category": "feat",
+          "category_label": "✨ 신규 기능"
+        },
         {
           "hash": "25eac9d",
           "full_hash": "25eac9de14b6f806c554e0c73d616cae800ad6bd",
@@ -684,6 +694,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "f76ede9",
+      "full_hash": "f76ede95efcb6c2a73f4a9dbd580203193d44282",
+      "ts": "2026-06-11 23:59",
+      "ts_iso": "2026-06-11T23:59:05",
+      "author": "cmpark0401-hash",
+      "subject": "feat: 절약 모드 + 검증된 공식 픽 도구 + 조회수 표시",
+      "category": "feat",
+      "category_label": "✨ 신규 기능"
+    },
     {
       "hash": "25eac9d",
       "full_hash": "25eac9de14b6f806c554e0c73d616cae800ad6bd",
@@ -1473,16 +1493,6 @@
       "subject": "fix: KBS 시력 → 과만세 재배치 / 잘듣네 day1 → 돔 페리뇽 (기존 합의대로)",
       "category": "fix",
       "category_label": "🐛 오류 수정"
-    },
-    {
-      "hash": "9b8ffe3",
-      "full_hash": "9b8ffe30ae9449a40d83a1f17c149cec894c01ba",
-      "ts": "2026-06-04 14:03",
-      "ts_iso": "2026-06-04T14:03:03",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 잘듣네 낮 트랙 START + 워크보드 아카이브 시스템 + 카테고리 만료 정책",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
