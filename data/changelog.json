@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-12 09:33",
+  "generated_at": "2026-06-12 10:17",
   "total_commits": 80,
   "by_category": {
-    "data": 60,
-    "feat": 10,
+    "data": 61,
+    "feat": 9,
     "other": 3,
     "docs": 6,
     "style": 1
@@ -11,8 +11,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-12",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "9feaec7",
+          "full_hash": "9feaec775dde6d1cc7acfaaf7752c04ccb878cf9",
+          "ts": "2026-06-12 09:33",
+          "ts_iso": "2026-06-12T09:33:35",
+          "author": "cmpark0401-hash",
+          "subject": "auto: workboard 2026-06-12 09:33:35",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "c91282e",
           "full_hash": "c91282e9aacd688544e1924037d35bc4624e9f9a",
@@ -563,6 +573,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "9feaec7",
+      "full_hash": "9feaec775dde6d1cc7acfaaf7752c04ccb878cf9",
+      "ts": "2026-06-12 09:33",
+      "ts_iso": "2026-06-12T09:33:35",
+      "author": "cmpark0401-hash",
+      "subject": "auto: workboard 2026-06-12 09:33:35",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "c91282e",
       "full_hash": "c91282e9aacd688544e1924037d35bc4624e9f9a",
@@ -1352,16 +1372,6 @@
       "subject": "build: 6/4 11:40 전체 사이트 메타 최신화",
       "category": "style",
       "category_label": "🎨 디자인"
-    },
-    {
-      "hash": "e3eeb7f",
-      "full_hash": "e3eeb7f8025034b03d33b6a9f7e444fe5514fc9d",
-      "ts": "2026-06-04 15:03",
-      "ts_iso": "2026-06-04T15:03:15",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 과만세 KBS+EBS 시력 영상 베스트 조합 확정 (6편 검토)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
