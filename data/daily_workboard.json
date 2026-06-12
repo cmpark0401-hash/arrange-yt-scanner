@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-12 09:21",
+  "updated_at": "2026-06-12 09:33",
   "today": "2026-06-12",
   "categories_def": {
     "single_explosion": {
@@ -3868,6 +3868,97 @@
               "note": "AI 채널 폭발 자동 검출 (score=13206)"
             }
           ]
+        },
+        {
+          "id": "kn-20260612-auto-se-h5aa5b9",
+          "category": "single_explosion",
+          "title": "[자동🤖] 경제우체부: &quot;이란 1500만 대피&quot; 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피 (1,771,572뷰 · 효율 274.7x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 274.7x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "경제우체부",
+            "title": "&quot;이란 1500만 대피&quot; 3,000년 물의 나라가 스스로 무너진 소름돋는 과정 | 물 마피아의 실체",
+            "efficiency": 274.66232558139535,
+            "views": 1771572,
+            "velocity": 91,
+            "url": "",
+            "categories": [
+              "경제",
+              "시사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-12 09:33",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=276525)"
+            }
+          ]
+        },
+        {
+          "id": "kn-20260612-auto-se-h656753",
+          "category": "single_explosion",
+          "title": "[자동🤖] 경제대부: &quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히 (184,143뷰 · 효율 62.8x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 62.8x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "경제대부",
+            "title": "&quot;환경부도, 카이스트도 전부 인정했는데...&quot; 전국 주유소 뒤흔든 990원 세녹스가 완전히 사라진 진짜 이유",
+            "efficiency": 62.84744027303754,
+            "views": 184143,
+            "velocity": 0,
+            "url": "",
+            "categories": [
+              "경제"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-12 09:33",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=63032)"
+            }
+          ]
         }
       ]
     },
@@ -5079,6 +5170,96 @@
               "ts": "2026-06-11 00:15",
               "type": "auto_proposed",
               "note": "자동 추천 (score=1249)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260612-auto-se-h1a67d1",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소' (436,166뷰 · 효율 0.3x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.3x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'일단 맞고 시작하자' 범죄자에게 인권은 없다 세상에 가장 잔인한 감옥 '흑돌고래 교도소'",
+            "efficiency": 0.3329511450381679,
+            "views": 436166,
+            "velocity": 1285,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-12 09:33",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=2054)"
+            }
+          ]
+        },
+        {
+          "id": "nn-20260612-auto-se-hfec9e7",
+          "category": "single_explosion",
+          "title": "[자동🤖] 당신이 몰랐던 이야기: '피부가 썩고 좀비처럼 변한다' 단 한번으로 몸과 뇌가 망가지는 가장 위험한 약 '크로코딜' (266,555뷰 · 효율 0.2x)",
+          "type": "신규",
+          "rating": 4,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "large-tier",
+            "효율 0.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "당신이 몰랐던 이야기",
+            "title": "'피부가 썩고 좀비처럼 변한다' 단 한번으로 몸과 뇌가 망가지는 가장 위험한 약 '크로코딜'",
+            "efficiency": 0.20347709923664123,
+            "views": 266555,
+            "velocity": 919,
+            "url": "",
+            "categories": [
+              "인문"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-12 09:33",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=1389)"
             }
           ]
         }
@@ -7106,6 +7287,96 @@
               "note": "AI 채널 폭발 자동 검출 (score=11626)"
             }
           ]
+        },
+        {
+          "id": "sw-20260612-auto-se-hb27e54",
+          "category": "single_explosion",
+          "title": "[자동🤖] [수면다큐]: [수면다큐] 우주의 끝을 찾아서 (6,358,691뷰 · 효율 402.4x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 402.4x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "[수면다큐]",
+            "title": "[수면다큐] 우주의 끝을 찾아서",
+            "efficiency": 402.4487974683544,
+            "views": 6358691,
+            "velocity": 66,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-12 09:33",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=408873)"
+            }
+          ]
+        },
+        {
+          "id": "sw-20260612-auto-se-h225259",
+          "category": "single_explosion",
+          "title": "[자동🤖] 방구석 과학: 북한이냐고 조롱하는 외국인 참교육 하는 법 (217,208뷰 · 효율 1.2x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 1.2x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "방구석 과학",
+            "title": "북한이냐고 조롱하는 외국인 참교육 하는 법",
+            "efficiency": 1.1869289617486338,
+            "views": 217208,
+            "velocity": 6084,
+            "url": "",
+            "categories": [
+              "과학"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-12 09:33",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=57488)"
+            }
+          ]
         }
       ]
     },
@@ -8476,12 +8747,103 @@
               "note": "자동 추천 (score=8850)"
             }
           ]
+        },
+        {
+          "id": "yd-20260612-auto-se-hcad7cd",
+          "category": "single_explosion",
+          "title": "[자동🤖] 보다 BODA: 1차 세계대전 병사들은 왜 나가면 죽는 참호 밖으로 돌진한 걸까?ㅣ그날을 보다 EP.31 (199,559뷰 · 효율 0.1x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "🚨시그널",
+            "large-tier",
+            "효율 0.1x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "보다 BODA",
+            "title": "1차 세계대전 병사들은 왜 나가면 죽는 참호 밖으로 돌진한 걸까?ㅣ그날을 보다 EP.31",
+            "efficiency": 0.0641668810289389,
+            "views": 199559,
+            "velocity": 5504,
+            "url": "",
+            "categories": [
+              "지식",
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-12 09:33",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=55768)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260612-auto-se-h22d72b",
+          "category": "single_explosion",
+          "title": "[자동🤖] 한밤의 한국사: 조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열 (275,985뷰 · 효율 31.6x)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🤖 자동 추천",
+            "",
+            "small-tier",
+            "효율 31.6x"
+          ],
+          "merge_angle": "이 영상을 베이스로 검증 영상 B 추가 발굴 필요 — 같은 카테고리 폭발 영상 1편과 합쳐 새 각도 생성",
+          "sources_a": {
+            "channel": "한밤의 한국사",
+            "title": "조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열",
+            "efficiency": 31.649655963302752,
+            "views": 275985,
+            "velocity": 388,
+            "url": "",
+            "categories": [
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "pending",
+          "checklist": {
+            "collect": false,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "auto_proposed": true,
+          "proposed_by": "build_workboard_auto",
+          "events": [
+            {
+              "ts": "2026-06-12 09:33",
+              "type": "auto_proposed",
+              "note": "자동 추천 (score=32314)"
+            }
+          ]
         }
       ]
     }
   ],
-  "last_auto_run": "2026-06-11 21:41",
-  "last_ai_detect_run": "2026-06-12 09:21",
+  "last_auto_run": "2026-06-12 09:33",
+  "last_ai_detect_run": "2026-06-12 09:33",
   "publish_schedule": {
     "정책": "발행 기준 (작업 X, 실제 업로드 시간) — 2026-06-07 확정",
     "slots": [

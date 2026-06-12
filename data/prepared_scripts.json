@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11 21:41:18",
+  "generated_at": "2026-06-12 09:33:26",
   "total": 35,
   "by_channel": {
     "knowledge-archive": {
@@ -13,7 +13,7 @@
     "nn-flix": {
       "name": "잘듣네",
       "count": 8,
-      "completed": 6,
+      "completed": 7,
       "published": 6,
       "unpublished": 1,
       "unknown": 1
@@ -21,7 +21,7 @@
     "science-world-life": {
       "name": "과만세",
       "count": 5,
-      "completed": 4,
+      "completed": 5,
       "published": 4,
       "unpublished": 1,
       "unknown": 0
@@ -29,10 +29,10 @@
     "yadam": {
       "name": "깊은밤야담",
       "count": 4,
-      "completed": 2,
-      "published": 2,
+      "completed": 3,
+      "published": 3,
       "unpublished": 1,
-      "unknown": 1
+      "unknown": 0
     }
   },
   "scripts": [
@@ -70,16 +70,22 @@
       "num": "08",
       "project_slug": "chainpyo-60-and-shimtaeyoon",
       "folder": "20260611_08_chainpyo-60-and-shimtaeyoon",
-      "title": "chainpyo 60 and shimtaeyoon",
-      "status": "진행 중",
-      "status_icon": "🔵",
+      "title": "YouTube 업로드 정보 — 차인표 60년 + 심태윤 한 마디 (약 33분)",
+      "status": "완성",
+      "status_icon": "🟢",
       "artifacts": {
-        "thumbnails": "channels/nn-flix/projects/20260611_08_chainpyo-60-and-shimtaeyoon/output/thumbnails"
+        "script": "channels/nn-flix/projects/20260611_08_chainpyo-60-and-shimtaeyoon/_script/20260611_08_chainpyo-60-and-shimtaeyoon_script.txt",
+        "draft": "channels/nn-flix/projects/20260611_08_chainpyo-60-and-shimtaeyoon/_script/draft.md",
+        "concept": "channels/nn-flix/projects/20260611_08_chainpyo-60-and-shimtaeyoon/_script/concept.md",
+        "youtube_md": "channels/nn-flix/projects/20260611_08_chainpyo-60-and-shimtaeyoon/output/youtube.md",
+        "thumbnails": "channels/nn-flix/projects/20260611_08_chainpyo-60-and-shimtaeyoon/output/thumbnails",
+        "references": "channels/nn-flix/projects/20260611_08_chainpyo-60-and-shimtaeyoon/output/references.md",
+        "sources": "channels/nn-flix/projects/20260611_08_chainpyo-60-and-shimtaeyoon/_script/sources.md"
       },
       "command": "잘듣네 chainpyo-60-and 결과물 보여줘",
-      "has_final": false,
+      "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": false,
+      "has_youtube_md": true,
       "publish_status": "미완료",
       "published_at": null,
       "publish_source": "latest-heuristic",
@@ -92,19 +98,22 @@
       "num": "05",
       "project_slug": "immunity",
       "folder": "20260611_05_immunity",
-      "title": "영상 컨셉",
-      "status": "초안",
-      "status_icon": "🟡",
+      "title": "유튜브 업로드 정보",
+      "status": "완성",
+      "status_icon": "🟢",
       "artifacts": {
+        "script": "channels/science-world-life/projects/20260611_05_immunity/_script/20260611_05_immunity_script.txt",
         "draft": "channels/science-world-life/projects/20260611_05_immunity/_script/draft.md",
         "concept": "channels/science-world-life/projects/20260611_05_immunity/_script/concept.md",
+        "youtube_md": "channels/science-world-life/projects/20260611_05_immunity/output/youtube.md",
         "thumbnails": "channels/science-world-life/projects/20260611_05_immunity/output/thumbnails",
-        "references": "channels/science-world-life/projects/20260611_05_immunity/output/references.md"
+        "references": "channels/science-world-life/projects/20260611_05_immunity/output/references.md",
+        "sources": "channels/science-world-life/projects/20260611_05_immunity/_script/sources.md"
       },
       "command": "과만세 immunity 결과물 보여줘",
-      "has_final": false,
+      "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": false,
+      "has_youtube_md": true,
       "publish_status": "미완료",
       "published_at": null,
       "publish_source": "latest-heuristic",
@@ -137,21 +146,25 @@
       "num": "03",
       "project_slug": "hidden-matriarch",
       "folder": "20260611_03_hidden-matriarch",
-      "title": "컨셉 확정 — 20260611_03_hidden-matriarch",
-      "status": "초안",
-      "status_icon": "🟡",
+      "title": "YouTube 업로드 패키지 — 20260611_03_hidden-matriarch",
+      "status": "완성",
+      "status_icon": "🟢",
       "artifacts": {
+        "script": "channels/yadam/projects/20260611_03_hidden-matriarch/_script/20260611_03_hidden-matriarch_script.txt",
         "draft": "channels/yadam/projects/20260611_03_hidden-matriarch/_script/draft.md",
         "concept": "channels/yadam/projects/20260611_03_hidden-matriarch/_script/concept.md",
-        "thumbnails": "channels/yadam/projects/20260611_03_hidden-matriarch/output/thumbnails"
+        "youtube_md": "channels/yadam/projects/20260611_03_hidden-matriarch/output/youtube.md",
+        "thumbnails": "channels/yadam/projects/20260611_03_hidden-matriarch/output/thumbnails",
+        "references": "channels/yadam/projects/20260611_03_hidden-matriarch/output/references.md",
+        "sources": "channels/yadam/projects/20260611_03_hidden-matriarch/_script/sources.md"
       },
       "command": "깊은밤야담 hidden-matriarch 결과물 보여줘",
-      "has_final": false,
+      "has_final": true,
       "has_thumbnails": true,
-      "has_youtube_md": false,
-      "publish_status": "Unknown",
+      "has_youtube_md": true,
+      "publish_status": "완료",
       "published_at": null,
-      "publish_source": "no-final",
+      "publish_source": "older-heuristic",
       "track_published": true
     },
     {
