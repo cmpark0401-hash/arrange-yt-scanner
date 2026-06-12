@@ -1,17 +1,27 @@
 {
-  "generated_at": "2026-06-12 10:33",
+  "generated_at": "2026-06-12 12:54",
   "total_commits": 80,
   "by_category": {
-    "docs": 7,
+    "docs": 8,
     "data": 61,
-    "feat": 9,
+    "feat": 8,
     "other": 3
   },
   "recent_by_date": [
     {
       "date": "2026-06-12",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "af1f66c",
+          "full_hash": "af1f66cbf86af34890eced6f227507f1e5302ff2",
+          "ts": "2026-06-12 10:33",
+          "ts_iso": "2026-06-12T10:33:55",
+          "author": "cmpark0401-hash",
+          "subject": "manual JP: 2026-06-12 10:33",
+          "category": "docs",
+          "category_label": "📖 문서"
+        },
         {
           "hash": "f2238a3",
           "full_hash": "f2238a3a3752523b2907ddbc0e6a0d296912f292",
@@ -582,6 +592,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "af1f66c",
+      "full_hash": "af1f66cbf86af34890eced6f227507f1e5302ff2",
+      "ts": "2026-06-12 10:33",
+      "ts_iso": "2026-06-12T10:33:55",
+      "author": "cmpark0401-hash",
+      "subject": "manual JP: 2026-06-12 10:33",
+      "category": "docs",
+      "category_label": "📖 문서"
+    },
     {
       "hash": "f2238a3",
       "full_hash": "f2238a3a3752523b2907ddbc0e6a0d296912f292",
@@ -1371,16 +1391,6 @@
       "subject": "auto: workboard 2026-06-04 16:06:56 (자동 갱신)",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "bdd7411",
-      "full_hash": "bdd74115493cbc58d24c6658a14fdc6ac52f3b82",
-      "ts": "2026-06-04 16:03",
-      "ts_iso": "2026-06-04T16:03:35",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 워크보드 자동 채움 엔진 + 헬스체크 시스템",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
