@@ -1,18 +1,27 @@
 {
-  "generated_at": "2026-06-12 10:17",
+  "generated_at": "2026-06-12 10:33",
   "total_commits": 80,
   "by_category": {
+    "docs": 7,
     "data": 61,
     "feat": 9,
-    "other": 3,
-    "docs": 6,
-    "style": 1
+    "other": 3
   },
   "recent_by_date": [
     {
       "date": "2026-06-12",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "f2238a3",
+          "full_hash": "f2238a3a3752523b2907ddbc0e6a0d296912f292",
+          "ts": "2026-06-12 10:18",
+          "ts_iso": "2026-06-12T10:18:27",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 유튜브 가이드라인 14대 자가진단 시스템 박음 — 채널별 우선 카테고리 + check_youtube_policy.py + 검증된 공식 픽 자동 정책 필터",
+          "category": "docs",
+          "category_label": "📖 문서"
+        },
         {
           "hash": "9feaec7",
           "full_hash": "9feaec775dde6d1cc7acfaaf7752c04ccb878cf9",
@@ -573,6 +582,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "f2238a3",
+      "full_hash": "f2238a3a3752523b2907ddbc0e6a0d296912f292",
+      "ts": "2026-06-12 10:18",
+      "ts_iso": "2026-06-12T10:18:27",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 유튜브 가이드라인 14대 자가진단 시스템 박음 — 채널별 우선 카테고리 + check_youtube_policy.py + 검증된 공식 픽 자동 정책 필터",
+      "category": "docs",
+      "category_label": "📖 문서"
+    },
     {
       "hash": "9feaec7",
       "full_hash": "9feaec775dde6d1cc7acfaaf7752c04ccb878cf9",
@@ -1362,16 +1381,6 @@
       "subject": "feat: 워크보드 자동 채움 엔진 + 헬스체크 시스템",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "c676ccb",
-      "full_hash": "c676ccb0fd80095db49def70742c177f9dfd16f7",
-      "ts": "2026-06-04 15:42",
-      "ts_iso": "2026-06-04T15:42:01",
-      "author": "cmpark0401-hash",
-      "subject": "build: 6/4 11:40 전체 사이트 메타 최신화",
-      "category": "style",
-      "category_label": "🎨 디자인"
     }
   ]
 }

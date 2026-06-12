@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12 10:17",
+  "generated_at": "2026-06-12 10:33",
   "overall_icon": "🟢",
   "overall_label": "정상",
   "overall_severity": "ok",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "55분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-12 09:21",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-12.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "44분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-12 09:32",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-12.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "44분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-12 09:32",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-12.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "22분 전",
+      "ago": "38분 전",
       "updated_at": "2026-06-12 09:55",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-12.json",
       "severity": "warning"
@@ -49,7 +49,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "35분 전",
+      "ago": "52분 전",
       "updated_at": "2026-06-12 09:41",
       "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-12.json",
       "severity": "warning"
@@ -79,7 +79,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "44분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-12 09:33",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-12 10:17"
+      "updated_at": "2026-06-12 10:33"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
