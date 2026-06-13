@@ -1,17 +1,27 @@
 {
-  "generated_at": "2026-06-13 14:01",
+  "generated_at": "2026-06-13 14:31",
   "total_commits": 80,
   "by_category": {
-    "other": 8,
+    "other": 9,
     "docs": 8,
     "data": 60,
-    "feat": 4
+    "feat": 3
   },
   "recent_by_date": [
     {
       "date": "2026-06-13",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "7c0c876",
+          "full_hash": "7c0c876683df1db4c6799c57ba3a39f1936db8fb",
+          "ts": "2026-06-13 14:01",
+          "ts_iso": "2026-06-13T14:01:12",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 알고리즘 패턴 자동 발견 엔진 박음 (①②③) — 시리즈 라벨 부스트 + 발행 시간대 골든타임 + 13변수 자동 가설 발굴. [수면다큐] 64x·과만세 라벨 33x↑·경제 라벨 0.15x↓ 등 자동 발견. e",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "1804414",
           "full_hash": "1804414c4507e02a468d108553c919a2221ec98f",
@@ -552,6 +562,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "7c0c876",
+      "full_hash": "7c0c876683df1db4c6799c57ba3a39f1936db8fb",
+      "ts": "2026-06-13 14:01",
+      "ts_iso": "2026-06-13T14:01:12",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 알고리즘 패턴 자동 발견 엔진 박음 (①②③) — 시리즈 라벨 부스트 + 발행 시간대 골든타임 + 13변수 자동 가설 발굴. [수면다큐] 64x·과만세 라벨 33x↑·경제 라벨 0.15x↓ 등 자동 발견. e",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "1804414",
       "full_hash": "1804414c4507e02a468d108553c919a2221ec98f",
@@ -1341,16 +1361,6 @@
       "subject": "auto: build 2026-06-04 22:42",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "945c39c",
-      "full_hash": "945c39cac7bd85ad7c5489e96b1849f8f64a8b4b",
-      "ts": "2026-06-04 18:35",
-      "ts_iso": "2026-06-04T18:35:49",
-      "author": "cmpark0401-hash",
-      "subject": "feat: [숨은한국] 시리즈 1호 추가 — 정부 대출 줄여주기 7가지 (본능 점수 9.0)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
