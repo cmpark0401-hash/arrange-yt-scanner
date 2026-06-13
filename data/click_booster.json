@@ -34,28 +34,12 @@
     "expected_eff": "20~60x (이재용 케이스 29.7x · 트럼프 케이스 20.4x · 타카이치 56.8x)",
     "benchmarks": [
       {
-        "vid": "uFq-sr_ia6o",
-        "channel": "코믹스 경제",
-        "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
-        "views": 137890,
-        "ch_subs": 2420,
-        "efficiency": 56.98,
-        "person_type": "유명인_실제얼굴",
-        "person_names": [
-          "타카이치 사나에(일본 정치인 추정)",
-          "이름 모를 일본 남성(좌절 자세)"
-        ],
-        "text_main": "한국 독자 개발에 일본 오열",
-        "title_pattern": "따옴표인용",
-        "thumb_url": "https://i.ytimg.com/vi/uFq-sr_ia6o/hqdefault.jpg"
-      },
-      {
         "vid": "xpz_QLv8060",
         "channel": "손안의 경제학",
         "title": "2026년 대한민국 자산 계급 8개층 — 당신은 지금 몇 층에 살고 있습니까? | 순자산 8층 구조 완전 공개 | 4050 자산 생존 지도 | 손안의 경제학",
-        "views": 72362,
+        "views": 73327,
         "ch_subs": 1530,
-        "efficiency": 47.3,
+        "efficiency": 47.93,
         "person_type": "일러스트_현대인물",
         "person_names": [
           "스틱맨 화자(이름 없는 일러스트 진행자)",
@@ -69,17 +53,30 @@
         "vid": "QaCsvrHZ8mU",
         "channel": "귀에쏙쏙경제학",
         "title": "삼성,LG,현대 국내 대기업  해외에서도 줄서서 주문하는 전 세계 단 하나뿐인 기업",
-        "views": 383867,
-        "ch_subs": 15900,
-        "efficiency": 24.14,
+        "views": 436727,
+        "ch_subs": 16200,
+        "efficiency": 26.96,
         "person_type": null,
         "person_names": [],
         "text_main": "",
         "title_pattern": "",
         "thumb_url": "https://i.ytimg.com/vi/QaCsvrHZ8mU/hqdefault.jpg"
+      },
+      {
+        "vid": "9poYKzIKaf8",
+        "channel": "쉽게이해되는 경제",
+        "title": "일하는 60대와 쉬는 60대의 결정적 차이｜5년 후 건강과 인생이 완전히 갈렸습니다!",
+        "views": 42284,
+        "ch_subs": 1740,
+        "efficiency": 24.3,
+        "person_type": null,
+        "person_names": [],
+        "text_main": "",
+        "title_pattern": "",
+        "thumb_url": "https://i.ytimg.com/vi/9poYKzIKaf8/hqdefault.jpg"
       }
     ],
-    "last_refresh": "2026-06-12"
+    "last_refresh": "2026-06-13"
   },
   "잘듣네": {
     "slug": "nn-flix",
@@ -114,57 +111,46 @@
     "expected_eff": "5~25x (인물 본인 IP 차용)",
     "benchmarks": [
       {
-        "vid": "t-lRlnmPkL0",
-        "channel": "담담소담 민담",
-        "title": "가시덤불 심는 며느리를 모두가 비웃었는데… 장마 뒤 마을이 뒤집힌 이유 | 야담 | 옛날이야기 | 조선시대 | 민담",
-        "views": 308227,
-        "ch_subs": 2050,
-        "efficiency": 150.35,
-        "person_type": "일러스트_조선인물",
-        "person_names": [
-          "이름 모를 며느리",
-          "분노한 시아버지(양반)",
-          "구경꾼 남성들"
-        ],
-        "text_main": "가시덤불 심는 며느리 모두가 비웃었는데",
-        "title_pattern": "대비반전",
-        "thumb_url": "https://i.ytimg.com/vi/t-lRlnmPkL0/hqdefault.jpg"
+        "vid": "NdlcFn8USno",
+        "channel": "방송대 지식+",
+        "title": "[시청주의] 화재 사고로 끝날 뻔한 사건… 부검이 밝혀낸 대전 일가족 참극｜김복준_사건속으로",
+        "views": 224905,
+        "ch_subs": 1,
+        "efficiency": 224905.0,
+        "person_type": null,
+        "person_names": [],
+        "text_main": "",
+        "title_pattern": "",
+        "thumb_url": "https://i.ytimg.com/vi/NdlcFn8USno/hqdefault.jpg"
       },
       {
-        "vid": "9Lh3WLA9yJY",
-        "channel": "뒷골목 야담",
-        "title": "&quot;아버님, 거지에게 시집가란 말이옵니까?&quot; 마지막 유언에 거지 굴로 걸어간 아씨... | 야담 | 옛날이야기 | 민담 | 수면동화 | 오디오북",
-        "views": 114435,
-        "ch_subs": 2810,
-        "efficiency": 40.72,
-        "person_type": "일러스트_조선인물",
-        "person_names": [
-          "이름 모를 양반가 아씨(눈물 한복 여인)",
-          "이름 모를 거지 남편(누더기 사내)",
-          "배경 그림자 군중"
-        ],
-        "text_main": "사약 받은 아비의 유언 \"거지에게 시집가라\" / 첫날밤 누더기를 벗은 남편에 숨 멈춘 아씨",
-        "title_pattern": "따옴표인용",
-        "thumb_url": "https://i.ytimg.com/vi/9Lh3WLA9yJY/hqdefault.jpg"
+        "vid": "Q4G_w2EXmOI",
+        "channel": "방송대 지식+",
+        "title": "러시아군은 왜 우크라이나 변기를 뜯어 갔나? 수세식 변기에 숨은 충격 역사｜썬킴의 썰라운드 _@방송대지식",
+        "views": 84418,
+        "ch_subs": 1,
+        "efficiency": 84418.0,
+        "person_type": null,
+        "person_names": [],
+        "text_main": "",
+        "title_pattern": "",
+        "thumb_url": "https://i.ytimg.com/vi/Q4G_w2EXmOI/hqdefault.jpg"
       },
       {
-        "vid": "ATna0gvP4Us",
-        "channel": "달빛 아래 이야기",
-        "title": "&quot;내가 먹여살리겠소&quot; 산골 약초꾼 처녀가 눈 속에서 업고 온 사내, 알고 보니.. | 야담 옛날이야기 민담 전설 설화",
-        "views": 141142,
-        "ch_subs": 3590,
-        "efficiency": 39.32,
-        "person_type": "일러스트_조선인물",
-        "person_names": [
-          "이름 모를 약초꾼 처녀",
-          "이름 모를 미남 사내"
-        ],
-        "text_main": "눈길에 쓰러진 미남 사내를 주워온 약초꾼 처녀",
-        "title_pattern": "따옴표인용",
-        "thumb_url": "https://i.ytimg.com/vi/ATna0gvP4Us/hqdefault.jpg"
+        "vid": "T12v6beBbbI",
+        "channel": "방송대 지식+",
+        "title": "남편의 컴퓨터에서 나온 충격 검색기록 #shorts",
+        "views": 41317,
+        "ch_subs": 1,
+        "efficiency": 41317.0,
+        "person_type": null,
+        "person_names": [],
+        "text_main": "",
+        "title_pattern": "",
+        "thumb_url": "https://i.ytimg.com/vi/T12v6beBbbI/hqdefault.jpg"
       }
     ],
-    "last_refresh": "2026-06-12"
+    "last_refresh": "2026-06-13"
   },
   "과만세": {
     "slug": "science-world-life",
@@ -200,25 +186,12 @@
     "expected_eff": "10~100x (우주 풍경 401x · 의사 권위 30x)",
     "benchmarks": [
       {
-        "vid": "cXqZVPeOdRk",
-        "channel": "방구석 과학",
-        "title": "영국 길거리 인터뷰에서 인종차별하는 영국인 모녀",
-        "views": 1491139,
-        "ch_subs": 183000,
-        "efficiency": 8.15,
-        "person_type": null,
-        "person_names": [],
-        "text_main": "",
-        "title_pattern": "",
-        "thumb_url": "https://i.ytimg.com/vi/cXqZVPeOdRk/hqdefault.jpg"
-      },
-      {
         "vid": "5e3hCLw900A",
         "channel": "자연의 비밀 노트",
         "title": "연료·식량·약을 모두 만드는 기적의 나무, 왜 우리는 몰랐을까?",
-        "views": 30397,
-        "ch_subs": 4280,
-        "efficiency": 7.1,
+        "views": 30605,
+        "ch_subs": 4290,
+        "efficiency": 7.13,
         "person_type": null,
         "person_names": [],
         "text_main": "",
@@ -229,17 +202,30 @@
         "vid": "9_j0h3typyM",
         "channel": "밤의 우주",
         "title": "제임스 웹이 발견한 것: 빅뱅 이전에 이미 존재했던 은하 — 우주론이 완전히 무너진다 | 다큐멘터리",
-        "views": 44849,
-        "ch_subs": 6750,
-        "efficiency": 6.64,
+        "views": 45766,
+        "ch_subs": 6810,
+        "efficiency": 6.72,
         "person_type": null,
         "person_names": [],
         "text_main": "",
         "title_pattern": "",
         "thumb_url": "https://i.ytimg.com/vi/9_j0h3typyM/hqdefault.jpg"
+      },
+      {
+        "vid": "Z4uQzU2fKw4",
+        "channel": "자연의 비밀 노트",
+        "title": "1년에 4.5m 자라는 괴물 나무, 석탄보다 뜨겁게 타는데 왜 금지됐을까?",
+        "views": 28008,
+        "ch_subs": 4290,
+        "efficiency": 6.53,
+        "person_type": null,
+        "person_names": [],
+        "text_main": "",
+        "title_pattern": "",
+        "thumb_url": "https://i.ytimg.com/vi/Z4uQzU2fKw4/hqdefault.jpg"
       }
     ],
-    "last_refresh": "2026-06-12"
+    "last_refresh": "2026-06-13"
   },
   "깊은밤야담": {
     "slug": "yadam",
@@ -276,9 +262,9 @@
         "vid": "t-lRlnmPkL0",
         "channel": "담담소담 민담",
         "title": "가시덤불 심는 며느리를 모두가 비웃었는데… 장마 뒤 마을이 뒤집힌 이유 | 야담 | 옛날이야기 | 조선시대 | 민담",
-        "views": 308227,
-        "ch_subs": 2050,
-        "efficiency": 150.35,
+        "views": 312102,
+        "ch_subs": 2070,
+        "efficiency": 150.77,
         "person_type": "일러스트_조선인물",
         "person_names": [
           "이름 모를 며느리",
@@ -293,9 +279,9 @@
         "vid": "9Lh3WLA9yJY",
         "channel": "뒷골목 야담",
         "title": "&quot;아버님, 거지에게 시집가란 말이옵니까?&quot; 마지막 유언에 거지 굴로 걸어간 아씨... | 야담 | 옛날이야기 | 민담 | 수면동화 | 오디오북",
-        "views": 114435,
-        "ch_subs": 2810,
-        "efficiency": 40.72,
+        "views": 124905,
+        "ch_subs": 2980,
+        "efficiency": 41.91,
         "person_type": "일러스트_조선인물",
         "person_names": [
           "이름 모를 양반가 아씨(눈물 한복 여인)",
@@ -307,22 +293,21 @@
         "thumb_url": "https://i.ytimg.com/vi/9Lh3WLA9yJY/hqdefault.jpg"
       },
       {
-        "vid": "ATna0gvP4Us",
-        "channel": "달빛 아래 이야기",
-        "title": "&quot;내가 먹여살리겠소&quot; 산골 약초꾼 처녀가 눈 속에서 업고 온 사내, 알고 보니.. | 야담 옛날이야기 민담 전설 설화",
-        "views": 141142,
-        "ch_subs": 3590,
-        "efficiency": 39.32,
+        "vid": "NRtLHrlkspU",
+        "channel": "한밤의 한국사",
+        "title": "조선왕조실록에 3000번 등장하는 단 한 사람ㅣ숙종의 사약을 세 사발이나 마신 노론 영수ㅣ우암 송시열",
+        "views": 284007,
+        "ch_subs": 8950,
+        "efficiency": 31.73,
         "person_type": "일러스트_조선인물",
         "person_names": [
-          "이름 모를 약초꾼 처녀",
-          "이름 모를 미남 사내"
+          "송시열(우암, 일러스트)"
         ],
-        "text_main": "눈길에 쓰러진 미남 사내를 주워온 약초꾼 처녀",
-        "title_pattern": "따옴표인용",
-        "thumb_url": "https://i.ytimg.com/vi/ATna0gvP4Us/hqdefault.jpg"
+        "text_main": "이 사람을 모르면 조선 역사를 논하지 말라",
+        "title_pattern": "숫자충격",
+        "thumb_url": "https://i.ytimg.com/vi/NRtLHrlkspU/hqdefault.jpg"
       }
     ],
-    "last_refresh": "2026-06-12"
+    "last_refresh": "2026-06-13"
   }
 }

@@ -1,17 +1,27 @@
 {
-  "generated_at": "2026-06-12 19:31",
+  "generated_at": "2026-06-13 11:06",
   "total_commits": 80,
   "by_category": {
-    "other": 4,
+    "other": 5,
     "docs": 8,
     "data": 60,
-    "feat": 8
+    "feat": 7
   },
   "recent_by_date": [
     {
       "date": "2026-06-12",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "76c6513",
+          "full_hash": "76c6513116e3161f5f009a9e59af88dbee583b28",
+          "ts": "2026-06-12 19:31",
+          "ts_iso": "2026-06-12T19:31:22",
+          "author": "cmpark0401-hash",
+          "subject": "과만세 EP.4 면역 발행 (2026-06-12) — 시리즈 4연작 완성",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "96aca8f",
           "full_hash": "96aca8ffe41a97c2a651287963a96dbfea98bc6b",
@@ -602,6 +612,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "76c6513",
+      "full_hash": "76c6513116e3161f5f009a9e59af88dbee583b28",
+      "ts": "2026-06-12 19:31",
+      "ts_iso": "2026-06-12T19:31:22",
+      "author": "cmpark0401-hash",
+      "subject": "과만세 EP.4 면역 발행 (2026-06-12) — 시리즈 4연작 완성",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "96aca8f",
       "full_hash": "96aca8ffe41a97c2a651287963a96dbfea98bc6b",
@@ -1389,16 +1409,6 @@
       "ts_iso": "2026-06-04T17:16:53",
       "author": "cmpark0401-hash",
       "subject": "feat: 지식록 [이득비교] 시리즈 IP 추가 (한국인 손해 회피 본능 직격)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "96d894e",
-      "full_hash": "96d894e9f9ad53729c6d0fe60b3f20b4afa2952b",
-      "ts": "2026-06-04 17:04",
-      "ts_iso": "2026-06-04T17:04:16",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 지식록 [숨은한국]+[가격해부] 시리즈 IP + AI 채널 자동 분석 시스템",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }

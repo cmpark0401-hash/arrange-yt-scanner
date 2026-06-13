@@ -867,12 +867,140 @@
         "반문도발": 3,
         "숫자충격": 1
       }
+    },
+    {
+      "date": "2026-06-13",
+      "total_videos": 74,
+      "by_category": {
+        "경제·시사": {
+          "count": 18,
+          "avg_efficiency": 11.48,
+          "max_efficiency": 47.93,
+          "explosive_5x": 13
+        },
+        "역사·야담": {
+          "count": 18,
+          "avg_efficiency": 24.14,
+          "max_efficiency": 150.77,
+          "explosive_5x": 18
+        },
+        "과학·건강": {
+          "count": 18,
+          "avg_efficiency": 3.28,
+          "max_efficiency": 7.13,
+          "explosive_5x": 5
+        },
+        "지식·교양": {
+          "count": 18,
+          "avg_efficiency": 21794.78,
+          "max_efficiency": 224905.0,
+          "explosive_5x": 9
+        },
+        "심리·인물": {
+          "count": 2,
+          "avg_efficiency": 0.12,
+          "max_efficiency": 0.16,
+          "explosive_5x": 0
+        }
+      },
+      "top_efficiency_pioneers": [
+        {
+          "vid": "NdlcFn8USno",
+          "channel": "방송대 지식+",
+          "title": "[시청주의] 화재 사고로 끝날 뻔한 사건… 부검이 밝혀낸 대전 일가족 참극｜김복준_사건속으로",
+          "efficiency": 224905.0
+        },
+        {
+          "vid": "Q4G_w2EXmOI",
+          "channel": "방송대 지식+",
+          "title": "러시아군은 왜 우크라이나 변기를 뜯어 갔나? 수세식 변기에 숨은 충격 역사｜썬킴의 썰라운드 _@방송대지식",
+          "efficiency": 84418.0
+        },
+        {
+          "vid": "T12v6beBbbI",
+          "channel": "방송대 지식+",
+          "title": "남편의 컴퓨터에서 나온 충격 검색기록 #shorts",
+          "efficiency": 41317.0
+        },
+        {
+          "vid": "sCIFQncX1eQ",
+          "channel": "방송대 지식+",
+          "title": "생방송을 뒤흔든 한마디 #shorts",
+          "efficiency": 9938.0
+        },
+        {
+          "vid": "6hrjq-_hVXI",
+          "channel": "방송대 지식+",
+          "title": "[인생 나락] 영국의 아편 전쟁부터 멕시코 카르텔까지, * 약의 세계사｜썬킴의 썰라운드 | 방송대",
+          "efficiency": 9753.0
+        }
+      ],
+      "person_type_distribution": {
+        "일러스트_조선인물": 6,
+        "일러스트_현대인물": 1
+      },
+      "title_pattern_distribution": {
+        "대비반전": 1,
+        "반문도발": 3,
+        "따옴표인용": 2,
+        "숫자충격": 1
+      }
     }
   ],
   "latest_diff": {
-    "new_pioneers": [],
-    "category_movement": {},
+    "new_pioneers": [
+      {
+        "vid": "NdlcFn8USno",
+        "channel": "방송대 지식+",
+        "title": "[시청주의] 화재 사고로 끝날 뻔한 사건… 부검이 밝혀낸 대전 일가족 참극｜김복준_사건속으로",
+        "efficiency": 224905.0
+      },
+      {
+        "vid": "Q4G_w2EXmOI",
+        "channel": "방송대 지식+",
+        "title": "러시아군은 왜 우크라이나 변기를 뜯어 갔나? 수세식 변기에 숨은 충격 역사｜썬킴의 썰라운드 _@방송대지식",
+        "efficiency": 84418.0
+      },
+      {
+        "vid": "T12v6beBbbI",
+        "channel": "방송대 지식+",
+        "title": "남편의 컴퓨터에서 나온 충격 검색기록 #shorts",
+        "efficiency": 41317.0
+      },
+      {
+        "vid": "sCIFQncX1eQ",
+        "channel": "방송대 지식+",
+        "title": "생방송을 뒤흔든 한마디 #shorts",
+        "efficiency": 9938.0
+      },
+      {
+        "vid": "6hrjq-_hVXI",
+        "channel": "방송대 지식+",
+        "title": "[인생 나락] 영국의 아편 전쟁부터 멕시코 카르텔까지, * 약의 세계사｜썬킴의 썰라운드 | 방송대",
+        "efficiency": 9753.0
+      }
+    ],
+    "category_movement": {
+      "경제·시사": {
+        "yesterday": 15.08,
+        "today": 11.48,
+        "delta": -3.6,
+        "direction": "↓"
+      },
+      "역사·야담": {
+        "yesterday": 25.77,
+        "today": 24.14,
+        "delta": -1.63,
+        "direction": "↓"
+      },
+      "지식·교양": {
+        "yesterday": 0.53,
+        "today": 21794.78,
+        "delta": 21794.25,
+        "direction": "↑"
+      }
+    },
     "person_type_shift": {}
   },
-  "last_refresh": "2026-06-12 09:21:58"
+  "last_refresh": "2026-06-13 11:06:03"
 }

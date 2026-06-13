@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-12T19:29:20",
-  "today": "2026-06-12",
+  "updated_at": "2026-06-13T11:01:26",
+  "today": "2026-06-13",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -5267,6 +5267,53 @@
               "note": "자동 추천 (score=1389)"
             }
           ]
+        },
+        {
+          "id": "nn-20260612-ws1",
+          "category": "world_history",
+          "title": "EP.9 — 알렉산드리아 도서관 700년 (BC 285 ~ AD 391/642)",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "세계사 라인업 EP.9",
+            "[밤에 듣는 세계사 시리즈]",
+            "700년 결",
+            "70만 권"
+          ],
+          "merge_angle": "한 도시가 한 도서관을 어떻게 700년 동안 키웠는지, 그리고 그 도서관이 어떻게 천천히 한 권씩 사라졌는지 — BC 285 프톨레마이오스 2세 → BC 48 카이사르 화재 → AD 391 세라피움 → AD 642 마지막",
+          "sources_a": {
+            "channel": "역사 한국어",
+            "title": "001 알렉산드리아 도서관 어떻게 지어지고 파괴되었을까?",
+            "url": "https://www.youtube.com/watch?v=aLiDsJ5xhLk"
+          },
+          "sources_b": {
+            "channel": "1차 사료 (플루타르코스·세네카·암미아누스·위키)",
+            "title": "BC 48 카이사르 화재 + AD 391 세라피움 + AD 642 마지막",
+            "note": "DATA_PREP 외부 사료 풍부 보강"
+          },
+          "status": "ready_to_publish",
+          "checklist": {
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": false
+          },
+          "events": [
+            {
+              "ts": "2026-06-12 10:30",
+              "type": "in_progress",
+              "note": "20260612_09 프로젝트 생성, 1차 영상 4개 수집 (001 메인), 영어 다큐 추가는 yt-dlp 429로 지연. DATA_PREP 외부 사료 보강 모드로 전환"
+            },
+            {
+              "ts": "2026-06-13 18:30",
+              "type": "ready_to_publish",
+              "note": "20260612_09 전체 파이프라인 완료. 14,960자(draft) / 25.3분(finalize) / 자료 30개 / 썸네일 5종 / shorts 3편 / 결함 A(Ch3 중복 헤더) 수정 완료. APPROVED."
+            }
+          ],
+          "notes": "세계사 라인업 EP.9 첫 진입. [밤에 듣는 세계사 시리즈] 라벨 신규 사용. 30분 밤 트랙. 자극 0 (히파티아 살해·종교 갈등 추상화 의무). 라인업: EP.10 빅터 위고 또는 베네치아, EP.11 타지마할, EP.12 알람브라."
         }
       ]
     },
