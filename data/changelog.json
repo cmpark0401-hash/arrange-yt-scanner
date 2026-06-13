@@ -1,17 +1,27 @@
 {
-  "generated_at": "2026-06-13 14:31",
+  "generated_at": "2026-06-13 14:46",
   "total_commits": 80,
   "by_category": {
-    "other": 9,
+    "other": 10,
     "docs": 8,
-    "data": 60,
+    "data": 59,
     "feat": 3
   },
   "recent_by_date": [
     {
       "date": "2026-06-13",
-      "count": 4,
+      "count": 5,
       "commits": [
+        {
+          "hash": "9e4939b",
+          "full_hash": "9e4939b1c55b8da219d55ef44b29797c6cbf352e",
+          "ts": "2026-06-13 14:31",
+          "ts_iso": "2026-06-13T14:31:15",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 4채널 발행 시간 변경 (2026-06-13) — 지식록·과만세 11:30, 잘듣네 20:30, 야담 18:30(22→18:30 데이터 기반), [수면다큐] 22:30. publish_schedule.json",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "7c0c876",
           "full_hash": "7c0c876683df1db4c6799c57ba3a39f1936db8fb",
@@ -562,6 +572,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "9e4939b",
+      "full_hash": "9e4939b1c55b8da219d55ef44b29797c6cbf352e",
+      "ts": "2026-06-13 14:31",
+      "ts_iso": "2026-06-13T14:31:15",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 4채널 발행 시간 변경 (2026-06-13) — 지식록·과만세 11:30, 잘듣네 20:30, 야담 18:30(22→18:30 데이터 기반), [수면다큐] 22:30. publish_schedule.json",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "7c0c876",
       "full_hash": "7c0c876683df1db4c6799c57ba3a39f1936db8fb",
@@ -1349,16 +1369,6 @@
       "ts_iso": "2026-06-04T22:51:12",
       "author": "cmpark0401-hash",
       "subject": "auto: workboard 2026-06-04 22:51:12",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "19b3793",
-      "full_hash": "19b3793a6ebdea5ace6bec5c4ba5a006cb1ecb7c",
-      "ts": "2026-06-04 22:42",
-      "ts_iso": "2026-06-04T22:42:02",
-      "author": "cmpark0401-hash",
-      "subject": "auto: build 2026-06-04 22:42",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }
