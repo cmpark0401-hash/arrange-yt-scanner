@@ -1,0 +1,355 @@
+{
+  "updated_at": "2026-06-13 04:57:27 UTC",
+  "buckets": {
+    "야담": {
+      "video_count": 204,
+      "hypotheses": [
+        {
+          "feature": "has_emotion",
+          "label": "감정 어휘 (몰락·붕괴·패닉)",
+          "on_count": 26,
+          "off_count": 178,
+          "on_avg_efficiency": 7.93,
+          "off_avg_efficiency": 2.54,
+          "boost_ratio": 3.12,
+          "direction": "↑"
+        },
+        {
+          "feature": "is_long_video",
+          "label": "장편 (≥30분)",
+          "on_count": 103,
+          "off_count": 101,
+          "on_avg_efficiency": 4.24,
+          "off_avg_efficiency": 2.2,
+          "boost_ratio": 1.93,
+          "direction": "↑"
+        },
+        {
+          "feature": "question_mark",
+          "label": "물음표 사용",
+          "on_count": 17,
+          "off_count": 187,
+          "on_avg_efficiency": 5.74,
+          "off_avg_efficiency": 3.0,
+          "boost_ratio": 1.91,
+          "direction": "↑"
+        },
+        {
+          "feature": "exclamation",
+          "label": "느낌표 사용",
+          "on_count": 18,
+          "off_count": 186,
+          "on_avg_efficiency": 0.84,
+          "off_avg_efficiency": 3.46,
+          "boost_ratio": 0.24,
+          "direction": "↓"
+        },
+        {
+          "feature": "title_long",
+          "label": "제목 김 (≥80자)",
+          "on_count": 56,
+          "off_count": 148,
+          "on_avg_efficiency": 1.09,
+          "off_avg_efficiency": 4.04,
+          "boost_ratio": 0.27,
+          "direction": "↓"
+        },
+        {
+          "feature": "title_short",
+          "label": "제목 짧음 (≤40자)",
+          "on_count": 9,
+          "off_count": 195,
+          "on_avg_efficiency": 1.54,
+          "off_avg_efficiency": 3.31,
+          "boost_ratio": 0.47,
+          "direction": "↓"
+        }
+      ]
+    },
+    "경제·시사": {
+      "video_count": 3374,
+      "hypotheses": [
+        {
+          "feature": "has_emotion",
+          "label": "감정 어휘 (몰락·붕괴·패닉)",
+          "on_count": 300,
+          "off_count": 3074,
+          "on_avg_efficiency": 1.8,
+          "off_avg_efficiency": 0.32,
+          "boost_ratio": 5.58,
+          "direction": "↑"
+        },
+        {
+          "feature": "has_time",
+          "label": "시간 표현 (○년 만에·○시간 후)",
+          "on_count": 306,
+          "off_count": 3068,
+          "on_avg_efficiency": 1.45,
+          "off_avg_efficiency": 0.35,
+          "boost_ratio": 4.1,
+          "direction": "↑"
+        },
+        {
+          "feature": "has_sealing",
+          "label": "봉인어 사용 (진짜 이유·숨겨진·정체)",
+          "on_count": 374,
+          "off_count": 3000,
+          "on_avg_efficiency": 1.13,
+          "off_avg_efficiency": 0.37,
+          "boost_ratio": 3.05,
+          "direction": "↑"
+        },
+        {
+          "feature": "has_number",
+          "label": "구체 숫자 등장",
+          "on_count": 1465,
+          "off_count": 1909,
+          "on_avg_efficiency": 0.68,
+          "off_avg_efficiency": 0.28,
+          "boost_ratio": 2.4,
+          "direction": "↑"
+        },
+        {
+          "feature": "has_series_label",
+          "label": "[○○○] 시리즈 라벨 박힘",
+          "on_count": 464,
+          "off_count": 2910,
+          "on_avg_efficiency": 0.08,
+          "off_avg_efficiency": 0.51,
+          "boost_ratio": 0.15,
+          "direction": "↓"
+        },
+        {
+          "feature": "has_quote",
+          "label": "따옴표 직인용 발언",
+          "on_count": 225,
+          "off_count": 3149,
+          "on_avg_efficiency": 0.22,
+          "off_avg_efficiency": 0.47,
+          "boost_ratio": 0.46,
+          "direction": "↓"
+        },
+        {
+          "feature": "title_short",
+          "label": "제목 짧음 (≤40자)",
+          "on_count": 1317,
+          "off_count": 2057,
+          "on_avg_efficiency": 0.29,
+          "off_avg_efficiency": 0.56,
+          "boost_ratio": 0.52,
+          "direction": "↓"
+        },
+        {
+          "feature": "question_mark",
+          "label": "물음표 사용",
+          "on_count": 896,
+          "off_count": 2478,
+          "on_avg_efficiency": 0.27,
+          "off_avg_efficiency": 0.52,
+          "boost_ratio": 0.52,
+          "direction": "↓"
+        },
+        {
+          "feature": "title_long",
+          "label": "제목 김 (≥80자)",
+          "on_count": 304,
+          "off_count": 3070,
+          "on_avg_efficiency": 0.32,
+          "off_avg_efficiency": 0.47,
+          "boost_ratio": 0.69,
+          "direction": "↓"
+        }
+      ]
+    },
+    "잘듣네": {
+      "video_count": 208,
+      "hypotheses": [
+        {
+          "feature": "is_long_video",
+          "label": "장편 (≥30분)",
+          "on_count": 44,
+          "off_count": 164,
+          "on_avg_efficiency": 1.59,
+          "off_avg_efficiency": 0.19,
+          "boost_ratio": 8.47,
+          "direction": "↑"
+        },
+        {
+          "feature": "has_series_label",
+          "label": "[○○○] 시리즈 라벨 박힘",
+          "on_count": 14,
+          "off_count": 194,
+          "on_avg_efficiency": 1.97,
+          "off_avg_efficiency": 0.38,
+          "boost_ratio": 5.23,
+          "direction": "↑"
+        },
+        {
+          "feature": "has_famous_name",
+          "label": "공인 인물 본명 노출",
+          "on_count": 8,
+          "off_count": 200,
+          "on_avg_efficiency": 0.95,
+          "off_avg_efficiency": 0.47,
+          "boost_ratio": 2.04,
+          "direction": "↑"
+        },
+        {
+          "feature": "has_time",
+          "label": "시간 표현 (○년 만에·○시간 후)",
+          "on_count": 29,
+          "off_count": 179,
+          "on_avg_efficiency": 0.85,
+          "off_avg_efficiency": 0.43,
+          "boost_ratio": 1.99,
+          "direction": "↑"
+        },
+        {
+          "feature": "has_emotion",
+          "label": "감정 어휘 (몰락·붕괴·패닉)",
+          "on_count": 14,
+          "off_count": 194,
+          "on_avg_efficiency": 0.85,
+          "off_avg_efficiency": 0.46,
+          "boost_ratio": 1.85,
+          "direction": "↑"
+        },
+        {
+          "feature": "question_mark",
+          "label": "물음표 사용",
+          "on_count": 47,
+          "off_count": 161,
+          "on_avg_efficiency": 0.23,
+          "off_avg_efficiency": 0.56,
+          "boost_ratio": 0.41,
+          "direction": "↓"
+        }
+      ]
+    },
+    "과학·건강": {
+      "video_count": 836,
+      "hypotheses": [
+        {
+          "feature": "has_series_label",
+          "label": "[○○○] 시리즈 라벨 박힘",
+          "on_count": 38,
+          "off_count": 798,
+          "on_avg_efficiency": 10.67,
+          "off_avg_efficiency": 0.32,
+          "boost_ratio": 33.07,
+          "direction": "↑"
+        },
+        {
+          "feature": "is_long_video",
+          "label": "장편 (≥30분)",
+          "on_count": 95,
+          "off_count": 741,
+          "on_avg_efficiency": 5.23,
+          "off_avg_efficiency": 0.22,
+          "boost_ratio": 23.29,
+          "direction": "↑"
+        },
+        {
+          "feature": "title_short",
+          "label": "제목 짧음 (≤40자)",
+          "on_count": 432,
+          "off_count": 404,
+          "on_avg_efficiency": 1.35,
+          "off_avg_efficiency": 0.2,
+          "boost_ratio": 6.77,
+          "direction": "↑"
+        },
+        {
+          "feature": "title_long",
+          "label": "제목 김 (≥80자)",
+          "on_count": 84,
+          "off_count": 752,
+          "on_avg_efficiency": 0.01,
+          "off_avg_efficiency": 0.88,
+          "boost_ratio": 0.01,
+          "direction": "↓"
+        },
+        {
+          "feature": "has_famous_name",
+          "label": "공인 인물 본명 노출",
+          "on_count": 22,
+          "off_count": 814,
+          "on_avg_efficiency": 0.03,
+          "off_avg_efficiency": 0.81,
+          "boost_ratio": 0.03,
+          "direction": "↓"
+        },
+        {
+          "feature": "is_short_video",
+          "label": "쇼츠 (≤60초)",
+          "on_count": 26,
+          "off_count": 810,
+          "on_avg_efficiency": 0.11,
+          "off_avg_efficiency": 0.81,
+          "boost_ratio": 0.14,
+          "direction": "↓"
+        },
+        {
+          "feature": "question_mark",
+          "label": "물음표 사용",
+          "on_count": 226,
+          "off_count": 610,
+          "on_avg_efficiency": 0.29,
+          "off_avg_efficiency": 0.98,
+          "boost_ratio": 0.29,
+          "direction": "↓"
+        },
+        {
+          "feature": "has_number",
+          "label": "구체 숫자 등장",
+          "on_count": 341,
+          "off_count": 495,
+          "on_avg_efficiency": 0.33,
+          "off_avg_efficiency": 1.11,
+          "boost_ratio": 0.3,
+          "direction": "↓"
+        },
+        {
+          "feature": "exclamation",
+          "label": "느낌표 사용",
+          "on_count": 78,
+          "off_count": 758,
+          "on_avg_efficiency": 0.33,
+          "off_avg_efficiency": 0.84,
+          "boost_ratio": 0.4,
+          "direction": "↓"
+        },
+        {
+          "feature": "has_sealing",
+          "label": "봉인어 사용 (진짜 이유·숨겨진·정체)",
+          "on_count": 69,
+          "off_count": 767,
+          "on_avg_efficiency": 0.35,
+          "off_avg_efficiency": 0.83,
+          "boost_ratio": 0.42,
+          "direction": "↓"
+        },
+        {
+          "feature": "has_time",
+          "label": "시간 표현 (○년 만에·○시간 후)",
+          "on_count": 91,
+          "off_count": 745,
+          "on_avg_efficiency": 0.39,
+          "off_avg_efficiency": 0.84,
+          "boost_ratio": 0.46,
+          "direction": "↓"
+        },
+        {
+          "feature": "has_emotion",
+          "label": "감정 어휘 (몰락·붕괴·패닉)",
+          "on_count": 42,
+          "off_count": 794,
+          "on_avg_efficiency": 0.42,
+          "off_avg_efficiency": 0.81,
+          "boost_ratio": 0.52,
+          "direction": "↓"
+        }
+      ]
+    }
+  }
+}

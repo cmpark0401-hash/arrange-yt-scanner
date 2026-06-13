@@ -1,0 +1,191 @@
+{
+  "updated_at": "2026-06-13 13:58:07",
+  "buckets": {
+    "경제·시사": {
+      "sampled_videos": 25,
+      "time_buckets": {
+        "00-02": {
+          "video_count": 1,
+          "avg_efficiency": 23.78,
+          "max_efficiency": 23.78,
+          "total_efficiency": 23.78
+        },
+        "06-08": {
+          "video_count": 3,
+          "avg_efficiency": 18.5,
+          "max_efficiency": 28.67,
+          "total_efficiency": 55.5
+        },
+        "08-10": {
+          "video_count": 3,
+          "avg_efficiency": 32.1,
+          "max_efficiency": 52.77,
+          "total_efficiency": 96.31
+        },
+        "10-12": {
+          "video_count": 2,
+          "avg_efficiency": 16.11,
+          "max_efficiency": 20.64,
+          "total_efficiency": 32.23
+        },
+        "12-14": {
+          "video_count": 2,
+          "avg_efficiency": 147.94,
+          "max_efficiency": 275.98,
+          "total_efficiency": 295.87
+        },
+        "14-16": {
+          "video_count": 2,
+          "avg_efficiency": 20.83,
+          "max_efficiency": 23.73,
+          "total_efficiency": 41.67
+        },
+        "16-18": {
+          "video_count": 4,
+          "avg_efficiency": 28.9,
+          "max_efficiency": 62.4,
+          "total_efficiency": 115.58
+        },
+        "18-20": {
+          "video_count": 5,
+          "avg_efficiency": 30.87,
+          "max_efficiency": 78.38,
+          "total_efficiency": 154.35
+        },
+        "20-22": {
+          "video_count": 3,
+          "avg_efficiency": 15.48,
+          "max_efficiency": 19.44,
+          "total_efficiency": 46.43
+        }
+      },
+      "golden_time": "12-14"
+    },
+    "잘듣네": {
+      "sampled_videos": 8,
+      "time_buckets": {
+        "08-10": {
+          "video_count": 1,
+          "avg_efficiency": 5.48,
+          "max_efficiency": 5.48,
+          "total_efficiency": 5.48
+        },
+        "20-22": {
+          "video_count": 7,
+          "avg_efficiency": 7.01,
+          "max_efficiency": 10.59,
+          "total_efficiency": 49.08
+        }
+      },
+      "golden_time": "20-22"
+    },
+    "과학·건강": {
+      "sampled_videos": 19,
+      "time_buckets": {
+        "00-02": {
+          "video_count": 3,
+          "avg_efficiency": 6.34,
+          "max_efficiency": 7.72,
+          "total_efficiency": 19.02
+        },
+        "04-06": {
+          "video_count": 1,
+          "avg_efficiency": 5.19,
+          "max_efficiency": 5.19,
+          "total_efficiency": 5.19
+        },
+        "12-14": {
+          "video_count": 1,
+          "avg_efficiency": 8.15,
+          "max_efficiency": 8.15,
+          "total_efficiency": 8.15
+        },
+        "16-18": {
+          "video_count": 1,
+          "avg_efficiency": 8.15,
+          "max_efficiency": 8.15,
+          "total_efficiency": 8.15
+        },
+        "18-20": {
+          "video_count": 7,
+          "avg_efficiency": 6.7,
+          "max_efficiency": 13.34,
+          "total_efficiency": 46.89
+        },
+        "20-22": {
+          "video_count": 4,
+          "avg_efficiency": 10.97,
+          "max_efficiency": 26.91,
+          "total_efficiency": 43.88
+        },
+        "22-24": {
+          "video_count": 2,
+          "avg_efficiency": 209.17,
+          "max_efficiency": 401.5,
+          "total_efficiency": 418.34
+        }
+      },
+      "golden_time": "22-24"
+    },
+    "야담": {
+      "sampled_videos": 23,
+      "time_buckets": {
+        "04-06": {
+          "video_count": 1,
+          "avg_efficiency": 11.1,
+          "max_efficiency": 11.1,
+          "total_efficiency": 11.1
+        },
+        "06-08": {
+          "video_count": 2,
+          "avg_efficiency": 9.22,
+          "max_efficiency": 9.37,
+          "total_efficiency": 18.44
+        },
+        "08-10": {
+          "video_count": 1,
+          "avg_efficiency": 7.49,
+          "max_efficiency": 7.49,
+          "total_efficiency": 7.49
+        },
+        "12-14": {
+          "video_count": 1,
+          "avg_efficiency": 22.51,
+          "max_efficiency": 22.51,
+          "total_efficiency": 22.51
+        },
+        "14-16": {
+          "video_count": 4,
+          "avg_efficiency": 9.63,
+          "max_efficiency": 12.22,
+          "total_efficiency": 38.53
+        },
+        "16-18": {
+          "video_count": 3,
+          "avg_efficiency": 12.6,
+          "max_efficiency": 17.55,
+          "total_efficiency": 37.79
+        },
+        "18-20": {
+          "video_count": 8,
+          "avg_efficiency": 33.01,
+          "max_efficiency": 141.21,
+          "total_efficiency": 264.08
+        },
+        "20-22": {
+          "video_count": 2,
+          "avg_efficiency": 12.42,
+          "max_efficiency": 16.3,
+          "total_efficiency": 24.85
+        },
+        "22-24": {
+          "video_count": 1,
+          "avg_efficiency": 9.7,
+          "max_efficiency": 9.7,
+          "total_efficiency": 9.7
+        }
+      },
+      "golden_time": "18-20"
+    }
+  }
+}

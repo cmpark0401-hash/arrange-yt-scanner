@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13 13:46",
+  "generated_at": "2026-06-13 14:01",
   "overall_icon": "🔴",
   "overall_label": "긴급 점검",
   "overall_severity": "critical",
@@ -69,7 +69,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "14시간 전",
+      "ago": "15시간 전",
       "updated_at": "2026-06-12 22:59",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-12.json",
       "severity": "info"
@@ -79,7 +79,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "46분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-13 (발행 반영: 암행어사 5편 예약, 원본 유사도 플래그)",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-13 13:46"
+      "updated_at": "2026-06-13 14:01"
     },
     {
       "label": "🛡️ 데이터 신뢰도",

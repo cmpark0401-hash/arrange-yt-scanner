@@ -1,17 +1,27 @@
 {
-  "generated_at": "2026-06-13 13:46",
+  "generated_at": "2026-06-13 14:01",
   "total_commits": 80,
   "by_category": {
-    "other": 7,
+    "other": 8,
     "docs": 8,
     "data": 60,
-    "feat": 5
+    "feat": 4
   },
   "recent_by_date": [
     {
       "date": "2026-06-13",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "1804414",
+          "full_hash": "1804414c4507e02a468d108553c919a2221ec98f",
+          "ts": "2026-06-13 13:46",
+          "ts_iso": "2026-06-13T13:46:20",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 카피캣 클러스터 감지 박음 (B+A) — 야담 가설 검증 후 시스템화. 자카드 유사도+시간 윈도우 14일 클러스터링, D+3 추격 보드 docs/copycat.html. 모니터 풀 6개 야담 확장 (흔적·달이",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "77f398e",
           "full_hash": "77f398e4e7a87e03c9c6dff841585d7a38f0a080",
@@ -542,6 +552,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "1804414",
+      "full_hash": "1804414c4507e02a468d108553c919a2221ec98f",
+      "ts": "2026-06-13 13:46",
+      "ts_iso": "2026-06-13T13:46:20",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 카피캣 클러스터 감지 박음 (B+A) — 야담 가설 검증 후 시스템화. 자카드 유사도+시간 윈도우 14일 클러스터링, D+3 추격 보드 docs/copycat.html. 모니터 풀 6개 야담 확장 (흔적·달이",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "77f398e",
       "full_hash": "77f398e4e7a87e03c9c6dff841585d7a38f0a080",
@@ -1329,16 +1349,6 @@
       "ts_iso": "2026-06-04T18:35:49",
       "author": "cmpark0401-hash",
       "subject": "feat: [숨은한국] 시리즈 1호 추가 — 정부 대출 줄여주기 7가지 (본능 점수 9.0)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "27de6fe",
-      "full_hash": "27de6fe5641bd1ae231436bd0f4e097bf3ecc58f",
-      "ts": "2026-06-04 18:06",
-      "ts_iso": "2026-06-04T18:06:37",
-      "author": "cmpark0401-hash",
-      "subject": "feat: [이득비교] 시리즈 IP 풀 60+편 + 본능 매트릭스 + 워크보드 1·2·3순위 토픽",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
