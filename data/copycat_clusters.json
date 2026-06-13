@@ -1,0 +1,936 @@
+{
+  "updated_at": "2026-06-13 04:46:00 UTC",
+  "buckets": {
+    "야담": {
+      "video_count": 35,
+      "cluster_count": 2,
+      "clusters": [
+        {
+          "cluster_size": 2,
+          "common_keywords": [
+            "왕비를",
+            "절벽으로",
+            "천재아이"
+          ],
+          "pioneer": {
+            "vid": "aI8A973spEw",
+            "channel": "전해들은 야담",
+            "channel_subs": 31000,
+            "title": "자객들에 쫓기던 왕비를 절벽으로 밀어버린 천재아이| 야담 | 조선시대 | 오디오북 | 전설 민담",
+            "upload_date": "20260522",
+            "views": 571690,
+            "efficiency": 18.44,
+            "categories": [
+              "야담",
+              "옛이야기"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "paQO8OPWGdw",
+              "channel": "여우골 야담",
+              "channel_subs": 9440,
+              "title": "자객에 쫓긴 버려진  왕비를  폭포 절벽으로 떨어뜨린  천재아이  | 야담 | 조선시대 | 오디오북 | 전설 민담",
+              "upload_date": "20260531",
+              "views": 115314,
+              "efficiency": 12.22,
+              "categories": [
+                "야담"
+              ]
+            }
+          ],
+          "days_active": 9,
+          "max_efficiency": 18.44,
+          "avg_efficiency": 15.33,
+          "max_views": 571690,
+          "freshness_days": 13,
+          "is_fresh": false,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "aI8A973spEw",
+              "channel": "전해들은 야담",
+              "channel_subs": 31000,
+              "title": "자객들에 쫓기던 왕비를 절벽으로 밀어버린 천재아이| 야담 | 조선시대 | 오디오북 | 전설 민담",
+              "upload_date": "20260522",
+              "views": 571690,
+              "efficiency": 18.44,
+              "categories": [
+                "야담",
+                "옛이야기"
+              ]
+            },
+            {
+              "vid": "paQO8OPWGdw",
+              "channel": "여우골 야담",
+              "channel_subs": 9440,
+              "title": "자객에 쫓긴 버려진  왕비를  폭포 절벽으로 떨어뜨린  천재아이  | 야담 | 조선시대 | 오디오북 | 전설 민담",
+              "upload_date": "20260531",
+              "views": 115314,
+              "efficiency": 12.22,
+              "categories": [
+                "야담"
+              ]
+            }
+          ],
+          "verdict": "⚠️ 신선도 한계 (D+14)"
+        },
+        {
+          "cluster_size": 2,
+          "common_keywords": [
+            "과부를",
+            "며느리로",
+            "시어머니"
+          ],
+          "pioneer": {
+            "vid": "MRgU9wXIxoQ",
+            "channel": "산골야담",
+            "channel_subs": 9530,
+            "title": "7냥에 산 과부를 며느리로 들인 지혜로운 시어머니, 첫날부터 곳간 열쇠를 맡긴 이유 #옛날이야기 #민담 #수면동화 #오디오북 #야담",
+            "upload_date": "20260529",
+            "views": 60206,
+            "efficiency": 6.32,
+            "categories": [
+              "야담",
+              "옛이야기"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "pstBC7oKE-w",
+              "channel": "산골야담",
+              "channel_subs": 9530,
+              "title": "아이 셋 딸린 과부를 며느리로 고른 시어머니, 세 아이가 집안을 살렸다 #옛날이야기    #오디오북 #수면동화 #민담 #전설",
+              "upload_date": "20260603",
+              "views": 93151,
+              "efficiency": 9.77,
+              "categories": [
+                "야담",
+                "옛이야기"
+              ]
+            }
+          ],
+          "days_active": 5,
+          "max_efficiency": 9.77,
+          "avg_efficiency": 8.04,
+          "max_views": 93151,
+          "freshness_days": 10,
+          "is_fresh": false,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "MRgU9wXIxoQ",
+              "channel": "산골야담",
+              "channel_subs": 9530,
+              "title": "7냥에 산 과부를 며느리로 들인 지혜로운 시어머니, 첫날부터 곳간 열쇠를 맡긴 이유 #옛날이야기 #민담 #수면동화 #오디오북 #야담",
+              "upload_date": "20260529",
+              "views": 60206,
+              "efficiency": 6.32,
+              "categories": [
+                "야담",
+                "옛이야기"
+              ]
+            },
+            {
+              "vid": "pstBC7oKE-w",
+              "channel": "산골야담",
+              "channel_subs": 9530,
+              "title": "아이 셋 딸린 과부를 며느리로 고른 시어머니, 세 아이가 집안을 살렸다 #옛날이야기    #오디오북 #수면동화 #민담 #전설",
+              "upload_date": "20260603",
+              "views": 93151,
+              "efficiency": 9.77,
+              "categories": [
+                "야담",
+                "옛이야기"
+              ]
+            }
+          ],
+          "verdict": "⚠️ 신선도 한계 (D+14)"
+        }
+      ]
+    },
+    "경제·시사": {
+      "video_count": 73,
+      "cluster_count": 7,
+      "clusters": [
+        {
+          "cluster_size": 3,
+          "common_keywords": [
+            "노조의",
+            "삼성",
+            "최후"
+          ],
+          "pioneer": {
+            "vid": "JPxtLP4eUQc",
+            "channel": "경제왕토끼",
+            "channel_subs": 20500,
+            "title": "&quot;파업? 다 나가세요&quot; 삼성 노조 45조원 성과급 요구에 사람 빼고 기계 쓴다, 일자리 잃게 생긴 노조의 최후",
+            "upload_date": "20260420",
+            "views": 665801,
+            "efficiency": 32.48,
+            "categories": [
+              "경제"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "4qLCUYg40aU",
+              "channel": "럭키경제학",
+              "channel_subs": 19300,
+              "title": "&quot;어디한번 끝까지 해봐라&quot; 45조 요구한 삼성 귀족 노조의 최후｜삼성 노조 파업 총정리",
+              "upload_date": "20260428",
+              "views": 375234,
+              "efficiency": 19.44,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "0u3wHhqxceA",
+              "channel": "경제균열",
+              "channel_subs": 17600,
+              "title": "삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언에 진짜 이유",
+              "upload_date": "20260430",
+              "views": 417898,
+              "efficiency": 23.74,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "days_active": 10,
+          "max_efficiency": 32.48,
+          "avg_efficiency": 25.22,
+          "max_views": 665801,
+          "freshness_days": 44,
+          "is_fresh": false,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "JPxtLP4eUQc",
+              "channel": "경제왕토끼",
+              "channel_subs": 20500,
+              "title": "&quot;파업? 다 나가세요&quot; 삼성 노조 45조원 성과급 요구에 사람 빼고 기계 쓴다, 일자리 잃게 생긴 노조의 최후",
+              "upload_date": "20260420",
+              "views": 665801,
+              "efficiency": 32.48,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "4qLCUYg40aU",
+              "channel": "럭키경제학",
+              "channel_subs": 19300,
+              "title": "&quot;어디한번 끝까지 해봐라&quot; 45조 요구한 삼성 귀족 노조의 최후｜삼성 노조 파업 총정리",
+              "upload_date": "20260428",
+              "views": 375234,
+              "efficiency": 19.44,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "0u3wHhqxceA",
+              "channel": "경제균열",
+              "channel_subs": 17600,
+              "title": "삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언에 진짜 이유",
+              "upload_date": "20260430",
+              "views": 417898,
+              "efficiency": 23.74,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "verdict": "📦 evergreen 아카이브"
+        },
+        {
+          "cluster_size": 4,
+          "common_keywords": [
+            "꺼낸",
+            "세계",
+            "최초로"
+          ],
+          "pioneer": {
+            "vid": "ZjKw83Hu-MM",
+            "channel": "경제의 신호",
+            "channel_subs": 5010,
+            "title": "세탁기 만들던 LG가 세계 최초로 꺼낸 카드",
+            "upload_date": "20260523",
+            "views": 264402,
+            "efficiency": 52.77,
+            "categories": [
+              "(미분류)"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "KDNUQw7pWcM",
+              "channel": "경제의 신호",
+              "channel_subs": 5010,
+              "title": "&quot;테슬라를 이겼다&quot; 삼성이 세계 최초로 꺼낸 기술",
+              "upload_date": "20260524",
+              "views": 40543,
+              "efficiency": 8.09,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "vFjFDSOG8l8",
+              "channel": "경제의 신호",
+              "channel_subs": 5010,
+              "title": "망한줄 알았던 두산이 세계 최초로 꺼낸 카드",
+              "upload_date": "20260525",
+              "views": 31371,
+              "efficiency": 6.26,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "kC6wlZIrMu0",
+              "channel": "경제의 신호",
+              "channel_subs": 5010,
+              "title": "애플의 혁신 부재와 삼성의 역전, 삼성이 세계 최초로 꺼낸 카드",
+              "upload_date": "20260531",
+              "views": 38709,
+              "efficiency": 7.73,
+              "categories": [
+                "(미분류)"
+              ]
+            }
+          ],
+          "days_active": 8,
+          "max_efficiency": 52.77,
+          "avg_efficiency": 18.71,
+          "max_views": 264402,
+          "freshness_days": 13,
+          "is_fresh": false,
+          "is_hot": true,
+          "videos": [
+            {
+              "vid": "ZjKw83Hu-MM",
+              "channel": "경제의 신호",
+              "channel_subs": 5010,
+              "title": "세탁기 만들던 LG가 세계 최초로 꺼낸 카드",
+              "upload_date": "20260523",
+              "views": 264402,
+              "efficiency": 52.77,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "KDNUQw7pWcM",
+              "channel": "경제의 신호",
+              "channel_subs": 5010,
+              "title": "&quot;테슬라를 이겼다&quot; 삼성이 세계 최초로 꺼낸 기술",
+              "upload_date": "20260524",
+              "views": 40543,
+              "efficiency": 8.09,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "vFjFDSOG8l8",
+              "channel": "경제의 신호",
+              "channel_subs": 5010,
+              "title": "망한줄 알았던 두산이 세계 최초로 꺼낸 카드",
+              "upload_date": "20260525",
+              "views": 31371,
+              "efficiency": 6.26,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "kC6wlZIrMu0",
+              "channel": "경제의 신호",
+              "channel_subs": 5010,
+              "title": "애플의 혁신 부재와 삼성의 역전, 삼성이 세계 최초로 꺼낸 카드",
+              "upload_date": "20260531",
+              "views": 38709,
+              "efficiency": 7.73,
+              "categories": [
+                "(미분류)"
+              ]
+            }
+          ],
+          "verdict": "⚠️ 신선도 한계 (D+14)"
+        },
+        {
+          "cluster_size": 7,
+          "common_keywords": [
+            "중국"
+          ],
+          "pioneer": {
+            "vid": "GmVCT_CfQWU",
+            "channel": "세계경제 돋보기",
+            "channel_subs": 7000,
+            "title": "중국 삼협댐, 세계 최대 댐의 저주 #세계이슈",
+            "upload_date": "20260522",
+            "views": 108750,
+            "efficiency": 15.54,
+            "categories": [
+              "경제",
+              "시사"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "867ToApHQ5A",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6340,
+              "title": "중국 삼협댐이 무너지면 벌어지는 일 세계 최대 댐의 저주 #세계이슈",
+              "upload_date": "20260524",
+              "views": 60074,
+              "efficiency": 9.48,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "7XPYobTh-jg",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6340,
+              "title": "중국 댐 98000개가 동시에 늙고 있다 #세계이슈",
+              "upload_date": "20260525",
+              "views": 71594,
+              "efficiency": 11.29,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "f1H4hkODdZw",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6340,
+              "title": "중국 판교댐 1975 24만명이 하룻밤에 사라졌다 #세계이슈",
+              "upload_date": "20260526",
+              "views": 43916,
+              "efficiency": 6.93,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "CYuWJ09Mry4",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 8330,
+              "title": "중국 하수구에서 건진 기름의 비밀 #세계이슈",
+              "upload_date": "20260601",
+              "views": 54258,
+              "efficiency": 6.51,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "Z_IzMPEKM8c",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 8810,
+              "title": "중국 고속철도 1140조 빚이 깔려 있습니다 세계 최대 철도의 진짜 속도",
+              "upload_date": "20260605",
+              "views": 91464,
+              "efficiency": 10.38,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "KIdAJcKMJoA",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9280,
+              "title": "중국 고속철도 콘크리트 안에 석탄재가 들어 있습니다",
+              "upload_date": "20260608",
+              "views": 51449,
+              "efficiency": 5.54,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            }
+          ],
+          "days_active": 17,
+          "max_efficiency": 15.54,
+          "avg_efficiency": 9.38,
+          "max_views": 108750,
+          "freshness_days": 5,
+          "is_fresh": true,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "GmVCT_CfQWU",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 7000,
+              "title": "중국 삼협댐, 세계 최대 댐의 저주 #세계이슈",
+              "upload_date": "20260522",
+              "views": 108750,
+              "efficiency": 15.54,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "867ToApHQ5A",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6340,
+              "title": "중국 삼협댐이 무너지면 벌어지는 일 세계 최대 댐의 저주 #세계이슈",
+              "upload_date": "20260524",
+              "views": 60074,
+              "efficiency": 9.48,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "7XPYobTh-jg",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6340,
+              "title": "중국 댐 98000개가 동시에 늙고 있다 #세계이슈",
+              "upload_date": "20260525",
+              "views": 71594,
+              "efficiency": 11.29,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "f1H4hkODdZw",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6340,
+              "title": "중국 판교댐 1975 24만명이 하룻밤에 사라졌다 #세계이슈",
+              "upload_date": "20260526",
+              "views": 43916,
+              "efficiency": 6.93,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "CYuWJ09Mry4",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 8330,
+              "title": "중국 하수구에서 건진 기름의 비밀 #세계이슈",
+              "upload_date": "20260601",
+              "views": 54258,
+              "efficiency": 6.51,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "Z_IzMPEKM8c",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 8810,
+              "title": "중국 고속철도 1140조 빚이 깔려 있습니다 세계 최대 철도의 진짜 속도",
+              "upload_date": "20260605",
+              "views": 91464,
+              "efficiency": 10.38,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "KIdAJcKMJoA",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9280,
+              "title": "중국 고속철도 콘크리트 안에 석탄재가 들어 있습니다",
+              "upload_date": "20260608",
+              "views": 51449,
+              "efficiency": 5.54,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            }
+          ],
+          "verdict": "🔥 즉시 추격 (D+3 안에 박을 것)"
+        },
+        {
+          "cluster_size": 3,
+          "common_keywords": [
+            "quot"
+          ],
+          "pioneer": {
+            "vid": "25tCUGqi6tY",
+            "channel": "농부의 경제학",
+            "channel_subs": 3740,
+            "title": "&quot;반도체 독식은 지속 불가능하다&quot; 월가가 조용히 매집 중인 AI 다음 수혜주",
+            "upload_date": "20260518",
+            "views": 107227,
+            "efficiency": 28.67,
+            "categories": [
+              "경제"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "3ObkqQWaBoQ",
+              "channel": "농부의 경제학",
+              "channel_subs": 3930,
+              "title": "&quot;내 노후 10억이면 충분할까?&quot; 10억 들고 은퇴하면 실제 현실은 이렇습니다",
+              "upload_date": "20260528",
+              "views": 22707,
+              "efficiency": 5.78,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "fA39vjBsr-g",
+              "channel": "농부의 경제학",
+              "channel_subs": 4240,
+              "title": "&quot;역대급 저평가 우량주 3종목&quot;, 월가 천재들은 이미 이 주식들을 사고 있습니다",
+              "upload_date": "20260601",
+              "views": 28652,
+              "efficiency": 6.76,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "days_active": 14,
+          "max_efficiency": 28.67,
+          "avg_efficiency": 13.74,
+          "max_views": 107227,
+          "freshness_days": 12,
+          "is_fresh": false,
+          "is_hot": true,
+          "videos": [
+            {
+              "vid": "25tCUGqi6tY",
+              "channel": "농부의 경제학",
+              "channel_subs": 3740,
+              "title": "&quot;반도체 독식은 지속 불가능하다&quot; 월가가 조용히 매집 중인 AI 다음 수혜주",
+              "upload_date": "20260518",
+              "views": 107227,
+              "efficiency": 28.67,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "3ObkqQWaBoQ",
+              "channel": "농부의 경제학",
+              "channel_subs": 3930,
+              "title": "&quot;내 노후 10억이면 충분할까?&quot; 10억 들고 은퇴하면 실제 현실은 이렇습니다",
+              "upload_date": "20260528",
+              "views": 22707,
+              "efficiency": 5.78,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "fA39vjBsr-g",
+              "channel": "농부의 경제학",
+              "channel_subs": 4240,
+              "title": "&quot;역대급 저평가 우량주 3종목&quot;, 월가 천재들은 이미 이 주식들을 사고 있습니다",
+              "upload_date": "20260601",
+              "views": 28652,
+              "efficiency": 6.76,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "verdict": "⚠️ 신선도 한계 (D+14)"
+        },
+        {
+          "cluster_size": 3,
+          "common_keywords": [
+            "quot"
+          ],
+          "pioneer": {
+            "vid": "uFq-sr_ia6o",
+            "channel": "코믹스 경제",
+            "channel_subs": 1800,
+            "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
+            "upload_date": "20260531",
+            "views": 20827,
+            "efficiency": 11.57,
+            "categories": [
+              "경제"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "SD3ZriaG9N0",
+              "channel": "경제의 신호",
+              "channel_subs": 6280,
+              "title": "&quot;창업 10년차 한국 벤처회사&quot; 엔비디아를 움직였다.  세계가 탐내는 진짜 이유",
+              "upload_date": "20260603",
+              "views": 49433,
+              "efficiency": 7.87,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "hJuTF2o6lzQ",
+              "channel": "코믹스 경제",
+              "channel_subs": 2270,
+              "title": "&quot;일본 꺾고 세계 1위&quot; 한국 광반도체 독자 개발 기술에 전 세계가 난리난 이유",
+              "upload_date": "20260605",
+              "views": 21247,
+              "efficiency": 9.36,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "days_active": 5,
+          "max_efficiency": 11.57,
+          "avg_efficiency": 9.6,
+          "max_views": 49433,
+          "freshness_days": 8,
+          "is_fresh": false,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "uFq-sr_ia6o",
+              "channel": "코믹스 경제",
+              "channel_subs": 1800,
+              "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
+              "upload_date": "20260531",
+              "views": 20827,
+              "efficiency": 11.57,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "SD3ZriaG9N0",
+              "channel": "경제의 신호",
+              "channel_subs": 6280,
+              "title": "&quot;창업 10년차 한국 벤처회사&quot; 엔비디아를 움직였다.  세계가 탐내는 진짜 이유",
+              "upload_date": "20260603",
+              "views": 49433,
+              "efficiency": 7.87,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "hJuTF2o6lzQ",
+              "channel": "코믹스 경제",
+              "channel_subs": 2270,
+              "title": "&quot;일본 꺾고 세계 1위&quot; 한국 광반도체 독자 개발 기술에 전 세계가 난리난 이유",
+              "upload_date": "20260605",
+              "views": 21247,
+              "efficiency": 9.36,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "verdict": "✅ 추격 가치 있음 (D+7 이내)"
+        },
+        {
+          "cluster_size": 4,
+          "common_keywords": [
+            "quot"
+          ],
+          "pioneer": {
+            "vid": "x2EkGjZA8Rc",
+            "channel": "퐁퐁퐁경제학",
+            "channel_subs": 3320,
+            "title": "&quot;한국이 그렇게 무서운 시장이었어?&quot;스타벅스 탱크데이 한 줄에 미국 본사가 일주일 만에 무릎 꿇은 진짜 이유 #경제",
+            "upload_date": "20260525",
+            "views": 27174,
+            "efficiency": 8.18,
+            "categories": [
+              "경제"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "Qz79osyo5hY",
+              "channel": "퐁퐁퐁경제학",
+              "channel_subs": 3650,
+              "title": "&quot;어떻게 한국이 1주 만에 이걸 해냈죠?&quot;  시애틀 본사가 한국 스타벅스 매출표 다시 펼친 그 순간... #경제",
+              "upload_date": "20260528",
+              "views": 19759,
+              "efficiency": 5.41,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "jnY0qUcUDeo",
+              "channel": "퐁퐁퐁경제학",
+              "channel_subs": 3810,
+              "title": "&quot;전 세계에서 한국 손님이 제일 무섭네&quot; 스타벅스 탱크데이 본 외국인들, 한국 편에 서서 뭐라고 했을까? #경제",
+              "upload_date": "20260530",
+              "views": 20439,
+              "efficiency": 5.36,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "s8Fg78TX24Q",
+              "channel": "코믹스 경제",
+              "channel_subs": 2150,
+              "title": "&quot;현대에 무릎 꿇은 도요타&quot; 2억명 브라질 전체가 현대차에 열광하는 이유",
+              "upload_date": "20260604",
+              "views": 14809,
+              "efficiency": 6.89,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "days_active": 10,
+          "max_efficiency": 8.18,
+          "avg_efficiency": 6.46,
+          "max_views": 27174,
+          "freshness_days": 9,
+          "is_fresh": false,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "x2EkGjZA8Rc",
+              "channel": "퐁퐁퐁경제학",
+              "channel_subs": 3320,
+              "title": "&quot;한국이 그렇게 무서운 시장이었어?&quot;스타벅스 탱크데이 한 줄에 미국 본사가 일주일 만에 무릎 꿇은 진짜 이유 #경제",
+              "upload_date": "20260525",
+              "views": 27174,
+              "efficiency": 8.18,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "Qz79osyo5hY",
+              "channel": "퐁퐁퐁경제학",
+              "channel_subs": 3650,
+              "title": "&quot;어떻게 한국이 1주 만에 이걸 해냈죠?&quot;  시애틀 본사가 한국 스타벅스 매출표 다시 펼친 그 순간... #경제",
+              "upload_date": "20260528",
+              "views": 19759,
+              "efficiency": 5.41,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "jnY0qUcUDeo",
+              "channel": "퐁퐁퐁경제학",
+              "channel_subs": 3810,
+              "title": "&quot;전 세계에서 한국 손님이 제일 무섭네&quot; 스타벅스 탱크데이 본 외국인들, 한국 편에 서서 뭐라고 했을까? #경제",
+              "upload_date": "20260530",
+              "views": 20439,
+              "efficiency": 5.36,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "s8Fg78TX24Q",
+              "channel": "코믹스 경제",
+              "channel_subs": 2150,
+              "title": "&quot;현대에 무릎 꿇은 도요타&quot; 2억명 브라질 전체가 현대차에 열광하는 이유",
+              "upload_date": "20260604",
+              "views": 14809,
+              "efficiency": 6.89,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "verdict": "⚠️ 신선도 한계 (D+14)"
+        },
+        {
+          "cluster_size": 2,
+          "common_keywords": [
+            "구조",
+            "만리장성"
+          ],
+          "pioneer": {
+            "vid": "0cd6lty7pOs",
+            "channel": "세계경제 돋보기",
+            "channel_subs": 9280,
+            "title": "만리장성 30%가 사라진 구조 아무도 막지 못하는 이유",
+            "upload_date": "20260605",
+            "views": 47472,
+            "efficiency": 5.12,
+            "categories": [
+              "경제",
+              "시사"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "gNcPNY5_4QQ",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9010,
+              "title": "만리장성 사망자 100만 명 벽이 나라를 죽인 구조",
+              "upload_date": "20260606",
+              "views": 56524,
+              "efficiency": 6.27,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            }
+          ],
+          "days_active": 1,
+          "max_efficiency": 6.27,
+          "avg_efficiency": 5.7,
+          "max_views": 56524,
+          "freshness_days": 7,
+          "is_fresh": true,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "0cd6lty7pOs",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9280,
+              "title": "만리장성 30%가 사라진 구조 아무도 막지 못하는 이유",
+              "upload_date": "20260605",
+              "views": 47472,
+              "efficiency": 5.12,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "gNcPNY5_4QQ",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9010,
+              "title": "만리장성 사망자 100만 명 벽이 나라를 죽인 구조",
+              "upload_date": "20260606",
+              "views": 56524,
+              "efficiency": 6.27,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            }
+          ],
+          "verdict": "⚠️ 신선도 한계 (D+14)"
+        }
+      ]
+    },
+    "잘듣네": {
+      "video_count": 8,
+      "cluster_count": 0,
+      "clusters": []
+    },
+    "과학·건강": {
+      "video_count": 19,
+      "cluster_count": 0,
+      "clusters": []
+    }
+  }
+}

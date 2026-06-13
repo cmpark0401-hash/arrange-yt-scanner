@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-13T11:01:26",
+  "updated_at": "2026-06-13 (발행 반영: 암행어사 5편 예약, 원본 유사도 플래그)",
   "today": "2026-06-13",
   "categories_def": {
     "single_explosion": {
@@ -7454,6 +7454,67 @@
         "ep_count": 0
       },
       "topics": [
+        {
+          "id": "yd-20260613-pub-inspector",
+          "category": "cross_category",
+          "title": "[조선반전야담] 스스로 종이 된 양반가 아내, 거지로 돌아온 남편의 정체 (원본 유사도 회피 제목변경)",
+          "type": "발행",
+          "rating": 4,
+          "tags": [
+            "발행예약",
+            "조선반전야담",
+            "제우스 교차",
+            "암행어사·어사출도",
+            "⚠️원본 유사도 점검필요",
+            "80분 롱폼"
+          ],
+          "merge_angle": "암행어사 귀향(달이야담 74만)×거지에게 시집간 아씨 정절(뒷골목야담 40.9x) → 단 C패키지=A백본 차용이라 원본 유사도 높음(차별화 검토)",
+          "sources_a": {
+            "channel": "달이야담",
+            "title": "암행어사 되어 돌아오니 부모는 노비 부인은 원수의 첩",
+            "efficiency": "37.6x",
+            "views": 744321
+          },
+          "sources_b": {
+            "channel": "뒷골목 야담",
+            "title": "거지에게 시집가란 말이옵니까 거지 굴로 간 아씨",
+            "efficiency": "40.9x",
+            "views": 117300
+          },
+          "status": "published",
+          "checklist": {
+            "channel_setup": true,
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "events": [
+            {
+              "ts": "2026-06-12 22:00",
+              "type": "produced",
+              "note": "풀파이프라인 (대본 25,158자/~80분)"
+            },
+            {
+              "ts": "2026-06-13 09:00",
+              "type": "published",
+              "note": "오늘 예약 발행"
+            },
+            {
+              "ts": "2026-06-13 09:00",
+              "type": "flagged",
+              "note": "⚠️ 원본(달이야담) 제목·전제 유사도 높음 — 차별화 검토 필요"
+            },
+            {
+              "ts": "2026-06-13 10:00",
+              "type": "retitled",
+              "note": "원본 유사도 85~90% → 제목·썸네일 카피를 아내 정절 각도로 차별화"
+            }
+          ]
+        },
         {
           "id": "yd-20260612-pub-hidden-matriarch",
           "category": "cross_category",

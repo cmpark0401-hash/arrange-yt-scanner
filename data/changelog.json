@@ -1,17 +1,27 @@
 {
-  "generated_at": "2026-06-13 11:37",
+  "generated_at": "2026-06-13 13:46",
   "total_commits": 80,
   "by_category": {
-    "other": 6,
+    "other": 7,
     "docs": 8,
     "data": 60,
-    "feat": 6
+    "feat": 5
   },
   "recent_by_date": [
     {
       "date": "2026-06-13",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "77f398e",
+          "full_hash": "77f398e4e7a87e03c9c6dff841585d7a38f0a080",
+          "ts": "2026-06-13 11:37",
+          "ts_iso": "2026-06-13T11:37:24",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: youtube.md 메타 문구 자동 청소 — 면책·sources.md 참조·AI 고지·체크리스트 등 내부 메타 13개 파일에서 32건 제거. 4채널 description.md 룰 박음 + clean_youtu",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "28005de",
           "full_hash": "28005de5ab192ee4d1fde97758c1bf9925d4c146",
@@ -532,6 +542,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "77f398e",
+      "full_hash": "77f398e4e7a87e03c9c6dff841585d7a38f0a080",
+      "ts": "2026-06-13 11:37",
+      "ts_iso": "2026-06-13T11:37:24",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: youtube.md 메타 문구 자동 청소 — 면책·sources.md 참조·AI 고지·체크리스트 등 내부 메타 13개 파일에서 32건 제거. 4채널 description.md 룰 박음 + clean_youtu",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "28005de",
       "full_hash": "28005de5ab192ee4d1fde97758c1bf9925d4c146",
@@ -1319,16 +1339,6 @@
       "ts_iso": "2026-06-04T18:06:37",
       "author": "cmpark0401-hash",
       "subject": "feat: [이득비교] 시리즈 IP 풀 60+편 + 본능 매트릭스 + 워크보드 1·2·3순위 토픽",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "453c97b",
-      "full_hash": "453c97bfd9127c9c61c1e33eb6cd6235171b3f83",
-      "ts": "2026-06-04 17:55",
-      "ts_iso": "2026-06-04T17:55:00",
-      "author": "cmpark0401-hash",
-      "subject": "fix: [가격해부] 정의 정정 + [이득비교] 일상구매 결 토픽 추가",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
