@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-06-13 11:06",
+  "generated_at": "2026-06-13 11:37",
   "total_commits": 80,
   "by_category": {
-    "other": 5,
+    "other": 6,
     "docs": 8,
     "data": 60,
-    "feat": 7
+    "feat": 6
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-13",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "28005de",
+          "full_hash": "28005de5ab192ee4d1fde97758c1bf9925d4c146",
+          "ts": "2026-06-13 11:06",
+          "ts_iso": "2026-06-13T11:06:44",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 2026-06-13 사이클 — 신영상 36 · 효율 5x+ 77 + 4채널 인물 정책 박음 (인물 풀 46명 캐시 워밍, 지식록 aggressive · 잘듣네/과만세 medium · 야담 off)",
+          "category": "other",
+          "category_label": "📌 기타"
+        }
+      ]
+    },
     {
       "date": "2026-06-12",
       "count": 6,
@@ -513,105 +529,19 @@
           "category_label": "📊 데이터 갱신"
         }
       ]
-    },
-    {
-      "date": "2026-06-06",
-      "count": 9,
-      "commits": [
-        {
-          "hash": "7b1e158",
-          "full_hash": "7b1e158cf9ee6be94faabebb79669633f103b0f6",
-          "ts": "2026-06-06 21:50",
-          "ts_iso": "2026-06-06T21:50:39",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-06 21:50:39",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "54dab4a",
-          "full_hash": "54dab4a19f5c38ec05ea9686429a8d8f3fedd1bb",
-          "ts": "2026-06-06 21:30",
-          "ts_iso": "2026-06-06T21:30:10",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-06 21:30:10",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "247aeeb",
-          "full_hash": "247aeebee0e419df5068cd3a48970f4128a03032",
-          "ts": "2026-06-06 12:35",
-          "ts_iso": "2026-06-06T12:35:38",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-06 12:35:37",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "4bfd490",
-          "full_hash": "4bfd49092f2da3595824767add1400c3f6a01522",
-          "ts": "2026-06-06 11:20",
-          "ts_iso": "2026-06-06T11:20:58",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-06 11:20:58",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "1ffa364",
-          "full_hash": "1ffa3642c246458fbfacaac278aa4b173fae2224",
-          "ts": "2026-06-06 11:17",
-          "ts_iso": "2026-06-06T11:17:12",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-06 11:17:12",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "57eb86b",
-          "full_hash": "57eb86b87bcfbf4f8ebfc2c8b5341afab58d501e",
-          "ts": "2026-06-06 11:02",
-          "ts_iso": "2026-06-06T11:02:19",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-06 11:02:19",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "40b56be",
-          "full_hash": "40b56be23f1662d2241533e43f0c09510a67a08e",
-          "ts": "2026-06-06 11:01",
-          "ts_iso": "2026-06-06T11:01:50",
-          "author": "cmpark0401-hash",
-          "subject": "manual JP: 2026-06-06 11:01",
-          "category": "docs",
-          "category_label": "📖 문서"
-        },
-        {
-          "hash": "116bda7",
-          "full_hash": "116bda743baf03a28417400131bde9bcb0fd5563",
-          "ts": "2026-06-06 09:59",
-          "ts_iso": "2026-06-06T09:59:12",
-          "author": "cmpark0401-hash",
-          "subject": "auto: build 2026-06-06 09:59",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "c37931c",
-          "full_hash": "c37931c993f9db54b49e83afd743a3374ee29823",
-          "ts": "2026-06-06 09:30",
-          "ts_iso": "2026-06-06T09:30:12",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-06 09:30:12",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "28005de",
+      "full_hash": "28005de5ab192ee4d1fde97758c1bf9925d4c146",
+      "ts": "2026-06-13 11:06",
+      "ts_iso": "2026-06-13T11:06:44",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 2026-06-13 사이클 — 신영상 36 · 효율 5x+ 77 + 4채널 인물 정책 박음 (인물 풀 46명 캐시 워밍, 지식록 aggressive · 잘듣네/과만세 medium · 야담 off)",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "76c6513",
       "full_hash": "76c6513116e3161f5f009a9e59af88dbee583b28",
@@ -1399,16 +1329,6 @@
       "ts_iso": "2026-06-04T17:55:00",
       "author": "cmpark0401-hash",
       "subject": "fix: [가격해부] 정의 정정 + [이득비교] 일상구매 결 토픽 추가",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "c16fece",
-      "full_hash": "c16fecebd6e1c6e3f63c1b11ea6dcac66103f6d3",
-      "ts": "2026-06-04 17:16",
-      "ts_iso": "2026-06-04T17:16:53",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 지식록 [이득비교] 시리즈 IP 추가 (한국인 손해 회피 본능 직격)",
       "category": "feat",
       "category_label": "✨ 신규 기능"
     }
