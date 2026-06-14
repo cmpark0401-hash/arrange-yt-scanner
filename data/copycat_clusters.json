@@ -1,14 +1,13 @@
 {
-  "updated_at": "2026-06-13 04:46:00 UTC",
+  "updated_at": "2026-06-14 00:58:47 UTC",
   "buckets": {
     "야담": {
-      "video_count": 35,
-      "cluster_count": 2,
+      "video_count": 42,
+      "cluster_count": 3,
       "clusters": [
         {
-          "cluster_size": 2,
+          "cluster_size": 3,
           "common_keywords": [
-            "왕비를",
             "절벽으로",
             "천재아이"
           ],
@@ -37,15 +36,28 @@
               "categories": [
                 "야담"
               ]
+            },
+            {
+              "vid": "9mY9SIpFwHw",
+              "channel": "흔적야담",
+              "channel_subs": 1850,
+              "title": "절벽으로 중전마마를 밀어버린 9살 천재아이, 나라를 뒤집어놓다! | 야담, 설화, 민담, 전설, 옛날이야기, 수면동화, 전래동화",
+              "upload_date": "20260603",
+              "views": 76891,
+              "efficiency": 41.56,
+              "categories": [
+                "야담",
+                "민담"
+              ]
             }
           ],
-          "days_active": 9,
-          "max_efficiency": 18.44,
-          "avg_efficiency": 15.33,
+          "days_active": 12,
+          "max_efficiency": 41.56,
+          "avg_efficiency": 24.07,
           "max_views": 571690,
-          "freshness_days": 13,
+          "freshness_days": 11,
           "is_fresh": false,
-          "is_hot": false,
+          "is_hot": true,
           "videos": [
             {
               "vid": "aI8A973spEw",
@@ -70,6 +82,19 @@
               "efficiency": 12.22,
               "categories": [
                 "야담"
+              ]
+            },
+            {
+              "vid": "9mY9SIpFwHw",
+              "channel": "흔적야담",
+              "channel_subs": 1850,
+              "title": "절벽으로 중전마마를 밀어버린 9살 천재아이, 나라를 뒤집어놓다! | 야담, 설화, 민담, 전설, 옛날이야기, 수면동화, 전래동화",
+              "upload_date": "20260603",
+              "views": 76891,
+              "efficiency": 41.56,
+              "categories": [
+                "야담",
+                "민담"
               ]
             }
           ],
@@ -114,7 +139,7 @@
           "max_efficiency": 9.77,
           "avg_efficiency": 8.04,
           "max_views": 93151,
-          "freshness_days": 10,
+          "freshness_days": 11,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -146,6 +171,79 @@
             }
           ],
           "verdict": "⚠️ 신선도 한계 (D+14)"
+        },
+        {
+          "cluster_size": 2,
+          "common_keywords": [
+            "냥에",
+            "다섯",
+            "드라마",
+            "사주세요"
+          ],
+          "pioneer": {
+            "vid": "OSOP2wkM3Uk",
+            "channel": "달빛아래옛날민담",
+            "channel_subs": 1230,
+            "title": "#&quot;저 버려진 낡은 집을 사주세요&quot;다섯 냥에 집을 판 천재아이의 제안| 옛날이야기 | 야담 | 민담 | 설화 | 드라마",
+            "upload_date": "20260203",
+            "views": 7383,
+            "efficiency": 6.0,
+            "categories": [
+              "야담",
+              "민담"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "lfzv7Nq07yk",
+              "channel": "달빛아래옛날민담",
+              "channel_subs": 1230,
+              "title": "#장터에서 다섯 냥에 데려온 아이가 가리킨 곳“백 년 메마른 우물을 사주세요”| 옛날이야기 | 야담 | 민담 | 설화 | 드라마",
+              "upload_date": "20260207",
+              "views": 8280,
+              "efficiency": 6.73,
+              "categories": [
+                "야담",
+                "민담"
+              ]
+            }
+          ],
+          "days_active": 4,
+          "max_efficiency": 6.73,
+          "avg_efficiency": 6.37,
+          "max_views": 8280,
+          "freshness_days": 127,
+          "is_fresh": false,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "OSOP2wkM3Uk",
+              "channel": "달빛아래옛날민담",
+              "channel_subs": 1230,
+              "title": "#&quot;저 버려진 낡은 집을 사주세요&quot;다섯 냥에 집을 판 천재아이의 제안| 옛날이야기 | 야담 | 민담 | 설화 | 드라마",
+              "upload_date": "20260203",
+              "views": 7383,
+              "efficiency": 6.0,
+              "categories": [
+                "야담",
+                "민담"
+              ]
+            },
+            {
+              "vid": "lfzv7Nq07yk",
+              "channel": "달빛아래옛날민담",
+              "channel_subs": 1230,
+              "title": "#장터에서 다섯 냥에 데려온 아이가 가리킨 곳“백 년 메마른 우물을 사주세요”| 옛날이야기 | 야담 | 민담 | 설화 | 드라마",
+              "upload_date": "20260207",
+              "views": 8280,
+              "efficiency": 6.73,
+              "categories": [
+                "야담",
+                "민담"
+              ]
+            }
+          ],
+          "verdict": "📦 evergreen 아카이브"
         }
       ]
     },
@@ -202,7 +300,7 @@
           "max_efficiency": 32.48,
           "avg_efficiency": 25.22,
           "max_views": 665801,
-          "freshness_days": 44,
+          "freshness_days": 45,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -306,7 +404,7 @@
           "max_efficiency": 52.77,
           "avg_efficiency": 18.71,
           "max_views": 264402,
-          "freshness_days": 13,
+          "freshness_days": 14,
           "is_fresh": false,
           "is_hot": true,
           "videos": [
@@ -460,7 +558,7 @@
           "max_efficiency": 15.54,
           "avg_efficiency": 9.38,
           "max_views": 108750,
-          "freshness_days": 5,
+          "freshness_days": 6,
           "is_fresh": true,
           "is_hot": false,
           "videos": [
@@ -553,7 +651,7 @@
               ]
             }
           ],
-          "verdict": "🔥 즉시 추격 (D+3 안에 박을 것)"
+          "verdict": "✅ 추격 가치 있음 (D+7 이내)"
         },
         {
           "cluster_size": 3,
@@ -602,7 +700,7 @@
           "max_efficiency": 28.67,
           "avg_efficiency": 13.74,
           "max_views": 107227,
-          "freshness_days": 12,
+          "freshness_days": 13,
           "is_fresh": false,
           "is_hot": true,
           "videos": [
@@ -692,7 +790,7 @@
           "max_efficiency": 11.57,
           "avg_efficiency": 9.6,
           "max_views": 49433,
-          "freshness_days": 8,
+          "freshness_days": 9,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -794,7 +892,7 @@
           "max_efficiency": 8.18,
           "avg_efficiency": 6.46,
           "max_views": 27174,
-          "freshness_days": 9,
+          "freshness_days": 10,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -887,8 +985,8 @@
           "max_efficiency": 6.27,
           "avg_efficiency": 5.7,
           "max_views": 56524,
-          "freshness_days": 7,
-          "is_fresh": true,
+          "freshness_days": 8,
+          "is_fresh": false,
           "is_hot": false,
           "videos": [
             {
@@ -923,7 +1021,7 @@
       ]
     },
     "잘듣네": {
-      "video_count": 8,
+      "video_count": 9,
       "cluster_count": 0,
       "clusters": []
     },

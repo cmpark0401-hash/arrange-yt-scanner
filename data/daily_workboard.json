@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-13 (발행 반영: 암행어사 5편 예약, 원본 유사도 플래그)",
-  "today": "2026-06-13",
+  "updated_at": "2026-06-14 (발행 반영: 버려진 논 6편 예약)",
+  "today": "2026-06-14",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -7454,6 +7454,58 @@
         "ep_count": 0
       },
       "topics": [
+        {
+          "id": "yd-20260614-pub-barren-field",
+          "category": "cross_category",
+          "title": "[가문의 비밀] 바보라 비웃던 막내며느리가 황무지를 사들이자 한 철 뒤 고을이 뒤집혔다",
+          "type": "발행",
+          "rating": 5,
+          "tags": [
+            "발행예약",
+            "가문의 비밀",
+            "제우스 교차",
+            "비웃음→혜안 reveal",
+            "물길/보",
+            "유사도 게이트 통과",
+            "80분 롱폼"
+          ],
+          "merge_angle": "버려진 논 73.2x(옥단야담) × 과부 며느리 숨은가치 9.5x(산골야담) → 주인공을 12살 아들→막내며느리로 차별화, reveal=물길/보",
+          "sources_a": {
+            "channel": "옥단야담",
+            "title": "저 버려진 논을 꼭 사야 합니다 사흘 뒤 마을이 뒤집힌",
+            "efficiency": "73.2x",
+            "views": 280274
+          },
+          "sources_b": {
+            "channel": "산골야담",
+            "title": "아이 셋 딸린 과부를 며느리로 고른 시어머니",
+            "efficiency": "9.5x",
+            "views": 128053
+          },
+          "status": "published",
+          "checklist": {
+            "channel_setup": true,
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "events": [
+            {
+              "ts": "2026-06-13 22:00",
+              "type": "produced",
+              "note": "풀파이프라인 (대본 25,106자/~80분, 유사도 게이트 적용)"
+            },
+            {
+              "ts": "2026-06-14 11:30",
+              "type": "published",
+              "note": "6/14 오전 11:30 예약 발행"
+            }
+          ]
+        },
         {
           "id": "yd-20260613-pub-inspector",
           "category": "cross_category",

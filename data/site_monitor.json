@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-13 14:46",
+  "checked_at": "2026-06-14 09:59",
   "base_url": "https://arrange-yt-scanner.pages.dev",
   "overall": "error",
   "overall_icon": "🔴",
@@ -13,7 +13,7 @@
       "label": "🏠 홈",
       "url": "https://arrange-yt-scanner.pages.dev/",
       "http_status": 0,
-      "elapsed_ms": 54,
+      "elapsed_ms": 42,
       "status": "dead",
       "icon": "🔴",
       "msg": "HTTP 0"
@@ -22,7 +22,7 @@
       "label": "📋 워크보드",
       "url": "https://arrange-yt-scanner.pages.dev/workboard.html",
       "http_status": 0,
-      "elapsed_ms": 21,
+      "elapsed_ms": 17,
       "status": "dead",
       "icon": "🔴",
       "msg": "HTTP 0"
@@ -31,7 +31,7 @@
       "label": "📖 가이드",
       "url": "https://arrange-yt-scanner.pages.dev/manual.html",
       "http_status": 0,
-      "elapsed_ms": 71,
+      "elapsed_ms": 21,
       "status": "dead",
       "icon": "🔴",
       "msg": "HTTP 0"

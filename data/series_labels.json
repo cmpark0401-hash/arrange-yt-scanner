@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-06-13 04:55:12 UTC",
-  "total_videos": 4728,
-  "videos_with_label": 522,
-  "videos_without_label": 4206,
-  "label_ratio": 11.0,
-  "unique_labels": 221,
-  "qualified_labels": 53,
+  "updated_at": "2026-06-14 00:58:47 UTC",
+  "total_videos": 4943,
+  "videos_with_label": 550,
+  "videos_without_label": 4393,
+  "label_ratio": 11.1,
+  "unique_labels": 230,
+  "qualified_labels": 56,
   "labels": [
     {
       "label": "수면다큐",
@@ -23,7 +23,7 @@
       "max_efficiency": 401.5,
       "total_views": 6511769,
       "baseline_efficiency": 1.05,
-      "boost_ratio": 64.02,
+      "boost_ratio": 63.75,
       "top_videos": [
         {
           "vid": "y78lBmYU0yE",
@@ -69,7 +69,7 @@
     },
     {
       "label": "지식뉴스",
-      "occurrences": 24,
+      "occurrences": 25,
       "channels": [
         "교양이를 부탁해",
         "스브스뉴스"
@@ -78,9 +78,9 @@
       "is_multi_channel": true,
       "avg_efficiency": 0.22,
       "max_efficiency": 2.33,
-      "total_views": 2332242,
+      "total_views": 2389063,
       "baseline_efficiency": 0.03,
-      "boost_ratio": 7.46,
+      "boost_ratio": 7.56,
       "top_videos": [
         {
           "vid": "Y3otQoBcIeE",
@@ -126,18 +126,18 @@
     },
     {
       "label": "통합본",
-      "occurrences": 5,
+      "occurrences": 6,
       "channels": [
         "교양이를 부탁해",
         "스브스뉴스"
       ],
       "channel_count": 2,
       "is_multi_channel": true,
-      "avg_efficiency": 0.17,
+      "avg_efficiency": 0.15,
       "max_efficiency": 0.41,
-      "total_views": 362825,
+      "total_views": 395745,
       "baseline_efficiency": 0.03,
-      "boost_ratio": 5.64,
+      "boost_ratio": 5.27,
       "top_videos": [
         {
           "vid": "UXjVKKt1fcg",
@@ -164,20 +164,60 @@
           "upload_date": "20260518"
         },
         {
+          "vid": "BwprVrbt6Xg",
+          "channel": "교양이를 부탁해",
+          "title": "[통합본] &quot;한국만 메모리 슈퍼사이클? 착각입니다&quot; 턱밑까지 쫓아온 중국 D램, 일본 반도체 몰락이 던지는 경고 (ft.권석준 성균관대 화공학부 교수) / 교양이를 부탁해",
+          "efficiency": 0.07447963800904978,
+          "views": 32920,
+          "upload_date": "20260613"
+        },
+        {
           "vid": "riIxY6G1vgI",
           "channel": "교양이를 부탁해",
           "title": "[통합본] &quot;트럼프, AI에 너무 많은 돈 몰렸다&quot; AI 기업 지분 확보 검토..독이 된 고용 호조? 미국이 돈 풀다 멈추면 일어날 일 / 교양이를 부탁해",
           "efficiency": 0.02844318181818182,
           "views": 12515,
           "upload_date": "20260607"
+        }
+      ]
+    },
+    {
+      "label": "삼성전자 주가전망",
+      "occurrences": 3,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.01,
+      "max_efficiency": 0.01,
+      "total_views": 8695,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 5.2,
+      "top_videos": [
+        {
+          "vid": "qOYwSsZc0Wk",
+          "channel": "주식곳간TV",
+          "title": "[삼성전자 주가전망] 어제 장중 +1.16% 반등 성공! 3분기 파운드리 4년 만에 흑자전환 유력 및 16일 글로벌 전략회의 앞두고 장시작 전 실시간 주식 시나리오",
+          "efficiency": 0.005979667282809612,
+          "views": 3235,
+          "upload_date": "20260611"
         },
         {
-          "vid": "fphU6tzjVMM",
-          "channel": "교양이를 부탁해",
-          "title": "[통합본] &quot;결국 AI•반도체도 갈라진다&quot; 미 금리인상론의 실체..옥석 가리기 시작된 시장, 앞으로 닥칠 진짜 시나리오 / 교양이를 부탁해",
-          "efficiency": 0.004553530751708428,
-          "views": 1999,
-          "upload_date": "20260607"
+          "vid": "B-dA0SEVCYM",
+          "channel": "주식곳간TV",
+          "title": "[삼성전자 주가전망] 하반기 본격적인 어닝 서프라이즈 실적 턴어라운드 오피셜 결합 속 다음 주 월요일 개장 즉시 때려 박아야 할 필승 브리핑 주말 단독확인",
+          "efficiency": 0.0052292051756007395,
+          "views": 2829,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "PEKzZlRbSmk",
+          "channel": "주식곳간TV",
+          "title": "[삼성전자 주가전망] 2나노 파운드리 4년 만의 흑자전환 임박 및 금요일 6천만 주 돌파 기반 내일 월요일 시초가에  선점해야 할  매매 시나리오 일요특집 확인요망",
+          "efficiency": 0.004863216266173752,
+          "views": 2631,
+          "upload_date": "20260613"
         }
       ]
     },
@@ -279,17 +319,17 @@
     },
     {
       "label": "시사끝짱 몰아보기",
-      "occurrences": 4,
+      "occurrences": 5,
       "channels": [
         "시사저널TV"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
-      "avg_efficiency": 0.25,
+      "avg_efficiency": 0.23,
       "max_efficiency": 0.3,
-      "total_views": 760578,
+      "total_views": 900682,
       "baseline_efficiency": 0.12,
-      "boost_ratio": 2.07,
+      "boost_ratio": 1.96,
       "top_videos": [
         {
           "vid": "9QEjNmeB250",
@@ -322,22 +362,30 @@
           "efficiency": 0.19896719160104986,
           "views": 151613,
           "upload_date": "20260516"
+        },
+        {
+          "vid": "KbQrbKCdwTA",
+          "channel": "시사저널TV",
+          "title": "[시사끝짱 몰아보기] 李 공소취소 맹공부터 선관위 개혁법까지... 한동훈 별의 순간 올까? 진중권의 끝짱분석",
+          "efficiency": 0.17985109114249037,
+          "views": 140104,
+          "upload_date": "20260613"
         }
       ]
     },
     {
       "label": "#유퀴즈온더블럭",
-      "occurrences": 10,
+      "occurrences": 12,
       "channels": [
         "tvN D ENT"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
-      "avg_efficiency": 0.01,
+      "avg_efficiency": 0.0,
       "max_efficiency": 0.05,
-      "total_views": 274190,
+      "total_views": 283047,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 2.05,
+      "boost_ratio": 1.82,
       "top_videos": [
         {
           "vid": "lwycbWG8gJI",
@@ -346,6 +394,22 @@
           "efficiency": 0.050006542056074764,
           "views": 267535,
           "upload_date": "20260602"
+        },
+        {
+          "vid": "waFWGMheVw0",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 선수가 너무 부담이 될 것 같아요💦 '김연아 키즈' 후배들을 보는 김연아의 마음💖",
+          "efficiency": 0.0011809701492537313,
+          "views": 6330,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "Fjdd40FrLJg",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 드라마 〈그 해 우리는〉 실제 주인공 등판✨ 10년 만에 다시 만난 전교 1등 X 전교 꼴등 근황",
+          "efficiency": 0.000471455223880597,
+          "views": 2527,
+          "upload_date": "20260613"
         },
         {
           "vid": "txqeUtcPvQI",
@@ -362,22 +426,6 @@
           "efficiency": 0.0002667289719626168,
           "views": 1427,
           "upload_date": "20260606"
-        },
-        {
-          "vid": "8DikrJ5tGPY",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 점점 구며든다..✨ 유재석도 구며들게 만든 수줍은 구교환의 매력..💞",
-          "efficiency": 0.00024186915887850467,
-          "views": 1294,
-          "upload_date": "20260612"
-        },
-        {
-          "vid": "-z5jZhiYrQQ",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 암 발생 요인 1위는 ‘이것’💥 50년 암 연구 박사가 말하는 한국에 암 환자가 많아진 이유⁉️",
-          "efficiency": 0.00013102803738317757,
-          "views": 701,
-          "upload_date": "20260603"
         }
       ]
     },
@@ -489,7 +537,7 @@
       "max_efficiency": 0.12,
       "total_views": 474415,
       "baseline_efficiency": 0.04,
-      "boost_ratio": 1.55,
+      "boost_ratio": 1.59,
       "top_videos": [
         {
           "vid": "xzGrR512MYg",
@@ -530,46 +578,6 @@
           "efficiency": 0.08730802603036876,
           "views": 40249,
           "upload_date": "20260518"
-        }
-      ]
-    },
-    {
-      "label": "#언더커버셰프",
-      "occurrences": 3,
-      "channels": [
-        "tvN D ENT"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.01,
-      "total_views": 48055,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 1.2,
-      "top_videos": [
-        {
-          "vid": "O4h076kfAd0",
-          "channel": "tvN D ENT",
-          "title": "[#언더커버셰프] 숨겨지지 않는 경력직의 향기💦 몸이 먼저 반응하는 위장 막내 샘 킴 | #번개클립",
-          "efficiency": 0.006362056074766355,
-          "views": 34037,
-          "upload_date": "20260607"
-        },
-        {
-          "vid": "PqbVJ_w6t8g",
-          "channel": "tvN D ENT",
-          "title": "[#언더커버셰프] 사장님 모드 ON💡앉아서 쉬는 직원들 보고 사장님 입장에 이입한 정지선 | #번개클립",
-          "efficiency": 0.0015560747663551401,
-          "views": 8325,
-          "upload_date": "20260607"
-        },
-        {
-          "vid": "SQzbUY676Qw",
-          "channel": "tvN D ENT",
-          "title": "[#언더커버셰프] 몰래 손 한번 풀고 중식 여왕 눈빛 장착😏 막내 위장을 위한 정지선의 완급 조절 ㅋㅋ",
-          "efficiency": 0.0010641121495327103,
-          "views": 5693,
-          "upload_date": "20260529"
         }
       ]
     },
@@ -626,6 +634,54 @@
           "efficiency": 0.00037037037037037035,
           "views": 200,
           "upload_date": "20260602"
+        }
+      ]
+    },
+    {
+      "label": "#언더커버셰프",
+      "occurrences": 4,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.01,
+      "total_views": 49894,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.96,
+      "top_videos": [
+        {
+          "vid": "O4h076kfAd0",
+          "channel": "tvN D ENT",
+          "title": "[#언더커버셰프] 숨겨지지 않는 경력직의 향기💦 몸이 먼저 반응하는 위장 막내 샘 킴 | #번개클립",
+          "efficiency": 0.006362056074766355,
+          "views": 34037,
+          "upload_date": "20260607"
+        },
+        {
+          "vid": "PqbVJ_w6t8g",
+          "channel": "tvN D ENT",
+          "title": "[#언더커버셰프] 사장님 모드 ON💡앉아서 쉬는 직원들 보고 사장님 입장에 이입한 정지선 | #번개클립",
+          "efficiency": 0.0015560747663551401,
+          "views": 8325,
+          "upload_date": "20260607"
+        },
+        {
+          "vid": "SQzbUY676Qw",
+          "channel": "tvN D ENT",
+          "title": "[#언더커버셰프] 몰래 손 한번 풀고 중식 여왕 눈빛 장착😏 막내 위장을 위한 정지선의 완급 조절 ㅋㅋ",
+          "efficiency": 0.0010641121495327103,
+          "views": 5693,
+          "upload_date": "20260529"
+        },
+        {
+          "vid": "bfI6gCl7m7k",
+          "channel": "tvN D ENT",
+          "title": "[#언더커버셰프] 자신감 넘쳤던 권성준도 잠시...💦 선배의 밀착 잡도리에 안색 퀭해진 권성준🤣",
+          "efficiency": 0.0003430970149253731,
+          "views": 1839,
+          "upload_date": "20260613"
         }
       ]
     },
@@ -718,6 +774,62 @@
       ]
     },
     {
+      "label": "속보효",
+      "occurrences": 8,
+      "channels": [
+        "이효석아카데미"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.04,
+      "max_efficiency": 0.07,
+      "total_views": 213403,
+      "baseline_efficiency": 0.06,
+      "boost_ratio": 0.71,
+      "top_videos": [
+        {
+          "vid": "SIx58eyEunU",
+          "channel": "이효석아카데미",
+          "title": "[속보효] 지금은 V자 반등이 아닙니다. 투자자라면 지금 이런 행동 해서는 안됩니다",
+          "efficiency": 0.07119063004846526,
+          "views": 44067,
+          "upload_date": "20260610"
+        },
+        {
+          "vid": "KJwJTiXE7mc",
+          "channel": "이효석아카데미",
+          "title": "[속보효] 짜증나는 기간조정, 지치면 지는 겁니다",
+          "efficiency": 0.06109046849757674,
+          "views": 37815,
+          "upload_date": "20260610"
+        },
+        {
+          "vid": "_U--Ni1p_Iw",
+          "channel": "이효석아카데미",
+          "title": "[속보효] 젠슨황이 찍어준 주식들 #삼성전자 #LG #두산",
+          "efficiency": 0.05983278145695364,
+          "views": 36139,
+          "upload_date": "20260601"
+        },
+        {
+          "vid": "EGPZ9oTF--8",
+          "channel": "이효석아카데미",
+          "title": "[속보효] 갑작스러운 KOSPI 급락, 어떻게 봐야 하지?",
+          "efficiency": 0.05218481848184819,
+          "views": 31624,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "vzd8j73bLQM",
+          "channel": "이효석아카데미",
+          "title": "[속보효] KOSPI 급등, 조정은 끝난 걸까? 초보탈출 시즌1 마지막",
+          "efficiency": 0.04226409017713365,
+          "views": 26246,
+          "upload_date": "20260612"
+        }
+      ]
+    },
+    {
       "label": "삼성전기 주가 전망",
       "occurrences": 5,
       "channels": [
@@ -774,64 +886,8 @@
       ]
     },
     {
-      "label": "속보효",
-      "occurrences": 8,
-      "channels": [
-        "이효석아카데미"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.04,
-      "max_efficiency": 0.07,
-      "total_views": 213403,
-      "baseline_efficiency": 0.06,
-      "boost_ratio": 0.68,
-      "top_videos": [
-        {
-          "vid": "SIx58eyEunU",
-          "channel": "이효석아카데미",
-          "title": "[속보효] 지금은 V자 반등이 아닙니다. 투자자라면 지금 이런 행동 해서는 안됩니다",
-          "efficiency": 0.07119063004846526,
-          "views": 44067,
-          "upload_date": "20260610"
-        },
-        {
-          "vid": "KJwJTiXE7mc",
-          "channel": "이효석아카데미",
-          "title": "[속보효] 짜증나는 기간조정, 지치면 지는 겁니다",
-          "efficiency": 0.06109046849757674,
-          "views": 37815,
-          "upload_date": "20260610"
-        },
-        {
-          "vid": "_U--Ni1p_Iw",
-          "channel": "이효석아카데미",
-          "title": "[속보효] 젠슨황이 찍어준 주식들 #삼성전자 #LG #두산",
-          "efficiency": 0.05983278145695364,
-          "views": 36139,
-          "upload_date": "20260601"
-        },
-        {
-          "vid": "EGPZ9oTF--8",
-          "channel": "이효석아카데미",
-          "title": "[속보효] 갑작스러운 KOSPI 급락, 어떻게 봐야 하지?",
-          "efficiency": 0.05218481848184819,
-          "views": 31624,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "vzd8j73bLQM",
-          "channel": "이효석아카데미",
-          "title": "[속보효] KOSPI 급등, 조정은 끝난 걸까? 초보탈출 시즌1 마지막",
-          "efficiency": 0.04226409017713365,
-          "views": 26246,
-          "upload_date": "20260612"
-        }
-      ]
-    },
-    {
       "label": "정품쇼 몰아보기",
-      "occurrences": 3,
+      "occurrences": 4,
       "channels": [
         "시사저널TV"
       ],
@@ -839,9 +895,9 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.08,
       "max_efficiency": 0.19,
-      "total_views": 178579,
+      "total_views": 246403,
       "baseline_efficiency": 0.12,
-      "boost_ratio": 0.65,
+      "boost_ratio": 0.67,
       "top_videos": [
         {
           "vid": "S2NEwaz_ZmU",
@@ -850,6 +906,14 @@
           "efficiency": 0.188249343832021,
           "views": 143446,
           "upload_date": "20260523"
+        },
+        {
+          "vid": "l7GT2w2DJcs",
+          "channel": "시사저널TV",
+          "title": "[정품쇼 몰아보기] 왜 결국 한동훈인가? 李 공소취소 공방부터 선관위 개혁 법안까지...김종혁·김준일 집중분석",
+          "efficiency": 0.08706546854942233,
+          "views": 67824,
+          "upload_date": "20260613"
         },
         {
           "vid": "6Zu5KRI0l7o",
@@ -1287,6 +1351,46 @@
       ]
     },
     {
+      "label": "하이라이트",
+      "occurrences": 3,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 17148,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.44,
+      "top_videos": [
+        {
+          "vid": "hFmj4hSo9kc",
+          "channel": "tvN D ENT",
+          "title": "[하이라이트] 처음부터 2천만 원 돌파ㄷㄷ #스트릿레스토랑파이터",
+          "efficiency": 0.001423134328358209,
+          "views": 7628,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "4j2L30aXwKQ",
+          "channel": "tvN D ENT",
+          "title": "[하이라이트] 잡도리 케미 미쳤다(p) #스트릿레스토랑파이터",
+          "efficiency": 0.0010723880597014925,
+          "views": 5748,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "a0APjtSG1LE",
+          "channel": "tvN D ENT",
+          "title": "[하이라이트] 나만 아니면 돼ㅋㅋ #스트릿레스토랑파이터",
+          "efficiency": 0.0007037313432835821,
+          "views": 3772,
+          "upload_date": "20260613"
+        }
+      ]
+    },
+    {
       "label": "LG이노텍 주가 전망",
       "occurrences": 4,
       "channels": [
@@ -1402,7 +1506,7 @@
       "max_efficiency": 0.0,
       "total_views": 17503,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 0.38,
+      "boost_ratio": 0.37,
       "top_videos": [
         {
           "vid": "3i1GjKAq2nQ",
@@ -1458,7 +1562,7 @@
       "max_efficiency": 0.0,
       "total_views": 11560,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 0.29,
+      "boost_ratio": 0.3,
       "top_videos": [
         {
           "vid": "_q5TwNsVwH4",
@@ -1556,7 +1660,7 @@
       "max_efficiency": 0.01,
       "total_views": 11021,
       "baseline_efficiency": 0.04,
-      "boost_ratio": 0.19,
+      "boost_ratio": 0.2,
       "top_videos": [
         {
           "vid": "fuKSdnSWEoc",
@@ -1997,7 +2101,7 @@
       "max_efficiency": 0.0,
       "total_views": 1758,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 0.04,
+      "boost_ratio": 0.05,
       "top_videos": [
         {
           "vid": "OEGfsWj8o0w",
@@ -2022,6 +2126,102 @@
           "efficiency": 9.383177570093457e-05,
           "views": 502,
           "upload_date": "20260601"
+        }
+      ]
+    },
+    {
+      "label": "#구기동프렌즈",
+      "occurrences": 3,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 2121,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.05,
+      "top_videos": [
+        {
+          "vid": "BsfX3gDdWe4",
+          "channel": "tvN D ENT",
+          "title": "[#구기동프렌즈] 장근석의 방구석 회전 초밥 집으로 초대합니다🍣 우당탕탕 홈메이드 기차 회전 초밥🚈",
+          "efficiency": 0.00032220149253731344,
+          "views": 1727,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "eYoak4oBMh4",
+          "channel": "tvN D ENT",
+          "title": "[#구기동프렌즈] 숨 쉬듯 잔소리하는 이다희 ㅋㅋ 티격태격해도 누구보다 돈독한 9살 차이 친남매💥",
+          "efficiency": 4.91588785046729e-05,
+          "views": 263,
+          "upload_date": "20260601"
+        },
+        {
+          "vid": "NrOrZeUwupw",
+          "channel": "tvN D ENT",
+          "title": "[#구기동프렌즈] 괜히 죄 지은 기분💦 장도연 홀로 남은 집에 몰래 온 손님 신기루의 냉털✨",
+          "efficiency": 2.4485981308411215e-05,
+          "views": 131,
+          "upload_date": "20260601"
+        }
+      ]
+    },
+    {
+      "label": "#천재들의실체",
+      "occurrences": 7,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 4189,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.05,
+      "top_videos": [
+        {
+          "vid": "LkfrXJXq-eY",
+          "channel": "tvN D ENT",
+          "title": "[#천재들의실체] 얼마 안 남았는데..⁉️ 천재 과학자 뉴턴이 지구 종말을 예상한 방법💥 ㅣ#벌거벗은세계사",
+          "efficiency": 0.0003352611940298507,
+          "views": 1797,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "7uUIYxVxJLU",
+          "channel": "tvN D ENT",
+          "title": "[#천재들의실체] 학교 성적은 꼴등이었던 뉴턴⁉️ 근대 과학의 창시자, 아이작 뉴턴의 반전 학창 시절💥ㅣ#벌거벗은세계사",
+          "efficiency": 0.0001388785046728972,
+          "views": 743,
+          "upload_date": "20260612"
+        },
+        {
+          "vid": "IQ_cX_J1Biw",
+          "channel": "tvN D ENT",
+          "title": "[#천재들의실체] 시가 총액 1위 애○🍎 텅 빈 이력서의 스티브 잡스가 애○을 창업하기까지✨ ㅣ#벌거벗은세계사",
+          "efficiency": 0.00010822429906542057,
+          "views": 579,
+          "upload_date": "20260611"
+        },
+        {
+          "vid": "cl49Jn2AsWw",
+          "channel": "tvN D ENT",
+          "title": "[#천재들의실체] 파산 위기의 애○에 돌아온 스티브 잡스💥 12년 만에 복귀한 스티브 잡스의 애○ 살리기 프로젝트✨ ㅣ#벌거벗은세계사",
+          "efficiency": 7.327102803738318e-05,
+          "views": 392,
+          "upload_date": "20260611"
+        },
+        {
+          "vid": "63qlp1kOluA",
+          "channel": "tvN D ENT",
+          "title": "[#천재들의실체] 사촌 누나와 불륜 관계였던 아인슈타인⁉️ 천재로 불린 아인슈타인의 은밀한 사생활💥ㅣ#벌거벗은세계사",
+          "efficiency": 6.523364485981308e-05,
+          "views": 349,
+          "upload_date": "20260608"
         }
       ]
     },
@@ -2082,8 +2282,8 @@
       ]
     },
     {
-      "label": "#천재들의실체",
-      "occurrences": 6,
+      "label": "#더블캐스팅",
+      "occurrences": 8,
       "channels": [
         "tvN D ENT"
       ],
@@ -2091,66 +2291,18 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
       "max_efficiency": 0.0,
-      "total_views": 2392,
+      "total_views": 2789,
       "baseline_efficiency": 0.0,
       "boost_ratio": 0.03,
       "top_videos": [
         {
-          "vid": "7uUIYxVxJLU",
+          "vid": "1bdlLvD7kZU",
           "channel": "tvN D ENT",
-          "title": "[#천재들의실체] 학교 성적은 꼴등이었던 뉴턴⁉️ 근대 과학의 창시자, 아이작 뉴턴의 반전 학창 시절💥ㅣ#벌거벗은세계사",
-          "efficiency": 0.0001388785046728972,
-          "views": 743,
-          "upload_date": "20260612"
+          "title": "[#더블캐스팅] 본인만의 매력으로 재해석한 서종원 배우의〈그녀의 웃음소리뿐〉",
+          "efficiency": 0.0001292910447761194,
+          "views": 693,
+          "upload_date": "20260613"
         },
-        {
-          "vid": "IQ_cX_J1Biw",
-          "channel": "tvN D ENT",
-          "title": "[#천재들의실체] 시가 총액 1위 애○🍎 텅 빈 이력서의 스티브 잡스가 애○을 창업하기까지✨ ㅣ#벌거벗은세계사",
-          "efficiency": 0.00010822429906542057,
-          "views": 579,
-          "upload_date": "20260611"
-        },
-        {
-          "vid": "cl49Jn2AsWw",
-          "channel": "tvN D ENT",
-          "title": "[#천재들의실체] 파산 위기의 애○에 돌아온 스티브 잡스💥 12년 만에 복귀한 스티브 잡스의 애○ 살리기 프로젝트✨ ㅣ#벌거벗은세계사",
-          "efficiency": 7.327102803738318e-05,
-          "views": 392,
-          "upload_date": "20260611"
-        },
-        {
-          "vid": "63qlp1kOluA",
-          "channel": "tvN D ENT",
-          "title": "[#천재들의실체] 사촌 누나와 불륜 관계였던 아인슈타인⁉️ 천재로 불린 아인슈타인의 은밀한 사생활💥ㅣ#벌거벗은세계사",
-          "efficiency": 6.523364485981308e-05,
-          "views": 349,
-          "upload_date": "20260608"
-        },
-        {
-          "vid": "W5sNcnLFIw0",
-          "channel": "tvN D ENT",
-          "title": "[#천재들의실체] 만유인력을 종교적 관점에서 해석한다면?🍎 과학의 터닝 포인트가 된 만유인력의 법칙✨ㅣ#벌거벗은세계사",
-          "efficiency": 5.1962616822429906e-05,
-          "views": 278,
-          "upload_date": "20260612"
-        }
-      ]
-    },
-    {
-      "label": "#더블캐스팅",
-      "occurrences": 6,
-      "channels": [
-        "tvN D ENT"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 1803,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.02,
-      "top_videos": [
         {
           "vid": "RHs7Np1AOQw",
           "channel": "tvN D ENT",
@@ -2176,20 +2328,12 @@
           "upload_date": "20260607"
         },
         {
-          "vid": "blbcFnWRrtI",
+          "vid": "dCF6qST6phk",
           "channel": "tvN D ENT",
-          "title": "[#더블캐스팅] 호평 가득👍 섬세한 연기를 보여준 이무현 배우의〈Not While I'm Around〉",
-          "efficiency": 2.560747663551402e-05,
-          "views": 137,
-          "upload_date": "20260610"
-        },
-        {
-          "vid": "EmFGTbuQa_c",
-          "channel": "tvN D ENT",
-          "title": "[#더블캐스팅] 개성 있는 무대를 보여준 서종원의〈Land of Lola〉",
-          "efficiency": 1.8130841121495328e-05,
-          "views": 97,
-          "upload_date": "20260610"
+          "title": "[#더블캐스팅] 너무 다른 두 배우의 듀엣✨ 레전드 무대를 만든 심수영 &amp; 임규형의〈I wanna be like you〉",
+          "efficiency": 5.466417910447761e-05,
+          "views": 293,
+          "upload_date": "20260613"
         }
       ]
     },
@@ -2283,15 +2427,15 @@
     },
     {
       "label": "원가공개",
-      "occurrences": 25,
+      "occurrences": 26,
       "channels": [
         "원가 공개 경제학"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
-      "avg_efficiency": 0.37,
+      "avg_efficiency": 0.36,
       "max_efficiency": 4.65,
-      "total_views": 121774,
+      "total_views": 122855,
       "baseline_efficiency": 0,
       "boost_ratio": null,
       "top_videos": [

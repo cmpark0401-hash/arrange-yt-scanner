@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-06-13 14:46",
+  "checked_at": "2026-06-14 09:59",
   "overall": "warning",
   "overall_icon": "🟡",
-  "overall_label": "경고 3건",
+  "overall_label": "경고 4건",
   "summary": {
-    "ok": 5,
-    "warning": 3,
+    "ok": 4,
+    "warning": 4,
     "error": 0
   },
   "checks": [
@@ -17,7 +17,7 @@
     {
       "name": "topic_id_unique",
       "status": "ok",
-      "msg": "총 200개 토픽 · 고유 ID 100%"
+      "msg": "총 201개 토픽 · 고유 ID 100%"
     },
     {
       "name": "html_element_ids",
@@ -32,7 +32,7 @@
     {
       "name": "health_summary",
       "status": "warning",
-      "msg": "dead 1 · stale 0 · fresh 9"
+      "msg": "dead 0 · stale 4 · fresh 6"
     },
     {
       "name": "build_freshness",
@@ -41,13 +41,13 @@
     },
     {
       "name": "internal_links",
-      "status": "ok",
-      "msg": "내부 링크 모두 정상"
+      "status": "warning",
+      "msg": "깨진 링크 2: ['index.html → science_2026-06-13.html', 'index.html → senior_2026-06-13.html']"
     },
     {
       "name": "published_urls",
       "status": "warning",
-      "msg": "published 토픽 10개의 video_url 누락/잘못됨: ['nn-20260603-re', 'sw-20260604-health', 'sw-20260603-od']"
+      "msg": "published 토픽 11개의 video_url 누락/잘못됨: ['nn-20260603-re', 'sw-20260604-health', 'sw-20260603-od']"
     }
   ]
 }

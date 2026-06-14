@@ -1,17 +1,28 @@
 {
-  "generated_at": "2026-06-13 14:46",
+  "generated_at": "2026-06-14 09:59",
   "total_commits": 80,
   "by_category": {
+    "style": 1,
     "other": 10,
     "docs": 8,
-    "data": 59,
+    "data": 58,
     "feat": 3
   },
   "recent_by_date": [
     {
       "date": "2026-06-13",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "b551360",
+          "full_hash": "b5513604810effe1ea63a37aede101f458d6c0c8",
+          "ts": "2026-06-13 14:46",
+          "ts_iso": "2026-06-13T14:46:30",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 카피 황금비 70~85% 시스템 박음 (A+B+C) — SKILL.md 5-A-3E·4채널 profile.md 임계·check_copy_safety.py 자동 검증·copy_guide.html 카피 OK/변환",
+          "category": "style",
+          "category_label": "🎨 디자인"
+        },
         {
           "hash": "9e4939b",
           "full_hash": "9e4939b1c55b8da219d55ef44b29797c6cbf352e",
@@ -572,6 +583,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "b551360",
+      "full_hash": "b5513604810effe1ea63a37aede101f458d6c0c8",
+      "ts": "2026-06-13 14:46",
+      "ts_iso": "2026-06-13T14:46:30",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 카피 황금비 70~85% 시스템 박음 (A+B+C) — SKILL.md 5-A-3E·4채널 profile.md 임계·check_copy_safety.py 자동 검증·copy_guide.html 카피 OK/변환",
+      "category": "style",
+      "category_label": "🎨 디자인"
+    },
     {
       "hash": "9e4939b",
       "full_hash": "9e4939b1c55b8da219d55ef44b29797c6cbf352e",
@@ -1361,16 +1382,6 @@
       "subject": "feat: launchd 권한 해결 — Python wrapper + science·senior launchd 등록",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "2fc4258",
-      "full_hash": "2fc42586370bd942c93d67ea54b9e0bf3c231234",
-      "ts": "2026-06-04 22:51",
-      "ts_iso": "2026-06-04T22:51:12",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-04 22:51:12",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }

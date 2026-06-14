@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-06-13 14:46",
-  "overall_icon": "🔴",
-  "overall_label": "긴급 점검",
-  "overall_severity": "critical",
+  "generated_at": "2026-06-14 09:59",
+  "overall_icon": "🟡",
+  "overall_label": "일부 갱신 권장",
+  "overall_severity": "warning",
   "items": [
     {
       "label": "📊 모니터링 (KR)",
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "3시간 전",
-      "updated_at": "2026-06-13 11:05",
-      "file": "channels/knowledge-archive/_monitor_logs/2026-06-13.json",
+      "ago": "0분 전",
+      "updated_at": "2026-06-14 09:58",
+      "file": "channels/knowledge-archive/_monitor_logs/2026-06-14.json",
       "severity": "critical"
     },
     {
       "label": "📰 뉴스 RSS (KR)",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "1일 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "2일 전",
       "updated_at": "2026-06-12 09:32",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-12.json",
       "severity": "warning"
@@ -29,27 +29,27 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "3시간 전",
-      "updated_at": "2026-06-13 11:06",
-      "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-13.json",
+      "ago": "0분 전",
+      "updated_at": "2026-06-14 09:58",
+      "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-14.json",
       "severity": "warning"
     },
     {
       "label": "🔁 재편집 (KR)",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "1일 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "2일 전",
       "updated_at": "2026-06-12 09:55",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-12.json",
       "severity": "warning"
     },
     {
       "label": "🌏 모니터링 (JP)",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "1일 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "2일 전",
       "updated_at": "2026-06-12 09:41",
       "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-12.json",
       "severity": "warning"
@@ -59,9 +59,9 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "16시간 전",
-      "updated_at": "2026-06-12 22:24",
-      "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-12.json",
+      "ago": "12시간 전",
+      "updated_at": "2026-06-13 21:46",
+      "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-13.json",
       "severity": "info"
     },
     {
@@ -69,9 +69,9 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "15시간 전",
-      "updated_at": "2026-06-12 22:59",
-      "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-12.json",
+      "ago": "11시간 전",
+      "updated_at": "2026-06-13 22:15",
+      "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-13.json",
       "severity": "info"
     },
     {
@@ -79,8 +79,8 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "1시간 전",
-      "updated_at": "2026-06-13 (발행 반영: 암행어사 5편 예약, 원본 유사도 플래그)",
+      "ago": "0분 전",
+      "updated_at": "2026-06-14 (발행 반영: 버려진 논 6편 예약)",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
     },
@@ -90,41 +90,36 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-13 14:46"
+      "updated_at": "2026-06-14 09:59"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
-      "status": "dead",
-      "icon": "🔴",
-      "status_label": "데이터 차단 의심",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "부분 의심",
       "ago": "실시간",
-      "detail": "전일대비 폭락 6개 채널",
+      "detail": "전일대비 폭락 4개 채널",
       "block_events_24h": 0,
       "flagged_drops": [
         {
           "name": "주식원샷",
-          "yest_avg": 44626,
-          "today_avg": 87
+          "yest_avg": 54124,
+          "today_avg": 47
         },
         {
           "name": "얄궂은 경제학",
-          "yest_avg": 44626,
-          "today_avg": 360
-        },
-        {
-          "name": "경제읽음이",
-          "yest_avg": 44626,
-          "today_avg": 214
+          "yest_avg": 54124,
+          "today_avg": 363
         },
         {
           "name": "까칠한 밍광의 경제학",
-          "yest_avg": 44626,
-          "today_avg": 155
+          "yest_avg": 54124,
+          "today_avg": 156
         },
         {
-          "name": "경제따라잡기",
-          "yest_avg": 44626,
-          "today_avg": 440
+          "name": "엄마의 밤책",
+          "yest_avg": 54124,
+          "today_avg": 46
         }
       ],
       "severity": "critical"
@@ -135,31 +130,26 @@
     "flagged_drops": [
       {
         "name": "주식원샷",
-        "yest_avg": 44626,
-        "today_avg": 87
+        "yest_avg": 54124,
+        "today_avg": 47
       },
       {
         "name": "얄궂은 경제학",
-        "yest_avg": 44626,
-        "today_avg": 360
-      },
-      {
-        "name": "경제읽음이",
-        "yest_avg": 44626,
-        "today_avg": 214
+        "yest_avg": 54124,
+        "today_avg": 363
       },
       {
         "name": "까칠한 밍광의 경제학",
-        "yest_avg": 44626,
-        "today_avg": 155
+        "yest_avg": 54124,
+        "today_avg": 156
       },
       {
-        "name": "경제따라잡기",
-        "yest_avg": 44626,
-        "today_avg": 440
+        "name": "엄마의 밤책",
+        "yest_avg": 54124,
+        "today_avg": 46
       }
     ],
-    "status": "dead"
+    "status": "stale"
   },
   "block_events": [
     {
