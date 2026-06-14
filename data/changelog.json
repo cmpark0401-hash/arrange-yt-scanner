@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-14 20:28",
+  "generated_at": "2026-06-14 21:05",
   "total_commits": 80,
   "by_category": {
+    "style": 2,
     "other": 11,
     "feat": 3,
-    "style": 1,
-    "docs": 8,
+    "docs": 7,
     "data": 57
   },
   "recent_by_date": [
     {
       "date": "2026-06-14",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "7d72848",
+          "full_hash": "7d728481f3e8189031caff377fdcb09e449ff4b6",
+          "ts": "2026-06-14 20:28",
+          "ts_iso": "2026-06-14T20:28:53",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 매일 09:00 이메일 푸시 시스템 박음 — Gmail SMTP HTML 본문 + launchd 매일 9시 자동. run_morning_alert.py로 키워드 검색·폭발 감지·사이트 빌드·이메일 발송 4단계",
+          "category": "style",
+          "category_label": "🎨 디자인"
+        },
         {
           "hash": "119093b",
           "full_hash": "119093b48c94747f0047c8a447f8a711aca7e374",
@@ -483,6 +493,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "7d72848",
+      "full_hash": "7d728481f3e8189031caff377fdcb09e449ff4b6",
+      "ts": "2026-06-14 20:28",
+      "ts_iso": "2026-06-14T20:28:53",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 매일 09:00 이메일 푸시 시스템 박음 — Gmail SMTP HTML 본문 + launchd 매일 9시 자동. run_morning_alert.py로 키워드 검색·폭발 감지·사이트 빌드·이메일 발송 4단계",
+      "category": "style",
+      "category_label": "🎨 디자인"
+    },
     {
       "hash": "119093b",
       "full_hash": "119093b48c94747f0047c8a447f8a711aca7e374",
@@ -1272,16 +1292,6 @@
       "subject": "auto: workboard 2026-06-04 23:48:08",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "ffa6275",
-      "full_hash": "ffa6275f60d6636dd0547b7a1bc17b5faa8df2f3",
-      "ts": "2026-06-04 23:47",
-      "ts_iso": "2026-06-04T23:47:00",
-      "author": "cmpark0401-hash",
-      "subject": "manual JP: 2026-06-04 23:47",
-      "category": "docs",
-      "category_label": "📖 문서"
     }
   ]
 }

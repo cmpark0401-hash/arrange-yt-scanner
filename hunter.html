@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>🔥 카피 헌터 — 추격할 영상 한곳에</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; max-width: 1300px; margin: 0 auto; padding: 18px; background: #fafbfc; color: #1a2845; }
+h1 { margin: 0 0 4px; }
+.subtitle { color: #666; margin: 0 0 18px; font-size: 13px; }
+.nav { margin-bottom: 14px; }
+.nav a { margin-right: 12px; color: #1a2845; font-size: 14px; }
+
+.tabs { display: flex; gap: 4px; margin-bottom: 14px; flex-wrap: wrap; border-bottom: 2px solid #1a2845; }
+.tab-btn { background: white; border: 2px solid transparent; border-bottom: none; padding: 10px 16px; cursor: pointer; font-weight: bold; color: #555; border-radius: 8px 8px 0 0; font-size: 14px; position: relative; }
+.tab-btn.active { background: #1a2845; color: white; }
+.tab-btn .count { background: #C0392B; color: white; padding: 1px 7px; border-radius: 8px; font-size: 11px; margin-left: 6px; }
+.tab-btn.active .count { background: #F4C430; color: #1a2845; }
+.tab-content { display: none; background: white; padding: 18px 22px; border-radius: 0 8px 8px 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.tab-content.active { display: block; }
+
+.bucket-block { margin-bottom: 22px; }
+.bucket-block h3 { border-left: 4px solid #C0392B; padding-left: 10px; margin: 0 0 10px; font-size: 16px; }
+.bucket-block h3 .count { font-size: 12px; color: #888; font-weight: normal; }
+
+.alert-row, .cluster-row { background: #fafbfc; border-left: 4px solid #ddd; border-radius: 6px; padding: 10px 14px; margin: 8px 0; font-size: 13px; }
+.alert-row.p-hot, .cluster-row.p-hot { border-left-color: #E63946; background: #FFF5F5; }
+.alert-row.p-warm, .cluster-row.p-warm { border-left-color: #F4C430; background: #FFFCEB; }
+.alert-row.p-cool, .cluster-row.p-cool { border-left-color: #1F7A78; }
+
+.ar-head, .cr-head { display: flex; gap: 14px; font-size: 12px; color: #555; margin-bottom: 4px; }
+.ar-eff, .cr-eff { color: #C0392B; font-weight: bold; }
+.ar-verdict, .cr-verdict { margin-left: auto; font-weight: bold; }
+.ar-title, .cr-pioneer { margin-top: 4px; }
+.ar-title a, .cr-pioneer a { color: #1a2845; text-decoration: none; font-weight: 600; }
+.ar-title a:hover, .cr-pioneer a:hover { text-decoration: underline; }
+.ar-meta, .cr-kw { font-size: 11px; color: #888; margin-top: 3px; }
+.cr-pioneer .ch { color: #888; font-size: 12px; margin-left: 8px; }
+
+.guide-summary ul { font-size: 14px; line-height: 1.8; }
+.hyp-list { font-size: 14px; line-height: 1.7; }
+.boost-up { color: #C0392B; font-weight: bold; }
+.boost-down { color: #888; }
+.empty { color: #999; text-align: center; padding: 30px; }
+.link { margin-top: 14px; text-align: right; }
+.link a { color: #1F7A78; font-weight: bold; text-decoration: none; }
+.link a:hover { text-decoration: underline; }
+
+.meta-foot { margin-top: 22px; text-align: center; font-size: 11px; color: #999; }
+</style>
+</head>
+<body>
+<div class="nav">
+    <a href="index.html">← 메인</a>
+    <a href="workboard.html">📋 워크보드</a>
+    <a href="click-lab.html">🧪 클릭연구소</a>
+</div>
+<h1>🔥 카피 헌터</h1>
+<p class="subtitle">오늘 추격할 영상 · 클러스터 · 카피 가이드 · 알고리즘 패턴을 한 페이지에. 매일 evening 21:30 자동 갱신</p>
+
+<div class="tabs">
+    <button class="tab-btn active" data-tab="t1">🚨 오늘 추격<span class="count">1</span></button>
+    <button class="tab-btn" data-tab="t2">🔥 클러스터<span class="count">10</span></button>
+    <button class="tab-btn" data-tab="t3">🎯 가이드</button>
+    <button class="tab-btn" data-tab="t4">🔬 패턴<span class="count">32</span></button>
+</div>
+
+<div id="t1" class="tab-content active"><div class="bucket-block"><h3>📂 야담 <span class="count">(1편)</span></h3>
+                <div class="alert-row p-warm">
+                    <div class="ar-head">
+                        <span class="ar-eff">26.6x</span>
+                        <span class="ar-d">D+5</span>
+                        <span class="ar-subs">2,170구독</span>
+                        <span class="ar-verdict">✅ 추격 가치 (D+7 윈도우)</span>
+                    </div>
+                    <div class="ar-title">
+                        <a href="https://youtube.com/watch?v=Sh6zQioDxW0" target="_blank">[야담] "글도 모른다 업신여김 당한 주막집 딸, 새로 부임한 현감 나리가 그녀만 찾는 이유가…" | 오디오북 | 옛날이야기</a>
+                    </div>
+                    <div class="ar-meta">📺 청림야담 · 🔑 야담</div>
+                </div>
+            </div><p class="link"><a href="alerts.html">→ 폭발 알림 전체 보드</a></p></div>
+<div id="t2" class="tab-content"><div class="bucket-block"><h3>📂 야담 <span class="count">(3개)</span></h3>
+                <div class="cluster-row p-cool">
+                    <div class="cr-head">
+                        <span class="cr-size">3편</span>
+                        <span class="cr-eff">최대 41.6x</span>
+                        <span class="cr-fresh">D+11</span>
+                        <span class="cr-verdict">⚠️ 신선도 한계 (D+14)</span>
+                    </div>
+                    <div class="cr-kw">🔑 절벽으로 · 천재아이</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=aI8A973spEw" target="_blank">자객들에 쫓기던 왕비를 절벽으로 밀어버린 천재아이| 야담 | 조선시대 | 오디오북 | 전설 민담</a>
+                        <span class="ch">📺 전해들은 야담</span>
+                    </div>
+                </div>
+            
+                <div class="cluster-row p-cool">
+                    <div class="cr-head">
+                        <span class="cr-size">2편</span>
+                        <span class="cr-eff">최대 9.8x</span>
+                        <span class="cr-fresh">D+11</span>
+                        <span class="cr-verdict">⚠️ 신선도 한계 (D+14)</span>
+                    </div>
+                    <div class="cr-kw">🔑 과부를 · 며느리로 · 시어머니</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=MRgU9wXIxoQ" target="_blank">7냥에 산 과부를 며느리로 들인 지혜로운 시어머니, 첫날부터 곳간 열쇠를 맡긴 이유 #옛날이야기 #민담 #수면동화 #오디오북 </a>
+                        <span class="ch">📺 산골야담</span>
+                    </div>
+                </div>
+            
+                <div class="cluster-row p-cool">
+                    <div class="cr-head">
+                        <span class="cr-size">2편</span>
+                        <span class="cr-eff">최대 6.7x</span>
+                        <span class="cr-fresh">D+127</span>
+                        <span class="cr-verdict">📦 evergreen 아카이브</span>
+                    </div>
+                    <div class="cr-kw">🔑 냥에 · 다섯 · 드라마 · 사주세요</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=OSOP2wkM3Uk" target="_blank">#&quot;저 버려진 낡은 집을 사주세요&quot;다섯 냥에 집을 판 천재아이의 제안| 옛날이야기 | 야담 | 민담 | 설화</a>
+                        <span class="ch">📺 달빛아래옛날민담</span>
+                    </div>
+                </div>
+            </div><div class="bucket-block"><h3>📂 경제·시사 <span class="count">(7개)</span></h3>
+                <div class="cluster-row p-cool">
+                    <div class="cr-head">
+                        <span class="cr-size">3편</span>
+                        <span class="cr-eff">최대 32.5x</span>
+                        <span class="cr-fresh">D+45</span>
+                        <span class="cr-verdict">📦 evergreen 아카이브</span>
+                    </div>
+                    <div class="cr-kw">🔑 노조의 · 삼성 · 최후</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=JPxtLP4eUQc" target="_blank">&quot;파업? 다 나가세요&quot; 삼성 노조 45조원 성과급 요구에 사람 빼고 기계 쓴다, 일자리 잃게 생긴 노조의 최</a>
+                        <span class="ch">📺 경제왕토끼</span>
+                    </div>
+                </div>
+            
+                <div class="cluster-row p-cool">
+                    <div class="cr-head">
+                        <span class="cr-size">4편</span>
+                        <span class="cr-eff">최대 52.8x</span>
+                        <span class="cr-fresh">D+14</span>
+                        <span class="cr-verdict">⚠️ 신선도 한계 (D+14)</span>
+                    </div>
+                    <div class="cr-kw">🔑 꺼낸 · 세계 · 최초로</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=ZjKw83Hu-MM" target="_blank">세탁기 만들던 LG가 세계 최초로 꺼낸 카드</a>
+                        <span class="ch">📺 경제의 신호</span>
+                    </div>
+                </div>
+            
+                <div class="cluster-row p-warm">
+                    <div class="cr-head">
+                        <span class="cr-size">7편</span>
+                        <span class="cr-eff">최대 15.5x</span>
+                        <span class="cr-fresh">D+6</span>
+                        <span class="cr-verdict">✅ 추격 가치 있음 (D+7 이내)</span>
+                    </div>
+                    <div class="cr-kw">🔑 중국</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=GmVCT_CfQWU" target="_blank">중국 삼협댐, 세계 최대 댐의 저주 #세계이슈</a>
+                        <span class="ch">📺 세계경제 돋보기</span>
+                    </div>
+                </div>
+            
+                <div class="cluster-row p-cool">
+                    <div class="cr-head">
+                        <span class="cr-size">3편</span>
+                        <span class="cr-eff">최대 28.7x</span>
+                        <span class="cr-fresh">D+13</span>
+                        <span class="cr-verdict">⚠️ 신선도 한계 (D+14)</span>
+                    </div>
+                    <div class="cr-kw">🔑 quot</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=25tCUGqi6tY" target="_blank">&quot;반도체 독식은 지속 불가능하다&quot; 월가가 조용히 매집</a>
+                        <span class="ch">📺 농부의 경제학</span>
+                    </div>
+                </div>
+            
+                <div class="cluster-row p-warm">
+                    <div class="cr-head">
+                        <span class="cr-size">3편</span>
+                        <span class="cr-eff">최대 11.6x</span>
+                        <span class="cr-fresh">D+9</span>
+                        <span class="cr-verdict">✅ 추격 가치 있음 (D+7 이내)</span>
+                    </div>
+                    <div class="cr-kw">🔑 quot</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=uFq-sr_ia6o" target="_blank">&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도</a>
+                        <span class="ch">📺 코믹스 경제</span>
+                    </div>
+                </div>
+            
+                <div class="cluster-row p-cool">
+                    <div class="cr-head">
+                        <span class="cr-size">4편</span>
+                        <span class="cr-eff">최대 8.2x</span>
+                        <span class="cr-fresh">D+10</span>
+                        <span class="cr-verdict">⚠️ 신선도 한계 (D+14)</span>
+                    </div>
+                    <div class="cr-kw">🔑 quot</div>
+                    <div class="cr-pioneer">
+                        원조: <a href="https://youtube.com/watch?v=x2EkGjZA8Rc" target="_blank">&quot;한국이 그렇게 무서운 시장이었어?&quot;스타벅스 탱크데이 한 줄에 미국 본사가 일주일 만에 무릎 꿇은 진짜 이유</a>
+                        <span class="ch">📺 퐁퐁퐁경제학</span>
+                    </div>
+                </div>
+            </div><p class="link"><a href="copycat.html">→ 카피캣 클러스터 전체 보드</a></p></div>
+<div id="t3" class="tab-content"><div class="guide-summary">
+        <p>각 클러스터별 <strong>카피 OK 요소</strong>와 <strong>변환 필수 요소</strong>가 자동 분석되어 있습니다.</p>
+        <p>핵심 규칙:</p>
+        <ul>
+            <li>✅ <strong>카피 황금비 70~85%</strong> — 메가-주제·서사·인물·썸네일 구도 카피 OK</li>
+            <li>❌ 본문 텍스트 100% 재작성 (재업로드 감지 회피)</li>
+            <li>❌ 폭력 시그널 변환 — "밀어 버린" → "그날 밤"</li>
+            <li>❌ 채널 시그니처 (호명·어미·시그니처 구문) 우리 결로 변환</li>
+            <li>🔑 신선 표현 1~2개 추가 ("9살"·"사흘 뒤"·"나라를 뒤집어놓다")</li>
+        </ul>
+        <p class="link"><a href="copy_guide.html">→ 각 클러스터별 상세 분석 보기</a></p>
+    </div></div>
+<div id="t4" class="tab-content"><div class="bucket-block"><h3>📂 야담 <span class="count">(241편)</span></h3><ul class="hyp-list"><li>🔥 <strong>감정 어휘 (몰락·붕괴·패닉)</strong> — <span class="boost-up">3.08x ↑</span></li><li>🔥 <strong>장편 (≥30분)</strong> — <span class="boost-up">1.71x ↑</span></li><li>⚠️ 제목 김 (≥80자) — <span class="boost-down">0.38x ↓</span></li><li>⚠️ 제목 짧음 (≤40자) — <span class="boost-down">0.45x ↓</span></li></ul></div><div class="bucket-block"><h3>📂 경제·시사 <span class="count">(3,507편)</span></h3><ul class="hyp-list"><li>🔥 <strong>감정 어휘 (몰락·붕괴·패닉)</strong> — <span class="boost-up">5.57x ↑</span></li><li>🔥 <strong>시간 표현 (○년 만에·○시간 후)</strong> — <span class="boost-up">4.09x ↑</span></li><li>🔥 <strong>봉인어 사용 (진짜 이유·숨겨진·정체)</strong> — <span class="boost-up">3.07x ↑</span></li><li>⚠️ [○○○] 시리즈 라벨 박힘 — <span class="boost-down">0.15x ↓</span></li><li>⚠️ 따옴표 직인용 발언 — <span class="boost-down">0.48x ↓</span></li></ul></div><div class="bucket-block"><h3>📂 잘듣네 <span class="count">(214편)</span></h3><ul class="hyp-list"><li>🔥 <strong>장편 (≥30분)</strong> — <span class="boost-up">8.52x ↑</span></li><li>🔥 <strong>[○○○] 시리즈 라벨 박힘</strong> — <span class="boost-up">5.39x ↑</span></li><li>🔥 <strong>공인 인물 본명 노출</strong> — <span class="boost-up">2.10x ↑</span></li><li>⚠️ 물음표 사용 — <span class="boost-down">0.40x ↓</span></li></ul></div><div class="bucket-block"><h3>📂 과학·건강 <span class="count">(875편)</span></h3><ul class="hyp-list"><li>🔥 <strong>[○○○] 시리즈 라벨 박힘</strong> — <span class="boost-up">33.09x ↑</span></li><li>🔥 <strong>장편 (≥30분)</strong> — <span class="boost-up">21.78x ↑</span></li><li>🔥 <strong>제목 짧음 (≤40자)</strong> — <span class="boost-up">6.97x ↑</span></li><li>⚠️ 제목 김 (≥80자) — <span class="boost-down">0.01x ↓</span></li><li>⚠️ 공인 인물 본명 노출 — <span class="boost-down">0.03x ↓</span></li></ul></div><div class="bucket-block"><h3>🏷️ 시리즈 라벨 부스트 TOP 5</h3><ul class="hyp-list"><li><strong>[수면다큐]</strong> 6편 · 5채널 · <span class="boost-up">부스트 63.8x</span></li><li><strong>[지식뉴스]</strong> 25편 · 2채널 · <span class="boost-up">부스트 7.6x</span></li><li><strong>[통합본]</strong> 6편 · 2채널 · <span class="boost-up">부스트 5.3x</span></li><li><strong>[삼성전자 주가전망]</strong> 3편 · 1채널 · <span class="boost-up">부스트 5.2x</span></li><li><strong>[EN]</strong> 10편 · 1채널 · <span class="boost-up">부스트 4.7x</span></li></ul></div><p class="link"><a href="algo.html">→ 전체 알고리즘 패턴 분석 보기</a></p></div>
+
+<p class="meta-foot">갱신: 2026-06-14 11:08:10 UTC</p>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+});
+</script>
+</body>
+</html>

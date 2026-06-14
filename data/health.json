@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14 20:28",
+  "generated_at": "2026-06-14 21:05",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "10시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-14 09:58",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-14.json",
       "severity": "critical"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "10시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-14 09:58",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-14.json",
       "severity": "warning"
@@ -59,7 +59,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "22시간 전",
+      "ago": "23시간 전",
       "updated_at": "2026-06-13 21:46",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-13.json",
       "severity": "info"
@@ -79,7 +79,7 @@
       "status": "stale",
       "icon": "🟡",
       "status_label": "갱신 권장",
-      "ago": "10시간 전",
+      "ago": "11시간 전",
       "updated_at": "2026-06-14 (발행 반영: 버려진 논 6편 예약)",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-14 20:28"
+      "updated_at": "2026-06-14 21:05"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
