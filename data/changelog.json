@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-14 20:12",
+  "generated_at": "2026-06-14 20:28",
   "total_commits": 80,
   "by_category": {
+    "other": 11,
     "feat": 3,
     "style": 1,
-    "other": 10,
     "docs": 8,
-    "data": 58
+    "data": 57
   },
   "recent_by_date": [
     {
       "date": "2026-06-14",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "119093b",
+          "full_hash": "119093b48c94747f0047c8a447f8a711aca7e374",
+          "ts": "2026-06-14 20:12",
+          "ts_iso": "2026-06-14T20:12:18",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 키워드 모니터링 + 폭발 알림 시스템 박음 — 야담=단일 키워드(야담+5)·경제=다축+자동 발굴(46+trending 20)·잘듣네/과만세=evergreen·시리즈 라벨. 폭발 알림 보드 docs/alerts",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "03fa302",
           "full_hash": "03fa3025f259bbbda2fc4044c6932982626b2d46",
@@ -473,6 +483,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "119093b",
+      "full_hash": "119093b48c94747f0047c8a447f8a711aca7e374",
+      "ts": "2026-06-14 20:12",
+      "ts_iso": "2026-06-14T20:12:18",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 키워드 모니터링 + 폭발 알림 시스템 박음 — 야담=단일 키워드(야담+5)·경제=다축+자동 발굴(46+trending 20)·잘듣네/과만세=evergreen·시리즈 라벨. 폭발 알림 보드 docs/alerts",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "03fa302",
       "full_hash": "03fa3025f259bbbda2fc4044c6932982626b2d46",
@@ -1262,16 +1282,6 @@
       "subject": "manual JP: 2026-06-04 23:47",
       "category": "docs",
       "category_label": "📖 문서"
-    },
-    {
-      "hash": "39b8bed",
-      "full_hash": "39b8bed7f814f3db8832e46f02090045ab0eab07",
-      "ts": "2026-06-04 23:25",
-      "ts_iso": "2026-06-04T23:25:29",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-04 23:25:29",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }

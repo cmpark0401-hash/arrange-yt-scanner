@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14 20:12",
+  "generated_at": "2026-06-14 20:28",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -69,7 +69,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "21시간 전",
+      "ago": "22시간 전",
       "updated_at": "2026-06-13 22:15",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-13.json",
       "severity": "info"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-14 20:12"
+      "updated_at": "2026-06-14 20:28"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
