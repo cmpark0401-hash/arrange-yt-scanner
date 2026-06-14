@@ -1,14 +1,30 @@
 {
-  "generated_at": "2026-06-14 09:59",
+  "generated_at": "2026-06-14 20:12",
   "total_commits": 80,
   "by_category": {
+    "feat": 3,
     "style": 1,
     "other": 10,
     "docs": 8,
-    "data": 58,
-    "feat": 3
+    "data": 58
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-14",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "03fa302",
+          "full_hash": "03fa3025f259bbbda2fc4044c6932982626b2d46",
+          "ts": "2026-06-14 09:59",
+          "ts_iso": "2026-06-14T09:59:07",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 2026-06-14 사이클 — 신영상 19 · 효율 5x+ 80 · 6개 신규 야담 채널 통합 후 첫 사이클. 카피캣·시리즈 라벨·자동 가설·카피 가이드 동시 갱신",
+          "category": "feat",
+          "category_label": "✨ 신규 기능"
+        }
+      ]
+    },
     {
       "date": "2026-06-13",
       "count": 6,
@@ -454,135 +470,19 @@
           "category_label": "📊 데이터 갱신"
         }
       ]
-    },
-    {
-      "date": "2026-06-07",
-      "count": 12,
-      "commits": [
-        {
-          "hash": "1dee479",
-          "full_hash": "1dee479254b081b3a1b2d6471f9565eaec18e532",
-          "ts": "2026-06-07 21:30",
-          "ts_iso": "2026-06-07T21:30:11",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 21:30:11",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "7c03432",
-          "full_hash": "7c03432cca6cb1fbd349dbd6d23e874b1fd33ec1",
-          "ts": "2026-06-07 17:42",
-          "ts_iso": "2026-06-07T17:42:20",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 17:42:20",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "c942e01",
-          "full_hash": "c942e01def50be159a50c4180d461355748cd64a",
-          "ts": "2026-06-07 17:32",
-          "ts_iso": "2026-06-07T17:32:40",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 17:32:39",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "4e99aaa",
-          "full_hash": "4e99aaa572cdcb72f5b4aee7f0302e0c1dfc7aee",
-          "ts": "2026-06-07 17:08",
-          "ts_iso": "2026-06-07T17:08:29",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 17:08:29",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "922d5b6",
-          "full_hash": "922d5b6a727785859bae657a8610b1d786404d91",
-          "ts": "2026-06-07 10:59",
-          "ts_iso": "2026-06-07T10:59:30",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 10:59:30",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "2afaccc",
-          "full_hash": "2afaccc121503d320032d1cc899cfbf438ca2852",
-          "ts": "2026-06-07 10:58",
-          "ts_iso": "2026-06-07T10:58:21",
-          "author": "cmpark0401-hash",
-          "subject": "manual JP: 2026-06-07 10:58",
-          "category": "docs",
-          "category_label": "📖 문서"
-        },
-        {
-          "hash": "7bab3b5",
-          "full_hash": "7bab3b52da81336269fb813a0742ecc2753dbb3e",
-          "ts": "2026-06-07 10:01",
-          "ts_iso": "2026-06-07T10:01:26",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 10:01:25",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "2dab05d",
-          "full_hash": "2dab05d0d7ec8b6654e7976a7392807d2d685402",
-          "ts": "2026-06-07 10:00",
-          "ts_iso": "2026-06-07T10:00:24",
-          "author": "cmpark0401-hash",
-          "subject": "auto: build 2026-06-07 10:00",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "19baae5",
-          "full_hash": "19baae5af6f49613f17705c55b104cb4800e4225",
-          "ts": "2026-06-07 09:30",
-          "ts_iso": "2026-06-07T09:30:09",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 09:30:09",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "24b8cb1",
-          "full_hash": "24b8cb1f58c2a9d00800b7b520ea0fa5c5421d79",
-          "ts": "2026-06-07 03:29",
-          "ts_iso": "2026-06-07T03:29:53",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 03:29:53",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "a238b30",
-          "full_hash": "a238b309bc69e5cd6f117badb988aeef319a6bcd",
-          "ts": "2026-06-07 00:51",
-          "ts_iso": "2026-06-07T00:51:05",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 00:51:05",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "f313865",
-          "full_hash": "f313865660ec4b311f5b449aa01d6470dca42dc8",
-          "ts": "2026-06-07 00:11",
-          "ts_iso": "2026-06-07T00:11:30",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-07 00:11:30",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "03fa302",
+      "full_hash": "03fa3025f259bbbda2fc4044c6932982626b2d46",
+      "ts": "2026-06-14 09:59",
+      "ts_iso": "2026-06-14T09:59:07",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 2026-06-14 사이클 — 신영상 19 · 효율 5x+ 80 · 6개 신규 야담 채널 통합 후 첫 사이클. 카피캣·시리즈 라벨·자동 가설·카피 가이드 동시 갱신",
+      "category": "feat",
+      "category_label": "✨ 신규 기능"
+    },
     {
       "hash": "b551360",
       "full_hash": "b5513604810effe1ea63a37aede101f458d6c0c8",
@@ -1372,16 +1272,6 @@
       "subject": "auto: workboard 2026-06-04 23:25:29",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "7f95ea6",
-      "full_hash": "7f95ea62aa488f477dfaf24fa8bb9630a9cada35",
-      "ts": "2026-06-04 22:54",
-      "ts_iso": "2026-06-04T22:54:05",
-      "author": "cmpark0401-hash",
-      "subject": "feat: launchd 권한 해결 — Python wrapper + science·senior launchd 등록",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }

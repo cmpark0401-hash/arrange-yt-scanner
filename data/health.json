@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-14 09:59",
-  "overall_icon": "🟡",
-  "overall_label": "일부 갱신 권장",
+  "generated_at": "2026-06-14 20:12",
+  "overall_icon": "🔴",
+  "overall_label": "일부 dead",
   "overall_severity": "warning",
   "items": [
     {
@@ -9,16 +9,16 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "0분 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-14 09:58",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-14.json",
       "severity": "critical"
     },
     {
       "label": "📰 뉴스 RSS (KR)",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "갱신 권장",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파이프라인 점검 필요",
       "ago": "2일 전",
       "updated_at": "2026-06-12 09:32",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-12.json",
@@ -29,16 +29,16 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "0분 전",
+      "ago": "10시간 전",
       "updated_at": "2026-06-14 09:58",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-14.json",
       "severity": "warning"
     },
     {
       "label": "🔁 재편집 (KR)",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "갱신 권장",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파이프라인 점검 필요",
       "ago": "2일 전",
       "updated_at": "2026-06-12 09:55",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-12.json",
@@ -46,9 +46,9 @@
     },
     {
       "label": "🌏 모니터링 (JP)",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "갱신 권장",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파이프라인 점검 필요",
       "ago": "2일 전",
       "updated_at": "2026-06-12 09:41",
       "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-12.json",
@@ -59,7 +59,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "12시간 전",
+      "ago": "22시간 전",
       "updated_at": "2026-06-13 21:46",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-13.json",
       "severity": "info"
@@ -69,17 +69,17 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "11시간 전",
+      "ago": "21시간 전",
       "updated_at": "2026-06-13 22:15",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-13.json",
       "severity": "info"
     },
     {
       "label": "📋 워크보드",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "0분 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "10시간 전",
       "updated_at": "2026-06-14 (발행 반영: 버려진 논 6편 예약)",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-14 09:59"
+      "updated_at": "2026-06-14 20:12"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
