@@ -1,18 +1,38 @@
 {
-  "generated_at": "2026-06-14 21:05",
+  "generated_at": "2026-06-15 00:05",
   "total_commits": 80,
   "by_category": {
-    "style": 2,
+    "style": 3,
+    "docs": 8,
     "other": 11,
     "feat": 3,
-    "docs": 7,
-    "data": 57
+    "data": 55
   },
   "recent_by_date": [
     {
       "date": "2026-06-14",
-      "count": 3,
+      "count": 5,
       "commits": [
+        {
+          "hash": "9dc0446",
+          "full_hash": "9dc0446b668200ff7f989e57e75b8560998082c9",
+          "ts": "2026-06-14 21:13",
+          "ts_iso": "2026-06-14T21:13:19",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 카피 헌터 다크모드 리디자인 — 큰 효율 숫자 카드 · 좌측 우선순위 색 띠 · 모바일 반응형 · 가독성 ↑",
+          "category": "style",
+          "category_label": "🎨 디자인"
+        },
+        {
+          "hash": "5f79056",
+          "full_hash": "5f7905615a952d1d9e2cfa91c0462bfcf11dddfd",
+          "ts": "2026-06-14 21:05",
+          "ts_iso": "2026-06-14T21:05:40",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 메뉴 4개(카피캣·알고리즘·카피가이드·폭발알림)를 🔥 카피 헌터 1개로 통합. 탭 인터페이스로 4개 데이터 같이 노출. 기존 4개 페이지는 유지(직링크 가능)",
+          "category": "docs",
+          "category_label": "📖 문서"
+        },
         {
           "hash": "7d72848",
           "full_hash": "7d728481f3e8189031caff377fdcb09e449ff4b6",
@@ -493,6 +513,26 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "9dc0446",
+      "full_hash": "9dc0446b668200ff7f989e57e75b8560998082c9",
+      "ts": "2026-06-14 21:13",
+      "ts_iso": "2026-06-14T21:13:19",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 카피 헌터 다크모드 리디자인 — 큰 효율 숫자 카드 · 좌측 우선순위 색 띠 · 모바일 반응형 · 가독성 ↑",
+      "category": "style",
+      "category_label": "🎨 디자인"
+    },
+    {
+      "hash": "5f79056",
+      "full_hash": "5f7905615a952d1d9e2cfa91c0462bfcf11dddfd",
+      "ts": "2026-06-14 21:05",
+      "ts_iso": "2026-06-14T21:05:40",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 메뉴 4개(카피캣·알고리즘·카피가이드·폭발알림)를 🔥 카피 헌터 1개로 통합. 탭 인터페이스로 4개 데이터 같이 노출. 기존 4개 페이지는 유지(직링크 가능)",
+      "category": "docs",
+      "category_label": "📖 문서"
+    },
     {
       "hash": "7d72848",
       "full_hash": "7d728481f3e8189031caff377fdcb09e449ff4b6",
@@ -1270,26 +1310,6 @@
       "ts_iso": "2026-06-05T09:49:38",
       "author": "cmpark0401-hash",
       "subject": "auto: build 2026-06-05 09:49",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "3f30255",
-      "full_hash": "3f30255d0501fdf5ec9481dfb48eb945876e461a",
-      "ts": "2026-06-05 09:42",
-      "ts_iso": "2026-06-05T09:42:58",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-05 09:42:58",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "275a021",
-      "full_hash": "275a021250a942ba75443e89863ebbed04231814",
-      "ts": "2026-06-04 23:48",
-      "ts_iso": "2026-06-04T23:48:08",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-04 23:48:08",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }

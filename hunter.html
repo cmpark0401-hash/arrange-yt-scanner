@@ -101,6 +101,7 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
     background: #1c2229;
     transform: translateX(2px);
 }
+.hunt-card.p-super { border-left-color: #ff7b72; background: linear-gradient(90deg, rgba(255,123,114,0.14), #161b22); box-shadow: 0 0 0 1px rgba(255,123,114,0.25); }
 .hunt-card.p-hot { border-left-color: #f85149; background: linear-gradient(90deg, rgba(248,81,73,0.08), #161b22); }
 .hunt-card.p-warm { border-left-color: #d29922; background: linear-gradient(90deg, rgba(210,153,34,0.06), #161b22); }
 .hunt-card.p-cool { border-left-color: #3fb950; }
@@ -108,21 +109,24 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
 .hc-left {
     flex-shrink: 0;
     text-align: center;
-    min-width: 80px;
+    min-width: 90px;
     padding-right: 14px;
     border-right: 1px solid #30363d;
 }
-.hc-eff {
-    font-size: 26px;
+.hc-velo {
+    font-size: 22px;
     font-weight: 800;
-    color: #f85149;
     line-height: 1.1;
 }
-.hc-eff span { font-size: 14px; opacity: 0.6; }
-.hc-d {
-    font-size: 11px;
+.hc-velo span { font-size: 12px; opacity: 0.55; }
+.hc-velo.v-super { color: #ff7b72; text-shadow: 0 0 8px rgba(255,123,114,0.35); }
+.hc-velo.v-hot { color: #f85149; }
+.hc-velo.v-warm { color: #d29922; }
+.hc-velo.v-cool { color: #3fb950; }
+.hc-eff-small {
+    font-size: 10px;
     color: #8b949e;
-    margin-top: 3px;
+    margin-top: 4px;
     font-weight: 600;
 }
 
@@ -155,9 +159,11 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
     font-weight: 700;
     padding-left: 8px;
 }
+.p-super .hc-verdict { color: #ff7b72; text-shadow: 0 0 6px rgba(255,123,114,0.3); }
 .p-hot .hc-verdict { color: #f85149; }
 .p-warm .hc-verdict { color: #d29922; }
 .p-cool .hc-verdict { color: #3fb950; }
+.meta-views { color: #f0883e; font-weight: 600; }
 
 .guide-grid {
     display: grid;
@@ -231,8 +237,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
     body { padding: 12px; }
     h1 { font-size: 22px; }
     .hunt-card { padding: 12px 14px; gap: 12px; }
-    .hc-left { min-width: 64px; padding-right: 10px; }
-    .hc-eff { font-size: 22px; }
+    .hc-left { min-width: 70px; padding-right: 10px; }
+    .hc-velo { font-size: 18px; }
     .hc-title { font-size: 13px; }
     .hc-verdict { display: none; }
     .tab-btn { padding: 9px 12px; font-size: 13px; }
@@ -249,34 +255,52 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
 <p class="subtitle">오늘 추격할 영상 한곳에 · 매일 evening 21:30 자동 갱신</p>
 
 <div class="tabs">
-    <button class="tab-btn active" data-tab="t1">🚨 오늘 추격<span class="count">1</span></button>
+    <button class="tab-btn active" data-tab="t1">🚨 오늘 추격<span class="count">2</span></button>
     <button class="tab-btn" data-tab="t2">🔥 클러스터<span class="count">10</span></button>
     <button class="tab-btn" data-tab="t3">🎯 가이드</button>
     <button class="tab-btn" data-tab="t4">🔬 패턴<span class="count">32</span></button>
 </div>
 
-<div id="t1" class="tab-content active"><div class="bucket-block"><h3 class="bucket-h">📂 야담 <span class="count-pill">1편</span></h3><div class="hunt-list">
-                <a class="hunt-card p-warm" href="https://youtube.com/watch?v=Sh6zQioDxW0" target="_blank">
+<div id="t1" class="tab-content active"><div class="bucket-block"><h3 class="bucket-h">📂 야담 <span class="count-pill">2편</span></h3><div class="hunt-list">
+                <a class="hunt-card p-hot" href="https://youtube.com/watch?v=Sh6zQioDxW0" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">26.6<span>x</span></div>
-                        <div class="hc-d">D+5</div>
+                        <div class="hc-velo v-hot">12.0K<span>/일</span></div>
+                        <div class="hc-eff-small">효율 26.6x · D+5</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">[야담] "글도 모른다 업신여김 당한 주막집 딸, 새로 부임한 현감 나리가 그녀만 찾는 이유가…" | 오디오북 | 옛날이야기</div>
                         <div class="hc-meta">
                             <span class="meta-ch">📺 청림야담</span>
                             <span class="meta-subs">2.2K구독</span>
+                            <span class="meta-views">60,202뷰</span>
                             <span class="meta-kw">🔑 야담</span>
                         </div>
                     </div>
-                    <div class="hc-verdict">✅</div>
+                    <div class="hc-verdict">🚀 속도 폭발</div>
+                </a>
+            
+                <a class="hunt-card p-warm" href="https://youtube.com/watch?v=Naj-LZCSMxE" target="_blank">
+                    <div class="hc-left">
+                        <div class="hc-velo v-warm">5.3K<span>/일</span></div>
+                        <div class="hc-eff-small">효율 1.0x · D+0</div>
+                    </div>
+                    <div class="hc-body">
+                        <div class="hc-title">[야담] 괴력 며느리 복희가 악당집 뒤집었다｜숯덩이로 궁궐 뒤집은 술도가, 숯덩이로 궁궐 뒤집은 술도가 ㅣ옛날이야기 야담 설화 민담 인생지혜 수</div>
+                        <div class="hc-meta">
+                            <span class="meta-ch">📺 명품야담</span>
+                            <span class="meta-subs">5.2K구독</span>
+                            <span class="meta-views">5,336뷰</span>
+                            <span class="meta-kw">🔑 야담</span>
+                        </div>
+                    </div>
+                    <div class="hc-verdict">⚡ 속도 추격 가치</div>
                 </a>
             </div></div><p class="link"><a href="alerts.html">→ 폭발 알림 전체 보드</a></p></div>
 <div id="t2" class="tab-content"><div class="bucket-block"><h3 class="bucket-h">📂 야담 <span class="count-pill">3개</span></h3><div class="hunt-list">
                 <a class="hunt-card p-cool" href="https://youtube.com/watch?v=aI8A973spEw" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">41.6<span>x</span></div>
-                        <div class="hc-d">D+11</div>
+                        <div class="hc-velo v-hot">41.6<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+11</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">자객들에 쫓기던 왕비를 절벽으로 밀어버린 천재아이| 야담 | 조선시대 | 오디오북 | 전설 민담</div>
@@ -291,8 +315,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             
                 <a class="hunt-card p-cool" href="https://youtube.com/watch?v=MRgU9wXIxoQ" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">9.8<span>x</span></div>
-                        <div class="hc-d">D+11</div>
+                        <div class="hc-velo v-hot">9.8<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+11</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">7냥에 산 과부를 며느리로 들인 지혜로운 시어머니, 첫날부터 곳간 열쇠를 맡긴 이유 #옛날이야기 #민담 #수면동화 #오디오북 #야담</div>
@@ -307,8 +331,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             
                 <a class="hunt-card p-cool" href="https://youtube.com/watch?v=OSOP2wkM3Uk" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">6.7<span>x</span></div>
-                        <div class="hc-d">D+127</div>
+                        <div class="hc-velo v-hot">6.7<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+127</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">#&quot;저 버려진 낡은 집을 사주세요&quot;다섯 냥에 집을 판 천재아이의 제안| 옛날이야기 | 야담 | 민담 | 설화 | 드라마</div>
@@ -323,8 +347,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             </div></div><div class="bucket-block"><h3 class="bucket-h">📂 경제·시사 <span class="count-pill">7개</span></h3><div class="hunt-list">
                 <a class="hunt-card p-cool" href="https://youtube.com/watch?v=JPxtLP4eUQc" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">32.5<span>x</span></div>
-                        <div class="hc-d">D+45</div>
+                        <div class="hc-velo v-hot">32.5<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+45</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">&quot;파업? 다 나가세요&quot; 삼성 노조 45조원 성과급 요구에 사람 빼고 기계 쓴다, 일자리 잃게 생긴 노조의 최후</div>
@@ -339,8 +363,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             
                 <a class="hunt-card p-cool" href="https://youtube.com/watch?v=ZjKw83Hu-MM" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">52.8<span>x</span></div>
-                        <div class="hc-d">D+14</div>
+                        <div class="hc-velo v-hot">52.8<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+14</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">세탁기 만들던 LG가 세계 최초로 꺼낸 카드</div>
@@ -355,8 +379,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             
                 <a class="hunt-card p-warm" href="https://youtube.com/watch?v=GmVCT_CfQWU" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">15.5<span>x</span></div>
-                        <div class="hc-d">D+6</div>
+                        <div class="hc-velo v-hot">15.5<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+6</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">중국 삼협댐, 세계 최대 댐의 저주 #세계이슈</div>
@@ -371,8 +395,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             
                 <a class="hunt-card p-cool" href="https://youtube.com/watch?v=25tCUGqi6tY" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">28.7<span>x</span></div>
-                        <div class="hc-d">D+13</div>
+                        <div class="hc-velo v-hot">28.7<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+13</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">&quot;반도체 독식은 지속 불가능하다&quot; 월가가 조용히 매집 중인 AI</div>
@@ -387,8 +411,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             
                 <a class="hunt-card p-warm" href="https://youtube.com/watch?v=uFq-sr_ia6o" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">11.6<span>x</span></div>
-                        <div class="hc-d">D+9</div>
+                        <div class="hc-velo v-hot">11.6<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+9</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도</div>
@@ -403,8 +427,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             
                 <a class="hunt-card p-cool" href="https://youtube.com/watch?v=x2EkGjZA8Rc" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">8.2<span>x</span></div>
-                        <div class="hc-d">D+10</div>
+                        <div class="hc-velo v-hot">8.2<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+10</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">&quot;한국이 그렇게 무서운 시장이었어?&quot;스타벅스 탱크데이 한 줄에 미국 본사가 일주일 만에 무릎 꿇은 진짜 이유 #경제</div>
@@ -419,8 +443,8 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
             
                 <a class="hunt-card p-cool" href="https://youtube.com/watch?v=0cd6lty7pOs" target="_blank">
                     <div class="hc-left">
-                        <div class="hc-eff">6.3<span>x</span></div>
-                        <div class="hc-d">D+8</div>
+                        <div class="hc-velo v-hot">6.3<span>x</span></div>
+                        <div class="hc-eff-small">최대 효율 · D+8</div>
                     </div>
                     <div class="hc-body">
                         <div class="hc-title">만리장성 30%가 사라진 구조 아무도 막지 못하는 이유</div>
@@ -467,7 +491,7 @@ h1 { font-size: 28px; margin: 6px 0 2px; }
     <p class="link"><a href="copy_guide.html">→ 각 클러스터별 상세 분석 보기</a></p></div>
 <div id="t4" class="tab-content"><div class="bucket-block"><h3 class="bucket-h">📂 야담 <span class="count-pill">241편</span></h3><div class="pat-list"><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">3.08x</span><span class="pat-label">감정 어휘 (몰락·붕괴·패닉)</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">1.71x</span><span class="pat-label">장편 (≥30분)</span></div><div class="pat-row pat-down"><span class="pat-arrow">▼</span><span class="pat-boost">0.38x</span><span class="pat-label">제목 김 (≥80자)</span></div><div class="pat-row pat-down"><span class="pat-arrow">▼</span><span class="pat-boost">0.45x</span><span class="pat-label">제목 짧음 (≤40자)</span></div></div></div><div class="bucket-block"><h3 class="bucket-h">📂 경제·시사 <span class="count-pill">3,507편</span></h3><div class="pat-list"><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">5.57x</span><span class="pat-label">감정 어휘 (몰락·붕괴·패닉)</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">4.09x</span><span class="pat-label">시간 표현 (○년 만에·○시간 후)</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">3.07x</span><span class="pat-label">봉인어 사용 (진짜 이유·숨겨진·정체)</span></div><div class="pat-row pat-down"><span class="pat-arrow">▼</span><span class="pat-boost">0.15x</span><span class="pat-label">[○○○] 시리즈 라벨 박힘</span></div><div class="pat-row pat-down"><span class="pat-arrow">▼</span><span class="pat-boost">0.48x</span><span class="pat-label">따옴표 직인용 발언</span></div></div></div><div class="bucket-block"><h3 class="bucket-h">📂 잘듣네 <span class="count-pill">214편</span></h3><div class="pat-list"><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">8.52x</span><span class="pat-label">장편 (≥30분)</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">5.39x</span><span class="pat-label">[○○○] 시리즈 라벨 박힘</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">2.10x</span><span class="pat-label">공인 인물 본명 노출</span></div><div class="pat-row pat-down"><span class="pat-arrow">▼</span><span class="pat-boost">0.40x</span><span class="pat-label">물음표 사용</span></div></div></div><div class="bucket-block"><h3 class="bucket-h">📂 과학·건강 <span class="count-pill">875편</span></h3><div class="pat-list"><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">33.09x</span><span class="pat-label">[○○○] 시리즈 라벨 박힘</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">21.78x</span><span class="pat-label">장편 (≥30분)</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">6.97x</span><span class="pat-label">제목 짧음 (≤40자)</span></div><div class="pat-row pat-down"><span class="pat-arrow">▼</span><span class="pat-boost">0.01x</span><span class="pat-label">제목 김 (≥80자)</span></div><div class="pat-row pat-down"><span class="pat-arrow">▼</span><span class="pat-boost">0.03x</span><span class="pat-label">공인 인물 본명 노출</span></div></div></div><div class="bucket-block"><h3 class="bucket-h">🏷️ 시리즈 라벨 부스트 TOP 5</h3><div class="pat-list"><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">63.8x</span><span class="pat-label">[수면다큐]</span><span class="pat-sub">6편 · 5채널</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">7.6x</span><span class="pat-label">[지식뉴스]</span><span class="pat-sub">25편 · 2채널</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">5.3x</span><span class="pat-label">[통합본]</span><span class="pat-sub">6편 · 2채널</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">5.2x</span><span class="pat-label">[삼성전자 주가전망]</span><span class="pat-sub">3편 · 1채널</span></div><div class="pat-row pat-up"><span class="pat-arrow">▲</span><span class="pat-boost">4.7x</span><span class="pat-label">[EN]</span><span class="pat-sub">10편 · 1채널</span></div></div></div><p class="link"><a href="algo.html">→ 전체 알고리즘 패턴 분석 보기</a></p></div>
 
-<p class="meta-foot">갱신 · 2026-06-14 11:08:10 UTC</p>
+<p class="meta-foot">갱신 · 2026-06-14 15:01:07 UTC</p>
 
 <script>
 document.querySelectorAll('.tab-btn').forEach(btn => {

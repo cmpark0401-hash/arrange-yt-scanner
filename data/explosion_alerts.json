@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14 11:08:10 UTC",
+  "updated_at": "2026-06-14 15:01:07 UTC",
   "buckets": {
     "야담": [
       {
@@ -7,15 +7,32 @@
         "title": "[야담] \"글도 모른다 업신여김 당한 주막집 딸, 새로 부임한 현감 나리가 그녀만 찾는 이유가…\" | 오디오북 | 옛날이야기",
         "channel": "청림야담",
         "channel_subs": 2170,
-        "views": 57713,
-        "efficiency": 26.6,
-        "velocity_per_day": 0,
+        "views": 60202,
+        "efficiency": 26.64,
+        "velocity_per_day": 12040,
         "freshness_days": 5,
-        "verdict": "✅ 추격 가치 (D+7 윈도우)",
-        "priority": 2,
+        "verdict": "🚀 속도 폭발 (즉시 추격)",
+        "priority": 1,
+        "combined_score": 0.62,
         "found_via_keyword": "야담",
-        "snapshots_count": 1,
+        "snapshots_count": 2,
         "url": "https://youtube.com/watch?v=Sh6zQioDxW0"
+      },
+      {
+        "vid": "Naj-LZCSMxE",
+        "title": "[야담] 괴력 며느리 복희가 악당집 뒤집었다｜숯덩이로 궁궐 뒤집은 술도가, 숯덩이로 궁궐 뒤집은 술도가 ㅣ옛날이야기 야담 설화 민담 인생지혜 수면동화",
+        "channel": "명품야담",
+        "channel_subs": 5150,
+        "views": 5336,
+        "efficiency": 1.03,
+        "velocity_per_day": 5336,
+        "freshness_days": 0,
+        "verdict": "⚡ 속도 추격 가치",
+        "priority": 2,
+        "combined_score": 0.381,
+        "found_via_keyword": "야담",
+        "snapshots_count": 2,
+        "url": "https://youtube.com/watch?v=Naj-LZCSMxE"
       }
     ]
   }
