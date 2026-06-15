@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15 00:21:47 UTC",
+  "updated_at": "2026-06-15 02:39:24 UTC",
   "buckets": {
     "야담": {
       "video_count": 42,
@@ -248,9 +248,107 @@
       ]
     },
     "경제·시사": {
-      "video_count": 74,
-      "cluster_count": 7,
+      "video_count": 84,
+      "cluster_count": 8,
       "clusters": [
+        {
+          "cluster_size": 3,
+          "common_keywords": [
+            "quot",
+            "몰락",
+            "이유"
+          ],
+          "pioneer": {
+            "vid": "CzeJrO7FHic",
+            "channel": "지식왕천재",
+            "channel_subs": 12200,
+            "title": "직원들도 도망친다&quot; 한달 매출 83만원 줄폐업중인 터미널과 고속버스의 몰락, 그 진짜 이유",
+            "upload_date": "20260608",
+            "views": 502921,
+            "efficiency": 41.22,
+            "categories": [
+              "경제",
+              "시사"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "d_I4v0v2638",
+              "channel": "지식왕천재",
+              "channel_subs": 12200,
+              "title": "10조원 캠핑 제국의 몰락&quot; 사람들이 캠핑 안가는 진짜 이유",
+              "upload_date": "20260608",
+              "views": 90155,
+              "efficiency": 7.39,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "FqqgnjVzA_4",
+              "channel": "지식왕천재",
+              "channel_subs": 12200,
+              "title": "1년째 공실&quot; 20억 급락에 깡통으로 전락한 시그니엘의 몰락, 그 진짜 이유",
+              "upload_date": "20260612",
+              "views": 625355,
+              "efficiency": 51.26,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            }
+          ],
+          "days_active": 4,
+          "max_efficiency": 51.26,
+          "avg_efficiency": 33.29,
+          "max_views": 625355,
+          "freshness_days": 3,
+          "is_fresh": true,
+          "is_hot": true,
+          "videos": [
+            {
+              "vid": "CzeJrO7FHic",
+              "channel": "지식왕천재",
+              "channel_subs": 12200,
+              "title": "직원들도 도망친다&quot; 한달 매출 83만원 줄폐업중인 터미널과 고속버스의 몰락, 그 진짜 이유",
+              "upload_date": "20260608",
+              "views": 502921,
+              "efficiency": 41.22,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "d_I4v0v2638",
+              "channel": "지식왕천재",
+              "channel_subs": 12200,
+              "title": "10조원 캠핑 제국의 몰락&quot; 사람들이 캠핑 안가는 진짜 이유",
+              "upload_date": "20260608",
+              "views": 90155,
+              "efficiency": 7.39,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "FqqgnjVzA_4",
+              "channel": "지식왕천재",
+              "channel_subs": 12200,
+              "title": "1년째 공실&quot; 20억 급락에 깡통으로 전락한 시그니엘의 몰락, 그 진짜 이유",
+              "upload_date": "20260612",
+              "views": 625355,
+              "efficiency": 51.26,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            }
+          ],
+          "verdict": "🔥 즉시 추격 (D+3 안에 박을 것)"
+        },
         {
           "cluster_size": 3,
           "common_keywords": [
@@ -698,20 +796,20 @@
             {
               "vid": "LfjFrkOKvBA",
               "channel": "코믹스 경제",
-              "channel_subs": 2790,
+              "channel_subs": 2820,
               "title": "&quot;30년만에 뒤집힌 한일 관계&quot; 한국에게 다 뺏긴 일본, 한국이 추월한 진짜 이유",
               "upload_date": "20260614",
-              "views": 86521,
-              "efficiency": 31.01,
+              "views": 93677,
+              "efficiency": 33.22,
               "categories": [
                 "경제"
               ]
             }
           ],
           "days_active": 14,
-          "max_efficiency": 31.01,
-          "avg_efficiency": 14.95,
-          "max_views": 86521,
+          "max_efficiency": 33.22,
+          "avg_efficiency": 15.5,
+          "max_views": 93677,
           "freshness_days": 1,
           "is_fresh": true,
           "is_hot": true,
@@ -755,11 +853,11 @@
             {
               "vid": "LfjFrkOKvBA",
               "channel": "코믹스 경제",
-              "channel_subs": 2790,
+              "channel_subs": 2820,
               "title": "&quot;30년만에 뒤집힌 한일 관계&quot; 한국에게 다 뺏긴 일본, 한국이 추월한 진짜 이유",
               "upload_date": "20260614",
-              "views": 86521,
-              "efficiency": 31.01,
+              "views": 93677,
+              "efficiency": 33.22,
               "categories": [
                 "경제"
               ]

@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-15 10:22",
+  "generated_at": "2026-06-15 11:39",
   "total_commits": 80,
   "by_category": {
+    "style": 4,
     "other": 13,
-    "feat": 5,
-    "style": 3,
+    "feat": 4,
     "docs": 7,
     "data": 52
   },
   "recent_by_date": [
     {
       "date": "2026-06-15",
-      "count": 4,
+      "count": 5,
       "commits": [
+        {
+          "hash": "035491e",
+          "full_hash": "035491e68b7143d2bb8e619ce137d7dd0cba1ec6",
+          "ts": "2026-06-15 10:22",
+          "ts_iso": "2026-06-15T10:22:20",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 지식록 시리즈 라벨 옵션 C 하이브리드 박음 — 제목 X(부스트 회복) · 썸네일 우상단 작은 배지(시청자 인식) · 영상 설명 박음(검색 인덱싱). thumbnail-strategy.json series_l",
+          "category": "style",
+          "category_label": "🎨 디자인"
+        },
         {
           "hash": "ee4ed28",
           "full_hash": "ee4ed281b4ad4b43d3d4b8575eab06ebcc2c45f7",
@@ -513,6 +523,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "035491e",
+      "full_hash": "035491e68b7143d2bb8e619ce137d7dd0cba1ec6",
+      "ts": "2026-06-15 10:22",
+      "ts_iso": "2026-06-15T10:22:20",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 지식록 시리즈 라벨 옵션 C 하이브리드 박음 — 제목 X(부스트 회복) · 썸네일 우상단 작은 배지(시청자 인식) · 영상 설명 박음(검색 인덱싱). thumbnail-strategy.json series_l",
+      "category": "style",
+      "category_label": "🎨 디자인"
+    },
     {
       "hash": "ee4ed28",
       "full_hash": "ee4ed281b4ad4b43d3d4b8575eab06ebcc2c45f7",
@@ -1302,16 +1322,6 @@
       "subject": "auto: workboard 2026-06-05 11:18:28",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "2add95b",
-      "full_hash": "2add95b438c0b8acc3f656e9ec529d99962a5813",
-      "ts": "2026-06-05 11:17",
-      "ts_iso": "2026-06-05T11:17:13",
-      "author": "cmpark0401-hash",
-      "subject": "feat: 업데이트·오류 관리 시스템 (D 풀세트) + 4토픽 추가",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }
