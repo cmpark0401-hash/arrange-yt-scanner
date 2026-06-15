@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-15 10:17",
+  "generated_at": "2026-06-15 10:22",
   "total_commits": 80,
   "by_category": {
+    "other": 13,
     "feat": 5,
-    "other": 12,
     "style": 3,
     "docs": 7,
-    "data": 53
+    "data": 52
   },
   "recent_by_date": [
     {
       "date": "2026-06-15",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "ee4ed28",
+          "full_hash": "ee4ed281b4ad4b43d3d4b8575eab06ebcc2c45f7",
+          "ts": "2026-06-15 10:17",
+          "ts_iso": "2026-06-15T10:17:29",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 지식록 저성장 처방 박음 — 시리즈 라벨 0.15x·따옴표 0.46x·물음표 0.52x 데이터 기반. profile.md 알고리즘 처방 5룰(라벨/따옴표/물음표/봉인어/길이) + Hook 30초 직격형(김재민",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "9e8085d",
           "full_hash": "9e8085d7bdebba849a854aa9feb3bed124845fcd",
@@ -503,6 +513,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "ee4ed28",
+      "full_hash": "ee4ed281b4ad4b43d3d4b8575eab06ebcc2c45f7",
+      "ts": "2026-06-15 10:17",
+      "ts_iso": "2026-06-15T10:17:29",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 지식록 저성장 처방 박음 — 시리즈 라벨 0.15x·따옴표 0.46x·물음표 0.52x 데이터 기반. profile.md 알고리즘 처방 5룰(라벨/따옴표/물음표/봉인어/길이) + Hook 30초 직격형(김재민",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "9e8085d",
       "full_hash": "9e8085d7bdebba849a854aa9feb3bed124845fcd",
@@ -1292,16 +1312,6 @@
       "subject": "feat: 업데이트·오류 관리 시스템 (D 풀세트) + 4토픽 추가",
       "category": "feat",
       "category_label": "✨ 신규 기능"
-    },
-    {
-      "hash": "cdaf4e1",
-      "full_hash": "cdaf4e12e17ae7cf185a1dba0133cd7f7049a99d",
-      "ts": "2026-06-05 11:04",
-      "ts_iso": "2026-06-05T11:04:36",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-05 11:04:35",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }

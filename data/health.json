@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15 10:17",
+  "generated_at": "2026-06-15 10:22",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "56분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-15 09:21",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-15.json",
       "severity": "critical"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "55분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-15 09:21",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-15.json",
       "severity": "warning"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-15 10:17"
+      "updated_at": "2026-06-15 10:22"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
