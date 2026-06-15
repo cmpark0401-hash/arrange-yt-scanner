@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15 19:02",
+  "generated_at": "2026-06-16 00:07",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "7시간 전",
+      "ago": "12시간 전",
       "updated_at": "2026-06-15 11:38",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-15.json",
       "severity": "critical"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "7시간 전",
+      "ago": "12시간 전",
       "updated_at": "2026-06-15 11:39",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-15.json",
       "severity": "warning"
@@ -56,31 +56,31 @@
     },
     {
       "label": "🧪 과학 트렌드",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "1일 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "2일 전",
       "updated_at": "2026-06-13 21:46",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-13.json",
       "severity": "info"
     },
     {
       "label": "👴 시니어 탐사",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "1일 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "2일 전",
       "updated_at": "2026-06-13 22:15",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-13.json",
       "severity": "info"
     },
     {
       "label": "📋 워크보드",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "갱신 권장",
-      "ago": "10시간 전",
-      "updated_at": "2026-06-15 09:00",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "0분 전",
+      "updated_at": "2026-06-15T20:21:11",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
     },
@@ -90,46 +90,24 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-15 19:02"
+      "updated_at": "2026-06-16 00:07"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "부분 의심",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
       "ago": "실시간",
-      "detail": "전일대비 폭락 2개 채널",
+      "detail": "카나리·diff 모두 정상",
       "block_events_24h": 0,
-      "flagged_drops": [
-        {
-          "name": "까칠한 밍광의 경제학",
-          "yest_avg": 30975,
-          "today_avg": 156
-        },
-        {
-          "name": "엄마의 밤책",
-          "yest_avg": 30975,
-          "today_avg": 47
-        }
-      ],
+      "flagged_drops": [],
       "severity": "critical"
     }
   ],
   "data_trust": {
     "block_events_24h": 0,
-    "flagged_drops": [
-      {
-        "name": "까칠한 밍광의 경제학",
-        "yest_avg": 30975,
-        "today_avg": 156
-      },
-      {
-        "name": "엄마의 밤책",
-        "yest_avg": 30975,
-        "today_avg": 47
-      }
-    ],
-    "status": "stale"
+    "flagged_drops": [],
+    "status": "fresh"
   },
   "block_events": [
     {

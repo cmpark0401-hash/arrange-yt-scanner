@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-15 09:00",
-  "today": "2026-06-15",
+  "updated_at": "2026-06-15T20:21:11",
+  "today": "2026-06-16",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -5314,6 +5314,55 @@
             }
           ],
           "notes": "세계사 라인업 EP.9 첫 진입. [밤에 듣는 세계사 시리즈] 라벨 신규 사용. 30분 밤 트랙. 자극 0 (히파티아 살해·종교 갈등 추상화 의무). 라인업: EP.10 빅터 위고 또는 베네치아, EP.11 타지마할, EP.12 알람브라."
+        },
+        {
+          "id": "nn-20260613-ws2",
+          "category": "series",
+          "title": "EP.10 — 이원익, 6번 영의정의 두 칸 초가 [그 사람 시리즈]",
+          "type": "신규 (autopsy 카피)",
+          "rating": 5,
+          "tags": [
+            "EP.10",
+            "[그 사람 시리즈]",
+            "한국사",
+            "autopsy 92.5x",
+            "청백리"
+          ],
+          "merge_angle": "한 분의 한평생을, 그가 마지막으로 살았던 한 칸 초가에서 거꾸로 따라가 보시지요 — 영의정 6회·이순신 옹호·두 칸 초가의 결",
+          "sources_a": {
+            "channel": "한국사 채널 1편 (autopsy)",
+            "title": "영의정 6번·초가집",
+            "url": "https://www.youtube.com/watch?v=YZxZStqkwoc",
+            "efficiency": 92.53
+          },
+          "sources_b": {
+            "channel": "1차 사료",
+            "title": "조선왕조실록·오리집·난중일기",
+            "note": "DATA_PREP 보강"
+          },
+          "status": "ready_to_publish",
+          "checklist": {
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": false
+          },
+          "events": [
+            {
+              "ts": "2026-06-13 19:50",
+              "type": "in_progress",
+              "note": "20260613_10 프로젝트 생성, autopsy 1편 자막 재활용, seed 작성 완료. 30분 골든구간. 잘듣네 [그 사람 시리즈]"
+            },
+            {
+              "ts": "2026-06-13 20:30",
+              "type": "ready_to_publish",
+              "note": "20260613_10 전체 파이프라인 완료. 15,726자(488자/분 기준 32.2분, 시니어 TTS 290자/분 기준 약 54분). autopsy 1편 92.5x 카피 황금비 73~80%. Ch5 챕터제목 '폐모론'→'어머님 자리를 흔드는 결' 수정 완료."
+            }
+          ],
+          "notes": "autopsy 6편 부검 결과 직접 적용. 1편 92.5x 검증. 분량 30분 골든구간. Hook 통계형 + 충격 대비. 결말 시그니처형 (시청자 호명). 잘듣네 결 안전선 100% 통과."
         }
       ]
     },

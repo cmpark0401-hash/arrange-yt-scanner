@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-15 19:02",
+  "generated_at": "2026-06-16 00:07",
   "total_commits": 80,
   "by_category": {
+    "other": 14,
     "feat": 5,
     "style": 4,
-    "other": 13,
     "docs": 7,
-    "data": 51
+    "data": 50
   },
   "recent_by_date": [
     {
       "date": "2026-06-15",
-      "count": 6,
+      "count": 7,
       "commits": [
+        {
+          "hash": "d0ed8ef",
+          "full_hash": "d0ed8ef10123d982e16a9a15103c4c0b606e251d",
+          "ts": "2026-06-15 19:02",
+          "ts_iso": "2026-06-15T19:02:52",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 공인 인물 시스템 보강 — 21화 손흥민 누락 사건 학습. NAME_ALIASES +33명(스포츠 11·K-팝 17·글로벌 인사 5). 손흥민 등 캐시 워밍 33/34 완료. check_public_figur",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "0c44520",
           "full_hash": "0c4452082f294869068108df958129c4fb40b19b",
@@ -533,6 +543,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "d0ed8ef",
+      "full_hash": "d0ed8ef10123d982e16a9a15103c4c0b606e251d",
+      "ts": "2026-06-15 19:02",
+      "ts_iso": "2026-06-15T19:02:52",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 공인 인물 시스템 보강 — 21화 손흥민 누락 사건 학습. NAME_ALIASES +33명(스포츠 11·K-팝 17·글로벌 인사 5). 손흥민 등 캐시 워밍 33/34 완료. check_public_figur",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "0c44520",
       "full_hash": "0c4452082f294869068108df958129c4fb40b19b",
@@ -1320,16 +1340,6 @@
       "ts_iso": "2026-06-05T11:32:38",
       "author": "cmpark0401-hash",
       "subject": "auto: workboard 2026-06-05 11:32:38",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "8f6e83f",
-      "full_hash": "8f6e83f1fbec4de06c655fbad1adf3b20a01c2ec",
-      "ts": "2026-06-05 11:29",
-      "ts_iso": "2026-06-05T11:29:10",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-05 11:29:10",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }

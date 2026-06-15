@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-15 19:02",
+  "checked_at": "2026-06-16 00:07",
   "overall": "error",
   "overall_icon": "🔴",
   "overall_label": "오류 1건 · 경고 2건",
@@ -17,7 +17,7 @@
     {
       "name": "topic_id_unique",
       "status": "ok",
-      "msg": "총 202개 토픽 · 고유 ID 100%"
+      "msg": "총 203개 토픽 · 고유 ID 100%"
     },
     {
       "name": "html_element_ids",
