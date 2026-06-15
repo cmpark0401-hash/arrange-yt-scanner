@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-14 00:58:47 UTC",
-  "total_videos": 4943,
-  "videos_with_label": 550,
-  "videos_without_label": 4393,
-  "label_ratio": 11.1,
-  "unique_labels": 230,
+  "updated_at": "2026-06-15 00:21:47 UTC",
+  "total_videos": 5112,
+  "videos_with_label": 577,
+  "videos_without_label": 4535,
+  "label_ratio": 11.3,
+  "unique_labels": 239,
   "qualified_labels": 56,
   "labels": [
     {
@@ -22,8 +22,8 @@
       "avg_efficiency": 67.15,
       "max_efficiency": 401.5,
       "total_views": 6511769,
-      "baseline_efficiency": 1.05,
-      "boost_ratio": 63.75,
+      "baseline_efficiency": 1.0,
+      "boost_ratio": 67.16,
       "top_videos": [
         {
           "vid": "y78lBmYU0yE",
@@ -69,18 +69,18 @@
     },
     {
       "label": "지식뉴스",
-      "occurrences": 25,
+      "occurrences": 27,
       "channels": [
         "교양이를 부탁해",
         "스브스뉴스"
       ],
       "channel_count": 2,
       "is_multi_channel": true,
-      "avg_efficiency": 0.22,
+      "avg_efficiency": 0.21,
       "max_efficiency": 2.33,
-      "total_views": 2389063,
+      "total_views": 2481321,
       "baseline_efficiency": 0.03,
-      "boost_ratio": 7.56,
+      "boost_ratio": 7.21,
       "top_videos": [
         {
           "vid": "Y3otQoBcIeE",
@@ -137,7 +137,7 @@
       "max_efficiency": 0.41,
       "total_views": 395745,
       "baseline_efficiency": 0.03,
-      "boost_ratio": 5.27,
+      "boost_ratio": 5.23,
       "top_videos": [
         {
           "vid": "UXjVKKt1fcg",
@@ -182,46 +182,6 @@
       ]
     },
     {
-      "label": "삼성전자 주가전망",
-      "occurrences": 3,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.01,
-      "max_efficiency": 0.01,
-      "total_views": 8695,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 5.2,
-      "top_videos": [
-        {
-          "vid": "qOYwSsZc0Wk",
-          "channel": "주식곳간TV",
-          "title": "[삼성전자 주가전망] 어제 장중 +1.16% 반등 성공! 3분기 파운드리 4년 만에 흑자전환 유력 및 16일 글로벌 전략회의 앞두고 장시작 전 실시간 주식 시나리오",
-          "efficiency": 0.005979667282809612,
-          "views": 3235,
-          "upload_date": "20260611"
-        },
-        {
-          "vid": "B-dA0SEVCYM",
-          "channel": "주식곳간TV",
-          "title": "[삼성전자 주가전망] 하반기 본격적인 어닝 서프라이즈 실적 턴어라운드 오피셜 결합 속 다음 주 월요일 개장 즉시 때려 박아야 할 필승 브리핑 주말 단독확인",
-          "efficiency": 0.0052292051756007395,
-          "views": 2829,
-          "upload_date": "20260613"
-        },
-        {
-          "vid": "PEKzZlRbSmk",
-          "channel": "주식곳간TV",
-          "title": "[삼성전자 주가전망] 2나노 파운드리 4년 만의 흑자전환 임박 및 금요일 6천만 주 돌파 기반 내일 월요일 시초가에  선점해야 할  매매 시나리오 일요특집 확인요망",
-          "efficiency": 0.004863216266173752,
-          "views": 2631,
-          "upload_date": "20260613"
-        }
-      ]
-    },
-    {
       "label": "EN",
       "occurrences": 10,
       "channels": [
@@ -233,7 +193,7 @@
       "max_efficiency": 1.64,
       "total_views": 3735007,
       "baseline_efficiency": 0.1,
-      "boost_ratio": 4.74,
+      "boost_ratio": 4.99,
       "top_videos": [
         {
           "vid": "7Ndar87MKUQ",
@@ -278,6 +238,54 @@
       ]
     },
     {
+      "label": "삼성전자 주가전망",
+      "occurrences": 4,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.01,
+      "max_efficiency": 0.01,
+      "total_views": 11490,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 3.24,
+      "top_videos": [
+        {
+          "vid": "qOYwSsZc0Wk",
+          "channel": "주식곳간TV",
+          "title": "[삼성전자 주가전망] 어제 장중 +1.16% 반등 성공! 3분기 파운드리 4년 만에 흑자전환 유력 및 16일 글로벌 전략회의 앞두고 장시작 전 실시간 주식 시나리오",
+          "efficiency": 0.005979667282809612,
+          "views": 3235,
+          "upload_date": "20260611"
+        },
+        {
+          "vid": "B-dA0SEVCYM",
+          "channel": "주식곳간TV",
+          "title": "[삼성전자 주가전망] 하반기 본격적인 어닝 서프라이즈 실적 턴어라운드 오피셜 결합 속 다음 주 월요일 개장 즉시 때려 박아야 할 필승 브리핑 주말 단독확인",
+          "efficiency": 0.0052292051756007395,
+          "views": 2829,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "qMsqwRM8XWs",
+          "channel": "주식곳간TV",
+          "title": "[ 삼성전자 주가전망 ] 구글 2나노 AI 칩 수주 대형 오피셜 폭발! TSMC 포화 반사이익 직격타 맞고 오늘 월요일 아침 개장 상승 필승 매매 시나리오 전격공개",
+          "efficiency": 0.005166358595194085,
+          "views": 2795,
+          "upload_date": "20260614"
+        },
+        {
+          "vid": "PEKzZlRbSmk",
+          "channel": "주식곳간TV",
+          "title": "[삼성전자 주가전망] 2나노 파운드리 4년 만의 흑자전환 임박 및 금요일 6천만 주 돌파 기반 내일 월요일 시초가에  선점해야 할  매매 시나리오 일요특집 확인요망",
+          "efficiency": 0.004863216266173752,
+          "views": 2631,
+          "upload_date": "20260613"
+        }
+      ]
+    },
+    {
       "label": "한화오션 주가전망",
       "occurrences": 3,
       "channels": [
@@ -289,7 +297,7 @@
       "max_efficiency": 0.0,
       "total_views": 6165,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 3.68,
+      "boost_ratio": 2.31,
       "top_videos": [
         {
           "vid": "RPDPCWMsIpI",
@@ -329,7 +337,7 @@
       "max_efficiency": 0.3,
       "total_views": 900682,
       "baseline_efficiency": 0.12,
-      "boost_ratio": 1.96,
+      "boost_ratio": 1.97,
       "top_videos": [
         {
           "vid": "9QEjNmeB250",
@@ -374,110 +382,6 @@
       ]
     },
     {
-      "label": "#유퀴즈온더블럭",
-      "occurrences": 12,
-      "channels": [
-        "tvN D ENT"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.05,
-      "total_views": 283047,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 1.82,
-      "top_videos": [
-        {
-          "vid": "lwycbWG8gJI",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 윤성원 야-호★ 리센느 원이 유튜브 PD 윤성원 자기님이 영상을 연출하고 기획하는 법✍️",
-          "efficiency": 0.050006542056074764,
-          "views": 267535,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "waFWGMheVw0",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 선수가 너무 부담이 될 것 같아요💦 '김연아 키즈' 후배들을 보는 김연아의 마음💖",
-          "efficiency": 0.0011809701492537313,
-          "views": 6330,
-          "upload_date": "20260613"
-        },
-        {
-          "vid": "Fjdd40FrLJg",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 드라마 〈그 해 우리는〉 실제 주인공 등판✨ 10년 만에 다시 만난 전교 1등 X 전교 꼴등 근황",
-          "efficiency": 0.000471455223880597,
-          "views": 2527,
-          "upload_date": "20260613"
-        },
-        {
-          "vid": "txqeUtcPvQI",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 그알 제작진도 가슴 아팠다는 사건들💧 PD와 배차 기장에게 직접 듣는 사건 취재 썰🎥",
-          "efficiency": 0.00028654205607476634,
-          "views": 1533,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "ULyUCfb8PKk",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 남극에도 기후 위기가💦 빙하가 녹으면서 5만 년 만에 깨어난 좀비 바이러스⁉️",
-          "efficiency": 0.0002667289719626168,
-          "views": 1427,
-          "upload_date": "20260606"
-        }
-      ]
-    },
-    {
-      "label": "SK하이닉스 주가 전망",
-      "occurrences": 4,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.01,
-      "total_views": 3873,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 1.74,
-      "top_videos": [
-        {
-          "vid": "AyGyA1Uqcb0",
-          "channel": "주식곳간TV",
-          "title": "[SK하이닉스 주가 전망] CPI 지수 발표! 미국 시장 난리 났네요! 내일 무조건 이렇게 대응하자! sk하이닉스 주식 분석! #sk하이닉스 #sk하이닉스주가 #sk하이닉스주가전망",
-          "efficiency": 0.005664814814814815,
-          "views": 3059,
-          "upload_date": "20260610"
-        },
-        {
-          "vid": "Cvbb0eWCUJ4",
-          "channel": "주식곳간TV",
-          "title": "[SK하이닉스 주가 전망] HBM 메모리 반도체 슈퍼사이클 엔비디아 70%공급 확정?! #SK하이닉스",
-          "efficiency": 0.0005611111111111111,
-          "views": 303,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "uaquWe-m0fc",
-          "channel": "주식곳간TV",
-          "title": "[SK하이닉스 주가 전망] 신고가 갱신! HBM4 점유율 70% 지금 추격해도 될까 #SK하이닉스",
-          "efficiency": 0.0004981481481481482,
-          "views": 269,
-          "upload_date": "20260528"
-        },
-        {
-          "vid": "7S10entVCLs",
-          "channel": "주식곳간TV",
-          "title": "[SK하이닉스 주가 전망] 삼성전자 잡으러간다 HBM4 세계 최초 양산 베라루빈 핵심 공급 #SK하이닉스",
-          "efficiency": 0.00044814814814814815,
-          "views": 242,
-          "upload_date": "20260604"
-        }
-      ]
-    },
-    {
       "label": "🔴진중권 LIVE",
       "occurrences": 4,
       "channels": [
@@ -489,7 +393,7 @@
       "max_efficiency": 0.28,
       "total_views": 625373,
       "baseline_efficiency": 0.12,
-      "boost_ratio": 1.7,
+      "boost_ratio": 1.71,
       "top_videos": [
         {
           "vid": "Zd2isri-_Mc",
@@ -537,7 +441,7 @@
       "max_efficiency": 0.12,
       "total_views": 474415,
       "baseline_efficiency": 0.04,
-      "boost_ratio": 1.59,
+      "boost_ratio": 1.64,
       "top_videos": [
         {
           "vid": "xzGrR512MYg",
@@ -582,6 +486,158 @@
       ]
     },
     {
+      "label": "#유퀴즈온더블럭",
+      "occurrences": 18,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.05,
+      "total_views": 351517,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 1.53,
+      "top_videos": [
+        {
+          "vid": "lwycbWG8gJI",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 윤성원 야-호★ 리센느 원이 유튜브 PD 윤성원 자기님이 영상을 연출하고 기획하는 법✍️",
+          "efficiency": 0.050006542056074764,
+          "views": 267535,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "9kVhyEzQnLE",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 20년 전 560원이었던 젠슨 황의 엔비디아💦 유재석도 무릎을 치고 후회하며 외치는 &quot;그때 살걸&quot;🤣",
+          "efficiency": 0.010344216417910447,
+          "views": 55445,
+          "upload_date": "20260614"
+        },
+        {
+          "vid": "waFWGMheVw0",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 선수가 너무 부담이 될 것 같아요💦 '김연아 키즈' 후배들을 보는 김연아의 마음💖",
+          "efficiency": 0.0011809701492537313,
+          "views": 6330,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "8ua_wADmmVQ",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 조회수 2천 만의 주인공✨ 롤러코스트 타다가 기절한 ‘기절 남매’ 영상을 본 부모님 반응 ㅋㅋ",
+          "efficiency": 0.0006065298507462686,
+          "views": 3251,
+          "upload_date": "20260614"
+        },
+        {
+          "vid": "KfWugsrIqpw",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 〈그알〉 사무실에 직접 전화한 범인⁉️ 직접 캄보디아까지 가서 밝혀낸 23년 전 미제 사건😱",
+          "efficiency": 0.0005873134328358209,
+          "views": 3148,
+          "upload_date": "20260614"
+        }
+      ]
+    },
+    {
+      "label": "SK하이닉스 주가 전망",
+      "occurrences": 4,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.01,
+      "total_views": 3873,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 1.09,
+      "top_videos": [
+        {
+          "vid": "AyGyA1Uqcb0",
+          "channel": "주식곳간TV",
+          "title": "[SK하이닉스 주가 전망] CPI 지수 발표! 미국 시장 난리 났네요! 내일 무조건 이렇게 대응하자! sk하이닉스 주식 분석! #sk하이닉스 #sk하이닉스주가 #sk하이닉스주가전망",
+          "efficiency": 0.005664814814814815,
+          "views": 3059,
+          "upload_date": "20260610"
+        },
+        {
+          "vid": "Cvbb0eWCUJ4",
+          "channel": "주식곳간TV",
+          "title": "[SK하이닉스 주가 전망] HBM 메모리 반도체 슈퍼사이클 엔비디아 70%공급 확정?! #SK하이닉스",
+          "efficiency": 0.0005611111111111111,
+          "views": 303,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "uaquWe-m0fc",
+          "channel": "주식곳간TV",
+          "title": "[SK하이닉스 주가 전망] 신고가 갱신! HBM4 점유율 70% 지금 추격해도 될까 #SK하이닉스",
+          "efficiency": 0.0004981481481481482,
+          "views": 269,
+          "upload_date": "20260528"
+        },
+        {
+          "vid": "7S10entVCLs",
+          "channel": "주식곳간TV",
+          "title": "[SK하이닉스 주가 전망] 삼성전자 잡으러간다 HBM4 세계 최초 양산 베라루빈 핵심 공급 #SK하이닉스",
+          "efficiency": 0.00044814814814814815,
+          "views": 242,
+          "upload_date": "20260604"
+        }
+      ]
+    },
+    {
+      "label": "#언더커버셰프",
+      "occurrences": 4,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.01,
+      "total_views": 49894,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.98,
+      "top_videos": [
+        {
+          "vid": "O4h076kfAd0",
+          "channel": "tvN D ENT",
+          "title": "[#언더커버셰프] 숨겨지지 않는 경력직의 향기💦 몸이 먼저 반응하는 위장 막내 샘 킴 | #번개클립",
+          "efficiency": 0.006362056074766355,
+          "views": 34037,
+          "upload_date": "20260607"
+        },
+        {
+          "vid": "PqbVJ_w6t8g",
+          "channel": "tvN D ENT",
+          "title": "[#언더커버셰프] 사장님 모드 ON💡앉아서 쉬는 직원들 보고 사장님 입장에 이입한 정지선 | #번개클립",
+          "efficiency": 0.0015560747663551401,
+          "views": 8325,
+          "upload_date": "20260607"
+        },
+        {
+          "vid": "SQzbUY676Qw",
+          "channel": "tvN D ENT",
+          "title": "[#언더커버셰프] 몰래 손 한번 풀고 중식 여왕 눈빛 장착😏 막내 위장을 위한 정지선의 완급 조절 ㅋㅋ",
+          "efficiency": 0.0010641121495327103,
+          "views": 5693,
+          "upload_date": "20260529"
+        },
+        {
+          "vid": "bfI6gCl7m7k",
+          "channel": "tvN D ENT",
+          "title": "[#언더커버셰프] 자신감 넘쳤던 권성준도 잠시...💦 선배의 밀착 잡도리에 안색 퀭해진 권성준🤣",
+          "efficiency": 0.0003430970149253731,
+          "views": 1839,
+          "upload_date": "20260613"
+        }
+      ]
+    },
+    {
       "label": "LG전자 주가 전망",
       "occurrences": 6,
       "channels": [
@@ -593,7 +649,7 @@
       "max_efficiency": 0.0,
       "total_views": 4003,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 1.2,
+      "boost_ratio": 0.75,
       "top_videos": [
         {
           "vid": "uilYzEVhRSk",
@@ -634,54 +690,6 @@
           "efficiency": 0.00037037037037037035,
           "views": 200,
           "upload_date": "20260602"
-        }
-      ]
-    },
-    {
-      "label": "#언더커버셰프",
-      "occurrences": 4,
-      "channels": [
-        "tvN D ENT"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.01,
-      "total_views": 49894,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.96,
-      "top_videos": [
-        {
-          "vid": "O4h076kfAd0",
-          "channel": "tvN D ENT",
-          "title": "[#언더커버셰프] 숨겨지지 않는 경력직의 향기💦 몸이 먼저 반응하는 위장 막내 샘 킴 | #번개클립",
-          "efficiency": 0.006362056074766355,
-          "views": 34037,
-          "upload_date": "20260607"
-        },
-        {
-          "vid": "PqbVJ_w6t8g",
-          "channel": "tvN D ENT",
-          "title": "[#언더커버셰프] 사장님 모드 ON💡앉아서 쉬는 직원들 보고 사장님 입장에 이입한 정지선 | #번개클립",
-          "efficiency": 0.0015560747663551401,
-          "views": 8325,
-          "upload_date": "20260607"
-        },
-        {
-          "vid": "SQzbUY676Qw",
-          "channel": "tvN D ENT",
-          "title": "[#언더커버셰프] 몰래 손 한번 풀고 중식 여왕 눈빛 장착😏 막내 위장을 위한 정지선의 완급 조절 ㅋㅋ",
-          "efficiency": 0.0010641121495327103,
-          "views": 5693,
-          "upload_date": "20260529"
-        },
-        {
-          "vid": "bfI6gCl7m7k",
-          "channel": "tvN D ENT",
-          "title": "[#언더커버셰프] 자신감 넘쳤던 권성준도 잠시...💦 선배의 밀착 잡도리에 안색 퀭해진 권성준🤣",
-          "efficiency": 0.0003430970149253731,
-          "views": 1839,
-          "upload_date": "20260613"
         }
       ]
     },
@@ -830,62 +838,6 @@
       ]
     },
     {
-      "label": "삼성전기 주가 전망",
-      "occurrences": 5,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 1920,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.69,
-      "top_videos": [
-        {
-          "vid": "FVe0WMuNzCg",
-          "channel": "주식곳간TV",
-          "title": "[삼성전기 주가 전망] 매일 신고가 갱신! 추격 매수 vs 단기 과열 진입 타점 공개 #삼성전기",
-          "efficiency": 0.0015277777777777779,
-          "views": 825,
-          "upload_date": "20260529"
-        },
-        {
-          "vid": "ebXUJ736PTw",
-          "channel": "주식곳간TV",
-          "title": "[삼성전기 주가 전망] 삼성전기 결국 끝판왕 되나? 22% 급락했는데, 목표가 210만원 상향 나온 진짜 이유! 주주님 &quot;지금&quot; 필수시청 #삼성전기",
-          "efficiency": 0.0006740740740740741,
-          "views": 364,
-          "upload_date": "20260604"
-        },
-        {
-          "vid": "Pwbm1MTXA34",
-          "channel": "주식곳간TV",
-          "title": "[삼성전기 주가 전망] 급락 이유는 알고 넘어가자 AI 부품 7거래일 상승 목표가 상향 과열? #삼성전기",
-          "efficiency": 0.0005759259259259259,
-          "views": 311,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "Zrq63gi0DQ4",
-          "channel": "주식곳간TV",
-          "title": "[삼성전기 주가 전망] 삼성전기 결국 흔들렸다! 25% 급락했는데 목표가 210만원 올린 진짜 이유. 급락 뒤 역대급 반등 나올까? &quot;지금 주주님들 필수시청 #삼성전기",
-          "efficiency": 0.00042962962962962963,
-          "views": 232,
-          "upload_date": "20260605"
-        },
-        {
-          "vid": "YnsukZD6eXQ",
-          "channel": "주식곳간TV",
-          "title": "[삼성전기 주가 전망] 신고가 후 차익실현 조정 그 이유는? #삼성전기",
-          "efficiency": 0.00034814814814814816,
-          "views": 188,
-          "upload_date": "20260605"
-        }
-      ]
-    },
-    {
       "label": "정품쇼 몰아보기",
       "occurrences": 4,
       "channels": [
@@ -983,54 +935,6 @@
       ]
     },
     {
-      "label": "네이처셀 주가 전망",
-      "occurrences": 4,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 1175,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.53,
-      "top_videos": [
-        {
-          "vid": "2vsRo9NN28U",
-          "channel": "주식곳간TV",
-          "title": "[네이처셀 주가 전망] 신고가 찍자마자 매물 폭탄? FDA 기대감은 그대로인데 주가만 폭락? 시장이 줄기세포 대장주 숨긴 진짜 이유! 주주님들 필수시청 #네이처셀",
-          "efficiency": 0.0005814814814814814,
-          "views": 314,
-          "upload_date": "20260608"
-        },
-        {
-          "vid": "sWY639OrVFU",
-          "channel": "주식곳간TV",
-          "title": "[네이처셀 주가 전망] 신고가 이후 급락 이유. 2연속 상한가와 FDA 허가 기대감! 매물 폭탄 경고! &quot;지금&quot; 매수 타이밍인가? 주주님들 필수시청 #네이처셀",
-          "efficiency": 0.0005666666666666667,
-          "views": 306,
-          "upload_date": "20260601"
-        },
-        {
-          "vid": "W33PO25ailA",
-          "channel": "주식곳간TV",
-          "title": "[네이처셀 주가 전망] 이틀 연속 상한가 줄기세포 슈퍼사이클 앞으로 여기까지간다 집중해야합니다 #네이처셀",
-          "efficiency": 0.0005185185185185185,
-          "views": 280,
-          "upload_date": "20260528"
-        },
-        {
-          "vid": "X_UpAj4868Q",
-          "channel": "주식곳간TV",
-          "title": "[네이처셀 주가 전망] 추가 임상 없이 미국 허가 신청?! 줄기세포 대장주 #네이처셀",
-          "efficiency": 0.0005092592592592592,
-          "views": 275,
-          "upload_date": "20260604"
-        }
-      ]
-    },
-    {
       "label": "🔴김종혁·김준일 LIVE",
       "occurrences": 3,
       "channels": [
@@ -1042,7 +946,7 @@
       "max_efficiency": 0.09,
       "total_views": 141273,
       "baseline_efficiency": 0.12,
-      "boost_ratio": 0.51,
+      "boost_ratio": 0.52,
       "top_videos": [
         {
           "vid": "_GTj5ndlisU",
@@ -1071,286 +975,6 @@
       ]
     },
     {
-      "label": "삼성중공업 주가 전망",
-      "occurrences": 3,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 855,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.51,
-      "top_videos": [
-        {
-          "vid": "3XQtNPwGFDA",
-          "channel": "주식곳간TV",
-          "title": "[삼성중공업 주가 전망] 3만5천원 신고가 후 폭락에 개미들 공포 매도! 하지만 영업이익 122% 폭증, LNG 슈퍼사이클 시작되나? &quot;지금&quot; 주주님들 필수시청 ! #삼성중공업",
-          "efficiency": 0.0006037037037037037,
-          "views": 326,
-          "upload_date": "20260601"
-        },
-        {
-          "vid": "_RQeLexwtFI",
-          "channel": "주식곳간TV",
-          "title": "[삼성중공업 주가 전망] 삼성중공업 결국 방향 나왔다! 4조 수주 터지자 9% 급등. 진짜 상승은 이제부터? 주주님들 &quot;이 곳&quot; 입니다. #삼성중공업",
-          "efficiency": 0.0005018518518518519,
-          "views": 271,
-          "upload_date": "20260604"
-        },
-        {
-          "vid": "LCT5P_JG8eY",
-          "channel": "주식곳간TV",
-          "title": "[삼성중공업 주가 전망] 조선주 매물 폭탄 터졌다! 신저가 추락 후 투자자들 패닉 상태, 하지만 역대급 수주잔고 쌓이는 삼성중공업의 반전? 주주님들 &quot;지금&quot; 필수시청 #삼성중공업",
-          "efficiency": 0.00047777777777777776,
-          "views": 258,
-          "upload_date": "20260608"
-        }
-      ]
-    },
-    {
-      "label": "삼성에스디에스 주가 전망",
-      "occurrences": 4,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 1089,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.49,
-      "top_videos": [
-        {
-          "vid": "-wh4KcjWGeI",
-          "channel": "주식곳간TV",
-          "title": "[삼성에스디에스 주가 전망] 악재없는데 급락? AI 데이터센터 클라우드 수요 급증 재평가 #삼성에스디에스",
-          "efficiency": 0.0005925925925925926,
-          "views": 320,
-          "upload_date": "20260604"
-        },
-        {
-          "vid": "ei63kDwgoio",
-          "channel": "주식곳간TV",
-          "title": "[삼성에스디에스 주가 전망] 급락 차익실현 매물 소화 두나무 지분 취득 디지털자산 동맹 #삼성에스디에스",
-          "efficiency": 0.000524074074074074,
-          "views": 283,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "q19gkPJceY8",
-          "channel": "주식곳간TV",
-          "title": "[삼성에스디에스 주가 전망] AI 데이터센터 대장주 등극, 또한 두나무 인수로 폭등?! #삼성SDS",
-          "efficiency": 0.00045555555555555556,
-          "views": 246,
-          "upload_date": "20260601"
-        },
-        {
-          "vid": "nU0FspbnYnU",
-          "channel": "주식곳간TV",
-          "title": "[삼성에스디에스 주가 전망] AI 서버·데이터센터 수혜주?! 급등 후 변동성 폭발 #삼성SDS",
-          "efficiency": 0.00044444444444444447,
-          "views": 240,
-          "upload_date": "20260604"
-        }
-      ]
-    },
-    {
-      "label": "LG씨엔에스 주가 전망",
-      "occurrences": 3,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 822,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.49,
-      "top_videos": [
-        {
-          "vid": "3UlO21tBirg",
-          "channel": "주식곳간TV",
-          "title": "[LG씨엔에스 주가 전망] AI 클라우드 대장주 신고가?! 구광모 젠슨 황 회동 주목 #LG씨엔에스",
-          "efficiency": 0.0005314814814814815,
-          "views": 287,
-          "upload_date": "20260604"
-        },
-        {
-          "vid": "zB_G8eJBmTo",
-          "channel": "주식곳간TV",
-          "title": "[LG씨엔에스 주가 전망] 신고가 후 급락! 주목 호재는 1분기 실적 성장 AI클라우드 비중 증가 수주DBO 1위 #LG씨엔에스",
-          "efficiency": 0.0005222222222222222,
-          "views": 282,
-          "upload_date": "20260608"
-        },
-        {
-          "vid": "CVtAhOTkOHY",
-          "channel": "주식곳간TV",
-          "title": "[LG씨엔에스 주가 전망] LG그룹 밸류체인 핵심 AI 데이터센터 클라우드 #LG씨엔에스",
-          "efficiency": 0.0004685185185185185,
-          "views": 253,
-          "upload_date": "20260604"
-        }
-      ]
-    },
-    {
-      "label": "주성엔지니어링 주가 전망",
-      "occurrences": 5,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 1266,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.45,
-      "top_videos": [
-        {
-          "vid": "c7-M_7H-upA",
-          "channel": "주식곳간TV",
-          "title": "[주성엔지니어링 주가 전망] ALD 글로벌 4위, 세계 최초 ALG 차세대 장비 글로벌 출하! &quot;지금&quot; 주주님들 필수시청 #주성엔지니어링",
-          "efficiency": 0.0005592592592592592,
-          "views": 302,
-          "upload_date": "20260528"
-        },
-        {
-          "vid": "2XnaN9Wm7zM",
-          "channel": "주식곳간TV",
-          "title": "[주성엔지니어링 주가 전망] 주성엔지니어링 드디어 터졌다! 신고가 25만원 재도전, ALD 세계 최초 상용화. 시총 10조 반도체 장비 대장주 되나? #주성엔지니어링",
-          "efficiency": 0.00044814814814814815,
-          "views": 242,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "Em4cRvQ0aME",
-          "channel": "주식곳간TV",
-          "title": "[주성엔지니어링 주가 전망] 반도체 장비 테마 폭발?! AI 반도체 투자 사이클 수혜 매수타이밍은? #주성엔지니어링",
-          "efficiency": 0.0004462962962962963,
-          "views": 241,
-          "upload_date": "20260604"
-        },
-        {
-          "vid": "uYY9N86EzRM",
-          "channel": "주식곳간TV",
-          "title": "[주성엔지니어링 주가 전망] 주주분들 큰일났습니다! 신고가 찍고 -16% 폭락, 다음 거래일 어떻게? 주주님들 &quot;지금&quot; 필수시청 #주성엔지니어링",
-          "efficiency": 0.0004462962962962963,
-          "views": 241,
-          "upload_date": "20260608"
-        },
-        {
-          "vid": "MF6AMCeM4-8",
-          "channel": "주식곳간TV",
-          "title": "[주성엔지니어링 주가 전망] 결국 터졌다! 세계 최초 반도체 장비 출하. AI 반도체 슈퍼사이클 최대 수혜주 되나? 주주님들 \"여기\" 입니다. #주성엔지니어링",
-          "efficiency": 0.00044444444444444447,
-          "views": 240,
-          "upload_date": "20260603"
-        }
-      ]
-    },
-    {
-      "label": "나무기술 주가 전망",
-      "occurrences": 6,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 1498,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.45,
-      "top_videos": [
-        {
-          "vid": "oefSh1sxm0k",
-          "channel": "주식곳간TV",
-          "title": "[나무기술 주가 전망] 클라우드·에이전틱 AI 플랫폼 부각, 강세 흐름 및 레드햇과 에이전틱 AI 공동 개발! &quot;지금&quot; 주주님들 필수시청 #나무기술",
-          "efficiency": 0.0004981481481481482,
-          "views": 269,
-          "upload_date": "20260529"
-        },
-        {
-          "vid": "PBFPDtHIOVU",
-          "channel": "주식곳간TV",
-          "title": "[나무기술 주가 전망] 클라우드·AI 테마 과열 경고, 하지만 서울관광재단MOU로 인한 내일 마지막 기회? #나무기술",
-          "efficiency": 0.00047222222222222224,
-          "views": 255,
-          "upload_date": "20260601"
-        },
-        {
-          "vid": "RqufZCtUjR4",
-          "channel": "주식곳간TV",
-          "title": "[나무기술 주가 전망] 투자경고라는 악재에서도 서울관광재단 MOU MCP서버 호재는 살아있다! #나무기술",
-          "efficiency": 0.000462962962962963,
-          "views": 250,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "nksVyl8ODxs",
-          "channel": "주식곳간TV",
-          "title": "[나무기술 주가 전망] 나무기술 폭락은 함정이었다? 매출 117% 폭증에도 눌렸던 진짜 이유! &quot;지금&quot; 주주님들 필수시청 #나무기술",
-          "efficiency": 0.00045185185185185183,
-          "views": 244,
-          "upload_date": "20260604"
-        },
-        {
-          "vid": "GyfJ6N1TpxY",
-          "channel": "주식곳간TV",
-          "title": "[나무기술 주가 전망] 흑자전환 장마감 강한 반등 매물대 지지 정배열 회복 #나무기술",
-          "efficiency": 0.00044444444444444447,
-          "views": 240,
-          "upload_date": "20260604"
-        }
-      ]
-    },
-    {
-      "label": "두산로보틱스 주가 전망",
-      "occurrences": 3,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 731,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.44,
-      "top_videos": [
-        {
-          "vid": "7U5F7rQYngY",
-          "channel": "주식곳간TV",
-          "title": "[두산로보틱스 주가 전망] 오늘 젠슨황 방한 협동로봇 모멘텀 #두산로보틱스",
-          "efficiency": 0.0004574074074074074,
-          "views": 247,
-          "upload_date": "20260604"
-        },
-        {
-          "vid": "x5FQEqCJZio",
-          "channel": "주식곳간TV",
-          "title": "[두산로보틱스 주가 전망] 반도체 다음은 로봇주?! 엔비디아 수혜 기대감 상승! #두산로보틱스",
-          "efficiency": 0.00045,
-          "views": 243,
-          "upload_date": "20260603"
-        },
-        {
-          "vid": "dBHMFyL0l9Y",
-          "channel": "주식곳간TV",
-          "title": "[두산로보틱스 주가 전망] 젠슨황 방한 상한가 엔비디아 협력 기대 #두산로보틱스",
-          "efficiency": 0.0004462962962962963,
-          "views": 241,
-          "upload_date": "20260607"
-        }
-      ]
-    },
-    {
       "label": "하이라이트",
       "occurrences": 3,
       "channels": [
@@ -1362,7 +986,7 @@
       "max_efficiency": 0.0,
       "total_views": 17148,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 0.44,
+      "boost_ratio": 0.45,
       "top_videos": [
         {
           "vid": "hFmj4hSo9kc",
@@ -1391,8 +1015,8 @@
       ]
     },
     {
-      "label": "LG이노텍 주가 전망",
-      "occurrences": 4,
+      "label": "삼성전기 주가 전망",
+      "occurrences": 5,
       "channels": [
         "주식곳간TV"
       ],
@@ -1400,57 +1024,65 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
       "max_efficiency": 0.0,
-      "total_views": 966,
+      "total_views": 1920,
       "baseline_efficiency": 0.0,
       "boost_ratio": 0.43,
       "top_videos": [
         {
-          "vid": "QfLZjhSwphA",
+          "vid": "FVe0WMuNzCg",
           "channel": "주식곳간TV",
-          "title": "[LG이노텍 주가 전망] LG이노텍 큰일 났다! 신고가 181만원 찍고 22% 급락. 영업이익 136% 폭증에도 폭락한 진짜 이유는? \"지금\" 주주님들 필수시청 #LG이노텍",
-          "efficiency": 0.0004537037037037037,
-          "views": 245,
-          "upload_date": "20260602"
+          "title": "[삼성전기 주가 전망] 매일 신고가 갱신! 추격 매수 vs 단기 과열 진입 타점 공개 #삼성전기",
+          "efficiency": 0.0015277777777777779,
+          "views": 825,
+          "upload_date": "20260529"
         },
         {
-          "vid": "q_7cEQlpXWg",
+          "vid": "ebXUJ736PTw",
           "channel": "주식곳간TV",
-          "title": "[LG이노텍 주가 전망] AI 기판 목표가 200만원 상승, 추격 전에 꼭 보세요! 매수자리 확인바람! #LG이노텍",
-          "efficiency": 0.0004462962962962963,
-          "views": 241,
-          "upload_date": "20260607"
-        },
-        {
-          "vid": "Or8A4fGQsNU",
-          "channel": "주식곳간TV",
-          "title": "[LG이노텍 주가 전망] 신고가 직후 급 폭락 엔비디아 젠승황 방한 기대 #LG이노텍",
-          "efficiency": 0.00044444444444444447,
-          "views": 240,
+          "title": "[삼성전기 주가 전망] 삼성전기 결국 끝판왕 되나? 22% 급락했는데, 목표가 210만원 상향 나온 진짜 이유! 주주님 &quot;지금&quot; 필수시청 #삼성전기",
+          "efficiency": 0.0006740740740740741,
+          "views": 364,
           "upload_date": "20260604"
         },
         {
-          "vid": "Fg-L1mnCPMU",
+          "vid": "Pwbm1MTXA34",
           "channel": "주식곳간TV",
-          "title": "[LG이노텍 주가 전망] LG이노텍 36% 폭락 끝났나? 베트남 2배 증설에 큰손들 다시 움직인다! 주주님들을 위한 필수영상. &quot;이 곳&quot; 입니다 #LG이노텍",
-          "efficiency": 0.00044444444444444447,
-          "views": 240,
-          "upload_date": "20260607"
+          "title": "[삼성전기 주가 전망] 급락 이유는 알고 넘어가자 AI 부품 7거래일 상승 목표가 상향 과열? #삼성전기",
+          "efficiency": 0.0005759259259259259,
+          "views": 311,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "Zrq63gi0DQ4",
+          "channel": "주식곳간TV",
+          "title": "[삼성전기 주가 전망] 삼성전기 결국 흔들렸다! 25% 급락했는데 목표가 210만원 올린 진짜 이유. 급락 뒤 역대급 반등 나올까? &quot;지금 주주님들 필수시청 #삼성전기",
+          "efficiency": 0.00042962962962962963,
+          "views": 232,
+          "upload_date": "20260605"
+        },
+        {
+          "vid": "YnsukZD6eXQ",
+          "channel": "주식곳간TV",
+          "title": "[삼성전기 주가 전망] 신고가 후 차익실현 조정 그 이유는? #삼성전기",
+          "efficiency": 0.00034814814814814816,
+          "views": 188,
+          "upload_date": "20260605"
         }
       ]
     },
     {
       "label": "버디버디",
-      "occurrences": 7,
+      "occurrences": 8,
       "channels": [
         "머니코믹스"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
-      "avg_efficiency": 0.05,
+      "avg_efficiency": 0.04,
       "max_efficiency": 0.06,
-      "total_views": 443692,
+      "total_views": 473806,
       "baseline_efficiency": 0.11,
-      "boost_ratio": 0.42,
+      "boost_ratio": 0.4,
       "top_videos": [
         {
           "vid": "74bVij9v3EY",
@@ -1551,6 +1183,182 @@
       ]
     },
     {
+      "label": "네이처셀 주가 전망",
+      "occurrences": 4,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 1175,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.33,
+      "top_videos": [
+        {
+          "vid": "2vsRo9NN28U",
+          "channel": "주식곳간TV",
+          "title": "[네이처셀 주가 전망] 신고가 찍자마자 매물 폭탄? FDA 기대감은 그대로인데 주가만 폭락? 시장이 줄기세포 대장주 숨긴 진짜 이유! 주주님들 필수시청 #네이처셀",
+          "efficiency": 0.0005814814814814814,
+          "views": 314,
+          "upload_date": "20260608"
+        },
+        {
+          "vid": "sWY639OrVFU",
+          "channel": "주식곳간TV",
+          "title": "[네이처셀 주가 전망] 신고가 이후 급락 이유. 2연속 상한가와 FDA 허가 기대감! 매물 폭탄 경고! &quot;지금&quot; 매수 타이밍인가? 주주님들 필수시청 #네이처셀",
+          "efficiency": 0.0005666666666666667,
+          "views": 306,
+          "upload_date": "20260601"
+        },
+        {
+          "vid": "W33PO25ailA",
+          "channel": "주식곳간TV",
+          "title": "[네이처셀 주가 전망] 이틀 연속 상한가 줄기세포 슈퍼사이클 앞으로 여기까지간다 집중해야합니다 #네이처셀",
+          "efficiency": 0.0005185185185185185,
+          "views": 280,
+          "upload_date": "20260528"
+        },
+        {
+          "vid": "X_UpAj4868Q",
+          "channel": "주식곳간TV",
+          "title": "[네이처셀 주가 전망] 추가 임상 없이 미국 허가 신청?! 줄기세포 대장주 #네이처셀",
+          "efficiency": 0.0005092592592592592,
+          "views": 275,
+          "upload_date": "20260604"
+        }
+      ]
+    },
+    {
+      "label": "삼성중공업 주가 전망",
+      "occurrences": 3,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 855,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.32,
+      "top_videos": [
+        {
+          "vid": "3XQtNPwGFDA",
+          "channel": "주식곳간TV",
+          "title": "[삼성중공업 주가 전망] 3만5천원 신고가 후 폭락에 개미들 공포 매도! 하지만 영업이익 122% 폭증, LNG 슈퍼사이클 시작되나? &quot;지금&quot; 주주님들 필수시청 ! #삼성중공업",
+          "efficiency": 0.0006037037037037037,
+          "views": 326,
+          "upload_date": "20260601"
+        },
+        {
+          "vid": "_RQeLexwtFI",
+          "channel": "주식곳간TV",
+          "title": "[삼성중공업 주가 전망] 삼성중공업 결국 방향 나왔다! 4조 수주 터지자 9% 급등. 진짜 상승은 이제부터? 주주님들 &quot;이 곳&quot; 입니다. #삼성중공업",
+          "efficiency": 0.0005018518518518519,
+          "views": 271,
+          "upload_date": "20260604"
+        },
+        {
+          "vid": "LCT5P_JG8eY",
+          "channel": "주식곳간TV",
+          "title": "[삼성중공업 주가 전망] 조선주 매물 폭탄 터졌다! 신저가 추락 후 투자자들 패닉 상태, 하지만 역대급 수주잔고 쌓이는 삼성중공업의 반전? 주주님들 &quot;지금&quot; 필수시청 #삼성중공업",
+          "efficiency": 0.00047777777777777776,
+          "views": 258,
+          "upload_date": "20260608"
+        }
+      ]
+    },
+    {
+      "label": "삼성에스디에스 주가 전망",
+      "occurrences": 4,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 1089,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.31,
+      "top_videos": [
+        {
+          "vid": "-wh4KcjWGeI",
+          "channel": "주식곳간TV",
+          "title": "[삼성에스디에스 주가 전망] 악재없는데 급락? AI 데이터센터 클라우드 수요 급증 재평가 #삼성에스디에스",
+          "efficiency": 0.0005925925925925926,
+          "views": 320,
+          "upload_date": "20260604"
+        },
+        {
+          "vid": "ei63kDwgoio",
+          "channel": "주식곳간TV",
+          "title": "[삼성에스디에스 주가 전망] 급락 차익실현 매물 소화 두나무 지분 취득 디지털자산 동맹 #삼성에스디에스",
+          "efficiency": 0.000524074074074074,
+          "views": 283,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "q19gkPJceY8",
+          "channel": "주식곳간TV",
+          "title": "[삼성에스디에스 주가 전망] AI 데이터센터 대장주 등극, 또한 두나무 인수로 폭등?! #삼성SDS",
+          "efficiency": 0.00045555555555555556,
+          "views": 246,
+          "upload_date": "20260601"
+        },
+        {
+          "vid": "nU0FspbnYnU",
+          "channel": "주식곳간TV",
+          "title": "[삼성에스디에스 주가 전망] AI 서버·데이터센터 수혜주?! 급등 후 변동성 폭발 #삼성SDS",
+          "efficiency": 0.00044444444444444447,
+          "views": 240,
+          "upload_date": "20260604"
+        }
+      ]
+    },
+    {
+      "label": "LG씨엔에스 주가 전망",
+      "occurrences": 3,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 822,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.31,
+      "top_videos": [
+        {
+          "vid": "3UlO21tBirg",
+          "channel": "주식곳간TV",
+          "title": "[LG씨엔에스 주가 전망] AI 클라우드 대장주 신고가?! 구광모 젠슨 황 회동 주목 #LG씨엔에스",
+          "efficiency": 0.0005314814814814815,
+          "views": 287,
+          "upload_date": "20260604"
+        },
+        {
+          "vid": "zB_G8eJBmTo",
+          "channel": "주식곳간TV",
+          "title": "[LG씨엔에스 주가 전망] 신고가 후 급락! 주목 호재는 1분기 실적 성장 AI클라우드 비중 증가 수주DBO 1위 #LG씨엔에스",
+          "efficiency": 0.0005222222222222222,
+          "views": 282,
+          "upload_date": "20260608"
+        },
+        {
+          "vid": "CVtAhOTkOHY",
+          "channel": "주식곳간TV",
+          "title": "[LG씨엔에스 주가 전망] LG그룹 밸류체인 핵심 AI 데이터센터 클라우드 #LG씨엔에스",
+          "efficiency": 0.0004685185185185185,
+          "views": 253,
+          "upload_date": "20260604"
+        }
+      ]
+    },
+    {
       "label": "미방분",
       "occurrences": 3,
       "channels": [
@@ -1587,6 +1395,206 @@
           "efficiency": 0.00024130841121495328,
           "views": 1291,
           "upload_date": "20260610"
+        }
+      ]
+    },
+    {
+      "label": "주성엔지니어링 주가 전망",
+      "occurrences": 5,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 1266,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.29,
+      "top_videos": [
+        {
+          "vid": "c7-M_7H-upA",
+          "channel": "주식곳간TV",
+          "title": "[주성엔지니어링 주가 전망] ALD 글로벌 4위, 세계 최초 ALG 차세대 장비 글로벌 출하! &quot;지금&quot; 주주님들 필수시청 #주성엔지니어링",
+          "efficiency": 0.0005592592592592592,
+          "views": 302,
+          "upload_date": "20260528"
+        },
+        {
+          "vid": "2XnaN9Wm7zM",
+          "channel": "주식곳간TV",
+          "title": "[주성엔지니어링 주가 전망] 주성엔지니어링 드디어 터졌다! 신고가 25만원 재도전, ALD 세계 최초 상용화. 시총 10조 반도체 장비 대장주 되나? #주성엔지니어링",
+          "efficiency": 0.00044814814814814815,
+          "views": 242,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "Em4cRvQ0aME",
+          "channel": "주식곳간TV",
+          "title": "[주성엔지니어링 주가 전망] 반도체 장비 테마 폭발?! AI 반도체 투자 사이클 수혜 매수타이밍은? #주성엔지니어링",
+          "efficiency": 0.0004462962962962963,
+          "views": 241,
+          "upload_date": "20260604"
+        },
+        {
+          "vid": "uYY9N86EzRM",
+          "channel": "주식곳간TV",
+          "title": "[주성엔지니어링 주가 전망] 주주분들 큰일났습니다! 신고가 찍고 -16% 폭락, 다음 거래일 어떻게? 주주님들 &quot;지금&quot; 필수시청 #주성엔지니어링",
+          "efficiency": 0.0004462962962962963,
+          "views": 241,
+          "upload_date": "20260608"
+        },
+        {
+          "vid": "MF6AMCeM4-8",
+          "channel": "주식곳간TV",
+          "title": "[주성엔지니어링 주가 전망] 결국 터졌다! 세계 최초 반도체 장비 출하. AI 반도체 슈퍼사이클 최대 수혜주 되나? 주주님들 \"여기\" 입니다. #주성엔지니어링",
+          "efficiency": 0.00044444444444444447,
+          "views": 240,
+          "upload_date": "20260603"
+        }
+      ]
+    },
+    {
+      "label": "나무기술 주가 전망",
+      "occurrences": 6,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 1498,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.28,
+      "top_videos": [
+        {
+          "vid": "oefSh1sxm0k",
+          "channel": "주식곳간TV",
+          "title": "[나무기술 주가 전망] 클라우드·에이전틱 AI 플랫폼 부각, 강세 흐름 및 레드햇과 에이전틱 AI 공동 개발! &quot;지금&quot; 주주님들 필수시청 #나무기술",
+          "efficiency": 0.0004981481481481482,
+          "views": 269,
+          "upload_date": "20260529"
+        },
+        {
+          "vid": "PBFPDtHIOVU",
+          "channel": "주식곳간TV",
+          "title": "[나무기술 주가 전망] 클라우드·AI 테마 과열 경고, 하지만 서울관광재단MOU로 인한 내일 마지막 기회? #나무기술",
+          "efficiency": 0.00047222222222222224,
+          "views": 255,
+          "upload_date": "20260601"
+        },
+        {
+          "vid": "RqufZCtUjR4",
+          "channel": "주식곳간TV",
+          "title": "[나무기술 주가 전망] 투자경고라는 악재에서도 서울관광재단 MOU MCP서버 호재는 살아있다! #나무기술",
+          "efficiency": 0.000462962962962963,
+          "views": 250,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "nksVyl8ODxs",
+          "channel": "주식곳간TV",
+          "title": "[나무기술 주가 전망] 나무기술 폭락은 함정이었다? 매출 117% 폭증에도 눌렸던 진짜 이유! &quot;지금&quot; 주주님들 필수시청 #나무기술",
+          "efficiency": 0.00045185185185185183,
+          "views": 244,
+          "upload_date": "20260604"
+        },
+        {
+          "vid": "GyfJ6N1TpxY",
+          "channel": "주식곳간TV",
+          "title": "[나무기술 주가 전망] 흑자전환 장마감 강한 반등 매물대 지지 정배열 회복 #나무기술",
+          "efficiency": 0.00044444444444444447,
+          "views": 240,
+          "upload_date": "20260604"
+        }
+      ]
+    },
+    {
+      "label": "두산로보틱스 주가 전망",
+      "occurrences": 3,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 731,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.27,
+      "top_videos": [
+        {
+          "vid": "7U5F7rQYngY",
+          "channel": "주식곳간TV",
+          "title": "[두산로보틱스 주가 전망] 오늘 젠슨황 방한 협동로봇 모멘텀 #두산로보틱스",
+          "efficiency": 0.0004574074074074074,
+          "views": 247,
+          "upload_date": "20260604"
+        },
+        {
+          "vid": "x5FQEqCJZio",
+          "channel": "주식곳간TV",
+          "title": "[두산로보틱스 주가 전망] 반도체 다음은 로봇주?! 엔비디아 수혜 기대감 상승! #두산로보틱스",
+          "efficiency": 0.00045,
+          "views": 243,
+          "upload_date": "20260603"
+        },
+        {
+          "vid": "dBHMFyL0l9Y",
+          "channel": "주식곳간TV",
+          "title": "[두산로보틱스 주가 전망] 젠슨황 방한 상한가 엔비디아 협력 기대 #두산로보틱스",
+          "efficiency": 0.0004462962962962963,
+          "views": 241,
+          "upload_date": "20260607"
+        }
+      ]
+    },
+    {
+      "label": "LG이노텍 주가 전망",
+      "occurrences": 4,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 966,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.27,
+      "top_videos": [
+        {
+          "vid": "QfLZjhSwphA",
+          "channel": "주식곳간TV",
+          "title": "[LG이노텍 주가 전망] LG이노텍 큰일 났다! 신고가 181만원 찍고 22% 급락. 영업이익 136% 폭증에도 폭락한 진짜 이유는? \"지금\" 주주님들 필수시청 #LG이노텍",
+          "efficiency": 0.0004537037037037037,
+          "views": 245,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "q_7cEQlpXWg",
+          "channel": "주식곳간TV",
+          "title": "[LG이노텍 주가 전망] AI 기판 목표가 200만원 상승, 추격 전에 꼭 보세요! 매수자리 확인바람! #LG이노텍",
+          "efficiency": 0.0004462962962962963,
+          "views": 241,
+          "upload_date": "20260607"
+        },
+        {
+          "vid": "Or8A4fGQsNU",
+          "channel": "주식곳간TV",
+          "title": "[LG이노텍 주가 전망] 신고가 직후 급 폭락 엔비디아 젠승황 방한 기대 #LG이노텍",
+          "efficiency": 0.00044444444444444447,
+          "views": 240,
+          "upload_date": "20260604"
+        },
+        {
+          "vid": "Fg-L1mnCPMU",
+          "channel": "주식곳간TV",
+          "title": "[LG이노텍 주가 전망] LG이노텍 36% 폭락 끝났나? 베트남 2배 증설에 큰손들 다시 움직인다! 주주님들을 위한 필수영상. &quot;이 곳&quot; 입니다 #LG이노텍",
+          "efficiency": 0.00044444444444444447,
+          "views": 240,
+          "upload_date": "20260607"
         }
       ]
     },
@@ -2034,6 +2042,46 @@
       ]
     },
     {
+      "label": "#구기동프렌즈",
+      "occurrences": 3,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 2121,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.06,
+      "top_videos": [
+        {
+          "vid": "BsfX3gDdWe4",
+          "channel": "tvN D ENT",
+          "title": "[#구기동프렌즈] 장근석의 방구석 회전 초밥 집으로 초대합니다🍣 우당탕탕 홈메이드 기차 회전 초밥🚈",
+          "efficiency": 0.00032220149253731344,
+          "views": 1727,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "eYoak4oBMh4",
+          "channel": "tvN D ENT",
+          "title": "[#구기동프렌즈] 숨 쉬듯 잔소리하는 이다희 ㅋㅋ 티격태격해도 누구보다 돈독한 9살 차이 친남매💥",
+          "efficiency": 4.91588785046729e-05,
+          "views": 263,
+          "upload_date": "20260601"
+        },
+        {
+          "vid": "NrOrZeUwupw",
+          "channel": "tvN D ENT",
+          "title": "[#구기동프렌즈] 괜히 죄 지은 기분💦 장도연 홀로 남은 집에 몰래 온 손님 신기루의 냉털✨",
+          "efficiency": 2.4485981308411215e-05,
+          "views": 131,
+          "upload_date": "20260601"
+        }
+      ]
+    },
+    {
       "label": "#한도초과",
       "occurrences": 13,
       "channels": [
@@ -2130,48 +2178,8 @@
       ]
     },
     {
-      "label": "#구기동프렌즈",
-      "occurrences": 3,
-      "channels": [
-        "tvN D ENT"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 2121,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 0.05,
-      "top_videos": [
-        {
-          "vid": "BsfX3gDdWe4",
-          "channel": "tvN D ENT",
-          "title": "[#구기동프렌즈] 장근석의 방구석 회전 초밥 집으로 초대합니다🍣 우당탕탕 홈메이드 기차 회전 초밥🚈",
-          "efficiency": 0.00032220149253731344,
-          "views": 1727,
-          "upload_date": "20260613"
-        },
-        {
-          "vid": "eYoak4oBMh4",
-          "channel": "tvN D ENT",
-          "title": "[#구기동프렌즈] 숨 쉬듯 잔소리하는 이다희 ㅋㅋ 티격태격해도 누구보다 돈독한 9살 차이 친남매💥",
-          "efficiency": 4.91588785046729e-05,
-          "views": 263,
-          "upload_date": "20260601"
-        },
-        {
-          "vid": "NrOrZeUwupw",
-          "channel": "tvN D ENT",
-          "title": "[#구기동프렌즈] 괜히 죄 지은 기분💦 장도연 홀로 남은 집에 몰래 온 손님 신기루의 냉털✨",
-          "efficiency": 2.4485981308411215e-05,
-          "views": 131,
-          "upload_date": "20260601"
-        }
-      ]
-    },
-    {
       "label": "#천재들의실체",
-      "occurrences": 7,
+      "occurrences": 9,
       "channels": [
         "tvN D ENT"
       ],
@@ -2179,7 +2187,7 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
       "max_efficiency": 0.0,
-      "total_views": 4189,
+      "total_views": 5858,
       "baseline_efficiency": 0.0,
       "boost_ratio": 0.05,
       "top_videos": [
@@ -2190,6 +2198,22 @@
           "efficiency": 0.0003352611940298507,
           "views": 1797,
           "upload_date": "20260613"
+        },
+        {
+          "vid": "3ePjTboTLlk",
+          "channel": "tvN D ENT",
+          "title": "[#천재들의실체] 남편 제자와의 불륜설?💥 노벨상 시상식 참석까지 거부당한 마리 퀴리💦ㅣ#벌거벗은세계사",
+          "efficiency": 0.00016772388059701492,
+          "views": 899,
+          "upload_date": "20260614"
+        },
+        {
+          "vid": "mQ-XlT9wMQ4",
+          "channel": "tvN D ENT",
+          "title": "[#천재들의실체] 라듐 화장품부터 라듐 초콜릿까지⁉️ 암도 치료할 수 있다는 라듐의 위험성😱ㅣ#벌거벗은세계사",
+          "efficiency": 0.00014365671641791044,
+          "views": 770,
+          "upload_date": "20260614"
         },
         {
           "vid": "7uUIYxVxJLU",
@@ -2206,22 +2230,6 @@
           "efficiency": 0.00010822429906542057,
           "views": 579,
           "upload_date": "20260611"
-        },
-        {
-          "vid": "cl49Jn2AsWw",
-          "channel": "tvN D ENT",
-          "title": "[#천재들의실체] 파산 위기의 애○에 돌아온 스티브 잡스💥 12년 만에 복귀한 스티브 잡스의 애○ 살리기 프로젝트✨ ㅣ#벌거벗은세계사",
-          "efficiency": 7.327102803738318e-05,
-          "views": 392,
-          "upload_date": "20260611"
-        },
-        {
-          "vid": "63qlp1kOluA",
-          "channel": "tvN D ENT",
-          "title": "[#천재들의실체] 사촌 누나와 불륜 관계였던 아인슈타인⁉️ 천재로 불린 아인슈타인의 은밀한 사생활💥ㅣ#벌거벗은세계사",
-          "efficiency": 6.523364485981308e-05,
-          "views": 349,
-          "upload_date": "20260608"
         }
       ]
     },
@@ -2283,7 +2291,7 @@
     },
     {
       "label": "#더블캐스팅",
-      "occurrences": 8,
+      "occurrences": 10,
       "channels": [
         "tvN D ENT"
       ],
@@ -2291,7 +2299,7 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
       "max_efficiency": 0.0,
-      "total_views": 2789,
+      "total_views": 3685,
       "baseline_efficiency": 0.0,
       "boost_ratio": 0.03,
       "top_videos": [
@@ -2312,6 +2320,14 @@
           "upload_date": "20260607"
         },
         {
+          "vid": "43spG6VlFG8",
+          "channel": "tvN D ENT",
+          "title": "[#더블캐스팅] 담담한 위로의 곡♫ 가능성이 많은 배우 김재현의〈서른 즈음에〉",
+          "efficiency": 9.98134328358209e-05,
+          "views": 535,
+          "upload_date": "20260614"
+        },
+        {
           "vid": "UwAngwxcezw",
           "channel": "tvN D ENT",
           "title": "[#더블캐스팅] &quot;뮤지컬 배우 같아요.&quot; 멘토들의 호평을 받은 조병준의〈여신님이 보고 계셔〉",
@@ -2326,14 +2342,6 @@
           "efficiency": 7.02803738317757e-05,
           "views": 376,
           "upload_date": "20260607"
-        },
-        {
-          "vid": "dCF6qST6phk",
-          "channel": "tvN D ENT",
-          "title": "[#더블캐스팅] 너무 다른 두 배우의 듀엣✨ 레전드 무대를 만든 심수영 &amp; 임규형의〈I wanna be like you〉",
-          "efficiency": 5.466417910447761e-05,
-          "views": 293,
-          "upload_date": "20260613"
         }
       ]
     },
@@ -2427,15 +2435,15 @@
     },
     {
       "label": "원가공개",
-      "occurrences": 26,
+      "occurrences": 27,
       "channels": [
         "원가 공개 경제학"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
-      "avg_efficiency": 0.36,
+      "avg_efficiency": 0.34,
       "max_efficiency": 4.65,
-      "total_views": 122855,
+      "total_views": 123205,
       "baseline_efficiency": 0,
       "boost_ratio": null,
       "top_videos": [

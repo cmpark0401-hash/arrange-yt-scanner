@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14 00:58:47 UTC",
+  "updated_at": "2026-06-15 00:21:47 UTC",
   "buckets": {
     "야담": {
       "video_count": 42,
@@ -55,7 +55,7 @@
           "max_efficiency": 41.56,
           "avg_efficiency": 24.07,
           "max_views": 571690,
-          "freshness_days": 11,
+          "freshness_days": 12,
           "is_fresh": false,
           "is_hot": true,
           "videos": [
@@ -139,7 +139,7 @@
           "max_efficiency": 9.77,
           "avg_efficiency": 8.04,
           "max_views": 93151,
-          "freshness_days": 11,
+          "freshness_days": 12,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -212,7 +212,7 @@
           "max_efficiency": 6.73,
           "avg_efficiency": 6.37,
           "max_views": 8280,
-          "freshness_days": 127,
+          "freshness_days": 128,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -248,7 +248,7 @@
       ]
     },
     "경제·시사": {
-      "video_count": 73,
+      "video_count": 74,
       "cluster_count": 7,
       "clusters": [
         {
@@ -300,7 +300,7 @@
           "max_efficiency": 32.48,
           "avg_efficiency": 25.22,
           "max_views": 665801,
-          "freshness_days": 45,
+          "freshness_days": 46,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -404,9 +404,9 @@
           "max_efficiency": 52.77,
           "avg_efficiency": 18.71,
           "max_views": 264402,
-          "freshness_days": 14,
+          "freshness_days": 15,
           "is_fresh": false,
-          "is_hot": true,
+          "is_hot": false,
           "videos": [
             {
               "vid": "ZjKw83Hu-MM",
@@ -457,7 +457,7 @@
               ]
             }
           ],
-          "verdict": "⚠️ 신선도 한계 (D+14)"
+          "verdict": "📦 evergreen 아카이브"
         },
         {
           "cluster_size": 7,
@@ -558,7 +558,7 @@
           "max_efficiency": 15.54,
           "avg_efficiency": 9.38,
           "max_views": 108750,
-          "freshness_days": 6,
+          "freshness_days": 7,
           "is_fresh": true,
           "is_hot": false,
           "videos": [
@@ -654,6 +654,120 @@
           "verdict": "✅ 추격 가치 있음 (D+7 이내)"
         },
         {
+          "cluster_size": 4,
+          "common_keywords": [
+            "quot"
+          ],
+          "pioneer": {
+            "vid": "uFq-sr_ia6o",
+            "channel": "코믹스 경제",
+            "channel_subs": 1800,
+            "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
+            "upload_date": "20260531",
+            "views": 20827,
+            "efficiency": 11.57,
+            "categories": [
+              "경제"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "SD3ZriaG9N0",
+              "channel": "경제의 신호",
+              "channel_subs": 6280,
+              "title": "&quot;창업 10년차 한국 벤처회사&quot; 엔비디아를 움직였다.  세계가 탐내는 진짜 이유",
+              "upload_date": "20260603",
+              "views": 49433,
+              "efficiency": 7.87,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "hJuTF2o6lzQ",
+              "channel": "코믹스 경제",
+              "channel_subs": 2270,
+              "title": "&quot;일본 꺾고 세계 1위&quot; 한국 광반도체 독자 개발 기술에 전 세계가 난리난 이유",
+              "upload_date": "20260605",
+              "views": 21247,
+              "efficiency": 9.36,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "LfjFrkOKvBA",
+              "channel": "코믹스 경제",
+              "channel_subs": 2790,
+              "title": "&quot;30년만에 뒤집힌 한일 관계&quot; 한국에게 다 뺏긴 일본, 한국이 추월한 진짜 이유",
+              "upload_date": "20260614",
+              "views": 86521,
+              "efficiency": 31.01,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "days_active": 14,
+          "max_efficiency": 31.01,
+          "avg_efficiency": 14.95,
+          "max_views": 86521,
+          "freshness_days": 1,
+          "is_fresh": true,
+          "is_hot": true,
+          "videos": [
+            {
+              "vid": "uFq-sr_ia6o",
+              "channel": "코믹스 경제",
+              "channel_subs": 1800,
+              "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
+              "upload_date": "20260531",
+              "views": 20827,
+              "efficiency": 11.57,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "SD3ZriaG9N0",
+              "channel": "경제의 신호",
+              "channel_subs": 6280,
+              "title": "&quot;창업 10년차 한국 벤처회사&quot; 엔비디아를 움직였다.  세계가 탐내는 진짜 이유",
+              "upload_date": "20260603",
+              "views": 49433,
+              "efficiency": 7.87,
+              "categories": [
+                "(미분류)"
+              ]
+            },
+            {
+              "vid": "hJuTF2o6lzQ",
+              "channel": "코믹스 경제",
+              "channel_subs": 2270,
+              "title": "&quot;일본 꺾고 세계 1위&quot; 한국 광반도체 독자 개발 기술에 전 세계가 난리난 이유",
+              "upload_date": "20260605",
+              "views": 21247,
+              "efficiency": 9.36,
+              "categories": [
+                "경제"
+              ]
+            },
+            {
+              "vid": "LfjFrkOKvBA",
+              "channel": "코믹스 경제",
+              "channel_subs": 2790,
+              "title": "&quot;30년만에 뒤집힌 한일 관계&quot; 한국에게 다 뺏긴 일본, 한국이 추월한 진짜 이유",
+              "upload_date": "20260614",
+              "views": 86521,
+              "efficiency": 31.01,
+              "categories": [
+                "경제"
+              ]
+            }
+          ],
+          "verdict": "🔥 즉시 추격 (D+3 안에 박을 것)"
+        },
+        {
           "cluster_size": 3,
           "common_keywords": [
             "quot"
@@ -700,7 +814,7 @@
           "max_efficiency": 28.67,
           "avg_efficiency": 13.74,
           "max_views": 107227,
-          "freshness_days": 13,
+          "freshness_days": 14,
           "is_fresh": false,
           "is_hot": true,
           "videos": [
@@ -742,96 +856,6 @@
             }
           ],
           "verdict": "⚠️ 신선도 한계 (D+14)"
-        },
-        {
-          "cluster_size": 3,
-          "common_keywords": [
-            "quot"
-          ],
-          "pioneer": {
-            "vid": "uFq-sr_ia6o",
-            "channel": "코믹스 경제",
-            "channel_subs": 1800,
-            "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
-            "upload_date": "20260531",
-            "views": 20827,
-            "efficiency": 11.57,
-            "categories": [
-              "경제"
-            ]
-          },
-          "followers": [
-            {
-              "vid": "SD3ZriaG9N0",
-              "channel": "경제의 신호",
-              "channel_subs": 6280,
-              "title": "&quot;창업 10년차 한국 벤처회사&quot; 엔비디아를 움직였다.  세계가 탐내는 진짜 이유",
-              "upload_date": "20260603",
-              "views": 49433,
-              "efficiency": 7.87,
-              "categories": [
-                "(미분류)"
-              ]
-            },
-            {
-              "vid": "hJuTF2o6lzQ",
-              "channel": "코믹스 경제",
-              "channel_subs": 2270,
-              "title": "&quot;일본 꺾고 세계 1위&quot; 한국 광반도체 독자 개발 기술에 전 세계가 난리난 이유",
-              "upload_date": "20260605",
-              "views": 21247,
-              "efficiency": 9.36,
-              "categories": [
-                "경제"
-              ]
-            }
-          ],
-          "days_active": 5,
-          "max_efficiency": 11.57,
-          "avg_efficiency": 9.6,
-          "max_views": 49433,
-          "freshness_days": 9,
-          "is_fresh": false,
-          "is_hot": false,
-          "videos": [
-            {
-              "vid": "uFq-sr_ia6o",
-              "channel": "코믹스 경제",
-              "channel_subs": 1800,
-              "title": "&quot;100년은 걸린다&quot; 한국 조롱하던 일본, 한국이 독자 개발 성공하자 패닉에 빠진 일본 열도",
-              "upload_date": "20260531",
-              "views": 20827,
-              "efficiency": 11.57,
-              "categories": [
-                "경제"
-              ]
-            },
-            {
-              "vid": "SD3ZriaG9N0",
-              "channel": "경제의 신호",
-              "channel_subs": 6280,
-              "title": "&quot;창업 10년차 한국 벤처회사&quot; 엔비디아를 움직였다.  세계가 탐내는 진짜 이유",
-              "upload_date": "20260603",
-              "views": 49433,
-              "efficiency": 7.87,
-              "categories": [
-                "(미분류)"
-              ]
-            },
-            {
-              "vid": "hJuTF2o6lzQ",
-              "channel": "코믹스 경제",
-              "channel_subs": 2270,
-              "title": "&quot;일본 꺾고 세계 1위&quot; 한국 광반도체 독자 개발 기술에 전 세계가 난리난 이유",
-              "upload_date": "20260605",
-              "views": 21247,
-              "efficiency": 9.36,
-              "categories": [
-                "경제"
-              ]
-            }
-          ],
-          "verdict": "✅ 추격 가치 있음 (D+7 이내)"
         },
         {
           "cluster_size": 4,
@@ -892,7 +916,7 @@
           "max_efficiency": 8.18,
           "avg_efficiency": 6.46,
           "max_views": 27174,
-          "freshness_days": 10,
+          "freshness_days": 11,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -985,7 +1009,7 @@
           "max_efficiency": 6.27,
           "avg_efficiency": 5.7,
           "max_views": 56524,
-          "freshness_days": 8,
+          "freshness_days": 9,
           "is_fresh": false,
           "is_hot": false,
           "videos": [

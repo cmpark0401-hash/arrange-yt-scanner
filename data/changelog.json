@@ -1,14 +1,30 @@
 {
-  "generated_at": "2026-06-15 00:05",
+  "generated_at": "2026-06-15 09:22",
   "total_commits": 80,
   "by_category": {
+    "feat": 4,
     "style": 3,
     "docs": 8,
     "other": 11,
-    "feat": 3,
-    "data": 55
+    "data": 54
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-15",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "aa3702b",
+          "full_hash": "aa3702b540f916ba277eabdc51ae1d7763c4f1de",
+          "ts": "2026-06-15 00:05",
+          "ts_iso": "2026-06-15T00:05:18",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 속도 1순위 정렬 시스템 박음 — velocity(views/days) 기준 추가, 채널 10만 이하 = 속도 1순위·효율 2순위. 🚀🚀 슈퍼 폭발(≥30K/일)·🚀 속도 폭발(≥10K)·⚡ 속도 추격(≥5K",
+          "category": "feat",
+          "category_label": "✨ 신규 기능"
+        }
+      ]
+    },
     {
       "date": "2026-06-14",
       "count": 5,
@@ -464,55 +480,19 @@
           "category_label": "📊 데이터 갱신"
         }
       ]
-    },
-    {
-      "date": "2026-06-08",
-      "count": 4,
-      "commits": [
-        {
-          "hash": "de8a9a5",
-          "full_hash": "de8a9a586fc374915032113df71efd13dae9ba8a",
-          "ts": "2026-06-08 21:30",
-          "ts_iso": "2026-06-08T21:30:11",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-08 21:30:11",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "3e94737",
-          "full_hash": "3e947374e554c49913cb101ea3957ef8bb4ab2e1",
-          "ts": "2026-06-08 10:36",
-          "ts_iso": "2026-06-08T10:36:38",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-08 10:36:37",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "e3efedb",
-          "full_hash": "e3efedbf411919eb6ef4dcda417472bc39cf2d86",
-          "ts": "2026-06-08 10:31",
-          "ts_iso": "2026-06-08T10:31:37",
-          "author": "cmpark0401-hash",
-          "subject": "auto: build 2026-06-08 10:31",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "0f05820",
-          "full_hash": "0f05820b17c7523f922b097f0add9e9fa08034b4",
-          "ts": "2026-06-08 09:30",
-          "ts_iso": "2026-06-08T09:30:14",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-08 09:30:14",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "aa3702b",
+      "full_hash": "aa3702b540f916ba277eabdc51ae1d7763c4f1de",
+      "ts": "2026-06-15 00:05",
+      "ts_iso": "2026-06-15T00:05:18",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 속도 1순위 정렬 시스템 박음 — velocity(views/days) 기준 추가, 채널 10만 이하 = 속도 1순위·효율 2순위. 🚀🚀 슈퍼 폭발(≥30K/일)·🚀 속도 폭발(≥10K)·⚡ 속도 추격(≥5K",
+      "category": "feat",
+      "category_label": "✨ 신규 기능"
+    },
     {
       "hash": "9dc0446",
       "full_hash": "9dc0446b668200ff7f989e57e75b8560998082c9",
@@ -1302,16 +1282,6 @@
       "subject": "manual JP: 2026-06-05 10:48",
       "category": "docs",
       "category_label": "📖 문서"
-    },
-    {
-      "hash": "da9dc5f",
-      "full_hash": "da9dc5f76433701ad634d37270ba0acd3c57c5f0",
-      "ts": "2026-06-05 09:49",
-      "ts_iso": "2026-06-05T09:49:38",
-      "author": "cmpark0401-hash",
-      "subject": "auto: build 2026-06-05 09:49",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }
