@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-15 09:22",
+  "generated_at": "2026-06-15 09:54",
   "total_commits": 80,
   "by_category": {
+    "other": 12,
     "feat": 4,
     "style": 3,
-    "docs": 8,
-    "other": 11,
+    "docs": 7,
     "data": 54
   },
   "recent_by_date": [
     {
       "date": "2026-06-15",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "fd115bb",
+          "full_hash": "fd115bb247e1d117f2d00ef785b020a1bccdb42e",
+          "ts": "2026-06-15 09:22",
+          "ts_iso": "2026-06-15T09:22:17",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 2026-06-15 오전 사이클 — 신영상 0·효율 5x+ 73편. 키워드 풀 trending +30. 속도 1순위 알림 24편 (야담 3·경제 19·잘듣네 2)",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "aa3702b",
           "full_hash": "aa3702b540f916ba277eabdc51ae1d7763c4f1de",
@@ -483,6 +493,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "fd115bb",
+      "full_hash": "fd115bb247e1d117f2d00ef785b020a1bccdb42e",
+      "ts": "2026-06-15 09:22",
+      "ts_iso": "2026-06-15T09:22:17",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 2026-06-15 오전 사이클 — 신영상 0·효율 5x+ 73편. 키워드 풀 trending +30. 속도 1순위 알림 24편 (야담 3·경제 19·잘듣네 2)",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "aa3702b",
       "full_hash": "aa3702b540f916ba277eabdc51ae1d7763c4f1de",
@@ -1272,16 +1292,6 @@
       "subject": "auto: workboard 2026-06-05 10:48:53",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "91dfc02",
-      "full_hash": "91dfc025914db1a9640cfeb05ec27c62e9898465",
-      "ts": "2026-06-05 10:48",
-      "ts_iso": "2026-06-05T10:48:16",
-      "author": "cmpark0401-hash",
-      "subject": "manual JP: 2026-06-05 10:48",
-      "category": "docs",
-      "category_label": "📖 문서"
     }
   ]
 }
