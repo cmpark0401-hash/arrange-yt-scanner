@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-15 11:39",
+  "generated_at": "2026-06-15 19:02",
   "total_commits": 80,
   "by_category": {
+    "feat": 5,
     "style": 4,
     "other": 13,
-    "feat": 4,
     "docs": 7,
-    "data": 52
+    "data": 51
   },
   "recent_by_date": [
     {
       "date": "2026-06-15",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "0c44520",
+          "full_hash": "0c4452082f294869068108df958129c4fb40b19b",
+          "ts": "2026-06-15 11:39",
+          "ts_iso": "2026-06-15T11:39:37",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 2026-06-15 morning 보강 사이클 — 4채널 신규(김재민TV·지식왕천재·경제강국·팬더경제학) monitor 첫 갱신. 김재민TV 270K/일 D+2·지식왕천재 51x·코믹스 86K/일 슈퍼 폭발 ",
+          "category": "feat",
+          "category_label": "✨ 신규 기능"
+        },
         {
           "hash": "035491e",
           "full_hash": "035491e68b7143d2bb8e619ce137d7dd0cba1ec6",
@@ -523,6 +533,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "0c44520",
+      "full_hash": "0c4452082f294869068108df958129c4fb40b19b",
+      "ts": "2026-06-15 11:39",
+      "ts_iso": "2026-06-15T11:39:37",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 2026-06-15 morning 보강 사이클 — 4채널 신규(김재민TV·지식왕천재·경제강국·팬더경제학) monitor 첫 갱신. 김재민TV 270K/일 D+2·지식왕천재 51x·코믹스 86K/일 슈퍼 폭발 ",
+      "category": "feat",
+      "category_label": "✨ 신규 기능"
+    },
     {
       "hash": "035491e",
       "full_hash": "035491e68b7143d2bb8e619ce137d7dd0cba1ec6",
@@ -1310,16 +1330,6 @@
       "ts_iso": "2026-06-05T11:29:10",
       "author": "cmpark0401-hash",
       "subject": "auto: workboard 2026-06-05 11:29:10",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "74c32fb",
-      "full_hash": "74c32fbdad6ba21a8d33657b3e40f633c7dc1a1b",
-      "ts": "2026-06-05 11:18",
-      "ts_iso": "2026-06-05T11:18:28",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-05 11:18:28",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }
