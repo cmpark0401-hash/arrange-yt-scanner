@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15 09:54",
+  "generated_at": "2026-06-15 10:17",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "33분 전",
+      "ago": "56분 전",
       "updated_at": "2026-06-15 09:21",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-15.json",
       "severity": "critical"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "33분 전",
+      "ago": "55분 전",
       "updated_at": "2026-06-15 09:21",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-15.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "2일 전",
+      "ago": "3일 전",
       "updated_at": "2026-06-12 09:55",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-12.json",
       "severity": "warning"
@@ -79,7 +79,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "54분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-06-15 09:00",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-15 09:54"
+      "updated_at": "2026-06-15 10:17"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
