@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-16 14:04",
+  "generated_at": "2026-06-16 14:58",
   "total_commits": 80,
   "by_category": {
-    "feat": 6,
     "other": 16,
+    "feat": 6,
     "style": 4,
     "docs": 7,
     "data": 47
@@ -11,8 +11,18 @@
   "recent_by_date": [
     {
       "date": "2026-06-16",
-      "count": 3,
+      "count": 4,
       "commits": [
+        {
+          "hash": "57e0d41",
+          "full_hash": "57e0d41d03b13127ae376410799b8ac5f10b5709",
+          "ts": "2026-06-16 14:04",
+          "ts_iso": "2026-06-16T14:04:26",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 지식록 16편 일괄 변환 박음 (옵션 C + 5룰 + 중복 회피) — _makeover MD + 16편 youtube.md 변환 섹션 박음. 봉인어 16편 분포 다양화(정체3·전말2·사건2·비밀1·균열1·순간",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "88fc3a2",
           "full_hash": "88fc3a2dcfc05fa71e42f17bb24e8c89326fabd1",
@@ -483,6 +493,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "57e0d41",
+      "full_hash": "57e0d41d03b13127ae376410799b8ac5f10b5709",
+      "ts": "2026-06-16 14:04",
+      "ts_iso": "2026-06-16T14:04:26",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 지식록 16편 일괄 변환 박음 (옵션 C + 5룰 + 중복 회피) — _makeover MD + 16편 youtube.md 변환 섹션 박음. 봉인어 16편 분포 다양화(정체3·전말2·사건2·비밀1·균열1·순간",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "88fc3a2",
       "full_hash": "88fc3a2dcfc05fa71e42f17bb24e8c89326fabd1",
@@ -1272,16 +1292,6 @@
       "subject": "auto: workboard 2026-06-05 21:53:59",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "9fd2751",
-      "full_hash": "9fd275197b643b6810fc8983e964998f6ec1f8a7",
-      "ts": "2026-06-05 17:10",
-      "ts_iso": "2026-06-05T17:10:40",
-      "author": "cmpark0401-hash",
-      "subject": "과만세 첫 영상 발행 — sw-20260604-health published (시력회복)",
-      "category": "other",
-      "category_label": "📌 기타"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-16T13:19:58",
+  "updated_at": "2026-06-16T14:51:47",
   "today": "2026-06-16",
   "categories_def": {
     "single_explosion": {
@@ -5368,6 +5368,55 @@
             }
           ],
           "notes": "autopsy 6편 부검 결과 직접 적용. 1편 92.5x 검증. 분량 30분 골든구간. Hook 통계형 + 충격 대비. 결말 시그니처형 (시청자 호명). 잘듣네 결 안전선 100% 통과."
+        },
+        {
+          "id": "nn-20260616-ws3",
+          "category": "single_explosion",
+          "title": "EP.11 — 조선 백성의 한 끼 (1660년 어느 가을 새벽) [그 사람 시리즈]",
+          "type": "신규 (autopsy 251.6x 카피)",
+          "rating": 5,
+          "tags": [
+            "EP.11",
+            "[그 사람 시리즈]",
+            "한국사",
+            "autopsy 251.6x",
+            "조선 백성 밥상"
+          ],
+          "merge_angle": "1660년 어느 가을 새벽, 경상도 시골 마을 부엌에서 한 여인이 가만히 지피셨던 한 끼의 결",
+          "sources_a": {
+            "channel": "한국사 채널 (autopsy)",
+            "title": "조선 백성 진짜 밥상",
+            "url": "https://www.youtube.com/watch?v=Ez3nyrXxl7o",
+            "efficiency": 251.63
+          },
+          "sources_b": {
+            "channel": "1차 사료",
+            "title": "조선왕조실록·「음식디미방」·산림경제",
+            "note": "DATA_PREP 보강"
+          },
+          "status": "ready_to_publish",
+          "checklist": {
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": false
+          },
+          "events": [
+            {
+              "ts": "2026-06-16 12:30",
+              "type": "in_progress",
+              "note": "20260616_11 EP.11 프로젝트. autopsy 4편 부검에서 1편 251.6x 메가폭발 카피. 잘듣네 결 100% 안전선. 30분 골든구간."
+            },
+            {
+              "ts": "2026-06-16 14:00",
+              "type": "ready_to_publish",
+              "note": "EP.11 완료. 13,236자 / 27.1분. autopsy 1편 251.6x 카피 황금비 94% 구조. APPROVED (결·어미·호명 완전 변환)."
+            }
+          ],
+          "notes": "autopsy 검증 251.6x 메가폭발. Hook 장면형(1660년대 경상도 새벽 부엌). 결말 시그니처형 시청자 호명. 자극 0."
         }
       ]
     },
