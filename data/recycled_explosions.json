@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16 00:11:31 UTC",
+  "updated_at": "2026-06-16 14:40:41 UTC",
   "topic_count": 19,
   "recycle_count": 3,
   "topics": [
@@ -13,8 +13,8 @@
         "추월",
         "한국"
       ],
-      "depth_score": 0.661,
-      "matched_count": 14,
+      "depth_score": 0.662,
+      "matched_count": 17,
       "matched_videos": [
         {
           "vid": "-lgPDInkWZI",
@@ -26,6 +26,23 @@
           "freshness_days": 3,
           "bucket": "경제·시사",
           "channel_subs": 47600,
+          "source": "alert",
+          "match_ratio": 0.4,
+          "common_kws": [
+            "일본",
+            "한국"
+          ]
+        },
+        {
+          "vid": "TJkoGg-48HE",
+          "title": "라면 종주국 일본의 굴욕 | 일본 매운라면 시장 점유율 40% 압도적 1위 | 7조원 라면 종주국이 한국 라면에 빠진 진짜 이유",
+          "channel": "김재민TV",
+          "efficiency": 0.9579141104294479,
+          "views": 46842,
+          "velocity_per_day": 46842,
+          "freshness_days": 0,
+          "bucket": "경제·시사",
+          "channel_subs": 48900,
           "source": "alert",
           "match_ratio": 0.4,
           "common_kws": [
@@ -47,6 +64,22 @@
           "match_ratio": 0.2,
           "common_kws": [
             "한국"
+          ]
+        },
+        {
+          "vid": "ev4LRG-AVs0",
+          "title": "[주식] 역대급 저평가 주식 TOP 3 !! 천만원 있다면 \"이 종목\" 사라! #급등주 #SK하이닉스 #삼성전자 #로봇주 #반도체 #스페이스X｜리드남",
+          "channel": "주식 재벌 - 주먹남 리드남의 급등주",
+          "efficiency": 0.26,
+          "views": 22263,
+          "velocity_per_day": 22263,
+          "freshness_days": 1,
+          "bucket": "경제·시사",
+          "channel_subs": 86400,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "반도체"
           ]
         },
         {
@@ -82,22 +115,6 @@
           ]
         },
         {
-          "vid": "ev4LRG-AVs0",
-          "title": "[주식] 역대급 저평가 주식 TOP 3 !! 천만원 있다면 \"이 종목\" 사라! #급등주 #SK하이닉스 #삼성전자 #로봇주 #반도체 #스페이스X｜리드남",
-          "channel": "주식 재벌 - 주먹남 리드남의 급등주",
-          "efficiency": 0.22,
-          "views": 18670,
-          "velocity_per_day": 18670,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 86400,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "반도체"
-          ]
-        },
-        {
           "vid": "vitERV2rR7o",
           "title": "한국, 체코 극적 역전승직후 길거리에 멕시코인들이 더 난리 난 놀라운 광경, 한국인들의 한국 사랑",
           "channel": "귀에쏙쏙경제학",
@@ -114,34 +131,19 @@
           ]
         },
         {
-          "vid": "5DV-WcNqIeg",
-          "title": "젠슨 황도 일본은 건너뛰었다… 일본이 한국을 다시 보기 시작한 30년",
-          "channel": "경제강국",
-          "efficiency": 2.148252427184466,
-          "views": 22127,
-          "velocity_per_day": 11063,
-          "freshness_days": 2,
+          "vid": "ToMMtFtsqIk",
+          "title": "젠슨황 한국 사랑에 전세계가 들썩… 일본은 빼놓고 그냥 갔다. - 한국과 일본 너무 다른 대우,  '재팬 패싱'에 난리난 일본",
+          "channel": "김재민TV",
+          "efficiency": 0.3251124744376278,
+          "views": 15898,
+          "velocity_per_day": 15898,
+          "freshness_days": 0,
           "bucket": "경제·시사",
-          "channel_subs": 10300,
+          "channel_subs": 48900,
           "source": "alert",
-          "match_ratio": 0.2,
+          "match_ratio": 0.4,
           "common_kws": [
-            "30년"
-          ]
-        },
-        {
-          "vid": "-p1v1WfyBDc",
-          "title": "테슬라가 사상 최초 한국 1위… 그런데 현대가 전혀 안 급한 이유",
-          "channel": "경제강국",
-          "efficiency": 3.84,
-          "views": 39552,
-          "velocity_per_day": 7910,
-          "freshness_days": 5,
-          "bucket": "경제·시사",
-          "channel_subs": 10300,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
+            "일본",
             "한국"
           ]
         }
@@ -163,8 +165,8 @@
         "아이폰",
         "통신비"
       ],
-      "depth_score": 0.366,
-      "matched_count": 4,
+      "depth_score": 0.364,
+      "matched_count": 5,
       "matched_videos": [
         {
           "vid": "QaCsvrHZ8mU",
@@ -208,6 +210,22 @@
           "freshness_days": 4,
           "bucket": "경제·시사",
           "channel_subs": 7620,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "삼성"
+          ]
+        },
+        {
+          "vid": "LxTRk6A6rWo",
+          "title": "삼성전자 '이 가격' 밑으로는 부담없습니다 삼성전자 지금 팔 때가 아닌 이유? 35만전자 이제 시작이다 하락에 삼성 판 '개미들 눈물'.. 내일 아침 무서운 일 터진다!",
+          "channel": "만화 경제학",
+          "efficiency": 0.16048331415420022,
+          "views": 13946,
+          "velocity_per_day": 13946,
+          "freshness_days": 1,
+          "bucket": "경제·시사",
+          "channel_subs": 86900,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [

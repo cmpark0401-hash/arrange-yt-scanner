@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-16 14:58",
+  "generated_at": "2026-06-16 23:44",
   "total_commits": 80,
   "by_category": {
+    "feat": 7,
     "other": 16,
-    "feat": 6,
     "style": 4,
     "docs": 7,
-    "data": 47
+    "data": 46
   },
   "recent_by_date": [
     {
       "date": "2026-06-16",
-      "count": 4,
+      "count": 5,
       "commits": [
+        {
+          "hash": "2179305",
+          "full_hash": "217930524a52b21b79236310aef81237874ec135",
+          "ts": "2026-06-16 14:58",
+          "ts_iso": "2026-06-16T14:58:26",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 지식록 makeover 누락 6편 보강 — #01 삼성노조·#02 코스피경고·#03 SK신의직장·#04 청년계좌·#05 트럼프 디지털관세 + #15 달러부활(외부). 새 봉인어 6종 추가(이면·전조·그림자·실",
+          "category": "feat",
+          "category_label": "✨ 신규 기능"
+        },
         {
           "hash": "57e0d41",
           "full_hash": "57e0d41d03b13127ae376410799b8ac5f10b5709",
@@ -493,6 +503,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "2179305",
+      "full_hash": "217930524a52b21b79236310aef81237874ec135",
+      "ts": "2026-06-16 14:58",
+      "ts_iso": "2026-06-16T14:58:26",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 지식록 makeover 누락 6편 보강 — #01 삼성노조·#02 코스피경고·#03 SK신의직장·#04 청년계좌·#05 트럼프 디지털관세 + #15 달러부활(외부). 새 봉인어 6종 추가(이면·전조·그림자·실",
+      "category": "feat",
+      "category_label": "✨ 신규 기능"
+    },
     {
       "hash": "57e0d41",
       "full_hash": "57e0d41d03b13127ae376410799b8ac5f10b5709",
@@ -1280,16 +1300,6 @@
       "ts_iso": "2026-06-05T23:56:45",
       "author": "cmpark0401-hash",
       "subject": "auto: workboard 2026-06-05 23:56:45",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "b165e4f",
-      "full_hash": "b165e4fa3e8dedcb75418b96fa13e35d33a21306",
-      "ts": "2026-06-05 21:53",
-      "ts_iso": "2026-06-05T21:53:59",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-05 21:53:59",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }

@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-16 00:09:06 UTC",
+  "updated_at": "2026-06-16 14:38:19 UTC",
   "buckets": {
     "야담": {
-      "video_count": 42,
+      "video_count": 43,
       "cluster_count": 3,
       "clusters": [
         {
@@ -248,7 +248,7 @@
       ]
     },
     "경제·시사": {
-      "video_count": 88,
+      "video_count": 91,
       "cluster_count": 8,
       "clusters": [
         {
@@ -654,11 +654,11 @@
             {
               "vid": "xiXjdof8j3Q",
               "channel": "세계경제 돋보기",
-              "channel_subs": 9480,
+              "channel_subs": 9500,
               "title": "중국 고속철도,열차를 땅에 묻어버렸습니다",
               "upload_date": "20260609",
-              "views": 50954,
-              "efficiency": 5.37,
+              "views": 57237,
+              "efficiency": 6.02,
               "categories": [
                 "경제",
                 "시사"
@@ -667,7 +667,7 @@
           ],
           "days_active": 18,
           "max_efficiency": 15.54,
-          "avg_efficiency": 8.88,
+          "avg_efficiency": 8.96,
           "max_views": 108750,
           "freshness_days": 7,
           "is_fresh": true,
@@ -764,11 +764,11 @@
             {
               "vid": "xiXjdof8j3Q",
               "channel": "세계경제 돋보기",
-              "channel_subs": 9480,
+              "channel_subs": 9500,
               "title": "중국 고속철도,열차를 땅에 묻어버렸습니다",
               "upload_date": "20260609",
-              "views": 50954,
-              "efficiency": 5.37,
+              "views": 57237,
+              "efficiency": 6.02,
               "categories": [
                 "경제",
                 "시사"
@@ -778,7 +778,7 @@
           "verdict": "🔥 양산 클러스터 골든기 (D+7)"
         },
         {
-          "cluster_size": 4,
+          "cluster_size": 5,
           "common_keywords": [
             "quot"
           ],
@@ -830,13 +830,26 @@
               "categories": [
                 "경제"
               ]
+            },
+            {
+              "vid": "KPik02GFi8k",
+              "channel": "경제강국",
+              "channel_subs": 11000,
+              "title": "&quot;한국아 기술 좀 알려줘&quot;… 50년 LNG선 독점하던 일본이 지금 난리난 이유",
+              "upload_date": "20260615",
+              "views": 62862,
+              "efficiency": 5.71,
+              "categories": [
+                "경제",
+                "시사"
+              ]
             }
           ],
-          "days_active": 14,
+          "days_active": 15,
           "max_efficiency": 33.22,
-          "avg_efficiency": 15.5,
+          "avg_efficiency": 13.55,
           "max_views": 93677,
-          "freshness_days": 2,
+          "freshness_days": 1,
           "is_fresh": true,
           "is_hot": true,
           "videos": [
@@ -887,9 +900,22 @@
               "categories": [
                 "경제"
               ]
+            },
+            {
+              "vid": "KPik02GFi8k",
+              "channel": "경제강국",
+              "channel_subs": 11000,
+              "title": "&quot;한국아 기술 좀 알려줘&quot;… 50년 LNG선 독점하던 일본이 지금 난리난 이유",
+              "upload_date": "20260615",
+              "views": 62862,
+              "efficiency": 5.71,
+              "categories": [
+                "경제",
+                "시사"
+              ]
             }
           ],
-          "verdict": "🔥 즉시 추격 (D+3 안에 박을 것)"
+          "verdict": "🔥🔥 양산 클러스터 진입 시점 (즉시 추격)"
         },
         {
           "cluster_size": 4,
@@ -936,10 +962,10 @@
             {
               "vid": "zCWRMsY8gf4",
               "channel": "농부의 경제학",
-              "channel_subs": 4660,
+              "channel_subs": 4690,
               "title": "&quot;삼전 40만원 간다&quot; 구글이 결국 삼성전자 손을 잡은 소름 돋는 이유",
               "upload_date": "20260614",
-              "views": 24259,
+              "views": 24452,
               "efficiency": 5.21,
               "categories": [
                 "경제"
@@ -993,10 +1019,10 @@
             {
               "vid": "zCWRMsY8gf4",
               "channel": "농부의 경제학",
-              "channel_subs": 4660,
+              "channel_subs": 4690,
               "title": "&quot;삼전 40만원 간다&quot; 구글이 결국 삼성전자 손을 잡은 소름 돋는 이유",
               "upload_date": "20260614",
-              "views": 24259,
+              "views": 24452,
               "efficiency": 5.21,
               "categories": [
                 "경제"
