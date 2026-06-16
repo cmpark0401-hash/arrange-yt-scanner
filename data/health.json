@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16 00:07",
+  "generated_at": "2026-06-16 09:11",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,9 +9,9 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "12시간 전",
-      "updated_at": "2026-06-15 11:38",
-      "file": "channels/knowledge-archive/_monitor_logs/2026-06-15.json",
+      "ago": "3분 전",
+      "updated_at": "2026-06-16 09:08",
+      "file": "channels/knowledge-archive/_monitor_logs/2026-06-16.json",
       "severity": "critical"
     },
     {
@@ -29,9 +29,9 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "12시간 전",
-      "updated_at": "2026-06-15 11:39",
-      "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-15.json",
+      "ago": "2분 전",
+      "updated_at": "2026-06-16 09:09",
+      "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-16.json",
       "severity": "warning"
     },
     {
@@ -76,10 +76,10 @@
     },
     {
       "label": "📋 워크보드",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "0분 전",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "갱신 권장",
+      "ago": "9시간 전",
       "updated_at": "2026-06-15T20:21:11",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
@@ -90,24 +90,56 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-16 00:07"
+      "updated_at": "2026-06-16 09:11"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
+      "status": "stale",
+      "icon": "🟡",
+      "status_label": "부분 의심",
       "ago": "실시간",
-      "detail": "카나리·diff 모두 정상",
+      "detail": "전일대비 폭락 3개 채널",
       "block_events_24h": 0,
-      "flagged_drops": [],
+      "flagged_drops": [
+        {
+          "name": "얄궂은 경제학",
+          "yest_avg": 39606,
+          "today_avg": 364
+        },
+        {
+          "name": "까칠한 밍광의 경제학",
+          "yest_avg": 39606,
+          "today_avg": 156
+        },
+        {
+          "name": "엄마의 밤책",
+          "yest_avg": 39606,
+          "today_avg": 48
+        }
+      ],
       "severity": "critical"
     }
   ],
   "data_trust": {
     "block_events_24h": 0,
-    "flagged_drops": [],
-    "status": "fresh"
+    "flagged_drops": [
+      {
+        "name": "얄궂은 경제학",
+        "yest_avg": 39606,
+        "today_avg": 364
+      },
+      {
+        "name": "까칠한 밍광의 경제학",
+        "yest_avg": 39606,
+        "today_avg": 156
+      },
+      {
+        "name": "엄마의 밤책",
+        "yest_avg": 39606,
+        "today_avg": 48
+      }
+    ],
+    "status": "stale"
   },
   "block_events": [
     {

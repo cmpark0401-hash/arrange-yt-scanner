@@ -1,14 +1,30 @@
 {
-  "generated_at": "2026-06-16 00:07",
+  "generated_at": "2026-06-16 09:11",
   "total_commits": 80,
   "by_category": {
-    "other": 14,
+    "other": 15,
     "feat": 5,
     "style": 4,
     "docs": 7,
-    "data": 50
+    "data": 49
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-16",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "734a220",
+          "full_hash": "734a2206e50de2c946eea7d4d13fb3bc74dec4b2",
+          "ts": "2026-06-16 00:07",
+          "ts_iso": "2026-06-16T00:07:05",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 재활용 폭발 자동 감지 시스템 박음 — evergreen 풀 19개(부동산·자영업·5070비용·국제자긍심) vs 최근 폭발 자카드+containment 매칭. 시그니엘 7개월 주기 패턴. 한일역전 depth ",
+          "category": "other",
+          "category_label": "📌 기타"
+        }
+      ]
+    },
     {
       "date": "2026-06-15",
       "count": 7,
@@ -444,105 +460,19 @@
           "category_label": "📊 데이터 갱신"
         }
       ]
-    },
-    {
-      "date": "2026-06-09",
-      "count": 9,
-      "commits": [
-        {
-          "hash": "41dc095",
-          "full_hash": "41dc095015031b7510aedccb7b3fbb109ce6030e",
-          "ts": "2026-06-09 22:53",
-          "ts_iso": "2026-06-09T22:53:31",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-09 22:53:31",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "bb07114",
-          "full_hash": "bb071142548b02175c74a7b7c37d2eac19f79351",
-          "ts": "2026-06-09 22:42",
-          "ts_iso": "2026-06-09T22:42:53",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-09 22:42:52",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "4b99557",
-          "full_hash": "4b995576498a1eddfd8345401301d3b525021018",
-          "ts": "2026-06-09 21:35",
-          "ts_iso": "2026-06-09T21:35:39",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-09 21:35:39",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "bef008d",
-          "full_hash": "bef008d250b23b06409a946d679ddeca7c240854",
-          "ts": "2026-06-09 12:59",
-          "ts_iso": "2026-06-09T12:59:47",
-          "author": "cmpark0401-hash",
-          "subject": "과만세 EP.2 잠의 과학 발행 (2026-06-09)",
-          "category": "other",
-          "category_label": "📌 기타"
-        },
-        {
-          "hash": "2d96523",
-          "full_hash": "2d965232ee68a322a9e2ce774924fc64bbaba9cf",
-          "ts": "2026-06-09 09:30",
-          "ts_iso": "2026-06-09T09:30:12",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-09 09:30:12",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "505685b",
-          "full_hash": "505685b7bfc67e437b9e32ef0d2b6b82be475a89",
-          "ts": "2026-06-09 09:13",
-          "ts_iso": "2026-06-09T09:13:41",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-09 09:13:41",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "407861c",
-          "full_hash": "407861c873364b330c6eab3bf79d757af6c86e6a",
-          "ts": "2026-06-09 03:28",
-          "ts_iso": "2026-06-09T03:28:01",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-09 03:28:01",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "3a676d7",
-          "full_hash": "3a676d7f90a18c7c4616ab8a33dcfe5c7d765c87",
-          "ts": "2026-06-09 03:27",
-          "ts_iso": "2026-06-09T03:27:31",
-          "author": "cmpark0401-hash",
-          "subject": "manual JP: 2026-06-09 03:27",
-          "category": "docs",
-          "category_label": "📖 문서"
-        },
-        {
-          "hash": "435e654",
-          "full_hash": "435e6546610666cb36b8ae7f09308a4722eef2f5",
-          "ts": "2026-06-09 02:32",
-          "ts_iso": "2026-06-09T02:32:35",
-          "author": "cmpark0401-hash",
-          "subject": "auto: build 2026-06-09 02:32",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "734a220",
+      "full_hash": "734a2206e50de2c946eea7d4d13fb3bc74dec4b2",
+      "ts": "2026-06-16 00:07",
+      "ts_iso": "2026-06-16T00:07:05",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 재활용 폭발 자동 감지 시스템 박음 — evergreen 풀 19개(부동산·자영업·5070비용·국제자긍심) vs 최근 폭발 자카드+containment 매칭. 시그니엘 7개월 주기 패턴. 한일역전 depth ",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "d0ed8ef",
       "full_hash": "d0ed8ef10123d982e16a9a15103c4c0b606e251d",
@@ -1330,16 +1260,6 @@
       "ts_iso": "2026-06-05T11:35:39",
       "author": "cmpark0401-hash",
       "subject": "auto: workboard 2026-06-05 11:35:39",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "f3cb161",
-      "full_hash": "f3cb161f42c2d905e28707276d336fdfa61d7bb7",
-      "ts": "2026-06-05 11:32",
-      "ts_iso": "2026-06-05T11:32:38",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-05 11:32:38",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }

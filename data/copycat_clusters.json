@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15 02:39:24 UTC",
+  "updated_at": "2026-06-16 00:09:06 UTC",
   "buckets": {
     "야담": {
       "video_count": 42,
@@ -55,7 +55,7 @@
           "max_efficiency": 41.56,
           "avg_efficiency": 24.07,
           "max_views": 571690,
-          "freshness_days": 12,
+          "freshness_days": 13,
           "is_fresh": false,
           "is_hot": true,
           "videos": [
@@ -139,7 +139,7 @@
           "max_efficiency": 9.77,
           "avg_efficiency": 8.04,
           "max_views": 93151,
-          "freshness_days": 12,
+          "freshness_days": 13,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -212,7 +212,7 @@
           "max_efficiency": 6.73,
           "avg_efficiency": 6.37,
           "max_views": 8280,
-          "freshness_days": 128,
+          "freshness_days": 129,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -248,7 +248,7 @@
       ]
     },
     "경제·시사": {
-      "video_count": 84,
+      "video_count": 88,
       "cluster_count": 8,
       "clusters": [
         {
@@ -303,7 +303,7 @@
           "max_efficiency": 51.26,
           "avg_efficiency": 33.29,
           "max_views": 625355,
-          "freshness_days": 3,
+          "freshness_days": 4,
           "is_fresh": true,
           "is_hot": true,
           "videos": [
@@ -398,7 +398,7 @@
           "max_efficiency": 32.48,
           "avg_efficiency": 25.22,
           "max_views": 665801,
-          "freshness_days": 46,
+          "freshness_days": 47,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -502,7 +502,7 @@
           "max_efficiency": 52.77,
           "avg_efficiency": 18.71,
           "max_views": 264402,
-          "freshness_days": 15,
+          "freshness_days": 16,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -558,7 +558,7 @@
           "verdict": "📦 evergreen 아카이브"
         },
         {
-          "cluster_size": 7,
+          "cluster_size": 8,
           "common_keywords": [
             "중국"
           ],
@@ -650,11 +650,24 @@
                 "경제",
                 "시사"
               ]
+            },
+            {
+              "vid": "xiXjdof8j3Q",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9480,
+              "title": "중국 고속철도,열차를 땅에 묻어버렸습니다",
+              "upload_date": "20260609",
+              "views": 50954,
+              "efficiency": 5.37,
+              "categories": [
+                "경제",
+                "시사"
+              ]
             }
           ],
-          "days_active": 17,
+          "days_active": 18,
           "max_efficiency": 15.54,
-          "avg_efficiency": 9.38,
+          "avg_efficiency": 8.88,
           "max_views": 108750,
           "freshness_days": 7,
           "is_fresh": true,
@@ -747,9 +760,22 @@
                 "경제",
                 "시사"
               ]
+            },
+            {
+              "vid": "xiXjdof8j3Q",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9480,
+              "title": "중국 고속철도,열차를 땅에 묻어버렸습니다",
+              "upload_date": "20260609",
+              "views": 50954,
+              "efficiency": 5.37,
+              "categories": [
+                "경제",
+                "시사"
+              ]
             }
           ],
-          "verdict": "✅ 추격 가치 있음 (D+7 이내)"
+          "verdict": "🔥 양산 클러스터 골든기 (D+7)"
         },
         {
           "cluster_size": 4,
@@ -810,7 +836,7 @@
           "max_efficiency": 33.22,
           "avg_efficiency": 15.5,
           "max_views": 93677,
-          "freshness_days": 1,
+          "freshness_days": 2,
           "is_fresh": true,
           "is_hot": true,
           "videos": [
@@ -866,7 +892,7 @@
           "verdict": "🔥 즉시 추격 (D+3 안에 박을 것)"
         },
         {
-          "cluster_size": 3,
+          "cluster_size": 4,
           "common_keywords": [
             "quot"
           ],
@@ -906,14 +932,26 @@
               "categories": [
                 "경제"
               ]
+            },
+            {
+              "vid": "zCWRMsY8gf4",
+              "channel": "농부의 경제학",
+              "channel_subs": 4660,
+              "title": "&quot;삼전 40만원 간다&quot; 구글이 결국 삼성전자 손을 잡은 소름 돋는 이유",
+              "upload_date": "20260614",
+              "views": 24259,
+              "efficiency": 5.21,
+              "categories": [
+                "경제"
+              ]
             }
           ],
-          "days_active": 14,
+          "days_active": 27,
           "max_efficiency": 28.67,
-          "avg_efficiency": 13.74,
+          "avg_efficiency": 11.61,
           "max_views": 107227,
-          "freshness_days": 14,
-          "is_fresh": false,
+          "freshness_days": 2,
+          "is_fresh": true,
           "is_hot": true,
           "videos": [
             {
@@ -951,9 +989,21 @@
               "categories": [
                 "경제"
               ]
+            },
+            {
+              "vid": "zCWRMsY8gf4",
+              "channel": "농부의 경제학",
+              "channel_subs": 4660,
+              "title": "&quot;삼전 40만원 간다&quot; 구글이 결국 삼성전자 손을 잡은 소름 돋는 이유",
+              "upload_date": "20260614",
+              "views": 24259,
+              "efficiency": 5.21,
+              "categories": [
+                "경제"
+              ]
             }
           ],
-          "verdict": "⚠️ 신선도 한계 (D+14)"
+          "verdict": "🔥 즉시 추격 (D+3 안에 박을 것)"
         },
         {
           "cluster_size": 4,
@@ -1014,7 +1064,7 @@
           "max_efficiency": 8.18,
           "avg_efficiency": 6.46,
           "max_views": 27174,
-          "freshness_days": 11,
+          "freshness_days": 12,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -1107,7 +1157,7 @@
           "max_efficiency": 6.27,
           "avg_efficiency": 5.7,
           "max_views": 56524,
-          "freshness_days": 9,
+          "freshness_days": 10,
           "is_fresh": false,
           "is_hot": false,
           "videos": [

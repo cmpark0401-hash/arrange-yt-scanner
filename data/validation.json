@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-16 00:07",
+  "checked_at": "2026-06-16 09:11",
   "overall": "error",
   "overall_icon": "🔴",
   "overall_label": "오류 1건 · 경고 2건",
@@ -32,7 +32,7 @@
     {
       "name": "health_summary",
       "status": "error",
-      "msg": "dead 3개 · stale 2 · fresh 5 — 파이프라인 점검 필요"
+      "msg": "dead 3개 · stale 4 · fresh 3 — 파이프라인 점검 필요"
     },
     {
       "name": "build_freshness",
