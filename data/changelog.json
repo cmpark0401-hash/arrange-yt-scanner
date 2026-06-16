@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-16 13:25",
+  "generated_at": "2026-06-16 14:04",
   "total_commits": 80,
   "by_category": {
+    "feat": 6,
     "other": 16,
-    "feat": 5,
     "style": 4,
     "docs": 7,
-    "data": 48
+    "data": 47
   },
   "recent_by_date": [
     {
       "date": "2026-06-16",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "88fc3a2",
+          "full_hash": "88fc3a2dcfc05fa71e42f17bb24e8c89326fabd1",
+          "ts": "2026-06-16 13:25",
+          "ts_iso": "2026-06-16T13:25:29",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 지식록 21화 비교 분석 결과 박음 — 같은 주제 우리 116뷰 vs 돈냄새 750K 6,400배 차이. 결정타 3가지(채널 시드 4명·시리즈 라벨·11:30 발행). Hook/썸네일은 폭발 수준. check",
+          "category": "feat",
+          "category_label": "✨ 신규 기능"
+        },
         {
           "hash": "76dca50",
           "full_hash": "76dca5047ea16f46e352d275e30a0d9d9d155a54",
@@ -473,6 +483,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "88fc3a2",
+      "full_hash": "88fc3a2dcfc05fa71e42f17bb24e8c89326fabd1",
+      "ts": "2026-06-16 13:25",
+      "ts_iso": "2026-06-16T13:25:29",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 지식록 21화 비교 분석 결과 박음 — 같은 주제 우리 116뷰 vs 돈냄새 750K 6,400배 차이. 결정타 3가지(채널 시드 4명·시리즈 라벨·11:30 발행). Hook/썸네일은 폭발 수준. check",
+      "category": "feat",
+      "category_label": "✨ 신규 기능"
+    },
     {
       "hash": "76dca50",
       "full_hash": "76dca5047ea16f46e352d275e30a0d9d9d155a54",
@@ -1262,16 +1282,6 @@
       "subject": "과만세 첫 영상 발행 — sw-20260604-health published (시력회복)",
       "category": "other",
       "category_label": "📌 기타"
-    },
-    {
-      "hash": "e42cef4",
-      "full_hash": "e42cef47715ee82be48eac1c917620f1f4af3304",
-      "ts": "2026-06-05 12:12",
-      "ts_iso": "2026-06-05T12:12:57",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-05 12:12:57",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }
