@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-16 09:11",
+  "checked_at": "2026-06-16 13:25",
   "overall": "error",
   "overall_icon": "🔴",
   "overall_label": "오류 1건 · 경고 2건",
@@ -17,7 +17,7 @@
     {
       "name": "topic_id_unique",
       "status": "ok",
-      "msg": "총 203개 토픽 · 고유 ID 100%"
+      "msg": "총 204개 토픽 · 고유 ID 100%"
     },
     {
       "name": "html_element_ids",
@@ -32,7 +32,7 @@
     {
       "name": "health_summary",
       "status": "error",
-      "msg": "dead 3개 · stale 4 · fresh 3 — 파이프라인 점검 필요"
+      "msg": "dead 3개 · stale 3 · fresh 4 — 파이프라인 점검 필요"
     },
     {
       "name": "build_freshness",
@@ -47,7 +47,7 @@
     {
       "name": "published_urls",
       "status": "warning",
-      "msg": "published 토픽 12개의 video_url 누락/잘못됨: ['nn-20260603-re', 'sw-20260604-health', 'sw-20260603-od']"
+      "msg": "published 토픽 14개의 video_url 누락/잘못됨: ['nn-20260603-re', 'nn-20260613-ws2', 'sw-20260604-health']"
     }
   ]
 }

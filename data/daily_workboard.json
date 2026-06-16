@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-15T20:21:11",
+  "updated_at": "2026-06-16T13:19:58",
   "today": "2026-06-16",
   "categories_def": {
     "single_explosion": {
@@ -5340,7 +5340,7 @@
             "title": "조선왕조실록·오리집·난중일기",
             "note": "DATA_PREP 보강"
           },
-          "status": "ready_to_publish",
+          "status": "published",
           "checklist": {
             "collect": true,
             "analyze": true,
@@ -5348,7 +5348,7 @@
             "draft": true,
             "review_finalize": true,
             "self_diagnosis": true,
-            "published": false
+            "published": true
           },
           "events": [
             {
@@ -5360,6 +5360,11 @@
               "ts": "2026-06-13 20:30",
               "type": "ready_to_publish",
               "note": "20260613_10 전체 파이프라인 완료. 15,726자(488자/분 기준 32.2분, 시니어 TTS 290자/분 기준 약 54분). autopsy 1편 92.5x 카피 황금비 73~80%. Ch5 챕터제목 '폐모론'→'어머님 자리를 흔드는 결' 수정 완료."
+            },
+            {
+              "ts": "2026-06-16 12:00",
+              "type": "scheduled",
+              "note": "오늘 오후 7시 45분 (19:45) 예약 발행 완료. 20260613_10_iwonik-cheongbaegri (32.2분, [그 사람 시리즈], autopsy 1편 92.5x 카피 황금비 73~80%)"
             }
           ],
           "notes": "autopsy 6편 부검 결과 직접 적용. 1편 92.5x 검증. 분량 30분 골든구간. Hook 통계형 + 충격 대비. 결말 시그니처형 (시청자 호명). 잘듣네 결 안전선 100% 통과."
@@ -9162,6 +9167,56 @@
               "ts": "2026-06-15 09:00",
               "type": "scheduled",
               "note": "6월 15일 오전 예약 발행"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260615-beggar-marriage",
+          "category": "cross_category",
+          "title": "\"아버님, 거지에게 시집을 가라 하시옵니까?\" 옥중 아버지의 마지막 유언에, 핏물 소복으로 거지 굴로 걸어간 아씨 | [밤의 사료]",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🔥 카피캣 추격",
+            "[밤의 사료]",
+            "누명 무관 후예 reveal",
+            "효율 41.6x 원조(140K)"
+          ],
+          "merge_angle": "뒷골목 야담 메가 폭발(거지에게 시집, 139,935뷰·41.6x·D+10) 카피캣 추격. 후킹 공식 거의 일치. reveal축=누명 멸문 무관 후예·신원(왕족 아님)으로 은침(의술)·2편(왕족)과 분리",
+          "sources_a": {
+            "channel": "뒷골목 야담",
+            "title": "\"아버님, 거지에게 시집가란 말이옵니까?\" 마지막 유언에 거지 굴로 걸어간 아씨...",
+            "efficiency": 41.6,
+            "views": 139935,
+            "velocity": null,
+            "url": "https://www.youtube.com/watch?v=9Lh3WLA9yJY",
+            "categories": [
+              "야담",
+              "역사"
+            ]
+          },
+          "sources_b": null,
+          "status": "published",
+          "checklist": {
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "project": "20260615_10_beggar-marriage",
+          "events": [
+            {
+              "ts": "2026-06-15 22:00",
+              "type": "produced",
+              "note": "풀파이프라인 완성 — 대본 25,825자/~77분, reviewer 통과(정책 청정), 주제어 4회 회수"
+            },
+            {
+              "ts": "2026-06-15 22:00",
+              "type": "published",
+              "note": "6월 15일 밤 발행 완료"
             }
           ]
         }

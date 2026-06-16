@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16 09:11",
+  "generated_at": "2026-06-16 13:25",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -9,7 +9,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "3분 전",
+      "ago": "4시간 전",
       "updated_at": "2026-06-16 09:08",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-16.json",
       "severity": "critical"
@@ -19,7 +19,7 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "3일 전",
+      "ago": "4일 전",
       "updated_at": "2026-06-12 09:32",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-12.json",
       "severity": "warning"
@@ -29,7 +29,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2분 전",
+      "ago": "4시간 전",
       "updated_at": "2026-06-16 09:09",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-16.json",
       "severity": "warning"
@@ -39,7 +39,7 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "3일 전",
+      "ago": "4일 전",
       "updated_at": "2026-06-12 09:55",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-12.json",
       "severity": "warning"
@@ -49,7 +49,7 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "3일 전",
+      "ago": "4일 전",
       "updated_at": "2026-06-12 09:41",
       "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-12.json",
       "severity": "warning"
@@ -76,11 +76,11 @@
     },
     {
       "label": "📋 워크보드",
-      "status": "stale",
-      "icon": "🟡",
-      "status_label": "갱신 권장",
-      "ago": "9시간 전",
-      "updated_at": "2026-06-15T20:21:11",
+      "status": "fresh",
+      "icon": "🟢",
+      "status_label": "정상",
+      "ago": "5분 전",
+      "updated_at": "2026-06-16T13:19:58",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
     },
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-16 09:11"
+      "updated_at": "2026-06-16 13:25"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
