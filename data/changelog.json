@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-16 23:44",
+  "generated_at": "2026-06-17 10:53",
   "total_commits": 80,
   "by_category": {
+    "other": 17,
     "feat": 7,
-    "other": 16,
     "style": 4,
     "docs": 7,
-    "data": 46
+    "data": 45
   },
   "recent_by_date": [
     {
       "date": "2026-06-16",
-      "count": 5,
+      "count": 6,
       "commits": [
+        {
+          "hash": "0de7d61",
+          "full_hash": "0de7d615bcda413ca770a3ffa35140489a8c8082",
+          "ts": "2026-06-16 23:45",
+          "ts_iso": "2026-06-16T23:45:24",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 2026-06-16 morning 사이클 — 신영상 140편 · 효율 5x+ 40편 · 알림 140편 · 재활용 3건",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "2179305",
           "full_hash": "217930524a52b21b79236310aef81237874ec135",
@@ -503,6 +513,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "0de7d61",
+      "full_hash": "0de7d615bcda413ca770a3ffa35140489a8c8082",
+      "ts": "2026-06-16 23:45",
+      "ts_iso": "2026-06-16T23:45:24",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 2026-06-16 morning 사이클 — 신영상 140편 · 효율 5x+ 40편 · 알림 140편 · 재활용 3건",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "2179305",
       "full_hash": "217930524a52b21b79236310aef81237874ec135",
@@ -1290,16 +1310,6 @@
       "ts_iso": "2026-06-06T09:30:12",
       "author": "cmpark0401-hash",
       "subject": "auto: workboard 2026-06-06 09:30:12",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "8063ea6",
-      "full_hash": "8063ea6cefd04713e264c69a471db3b8b15c5e2e",
-      "ts": "2026-06-05 23:56",
-      "ts_iso": "2026-06-05T23:56:45",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-05 23:56:45",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }

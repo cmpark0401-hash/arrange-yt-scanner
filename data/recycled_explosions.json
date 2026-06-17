@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16 14:40:41 UTC",
+  "updated_at": "2026-06-17 00:08:21 UTC",
   "topic_count": 19,
   "recycle_count": 3,
   "topics": [
@@ -13,8 +13,8 @@
         "추월",
         "한국"
       ],
-      "depth_score": 0.662,
-      "matched_count": 17,
+      "depth_score": 0.692,
+      "matched_count": 15,
       "matched_videos": [
         {
           "vid": "-lgPDInkWZI",
@@ -22,8 +22,8 @@
           "channel": "김재민TV",
           "efficiency": 11.374642857142858,
           "views": 541433,
-          "velocity_per_day": 180477,
-          "freshness_days": 3,
+          "velocity_per_day": 135358,
+          "freshness_days": 4,
           "bucket": "경제·시사",
           "channel_subs": 47600,
           "source": "alert",
@@ -40,7 +40,7 @@
           "efficiency": 0.9579141104294479,
           "views": 46842,
           "velocity_per_day": 46842,
-          "freshness_days": 0,
+          "freshness_days": 1,
           "bucket": "경제·시사",
           "channel_subs": 48900,
           "source": "alert",
@@ -56,30 +56,14 @@
           "channel": "김재민TV",
           "efficiency": 3.4010714285714285,
           "views": 161891,
-          "velocity_per_day": 26981,
-          "freshness_days": 6,
+          "velocity_per_day": 23127,
+          "freshness_days": 7,
           "bucket": "경제·시사",
           "channel_subs": 47600,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [
             "한국"
-          ]
-        },
-        {
-          "vid": "ev4LRG-AVs0",
-          "title": "[주식] 역대급 저평가 주식 TOP 3 !! 천만원 있다면 \"이 종목\" 사라! #급등주 #SK하이닉스 #삼성전자 #로봇주 #반도체 #스페이스X｜리드남",
-          "channel": "주식 재벌 - 주먹남 리드남의 급등주",
-          "efficiency": 0.26,
-          "views": 22263,
-          "velocity_per_day": 22263,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 86400,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "반도체"
           ]
         },
         {
@@ -88,42 +72,10 @@
           "channel": "김재민TV",
           "efficiency": 2.718109243697479,
           "views": 129382,
-          "velocity_per_day": 21563,
-          "freshness_days": 6,
-          "bucket": "경제·시사",
-          "channel_subs": 47600,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "한국"
-          ]
-        },
-        {
-          "vid": "YuMkY_GR_3A",
-          "title": "엔비디아의 약점 5개, 전부 한국 기업이 가지고 있습니다",
-          "channel": "경제강국",
-          "efficiency": 12.97378640776699,
-          "views": 133630,
-          "velocity_per_day": 19090,
+          "velocity_per_day": 18483,
           "freshness_days": 7,
           "bucket": "경제·시사",
-          "channel_subs": 10300,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "한국"
-          ]
-        },
-        {
-          "vid": "vitERV2rR7o",
-          "title": "한국, 체코 극적 역전승직후 길거리에 멕시코인들이 더 난리 난 놀라운 광경, 한국인들의 한국 사랑",
-          "channel": "귀에쏙쏙경제학",
-          "efficiency": 3.1622289156626504,
-          "views": 52493,
-          "velocity_per_day": 17497,
-          "freshness_days": 3,
-          "bucket": "경제·시사",
-          "channel_subs": 16600,
+          "channel_subs": 47600,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [
@@ -137,7 +89,7 @@
           "efficiency": 0.3251124744376278,
           "views": 15898,
           "velocity_per_day": 15898,
-          "freshness_days": 0,
+          "freshness_days": 1,
           "bucket": "경제·시사",
           "channel_subs": 48900,
           "source": "alert",
@@ -145,6 +97,54 @@
           "common_kws": [
             "일본",
             "한국"
+          ]
+        },
+        {
+          "vid": "vitERV2rR7o",
+          "title": "한국, 체코 극적 역전승직후 길거리에 멕시코인들이 더 난리 난 놀라운 광경, 한국인들의 한국 사랑",
+          "channel": "귀에쏙쏙경제학",
+          "efficiency": 3.1622289156626504,
+          "views": 52493,
+          "velocity_per_day": 13123,
+          "freshness_days": 4,
+          "bucket": "경제·시사",
+          "channel_subs": 16600,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "한국"
+          ]
+        },
+        {
+          "vid": "7GkVSUcZB54",
+          "title": "[전력반도체관련주] 엔비디아 생태계 확장! 결국 전력 효율을 잡는 기업이 갑니다. (한국 대장주 5종목)",
+          "channel": "노른자 주식",
+          "efficiency": 0.24,
+          "views": 11220,
+          "velocity_per_day": 11220,
+          "freshness_days": 1,
+          "bucket": "경제·시사",
+          "channel_subs": 46400,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "한국"
+          ]
+        },
+        {
+          "vid": "ev4LRG-AVs0",
+          "title": "[주식] 역대급 저평가 주식 TOP 3 !! 천만원 있다면 \"이 종목\" 사라! #급등주 #SK하이닉스 #삼성전자 #로봇주 #반도체 #스페이스X｜리드남",
+          "channel": "주식 재벌 - 주먹남 리드남의 급등주",
+          "efficiency": 0.26,
+          "views": 22263,
+          "velocity_per_day": 11131,
+          "freshness_days": 2,
+          "bucket": "경제·시사",
+          "channel_subs": 86400,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "반도체"
           ]
         }
       ],
@@ -165,33 +165,17 @@
         "아이폰",
         "통신비"
       ],
-      "depth_score": 0.364,
-      "matched_count": 5,
+      "depth_score": 0.265,
+      "matched_count": 4,
       "matched_videos": [
-        {
-          "vid": "QaCsvrHZ8mU",
-          "title": "삼성,LG,현대 국내 대기업  해외에서도 줄서서 주문하는 전 세계 단 하나뿐인 기업",
-          "channel": "귀에쏙쏙경제학",
-          "efficiency": 14.695394736842106,
-          "views": 223370,
-          "velocity_per_day": 31910,
-          "freshness_days": 7,
-          "bucket": "경제·시사",
-          "channel_subs": 15200,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "삼성"
-          ]
-        },
         {
           "vid": "Xkz3_OJ_0-g",
           "title": "충격! 삼성 조정 시작 진짜 중요한 신호가 나왔습니다! 환한 얼굴로 나온 전영현 삼성전자 부회장...젠슨 황과 무슨 얘기 나눴나 들어보니?",
           "channel": "만화 경제학",
           "efficiency": 2.0887572590011616,
           "views": 179842,
-          "velocity_per_day": 29973,
-          "freshness_days": 6,
+          "velocity_per_day": 25691,
+          "freshness_days": 7,
           "bucket": "경제·시사",
           "channel_subs": 86100,
           "source": "alert",
@@ -206,26 +190,10 @@
           "channel": "비밀의경제학",
           "efficiency": 8.06,
           "views": 61455,
-          "velocity_per_day": 15363,
-          "freshness_days": 4,
+          "velocity_per_day": 12291,
+          "freshness_days": 5,
           "bucket": "경제·시사",
           "channel_subs": 7620,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "삼성"
-          ]
-        },
-        {
-          "vid": "LxTRk6A6rWo",
-          "title": "삼성전자 '이 가격' 밑으로는 부담없습니다 삼성전자 지금 팔 때가 아닌 이유? 35만전자 이제 시작이다 하락에 삼성 판 '개미들 눈물'.. 내일 아침 무서운 일 터진다!",
-          "channel": "만화 경제학",
-          "efficiency": 0.16048331415420022,
-          "views": 13946,
-          "velocity_per_day": 13946,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 86900,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [
@@ -238,10 +206,26 @@
           "channel": "김재민TV",
           "efficiency": 1.2821638655462184,
           "views": 61031,
-          "velocity_per_day": 12206,
-          "freshness_days": 5,
+          "velocity_per_day": 10171,
+          "freshness_days": 6,
           "bucket": "경제·시사",
           "channel_subs": 47600,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "삼성"
+          ]
+        },
+        {
+          "vid": "LxTRk6A6rWo",
+          "title": "삼성전자 '이 가격' 밑으로는 부담없습니다 삼성전자 지금 팔 때가 아닌 이유? 35만전자 이제 시작이다 하락에 삼성 판 '개미들 눈물'.. 내일 아침 무서운 일 터진다!",
+          "channel": "만화 경제학",
+          "efficiency": 0.16048331415420022,
+          "views": 13946,
+          "velocity_per_day": 6973,
+          "freshness_days": 2,
+          "bucket": "경제·시사",
+          "channel_subs": 86900,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [
