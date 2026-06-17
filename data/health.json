@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17 10:53",
+  "generated_at": "2026-06-17 11:00",
   "overall_icon": "🔴",
   "overall_label": "일부 dead",
   "overall_severity": "warning",
@@ -79,7 +79,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "0분 전",
+      "ago": "6분 전",
       "updated_at": "2026-06-16T14:51:47",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-17 10:53"
+      "updated_at": "2026-06-17 11:00"
     },
     {
       "label": "🛡️ 데이터 신뢰도",

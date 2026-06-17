@@ -1,14 +1,30 @@
 {
-  "generated_at": "2026-06-17 10:53",
+  "generated_at": "2026-06-17 11:00",
   "total_commits": 80,
   "by_category": {
-    "other": 17,
+    "other": 18,
     "feat": 7,
     "style": 4,
     "docs": 7,
-    "data": 45
+    "data": 44
   },
   "recent_by_date": [
+    {
+      "date": "2026-06-17",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "c490241",
+          "full_hash": "c490241dbfa1b315a1ba286fed69d15338187088",
+          "ts": "2026-06-17 10:54",
+          "ts_iso": "2026-06-17T10:54:01",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 벤치마킹 영상 URL 박음 의무 — 5채널(지식록·잘듣네·과만세·야담·247경제) 공통. youtube.md 끝부분 + 사용자 보고 답변 끝에 카피캣 원조 URL 표 박음. 21화 비교 분석 학습. SKILL",
+          "category": "other",
+          "category_label": "📌 기타"
+        }
+      ]
+    },
     {
       "date": "2026-06-16",
       "count": 6,
@@ -414,105 +430,19 @@
           "category_label": "📊 데이터 갱신"
         }
       ]
-    },
-    {
-      "date": "2026-06-10",
-      "count": 9,
-      "commits": [
-        {
-          "hash": "f6e2554",
-          "full_hash": "f6e2554a7961b73d85e5b2329a47f23f990437f8",
-          "ts": "2026-06-10 23:40",
-          "ts_iso": "2026-06-10T23:40:16",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-10 23:40:15",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "da46c86",
-          "full_hash": "da46c868321d3db02884310e02414029412c0c1f",
-          "ts": "2026-06-10 23:30",
-          "ts_iso": "2026-06-10T23:30:59",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-10 23:30:59",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "a41cd5a",
-          "full_hash": "a41cd5a650081e611ce51b0eaaec0973c0aa1700",
-          "ts": "2026-06-10 23:30",
-          "ts_iso": "2026-06-10T23:30:04",
-          "author": "cmpark0401-hash",
-          "subject": "manual JP: 2026-06-10 23:30",
-          "category": "docs",
-          "category_label": "📖 문서"
-        },
-        {
-          "hash": "ac41499",
-          "full_hash": "ac4149961c555ded71710004eb8a1d90ff4e1356",
-          "ts": "2026-06-10 22:53",
-          "ts_iso": "2026-06-10T22:53:26",
-          "author": "cmpark0401-hash",
-          "subject": "auto: build 2026-06-10 22:53",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "40939ea",
-          "full_hash": "40939eaee5834fbe50fc770e90bf4b663cb4d824",
-          "ts": "2026-06-10 21:55",
-          "ts_iso": "2026-06-10T21:55:19",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-10 21:55:18",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "d893a37",
-          "full_hash": "d893a3719cb0c23e5190c00f44227bede02362c4",
-          "ts": "2026-06-10 09:50",
-          "ts_iso": "2026-06-10T09:50:29",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-10 09:50:29",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "f1dcfd4",
-          "full_hash": "f1dcfd4638d0883ca4171169e4c83f7839a290bc",
-          "ts": "2026-06-10 09:30",
-          "ts_iso": "2026-06-10T09:30:11",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-10 09:30:11",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "ffde49e",
-          "full_hash": "ffde49e69291d9f987d056f816d17d35ce9ecb67",
-          "ts": "2026-06-10 01:44",
-          "ts_iso": "2026-06-10T01:44:58",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-10 01:44:58",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "eb70241",
-          "full_hash": "eb702419a9d51790d64595f6a1d7326f620d341d",
-          "ts": "2026-06-10 01:34",
-          "ts_iso": "2026-06-10T01:34:12",
-          "author": "cmpark0401-hash",
-          "subject": "auto: workboard 2026-06-10 01:34:12",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "c490241",
+      "full_hash": "c490241dbfa1b315a1ba286fed69d15338187088",
+      "ts": "2026-06-17 10:54",
+      "ts_iso": "2026-06-17T10:54:01",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 벤치마킹 영상 URL 박음 의무 — 5채널(지식록·잘듣네·과만세·야담·247경제) 공통. youtube.md 끝부분 + 사용자 보고 답변 끝에 카피캣 원조 URL 표 박음. 21화 비교 분석 학습. SKILL",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "0de7d61",
       "full_hash": "0de7d615bcda413ca770a3ffa35140489a8c8082",
@@ -1300,16 +1230,6 @@
       "ts_iso": "2026-06-06T09:59:12",
       "author": "cmpark0401-hash",
       "subject": "auto: build 2026-06-06 09:59",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "c37931c",
-      "full_hash": "c37931c993f9db54b49e83afd743a3374ee29823",
-      "ts": "2026-06-06 09:30",
-      "ts_iso": "2026-06-06T09:30:12",
-      "author": "cmpark0401-hash",
-      "subject": "auto: workboard 2026-06-06 09:30:12",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }
