@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-17 11:00",
+  "generated_at": "2026-06-17 16:27",
   "total_commits": 80,
   "by_category": {
+    "style": 5,
     "other": 18,
     "feat": 7,
-    "style": 4,
     "docs": 7,
-    "data": 44
+    "data": 43
   },
   "recent_by_date": [
     {
       "date": "2026-06-17",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "da17c59",
+          "full_hash": "da17c59939e6a644098452d2341b6f4d5410f7da",
+          "ts": "2026-06-17 11:00",
+          "ts_iso": "2026-06-17T11:00:27",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 썸네일 하단 텍스트 자리 글로벌 의무 박음 — 모든 채널 AI 프롬프트에 하단 35~45% 영역 자동 강제. 247경제 full → bottom-half, 과만세 side-negative-space → bot",
+          "category": "style",
+          "category_label": "🎨 디자인"
+        },
         {
           "hash": "c490241",
           "full_hash": "c490241dbfa1b315a1ba286fed69d15338187088",
@@ -433,6 +443,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "da17c59",
+      "full_hash": "da17c59939e6a644098452d2341b6f4d5410f7da",
+      "ts": "2026-06-17 11:00",
+      "ts_iso": "2026-06-17T11:00:27",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 썸네일 하단 텍스트 자리 글로벌 의무 박음 — 모든 채널 AI 프롬프트에 하단 35~45% 영역 자동 강제. 247경제 full → bottom-half, 과만세 side-negative-space → bot",
+      "category": "style",
+      "category_label": "🎨 디자인"
+    },
     {
       "hash": "c490241",
       "full_hash": "c490241dbfa1b315a1ba286fed69d15338187088",
@@ -1222,16 +1242,6 @@
       "subject": "manual JP: 2026-06-06 11:01",
       "category": "docs",
       "category_label": "📖 문서"
-    },
-    {
-      "hash": "116bda7",
-      "full_hash": "116bda743baf03a28417400131bde9bcb0fd5563",
-      "ts": "2026-06-06 09:59",
-      "ts_iso": "2026-06-06T09:59:12",
-      "author": "cmpark0401-hash",
-      "subject": "auto: build 2026-06-06 09:59",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
     }
   ]
 }

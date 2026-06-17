@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-16T14:51:47",
+  "updated_at": "2026-06-17T16:06:37",
   "today": "2026-06-17",
   "categories_def": {
     "single_explosion": {
@@ -5394,7 +5394,7 @@
             "title": "조선왕조실록·「음식디미방」·산림경제",
             "note": "DATA_PREP 보강"
           },
-          "status": "ready_to_publish",
+          "status": "published",
           "checklist": {
             "collect": true,
             "analyze": true,
@@ -5402,7 +5402,7 @@
             "draft": true,
             "review_finalize": true,
             "self_diagnosis": true,
-            "published": false
+            "published": true
           },
           "events": [
             {
@@ -5414,9 +5414,57 @@
               "ts": "2026-06-16 14:00",
               "type": "ready_to_publish",
               "note": "EP.11 완료. 13,236자 / 27.1분. autopsy 1편 251.6x 카피 황금비 94% 구조. APPROVED (결·어미·호명 완전 변환)."
+            },
+            {
+              "ts": "2026-06-17 10:00",
+              "type": "scheduled",
+              "note": "오늘 밤 예약 발행 완료. EP.11 조선 백성 한 끼 (27.1분, autopsy 251.6x 카피 황금비 94%)"
             }
           ],
           "notes": "autopsy 검증 251.6x 메가폭발. Hook 장면형(1660년대 경상도 새벽 부엌). 결말 시그니처형 시청자 호명. 자극 0."
+        },
+        {
+          "id": "nn-20260617-ws4",
+          "category": "evergreen",
+          "title": "EP.12 — 정약용 18년 강진 유배 [그 사람 시리즈]",
+          "type": "신규 (인물 결 안전 라인업)",
+          "rating": 5,
+          "tags": [
+            "EP.12",
+            "[그 사람 시리즈]",
+            "한국사 인물",
+            "정약용",
+            "강진 18년",
+            "evergreen"
+          ],
+          "merge_angle": "한 분이 한 자리에 18년을 가만히 머무시면서, 한 시대의 책 500여 권을 적어 두신 결",
+          "sources_a": {
+            "channel": "1차 사료 (다산 본인)",
+            "title": "「자찬묘지명」·「두 아들에게」·「목민심서」 자서·「경세유표」·「흠흠신서」"
+          },
+          "sources_b": {
+            "channel": "검증 학술",
+            "title": "정조실록·순조실록·다산학술재단",
+            "note": "DATA_PREP 외부 사료 보강"
+          },
+          "status": "in_progress",
+          "checklist": {
+            "collect": true,
+            "analyze": false,
+            "strategy": false,
+            "draft": false,
+            "review_finalize": false,
+            "self_diagnosis": false,
+            "published": false
+          },
+          "events": [
+            {
+              "ts": "2026-06-17 11:00",
+              "type": "in_progress",
+              "note": "EP.12 프로젝트 생성. 자막 X (DRM)로 1차 사료 기반 진행. 차인표·이원익·조선 백성 한 끼 인물 결 연속성."
+            }
+          ],
+          "notes": "한국사 인물 결 안전선 100%. 1차 사료 5건+ 풍부. 30분 골든구간."
         }
       ]
     },
@@ -9263,9 +9311,102 @@
               "note": "풀파이프라인 완성 — 대본 25,825자/~77분, reviewer 통과(정책 청정), 주제어 4회 회수"
             },
             {
-              "ts": "2026-06-15 22:00",
+              "ts": "2026-06-16 18:30",
               "type": "published",
-              "note": "6월 15일 밤 발행 완료"
+              "note": "6월 16일 발행 완료(정정)"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260616-concubine-feast",
+          "category": "cross_category",
+          "title": "며느리에겐 찬밥, 첩에게만 진수성찬을 차려 준 모진 시어머니 — 사흘째 되던 밤, 첩이 제 발로 줄행랑친 까닭 | [밤의 사료]",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🔥 카피캣 추격",
+            "[밤의 사료]",
+            "시어머니 지략·망자 약속",
+            "속도 13,530/일 원조(야담1위)"
+          ],
+          "merge_angle": "산골야담 속도폭발(첩에게만 밥상, 108,945뷰·7.3x·D+6·속도 야담1위) 카피캣 추격. 후킹 공식 4/4. 차별=시어머니 시점·지략+망자 약속(6편 며느리 혜안과 분리)",
+          "sources_a": {
+            "channel": "산골야담",
+            "title": "며느리 앞에서 첩에게만 밥상을 차려준 시어머니, 사흘째 되던 날 첩이 제 발로 도망쳤다",
+            "efficiency": 7.3,
+            "views": 108945,
+            "velocity": 13530,
+            "url": "https://www.youtube.com/watch?v=zV0_sOm6aUw",
+            "categories": [
+              "야담"
+            ]
+          },
+          "sources_b": null,
+          "status": "published",
+          "checklist": {
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "project": "20260616_11_concubine-feast",
+          "events": [
+            {
+              "ts": "2026-06-16 22:00",
+              "type": "produced",
+              "note": "풀파이프라인 완성(서브에이전트 Sonnet) — 대본 23,677자/~71분, reviewer 통과(정책 청정)"
+            },
+            {
+              "ts": "2026-06-17 18:30",
+              "type": "scheduled",
+              "note": "오늘 18:30 예약 발행"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260614-mighty-bride",
+          "category": "cross_category",
+          "title": "힘을 숨기고 살던 괴력 며느리, 친정 부모를 노비로 만든 토호의 집을 하룻밤에 송두리째 뒤집은 그날 | [밤의 사료]",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🔥 카피캣 추격",
+            "[밤의 사료]",
+            "괴력·통쾌 응징",
+            "효율 원조 D+1 속도폭발"
+          ],
+          "merge_angle": "명품야담 D+1 속도폭발(괴력 며느리) 카피캣 추격. 통쾌 장사 레인(술도가 드롭). 봉인어로 폭력0",
+          "sources_a": {
+            "channel": "명품야담",
+            "title": "괴력 며느리 복희가 악당집 뒤집었다",
+            "efficiency": 2.0,
+            "views": 10694,
+            "velocity": 10555,
+            "url": "https://www.youtube.com/watch?v=Naj-LZCSMxE",
+            "categories": [
+              "야담"
+            ]
+          },
+          "sources_b": null,
+          "status": "published",
+          "checklist": {
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "project": "20260615_09_mighty-bride",
+          "events": [
+            {
+              "ts": "2026-06-15 18:30",
+              "type": "published",
+              "note": "6월 15일 발행 완료"
             }
           ]
         }
