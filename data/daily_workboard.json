@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-17T16:06:37",
-  "today": "2026-06-17",
+  "updated_at": "2026-06-17T16:33:33",
+  "today": "2026-06-18",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -5447,14 +5447,14 @@
             "title": "정조실록·순조실록·다산학술재단",
             "note": "DATA_PREP 외부 사료 보강"
           },
-          "status": "in_progress",
+          "status": "ready_to_publish",
           "checklist": {
             "collect": true,
-            "analyze": false,
-            "strategy": false,
-            "draft": false,
-            "review_finalize": false,
-            "self_diagnosis": false,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
             "published": false
           },
           "events": [
@@ -5462,6 +5462,11 @@
               "ts": "2026-06-17 11:00",
               "type": "in_progress",
               "note": "EP.12 프로젝트 생성. 자막 X (DRM)로 1차 사료 기반 진행. 차인표·이원익·조선 백성 한 끼 인물 결 연속성."
+            },
+            {
+              "ts": "2026-06-17 17:00",
+              "type": "ready_to_publish",
+              "note": "EP.12 정약용 18년 강진. 15,201자 / 31.1분. PASS. 1차 사료 (자찬묘지명·두 아들에게·목민심서·경세유표·흠흠신서·다신계절목·사암연보) 직접 인용 5건+."
             }
           ],
           "notes": "한국사 인물 결 안전선 100%. 1차 사료 5건+ 풍부. 30분 골든구간."

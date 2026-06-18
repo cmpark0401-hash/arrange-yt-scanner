@@ -1,18 +1,28 @@
 {
-  "generated_at": "2026-06-17 16:27",
+  "generated_at": "2026-06-18 15:34",
   "total_commits": 80,
   "by_category": {
+    "other": 19,
     "style": 5,
-    "other": 18,
     "feat": 7,
-    "docs": 7,
+    "docs": 6,
     "data": 43
   },
   "recent_by_date": [
     {
       "date": "2026-06-17",
-      "count": 2,
+      "count": 3,
       "commits": [
+        {
+          "hash": "0910c50",
+          "full_hash": "0910c50049ae7fb1925524db7bd8ff27efc99531",
+          "ts": "2026-06-17 16:27",
+          "ts_iso": "2026-06-17T16:27:37",
+          "author": "cmpark0401-hash",
+          "subject": "빌드: 뉴스 모니터 보강 — 5일 누락된 news_headlines 매뉴얼 수집 + 사이트 반영. launchd 비활성으로 매뉴얼 사이클에 collect_news.py 누락이 원인. 142건 뉴스 박힘 (경제 30 ",
+          "category": "other",
+          "category_label": "📌 기타"
+        },
         {
           "hash": "da17c59",
           "full_hash": "da17c59939e6a644098452d2341b6f4d5410f7da",
@@ -443,6 +453,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "0910c50",
+      "full_hash": "0910c50049ae7fb1925524db7bd8ff27efc99531",
+      "ts": "2026-06-17 16:27",
+      "ts_iso": "2026-06-17T16:27:37",
+      "author": "cmpark0401-hash",
+      "subject": "빌드: 뉴스 모니터 보강 — 5일 누락된 news_headlines 매뉴얼 수집 + 사이트 반영. launchd 비활성으로 매뉴얼 사이클에 collect_news.py 누락이 원인. 142건 뉴스 박힘 (경제 30 ",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "da17c59",
       "full_hash": "da17c59939e6a644098452d2341b6f4d5410f7da",
@@ -1232,16 +1252,6 @@
       "subject": "auto: workboard 2026-06-06 11:02:19",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "40b56be",
-      "full_hash": "40b56be23f1662d2241533e43f0c09510a67a08e",
-      "ts": "2026-06-06 11:01",
-      "ts_iso": "2026-06-06T11:01:50",
-      "author": "cmpark0401-hash",
-      "subject": "manual JP: 2026-06-06 11:01",
-      "category": "docs",
-      "category_label": "📖 문서"
     }
   ]
 }

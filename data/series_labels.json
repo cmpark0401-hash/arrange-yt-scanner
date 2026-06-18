@@ -1,12 +1,60 @@
 {
-  "updated_at": "2026-06-16 14:38:24 UTC",
-  "total_videos": 5506,
-  "videos_with_label": 606,
-  "videos_without_label": 4900,
-  "label_ratio": 11.0,
-  "unique_labels": 248,
-  "qualified_labels": 62,
+  "updated_at": "2026-06-18 06:27:12 UTC",
+  "total_videos": 5759,
+  "videos_with_label": 655,
+  "videos_without_label": 5104,
+  "label_ratio": 11.4,
+  "unique_labels": 260,
+  "qualified_labels": 67,
   "labels": [
+    {
+      "label": "가까운 우주",
+      "occurrences": 4,
+      "channels": [
+        "카오스 사이언스"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.44,
+      "max_efficiency": 1.37,
+      "total_views": 483181,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 1327.42,
+      "top_videos": [
+        {
+          "vid": "8LX2Gn7tuf8",
+          "channel": "카오스 사이언스",
+          "title": "[가까운 우주] 태양계에서 금성만 OO이 반대라고?",
+          "efficiency": 1.3662898550724638,
+          "views": 377096,
+          "upload_date": "20260519"
+        },
+        {
+          "vid": "OwdANeXlvjs",
+          "channel": "카오스 사이언스",
+          "title": "[가까운 우주] 두께만 20km? 금성 구름의 정체",
+          "efficiency": 0.21432971014492755,
+          "views": 59155,
+          "upload_date": "20260512"
+        },
+        {
+          "vid": "NjyCdUBFGjE",
+          "channel": "카오스 사이언스",
+          "title": "[가까운 우주] 지구의 쌍둥이는 화성 아닌 금성?",
+          "efficiency": 0.09218840579710146,
+          "views": 25444,
+          "upload_date": "20260514"
+        },
+        {
+          "vid": "f8dcpGvbYGk",
+          "channel": "카오스 사이언스",
+          "title": "[가까운 우주] 생명체? 유기물? 금성의 미확인 흡수체",
+          "efficiency": 0.07784782608695652,
+          "views": 21486,
+          "upload_date": "20260521"
+        }
+      ]
+    },
     {
       "label": "수면다큐",
       "occurrences": 6,
@@ -22,8 +70,8 @@
       "avg_efficiency": 67.15,
       "max_efficiency": 401.5,
       "total_views": 6511769,
-      "baseline_efficiency": 0.99,
-      "boost_ratio": 67.67,
+      "baseline_efficiency": 0.98,
+      "boost_ratio": 68.57,
       "top_videos": [
         {
           "vid": "y78lBmYU0yE",
@@ -68,19 +116,75 @@
       ]
     },
     {
+      "label": "2018 물리",
+      "occurrences": 7,
+      "channels": [
+        "카오스 사이언스"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.01,
+      "max_efficiency": 0.03,
+      "total_views": 27115,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 42.57,
+      "top_videos": [
+        {
+          "vid": "GltiEuXU4dg",
+          "channel": "카오스 사이언스",
+          "title": "[2018 물리] 수학이 물리, 아니 우주의 언어인 이유!",
+          "efficiency": 0.03207608695652174,
+          "views": 8853,
+          "upload_date": "20260526"
+        },
+        {
+          "vid": "z1c7TRdYMJc",
+          "channel": "카오스 사이언스",
+          "title": "[2018 물리] 뉴턴의 세계가 흔들린 이유?! (feat. 무대와 관객?)",
+          "efficiency": 0.028818840579710146,
+          "views": 7954,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "R85tQcALhzw",
+          "channel": "카오스 사이언스",
+          "title": "[2018 물리] 빛의 속도가 절대적이면 벌어지는 일(동시성의 상대성)",
+          "efficiency": 0.014427536231884058,
+          "views": 3982,
+          "upload_date": "20260611"
+        },
+        {
+          "vid": "W63-Uw2-mSA",
+          "channel": "카오스 사이언스",
+          "title": "[2018 물리] 맥스웰의 업적은 (절대) 커피 아닙니다!!!!",
+          "efficiency": 0.008898550724637681,
+          "views": 2456,
+          "upload_date": "20260609"
+        },
+        {
+          "vid": "73dgEeK0sR8",
+          "channel": "카오스 사이언스",
+          "title": "[2018 물리] 우리가 지구 자전 속도(한국 기준 1,000km/h)를 못 느끼는 이유?!",
+          "efficiency": 0.005467391304347826,
+          "views": 1509,
+          "upload_date": "20260604"
+        }
+      ]
+    },
+    {
       "label": "지식뉴스",
-      "occurrences": 28,
+      "occurrences": 30,
       "channels": [
         "교양이를 부탁해",
         "스브스뉴스"
       ],
       "channel_count": 2,
       "is_multi_channel": true,
-      "avg_efficiency": 0.21,
+      "avg_efficiency": 0.2,
       "max_efficiency": 2.33,
-      "total_views": 2554301,
+      "total_views": 2593760,
       "baseline_efficiency": 0.03,
-      "boost_ratio": 8.04,
+      "boost_ratio": 7.74,
       "top_videos": [
         {
           "vid": "Y3otQoBcIeE",
@@ -137,7 +241,7 @@
       "max_efficiency": 0.41,
       "total_views": 498086,
       "baseline_efficiency": 0.03,
-      "boost_ratio": 6.3,
+      "boost_ratio": 6.4,
       "top_videos": [
         {
           "vid": "UXjVKKt1fcg",
@@ -192,8 +296,8 @@
       "avg_efficiency": 0.5,
       "max_efficiency": 1.64,
       "total_views": 3735007,
-      "baseline_efficiency": 0.1,
-      "boost_ratio": 5.22,
+      "baseline_efficiency": 0.09,
+      "boost_ratio": 5.3,
       "top_videos": [
         {
           "vid": "7Ndar87MKUQ",
@@ -286,6 +390,54 @@
       ]
     },
     {
+      "label": "한화오션 주가전망",
+      "occurrences": 4,
+      "channels": [
+        "주식곳간TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.01,
+      "total_views": 8889,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 2.1,
+      "top_videos": [
+        {
+          "vid": "Np9TyXvOLmU",
+          "channel": "주식곳간TV",
+          "title": "[한화오션 주가전망] 6월18일 목요일 긴급 브리핑! 목표가 '여기'까지 봅니다 \"주주분들 필수시청\". #한화오션 #한화오션주가전망 #한화오션주가",
+          "efficiency": 0.005035120147874307,
+          "views": 2724,
+          "upload_date": "20260618"
+        },
+        {
+          "vid": "RPDPCWMsIpI",
+          "channel": "주식곳간TV",
+          "title": "[한화오션 주가전망] 방금 발표 했습니다! 대박 난리났습니다! 필수시청! #한화오션 #한화오션주가 #한화오션주가전망",
+          "efficiency": 0.004576709796672828,
+          "views": 2476,
+          "upload_date": "20260611"
+        },
+        {
+          "vid": "IkPh6azdx2w",
+          "channel": "주식곳간TV",
+          "title": "[한화오션 주가전망] 조선 방산 대장주 패러다임 완벽 증명! 한화그룹 시너지 기반 사상 최대 수주잔고 차트 흐름 속 다음 주 월요일 실시간 시나리오 공개",
+          "efficiency": 0.003567467652495379,
+          "views": 1930,
+          "upload_date": "20260612"
+        },
+        {
+          "vid": "ctY4DgyN6h4",
+          "channel": "주식곳간TV",
+          "title": "[한화오션 주가전망] 바닥 완벽히 탈출한 역대급 장대양봉 차트 흐름 속 주말 내내 자본시장 여론 뜨겁게 달군 미 해군 MRO 수주 호재 결합 월요일 대상할 이유 토요특급",
+          "efficiency": 0.0032513863216266175,
+          "views": 1759,
+          "upload_date": "20260613"
+        }
+      ]
+    },
+    {
       "label": "LG전자 주가전망",
       "occurrences": 3,
       "channels": [
@@ -321,6 +473,62 @@
           "title": "[LG전자 주가전망 ] 엔비디아와 피지컬 AI 로봇 및 데이터센터 전략 동맹 기반 다음 주 월요일 시초가 무조건 선점해야 할 필승 시나리오 주말특집 독점 공개",
           "efficiency": 0.003354898336414048,
           "views": 1815,
+          "upload_date": "20260613"
+        }
+      ]
+    },
+    {
+      "label": "시사끝짱 몰아보기",
+      "occurrences": 5,
+      "channels": [
+        "시사저널TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.23,
+      "max_efficiency": 0.3,
+      "total_views": 900682,
+      "baseline_efficiency": 0.12,
+      "boost_ratio": 2.03,
+      "top_videos": [
+        {
+          "vid": "9QEjNmeB250",
+          "channel": "시사저널TV",
+          "title": "[시사끝짱 몰아보기] '한동훈 당선'으로 끝난 6.3 지방선거... 승리 전략 분석부터 앞으로의 플랜 예측까지! 진중권의 심층분석",
+          "efficiency": 0.3018534370946822,
+          "views": 232729,
+          "upload_date": "20260606"
+        },
+        {
+          "vid": "vbdDDpq-Y1U",
+          "channel": "시사저널TV",
+          "title": "[시사끝짱 몰아보기] 하정우 꺾은 한동훈? 끝까지 갈까? 부산 북갑 최종 승자는 과연... 진중권의 총분석",
+          "efficiency": 0.28469069462647445,
+          "views": 217219,
+          "upload_date": "20260530"
+        },
+        {
+          "vid": "Yx5VKi3yt6Y",
+          "channel": "시사저널TV",
+          "title": "[시사끝짱 몰아보기] 00 할수록 한동훈 상승세는 계속된다? 부산북갑·평택을 판세 분석부터 서울시장 정원오vs오세훈 격돌까지... 진중권의 총분석",
+          "efficiency": 0.20895795006570303,
+          "views": 159017,
+          "upload_date": "20260523"
+        },
+        {
+          "vid": "R9arUGrw43k",
+          "channel": "시사저널TV",
+          "title": "[시사끝짱 몰아보기] 북갑 민심은 한동훈에게? 실수연발 하GPT와 내란 프레임 박민식 속 한동훈의 전략은... 진중권의 총분석",
+          "efficiency": 0.19896719160104986,
+          "views": 151613,
+          "upload_date": "20260516"
+        },
+        {
+          "vid": "KbQrbKCdwTA",
+          "channel": "시사저널TV",
+          "title": "[시사끝짱 몰아보기] 李 공소취소 맹공부터 선관위 개혁법까지... 한동훈 별의 순간 올까? 진중권의 끝짱분석",
+          "efficiency": 0.17985109114249037,
+          "views": 140104,
           "upload_date": "20260613"
         }
       ]
@@ -366,63 +574,55 @@
       ]
     },
     {
-      "label": "시사끝짱 몰아보기",
-      "occurrences": 5,
+      "label": "두산에너빌리티 주가전망",
+      "occurrences": 4,
       "channels": [
-        "시사저널TV"
+        "주식곳간TV"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
-      "avg_efficiency": 0.23,
-      "max_efficiency": 0.3,
-      "total_views": 900682,
-      "baseline_efficiency": 0.12,
-      "boost_ratio": 2.0,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.01,
+      "total_views": 8296,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 1.96,
       "top_videos": [
         {
-          "vid": "9QEjNmeB250",
-          "channel": "시사저널TV",
-          "title": "[시사끝짱 몰아보기] '한동훈 당선'으로 끝난 6.3 지방선거... 승리 전략 분석부터 앞으로의 플랜 예측까지! 진중권의 심층분석",
-          "efficiency": 0.3018534370946822,
-          "views": 232729,
-          "upload_date": "20260606"
+          "vid": "8Xxoz4vNrtw",
+          "channel": "주식곳간TV",
+          "title": "[두산에너빌리티 주가전망] 6월 18일 긴급 소식입니다 필수시청!! 두산에너빌리티 목표가 어디까지 볼 수 있을까?? #두산에너빌리티 #두산에너빌리티주가전망",
+          "efficiency": 0.0056118299445471346,
+          "views": 3036,
+          "upload_date": "20260618"
         },
         {
-          "vid": "vbdDDpq-Y1U",
-          "channel": "시사저널TV",
-          "title": "[시사끝짱 몰아보기] 하정우 꺾은 한동훈? 끝까지 갈까? 부산 북갑 최종 승자는 과연... 진중권의 총분석",
-          "efficiency": 0.28469069462647445,
-          "views": 217219,
-          "upload_date": "20260530"
+          "vid": "pDK3T3EjqeY",
+          "channel": "주식곳간TV",
+          "title": "[두산에너빌리티 주가전망] 100조 SMR 시장의 TSMC 등극! 글로벌 원전 파운드리 독점 오피셜 뉴스와 함께 내일 월요일 아침 개장 즉시 무섭게 위로 튈 필승 시나리오 단독공개",
+          "efficiency": 0.0042735674676524955,
+          "views": 2312,
+          "upload_date": "20260614"
         },
         {
-          "vid": "Yx5VKi3yt6Y",
-          "channel": "시사저널TV",
-          "title": "[시사끝짱 몰아보기] 00 할수록 한동훈 상승세는 계속된다? 부산북갑·평택을 판세 분석부터 서울시장 정원오vs오세훈 격돌까지... 진중권의 총분석",
-          "efficiency": 0.20895795006570303,
-          "views": 159017,
-          "upload_date": "20260523"
+          "vid": "CsKePQn1ZMU",
+          "channel": "주식곳간TV",
+          "title": "[두산에너빌리티 주가전망] 영국 롤스로이스 SMR 핵심 기자재 단독 파트너 선정 오피셜! 6월 11일 거래량 541만 주 폭발 속 다들 저점 매집하는 이유",
+          "efficiency": 0.003680221811460259,
+          "views": 1991,
+          "upload_date": "20260611"
         },
         {
-          "vid": "R9arUGrw43k",
-          "channel": "시사저널TV",
-          "title": "[시사끝짱 몰아보기] 북갑 민심은 한동훈에게? 실수연발 하GPT와 내란 프레임 박민식 속 한동훈의 전략은... 진중권의 총분석",
-          "efficiency": 0.19896719160104986,
-          "views": 151613,
-          "upload_date": "20260516"
-        },
-        {
-          "vid": "KbQrbKCdwTA",
-          "channel": "시사저널TV",
-          "title": "[시사끝짱 몰아보기] 李 공소취소 맹공부터 선관위 개혁법까지... 한동훈 별의 순간 올까? 진중권의 끝짱분석",
-          "efficiency": 0.17985109114249037,
-          "views": 140104,
-          "upload_date": "20260613"
+          "vid": "fFKrGXOwtWI",
+          "channel": "주식곳간TV",
+          "title": "[두산에너빌리티 주가전망] 늦은밤 발표 나왔습니다! 결국 이럴줄 알았다! 난리났습니다! 필수시청! #두산에너빌리티 #두산에너빌리티주가 #두산에너빌리티주가전망",
+          "efficiency": 0.0017689463955637707,
+          "views": 957,
+          "upload_date": "20260616"
         }
       ]
     },
     {
-      "label": "한화오션 주가전망",
+      "label": "가온전선 주가전망",
       "occurrences": 3,
       "channels": [
         "주식곳간TV"
@@ -431,33 +631,33 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
       "max_efficiency": 0.0,
-      "total_views": 6165,
+      "total_views": 5937,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 1.94,
+      "boost_ratio": 1.87,
       "top_videos": [
         {
-          "vid": "RPDPCWMsIpI",
+          "vid": "AXrCvCYa0oU",
           "channel": "주식곳간TV",
-          "title": "[한화오션 주가전망] 방금 발표 했습니다! 대박 난리났습니다! 필수시청! #한화오션 #한화오션주가 #한화오션주가전망",
-          "efficiency": 0.004576709796672828,
-          "views": 2476,
-          "upload_date": "20260611"
+          "title": "[ 가온전선 주가전망 ] 어제 상한가 이후에도 강한 이유는 무엇일까? AI 데이터센터 전력망 투자 확대 수혜 분석",
+          "efficiency": 0.004974121996303142,
+          "views": 2691,
+          "upload_date": "20260618"
         },
         {
-          "vid": "IkPh6azdx2w",
+          "vid": "ywm8VhZL_tg",
           "channel": "주식곳간TV",
-          "title": "[한화오션 주가전망] 조선 방산 대장주 패러다임 완벽 증명! 한화그룹 시너지 기반 사상 최대 수주잔고 차트 흐름 속 다음 주 월요일 실시간 시나리오 공개",
-          "efficiency": 0.003567467652495379,
-          "views": 1930,
+          "title": "[가온전선 주가전망] 6월18일 목요일 긴급 브리핑! 목표가 '여기'까지 봅니다 \"주주분들 필수시청\". #가온전선 #가온전선주가전망 #가온전선주가",
+          "efficiency": 0.0037837338262476893,
+          "views": 2047,
+          "upload_date": "20260618"
+        },
+        {
+          "vid": "tj9clq3z94s",
+          "channel": "주식곳간TV",
+          "title": "[ 가온전선 주가전망 ] 북미 5조 원대 장기 수주 파이프라인 속 주말 내내 자본시장 여론 뜨겁게 달군 아시아 최초 케이블버스 인증 독점 분석 월요일 상승할 진짜 이유",
+          "efficiency": 0.0022162661737523104,
+          "views": 1199,
           "upload_date": "20260612"
-        },
-        {
-          "vid": "ctY4DgyN6h4",
-          "channel": "주식곳간TV",
-          "title": "[한화오션 주가전망] 바닥 완벽히 탈출한 역대급 장대양봉 차트 흐름 속 주말 내내 자본시장 여론 뜨겁게 달군 미 해군 MRO 수주 호재 결합 월요일 대상할 이유 토요특급",
-          "efficiency": 0.0032513863216266175,
-          "views": 1759,
-          "upload_date": "20260613"
         }
       ]
     },
@@ -498,102 +698,6 @@
           "efficiency": 0.002210720887245841,
           "views": 1196,
           "upload_date": "20260613"
-        }
-      ]
-    },
-    {
-      "label": "#유퀴즈온더블럭",
-      "occurrences": 18,
-      "channels": [
-        "tvN D ENT"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.05,
-      "total_views": 352447,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 1.68,
-      "top_videos": [
-        {
-          "vid": "lwycbWG8gJI",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 윤성원 야-호★ 리센느 원이 유튜브 PD 윤성원 자기님이 영상을 연출하고 기획하는 법✍️",
-          "efficiency": 0.050006542056074764,
-          "views": 267535,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "9kVhyEzQnLE",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 20년 전 560원이었던 젠슨 황의 엔비디아💦 유재석도 무릎을 치고 후회하며 외치는 &quot;그때 살걸&quot;🤣",
-          "efficiency": 0.010407649253731343,
-          "views": 55785,
-          "upload_date": "20260614"
-        },
-        {
-          "vid": "waFWGMheVw0",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 선수가 너무 부담이 될 것 같아요💦 '김연아 키즈' 후배들을 보는 김연아의 마음💖",
-          "efficiency": 0.0011809701492537313,
-          "views": 6330,
-          "upload_date": "20260613"
-        },
-        {
-          "vid": "8ua_wADmmVQ",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 조회수 2천 만의 주인공✨ 롤러코스터 타다가 기절한 ‘기절 남매’ 영상을 본 부모님 반응 ㅋㅋ",
-          "efficiency": 0.0006401119402985074,
-          "views": 3431,
-          "upload_date": "20260614"
-        },
-        {
-          "vid": "KfWugsrIqpw",
-          "channel": "tvN D ENT",
-          "title": "[#유퀴즈온더블럭] 〈그알〉 사무실에 직접 전화한 범인⁉️ 직접 캄보디아까지 가서 밝혀낸 23년 전 미제 사건😱",
-          "efficiency": 0.0006197761194029851,
-          "views": 3322,
-          "upload_date": "20260614"
-        }
-      ]
-    },
-    {
-      "label": "두산에너빌리티 주가전망",
-      "occurrences": 3,
-      "channels": [
-        "주식곳간TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 5260,
-      "baseline_efficiency": 0.0,
-      "boost_ratio": 1.66,
-      "top_videos": [
-        {
-          "vid": "pDK3T3EjqeY",
-          "channel": "주식곳간TV",
-          "title": "[두산에너빌리티 주가전망] 100조 SMR 시장의 TSMC 등극! 글로벌 원전 파운드리 독점 오피셜 뉴스와 함께 내일 월요일 아침 개장 즉시 무섭게 위로 튈 필승 시나리오 단독공개",
-          "efficiency": 0.0042735674676524955,
-          "views": 2312,
-          "upload_date": "20260614"
-        },
-        {
-          "vid": "CsKePQn1ZMU",
-          "channel": "주식곳간TV",
-          "title": "[두산에너빌리티 주가전망] 영국 롤스로이스 SMR 핵심 기자재 단독 파트너 선정 오피셜! 6월 11일 거래량 541만 주 폭발 속 다들 저점 매집하는 이유",
-          "efficiency": 0.003680221811460259,
-          "views": 1991,
-          "upload_date": "20260611"
-        },
-        {
-          "vid": "fFKrGXOwtWI",
-          "channel": "주식곳간TV",
-          "title": "[두산에너빌리티 주가전망] 늦은밤 발표 나왔습니다! 결국 이럴줄 알았다! 난리났습니다! 필수시청! #두산에너빌리티 #두산에너빌리티주가 #두산에너빌리티주가전망",
-          "efficiency": 0.0017689463955637707,
-          "views": 957,
-          "upload_date": "20260616"
         }
       ]
     },
@@ -665,7 +769,7 @@
       "max_efficiency": 0.28,
       "total_views": 698405,
       "baseline_efficiency": 0.12,
-      "boost_ratio": 1.55,
+      "boost_ratio": 1.57,
       "top_videos": [
         {
           "vid": "Zd2isri-_Mc",
@@ -746,6 +850,118 @@
           "efficiency": 0.0008613678373382625,
           "views": 466,
           "upload_date": "20260613"
+        }
+      ]
+    },
+    {
+      "label": "#유퀴즈온더블럭",
+      "occurrences": 22,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.05,
+      "total_views": 353979,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 1.38,
+      "top_videos": [
+        {
+          "vid": "lwycbWG8gJI",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 윤성원 야-호★ 리센느 원이 유튜브 PD 윤성원 자기님이 영상을 연출하고 기획하는 법✍️",
+          "efficiency": 0.050006542056074764,
+          "views": 267535,
+          "upload_date": "20260602"
+        },
+        {
+          "vid": "9kVhyEzQnLE",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 20년 전 560원이었던 젠슨 황의 엔비디아💦 유재석도 무릎을 치고 후회하며 외치는 &quot;그때 살걸&quot;🤣",
+          "efficiency": 0.010407649253731343,
+          "views": 55785,
+          "upload_date": "20260614"
+        },
+        {
+          "vid": "waFWGMheVw0",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 선수가 너무 부담이 될 것 같아요💦 '김연아 키즈' 후배들을 보는 김연아의 마음💖",
+          "efficiency": 0.0011809701492537313,
+          "views": 6330,
+          "upload_date": "20260613"
+        },
+        {
+          "vid": "8ua_wADmmVQ",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 조회수 2천 만의 주인공✨ 롤러코스터 타다가 기절한 ‘기절 남매’ 영상을 본 부모님 반응 ㅋㅋ",
+          "efficiency": 0.0006401119402985074,
+          "views": 3431,
+          "upload_date": "20260614"
+        },
+        {
+          "vid": "KfWugsrIqpw",
+          "channel": "tvN D ENT",
+          "title": "[#유퀴즈온더블럭] 〈그알〉 사무실에 직접 전화한 범인⁉️ 직접 캄보디아까지 가서 밝혀낸 23년 전 미제 사건😱",
+          "efficiency": 0.0006197761194029851,
+          "views": 3322,
+          "upload_date": "20260614"
+        }
+      ]
+    },
+    {
+      "label": "카오스 짧강",
+      "occurrences": 12,
+      "channels": [
+        "카오스 사이언스"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 1407,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 1.29,
+      "top_videos": [
+        {
+          "vid": "-CzeOrfp4E4",
+          "channel": "카오스 사이언스",
+          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 수학을 통하여 세상을 3차원으로 보는 법_PART 1",
+          "efficiency": 0.0011847826086956522,
+          "views": 327,
+          "upload_date": "20260603"
+        },
+        {
+          "vid": "pU7GKJmFeXM",
+          "channel": "카오스 사이언스",
+          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 수학을 통하여 세상을 3차원으로 보는 법_PART 2",
+          "efficiency": 0.0006992753623188406,
+          "views": 193,
+          "upload_date": "20260603"
+        },
+        {
+          "vid": "3exBuvkafvo",
+          "channel": "카오스 사이언스",
+          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 수학을 통하여 세상을 3차원으로 보는 법_PART 3",
+          "efficiency": 0.0005398550724637682,
+          "views": 149,
+          "upload_date": "20260603"
+        },
+        {
+          "vid": "HaBYZY-ii94",
+          "channel": "카오스 사이언스",
+          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 뇌와 하나된 AI, BRAIN 3.0_PART 3",
+          "efficiency": 0.0004927536231884058,
+          "views": 136,
+          "upload_date": "20260527"
+        },
+        {
+          "vid": "sVZsQ-0zcf0",
+          "channel": "카오스 사이언스",
+          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 인공지능으로 엘니뇨 예측하기_PART 3",
+          "efficiency": 0.0004528985507246377,
+          "views": 125,
+          "upload_date": "20260617"
         }
       ]
     },
@@ -897,7 +1113,7 @@
       "max_efficiency": 0.03,
       "total_views": 42866,
       "baseline_efficiency": 0.01,
-      "boost_ratio": 0.82,
+      "boost_ratio": 0.88,
       "top_videos": [
         {
           "vid": "2R3oVupYlGQ",
@@ -930,6 +1146,46 @@
           "efficiency": 0.0007361111111111111,
           "views": 795,
           "upload_date": "20260605"
+        }
+      ]
+    },
+    {
+      "label": "빅샷 몰아보기",
+      "occurrences": 3,
+      "channels": [
+        "시사저널TV"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.09,
+      "max_efficiency": 0.12,
+      "total_views": 198268,
+      "baseline_efficiency": 0.12,
+      "boost_ratio": 0.75,
+      "top_videos": [
+        {
+          "vid": "o-s7NwNSyng",
+          "channel": "시사저널TV",
+          "title": "[빅샷 몰아보기] 선거 이후 누가 울고 웃었나? 별의 순간 잡은 한동훈, 웃지 못 하는 장동혁..오세훈 1등공신은 이재명? '짜르' 김종인의 총분석",
+          "efficiency": 0.12435019455252919,
+          "views": 95874,
+          "upload_date": "20260606"
+        },
+        {
+          "vid": "0g1Xv2V0sPM",
+          "channel": "시사저널TV",
+          "title": "[빅샷 몰아보기] 박상용이 말하는 '공소취소'의 진실? 6·3 지선 흔든 李 재판, 남은 불씨는 이화영 자백",
+          "efficiency": 0.09956299212598425,
+          "views": 75867,
+          "upload_date": "20260523"
+        },
+        {
+          "vid": "ZuAtMdxadqc",
+          "channel": "시사저널TV",
+          "title": "[빅샷 몰아보기] '뉴한동훈' 영남 의원들이 움직인다! 6ㆍ3선거가 남긴 질문, '대권에 가장  가까워진 인물은?'",
+          "efficiency": 0.03481233595800525,
+          "views": 26527,
+          "upload_date": "20260530"
         }
       ]
     },
@@ -990,46 +1246,6 @@
       ]
     },
     {
-      "label": "빅샷 몰아보기",
-      "occurrences": 3,
-      "channels": [
-        "시사저널TV"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.09,
-      "max_efficiency": 0.12,
-      "total_views": 198268,
-      "baseline_efficiency": 0.12,
-      "boost_ratio": 0.73,
-      "top_videos": [
-        {
-          "vid": "o-s7NwNSyng",
-          "channel": "시사저널TV",
-          "title": "[빅샷 몰아보기] 선거 이후 누가 울고 웃었나? 별의 순간 잡은 한동훈, 웃지 못 하는 장동혁..오세훈 1등공신은 이재명? '짜르' 김종인의 총분석",
-          "efficiency": 0.12435019455252919,
-          "views": 95874,
-          "upload_date": "20260606"
-        },
-        {
-          "vid": "0g1Xv2V0sPM",
-          "channel": "시사저널TV",
-          "title": "[빅샷 몰아보기] 박상용이 말하는 '공소취소'의 진실? 6·3 지선 흔든 李 재판, 남은 불씨는 이화영 자백",
-          "efficiency": 0.09956299212598425,
-          "views": 75867,
-          "upload_date": "20260523"
-        },
-        {
-          "vid": "ZuAtMdxadqc",
-          "channel": "시사저널TV",
-          "title": "[빅샷 몰아보기] '뉴한동훈' 영남 의원들이 움직인다! 6ㆍ3선거가 남긴 질문, '대권에 가장  가까워진 인물은?'",
-          "efficiency": 0.03481233595800525,
-          "views": 26527,
-          "upload_date": "20260530"
-        }
-      ]
-    },
-    {
       "label": "정품쇼 몰아보기",
       "occurrences": 4,
       "channels": [
@@ -1041,7 +1257,7 @@
       "max_efficiency": 0.19,
       "total_views": 246403,
       "baseline_efficiency": 0.12,
-      "boost_ratio": 0.68,
+      "boost_ratio": 0.69,
       "top_videos": [
         {
           "vid": "S2NEwaz_ZmU",
@@ -1146,7 +1362,7 @@
       "max_efficiency": 0.05,
       "total_views": 284578,
       "baseline_efficiency": 0.05,
-      "boost_ratio": 0.62,
+      "boost_ratio": 0.61,
       "top_videos": [
         {
           "vid": "Wu6yNBudOk4",
@@ -1194,7 +1410,7 @@
       "max_efficiency": 0.09,
       "total_views": 205492,
       "baseline_efficiency": 0.12,
-      "boost_ratio": 0.57,
+      "boost_ratio": 0.58,
       "top_videos": [
         {
           "vid": "_GTj5ndlisU",
@@ -1272,7 +1488,7 @@
     },
     {
       "label": "버디버디",
-      "occurrences": 8,
+      "occurrences": 10,
       "channels": [
         "머니코믹스"
       ],
@@ -1280,7 +1496,7 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.04,
       "max_efficiency": 0.06,
-      "total_views": 491316,
+      "total_views": 605119,
       "baseline_efficiency": 0.1,
       "boost_ratio": 0.42,
       "top_videos": [
@@ -1317,18 +1533,18 @@
           "upload_date": "20260601"
         },
         {
-          "vid": "Adii97yIWf0",
+          "vid": "Wd4rpcbmjno",
           "channel": "머니코믹스",
-          "title": "[버디버디] 심장을.. 바칠까요?ㅣ초대형 반도체 앞에 우리는 선택을 해야한다",
-          "efficiency": 0.043659420289855075,
-          "views": 60250,
-          "upload_date": "20260527"
+          "title": "[버디버디] 시총5위 따잇!!! 아마존 기억할게!!!ㅣ스페이스X는 똥인가 된장인가",
+          "efficiency": 0.04502517985611511,
+          "views": 62585,
+          "upload_date": "20260617"
         }
       ]
     },
     {
       "label": "EBS x 한경협",
-      "occurrences": 9,
+      "occurrences": 11,
       "channels": [
         "EBSCulture (EBS 교양)"
       ],
@@ -1336,9 +1552,9 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
       "max_efficiency": 0.0,
-      "total_views": 17503,
+      "total_views": 22054,
       "baseline_efficiency": 0.0,
-      "boost_ratio": 0.38,
+      "boost_ratio": 0.39,
       "top_videos": [
         {
           "vid": "3i1GjKAq2nQ",
@@ -1347,6 +1563,14 @@
           "efficiency": 0.0019723333333333333,
           "views": 5917,
           "upload_date": "20260611"
+        },
+        {
+          "vid": "qAqyDlZi0jw",
+          "channel": "EBSCulture (EBS 교양)",
+          "title": "[EBS x 한경협] 시인이 돈을 버는 방법 #청년에게",
+          "efficiency": 0.0013716666666666667,
+          "views": 4115,
+          "upload_date": "20260617"
         },
         {
           "vid": "XT0V3U1mFG4",
@@ -1371,14 +1595,6 @@
           "efficiency": 0.0005116666666666667,
           "views": 1535,
           "upload_date": "20260604"
-        },
-        {
-          "vid": "R3cgJLTPb5k",
-          "channel": "EBSCulture (EBS 교양)",
-          "title": "[EBS x 한경협] 프로 선수 정근우의 야구를 대하는 기본 #청년에게",
-          "efficiency": 0.00048533333333333333,
-          "views": 1456,
-          "upload_date": "20260610"
         }
       ]
     },
@@ -1767,60 +1983,58 @@
       ]
     },
     {
-      "label": "예고",
+      "label": "🔴 LIVE",
       "occurrences": 6,
       "channels": [
-        "EBSCulture (EBS 교양)",
-        "EBSDocumentary (EBS 다큐)",
-        "세상의 모든 다큐"
+        "엠키타카 MKTK"
       ],
-      "channel_count": 3,
-      "is_multi_channel": true,
+      "channel_count": 1,
+      "is_multi_channel": false,
       "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 2288,
-      "baseline_efficiency": 0.0,
+      "max_efficiency": 0.01,
+      "total_views": 30560,
+      "baseline_efficiency": 0.01,
       "boost_ratio": 0.23,
       "top_videos": [
         {
-          "vid": "-n-UnuWZBHk",
-          "channel": "세상의 모든 다큐",
-          "title": "[예고] 살아있는 지구의 심장 화산 1부 에트나와 스트롬볼리 | 20260518 세상의 모든 다큐 | KBS 2TV",
-          "efficiency": 0.002042168674698795,
-          "views": 339,
-          "upload_date": "20260515"
+          "vid": "OCna1gjdAl0",
+          "channel": "엠키타카 MKTK",
+          "title": "[🔴 LIVE ] 강훈식 대통령 비서실장, 22대 국회 신임 조정식 국회의장 예방｜20260609",
+          "efficiency": 0.006051851851851852,
+          "views": 6536,
+          "upload_date": "20260609"
         },
         {
-          "vid": "MozgdCGyRrY",
-          "channel": "세상의 모든 다큐",
-          "title": "[예고] 트럼프와 IT 거물들  | 20260608 세상의 모든 다큐 | KBS 2TV",
-          "efficiency": 0.0006927710843373494,
-          "views": 115,
+          "vid": "l9jOt1v9ldo",
+          "channel": "엠키타카 MKTK",
+          "title": "[🔴 LIVE ] 김민석 국무총리 투표용지 부족 사태 관련 대학생 간담회｜20260608",
+          "efficiency": 0.0049,
+          "views": 5292,
+          "upload_date": "20260608"
+        },
+        {
+          "vid": "4LIhXoZe5aU",
+          "channel": "엠키타카 MKTK",
+          "title": "[🔴 LIVE ] 중앙선거관리위원회 ‘투표용지 부족 사태’ 진상규명위원회 제1차 회의｜20260610",
+          "efficiency": 0.0025185185185185185,
+          "views": 2720,
+          "upload_date": "20260610"
+        },
+        {
+          "vid": "dxZIN406xoo",
+          "channel": "엠키타카 MKTK",
+          "title": "[🔴 LIVE ] 노태악 선관위원장, '투표지 부족 사태' 대국민 사과｜20260605",
+          "efficiency": 0.0014555555555555556,
+          "views": 1572,
           "upload_date": "20260605"
         },
         {
-          "vid": "LqF6vWAph5c",
-          "channel": "EBSCulture (EBS 교양)",
-          "title": "[예고] [취미는 과학] 88화 MOF, 세상을 구할 물질인가?",
-          "efficiency": 0.000206,
-          "views": 618,
-          "upload_date": "20260605"
-        },
-        {
-          "vid": "eCLPFNV0XUI",
-          "channel": "EBSCulture (EBS 교양)",
-          "title": "[예고] [취미는 과학] 87화 SF, 상상은 어떻게 현실이 되었나?",
-          "efficiency": 0.00015317725752508362,
-          "views": 458,
-          "upload_date": "20260529"
-        },
-        {
-          "vid": "x6SWo_GFqvY",
-          "channel": "EBSCulture (EBS 교양)",
-          "title": "[예고] [취미는 과학] 89화 비행, 인간은 어떻게 날게 되었나?",
-          "efficiency": 0.00012766666666666666,
-          "views": 383,
-          "upload_date": "20260612"
+          "vid": "k5-CdAleDMc",
+          "channel": "엠키타카 MKTK",
+          "title": "[🔴 LIVE ] 이재명 정부 출범 1주년 토론회 생중계｜20260611",
+          "efficiency": 0.0005092592592592592,
+          "views": 550,
+          "upload_date": "20260611"
         }
       ]
     },
@@ -1913,58 +2127,100 @@
       ]
     },
     {
-      "label": "🔴 LIVE",
-      "occurrences": 6,
+      "label": "예고",
+      "occurrences": 7,
       "channels": [
-        "엠키타카 MKTK"
+        "EBSCulture (EBS 교양)",
+        "EBSDocumentary (EBS 다큐)",
+        "세상의 모든 다큐"
+      ],
+      "channel_count": 3,
+      "is_multi_channel": true,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 4050,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.22,
+      "top_videos": [
+        {
+          "vid": "-n-UnuWZBHk",
+          "channel": "세상의 모든 다큐",
+          "title": "[예고] 살아있는 지구의 심장 화산 1부 에트나와 스트롬볼리 | 20260518 세상의 모든 다큐 | KBS 2TV",
+          "efficiency": 0.002042168674698795,
+          "views": 339,
+          "upload_date": "20260515"
+        },
+        {
+          "vid": "MozgdCGyRrY",
+          "channel": "세상의 모든 다큐",
+          "title": "[예고] 트럼프와 IT 거물들  | 20260608 세상의 모든 다큐 | KBS 2TV",
+          "efficiency": 0.0006927710843373494,
+          "views": 115,
+          "upload_date": "20260605"
+        },
+        {
+          "vid": "K3J1gWFMNK4",
+          "channel": "EBSDocumentary (EBS 다큐)",
+          "title": "[예고] [특집 다큐] 플라스틱 쇼크, 당신이 먹고 마시는 모든 것 1부-침투ㅣ엄마가 먹은 플라스틱 아이의 뇌로?ㅣEBS가 밝혀낸 충격 사실ㅣ#특집다큐 #플라스틱쇼크",
+          "efficiency": 0.00032690166975881264,
+          "views": 1762,
+          "upload_date": "20260617"
+        },
+        {
+          "vid": "LqF6vWAph5c",
+          "channel": "EBSCulture (EBS 교양)",
+          "title": "[예고] [취미는 과학] 88화 MOF, 세상을 구할 물질인가?",
+          "efficiency": 0.000206,
+          "views": 618,
+          "upload_date": "20260605"
+        },
+        {
+          "vid": "eCLPFNV0XUI",
+          "channel": "EBSCulture (EBS 교양)",
+          "title": "[예고] [취미는 과학] 87화 SF, 상상은 어떻게 현실이 되었나?",
+          "efficiency": 0.00015317725752508362,
+          "views": 458,
+          "upload_date": "20260529"
+        }
+      ]
+    },
+    {
+      "label": "#삼시세끼Light",
+      "occurrences": 3,
+      "channels": [
+        "tvN D ENT"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
-      "max_efficiency": 0.01,
-      "total_views": 30560,
-      "baseline_efficiency": 0.01,
-      "boost_ratio": 0.21,
+      "max_efficiency": 0.0,
+      "total_views": 7794,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.22,
       "top_videos": [
         {
-          "vid": "OCna1gjdAl0",
-          "channel": "엠키타카 MKTK",
-          "title": "[🔴 LIVE ] 강훈식 대통령 비서실장, 22대 국회 신임 조정식 국회의장 예방｜20260609",
-          "efficiency": 0.006051851851851852,
-          "views": 6536,
-          "upload_date": "20260609"
+          "vid": "EZmb8Z6hQWM",
+          "channel": "tvN D ENT",
+          "title": "[#삼시세끼Light] 컵라면+토스트+간짜장😋 낮에 벌써 세 끼 식사 끝낸 김남길ㅋㅋㅋ",
+          "efficiency": 0.0008050373134328358,
+          "views": 4315,
+          "upload_date": "20260617"
         },
         {
-          "vid": "l9jOt1v9ldo",
-          "channel": "엠키타카 MKTK",
-          "title": "[🔴 LIVE ] 김민석 국무총리 투표용지 부족 사태 관련 대학생 간담회｜20260608",
-          "efficiency": 0.0049,
-          "views": 5292,
-          "upload_date": "20260608"
+          "vid": "Yh9yN_mbdcM",
+          "channel": "tvN D ENT",
+          "title": "[#삼시세끼Light] 손맛이 무겁지 뭐~! 거대 부시리 낚은 차승원🐟",
+          "efficiency": 0.0003257462686567164,
+          "views": 1746,
+          "upload_date": "20260617"
         },
         {
-          "vid": "4LIhXoZe5aU",
-          "channel": "엠키타카 MKTK",
-          "title": "[🔴 LIVE ] 중앙선거관리위원회 ‘투표용지 부족 사태’ 진상규명위원회 제1차 회의｜20260610",
-          "efficiency": 0.0025185185185185185,
-          "views": 2720,
-          "upload_date": "20260610"
-        },
-        {
-          "vid": "dxZIN406xoo",
-          "channel": "엠키타카 MKTK",
-          "title": "[🔴 LIVE ] 노태악 선관위원장, '투표지 부족 사태' 대국민 사과｜20260605",
-          "efficiency": 0.0014555555555555556,
-          "views": 1572,
-          "upload_date": "20260605"
-        },
-        {
-          "vid": "k5-CdAleDMc",
-          "channel": "엠키타카 MKTK",
-          "title": "[🔴 LIVE ] 이재명 정부 출범 1주년 토론회 생중계｜20260611",
-          "efficiency": 0.0005092592592592592,
-          "views": 550,
-          "upload_date": "20260611"
+          "vid": "nq2bgpiPwGg",
+          "channel": "tvN D ENT",
+          "title": "[#삼시세끼Light] 유해진 아재 개그가 이제는 너무 익숙한 김고은ㅋㅋㅋ",
+          "efficiency": 0.00032332089552238806,
+          "views": 1733,
+          "upload_date": "20260617"
         }
       ]
     },
@@ -2061,6 +2317,62 @@
           "efficiency": 0.00013738317757009346,
           "views": 735,
           "upload_date": "20260604"
+        }
+      ]
+    },
+    {
+      "label": "#이호선상담소",
+      "occurrences": 7,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 13299,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.16,
+      "top_videos": [
+        {
+          "vid": "JSx1oQoRtZc",
+          "channel": "tvN D ENT",
+          "title": "[#이호선상담소] ※결정 못하는 사람들 주목※ 최선의 선택을 위해 결정을 미뤘을 때 우리가 잃는 것들💥",
+          "efficiency": 0.0008677238805970149,
+          "views": 4651,
+          "upload_date": "20260617"
+        },
+        {
+          "vid": "gqscPSiIXO8",
+          "channel": "tvN D ENT",
+          "title": "[#이호선상담소] 외출할 때마다 혼자 풀 세팅하는 남편💥 8개월 된 아이한테 매정하게 구는 남편이 서운해요💦",
+          "efficiency": 0.0007902985074626866,
+          "views": 4236,
+          "upload_date": "20260617"
+        },
+        {
+          "vid": "A8BLrEU49no",
+          "channel": "tvN D ENT",
+          "title": "[#이호선상담소] 아이에게서 손 떼세요💥 3살 아이에게까지 청결 강박이 있는 아빠에게 던진 이호선의 한 마디💬",
+          "efficiency": 0.0005009345794392523,
+          "views": 2680,
+          "upload_date": "20260610"
+        },
+        {
+          "vid": "_0sx70AWVJg",
+          "channel": "tvN D ENT",
+          "title": "[#이호선상담소] 나는 왜 결정하는 게 어려울까❓ 이호선이 알려주는 결정 회피 유형부터 이유까지💬",
+          "efficiency": 0.0002164179104477612,
+          "views": 1160,
+          "upload_date": "20260617"
+        },
+        {
+          "vid": "QPGuIgPAx7o",
+          "channel": "tvN D ENT",
+          "title": "[#이호선상담소] 대화의 대부분이 '이것'이면 이혼합니다💥 결국 이혼하게 되는 부부들의 특징💦",
+          "efficiency": 8.376865671641791e-05,
+          "views": 449,
+          "upload_date": "20260618"
         }
       ]
     },
@@ -2201,7 +2513,7 @@
       ]
     },
     {
-      "label": "#이호선상담소",
+      "label": "#프리한19",
       "occurrences": 3,
       "channels": [
         "tvN D ENT"
@@ -2210,33 +2522,113 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
       "max_efficiency": 0.0,
-      "total_views": 2803,
+      "total_views": 2708,
       "baseline_efficiency": 0.0,
       "boost_ratio": 0.08,
       "top_videos": [
         {
-          "vid": "A8BLrEU49no",
+          "vid": "EOpIDtcsAwY",
           "channel": "tvN D ENT",
-          "title": "[#이호선상담소] 아이에게서 손 떼세요💥 3살 아이에게까지 청결 강박이 있는 아빠에게 던진 이호선의 한 마디💬",
-          "efficiency": 0.0005009345794392523,
-          "views": 2680,
-          "upload_date": "20260610"
+          "title": "[#프리한19] 돌아갈래요 다시 그때로🥹 어른이들도 즐길 수 있는 추억의 장난감들 모아보기✨",
+          "efficiency": 0.0003502803738317757,
+          "views": 1874,
+          "upload_date": "20260606"
         },
         {
-          "vid": "oaH1QMjN8vc",
+          "vid": "NLIw1q0_sTA",
           "channel": "tvN D ENT",
-          "title": "[#이호선상담소] 탈북 부부의 훈육 갈등💥 아이들을 강압적으로 훈육하는 북한 상위층 출신 남편💦",
-          "efficiency": 1.3831775700934579e-05,
-          "views": 74,
-          "upload_date": "20260528"
+          "title": "[#프리한19] “공약은 지키지 않겠습니다‼️” 전세계 황당하고 어이없는 공약과 선거 운동들 ㅋㅋ",
+          "efficiency": 8.803738317757009e-05,
+          "views": 471,
+          "upload_date": "20260601"
         },
         {
-          "vid": "cNC40swRfb0",
+          "vid": "f-RxwRZrZh4",
           "channel": "tvN D ENT",
-          "title": "[#이호선상담소] 지쳤는데 너튜브는 계속 보나요?🤷 이호선이 말하는 번아웃과 게으름을 구분하는 방법💥",
-          "efficiency": 9.158878504672897e-06,
-          "views": 49,
-          "upload_date": "20260528"
+          "title": "[#프리한19] 록페 덕후들 모여라🎸 심장 터지는 방구석 록 페스티벌 1인자 아티스트는⁉️",
+          "efficiency": 6.772388059701492e-05,
+          "views": 363,
+          "upload_date": "20260617"
+        }
+      ]
+    },
+    {
+      "label": "#남겨서뭐하게",
+      "occurrences": 3,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 2894,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.08,
+      "top_videos": [
+        {
+          "vid": "LWEy096hLnY",
+          "channel": "tvN D ENT",
+          "title": "[#남겨서뭐하게] 씨야의 재결합 축하를 위한 한 상! 폭식하게 만드는 이원일표 통목살구이까지🥩 | #번개클립",
+          "efficiency": 0.0002155140186915888,
+          "views": 1153,
+          "upload_date": "20260606"
+        },
+        {
+          "vid": "N2tJ_lZWHJU",
+          "channel": "tvN D ENT",
+          "title": "[#남겨서뭐하게] 면 러버들의 소울푸드🍥 휴게소에서 빠질 수 없는 우동 먹방😋 | #번개클립",
+          "efficiency": 0.00019084112149532712,
+          "views": 1021,
+          "upload_date": "20260606"
+        },
+        {
+          "vid": "fHcIAhv2h-k",
+          "channel": "tvN D ENT",
+          "title": "[#남겨서뭐하게] 포상금 수표 받고 대형 세단 타고 귀가함✨ 송종국 & 최용수가 받은 2002 월드컵 포상 ㄷㄷ😲",
+          "efficiency": 0.00013432835820895522,
+          "views": 720,
+          "upload_date": "20260617"
+        }
+      ]
+    },
+    {
+      "label": "#이젠날따라와",
+      "occurrences": 3,
+      "channels": [
+        "tvN D ENT"
+      ],
+      "channel_count": 1,
+      "is_multi_channel": false,
+      "avg_efficiency": 0.0,
+      "max_efficiency": 0.0,
+      "total_views": 2397,
+      "baseline_efficiency": 0.0,
+      "boost_ratio": 0.07,
+      "top_videos": [
+        {
+          "vid": "ZRZxsMOLLqI",
+          "channel": "tvN D ENT",
+          "title": "[#이젠날따라와] 편식하는 추성훈 버릇 단단히 고쳐주는 사랑이 ㅋㅋㅋ 딸 앞에선 꼼짝도 못 하는 파이터 추,,💪",
+          "efficiency": 0.00022276119402985076,
+          "views": 1194,
+          "upload_date": "20260617"
+        },
+        {
+          "vid": "M1LlDcSLq0k",
+          "channel": "tvN D ENT",
+          "title": "[#이젠날따라와] 운동하고 돌아온 추성훈 보고 눈을 못 떼는 윤후 ㅋㅋㅋ 심쿵.....💗",
+          "efficiency": 0.00015167910447761194,
+          "views": 813,
+          "upload_date": "20260617"
+        },
+        {
+          "vid": "Yukm_K_ylvQ",
+          "channel": "tvN D ENT",
+          "title": "[#이젠날따라와] 일어나자마자 사랑이한테 모닝 뽀뽀하는 추성훈 ㅋㅋ 아침부터 사랑 넘치는 추 부녀....❤",
+          "efficiency": 7.276119402985074e-05,
+          "views": 390,
+          "upload_date": "20260617"
         }
       ]
     },
@@ -2435,7 +2827,7 @@
     },
     {
       "label": "#천재들의실체",
-      "occurrences": 11,
+      "occurrences": 13,
       "channels": [
         "tvN D ENT"
       ],
@@ -2443,7 +2835,7 @@
       "is_multi_channel": false,
       "avg_efficiency": 0.0,
       "max_efficiency": 0.0,
-      "total_views": 6225,
+      "total_views": 7812,
       "baseline_efficiency": 0.0,
       "boost_ratio": 0.05,
       "top_videos": [
@@ -2464,6 +2856,14 @@
           "upload_date": "20260614"
         },
         {
+          "vid": "iSS3LWTangE",
+          "channel": "tvN D ENT",
+          "title": "[#천재들의실체] 인상주의? 오히려 좋아~💖 비평가들의 조롱에서 시작된 정체성, 인상주의ㅣ#벌거벗은세계사",
+          "efficiency": 0.00017761194029850745,
+          "views": 952,
+          "upload_date": "20260617"
+        },
+        {
           "vid": "mQ-XlT9wMQ4",
           "channel": "tvN D ENT",
           "title": "[#천재들의실체] 라듐 화장품부터 라듐 초콜릿까지⁉️ 암도 치료할 수 있다는 라듐의 위험성😱ㅣ#벌거벗은세계사",
@@ -2478,14 +2878,6 @@
           "efficiency": 0.0001388785046728972,
           "views": 743,
           "upload_date": "20260612"
-        },
-        {
-          "vid": "IQ_cX_J1Biw",
-          "channel": "tvN D ENT",
-          "title": "[#천재들의실체] 시가 총액 1위 애○🍎 텅 빈 이력서의 스티브 잡스가 애○을 창업하기까지✨ ㅣ#벌거벗은세계사",
-          "efficiency": 0.00010822429906542057,
-          "views": 579,
-          "upload_date": "20260611"
         }
       ]
     },
@@ -2691,15 +3083,15 @@
     },
     {
       "label": "원가공개",
-      "occurrences": 29,
+      "occurrences": 30,
       "channels": [
         "원가 공개 경제학"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
-      "avg_efficiency": 0.35,
+      "avg_efficiency": 0.34,
       "max_efficiency": 4.65,
-      "total_views": 137943,
+      "total_views": 139303,
       "baseline_efficiency": 0,
       "boost_ratio": null,
       "top_videos": [
@@ -2741,166 +3133,6 @@
           "title": "[원가공개] 그랜저 출시 첫날 일만 대 계약, 현대차 통장에 실제로 꽂히는 돈 계산해봤습니다",
           "efficiency": 0.6234453781512606,
           "views": 7419,
-          "upload_date": "20260521"
-        }
-      ]
-    },
-    {
-      "label": "2018 물리",
-      "occurrences": 7,
-      "channels": [
-        "카오스 사이언스"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.01,
-      "max_efficiency": 0.03,
-      "total_views": 27115,
-      "baseline_efficiency": 0,
-      "boost_ratio": null,
-      "top_videos": [
-        {
-          "vid": "GltiEuXU4dg",
-          "channel": "카오스 사이언스",
-          "title": "[2018 물리] 수학이 물리, 아니 우주의 언어인 이유!",
-          "efficiency": 0.03207608695652174,
-          "views": 8853,
-          "upload_date": "20260526"
-        },
-        {
-          "vid": "z1c7TRdYMJc",
-          "channel": "카오스 사이언스",
-          "title": "[2018 물리] 뉴턴의 세계가 흔들린 이유?! (feat. 무대와 관객?)",
-          "efficiency": 0.028818840579710146,
-          "views": 7954,
-          "upload_date": "20260602"
-        },
-        {
-          "vid": "R85tQcALhzw",
-          "channel": "카오스 사이언스",
-          "title": "[2018 물리] 빛의 속도가 절대적이면 벌어지는 일(동시성의 상대성)",
-          "efficiency": 0.014427536231884058,
-          "views": 3982,
-          "upload_date": "20260611"
-        },
-        {
-          "vid": "W63-Uw2-mSA",
-          "channel": "카오스 사이언스",
-          "title": "[2018 물리] 맥스웰의 업적은 (절대) 커피 아닙니다!!!!",
-          "efficiency": 0.008898550724637681,
-          "views": 2456,
-          "upload_date": "20260609"
-        },
-        {
-          "vid": "73dgEeK0sR8",
-          "channel": "카오스 사이언스",
-          "title": "[2018 물리] 우리가 지구 자전 속도(한국 기준 1,000km/h)를 못 느끼는 이유?!",
-          "efficiency": 0.005467391304347826,
-          "views": 1509,
-          "upload_date": "20260604"
-        }
-      ]
-    },
-    {
-      "label": "카오스 짧강",
-      "occurrences": 9,
-      "channels": [
-        "카오스 사이언스"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.0,
-      "max_efficiency": 0.0,
-      "total_views": 1071,
-      "baseline_efficiency": 0,
-      "boost_ratio": null,
-      "top_videos": [
-        {
-          "vid": "-CzeOrfp4E4",
-          "channel": "카오스 사이언스",
-          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 수학을 통하여 세상을 3차원으로 보는 법_PART 1",
-          "efficiency": 0.0011847826086956522,
-          "views": 327,
-          "upload_date": "20260603"
-        },
-        {
-          "vid": "pU7GKJmFeXM",
-          "channel": "카오스 사이언스",
-          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 수학을 통하여 세상을 3차원으로 보는 법_PART 2",
-          "efficiency": 0.0006992753623188406,
-          "views": 193,
-          "upload_date": "20260603"
-        },
-        {
-          "vid": "3exBuvkafvo",
-          "channel": "카오스 사이언스",
-          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 수학을 통하여 세상을 3차원으로 보는 법_PART 3",
-          "efficiency": 0.0005398550724637682,
-          "views": 149,
-          "upload_date": "20260603"
-        },
-        {
-          "vid": "HaBYZY-ii94",
-          "channel": "카오스 사이언스",
-          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 뇌와 하나된 AI, BRAIN 3.0_PART 3",
-          "efficiency": 0.0004927536231884058,
-          "views": 136,
-          "upload_date": "20260527"
-        },
-        {
-          "vid": "Hfj8bxLTNo4",
-          "channel": "카오스 사이언스",
-          "title": "[카오스 짧강] 2026 카오스콘서트 예습하기: 뇌와 하나된 AI, BRAIN 3.0_PART 1",
-          "efficiency": 0.00038768115942028987,
-          "views": 107,
-          "upload_date": "20260527"
-        }
-      ]
-    },
-    {
-      "label": "가까운 우주",
-      "occurrences": 4,
-      "channels": [
-        "카오스 사이언스"
-      ],
-      "channel_count": 1,
-      "is_multi_channel": false,
-      "avg_efficiency": 0.44,
-      "max_efficiency": 1.37,
-      "total_views": 483181,
-      "baseline_efficiency": 0,
-      "boost_ratio": null,
-      "top_videos": [
-        {
-          "vid": "8LX2Gn7tuf8",
-          "channel": "카오스 사이언스",
-          "title": "[가까운 우주] 태양계에서 금성만 OO이 반대라고?",
-          "efficiency": 1.3662898550724638,
-          "views": 377096,
-          "upload_date": "20260519"
-        },
-        {
-          "vid": "OwdANeXlvjs",
-          "channel": "카오스 사이언스",
-          "title": "[가까운 우주] 두께만 20km? 금성 구름의 정체",
-          "efficiency": 0.21432971014492755,
-          "views": 59155,
-          "upload_date": "20260512"
-        },
-        {
-          "vid": "NjyCdUBFGjE",
-          "channel": "카오스 사이언스",
-          "title": "[가까운 우주] 지구의 쌍둥이는 화성 아닌 금성?",
-          "efficiency": 0.09218840579710146,
-          "views": 25444,
-          "upload_date": "20260514"
-        },
-        {
-          "vid": "f8dcpGvbYGk",
-          "channel": "카오스 사이언스",
-          "title": "[가까운 우주] 생명체? 유기물? 금성의 미확인 흡수체",
-          "efficiency": 0.07784782608695652,
-          "views": 21486,
           "upload_date": "20260521"
         }
       ]
@@ -2963,15 +3195,15 @@
     },
     {
       "label": "인물역사",
-      "occurrences": 7,
+      "occurrences": 8,
       "channels": [
         "역사 너머"
       ],
       "channel_count": 1,
       "is_multi_channel": false,
-      "avg_efficiency": 2.21,
+      "avg_efficiency": 2.0,
       "max_efficiency": 5.41,
-      "total_views": 22018,
+      "total_views": 23554,
       "baseline_efficiency": 0,
       "boost_ratio": null,
       "top_videos": [

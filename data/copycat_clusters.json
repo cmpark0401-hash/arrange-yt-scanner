@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-16 14:38:19 UTC",
+  "updated_at": "2026-06-18 06:27:09 UTC",
   "buckets": {
     "야담": {
-      "video_count": 43,
+      "video_count": 45,
       "cluster_count": 3,
       "clusters": [
         {
@@ -55,9 +55,9 @@
           "max_efficiency": 41.56,
           "avg_efficiency": 24.07,
           "max_views": 571690,
-          "freshness_days": 13,
+          "freshness_days": 15,
           "is_fresh": false,
-          "is_hot": true,
+          "is_hot": false,
           "videos": [
             {
               "vid": "aI8A973spEw",
@@ -98,7 +98,7 @@
               ]
             }
           ],
-          "verdict": "⚠️ 신선도 한계 (D+14)"
+          "verdict": "📦 evergreen 아카이브"
         },
         {
           "cluster_size": 2,
@@ -139,7 +139,7 @@
           "max_efficiency": 9.77,
           "avg_efficiency": 8.04,
           "max_views": 93151,
-          "freshness_days": 13,
+          "freshness_days": 15,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -170,7 +170,7 @@
               ]
             }
           ],
-          "verdict": "⚠️ 신선도 한계 (D+14)"
+          "verdict": "📦 evergreen 아카이브"
         },
         {
           "cluster_size": 2,
@@ -212,7 +212,7 @@
           "max_efficiency": 6.73,
           "avg_efficiency": 6.37,
           "max_views": 8280,
-          "freshness_days": 129,
+          "freshness_days": 131,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -248,7 +248,7 @@
       ]
     },
     "경제·시사": {
-      "video_count": 91,
+      "video_count": 92,
       "cluster_count": 8,
       "clusters": [
         {
@@ -303,7 +303,7 @@
           "max_efficiency": 51.26,
           "avg_efficiency": 33.29,
           "max_views": 625355,
-          "freshness_days": 4,
+          "freshness_days": 6,
           "is_fresh": true,
           "is_hot": true,
           "videos": [
@@ -347,7 +347,233 @@
               ]
             }
           ],
-          "verdict": "🔥 즉시 추격 (D+3 안에 박을 것)"
+          "verdict": "✅ 추격 가치 있음 (D+7 이내)"
+        },
+        {
+          "cluster_size": 8,
+          "common_keywords": [
+            "중국"
+          ],
+          "pioneer": {
+            "vid": "GmVCT_CfQWU",
+            "channel": "세계경제 돋보기",
+            "channel_subs": 7000,
+            "title": "중국 삼협댐, 세계 최대 댐의 저주 #세계이슈",
+            "upload_date": "20260522",
+            "views": 108750,
+            "efficiency": 15.54,
+            "categories": [
+              "경제",
+              "시사"
+            ]
+          },
+          "followers": [
+            {
+              "vid": "867ToApHQ5A",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6810,
+              "title": "중국 삼협댐이 무너지면 벌어지는 일 세계 최대 댐의 저주 #세계이슈",
+              "upload_date": "20260524",
+              "views": 60382,
+              "efficiency": 8.87,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "7XPYobTh-jg",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6810,
+              "title": "중국 댐 98000개가 동시에 늙고 있다 #세계이슈",
+              "upload_date": "20260525",
+              "views": 101392,
+              "efficiency": 14.89,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "f1H4hkODdZw",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6810,
+              "title": "중국 판교댐 1975 24만명이 하룻밤에 사라졌다 #세계이슈",
+              "upload_date": "20260526",
+              "views": 81859,
+              "efficiency": 12.02,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "CYuWJ09Mry4",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 8330,
+              "title": "중국 하수구에서 건진 기름의 비밀 #세계이슈",
+              "upload_date": "20260601",
+              "views": 54258,
+              "efficiency": 6.51,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "Z_IzMPEKM8c",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 8810,
+              "title": "중국 고속철도 1140조 빚이 깔려 있습니다 세계 최대 철도의 진짜 속도",
+              "upload_date": "20260605",
+              "views": 91464,
+              "efficiency": 10.38,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "KIdAJcKMJoA",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9280,
+              "title": "중국 고속철도 콘크리트 안에 석탄재가 들어 있습니다",
+              "upload_date": "20260608",
+              "views": 51449,
+              "efficiency": 5.54,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "xiXjdof8j3Q",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9500,
+              "title": "중국 고속철도,열차를 땅에 묻어버렸습니다",
+              "upload_date": "20260609",
+              "views": 57237,
+              "efficiency": 6.02,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            }
+          ],
+          "days_active": 18,
+          "max_efficiency": 15.54,
+          "avg_efficiency": 9.97,
+          "max_views": 108750,
+          "freshness_days": 9,
+          "is_fresh": false,
+          "is_hot": false,
+          "videos": [
+            {
+              "vid": "GmVCT_CfQWU",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 7000,
+              "title": "중국 삼협댐, 세계 최대 댐의 저주 #세계이슈",
+              "upload_date": "20260522",
+              "views": 108750,
+              "efficiency": 15.54,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "867ToApHQ5A",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6810,
+              "title": "중국 삼협댐이 무너지면 벌어지는 일 세계 최대 댐의 저주 #세계이슈",
+              "upload_date": "20260524",
+              "views": 60382,
+              "efficiency": 8.87,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "7XPYobTh-jg",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6810,
+              "title": "중국 댐 98000개가 동시에 늙고 있다 #세계이슈",
+              "upload_date": "20260525",
+              "views": 101392,
+              "efficiency": 14.89,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "f1H4hkODdZw",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 6810,
+              "title": "중국 판교댐 1975 24만명이 하룻밤에 사라졌다 #세계이슈",
+              "upload_date": "20260526",
+              "views": 81859,
+              "efficiency": 12.02,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "CYuWJ09Mry4",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 8330,
+              "title": "중국 하수구에서 건진 기름의 비밀 #세계이슈",
+              "upload_date": "20260601",
+              "views": 54258,
+              "efficiency": 6.51,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "Z_IzMPEKM8c",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 8810,
+              "title": "중국 고속철도 1140조 빚이 깔려 있습니다 세계 최대 철도의 진짜 속도",
+              "upload_date": "20260605",
+              "views": 91464,
+              "efficiency": 10.38,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "KIdAJcKMJoA",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9280,
+              "title": "중국 고속철도 콘크리트 안에 석탄재가 들어 있습니다",
+              "upload_date": "20260608",
+              "views": 51449,
+              "efficiency": 5.54,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            },
+            {
+              "vid": "xiXjdof8j3Q",
+              "channel": "세계경제 돋보기",
+              "channel_subs": 9500,
+              "title": "중국 고속철도,열차를 땅에 묻어버렸습니다",
+              "upload_date": "20260609",
+              "views": 57237,
+              "efficiency": 6.02,
+              "categories": [
+                "경제",
+                "시사"
+              ]
+            }
+          ],
+          "verdict": "✅ 추격 가치 있음 (D+7 이내)"
         },
         {
           "cluster_size": 3,
@@ -387,8 +613,8 @@
               "channel_subs": 17600,
               "title": "삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언에 진짜 이유",
               "upload_date": "20260430",
-              "views": 417898,
-              "efficiency": 23.74,
+              "views": 417921,
+              "efficiency": 23.75,
               "categories": [
                 "경제"
               ]
@@ -398,7 +624,7 @@
           "max_efficiency": 32.48,
           "avg_efficiency": 25.22,
           "max_views": 665801,
-          "freshness_days": 47,
+          "freshness_days": 49,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -432,8 +658,8 @@
               "channel_subs": 17600,
               "title": "삼성 귀족 노조의 최후! 평택 공장 해체 명령과 사람 없는 공장 선언에 진짜 이유",
               "upload_date": "20260430",
-              "views": 417898,
-              "efficiency": 23.74,
+              "views": 417921,
+              "efficiency": 23.75,
               "categories": [
                 "경제"
               ]
@@ -502,7 +728,7 @@
           "max_efficiency": 52.77,
           "avg_efficiency": 18.71,
           "max_views": 264402,
-          "freshness_days": 16,
+          "freshness_days": 18,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
@@ -556,226 +782,6 @@
             }
           ],
           "verdict": "📦 evergreen 아카이브"
-        },
-        {
-          "cluster_size": 8,
-          "common_keywords": [
-            "중국"
-          ],
-          "pioneer": {
-            "vid": "GmVCT_CfQWU",
-            "channel": "세계경제 돋보기",
-            "channel_subs": 7000,
-            "title": "중국 삼협댐, 세계 최대 댐의 저주 #세계이슈",
-            "upload_date": "20260522",
-            "views": 108750,
-            "efficiency": 15.54,
-            "categories": [
-              "경제",
-              "시사"
-            ]
-          },
-          "followers": [
-            {
-              "vid": "867ToApHQ5A",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 6340,
-              "title": "중국 삼협댐이 무너지면 벌어지는 일 세계 최대 댐의 저주 #세계이슈",
-              "upload_date": "20260524",
-              "views": 60074,
-              "efficiency": 9.48,
-              "categories": [
-                "경제"
-              ]
-            },
-            {
-              "vid": "7XPYobTh-jg",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 6340,
-              "title": "중국 댐 98000개가 동시에 늙고 있다 #세계이슈",
-              "upload_date": "20260525",
-              "views": 71594,
-              "efficiency": 11.29,
-              "categories": [
-                "경제"
-              ]
-            },
-            {
-              "vid": "f1H4hkODdZw",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 6340,
-              "title": "중국 판교댐 1975 24만명이 하룻밤에 사라졌다 #세계이슈",
-              "upload_date": "20260526",
-              "views": 43916,
-              "efficiency": 6.93,
-              "categories": [
-                "경제"
-              ]
-            },
-            {
-              "vid": "CYuWJ09Mry4",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 8330,
-              "title": "중국 하수구에서 건진 기름의 비밀 #세계이슈",
-              "upload_date": "20260601",
-              "views": 54258,
-              "efficiency": 6.51,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            },
-            {
-              "vid": "Z_IzMPEKM8c",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 8810,
-              "title": "중국 고속철도 1140조 빚이 깔려 있습니다 세계 최대 철도의 진짜 속도",
-              "upload_date": "20260605",
-              "views": 91464,
-              "efficiency": 10.38,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            },
-            {
-              "vid": "KIdAJcKMJoA",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 9280,
-              "title": "중국 고속철도 콘크리트 안에 석탄재가 들어 있습니다",
-              "upload_date": "20260608",
-              "views": 51449,
-              "efficiency": 5.54,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            },
-            {
-              "vid": "xiXjdof8j3Q",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 9500,
-              "title": "중국 고속철도,열차를 땅에 묻어버렸습니다",
-              "upload_date": "20260609",
-              "views": 57237,
-              "efficiency": 6.02,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            }
-          ],
-          "days_active": 18,
-          "max_efficiency": 15.54,
-          "avg_efficiency": 8.96,
-          "max_views": 108750,
-          "freshness_days": 7,
-          "is_fresh": true,
-          "is_hot": false,
-          "videos": [
-            {
-              "vid": "GmVCT_CfQWU",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 7000,
-              "title": "중국 삼협댐, 세계 최대 댐의 저주 #세계이슈",
-              "upload_date": "20260522",
-              "views": 108750,
-              "efficiency": 15.54,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            },
-            {
-              "vid": "867ToApHQ5A",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 6340,
-              "title": "중국 삼협댐이 무너지면 벌어지는 일 세계 최대 댐의 저주 #세계이슈",
-              "upload_date": "20260524",
-              "views": 60074,
-              "efficiency": 9.48,
-              "categories": [
-                "경제"
-              ]
-            },
-            {
-              "vid": "7XPYobTh-jg",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 6340,
-              "title": "중국 댐 98000개가 동시에 늙고 있다 #세계이슈",
-              "upload_date": "20260525",
-              "views": 71594,
-              "efficiency": 11.29,
-              "categories": [
-                "경제"
-              ]
-            },
-            {
-              "vid": "f1H4hkODdZw",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 6340,
-              "title": "중국 판교댐 1975 24만명이 하룻밤에 사라졌다 #세계이슈",
-              "upload_date": "20260526",
-              "views": 43916,
-              "efficiency": 6.93,
-              "categories": [
-                "경제"
-              ]
-            },
-            {
-              "vid": "CYuWJ09Mry4",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 8330,
-              "title": "중국 하수구에서 건진 기름의 비밀 #세계이슈",
-              "upload_date": "20260601",
-              "views": 54258,
-              "efficiency": 6.51,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            },
-            {
-              "vid": "Z_IzMPEKM8c",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 8810,
-              "title": "중국 고속철도 1140조 빚이 깔려 있습니다 세계 최대 철도의 진짜 속도",
-              "upload_date": "20260605",
-              "views": 91464,
-              "efficiency": 10.38,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            },
-            {
-              "vid": "KIdAJcKMJoA",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 9280,
-              "title": "중국 고속철도 콘크리트 안에 석탄재가 들어 있습니다",
-              "upload_date": "20260608",
-              "views": 51449,
-              "efficiency": 5.54,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            },
-            {
-              "vid": "xiXjdof8j3Q",
-              "channel": "세계경제 돋보기",
-              "channel_subs": 9500,
-              "title": "중국 고속철도,열차를 땅에 묻어버렸습니다",
-              "upload_date": "20260609",
-              "views": 57237,
-              "efficiency": 6.02,
-              "categories": [
-                "경제",
-                "시사"
-              ]
-            }
-          ],
-          "verdict": "🔥 양산 클러스터 골든기 (D+7)"
         },
         {
           "cluster_size": 5,
@@ -849,7 +855,7 @@
           "max_efficiency": 33.22,
           "avg_efficiency": 13.55,
           "max_views": 93677,
-          "freshness_days": 1,
+          "freshness_days": 3,
           "is_fresh": true,
           "is_hot": true,
           "videos": [
@@ -928,8 +934,8 @@
             "channel_subs": 3740,
             "title": "&quot;반도체 독식은 지속 불가능하다&quot; 월가가 조용히 매집 중인 AI 다음 수혜주",
             "upload_date": "20260518",
-            "views": 107227,
-            "efficiency": 28.67,
+            "views": 107667,
+            "efficiency": 28.79,
             "categories": [
               "경제"
             ]
@@ -973,10 +979,10 @@
             }
           ],
           "days_active": 27,
-          "max_efficiency": 28.67,
-          "avg_efficiency": 11.61,
-          "max_views": 107227,
-          "freshness_days": 2,
+          "max_efficiency": 28.79,
+          "avg_efficiency": 11.63,
+          "max_views": 107667,
+          "freshness_days": 4,
           "is_fresh": true,
           "is_hot": true,
           "videos": [
@@ -986,8 +992,8 @@
               "channel_subs": 3740,
               "title": "&quot;반도체 독식은 지속 불가능하다&quot; 월가가 조용히 매집 중인 AI 다음 수혜주",
               "upload_date": "20260518",
-              "views": 107227,
-              "efficiency": 28.67,
+              "views": 107667,
+              "efficiency": 28.79,
               "categories": [
                 "경제"
               ]
@@ -1039,11 +1045,11 @@
           "pioneer": {
             "vid": "x2EkGjZA8Rc",
             "channel": "퐁퐁퐁경제학",
-            "channel_subs": 3320,
+            "channel_subs": 3440,
             "title": "&quot;한국이 그렇게 무서운 시장이었어?&quot;스타벅스 탱크데이 한 줄에 미국 본사가 일주일 만에 무릎 꿇은 진짜 이유 #경제",
             "upload_date": "20260525",
-            "views": 27174,
-            "efficiency": 8.18,
+            "views": 31241,
+            "efficiency": 9.08,
             "categories": [
               "경제"
             ]
@@ -1087,21 +1093,21 @@
             }
           ],
           "days_active": 10,
-          "max_efficiency": 8.18,
-          "avg_efficiency": 6.46,
-          "max_views": 27174,
-          "freshness_days": 12,
+          "max_efficiency": 9.08,
+          "avg_efficiency": 6.69,
+          "max_views": 31241,
+          "freshness_days": 14,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
             {
               "vid": "x2EkGjZA8Rc",
               "channel": "퐁퐁퐁경제학",
-              "channel_subs": 3320,
+              "channel_subs": 3440,
               "title": "&quot;한국이 그렇게 무서운 시장이었어?&quot;스타벅스 탱크데이 한 줄에 미국 본사가 일주일 만에 무릎 꿇은 진짜 이유 #경제",
               "upload_date": "20260525",
-              "views": 27174,
-              "efficiency": 8.18,
+              "views": 31241,
+              "efficiency": 9.08,
               "categories": [
                 "경제"
               ]
@@ -1183,7 +1189,7 @@
           "max_efficiency": 6.27,
           "avg_efficiency": 5.7,
           "max_views": 56524,
-          "freshness_days": 10,
+          "freshness_days": 12,
           "is_fresh": false,
           "is_hot": false,
           "videos": [
