@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-18 06:32:03 UTC",
+  "updated_at": "2026-06-25 05:26:32 UTC",
   "topic_count": 19,
-  "recycle_count": 3,
+  "recycle_count": 2,
   "topics": [
     {
       "topic": "한일 역전",
@@ -13,102 +13,19 @@
         "추월",
         "한국"
       ],
-      "depth_score": 0.692,
-      "matched_count": 14,
+      "depth_score": 0.453,
+      "matched_count": 7,
       "matched_videos": [
         {
-          "vid": "-lgPDInkWZI",
-          "title": "한국 도착에 도시 전체가 들썩…일본은 훈련장조차 못 구한 굴욕 - 한국과 일본 너무 다른 대우, 멕시코인들의 한국사랑 돋보여",
-          "channel": "김재민TV",
-          "efficiency": 11.374642857142858,
-          "views": 541433,
-          "velocity_per_day": 108286,
-          "freshness_days": 5,
+          "vid": "uCf-m_GD-Bk",
+          "title": "[삼성전자 주가 전망] \"3분전 충격속보\" 마이크론 실적유출 소문이 진짜였다 내일 핵폭탄급 온다 위클만기전 전략노출! 美골든타임 美반도체 어닝서프라이즈",
+          "channel": "미래에서 온 슈퍼개미",
+          "efficiency": 0.34,
+          "views": 28429,
+          "velocity_per_day": 28429,
+          "freshness_days": 1,
           "bucket": "경제·시사",
-          "channel_subs": 47600,
-          "source": "alert",
-          "match_ratio": 0.4,
-          "common_kws": [
-            "일본",
-            "한국"
-          ]
-        },
-        {
-          "vid": "TJkoGg-48HE",
-          "title": "라면 종주국 일본의 굴욕 | 일본 매운라면 시장 점유율 40% 압도적 1위 | 7조원 라면 종주국이 한국 라면에 빠진 진짜 이유",
-          "channel": "김재민TV",
-          "efficiency": 0.9579141104294479,
-          "views": 46842,
-          "velocity_per_day": 23421,
-          "freshness_days": 2,
-          "bucket": "경제·시사",
-          "channel_subs": 48900,
-          "source": "alert",
-          "match_ratio": 0.4,
-          "common_kws": [
-            "일본",
-            "한국"
-          ]
-        },
-        {
-          "vid": "T580d0ow94A",
-          "title": "\"제발 기술 좀 알려달라!\" 한국에 고개숙인 일본, 50년 동안 LNG선 독점하던 일본이 한국에 굴복한 이유",
-          "channel": "코믹스 경제",
-          "efficiency": 4.8500807754442645,
-          "views": 30022,
-          "velocity_per_day": 15011,
-          "freshness_days": 2,
-          "bucket": "경제·시사",
-          "channel_subs": 6190,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "일본"
-          ]
-        },
-        {
-          "vid": "IgoTZL36GzQ",
-          "title": "“한국 이제 기지국이 필요 없다?”삼성갤럭시 위성통신, 통신사 30년 권력을 흔드는 삼성의 한 수 곧 삼성 어마무시한 일 터진다",
-          "channel": "경제치트키",
-          "efficiency": 3.1523809523809523,
-          "views": 23832,
-          "velocity_per_day": 11916,
-          "freshness_days": 2,
-          "bucket": "경제·시사",
-          "channel_subs": 7560,
-          "source": "alert",
-          "match_ratio": 0.4,
-          "common_kws": [
-            "30년",
-            "한국"
-          ]
-        },
-        {
-          "vid": "vitERV2rR7o",
-          "title": "한국, 체코 극적 역전승직후 길거리에 멕시코인들이 더 난리 난 놀라운 광경, 한국인들의 한국 사랑",
-          "channel": "귀에쏙쏙경제학",
-          "efficiency": 3.1622289156626504,
-          "views": 52493,
-          "velocity_per_day": 10498,
-          "freshness_days": 5,
-          "bucket": "경제·시사",
-          "channel_subs": 16600,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "한국"
-          ]
-        },
-        {
-          "vid": "Pa14ub0Ai_g",
-          "title": "종전 시작! 앞으로 미친 상승 나올 주식 BEST3 천만원 있다면 '이 종목' 당장 사라! 반도체 MLCC 재건주 신재생에너지 및 태양광 관련주 | 주먹남",
-          "channel": "주식 재벌 - 주먹남 리드남의 급등주",
-          "efficiency": 0.24,
-          "views": 20597,
-          "velocity_per_day": 10298,
-          "freshness_days": 2,
-          "bucket": "경제·시사",
-          "channel_subs": 86500,
+          "channel_subs": 84400,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [
@@ -116,15 +33,47 @@
           ]
         },
         {
-          "vid": "ToMMtFtsqIk",
-          "title": "젠슨황 한국 사랑에 전세계가 들썩… 일본은 빼놓고 그냥 갔다. - 한국과 일본 너무 다른 대우,  '재팬 패싱'에 난리난 일본",
-          "channel": "김재민TV",
-          "efficiency": 0.3251124744376278,
-          "views": 15898,
-          "velocity_per_day": 7949,
+          "vid": "yIghxolVWxo",
+          "title": "주식 시황. 증시 급락 이유 총정리. 금리, MSCI, 연기금, 반도체 노이즈, 그리고 결정타. 흔들린 대장주 이 후 시나리오. 급락 이용해 증시 큰손들이 물량 받은 종목",
+          "channel": "시황맨TV",
+          "efficiency": 0.41,
+          "views": 36555,
+          "velocity_per_day": 18277,
           "freshness_days": 2,
           "bucket": "경제·시사",
-          "channel_subs": 48900,
+          "channel_subs": 88700,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "반도체"
+          ]
+        },
+        {
+          "vid": "6SNuUeDWr44",
+          "title": "북중미 월드컵 한국은 졌는데 세계가 박수쳤다…멕시코전 직후 벌어진 믿기 힘든 장면 | 한국 멕시코 (해외감동사연)",
+          "channel": "감동신화",
+          "efficiency": 16.28,
+          "views": 39882,
+          "velocity_per_day": 9970,
+          "freshness_days": 4,
+          "bucket": "경제·시사",
+          "channel_subs": 2450,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "한국"
+          ]
+        },
+        {
+          "vid": "VjVXB_x0MHo",
+          "title": "[해외감동사연] \"한국이 이걸 어떻게?\" 400조 꿈의 신소재 독식한 한국 앞에 무너진 일본!",
+          "channel": "코리아소울",
+          "efficiency": 0.57,
+          "views": 19297,
+          "velocity_per_day": 9648,
+          "freshness_days": 2,
+          "bucket": "경제·시사",
+          "channel_subs": 34100,
           "source": "alert",
           "match_ratio": 0.4,
           "common_kws": [
@@ -133,156 +82,87 @@
           ]
         },
         {
-          "vid": "ev4LRG-AVs0",
-          "title": "[주식] 역대급 저평가 주식 TOP 3 !! 천만원 있다면 \"이 종목\" 사라! #급등주 #SK하이닉스 #삼성전자 #로봇주 #반도체 #스페이스X｜리드남",
-          "channel": "주식 재벌 - 주먹남 리드남의 급등주",
-          "efficiency": 0.26,
-          "views": 22263,
-          "velocity_per_day": 7421,
+          "vid": "mNnwCc02T_4",
+          "title": "\"한국이 해냈다\" 중국이 90% 독점했던 태양광, 한국 잉크 한 방울이 뒤집었다",
+          "channel": "경제왕토끼",
+          "efficiency": 1.08,
+          "views": 27024,
+          "velocity_per_day": 9008,
           "freshness_days": 3,
           "bucket": "경제·시사",
-          "channel_subs": 86400,
+          "channel_subs": 25000,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [
-            "반도체"
+            "한국"
+          ]
+        },
+        {
+          "vid": "w1esqmle9Vg",
+          "title": "''한국 주식 폭락 이제 시작이다'' 삼성전자 SK하이닉스 있다면 당장 '이렇게' 하세요 이때 놓치면 다 끝난다",
+          "channel": "경제치트키",
+          "efficiency": 0.52,
+          "views": 5660,
+          "velocity_per_day": 5660,
+          "freshness_days": 1,
+          "bucket": "경제·시사",
+          "channel_subs": 10700,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "한국"
+          ]
+        },
+        {
+          "vid": "4c-T5ARQVNQ",
+          "title": "한국 경제의 지연 뇌관, 해결책은 ‘이것’ 뿐입니다. (곽수종 박사)",
+          "channel": "경제마스터 곽수종",
+          "efficiency": 0.31,
+          "views": 26774,
+          "velocity_per_day": 5354,
+          "freshness_days": 5,
+          "bucket": "경제·시사",
+          "channel_subs": 85200,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "한국"
           ]
         }
       ],
-      "verdict": "🔥🔥 슈퍼 재활용 (즉시 추격)",
-      "priority": 0,
+      "verdict": "🔁 재활용 진행 중 (D+7 윈도우)",
+      "priority": 2,
       "our_video_status": "검토 중",
       "is_missed_opportunity": false,
       "next_window": "진행 중",
       "pioneer_note": "김재민TV 2026-06-14 D+1 → 코믹스 경제 D+1 86K/일 동시"
     },
     {
-      "topic": "갤럭시",
-      "category": "🌍 국제 자긍심 ([그 진짜 이유] 시리즈)",
+      "topic": "식당 폐업",
+      "category": "🍽️ 자영업 (정책 비판)",
       "keywords": [
-        "갤럭시",
-        "미국 출시",
-        "삼성",
-        "아이폰",
-        "통신비"
+        "매출 반토막",
+        "자영업",
+        "자영업자",
+        "폐업"
       ],
-      "depth_score": 0.363,
-      "matched_count": 5,
-      "matched_videos": [
-        {
-          "vid": "3KFTdIoxmhk",
-          "title": "삼성·애플·TSMC가 모두 줄 선 회사, 32세 청년은 어떻게 세계 1위가 됐나",
-          "channel": "김재민TV",
-          "efficiency": 0.82853228962818,
-          "views": 42338,
-          "velocity_per_day": 42338,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 51100,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "삼성"
-          ]
-        },
-        {
-          "vid": "IgoTZL36GzQ",
-          "title": "“한국 이제 기지국이 필요 없다?”삼성갤럭시 위성통신, 통신사 30년 권력을 흔드는 삼성의 한 수 곧 삼성 어마무시한 일 터진다",
-          "channel": "경제치트키",
-          "efficiency": 3.1523809523809523,
-          "views": 23832,
-          "velocity_per_day": 11916,
-          "freshness_days": 2,
-          "bucket": "경제·시사",
-          "channel_subs": 7560,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "삼성"
-          ]
-        },
-        {
-          "vid": "W02bBzd1Wnw",
-          "title": "HBM 시대 끝났다.젠슨황을 움직인 130조 괴물칩 등장에 삼성·하이닉스 운명은?",
-          "channel": "비밀의경제학",
-          "efficiency": 8.06,
-          "views": 61455,
-          "velocity_per_day": 10242,
-          "freshness_days": 6,
-          "bucket": "경제·시사",
-          "channel_subs": 7620,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "삼성"
-          ]
-        },
-        {
-          "vid": "QViw82frkUg",
-          "title": "전기차에서 로봇까지… 삼성·현대차 동맹이 무서운 진짜 이유",
-          "channel": "김재민TV",
-          "efficiency": 1.2821638655462184,
-          "views": 61031,
-          "velocity_per_day": 8718,
-          "freshness_days": 7,
-          "bucket": "경제·시사",
-          "channel_subs": 47600,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "삼성"
-          ]
-        },
-        {
-          "vid": "aF1y1AaWwro",
-          "title": "삼성 박진만 감독 \"상승세 원인은?\" 강민호 김영웅 복귀 시점 운영 방법 나왔다! #삼성라이온즈 #불방맹이 #강민호 #구자욱 #김영웅",
-          "channel": "크보쌍둥이",
-          "efficiency": 0.16,
-          "views": 7114,
-          "velocity_per_day": 7114,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 45500,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "삼성"
-          ]
-        }
-      ],
-      "verdict": "📦 재활용 신호 약함",
-      "priority": 3,
-      "our_video_status": "**#21 galaxy-satellite 발행 완료**",
-      "is_missed_opportunity": false,
-      "next_window": "2026-12",
-      "pioneer_note": "2025-12 → 2026-06 재폭발 (현재)"
-    },
-    {
-      "topic": "꼬마빌딩",
-      "category": "🏢 부동산 (자산 직격)",
-      "keywords": [
-        "강남빌딩",
-        "공실",
-        "꼬마빌딩",
-        "임대수익"
-      ],
-      "depth_score": 0.253,
+      "depth_score": 0.262,
       "matched_count": 1,
       "matched_videos": [
         {
-          "vid": "FqqgnjVzA_4",
-          "title": "1년째 공실&quot; 20억 급락에 깡통으로 전락한 시그니엘의 몰락, 그 진짜 이유",
-          "channel": "지식왕천재",
-          "efficiency": 51.26,
-          "views": 625355,
-          "upload_date": "20260612",
+          "vid": "lOE1uPsIex4",
+          "title": "신도시의 몰락, 진짜 문제는 집값이 아니었습니다 #신도시의몰락 #일산 #분당 #1기신도시  #부동산 #한국부동산 #도시경제 #상권붕괴 #자영업 #인구감소 #재건축 #빡치는경제학",
+          "channel": "빡치는경제학",
+          "efficiency": 58.49,
+          "views": 25851,
+          "velocity_per_day": 4308,
+          "freshness_days": 6,
           "bucket": "경제·시사",
-          "cluster_size": 3,
-          "cluster_max_eff": 51.26,
-          "source": "copycat",
+          "channel_subs": 442,
+          "source": "alert",
           "match_ratio": 0.25,
           "common_kws": [
-            "공실"
+            "자영업"
           ]
         }
       ],
@@ -290,8 +170,8 @@
       "priority": 3,
       "our_video_status": "미발행",
       "is_missed_opportunity": true,
-      "next_window": "2026-07~2026-08",
-      "pioneer_note": "2025-06 폭발 → 2026-01 재폭발"
+      "next_window": "진행 중",
+      "pioneer_note": "2025-05 → 2026-02 → 2026-09 예상"
     }
   ]
 }

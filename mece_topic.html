@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#a855f7">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>🌳 MECE 주제 탐색 · TubeHacker</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+:root {
+  --bg:#0a0a12; --surface:#13131c; --surface2:#1a1a26;
+  --border:#26263a; --divider:#1f1f30;
+  --text:#ededf2; --text2:#9696a6; --text3:#6c6c80;
+  --primary:#a855f7; --primary-hi:#c084fc;
+  --primary-bg:rgba(168,85,247,.12); --primary-bd:rgba(168,85,247,.35);
+  --hot:#84cc16; --hot-bg:rgba(132,204,22,.10); --hot-bd:rgba(132,204,22,.35);
+  --warn:#ff7a45; --warn-bg:rgba(255,122,69,.10); --warn-bd:rgba(255,122,69,.35);
+  --danger:#ef4444; --info:#60a5fa; --blue:#3b82f6;
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:'Inter','Noto Sans KR',system-ui,sans-serif; font-size:14px; line-height:1.55; }
+.wrap { max-width:1280px; margin:0 auto; padding:32px 24px; }
+.header { display:flex; align-items:baseline; gap:12px; margin-bottom:8px; flex-wrap:wrap; }
+.header h1 { font-size:26px; font-weight:800; margin:0; }
+.header .keyword { color:var(--primary-hi); font-weight:800; }
+.header .sub { color:var(--text3); font-size:13px; }
+.nav { margin-bottom:20px; }
+.nav a { color:var(--text3); text-decoration:none; margin-right:14px; font-size:13px; }
+.nav a:hover { color:var(--primary-hi); }
+
+/* 검색 박스 */
+.search-bar { display:flex; gap:8px; margin-bottom:24px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px; }
+.search-bar input { flex:1; background:var(--surface2); border:1px solid var(--border); color:var(--text); padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px; }
+.search-bar .hint { color:var(--text3); font-size:12px; padding:6px 0; align-self:center; flex-shrink:0; }
+
+.section { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:20px; }
+.section h2 { margin:0 0 14px; font-size:17px; font-weight:700; }
+.section h2 .count { color:var(--primary-hi); font-weight:800; margin-left:6px; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media (max-width:900px) { .grid-2 { grid-template-columns:1fr; } }
+
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:20px; }
+.stat { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:14px; }
+.stat .label { color:var(--text3); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; }
+.stat .value { font-size:26px; font-weight:800; color:var(--primary-hi); margin-top:4px; }
+.stat .meta { color:var(--text3); font-size:11px; margin-top:2px; }
+.stat.hot .value { color:var(--hot); }
+.stat.warn .value { color:var(--warn); }
+
+/* 빈 슬롯 카드 */
+.slot-grid { display:grid; gap:12px; }
+.slot { background:linear-gradient(135deg,rgba(168,85,247,0.06) 0%,rgba(59,130,246,0.04) 100%); border:1px solid var(--primary-bd); border-radius:10px; padding:14px; }
+.slot .header-row { display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
+.slot .badge { background:var(--primary-bg); border:1px solid var(--primary-bd); color:var(--primary-hi); padding:3px 9px; border-radius:14px; font-size:11px; font-weight:700; }
+.slot .badge.dim { background:rgba(59,130,246,.10); border-color:var(--blue); color:var(--blue); }
+.slot .badge.fit { background:var(--hot-bg); border-color:var(--hot-bd); color:var(--hot); }
+.slot .score { margin-left:auto; color:var(--warn); font-weight:800; font-family:'Inter'; font-size:16px; }
+.slot .body { color:var(--text2); font-size:13px; margin-bottom:8px; }
+.slot .videos { background:var(--surface2); border-radius:8px; padding:10px; margin-top:8px; }
+.slot .video-row { display:flex; gap:8px; font-size:12px; padding:4px 0; align-items:center; }
+.slot .video-row a { color:var(--text); text-decoration:none; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.slot .video-row a:hover { color:var(--primary-hi); }
+.slot .video-row .meta { color:var(--text3); flex-shrink:0; font-family:'Inter'; font-size:11px; }
+
+/* 주제 추천 카드 */
+.suggestion { background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:10px; }
+.suggestion .topic-base { font-size:14px; font-weight:600; color:var(--primary-hi); margin-bottom:10px; }
+.suggestion .variants { display:grid; gap:6px; }
+.suggestion .variant { background:var(--surface); border:1px solid var(--divider); border-radius:6px; padding:8px 10px; font-size:12px; }
+.suggestion .variant .ch { color:var(--hot); font-weight:600; }
+.suggestion .variant .text { color:var(--text); }
+.suggestion .variant .meta { color:var(--text3); font-size:11px; margin-top:2px; }
+.copy-btn { background:var(--surface2); color:var(--text2); border:1px solid var(--border); border-radius:6px; padding:4px 10px; font-size:11px; cursor:pointer; }
+.copy-btn:hover { background:var(--primary-bg); color:var(--primary-hi); border-color:var(--primary-bd); }
+
+/* 영상 카드 */
+.video-card { background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:10px; margin-bottom:8px; }
+.video-card a { color:var(--text); text-decoration:none; font-size:13px; font-weight:500; }
+.video-card a:hover { color:var(--primary-hi); }
+.video-card .meta { color:var(--text3); font-size:11px; margin-top:4px; display:flex; gap:10px; flex-wrap:wrap; }
+.video-card .meta .views { color:var(--hot); font-weight:600; }
+.video-card .badge-explosive { background:var(--hot-bg); color:var(--hot); border:1px solid var(--hot-bd); padding:1px 6px; border-radius:8px; font-size:10px; font-weight:600; }
+
+/* 히트맵 */
+#heatmap { width:100%; height:auto; }
+.heatmap-cell { stroke:var(--bg); stroke-width:1; cursor:pointer; transition:opacity 0.15s; }
+.heatmap-cell:hover { opacity:0.7; }
+.heatmap-label { fill:var(--text2); font-size:11px; font-family:'Inter',sans-serif; }
+.heatmap-value { fill:var(--text); font-size:11px; font-weight:600; text-anchor:middle; pointer-events:none; }
+
+/* Markmap tree */
+.tree-node text { fill:var(--text); font-family:'Noto Sans KR',sans-serif; font-size:12px; }
+.tree-node circle { fill:var(--surface); stroke:var(--primary); stroke-width:1.5; }
+.tree-node.depth-0 circle { fill:var(--primary); r:7; }
+.tree-node.depth-1 circle { fill:var(--warn); stroke:var(--warn); }
+.tree-node.depth-2 circle { fill:var(--hot); stroke:var(--hot); }
+.tree-node.depth-3 circle { fill:var(--info); stroke:var(--info); r:3.5; }
+.tree-link { fill:none; stroke:var(--border); stroke-width:1.5; }
+.tree-node a text { fill:var(--text); cursor:pointer; }
+.tree-node a:hover text { fill:var(--primary-hi); }
+
+.empty { color:var(--text3); font-size:13px; text-align:center; padding:24px; background:var(--surface2); border-radius:8px; }
+.tooltip { position:absolute; background:var(--surface2); border:1px solid var(--primary-bd); border-radius:6px; padding:6px 10px; color:var(--text); font-size:12px; pointer-events:none; opacity:0; transition:opacity .15s; z-index:100; max-width:280px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>🌳 <span class="keyword" id="kw-display">키워드</span> MECE 탐색</h1>
+      <span class="sub" id="updated"></span>
+    </div>
+
+    <div class="nav">
+      <a href="index.html">← 메인</a>
+      <a href="mece.html">🌳 MECE 자동</a>
+      <a href="alerts.html">🚨 폭발 알림</a>
+      <a href="archive.html">📊 아카이브</a>
+    </div>
+
+    <div class="search-bar">
+      <input id="keyword-input" placeholder="다른 키워드 박음 (예: 텅스텐, 참교육)" />
+      <div class="hint">CLI: <code>.venv/bin/python scripts/mece/explore_topic.py "키워드"</code></div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="section" id="suggestions-section">
+      <h2>🎯 자동 생성 주제 <span class="count" id="sugg-count">0</span></h2>
+      <div id="suggestions"></div>
+    </div>
+
+    <div class="section">
+      <h2>🟦 빈 슬롯 <span class="count" id="slot-count">0</span></h2>
+      <div class="slot-grid" id="blue-slots"></div>
+    </div>
+
+    <div class="section">
+      <h2>🗺️ MECE 트리 — 키워드 × 차원 × 영상</h2>
+      <div style="background:var(--surface2);border-radius:10px;padding:12px;min-height:480px;">
+        <svg id="markmap" style="width:100%;height:480px;"></svg>
+      </div>
+      <p style="color:var(--text3);font-size:11px;margin-top:8px;">
+        1단=키워드 / 2단=빈 슬롯 차원 / 3단=대표 영상. 점수 높은 슬롯이 우선.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="section">
+        <h2>🔥 Top 10 폭발 영상</h2>
+        <div id="top-videos"></div>
+      </div>
+      <div class="section">
+        <h2>📊 11차원 히트맵</h2>
+        <svg id="heatmap"></svg>
+        <p style="color:var(--text3);font-size:11px;margin-top:8px;">시장 영상 중 각 차원에 박힌 편수.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+const DIM_KOR = {
+  time:'시간', space:'공간', stake:'이해관계', cause:'인과',
+  scale:'층위', person:'인물', number:'환산', mech:'메커니즘',
+  content_keyword:'콘텐츠키워드', trend:'트렌드부착', click_force:'클릭강제',
+};
+
+function getSlug() {
+  const params = new URLSearchParams(location.search);
+  return params.get('slug') || params.get('keyword') || '텅스텐';
+}
+
+async function load() {
+  const slug = getSlug();
+  document.getElementById('kw-display').textContent = decodeURIComponent(slug);
+  document.getElementById('keyword-input').value = decodeURIComponent(slug);
+
+  try {
+    const topic = await fetch(`data/mece_topic_${slug}.json`).then(r => {
+      if (!r.ok) throw new Error('not found');
+      return r.json();
+    });
+    document.getElementById('updated').textContent = `갱신 ${topic.created_at}`;
+    renderStats(topic);
+    renderBlueSlots(topic);
+    renderTopVideos(topic);
+    renderHeatmap(topic);
+    renderMarkmap(topic);
+  } catch (e) {
+    document.querySelectorAll('.section, .stats').forEach(el => el.innerHTML = '');
+    document.getElementById('updated').textContent = '데이터 없음';
+    document.getElementById('stats').innerHTML = `
+      <div class="empty">
+        "${decodeURIComponent(slug)}" 키워드 분석 데이터 없음.<br>
+        클코에게 박음: <strong>"${decodeURIComponent(slug)} MECE 봐줘"</strong>
+      </div>`;
+  }
+
+  // 주제 추천 별도 로드
+  try {
+    const sugg = await fetch(`data/mece_suggestions_${slug}.json`).then(r => {
+      if (!r.ok) throw new Error('not found');
+      return r.json();
+    });
+    renderSuggestions(sugg);
+  } catch (e) {
+    document.getElementById('suggestions').innerHTML =
+      '<div class="empty">주제 추천 데이터 없음. 클코에게 박음: <strong>"' + decodeURIComponent(slug) + ' 주제 추천해줘"</strong></div>';
+  }
+}
+
+function renderStats(t) {
+  const items = [
+    { label:'검색 영상', value:t.stats.total },
+    { label:'트렌드 부착', value:t.stats.with_trend, cls:'hot' },
+    { label:'폭발 패턴', value:t.stats.explosive_pattern, cls:'hot' },
+    { label:'빈 슬롯', value:t.blue_slots.length, cls:'warn' },
+  ];
+  document.getElementById('stats').innerHTML = items.map(i => `
+    <div class="stat ${i.cls || ''}">
+      <div class="label">${i.label}</div>
+      <div class="value">${i.value}</div>
+    </div>
+  `).join('');
+}
+
+function renderBlueSlots(t) {
+  const slots = t.blue_slots.slice(0, 8);
+  document.getElementById('slot-count').textContent = slots.length;
+  if (slots.length === 0) {
+    document.getElementById('blue-slots').innerHTML =
+      '<div class="empty">빈 슬롯 없음. 시장이 다 채워졌거나 우리 채널이 이미 박음.</div>';
+    return;
+  }
+  document.getElementById('blue-slots').innerHTML = slots.map(slot => `
+    <div class="slot">
+      <div class="header-row">
+        <span class="badge">🌐 ${slot.trend_keyword}</span>
+        <span class="badge dim">🎯 ${slot.attractive_dim_kor}</span>
+        <span class="badge fit">${slot.recommended_channel || '?'}</span>
+        <span class="score">${(slot.priority_score * 100).toFixed(0)}점</span>
+      </div>
+      <div class="body">
+        시장 ${slot.market_count}편 · 우리 0편 · 평균 ${slot.avg_efficiency}x
+        — <strong style="color:var(--primary-hi);">${slot.verdict}</strong>
+      </div>
+      <div class="videos">
+        ${slot.top_market_videos.map(v => `
+          <div class="video-row">
+            <a href="${v.url}" target="_blank" title="${v.title}">${v.title}</a>
+            <span class="meta">${v.channel} · ${(v.views/1000).toFixed(0)}K</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderTopVideos(t) {
+  const videos = [...t.videos].sort((a,b) => (b.views||0) - (a.views||0)).slice(0, 10);
+  document.getElementById('top-videos').innerHTML = videos.map((v, i) => {
+    const explosive = v.dims?.is_explosive_pattern ? '<span class="badge-explosive">폭발 패턴</span>' : '';
+    return `
+      <div class="video-card">
+        <a href="${v.url}" target="_blank">${i+1}. ${v.title}</a>
+        <div class="meta">
+          <span>${v.channel || ''}</span>
+          <span class="views">${(v.views||0).toLocaleString()}뷰</span>
+          ${v.efficiency ? `<span>${(+v.efficiency).toFixed(2)}x</span>` : ''}
+          ${explosive}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderHeatmap(t) {
+  const m = t.market_matrix || {};
+  const dims = ['time','space','stake','cause','scale','person','number','mech','content_keyword','trend','click_force'];
+  const margin = { top:50, right:10, bottom:10, left:10 };
+  const w = 580;
+  const cellW = (w - margin.left - margin.right) / dims.length - 2;
+  const cellH = 60;
+  const h = margin.top + cellH + margin.bottom;
+  const svg = d3.select('#heatmap').attr('viewBox', `0 0 ${w} ${h}`);
+  svg.selectAll('*').remove();
+  const max = Math.max(1, ...dims.map(d => m[d] || 0));
+  const color = d3.scaleLinear().domain([0, max]).range(['#1a1a26', '#a855f7']);
+  const tooltip = d3.select('#tooltip');
+  dims.forEach((d, i) => {
+    const x = margin.left + i * (cellW + 2);
+    const count = m[d] || 0;
+    svg.append('text')
+      .attr('class', 'heatmap-label')
+      .attr('x', x + cellW/2).attr('y', margin.top - 8)
+      .attr('text-anchor', 'middle').text(DIM_KOR[d]);
+    svg.append('rect')
+      .attr('class', 'heatmap-cell')
+      .attr('x', x).attr('y', margin.top).attr('width', cellW).attr('height', cellH)
+      .attr('fill', count === 0 ? '#1a1a26' : color(count))
+      .attr('rx', 4)
+      .on('mouseenter', e => tooltip.style('opacity',1).html(`<strong>${DIM_KOR[d]}</strong><br>시장 ${count}편${count===0?' (빈)':''}`))
+      .on('mousemove', e => tooltip.style('left', (e.pageX+12)+'px').style('top', (e.pageY+12)+'px'))
+      .on('mouseleave', () => tooltip.style('opacity', 0));
+    svg.append('text')
+      .attr('class', 'heatmap-value')
+      .attr('x', x + cellW/2).attr('y', margin.top + cellH/2 + 4)
+      .attr('fill', count >= max*0.5 ? '#fff' : 'var(--text2)')
+      .text(count || '');
+  });
+}
+
+function renderMarkmap(t) {
+  const keyword = decodeURIComponent(getSlug());
+  const slots = (t.blue_slots || []).slice(0, 6);
+  if (slots.length === 0) {
+    document.getElementById('markmap').outerHTML =
+      '<svg id="markmap" style="width:100%;height:120px;"></svg>' +
+      '<p style="color:var(--text3);font-size:12px;text-align:center;padding:24px;">빈 슬롯 데이터 없음.</p>';
+    return;
+  }
+
+  // 1단=키워드 → 2단=차원 슬롯 → 3단=대표 영상
+  const root = { name: `🌳 ${keyword}`, children: [] };
+  slots.forEach(s => {
+    const dim_node = {
+      name: `🎯 ${s.attractive_dim_kor} (${(s.priority_score*100).toFixed(0)}점 → ${s.recommended_channel || '?'})`,
+      children: (s.top_market_videos || []).slice(0, 3).map(v => ({
+        name: `${v.title.slice(0, 40)}... · ${(v.views/1000).toFixed(0)}K`,
+        url: v.url,
+      })),
+    };
+    root.children.push(dim_node);
+  });
+
+  const width = 1100;
+  const height = 480;
+  const svg = d3.select('#markmap').attr('viewBox', `0 0 ${width} ${height}`);
+  svg.selectAll('*').remove();
+
+  const tree = d3.tree().size([height - 40, width - 320]);
+  const hier = d3.hierarchy(root);
+  tree(hier);
+
+  const g = svg.append('g').attr('transform', 'translate(120,20)');
+
+  g.selectAll('.tree-link').data(hier.links()).enter().append('path')
+    .attr('class', 'tree-link')
+    .attr('d', d3.linkHorizontal().x(d => d.y).y(d => d.x));
+
+  const node = g.selectAll('.tree-node').data(hier.descendants()).enter().append('g')
+    .attr('class', d => `tree-node depth-${d.depth}`)
+    .attr('transform', d => `translate(${d.y},${d.x})`);
+
+  node.append('circle').attr('r', d => 6 - d.depth);
+  node.each(function(d) {
+    const sel = d3.select(this);
+    if (d.data.url) {
+      sel.append('a').attr('href', d.data.url).attr('target', '_blank')
+         .append('text')
+         .attr('dx', d.children ? -10 : 10)
+         .attr('text-anchor', d.children ? 'end' : 'start')
+         .attr('dy', 4)
+         .text(d.data.name);
+    } else {
+      sel.append('text')
+         .attr('dx', d.children ? -10 : 10)
+         .attr('text-anchor', d.children ? 'end' : 'start')
+         .attr('dy', 4)
+         .text(d.data.name);
+    }
+  });
+}
+
+function renderSuggestions(s) {
+  const suggestions = s.suggestions || [];
+  document.getElementById('sugg-count').textContent = suggestions.length;
+  if (suggestions.length === 0) {
+    document.getElementById('suggestions').innerHTML = '<div class="empty">주제 추천 없음.</div>';
+    return;
+  }
+  document.getElementById('suggestions').innerHTML = suggestions.map((sugg, i) => {
+    const ev = sugg.self_evaluation || {};
+    const gaps = sugg.click_force_gaps || [];
+    const tierColor = ev.predicted_score >= 60 ? 'var(--hot)' : ev.predicted_score >= 45 ? 'var(--warn)' : 'var(--text3)';
+    return `
+    <div class="suggestion">
+      <div class="topic-base">
+        #${i+1} 🟦 ${sugg.attractive_dim_kor} 슬롯 (${(sugg.priority_score*100).toFixed(0)}점)
+      </div>
+      <div style="color:var(--text2); font-size:13px; margin-bottom:8px;">
+        ${sugg.topic_base}
+      </div>
+      ${ev.predicted_score ? `
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;font-size:11px;">
+        <span style="background:var(--surface);padding:3px 8px;border-radius:6px;color:${tierColor};font-weight:600;">
+          🎯 자기평가 ${ev.predicted_score}점 ${ev.tier || ''}
+        </span>
+        <span style="background:var(--surface);padding:3px 8px;border-radius:6px;color:var(--text2);">
+          매력 ${ev.dim_count || 0}축
+        </span>
+        <span style="background:var(--surface);padding:3px 8px;border-radius:6px;color:var(--text2);">
+          클릭강제 ${ev.cf_count || 0}/4
+        </span>
+        ${ev.has_trend ? '<span style="background:var(--hot-bg);padding:3px 8px;border-radius:6px;color:var(--hot);">🌐 트렌드</span>' : ''}
+      </div>
+      ` : ''}
+      ${gaps.length ? `
+      <div style="background:var(--warn-bg);border:1px solid var(--warn-bd);border-radius:6px;padding:8px 10px;margin-bottom:8px;font-size:11px;">
+        <strong style="color:var(--warn);">⚠️ 클릭강제 갭 (${gaps.length}/4)</strong>
+        <ul style="margin:4px 0 0 16px;padding:0;color:var(--text2);">
+          ${gaps.map(g => `<li>${g}</li>`).join('')}
+        </ul>
+      </div>
+      ` : ''}
+      <div class="variants">
+        ${sugg.variants.map(v => `
+          <div class="variant">
+            <span class="ch">${v.channel}</span> · <span style="color:var(--text3);">${v.length} · ${v.tone}</span>
+            <div class="text" style="margin-top:4px;">${v.topic}</div>
+            ${v.note ? `<div class="meta">📝 ${v.note}</div>` : ''}
+          </div>
+        `).join('')}
+      </div>
+      <div style="margin-top:8px; color:var(--text3); font-size:11px;">
+        💬 클코에 박음: <code style="background:var(--surface);padding:2px 6px;border-radius:4px;">"#${i+1} ${sugg.variants[0]?.channel?.split(' ')[1] || '247경제'} 변형으로 대본"</code>
+      </div>
+    </div>
+  `;
+  }).join('');
+}
+
+document.getElementById('keyword-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const kw = e.target.value.trim();
+    if (kw) location.search = `?slug=${encodeURIComponent(kw)}`;
+  }
+});
+
+load();
+  </script>
+</body>
+</html>

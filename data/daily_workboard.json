@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
-  "updated_at": "2026-06-17T16:33:33",
-  "today": "2026-06-18",
+  "updated_at": "2026-06-22 09:00",
+  "today": "2026-06-25",
   "categories_def": {
     "single_explosion": {
       "label": "🔥 단일 폭발",
@@ -5447,7 +5447,7 @@
             "title": "정조실록·순조실록·다산학술재단",
             "note": "DATA_PREP 외부 사료 보강"
           },
-          "status": "ready_to_publish",
+          "status": "published",
           "checklist": {
             "collect": true,
             "analyze": true,
@@ -5455,7 +5455,7 @@
             "draft": true,
             "review_finalize": true,
             "self_diagnosis": true,
-            "published": false
+            "published": true
           },
           "events": [
             {
@@ -5467,6 +5467,11 @@
               "ts": "2026-06-17 17:00",
               "type": "ready_to_publish",
               "note": "EP.12 정약용 18년 강진. 15,201자 / 31.1분. PASS. 1차 사료 (자찬묘지명·두 아들에게·목민심서·경세유표·흠흠신서·다신계절목·사암연보) 직접 인용 5건+."
+            },
+            {
+              "ts": "2026-06-19 12:00",
+              "type": "scheduled",
+              "note": "오늘 밤 예약 발행 완료. EP.12 정약용 18년 강진 (31.1분, [그 사람 시리즈])"
             }
           ],
           "notes": "한국사 인물 결 안전선 100%. 1차 사료 5건+ 풍부. 30분 골든구간."
@@ -9412,6 +9417,104 @@
               "ts": "2026-06-15 18:30",
               "type": "published",
               "note": "6월 15일 발행 완료"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260614-white-tiger",
+          "category": "cross_category",
+          "title": "\"거지 같은 놈이라 손가락질했지요\" 백호 새끼를 살린 천한 사냥꾼이 온 마을의 은인이 된 그날 밤 | [밤의 사료]",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "[밤의 사료]",
+            "동물보은(새 레인)",
+            "천대→재평가",
+            "원조 266K"
+          ],
+          "merge_angle": "구수한 야담 백호 보은(266K) 기반. 동물보은 새 레인(여인 재평가 과밀 환기). 면천·착호 고증축으로 차별. evergreen",
+          "sources_a": {
+            "channel": "구수한 야담",
+            "title": "눈보라 속 백호를 살린 포수, 은혜는 이렇게 돌아왔습니다",
+            "efficiency": null,
+            "views": 266006,
+            "velocity": null,
+            "url": "https://www.youtube.com/watch?v=StI2eX5WKWk",
+            "categories": [
+              "야담"
+            ]
+          },
+          "sources_b": null,
+          "status": "published",
+          "checklist": {
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "project": "20260614_07_white-tiger",
+          "events": [
+            {
+              "ts": "2026-06-14 22:00",
+              "type": "produced",
+              "note": "풀파이프라인 완성 — 대본 23,988자/~72분, 동물보은 새 레인"
+            },
+            {
+              "ts": "2026-06-19 18:30",
+              "type": "scheduled",
+              "note": "오늘 밤 예약 발행"
+            }
+          ]
+        },
+        {
+          "id": "yd-20260621-mute-wife",
+          "category": "cross_category",
+          "title": "가시밭에 버려진 벙어리 며느리, 그날부터 말문이 트이더니 시댁이 무너지기 시작했지요 | [밤의 사료]",
+          "type": "신규",
+          "rating": 5,
+          "tags": [
+            "🔥 카피캣 추격",
+            "[밤의 사료]",
+            "자진침묵 reveal·전략물",
+            "승리결(숨은정체)·원조 286K"
+          ],
+          "merge_angle": "파랑새야담 야담최대폭발(벙어리 아내, 286K·18.1x) 카피캣 추격. 데이터 승리결(천대받던 여인 숨은 정체 reveal=8·10편) 정합. 12편(진짜 기억상실)과 정반대(자진 침묵). 학대물→전략물·인과응보 절제",
+          "sources_a": {
+            "channel": "파랑새야담",
+            "title": "가시밭에 버려진 벙어리 아내, 말문 트이고 시댁 망함",
+            "efficiency": 18.1,
+            "views": 286119,
+            "velocity": 31800,
+            "url": "https://www.youtube.com/watch?v=ZQKBWgbK5NY",
+            "categories": [
+              "야담"
+            ]
+          },
+          "sources_b": null,
+          "status": "published",
+          "checklist": {
+            "collect": true,
+            "analyze": true,
+            "strategy": true,
+            "draft": true,
+            "review_finalize": true,
+            "self_diagnosis": true,
+            "published": true
+          },
+          "project": "20260621_14_mute-wife",
+          "events": [
+            {
+              "ts": "2026-06-21 22:00",
+              "type": "produced",
+              "note": "풀파이프라인(Sonnet) 완성 — 26,554자/~79분, reviewer 통과(정책청정)"
+            },
+            {
+              "ts": "2026-06-22 18:30",
+              "type": "scheduled",
+              "note": "발행 예약 완료"
             }
           ]
         }

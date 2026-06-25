@@ -1,0 +1,281 @@
+{
+  "updated_at": "2026-06-25 14:26",
+  "trends": {
+    "시즌 트렌드:시그니엘": {
+      "category": "시즌 트렌드",
+      "keyword": "시그니엘",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 1,
+          "avg_eff": 62.8,
+          "max_eff": 62.79924050632911,
+          "channel_count": 1,
+          "channels": [
+            "지식왕천재"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 1,
+      "peak_efficiency": 62.8
+    },
+    "인물 트렌드:시진핑": {
+      "category": "인물 트렌드",
+      "keyword": "시진핑",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 1,
+          "avg_eff": 49.09,
+          "max_eff": 49.09,
+          "channel_count": 1,
+          "channels": [
+            "오늘의통찰"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 1,
+      "peak_efficiency": 49.09
+    },
+    "뉴스 트렌드:AI": {
+      "category": "뉴스 트렌드",
+      "keyword": "AI",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 2,
+          "avg_eff": 19.25,
+          "max_eff": 36.94,
+          "channel_count": 2,
+          "channels": [
+            "생각의 경제학",
+            "엔터테인먼트 다름"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 2,
+      "peak_efficiency": 19.25
+    },
+    "뉴스 트렌드:엔비디아": {
+      "category": "뉴스 트렌드",
+      "keyword": "엔비디아",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 2,
+          "avg_eff": 4.25,
+          "max_eff": 6.93,
+          "channel_count": 2,
+          "channels": [
+            "경제강국",
+            "생각의 경제학"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 2,
+      "peak_efficiency": 4.25
+    },
+    "뉴스 트렌드:반도체": {
+      "category": "뉴스 트렌드",
+      "keyword": "반도체",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 5,
+          "avg_eff": 1.74,
+          "max_eff": 3.92,
+          "channel_count": 4,
+          "channels": [
+            "미래에서 온 슈퍼개미",
+            "부자노트",
+            "시황맨TV",
+            "주식명사수 주명"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 5,
+      "peak_efficiency": 1.74
+    },
+    "뉴스 트렌드:환율": {
+      "category": "뉴스 트렌드",
+      "keyword": "환율",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 1,
+          "avg_eff": 2.02,
+          "max_eff": 2.02,
+          "channel_count": 1,
+          "channels": [
+            "주식명사수 주명"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 1,
+      "peak_efficiency": 2.02
+    },
+    "뉴스 트렌드:금리": {
+      "category": "뉴스 트렌드",
+      "keyword": "금리",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 2,
+          "avg_eff": 0.24,
+          "max_eff": 0.41,
+          "channel_count": 2,
+          "channels": [
+            "부자습관은 래빗해빛",
+            "시황맨TV"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 2,
+      "peak_efficiency": 0.24
+    },
+    "뉴스 트렌드:관세": {
+      "category": "뉴스 트렌드",
+      "keyword": "관세",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 1,
+          "avg_eff": 0.18,
+          "max_eff": 0.18,
+          "channel_count": 1,
+          "channels": [
+            "차플레이 Chaplay"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 1,
+      "peak_efficiency": 0.18
+    },
+    "뉴스 트렌드:연준": {
+      "category": "뉴스 트렌드",
+      "keyword": "연준",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 1,
+          "avg_eff": 0.0,
+          "max_eff": 0,
+          "channel_count": 1,
+          "channels": [
+            "HYBE LABELS"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 1,
+      "peak_efficiency": 0.0
+    },
+    "이슈 트렌드:전기차": {
+      "category": "이슈 트렌드",
+      "keyword": "전기차",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "snapshots": [
+        {
+          "date": "2026-06-25",
+          "video_count": 1,
+          "avg_eff": 0.74,
+          "max_eff": 0.74,
+          "channel_count": 1,
+          "channels": [
+            "테크피디아"
+          ]
+        }
+      ],
+      "stage": "🟢 등장 (골든타임)",
+      "days_active": 0,
+      "days_since_peak": 0,
+      "days_since_last_video": 0,
+      "momentum": "+0.0%",
+      "momentum_pct": 0.0,
+      "peak_date": "2026-06-25",
+      "peak_video_count": 1,
+      "peak_efficiency": 0.74
+    }
+  }
+}

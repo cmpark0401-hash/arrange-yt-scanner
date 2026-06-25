@@ -1,0 +1,818 @@
+{
+  "keyword": "참교육",
+  "slug": "참교육",
+  "created_at": "2026-06-25 13:23",
+  "suggestions": [
+    {
+      "attractive_dim": "content_keyword",
+      "attractive_dim_kor": "콘텐츠키워드",
+      "topic_base": "참교육 91개국 1위 한국, 일본은 따라잡지 못한 진짜 이유",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육 91개국 1위 한국, 일본은 따라잡지 못한 진짜 이유",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육 91개국 1위 한국, 일본은 따라잡지 못한 진짜 이유",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육 91개국 1위 한국, 일본은 따라잡지 못한 진짜 이유",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육 91개국 1위 한국, 일본은 따라잡지 못한 진짜 이유",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 11,
+      "priority_score": 0.648,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 40,
+        "tier": "✅ 평타+",
+        "cf_count": 2,
+        "dim_count": 5,
+        "has_trend": false,
+        "detected_dims": [
+          "space",
+          "cause",
+          "scale",
+          "number",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "content_keyword",
+      "attractive_dim_kor": "콘텐츠키워드",
+      "topic_base": "왜 일본은 참교육에서 한국에 진 걸까 — 30년 격차의 진실",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "왜 일본은 참교육에서 한국에 진 걸까 — 30년 격차의 진실",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "왜 일본은 참교육에서 한국에 진 걸까 — 30년 격차의 진실",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 왜 일본은 참교육에서 한국에 진 걸까 — 30년 격차의 진실",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "왜 일본은 참교육에서 한국에 진 걸까 — 30년 격차의 진실",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 11,
+      "priority_score": 0.648,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 42,
+        "tier": "✅ 평타+",
+        "cf_count": 1,
+        "dim_count": 3,
+        "has_trend": false,
+        "detected_dims": [
+          "time",
+          "space",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "content_keyword",
+      "attractive_dim_kor": "콘텐츠키워드",
+      "topic_base": "참교육 한국 vs 일본 60년 역전 — 콘텐츠 자존심도 무너졌다",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육 한국 vs 일본 60년 역전 — 콘텐츠 자존심도 무너졌다",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육 한국 vs 일본 60년 역전 — 콘텐츠 자존심도 무너졌다",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육 한국 vs 일본 60년 역전 — 콘텐츠 자존심도 무너졌다",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육 한국 vs 일본 60년 역전 — 콘텐츠 자존심도 무너졌다",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 11,
+      "priority_score": 0.648,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 48,
+        "tier": "🔥 폭발",
+        "cf_count": 2,
+        "dim_count": 3,
+        "has_trend": false,
+        "detected_dims": [
+          "time",
+          "space",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\""
+      ]
+    },
+    {
+      "attractive_dim": "scale",
+      "attractive_dim_kor": "층위",
+      "topic_base": "참교육 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.6,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 36,
+        "tier": "✅ 평타+",
+        "cf_count": 0,
+        "dim_count": 3,
+        "has_trend": false,
+        "detected_dims": [
+          "space",
+          "scale",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}",
+        "❌ 구체 수치 없음 → 예: 60년"
+      ]
+    },
+    {
+      "attractive_dim": "scale",
+      "attractive_dim_kor": "층위",
+      "topic_base": "국가 단위 참교육 격차 — 한국 1위·일본 30위·중국 패닉",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "국가 단위 참교육 격차 — 한국 1위·일본 30위·중국 패닉",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "국가 단위 참교육 격차 — 한국 1위·일본 30위·중국 패닉",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 국가 단위 참교육 격차 — 한국 1위·일본 30위·중국 패닉",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "국가 단위 참교육 격차 — 한국 1위·일본 30위·중국 패닉",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.6,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 42,
+        "tier": "✅ 평타+",
+        "cf_count": 1,
+        "dim_count": 4,
+        "has_trend": false,
+        "detected_dims": [
+          "space",
+          "scale",
+          "number",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "scale",
+      "attractive_dim_kor": "층위",
+      "topic_base": "거시 vs 미시 참교육, 5070도 알아야 할 진짜 위험",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "거시 vs 미시 참교육, 5070도 알아야 할 진짜 위험",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "거시 vs 미시 참교육, 5070도 알아야 할 진짜 위험",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 거시 vs 미시 참교육, 5070도 알아야 할 진짜 위험",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "거시 vs 미시 참교육, 5070도 알아야 할 진짜 위험",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.6,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 42,
+        "tier": "✅ 평타+",
+        "cf_count": 1,
+        "dim_count": 4,
+        "has_trend": false,
+        "detected_dims": [
+          "space",
+          "stake",
+          "scale",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 구체 수치 없음 → 예: 60년"
+      ]
+    },
+    {
+      "attractive_dim": "number",
+      "attractive_dim_kor": "환산",
+      "topic_base": "참교육 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.6,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 48,
+        "tier": "🔥 폭발",
+        "cf_count": 2,
+        "dim_count": 4,
+        "has_trend": false,
+        "detected_dims": [
+          "space",
+          "scale",
+          "number",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "number",
+      "attractive_dim_kor": "환산",
+      "topic_base": "참교육 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.6,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 48,
+        "tier": "🔥 폭발",
+        "cf_count": 2,
+        "dim_count": 3,
+        "has_trend": false,
+        "detected_dims": [
+          "time",
+          "space",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\""
+      ]
+    },
+    {
+      "attractive_dim": "number",
+      "attractive_dim_kor": "환산",
+      "topic_base": "참교육 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.6,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 40,
+        "tier": "✅ 평타+",
+        "cf_count": 2,
+        "dim_count": 5,
+        "has_trend": false,
+        "detected_dims": [
+          "time",
+          "space",
+          "scale",
+          "number",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\""
+      ]
+    },
+    {
+      "attractive_dim": "stake",
+      "attractive_dim_kor": "이해관계",
+      "topic_base": "참교육로 인생 바뀐 5070, 자녀에게 절대 안 알려준 진짜 이유",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육로 인생 바뀐 5070, 자녀에게 절대 안 알려준 진짜 이유",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육로 인생 바뀐 5070, 자녀에게 절대 안 알려준 진짜 이유",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육로 인생 바뀐 5070, 자녀에게 절대 안 알려준 진짜 이유",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육로 인생 바뀐 5070, 자녀에게 절대 안 알려준 진짜 이유",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.1,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 42,
+        "tier": "✅ 평타+",
+        "cf_count": 1,
+        "dim_count": 3,
+        "has_trend": false,
+        "detected_dims": [
+          "stake",
+          "cause",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}",
+        "❌ 구체 수치 없음 → 예: 60년"
+      ]
+    },
+    {
+      "attractive_dim": "stake",
+      "attractive_dim_kor": "이해관계",
+      "topic_base": "참교육 알면 노후 30년이 바뀐다 — 부자들만 알던 비밀",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육 알면 노후 30년이 바뀐다 — 부자들만 알던 비밀",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육 알면 노후 30년이 바뀐다 — 부자들만 알던 비밀",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육 알면 노후 30년이 바뀐다 — 부자들만 알던 비밀",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육 알면 노후 30년이 바뀐다 — 부자들만 알던 비밀",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.1,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 48,
+        "tier": "🔥 폭발",
+        "cf_count": 2,
+        "dim_count": 3,
+        "has_trend": false,
+        "detected_dims": [
+          "time",
+          "stake",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "stake",
+      "attractive_dim_kor": "이해관계",
+      "topic_base": "참교육 모르면 손해 보는 5070, 자식 자산도 위험한 이유",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "참교육 모르면 손해 보는 5070, 자식 자산도 위험한 이유",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "참교육 모르면 손해 보는 5070, 자식 자산도 위험한 이유",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 참교육 모르면 손해 보는 5070, 자식 자산도 위험한 이유",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "참교육 모르면 손해 보는 5070, 자식 자산도 위험한 이유",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.1,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 36,
+        "tier": "✅ 평타+",
+        "cf_count": 0,
+        "dim_count": 2,
+        "has_trend": false,
+        "detected_dims": [
+          "stake",
+          "content_keyword"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}",
+        "❌ 구체 수치 없음 → 예: 60년"
+      ]
+    }
+  ],
+  "stats": {
+    "total": 15,
+    "with_trend": 11,
+    "explosive_pattern": 0
+  }
+}

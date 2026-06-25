@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#a855f7">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>🌳 MECE 11차원 · 빈 슬롯 매트릭스 · TubeHacker</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+:root {
+  --bg:#0a0a12; --surface:#13131c; --surface2:#1a1a26;
+  --border:#26263a; --divider:#1f1f30; --hover:#1e1e2e;
+  --text:#ededf2; --text2:#9696a6; --text3:#6c6c80;
+  --primary:#a855f7; --primary-hi:#c084fc;
+  --primary-bg:rgba(168,85,247,.12); --primary-bd:rgba(168,85,247,.35);
+  --hot:#84cc16; --hot-bg:rgba(132,204,22,.10); --hot-bd:rgba(132,204,22,.35);
+  --warn:#ff7a45; --warn-bg:rgba(255,122,69,.10); --warn-bd:rgba(255,122,69,.35);
+  --danger:#ef4444; --danger-bg:rgba(239,68,68,.10); --danger-bd:rgba(239,68,68,.35);
+  --info:#60a5fa; --info-bg:rgba(96,165,250,.10);
+  --blue:#3b82f6; --blue-bg:rgba(59,130,246,.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: 'Inter', 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 14px; line-height: 1.55;
+}
+.wrap { max-width: 1280px; margin: 0 auto; padding: 32px 24px; }
+.header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+.header h1 { font-size: 26px; font-weight: 800; margin: 0; }
+.header .sub { color: var(--text3); font-size: 13px; }
+.nav { margin-bottom: 24px; }
+.nav a { color: var(--text3); text-decoration: none; margin-right: 14px; font-size: 13px; }
+.nav a:hover { color: var(--primary-hi); }
+.section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.section h2 { margin: 0 0 14px; font-size: 17px; font-weight: 700; }
+.section h2 .count { color: var(--primary-hi); font-weight: 800; margin-left: 6px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width:900px) { .grid-2 { grid-template-columns: 1fr; } }
+
+/* 통계 카드 */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.stat { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+.stat .label { color: var(--text3); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat .value { font-size: 26px; font-weight: 800; color: var(--primary-hi); margin-top: 4px; }
+.stat .meta { color: var(--text3); font-size: 11px; margin-top: 2px; }
+.stat.hot .value { color: var(--hot); }
+.stat.warn .value { color: var(--warn); }
+
+/* 빈 슬롯 카드 */
+.slot-grid { display: grid; gap: 12px; }
+.slot {
+  background: linear-gradient(135deg, rgba(168,85,247,0.06) 0%, rgba(59,130,246,0.04) 100%);
+  border: 1px solid var(--primary-bd); border-radius: 10px; padding: 14px;
+}
+.slot .header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.slot .badge {
+  background: var(--primary-bg); border: 1px solid var(--primary-bd);
+  color: var(--primary-hi); padding: 3px 9px; border-radius: 14px; font-size: 11px; font-weight: 700;
+}
+.slot .badge.dim { background: var(--blue-bg); border-color: var(--blue); color: var(--blue); }
+.slot .badge.fit { background: var(--hot-bg); border-color: var(--hot-bd); color: var(--hot); }
+.slot .score { margin-left: auto; color: var(--warn); font-weight: 800; font-family: 'Inter'; font-size: 16px; }
+.slot .body { color: var(--text2); font-size: 13px; margin-bottom: 8px; }
+.slot .videos { background: var(--surface2); border-radius: 8px; padding: 10px; margin-top: 8px; }
+.slot .video-row { display: flex; gap: 8px; font-size: 12px; padding: 4px 0; align-items: center; }
+.slot .video-row a { color: var(--text); text-decoration: none; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.slot .video-row a:hover { color: var(--primary-hi); }
+.slot .video-row .meta { color: var(--text3); flex-shrink: 0; font-family: 'Inter'; font-size: 11px; }
+
+/* 히트맵 */
+#heatmap-container { padding: 12px; }
+#heatmap { width: 100%; height: auto; }
+.heatmap-cell { stroke: var(--bg); stroke-width: 1; cursor: pointer; transition: opacity 0.15s; }
+.heatmap-cell:hover { opacity: 0.7; }
+.heatmap-label { fill: var(--text2); font-size: 11px; font-family: 'Inter', sans-serif; }
+.heatmap-value { fill: var(--text); font-size: 11px; font-weight: 600; text-anchor: middle; pointer-events: none; }
+
+/* Markmap 트리 */
+#markmap-container {
+  background: var(--surface2);
+  border-radius: 10px;
+  padding: 12px;
+  min-height: 480px;
+}
+#markmap-svg { width: 100%; height: 480px; }
+.markmap-node text {
+  fill: var(--text);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+}
+.markmap-node circle { fill: var(--surface); stroke: var(--primary); stroke-width: 1.5; }
+.markmap-node.depth-0 circle { fill: var(--primary); }
+.markmap-node.depth-1 circle { fill: var(--warn); stroke: var(--warn); }
+.markmap-node.depth-2 circle { fill: var(--hot); stroke: var(--hot); }
+.markmap-node.depth-3 circle { fill: var(--info); stroke: var(--info); }
+.markmap-link { fill: none; stroke: var(--border); stroke-width: 1.5; }
+
+/* Tooltip */
+.tooltip {
+  position: absolute; background: var(--surface2); border: 1px solid var(--primary-bd);
+  border-radius: 6px; padding: 6px 10px; color: var(--text); font-size: 12px;
+  pointer-events: none; opacity: 0; transition: opacity 0.15s; z-index: 100;
+  max-width: 280px;
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>🌳 MECE 11차원</h1>
+      <span class="sub" id="updated">로딩...</span>
+    </div>
+
+    <div class="nav">
+      <a href="index.html">← 메인</a>
+      <a href="alerts.html">🚨 폭발 알림</a>
+      <a href="archive.html">📊 아카이브</a>
+      <a href="algo.html">🧬 알고리즘 패턴</a>
+    </div>
+
+    <!-- 통계 카드 -->
+    <div class="stats" id="stats"></div>
+
+    <!-- 빈 슬롯 카드 -->
+    <div class="section">
+      <h2>🟦 우선 추격 빈 슬롯 <span class="count" id="slot-count">0</span></h2>
+      <div class="slot-grid" id="blue-slots"></div>
+    </div>
+
+    <!-- 2단 레이아웃: Markmap 트리 + D3 히트맵 -->
+    <div class="grid-2">
+      <div class="section">
+        <h2>🗺️ MECE 트리 — 트렌드 × 차원</h2>
+        <div id="markmap-container">
+          <svg id="markmap-svg"></svg>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🔥 빈 슬롯 히트맵 — 트렌드 × 차원</h2>
+        <div id="heatmap-container">
+          <svg id="heatmap"></svg>
+        </div>
+        <p style="color:var(--text3);font-size:11px;margin-top:8px;">
+          진한 보라 = 시장에 영상 多, 흰칸 = 미개척 슬롯. 클릭 시 영상 풀로 점프.
+        </p>
+      </div>
+    </div>
+
+    <!-- 채널별 추천 -->
+    <div class="section">
+      <h2>🎯 채널별 추천 빈 슬롯</h2>
+      <div id="channel-recommendations"></div>
+    </div>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+const DIM_KOR = {
+  time: '시간', space: '공간', stake: '이해관계', cause: '인과',
+  scale: '층위', person: '인물', number: '환산', mech: '메커니즘',
+  content_keyword: '콘텐츠키워드', trend: '트렌드부착', click_force: '클릭강제',
+};
+
+async function load() {
+  const [unified, slots] = await Promise.all([
+    fetch('data/mece_unified.json').then(r => r.json()),
+    fetch('data/mece_blue_slots.json').then(r => r.json()),
+  ]);
+  document.getElementById('updated').textContent = `갱신 ${slots.updated_at}`;
+  renderStats(unified, slots);
+  renderBlueSlots(slots);
+  renderHeatmap(slots);
+  renderMarkmap(slots);
+  renderChannelRecs(slots);
+}
+
+function renderStats(u, s) {
+  const items = [
+    { label: '추적 영상', value: u.stats.total, meta: `${u.stats.with_trend}편 트렌드 부착` },
+    { label: '폭발 패턴', value: u.stats.explosive_pattern, meta: '11차원 충족', cls: 'hot' },
+    { label: '빈 슬롯', value: s.stats.total_blue_slots, meta: `${s.stats.top_priority_slots}개 고우선`, cls: 'warn' },
+    { label: '트렌드', value: s.stats.unique_trends, meta: '추적 중' },
+    { label: '우리 채널', value: s.stats.our_total_videos, meta: '시그널 매칭' },
+    { label: '시장 영상', value: s.stats.market_total_videos, meta: '폭발 외부 채널' },
+  ];
+  document.getElementById('stats').innerHTML = items.map(i => `
+    <div class="stat ${i.cls || ''}">
+      <div class="label">${i.label}</div>
+      <div class="value">${i.value}</div>
+      <div class="meta">${i.meta}</div>
+    </div>
+  `).join('');
+}
+
+function renderBlueSlots(s) {
+  const slots = s.blue_slots.slice(0, 12);
+  document.getElementById('slot-count').textContent = slots.length;
+  document.getElementById('blue-slots').innerHTML = slots.map(slot => `
+    <div class="slot">
+      <div class="header-row">
+        <span class="badge">${slot.trend_category}</span>
+        <span class="badge">🌐 ${slot.trend_keyword}</span>
+        <span class="badge dim">🎯 ${slot.attractive_dim_kor}</span>
+        <span class="badge fit">${slot.recommended_channel || '?'} 적합</span>
+        <span class="score">${(slot.priority_score * 100).toFixed(0)}점</span>
+      </div>
+      <div class="body">
+        시장 ${slot.market_count}편 · 평균 효율 ${slot.avg_efficiency}x · D+${slot.fresh_min_days}
+        — <strong style="color:var(--primary-hi);">${slot.verdict}</strong>
+      </div>
+      <div class="videos">
+        ${slot.top_market_videos.map(v => `
+          <div class="video-row">
+            <a href="${v.url}" target="_blank" title="${v.title}">${v.title}</a>
+            <span class="meta">${v.channel} · ${v.efficiency}x · ${(v.views/1000).toFixed(0)}K</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderHeatmap(s) {
+  const trends = Object.keys(s.market_matrix);
+  const dims = ['time','space','stake','cause','scale','person','number','mech','content_keyword','click_force'];
+  if (!trends.length) {
+    document.getElementById('heatmap').outerHTML = '<p style="color:var(--text3);font-size:12px;">아직 트렌드 데이터 없음.</p>';
+    return;
+  }
+
+  const margin = { top: 60, right: 10, bottom: 10, left: 100 };
+  const cellSize = 44;
+  const cellGap = 2;
+  const w = margin.left + dims.length * (cellSize + cellGap) + margin.right;
+  const h = margin.top + trends.length * (cellSize + cellGap) + margin.bottom;
+
+  const svg = d3.select('#heatmap').attr('viewBox', `0 0 ${w} ${h}`);
+  svg.selectAll('*').remove();
+
+  const allCounts = trends.flatMap(t => dims.map(d => s.market_matrix[t][d] || 0));
+  const maxCount = d3.max(allCounts) || 1;
+  const color = d3.scaleLinear().domain([0, maxCount]).range(['#13131c', '#a855f7']);
+
+  // 차원 라벨 (X)
+  svg.selectAll('.x-label').data(dims).enter().append('text')
+    .attr('x', (d, i) => margin.left + i * (cellSize + cellGap) + cellSize / 2)
+    .attr('y', margin.top - 10)
+    .attr('text-anchor', 'middle')
+    .attr('class', 'heatmap-label')
+    .text(d => DIM_KOR[d]);
+
+  // 트렌드 라벨 (Y)
+  svg.selectAll('.y-label').data(trends).enter().append('text')
+    .attr('x', margin.left - 8)
+    .attr('y', (d, i) => margin.top + i * (cellSize + cellGap) + cellSize / 2 + 4)
+    .attr('text-anchor', 'end')
+    .attr('class', 'heatmap-label')
+    .text(d => d);
+
+  // 셀
+  const tooltip = d3.select('#tooltip');
+  trends.forEach((t, ti) => {
+    dims.forEach((d, di) => {
+      const count = s.market_matrix[t][d] || 0;
+      const g = svg.append('g');
+      g.append('rect')
+        .attr('class', 'heatmap-cell')
+        .attr('x', margin.left + di * (cellSize + cellGap))
+        .attr('y', margin.top + ti * (cellSize + cellGap))
+        .attr('width', cellSize).attr('height', cellSize)
+        .attr('fill', count === 0 ? '#1a1a26' : color(count))
+        .attr('rx', 4)
+        .on('mouseenter', (e) => {
+          tooltip.style('opacity', 1).html(
+            `<strong>${t} × ${DIM_KOR[d]}</strong><br/>시장 ${count}편${count===0 ? ' (빈 슬롯!)' : ''}`
+          );
+        })
+        .on('mousemove', (e) => {
+          tooltip.style('left', (e.pageX + 12) + 'px').style('top', (e.pageY + 12) + 'px');
+        })
+        .on('mouseleave', () => tooltip.style('opacity', 0));
+      g.append('text')
+        .attr('class', 'heatmap-value')
+        .attr('x', margin.left + di * (cellSize + cellGap) + cellSize / 2)
+        .attr('y', margin.top + ti * (cellSize + cellGap) + cellSize / 2 + 4)
+        .attr('fill', count >= maxCount * 0.5 ? '#fff' : 'var(--text2)')
+        .text(count || '');
+    });
+  });
+}
+
+function renderMarkmap(s) {
+  // 트리: 1단=트렌드 카테고리 → 2단=트렌드 키워드 → 3단=빈 슬롯 차원
+  const trends = {};
+  s.blue_slots.forEach(slot => {
+    const cat = slot.trend_category;
+    const kw = slot.trend_keyword;
+    if (!trends[cat]) trends[cat] = {};
+    if (!trends[cat][kw]) trends[cat][kw] = [];
+    trends[cat][kw].push({ name: slot.attractive_dim_kor, score: slot.priority_score });
+  });
+
+  const root = { name: '🌳 MECE 빈 슬롯', children: [] };
+  Object.entries(trends).forEach(([cat, kws]) => {
+    const catNode = { name: cat, children: [] };
+    Object.entries(kws).forEach(([kw, dims]) => {
+      catNode.children.push({
+        name: `🌐 ${kw}`,
+        children: dims.map(d => ({ name: `🎯 ${d.name} (${(d.score*100).toFixed(0)})` }))
+      });
+    });
+    root.children.push(catNode);
+  });
+
+  if (root.children.length === 0) {
+    document.getElementById('markmap-container').innerHTML =
+      '<p style="color:var(--text3);font-size:12px;text-align:center;padding:40px;">빈 슬롯 데이터 없음.</p>';
+    return;
+  }
+
+  const width = 600;
+  const height = 460;
+  const svg = d3.select('#markmap-svg').attr('viewBox', `0 0 ${width} ${height}`);
+  svg.selectAll('*').remove();
+
+  const tree = d3.tree().size([height - 40, width - 200]);
+  const rootHier = d3.hierarchy(root);
+  tree(rootHier);
+
+  const g = svg.append('g').attr('transform', 'translate(80,20)');
+
+  // 링크
+  g.selectAll('.markmap-link').data(rootHier.links()).enter().append('path')
+    .attr('class', 'markmap-link')
+    .attr('d', d3.linkHorizontal().x(d => d.y).y(d => d.x));
+
+  // 노드
+  const node = g.selectAll('.markmap-node').data(rootHier.descendants()).enter().append('g')
+    .attr('class', d => `markmap-node depth-${d.depth}`)
+    .attr('transform', d => `translate(${d.y},${d.x})`);
+
+  node.append('circle').attr('r', d => 5 - d.depth * 0.5);
+  node.append('text')
+    .attr('dx', d => d.children ? -8 : 8)
+    .attr('text-anchor', d => d.children ? 'end' : 'start')
+    .attr('dy', 3)
+    .text(d => d.data.name);
+}
+
+function renderChannelRecs(s) {
+  const html = Object.entries(s.recommendations).filter(([_, recs]) => recs.length > 0).map(([ch, recs]) => `
+    <div style="margin-bottom:18px;">
+      <h3 style="font-size:14px;margin:0 0 8px;color:var(--primary-hi);">${ch}</h3>
+      <div class="slot-grid">
+        ${recs.map(slot => `
+          <div class="slot">
+            <div class="header-row">
+              <span class="badge">🌐 ${slot.trend_keyword}</span>
+              <span class="badge dim">🎯 ${slot.attractive_dim_kor}</span>
+              <span class="score">${(slot.priority_score * 100).toFixed(0)}점</span>
+            </div>
+            <div class="body">
+              시장 ${slot.market_count}편 · 평균 ${slot.avg_efficiency}x · D+${slot.fresh_min_days}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('channel-recommendations').innerHTML =
+    html || '<p style="color:var(--text3);font-size:12px;">아직 채널별 추천이 없음. 다음 사이클 후 갱신.</p>';
+}
+
+load();
+  </script>
+</body>
+</html>

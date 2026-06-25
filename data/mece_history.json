@@ -1,0 +1,53 @@
+{
+  "updated_at": "2026-06-25 14:26",
+  "explored_keywords": [
+    {
+      "slug": "참교육",
+      "keyword": "참교육",
+      "explored_at": "2026-06-25 13:23",
+      "suggestions_at": "2026-06-25 13:23",
+      "total_market_videos": 15,
+      "with_trend": 11,
+      "explosive_pattern": 0,
+      "blue_slots_count": 4,
+      "top_blue_slot": {
+        "dim": "콘텐츠키워드",
+        "priority": 64,
+        "recommended_channel": "💹 247경제"
+      },
+      "suggestions_count": 12,
+      "top_predicted_score": 48,
+      "lifecycle_stage": "",
+      "has_topic_data": true,
+      "has_suggestions_data": true,
+      "topic_url": "mece_topic.html?slug=참교육"
+    },
+    {
+      "slug": "텅스텐",
+      "keyword": "텅스텐",
+      "explored_at": "2026-06-25 12:47",
+      "suggestions_at": "2026-06-25 13:20",
+      "total_market_videos": 20,
+      "with_trend": 9,
+      "explosive_pattern": 2,
+      "blue_slots_count": 4,
+      "top_blue_slot": {
+        "dim": "시간",
+        "priority": 100,
+        "recommended_channel": "📈 지식록"
+      },
+      "suggestions_count": 12,
+      "top_predicted_score": 74,
+      "lifecycle_stage": "",
+      "has_topic_data": true,
+      "has_suggestions_data": true,
+      "topic_url": "mece_topic.html?slug=텅스텐"
+    }
+  ],
+  "stats": {
+    "total_keywords": 2,
+    "with_blue_slots": 2,
+    "in_golden_time": 0,
+    "in_peak": 0
+  }
+}

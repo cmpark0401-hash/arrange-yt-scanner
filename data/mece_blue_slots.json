@@ -1,0 +1,685 @@
+{
+  "updated_at": "2026-06-25 14:26",
+  "our_matrix": {
+    "📈 지식록": {
+      "time": 0,
+      "space": 0,
+      "stake": 0,
+      "cause": 0,
+      "scale": 0,
+      "person": 0,
+      "number": 0,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 0,
+      "click_force": 0
+    },
+    "🌙 잘듣네": {
+      "time": 0,
+      "space": 0,
+      "stake": 0,
+      "cause": 0,
+      "scale": 0,
+      "person": 0,
+      "number": 0,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 0,
+      "click_force": 0
+    },
+    "🔬 과만세": {
+      "time": 0,
+      "space": 0,
+      "stake": 0,
+      "cause": 0,
+      "scale": 0,
+      "person": 0,
+      "number": 0,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 0,
+      "click_force": 0
+    },
+    "📜 깊은밤야담": {
+      "time": 0,
+      "space": 0,
+      "stake": 0,
+      "cause": 0,
+      "scale": 0,
+      "person": 0,
+      "number": 0,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 0,
+      "click_force": 0
+    },
+    "💹 247경제": {
+      "time": 0,
+      "space": 0,
+      "stake": 0,
+      "cause": 0,
+      "scale": 0,
+      "person": 0,
+      "number": 0,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 0,
+      "click_force": 0
+    },
+    "🇰🇷 레드맨": {
+      "time": 0,
+      "space": 0,
+      "stake": 0,
+      "cause": 0,
+      "scale": 0,
+      "person": 0,
+      "number": 0,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 0,
+      "click_force": 0
+    }
+  },
+  "market_matrix": {
+    "시즌 트렌드": {
+      "time": 0,
+      "space": 0,
+      "stake": 0,
+      "cause": 1,
+      "scale": 0,
+      "person": 0,
+      "number": 1,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 1,
+      "click_force": 1
+    },
+    "뉴스 트렌드": {
+      "time": 3,
+      "space": 2,
+      "stake": 0,
+      "cause": 0,
+      "scale": 0,
+      "person": 2,
+      "number": 1,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 14,
+      "click_force": 0
+    },
+    "인물 트렌드": {
+      "time": 0,
+      "space": 1,
+      "stake": 0,
+      "cause": 1,
+      "scale": 0,
+      "person": 1,
+      "number": 0,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 1,
+      "click_force": 0
+    },
+    "이슈 트렌드": {
+      "time": 1,
+      "space": 1,
+      "stake": 0,
+      "cause": 0,
+      "scale": 0,
+      "person": 1,
+      "number": 0,
+      "mech": 0,
+      "content_keyword": 0,
+      "trend": 1,
+      "click_force": 0
+    }
+  },
+  "blue_slots": [
+    {
+      "trend_category": "인물 트렌드",
+      "trend_keyword": "시진핑",
+      "attractive_dim": "space",
+      "attractive_dim_kor": "공간",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 49.1,
+      "fresh_min_days": 8,
+      "top_market_videos": [
+        {
+          "vid": "2BYDXHUfDn8",
+          "title": "시진핑이 대만을 못 치는 진짜 이유… 총성 없는 전쟁은 이미 필리핀에서 시작됐다",
+          "channel": "오늘의통찰",
+          "views": 8493,
+          "efficiency": 49.09,
+          "url": "https://youtube.com/watch?v=2BYDXHUfDn8"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.857
+    },
+    {
+      "trend_category": "인물 트렌드",
+      "trend_keyword": "시진핑",
+      "attractive_dim": "cause",
+      "attractive_dim_kor": "인과",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 49.1,
+      "fresh_min_days": 8,
+      "top_market_videos": [
+        {
+          "vid": "2BYDXHUfDn8",
+          "title": "시진핑이 대만을 못 치는 진짜 이유… 총성 없는 전쟁은 이미 필리핀에서 시작됐다",
+          "channel": "오늘의통찰",
+          "views": 8493,
+          "efficiency": 49.09,
+          "url": "https://youtube.com/watch?v=2BYDXHUfDn8"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.857
+    },
+    {
+      "trend_category": "인물 트렌드",
+      "trend_keyword": "시진핑",
+      "attractive_dim": "person",
+      "attractive_dim_kor": "인물",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 49.1,
+      "fresh_min_days": 8,
+      "top_market_videos": [
+        {
+          "vid": "2BYDXHUfDn8",
+          "title": "시진핑이 대만을 못 치는 진짜 이유… 총성 없는 전쟁은 이미 필리핀에서 시작됐다",
+          "channel": "오늘의통찰",
+          "views": 8493,
+          "efficiency": 49.09,
+          "url": "https://youtube.com/watch?v=2BYDXHUfDn8"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.857
+    },
+    {
+      "trend_category": "시즌 트렌드",
+      "trend_keyword": "시그니엘",
+      "attractive_dim": "cause",
+      "attractive_dim_kor": "인과",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 62.8,
+      "fresh_min_days": 13,
+      "top_market_videos": [
+        {
+          "vid": "FqqgnjVzA_4",
+          "title": "1년째 공실\" 20억 급락에 깡통으로 전락한 시그니엘의 몰락, 그 진짜 이유",
+          "channel": "지식왕천재",
+          "views": 992228,
+          "efficiency": 62.79924050632911,
+          "url": "https://youtube.com/watch?v=FqqgnjVzA_4"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.768
+    },
+    {
+      "trend_category": "시즌 트렌드",
+      "trend_keyword": "시그니엘",
+      "attractive_dim": "number",
+      "attractive_dim_kor": "환산",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 62.8,
+      "fresh_min_days": 13,
+      "top_market_videos": [
+        {
+          "vid": "FqqgnjVzA_4",
+          "title": "1년째 공실\" 20억 급락에 깡통으로 전락한 시그니엘의 몰락, 그 진짜 이유",
+          "channel": "지식왕천재",
+          "views": 992228,
+          "efficiency": 62.79924050632911,
+          "url": "https://youtube.com/watch?v=FqqgnjVzA_4"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.768
+    },
+    {
+      "trend_category": "시즌 트렌드",
+      "trend_keyword": "시그니엘",
+      "attractive_dim": "click_force",
+      "attractive_dim_kor": "클릭강제",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 62.8,
+      "fresh_min_days": 13,
+      "top_market_videos": [
+        {
+          "vid": "FqqgnjVzA_4",
+          "title": "1년째 공실\" 20억 급락에 깡통으로 전락한 시그니엘의 몰락, 그 진짜 이유",
+          "channel": "지식왕천재",
+          "views": 992228,
+          "efficiency": 62.79924050632911,
+          "url": "https://youtube.com/watch?v=FqqgnjVzA_4"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.768
+    },
+    {
+      "trend_category": "뉴스 트렌드",
+      "trend_keyword": "AI",
+      "attractive_dim": "space",
+      "attractive_dim_kor": "공간",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 36.9,
+      "fresh_min_days": 13,
+      "top_market_videos": [
+        {
+          "vid": "rbUBHJrltAg",
+          "title": "[2026 월드컵 주제가] 이재 (EJAE) - DNA (More Than A Game) 한국어 직역 AI 커버",
+          "channel": "엔터테인먼트 다름",
+          "views": 347997,
+          "efficiency": 36.94,
+          "url": "https://youtube.com/watch?v=rbUBHJrltAg"
+        }
+      ],
+      "recommended_channel": "🔬 과만세",
+      "priority_score": 0.768
+    },
+    {
+      "trend_category": "뉴스 트렌드",
+      "trend_keyword": "반도체",
+      "attractive_dim": "time",
+      "attractive_dim_kor": "시간",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 0.3,
+      "fresh_min_days": 1,
+      "top_market_videos": [
+        {
+          "vid": "uCf-m_GD-Bk",
+          "title": "[삼성전자 주가 전망] \"3분전 충격속보\" 마이크론 실적유출 소문이 진짜였다 내일 핵폭탄급 온다 위클만기전 전략노출! 美골든타임 美반도체 어닝서",
+          "channel": "미래에서 온 슈퍼개미",
+          "views": 28429,
+          "efficiency": 0.34,
+          "url": "https://youtube.com/watch?v=uCf-m_GD-Bk"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.636
+    },
+    {
+      "trend_category": "뉴스 트렌드",
+      "trend_keyword": "금리",
+      "attractive_dim": "time",
+      "attractive_dim_kor": "시간",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 0.1,
+      "fresh_min_days": 1,
+      "top_market_videos": [
+        {
+          "vid": "eoTylh92mv4",
+          "title": "청년미래적금 가입조건·은행별 금리·갈아타기 총정리 (댓글 BEST 중복 Q&A 모아왔어요! 💡)",
+          "channel": "부자습관은 래빗해빛",
+          "views": 6790,
+          "efficiency": 0.07,
+          "url": "https://youtube.com/watch?v=eoTylh92mv4"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.633
+    },
+    {
+      "trend_category": "뉴스 트렌드",
+      "trend_keyword": "AI",
+      "attractive_dim": "person",
+      "attractive_dim_kor": "인물",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 1.6,
+      "fresh_min_days": 2,
+      "top_market_videos": [
+        {
+          "vid": "t_KD3j_aKC8",
+          "title": "LG 구광모 회장이 엔비디아로 달려간 이유? AI 판이 뒤집혔다",
+          "channel": "생각의 경제학",
+          "views": 41748,
+          "efficiency": 1.56,
+          "url": "https://youtube.com/watch?v=t_KD3j_aKC8"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.632
+    },
+    {
+      "trend_category": "뉴스 트렌드",
+      "trend_keyword": "엔비디아",
+      "attractive_dim": "person",
+      "attractive_dim_kor": "인물",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 1.6,
+      "fresh_min_days": 2,
+      "top_market_videos": [
+        {
+          "vid": "t_KD3j_aKC8",
+          "title": "LG 구광모 회장이 엔비디아로 달려간 이유? AI 판이 뒤집혔다",
+          "channel": "생각의 경제학",
+          "views": 41748,
+          "efficiency": 1.56,
+          "url": "https://youtube.com/watch?v=t_KD3j_aKC8"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.632
+    },
+    {
+      "trend_category": "이슈 트렌드",
+      "trend_keyword": "전기차",
+      "attractive_dim": "time",
+      "attractive_dim_kor": "시간",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 0.7,
+      "fresh_min_days": 2,
+      "top_market_videos": [
+        {
+          "vid": "ebRYPQrx6Lo",
+          "title": "중국 전기차 · 배터리 독점 끝났다! K 배터리에 온 역대급 기회_COR에너지인사이트 권효재 대표 [테크피디아]",
+          "channel": "테크피디아",
+          "views": 19434,
+          "efficiency": 0.74,
+          "url": "https://youtube.com/watch?v=ebRYPQrx6Lo"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.623
+    },
+    {
+      "trend_category": "이슈 트렌드",
+      "trend_keyword": "전기차",
+      "attractive_dim": "space",
+      "attractive_dim_kor": "공간",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 0.7,
+      "fresh_min_days": 2,
+      "top_market_videos": [
+        {
+          "vid": "ebRYPQrx6Lo",
+          "title": "중국 전기차 · 배터리 독점 끝났다! K 배터리에 온 역대급 기회_COR에너지인사이트 권효재 대표 [테크피디아]",
+          "channel": "테크피디아",
+          "views": 19434,
+          "efficiency": 0.74,
+          "url": "https://youtube.com/watch?v=ebRYPQrx6Lo"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.623
+    },
+    {
+      "trend_category": "이슈 트렌드",
+      "trend_keyword": "전기차",
+      "attractive_dim": "person",
+      "attractive_dim_kor": "인물",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 0.7,
+      "fresh_min_days": 2,
+      "top_market_videos": [
+        {
+          "vid": "ebRYPQrx6Lo",
+          "title": "중국 전기차 · 배터리 독점 끝났다! K 배터리에 온 역대급 기회_COR에너지인사이트 권효재 대표 [테크피디아]",
+          "channel": "테크피디아",
+          "views": 19434,
+          "efficiency": 0.74,
+          "url": "https://youtube.com/watch?v=ebRYPQrx6Lo"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.623
+    },
+    {
+      "trend_category": "뉴스 트렌드",
+      "trend_keyword": "관세",
+      "attractive_dim": "time",
+      "attractive_dim_kor": "시간",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 0.2,
+      "fresh_min_days": 2,
+      "top_market_videos": [
+        {
+          "vid": "SXWU0DsSTdQ",
+          "title": "미국 관세 100% 독박, 뒤늦게 드러난 한국GM 근황… 미래차 개발 대신 중국차 수입한다고?",
+          "channel": "차플레이 Chaplay",
+          "views": 12050,
+          "efficiency": 0.18,
+          "url": "https://youtube.com/watch?v=SXWU0DsSTdQ"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.616
+    },
+    {
+      "trend_category": "뉴스 트렌드",
+      "trend_keyword": "관세",
+      "attractive_dim": "space",
+      "attractive_dim_kor": "공간",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 0.2,
+      "fresh_min_days": 2,
+      "top_market_videos": [
+        {
+          "vid": "SXWU0DsSTdQ",
+          "title": "미국 관세 100% 독박, 뒤늦게 드러난 한국GM 근황… 미래차 개발 대신 중국차 수입한다고?",
+          "channel": "차플레이 Chaplay",
+          "views": 12050,
+          "efficiency": 0.18,
+          "url": "https://youtube.com/watch?v=SXWU0DsSTdQ"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.616
+    },
+    {
+      "trend_category": "뉴스 트렌드",
+      "trend_keyword": "관세",
+      "attractive_dim": "number",
+      "attractive_dim_kor": "환산",
+      "market_count": 1,
+      "our_count": 0,
+      "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+      "avg_efficiency": 0.2,
+      "fresh_min_days": 2,
+      "top_market_videos": [
+        {
+          "vid": "SXWU0DsSTdQ",
+          "title": "미국 관세 100% 독박, 뒤늦게 드러난 한국GM 근황… 미래차 개발 대신 중국차 수입한다고?",
+          "channel": "차플레이 Chaplay",
+          "views": 12050,
+          "efficiency": 0.18,
+          "url": "https://youtube.com/watch?v=SXWU0DsSTdQ"
+        }
+      ],
+      "recommended_channel": "💹 247경제",
+      "priority_score": 0.616
+    }
+  ],
+  "recommendations": {
+    "📈 지식록": [],
+    "🌙 잘듣네": [],
+    "🔬 과만세": [
+      {
+        "trend_category": "뉴스 트렌드",
+        "trend_keyword": "AI",
+        "attractive_dim": "space",
+        "attractive_dim_kor": "공간",
+        "market_count": 1,
+        "our_count": 0,
+        "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+        "avg_efficiency": 36.9,
+        "fresh_min_days": 13,
+        "top_market_videos": [
+          {
+            "vid": "rbUBHJrltAg",
+            "title": "[2026 월드컵 주제가] 이재 (EJAE) - DNA (More Than A Game) 한국어 직역 AI 커버",
+            "channel": "엔터테인먼트 다름",
+            "views": 347997,
+            "efficiency": 36.94,
+            "url": "https://youtube.com/watch?v=rbUBHJrltAg"
+          }
+        ],
+        "recommended_channel": "🔬 과만세",
+        "priority_score": 0.768
+      }
+    ],
+    "📜 깊은밤야담": [],
+    "💹 247경제": [
+      {
+        "trend_category": "인물 트렌드",
+        "trend_keyword": "시진핑",
+        "attractive_dim": "space",
+        "attractive_dim_kor": "공간",
+        "market_count": 1,
+        "our_count": 0,
+        "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+        "avg_efficiency": 49.1,
+        "fresh_min_days": 8,
+        "top_market_videos": [
+          {
+            "vid": "2BYDXHUfDn8",
+            "title": "시진핑이 대만을 못 치는 진짜 이유… 총성 없는 전쟁은 이미 필리핀에서 시작됐다",
+            "channel": "오늘의통찰",
+            "views": 8493,
+            "efficiency": 49.09,
+            "url": "https://youtube.com/watch?v=2BYDXHUfDn8"
+          }
+        ],
+        "recommended_channel": "💹 247경제",
+        "priority_score": 0.857
+      },
+      {
+        "trend_category": "인물 트렌드",
+        "trend_keyword": "시진핑",
+        "attractive_dim": "cause",
+        "attractive_dim_kor": "인과",
+        "market_count": 1,
+        "our_count": 0,
+        "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+        "avg_efficiency": 49.1,
+        "fresh_min_days": 8,
+        "top_market_videos": [
+          {
+            "vid": "2BYDXHUfDn8",
+            "title": "시진핑이 대만을 못 치는 진짜 이유… 총성 없는 전쟁은 이미 필리핀에서 시작됐다",
+            "channel": "오늘의통찰",
+            "views": 8493,
+            "efficiency": 49.09,
+            "url": "https://youtube.com/watch?v=2BYDXHUfDn8"
+          }
+        ],
+        "recommended_channel": "💹 247경제",
+        "priority_score": 0.857
+      },
+      {
+        "trend_category": "인물 트렌드",
+        "trend_keyword": "시진핑",
+        "attractive_dim": "person",
+        "attractive_dim_kor": "인물",
+        "market_count": 1,
+        "our_count": 0,
+        "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+        "avg_efficiency": 49.1,
+        "fresh_min_days": 8,
+        "top_market_videos": [
+          {
+            "vid": "2BYDXHUfDn8",
+            "title": "시진핑이 대만을 못 치는 진짜 이유… 총성 없는 전쟁은 이미 필리핀에서 시작됐다",
+            "channel": "오늘의통찰",
+            "views": 8493,
+            "efficiency": 49.09,
+            "url": "https://youtube.com/watch?v=2BYDXHUfDn8"
+          }
+        ],
+        "recommended_channel": "💹 247경제",
+        "priority_score": 0.857
+      },
+      {
+        "trend_category": "시즌 트렌드",
+        "trend_keyword": "시그니엘",
+        "attractive_dim": "cause",
+        "attractive_dim_kor": "인과",
+        "market_count": 1,
+        "our_count": 0,
+        "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+        "avg_efficiency": 62.8,
+        "fresh_min_days": 13,
+        "top_market_videos": [
+          {
+            "vid": "FqqgnjVzA_4",
+            "title": "1년째 공실\" 20억 급락에 깡통으로 전락한 시그니엘의 몰락, 그 진짜 이유",
+            "channel": "지식왕천재",
+            "views": 992228,
+            "efficiency": 62.79924050632911,
+            "url": "https://youtube.com/watch?v=FqqgnjVzA_4"
+          }
+        ],
+        "recommended_channel": "💹 247경제",
+        "priority_score": 0.768
+      },
+      {
+        "trend_category": "시즌 트렌드",
+        "trend_keyword": "시그니엘",
+        "attractive_dim": "number",
+        "attractive_dim_kor": "환산",
+        "market_count": 1,
+        "our_count": 0,
+        "verdict": "🟦 블루오션 (시장 1편, 우리 0편)",
+        "avg_efficiency": 62.8,
+        "fresh_min_days": 13,
+        "top_market_videos": [
+          {
+            "vid": "FqqgnjVzA_4",
+            "title": "1년째 공실\" 20억 급락에 깡통으로 전락한 시그니엘의 몰락, 그 진짜 이유",
+            "channel": "지식왕천재",
+            "views": 992228,
+            "efficiency": 62.79924050632911,
+            "url": "https://youtube.com/watch?v=FqqgnjVzA_4"
+          }
+        ],
+        "recommended_channel": "💹 247경제",
+        "priority_score": 0.768
+      }
+    ],
+    "🇰🇷 레드맨": []
+  },
+  "stats": {
+    "total_blue_slots": 17,
+    "unique_trends": 10,
+    "our_total_videos": 0,
+    "market_total_videos": 113,
+    "top_priority_slots": 7
+  }
+}

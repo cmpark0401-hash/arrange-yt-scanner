@@ -1,0 +1,642 @@
+{
+  "updated_at": "2026-06-25 14:26",
+  "data_freshness": {
+    "explosion_alerts": {
+      "mtime": "2026-06-25 14:26",
+      "ago": "0분 전",
+      "is_stale": false
+    },
+    "mece_trend_lifecycle": {
+      "mtime": "2026-06-25 14:26",
+      "ago": "0분 전",
+      "is_stale": false
+    },
+    "zeus_angles": {
+      "mtime": "2026-06-23 13:14",
+      "ago": "2일 전 ⚠️",
+      "is_stale": true
+    },
+    "copycat_clusters": {
+      "mtime": "2026-06-25 13:50",
+      "ago": "36분 전",
+      "is_stale": false
+    },
+    "recycled_explosions": {
+      "mtime": "2026-06-25 14:26",
+      "ago": "0분 전",
+      "is_stale": false
+    },
+    "mece_unified": {
+      "mtime": "2026-06-25 14:26",
+      "ago": "0분 전",
+      "is_stale": false
+    }
+  },
+  "categories": {
+    "야담": [
+      {
+        "keyword": "민담",
+        "video_count": 1,
+        "avg_efficiency": 21.64,
+        "max_efficiency": 21.64,
+        "total_views": 352738,
+        "channel_count": 1,
+        "fresh_min_days": 5,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "김치를 빨랫줄에 널어놓는 며느리를 모두가 비웃었지만, 그 줄을 본 어사가 충격에 말을 잃은 이유 |야담 | 옛날이야기 | 민담 | 수면동화 | ",
+            "channel": "월하야담",
+            "views": 352738,
+            "efficiency": 21.64,
+            "freshness_days": 5,
+            "url": "https://youtube.com/watch?v=VDOppXMZuk8"
+          }
+        ],
+        "recommended_channels": [
+          "📜 깊은밤야담"
+        ]
+      },
+      {
+        "keyword": "야담",
+        "video_count": 12,
+        "avg_efficiency": 10.69,
+        "max_efficiency": 31.79,
+        "total_views": 871047,
+        "channel_count": 11,
+        "fresh_min_days": 1,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "일 안 하고 노는 며느리, 알고 보니? | 옛날이야기 | 야담 |",
+            "channel": "백조야담",
+            "views": 10299,
+            "efficiency": 31.79,
+            "freshness_days": 13,
+            "url": "https://youtube.com/watch?v=sXURMvaBunY"
+          },
+          {
+            "title": "\"이 거지의 빚, 내가 다 사겠다!\" 평양 최고 부잣집 딸이 매 맞던 거지를 백 냥에 사들인 충격적인 이유, 그 정체는?  | 야담 | 옛날이야",
+            "channel": "뒷골목 야담",
+            "views": 161228,
+            "efficiency": 22.97,
+            "freshness_days": 8,
+            "url": "https://youtube.com/watch?v=m3wm2GZ5Zgw"
+          },
+          {
+            "title": "천하의 호랑이 시아버지도 두 손 든 못 말리는 며느리, 시집 식구들도 입을 다물었다 |야담 | 옛날이야기 | 민담 | 수면동화 | 오디오북| 전",
+            "channel": "월하야담",
+            "views": 127610,
+            "efficiency": 15.66,
+            "freshness_days": 13,
+            "url": "https://youtube.com/watch?v=Nq9UjtJD7aY"
+          }
+        ],
+        "recommended_channels": [
+          "📜 깊은밤야담"
+        ]
+      },
+      {
+        "keyword": "monitor",
+        "video_count": 3,
+        "avg_efficiency": 6.26,
+        "max_efficiency": 9.92,
+        "total_views": 162122,
+        "channel_count": 2,
+        "fresh_min_days": 9,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "과부 며느리를 바보 머슴 손 쥐여 쫓아낸 시어머니, 그 피눈물 나는 진짜 이유 | 야담, 설화, 민담, 전설, 옛날이야기, 수면동화, 전래동화",
+            "channel": "흔적야담",
+            "views": 20138,
+            "efficiency": 9.920197044334975,
+            "freshness_days": 14,
+            "url": "https://youtube.com/watch?v=Q6J9TFghp_I"
+          },
+          {
+            "title": "첩은 놀고 며느리만 밭일시키던 집, 시어머니가 둔 기막힌 한 수 #옛날이야기 #오디오북 #수면동화 #민담 #전설",
+            "channel": "산골야담",
+            "views": 84456,
+            "efficiency": 5.2785,
+            "freshness_days": 13,
+            "url": "https://youtube.com/watch?v=asGADQFRiAc"
+          },
+          {
+            "title": "모두가 미쳤다 욕한 며느리, 쌀독에 소금을 부은 진짜 이유 #옛날이야기 #오디오북 #수면동화 #민담 #전설",
+            "channel": "산골야담",
+            "views": 57528,
+            "efficiency": 3.5955,
+            "freshness_days": 9,
+            "url": "https://youtube.com/watch?v=NK_41QAfJ_8"
+          }
+        ],
+        "recommended_channels": [
+          "📜 깊은밤야담"
+        ]
+      }
+    ],
+    "경제·시사": [
+      {
+        "keyword": "시진핑",
+        "video_count": 1,
+        "avg_efficiency": 49.09,
+        "max_efficiency": 49.09,
+        "total_views": 8493,
+        "channel_count": 1,
+        "fresh_min_days": 8,
+        "lifecycle_stage": "🟢 등장 (골든타임)",
+        "momentum": "+0.0%",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts",
+          "lifecycle"
+        ],
+        "verification": [
+          {
+            "title": "시진핑이 대만을 못 치는 진짜 이유… 총성 없는 전쟁은 이미 필리핀에서 시작됐다",
+            "channel": "오늘의통찰",
+            "views": 8493,
+            "efficiency": 49.09,
+            "freshness_days": 8,
+            "url": "https://youtube.com/watch?v=2BYDXHUfDn8"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "이재용",
+        "video_count": 1,
+        "avg_efficiency": 18.38,
+        "max_efficiency": 18.38,
+        "total_views": 428251,
+        "channel_count": 1,
+        "fresh_min_days": 1,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "이재용의 저주가 중앙그룹의 돈 줄을 틀어막았다 삼성의 뒤통수를 친 중앙일보의 최후",
+            "channel": "귀에쏙쏙경제학",
+            "views": 428251,
+            "efficiency": 18.38,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=wE0r_DJxuJ0"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "신도시의",
+        "video_count": 3,
+        "avg_efficiency": 26.22,
+        "max_efficiency": 58.49,
+        "total_views": 568252,
+        "channel_count": 2,
+        "fresh_min_days": 6,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "신도시의 몰락, 진짜 문제는 집값이 아니었습니다 #신도시의몰락 #일산 #분당 #1기신도시  #부동산 #한국부동산 #도시경제 #상권붕괴 #자영업 ",
+            "channel": "빡치는경제학",
+            "views": 25851,
+            "efficiency": 58.49,
+            "freshness_days": 6,
+            "url": "https://youtube.com/watch?v=lOE1uPsIex4"
+          },
+          {
+            "title": "제발 아파트 그만좀 지으세요\" 신축인데 텅 빈 신도시의 몰락, 그 진짜 이유",
+            "channel": "지식왕천재",
+            "views": 360202,
+            "efficiency": 13.39,
+            "freshness_days": 9,
+            "url": "https://youtube.com/watch?v=eoBSb7vx3aE"
+          },
+          {
+            "title": "대한민국 대표 1기 신도시의 배신\" 일산 신도시의 몰락, 그 진짜 이유",
+            "channel": "지식왕천재",
+            "views": 182199,
+            "efficiency": 6.77,
+            "freshness_days": 9,
+            "url": "https://youtube.com/watch?v=hJ173O56xiI"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "김정은이",
+        "video_count": 4,
+        "avg_efficiency": 15.56,
+        "max_efficiency": 54.29,
+        "total_views": 121978,
+        "channel_count": 4,
+        "fresh_min_days": 1,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "김정은이 숨기려 한 ‘한국의 7일’…북한 여자축구 선수단이 본 순간 통제가 흔들렸다",
+            "channel": "정치의 민낯",
+            "views": 65147,
+            "efficiency": 54.29,
+            "freshness_days": 2,
+            "url": "https://youtube.com/watch?v=4rbJAWUQbKg"
+          },
+          {
+            "title": "“꼭 데리러 와달라” 우크라이나 북한군 포로 폭로…김정은이 한국행을 두려워하는 이유",
+            "channel": "뉴스의 중심",
+            "views": 7178,
+            "efficiency": 7.7,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=eNJuJ08G8qk"
+          },
+          {
+            "title": "2025년에도 북한 여행 다녀왔다고!?🫢💥 김정은이 앉았던 자리에서 밥도 먹어본 한국인의 정체는? | #이만갑 747회",
+            "channel": "이만갑",
+            "views": 21385,
+            "efficiency": 0.25,
+            "freshness_days": 2,
+            "url": "https://youtube.com/watch?v=dRUQGnjtem4"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "나라가",
+        "video_count": 1,
+        "avg_efficiency": 28.08,
+        "max_efficiency": 28.08,
+        "total_views": 64019,
+        "channel_count": 1,
+        "fresh_min_days": 8,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "\"나라가 망해도 일하기 싫어!\" 시위하는 시민들! 프랑스가 몰락하는 이유",
+            "channel": "세계경제이야기",
+            "views": 64019,
+            "efficiency": 28.08,
+            "freshness_days": 8,
+            "url": "https://youtube.com/watch?v=wsLgB4kQby4"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "본사가",
+        "video_count": 2,
+        "avg_efficiency": 15.68,
+        "max_efficiency": 30.3,
+        "total_views": 54895,
+        "channel_count": 2,
+        "fresh_min_days": 3,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "잘나가던 배민이 8조에 팔리는 진짜 이유",
+            "channel": "경제탐험가",
+            "views": 26121,
+            "efficiency": 30.3,
+            "freshness_days": 3,
+            "url": "https://youtube.com/watch?v=usWMD3jfWGg"
+          },
+          {
+            "title": "SK하이닉스 직원들은 본사가 있는 이천이 아닌 왜 동탄에 집을 사는 걸까?",
+            "channel": "돈돼?한바퀴",
+            "views": 28774,
+            "efficiency": 1.05,
+            "freshness_days": 5,
+            "url": "https://youtube.com/watch?v=39gAI-HNDKg"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "세계가",
+        "video_count": 8,
+        "avg_efficiency": 5.97,
+        "max_efficiency": 25.15,
+        "total_views": 263289,
+        "channel_count": 6,
+        "fresh_min_days": 1,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "BBC 기자도 예상 못했다… 세계가 한국을 ‘미래’라 부르는 진짜 이유 | 서울 골목과 평범한 사람들에게서 찾은 답",
+            "channel": "은퇴 보고서 분석가",
+            "views": 24952,
+            "efficiency": 25.15,
+            "freshness_days": 8,
+            "url": "https://youtube.com/watch?v=d7T_DmHvN4Q"
+          },
+          {
+            "title": "북중미 월드컵 한국은 졌는데 세계가 박수쳤다…멕시코전 직후 벌어진 믿기 힘든 장면 | 한국 멕시코 (해외감동사연)",
+            "channel": "감동신화",
+            "views": 39882,
+            "efficiency": 16.28,
+            "freshness_days": 4,
+            "url": "https://youtube.com/watch?v=6SNuUeDWr44"
+          },
+          {
+            "title": "전 세계가 경악한 이승만의 천재적 통찰력, 공산주의 가면을 벗긴 80년 투쟁 l 이승만 일대기 l 인물과역사",
+            "channel": "똑똑해지는 인물과역사학",
+            "views": 52864,
+            "efficiency": 2.38,
+            "freshness_days": 6,
+            "url": "https://youtube.com/watch?v=C-0iV_gHjjc"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "삼성",
+        "video_count": 3,
+        "avg_efficiency": 5.32,
+        "max_efficiency": 8.51,
+        "total_views": 177560,
+        "channel_count": 3,
+        "fresh_min_days": 1,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "6월 24일 삼성 vs LG 경기 리뷰!! 아무것도 못했는데 아무 이야기나 하시죠",
+            "channel": "김라온",
+            "views": 12771,
+            "efficiency": 8.51,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=SqvEVC4knGg"
+          },
+          {
+            "title": "보수와 진보 모두에게 외면받는 중앙일보와 JTBC, 삼성이 만든 보수언론이 어쩌다 진보 방송국을 운영하게 되었나",
+            "channel": "귀에쏙쏙경제학",
+            "views": 136360,
+            "efficiency": 7.1,
+            "freshness_days": 4,
+            "url": "https://youtube.com/watch?v=UsMf3x7ShyE"
+          },
+          {
+            "title": "[삼성전자 주가 전망] \"3분전 충격속보\" 마이크론 실적유출 소문이 진짜였다 내일 핵폭탄급 온다 위클만기전 전략노출! 美골든타임 美반도체 어닝서",
+            "channel": "미래에서 온 슈퍼개미",
+            "views": 28429,
+            "efficiency": 0.34,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=uCf-m_GD-Bk"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      }
+    ],
+    "잘듣네": [
+      {
+        "keyword": "monitor",
+        "video_count": 1,
+        "avg_efficiency": 4.81,
+        "max_efficiency": 4.81,
+        "total_views": 50515,
+        "channel_count": 1,
+        "fresh_min_days": 10,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "조선 최악의 역적이 백범 김구 집안의 검은 역사가 된 이유",
+            "channel": "한밤의 한국사",
+            "views": 50515,
+            "efficiency": 4.810952380952381,
+            "freshness_days": 10,
+            "url": "https://youtube.com/watch?v=C4QbgaRMmt0"
+          }
+        ],
+        "recommended_channels": [
+          "🌙 잘듣네"
+        ]
+      }
+    ],
+    "과학·건강": [
+      {
+        "keyword": "DNA",
+        "video_count": 4,
+        "avg_efficiency": 463.76,
+        "max_efficiency": 1351.62,
+        "total_views": 777216,
+        "channel_count": 4,
+        "fresh_min_days": 11,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "🏆2026 북중미 월드컵 공식 주제가🏆 EJAE, Andrea Bocelli, Megan Thee Stallion - DNA [한국어/가사/해석",
+            "channel": "맥락맥락",
+            "views": 109481,
+            "efficiency": 1351.62,
+            "freshness_days": 14,
+            "url": "https://youtube.com/watch?v=mKS7NyFa1JQ"
+          },
+          {
+            "title": "2026 월드컵 주제가 'DNA' 1시간 듣기 [Listening to the 2026 World Cup DNA song for 1 hour]",
+            "channel": "카엘",
+            "views": 54792,
+            "efficiency": 340.32,
+            "freshness_days": 12,
+            "url": "https://youtube.com/watch?v=uQTaJfrA5m8"
+          },
+          {
+            "title": "Andrea Bocelli, David Guetta, EJAE - DNA (Official FIFA World Cup 2026 Anthem) |",
+            "channel": "sunnylee",
+            "views": 264946,
+            "efficiency": 126.16,
+            "freshness_days": 11,
+            "url": "https://youtube.com/watch?v=0NhxsRJTccc"
+          }
+        ],
+        "recommended_channels": [
+          "🔬 과만세"
+        ]
+      },
+      {
+        "keyword": "과학",
+        "video_count": 1,
+        "avg_efficiency": 0.21,
+        "max_efficiency": 0.21,
+        "total_views": 7521,
+        "channel_count": 1,
+        "fresh_min_days": 1,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "통합과학 기말 물리, 시험 단골 개념만 빠르게 정리합니다.",
+            "channel": "통합과학 박선",
+            "views": 7521,
+            "efficiency": 0.21,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=Ct4T77-yhVI"
+          }
+        ],
+        "recommended_channels": [
+          "🔬 과만세"
+        ]
+      },
+      {
+        "keyword": "건강",
+        "video_count": 2,
+        "avg_efficiency": 2.09,
+        "max_efficiency": 3.64,
+        "total_views": 98547,
+        "channel_count": 2,
+        "fresh_min_days": 3,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "돌아온 허키와 간지의 고품격 팟캐스트 | 제일건강원 EP.05",
+            "channel": "제일건강합니다",
+            "views": 72344,
+            "efficiency": 3.64,
+            "freshness_days": 7,
+            "url": "https://youtube.com/watch?v=9aihU973bdU"
+          },
+          {
+            "title": "건강검진 꼭 필요할까?",
+            "channel": "외과의사 이준서",
+            "views": 26203,
+            "efficiency": 0.54,
+            "freshness_days": 3,
+            "url": "https://youtube.com/watch?v=xPzYLpeRw0g"
+          }
+        ],
+        "recommended_channels": [
+          "🔬 과만세"
+        ]
+      },
+      {
+        "keyword": "우주",
+        "video_count": 1,
+        "avg_efficiency": 0.71,
+        "max_efficiency": 0.71,
+        "total_views": 16296,
+        "channel_count": 1,
+        "fresh_min_days": 3,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "우주가 생기기 전에는 무엇이 있었을까? 파인만의 소름 돋는 대답",
+            "channel": "파인만의 길",
+            "views": 16296,
+            "efficiency": 0.71,
+            "freshness_days": 3,
+            "url": "https://youtube.com/watch?v=y_BFDbBlUt8"
+          }
+        ],
+        "recommended_channels": [
+          "🔬 과만세"
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "total_trends": 16,
+    "categories_active": 4
+  }
+}

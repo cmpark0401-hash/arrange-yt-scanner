@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#a855f7">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>🌳 MECE 탐색 History · TubeHacker</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+:root {
+  --bg:#0a0a12; --surface:#13131c; --surface2:#1a1a26;
+  --border:#26263a; --divider:#1f1f30;
+  --text:#ededf2; --text2:#9696a6; --text3:#6c6c80;
+  --primary:#a855f7; --primary-hi:#c084fc;
+  --primary-bg:rgba(168,85,247,.12); --primary-bd:rgba(168,85,247,.35);
+  --hot:#84cc16; --hot-bg:rgba(132,204,22,.10); --hot-bd:rgba(132,204,22,.35);
+  --warn:#ff7a45; --warn-bg:rgba(255,122,69,.10); --warn-bd:rgba(255,122,69,.35);
+  --danger:#ef4444; --info:#60a5fa; --blue:#3b82f6;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font-family:'Inter','Noto Sans KR',system-ui,sans-serif; font-size:14px; line-height:1.55; }
+.wrap { max-width:1200px; margin:0 auto; padding:32px 24px; }
+.header { display:flex; align-items:baseline; gap:12px; margin-bottom:8px; }
+.header h1 { font-size:26px; font-weight:800; margin:0; }
+.header .sub { color:var(--text3); font-size:13px; }
+.nav { margin-bottom:20px; }
+.nav a { color:var(--text3); text-decoration:none; margin-right:14px; font-size:13px; }
+.nav a:hover { color:var(--primary-hi); }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:20px; }
+.stat { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px; }
+.stat .label { color:var(--text3); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; }
+.stat .value { font-size:26px; font-weight:800; color:var(--primary-hi); margin-top:4px; }
+.stat.hot .value { color:var(--hot); }
+.stat.warn .value { color:var(--warn); }
+.section { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:20px; }
+.section h2 { margin:0 0 14px; font-size:17px; font-weight:700; }
+.section h2 .count { color:var(--primary-hi); font-weight:800; margin-left:6px; }
+
+.search-bar { display:flex; gap:8px; margin-bottom:24px; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px; }
+.search-bar input { flex:1; background:var(--surface2); border:1px solid var(--border); color:var(--text); padding:10px 14px; border-radius:8px; font-family:inherit; font-size:14px; }
+.search-bar .hint { color:var(--text3); font-size:12px; padding:6px 0; align-self:center; flex-shrink:0; }
+
+/* 키워드 카드 */
+.kw-grid { display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); }
+.kw-card {
+  background:var(--surface2); border:1px solid var(--border); border-radius:10px;
+  padding:14px; cursor:pointer; transition:transform 0.15s,border-color 0.15s;
+}
+.kw-card:hover { transform:translateY(-2px); border-color:var(--primary-bd); }
+.kw-card .kw-top { display:flex; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+.kw-card .kw-name { font-size:16px; font-weight:700; color:var(--primary-hi); }
+.kw-card .stage-badge { font-size:10px; padding:2px 6px; border-radius:6px; }
+.kw-card .stage-badge.golden { background:var(--hot-bg); color:var(--hot); border:1px solid var(--hot-bd); }
+.kw-card .stage-badge.peak { background:rgba(255,122,69,.10); color:var(--warn); border:1px solid var(--warn-bd); }
+.kw-card .stage-badge.decline { background:var(--info-bg); color:var(--info); border:1px solid var(--info); }
+.kw-card .meta { color:var(--text3); font-size:11px; margin-bottom:8px; }
+.kw-card .stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; font-size:11px; }
+.kw-card .stat-mini { background:var(--surface); padding:6px 8px; border-radius:6px; text-align:center; }
+.kw-card .stat-mini .v { color:var(--text); font-weight:700; }
+.kw-card .stat-mini .l { color:var(--text3); font-size:10px; }
+.kw-card .top-slot { margin-top:8px; padding:8px; background:var(--surface); border-radius:6px; font-size:11px; color:var(--text2); }
+.kw-card .top-slot strong { color:var(--primary-hi); }
+
+.empty { color:var(--text3); font-size:13px; text-align:center; padding:24px; background:var(--surface2); border-radius:8px; }
+.section.lifecycle .stage-group { margin-bottom:18px; }
+.section.lifecycle .stage-group h3 { font-size:14px; margin:0 0 8px; color:var(--primary-hi); }
+.section.lifecycle .trend-pill {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--surface2); border:1px solid var(--border); border-radius:14px;
+  padding:6px 12px; margin:0 6px 6px 0; font-size:12px;
+}
+.section.lifecycle .trend-pill .momentum { color:var(--text3); font-size:11px; }
+.section.lifecycle .trend-pill .momentum.up { color:var(--hot); }
+.section.lifecycle .trend-pill .momentum.down { color:var(--danger); }
+.section.lifecycle a.trend-pill { text-decoration:none; color:var(--text); }
+.section.lifecycle a.trend-pill:hover { border-color:var(--primary-bd); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>🌳 MECE 탐색 History</h1>
+      <span class="sub" id="updated">로딩...</span>
+    </div>
+
+    <div class="nav">
+      <a href="index.html">← 메인</a>
+      <a href="mece.html">🌳 MECE 자동</a>
+      <a href="mece_topic.html">🔍 키워드 검색</a>
+      <a href="alerts.html">🚨 폭발 알림</a>
+    </div>
+
+    <div class="search-bar">
+      <input id="new-keyword" placeholder="새 키워드 박음 (예: 텅스텐, 참교육)" />
+      <div class="hint">CLI: <code>.venv/bin/python scripts/mece/explore_topic.py "키워드"</code></div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <!-- 트렌드 라이프사이클 단계별 -->
+    <div class="section lifecycle" id="lifecycle-section">
+      <h2>🔄 트렌드 라이프사이클</h2>
+      <div id="lifecycle"></div>
+    </div>
+
+    <!-- 탐색한 키워드 카드 -->
+    <div class="section">
+      <h2>📚 탐색한 키워드 <span class="count" id="kw-count">0</span></h2>
+      <div class="kw-grid" id="keywords"></div>
+    </div>
+  </div>
+
+  <script>
+async function load() {
+  let h = { explored_keywords: [], stats: {} };
+  try {
+    h = await fetch('data/mece_history.json').then(r => r.json());
+  } catch (e) {
+    document.getElementById('updated').textContent = '데이터 없음';
+  }
+  document.getElementById('updated').textContent = `갱신 ${h.updated_at || '-'}`;
+  renderStats(h);
+  renderKeywords(h);
+
+  // 라이프사이클
+  try {
+    const lc = await fetch('data/mece_trend_lifecycle.json').then(r => r.json());
+    renderLifecycle(lc);
+  } catch (e) {
+    document.getElementById('lifecycle').innerHTML =
+      '<div class="empty">트렌드 라이프사이클 데이터 없음. 사이클 1회 이상 돌리면 박힙니다.</div>';
+  }
+}
+
+function renderStats(h) {
+  const s = h.stats || {};
+  const items = [
+    { label:'탐색 키워드', value:s.total_keywords || 0 },
+    { label:'빈 슬롯 있음', value:s.with_blue_slots || 0, cls:'warn' },
+    { label:'골든타임', value:s.in_golden_time || 0, cls:'hot' },
+    { label:'폭발 중', value:s.in_peak || 0, cls:'hot' },
+  ];
+  document.getElementById('stats').innerHTML = items.map(i => `
+    <div class="stat ${i.cls || ''}">
+      <div class="label">${i.label}</div>
+      <div class="value">${i.value}</div>
+    </div>
+  `).join('');
+}
+
+function renderKeywords(h) {
+  const ks = h.explored_keywords || [];
+  document.getElementById('kw-count').textContent = ks.length;
+  if (ks.length === 0) {
+    document.getElementById('keywords').innerHTML =
+      '<div class="empty">아직 탐색한 키워드 없음. 위에서 박음.</div>';
+    return;
+  }
+  document.getElementById('keywords').innerHTML = ks.map(k => {
+    const stage = k.lifecycle_stage || '';
+    const stageCls = stage.includes('등장') ? 'golden' : stage.includes('폭발') ? 'peak' : stage.includes('하락') ? 'decline' : '';
+    const topSlot = k.top_blue_slot;
+    return `
+      <a class="kw-card" href="${k.topic_url}" style="text-decoration:none;color:inherit;display:block;">
+        <div class="kw-top">
+          <span class="kw-name">${k.keyword}</span>
+          ${stage ? `<span class="stage-badge ${stageCls}">${stage}</span>` : ''}
+        </div>
+        <div class="meta">탐색: ${k.explored_at || '-'}</div>
+        <div class="stats-row">
+          <div class="stat-mini"><div class="v">${k.total_market_videos || 0}</div><div class="l">시장</div></div>
+          <div class="stat-mini"><div class="v">${k.blue_slots_count || 0}</div><div class="l">빈슬롯</div></div>
+          <div class="stat-mini"><div class="v">${k.top_predicted_score || 0}</div><div class="l">예측</div></div>
+        </div>
+        ${topSlot ? `
+        <div class="top-slot">
+          🟦 <strong>${topSlot.dim}</strong> 슬롯
+          → ${topSlot.recommended_channel || '?'} ${topSlot.priority}점
+        </div>` : ''}
+      </a>
+    `;
+  }).join('');
+}
+
+function renderLifecycle(lc) {
+  const trends = lc.trends || {};
+  const stages = {
+    '🟢 등장 (골든타임)': [],
+    '🔥 폭발 (상승)': [],
+    '🔥 폭발 (정점)': [],
+    '📉 하락 (정점 후)': [],
+    '📉 하락': [],
+    '⚫ 소멸': [],
+  };
+  Object.values(trends).forEach(t => {
+    const s = t.stage || '⚫ 소멸';
+    (stages[s] = stages[s] || []).push(t);
+  });
+  let html = '';
+  for (const [stage, items] of Object.entries(stages)) {
+    if (items.length === 0) continue;
+    items.sort((a,b) => (b.momentum_pct || 0) - (a.momentum_pct || 0));
+    html += `<div class="stage-group">
+      <h3>${stage} (${items.length}개)</h3>
+      <div>
+        ${items.map(t => {
+          const mom = t.momentum_pct || 0;
+          const cls = mom > 0 ? 'up' : mom < 0 ? 'down' : '';
+          const slug = encodeURIComponent(t.keyword || '');
+          return `<a class="trend-pill" href="mece_topic.html?slug=${slug}">
+            <span>${t.keyword}</span>
+            <span class="momentum ${cls}">${t.momentum || ''}</span>
+            <span style="color:var(--text3);font-size:10px;">${t.days_active || 0}일</span>
+          </a>`;
+        }).join('')}
+      </div>
+    </div>`;
+  }
+  document.getElementById('lifecycle').innerHTML = html || '<div class="empty">트렌드 라이프사이클 데이터 없음.</div>';
+}
+
+document.getElementById('new-keyword').addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    const kw = e.target.value.trim();
+    if (kw) location.href = `mece_topic.html?slug=${encodeURIComponent(kw)}`;
+  }
+});
+
+load();
+  </script>
+</body>
+</html>

@@ -1,0 +1,805 @@
+{
+  "keyword": "텅스텐",
+  "slug": "텅스텐",
+  "created_at": "2026-06-25 13:20",
+  "suggestions": [
+    {
+      "attractive_dim": "time",
+      "attractive_dim_kor": "시간",
+      "topic_base": "텅스텐 60년 만의 대역전 — 한국이 일본을 처음으로 추월한 순간",
+      "variants": [
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 텅스텐 60년 만의 대역전 — 한국이 일본을 처음으로 추월한 순간",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "텅스텐 60년 만의 대역전 — 한국이 일본을 처음으로 추월한 순간",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "텅스텐 60년 만의 대역전 — 한국이 일본을 처음으로 추월한 순간",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "텅스텐 60년 만의 대역전 — 한국이 일본을 처음으로 추월한 순간",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 5,
+      "priority_score": 1.0,
+      "recommended_channel": "📈 지식록",
+      "self_evaluation": {
+        "predicted_score": 68,
+        "tier": "🚀 강력",
+        "cf_count": 2,
+        "dim_count": 2,
+        "has_trend": true,
+        "detected_dims": [
+          "time",
+          "space"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\""
+      ]
+    },
+    {
+      "attractive_dim": "time",
+      "attractive_dim_kor": "시간",
+      "topic_base": "7개월 만에 무너진 텅스텐, 이제는 한국이 1위가 된 이유",
+      "variants": [
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 7개월 만에 무너진 텅스텐, 이제는 한국이 1위가 된 이유",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "7개월 만에 무너진 텅스텐, 이제는 한국이 1위가 된 이유",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "7개월 만에 무너진 텅스텐, 이제는 한국이 1위가 된 이유",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "7개월 만에 무너진 텅스텐, 이제는 한국이 1위가 된 이유",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 5,
+      "priority_score": 1.0,
+      "recommended_channel": "📈 지식록",
+      "self_evaluation": {
+        "predicted_score": 50,
+        "tier": "🔥 폭발",
+        "cf_count": 1,
+        "dim_count": 4,
+        "has_trend": true,
+        "detected_dims": [
+          "time",
+          "space",
+          "scale",
+          "number"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "time",
+      "attractive_dim_kor": "시간",
+      "topic_base": "30년 추적 텅스텐, 결국 드러난 진짜 정체",
+      "variants": [
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 30년 추적 텅스텐, 결국 드러난 진짜 정체",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "30년 추적 텅스텐, 결국 드러난 진짜 정체",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "30년 추적 텅스텐, 결국 드러난 진짜 정체",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "30년 추적 텅스텐, 결국 드러난 진짜 정체",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 5,
+      "priority_score": 1.0,
+      "recommended_channel": "📈 지식록",
+      "self_evaluation": {
+        "predicted_score": 38,
+        "tier": "✅ 평타+",
+        "cf_count": 2,
+        "dim_count": 1,
+        "has_trend": true,
+        "detected_dims": [
+          "time"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "space",
+      "attractive_dim_kor": "공간",
+      "topic_base": "텅스텐, 일본은 굽신·중국은 패닉·미국은 다급! 한국이 쥔 진짜 비밀",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "텅스텐, 일본은 굽신·중국은 패닉·미국은 다급! 한국이 쥔 진짜 비밀",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "텅스텐, 일본은 굽신·중국은 패닉·미국은 다급! 한국이 쥔 진짜 비밀",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 텅스텐, 일본은 굽신·중국은 패닉·미국은 다급! 한국이 쥔 진짜 비밀",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "텅스텐, 일본은 굽신·중국은 패닉·미국은 다급! 한국이 쥔 진짜 비밀",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 9,
+      "priority_score": 0.923,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 42,
+        "tier": "✅ 평타+",
+        "cf_count": 1,
+        "dim_count": 1,
+        "has_trend": true,
+        "detected_dims": [
+          "space"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}",
+        "❌ 구체 수치 없음 → 예: 60년"
+      ]
+    },
+    {
+      "attractive_dim": "space",
+      "attractive_dim_kor": "공간",
+      "topic_base": "한국 vs 일본 텅스텐 60년 만의 역전 — 일본도 무릎 꿇은 진짜 이유",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "한국 vs 일본 텅스텐 60년 만의 역전 — 일본도 무릎 꿇은 진짜 이유",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "한국 vs 일본 텅스텐 60년 만의 역전 — 일본도 무릎 꿇은 진짜 이유",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 한국 vs 일본 텅스텐 60년 만의 역전 — 일본도 무릎 꿇은 진짜 이유",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "한국 vs 일본 텅스텐 60년 만의 역전 — 일본도 무릎 꿇은 진짜 이유",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 9,
+      "priority_score": 0.923,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 74,
+        "tier": "🚀 강력",
+        "cf_count": 3,
+        "dim_count": 3,
+        "has_trend": true,
+        "detected_dims": [
+          "time",
+          "space",
+          "cause"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\""
+      ]
+    },
+    {
+      "attractive_dim": "space",
+      "attractive_dim_kor": "공간",
+      "topic_base": "91개국 줄세운 텅스텐, 한국이 1위인데 일본은 30번대인 진짜 이유",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "91개국 줄세운 텅스텐, 한국이 1위인데 일본은 30번대인 진짜 이유",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "91개국 줄세운 텅스텐, 한국이 1위인데 일본은 30번대인 진짜 이유",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 91개국 줄세운 텅스텐, 한국이 1위인데 일본은 30번대인 진짜 이유",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "91개국 줄세운 텅스텐, 한국이 1위인데 일본은 30번대인 진짜 이유",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 9,
+      "priority_score": 0.923,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 68,
+        "tier": "🚀 강력",
+        "cf_count": 2,
+        "dim_count": 4,
+        "has_trend": true,
+        "detected_dims": [
+          "space",
+          "cause",
+          "scale",
+          "number"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "scale",
+      "attractive_dim_kor": "층위",
+      "topic_base": "텅스텐 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "텅스텐 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "텅스텐 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 텅스텐 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "텅스텐 전 세계 GDP 흔든다, 한국이 쥔 진짜 패는?",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 3,
+      "priority_score": 0.379,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 44,
+        "tier": "✅ 평타+",
+        "cf_count": 0,
+        "dim_count": 2,
+        "has_trend": true,
+        "detected_dims": [
+          "space",
+          "scale"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}",
+        "❌ 구체 수치 없음 → 예: 60년"
+      ]
+    },
+    {
+      "attractive_dim": "scale",
+      "attractive_dim_kor": "층위",
+      "topic_base": "국가 단위 텅스텐 격차 — 한국 1위·일본 30위·중국 패닉",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "국가 단위 텅스텐 격차 — 한국 1위·일본 30위·중국 패닉",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "국가 단위 텅스텐 격차 — 한국 1위·일본 30위·중국 패닉",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 국가 단위 텅스텐 격차 — 한국 1위·일본 30위·중국 패닉",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "국가 단위 텅스텐 격차 — 한국 1위·일본 30위·중국 패닉",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 3,
+      "priority_score": 0.379,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 50,
+        "tier": "🔥 폭발",
+        "cf_count": 1,
+        "dim_count": 3,
+        "has_trend": true,
+        "detected_dims": [
+          "space",
+          "scale",
+          "number"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "scale",
+      "attractive_dim_kor": "층위",
+      "topic_base": "거시 vs 미시 텅스텐, 5070도 알아야 할 진짜 위험",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "거시 vs 미시 텅스텐, 5070도 알아야 할 진짜 위험",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "거시 vs 미시 텅스텐, 5070도 알아야 할 진짜 위험",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 거시 vs 미시 텅스텐, 5070도 알아야 할 진짜 위험",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "거시 vs 미시 텅스텐, 5070도 알아야 할 진짜 위험",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 3,
+      "priority_score": 0.379,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 50,
+        "tier": "🔥 폭발",
+        "cf_count": 1,
+        "dim_count": 3,
+        "has_trend": true,
+        "detected_dims": [
+          "space",
+          "stake",
+          "scale"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 구체 수치 없음 → 예: 60년"
+      ]
+    },
+    {
+      "attractive_dim": "number",
+      "attractive_dim_kor": "환산",
+      "topic_base": "텅스텐 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "텅스텐 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "텅스텐 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 텅스텐 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "텅스텐 91개국 순위 공개, 한국 1위·일본 30위·중국 60위 — 굴욕의 격차",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.1,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 68,
+        "tier": "🚀 강력",
+        "cf_count": 2,
+        "dim_count": 3,
+        "has_trend": true,
+        "detected_dims": [
+          "space",
+          "scale",
+          "number"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\"",
+        "❌ 비교 대상 없음 → 예: 한국 vs {국가}"
+      ]
+    },
+    {
+      "attractive_dim": "number",
+      "attractive_dim_kor": "환산",
+      "topic_base": "텅스텐 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "텅스텐 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "텅스텐 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 텅스텐 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "텅스텐 4분야 비교, 60년 만에 한국이 일본 완전 역전",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.1,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 68,
+        "tier": "🚀 강력",
+        "cf_count": 2,
+        "dim_count": 2,
+        "has_trend": true,
+        "detected_dims": [
+          "time",
+          "space"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\""
+      ]
+    },
+    {
+      "attractive_dim": "number",
+      "attractive_dim_kor": "환산",
+      "topic_base": "텅스텐 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+      "variants": [
+        {
+          "channel": "💹 247경제",
+          "channel_slug": "economy-247",
+          "topic": "텅스텐 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+          "lane": "카피·직격",
+          "length": "8~15분",
+          "tone": "직격·단정",
+          "main_ip": "한국우월·시의성·MECE 분해",
+          "note": "8~15분 | 직격·단정 | 매일 1편 직격"
+        },
+        {
+          "channel": "🇰🇷 레드맨",
+          "channel_slug": "redman-politics",
+          "topic": "텅스텐 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+          "lane": "정치·안보",
+          "length": "8~13분",
+          "tone": "3톤 혼합·격정",
+          "main_ip": "한중관계·정치·안보",
+          "note": "8~13분 | 3톤 혼합 | 정치·안보 앵글"
+        },
+        {
+          "channel": "📈 지식록",
+          "channel_slug": "knowledge-archive",
+          "topic": "[숨은값공개] 텅스텐 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+          "lane": "신중·통찰",
+          "length": "20~25분",
+          "tone": "차분·진단",
+          "main_ip": "부동산·환산·자산거울",
+          "note": "20~25분 | 차분·진단 | 시리즈 라벨 박음"
+        },
+        {
+          "channel": "🌙 잘듣네",
+          "channel_slug": "nn-flix",
+          "topic": "텅스텐 매장량 1위 한국 vs 꼴찌 일본 — 자원 60년 대역전",
+          "lane": "위로·인물",
+          "length": "40~70분",
+          "tone": "느린 위로",
+          "main_ip": "부모 시대 인물·시니어 위로",
+          "note": "40~70분 | 위로 결 | 시니어 청취용"
+        }
+      ],
+      "market_count": 1,
+      "priority_score": 0.1,
+      "recommended_channel": "💹 247경제",
+      "self_evaluation": {
+        "predicted_score": 68,
+        "tier": "🚀 강력",
+        "cf_count": 2,
+        "dim_count": 4,
+        "has_trend": true,
+        "detected_dims": [
+          "time",
+          "space",
+          "scale",
+          "number"
+        ]
+      },
+      "click_force_gaps": [
+        "❌ 봉인어 없음 → \"진짜 이유\" 또는 \"굴욕\" 박음",
+        "❌ 직인용 따옴표 없음 → 예: \"{N}년 만에 뒤집힌 관계\""
+      ]
+    }
+  ],
+  "stats": {
+    "total": 20,
+    "with_trend": 9,
+    "explosive_pattern": 2
+  }
+}

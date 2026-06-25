@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-18 15:34",
+  "generated_at": "2026-06-25 14:26",
   "overall_icon": "🔴",
-  "overall_label": "일부 dead",
-  "overall_severity": "warning",
+  "overall_label": "긴급 점검",
+  "overall_severity": "critical",
   "items": [
     {
       "label": "📊 모니터링 (KR)",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "8분 전",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파이프라인 점검 필요",
+      "ago": "6일 전",
       "updated_at": "2026-06-18 15:26",
       "file": "channels/knowledge-archive/_monitor_logs/2026-06-18.json",
       "severity": "critical"
@@ -19,9 +19,9 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "2분 전",
-      "updated_at": "2026-06-18 15:32",
-      "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-18.json",
+      "ago": "36분 전",
+      "updated_at": "2026-06-25 13:50",
+      "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-25.json",
       "severity": "warning"
     },
     {
@@ -29,9 +29,9 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "7분 전",
-      "updated_at": "2026-06-18 15:27",
-      "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-18.json",
+      "ago": "36분 전",
+      "updated_at": "2026-06-25 13:50",
+      "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-25.json",
       "severity": "warning"
     },
     {
@@ -39,7 +39,7 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "6일 전",
+      "ago": "13일 전",
       "updated_at": "2026-06-12 09:55",
       "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-12.json",
       "severity": "warning"
@@ -49,7 +49,7 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "6일 전",
+      "ago": "13일 전",
       "updated_at": "2026-06-12 09:41",
       "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-12.json",
       "severity": "warning"
@@ -59,7 +59,7 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "4일 전",
+      "ago": "11일 전",
       "updated_at": "2026-06-13 21:46",
       "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-13.json",
       "severity": "info"
@@ -69,18 +69,18 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "4일 전",
+      "ago": "11일 전",
       "updated_at": "2026-06-13 22:15",
       "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-13.json",
       "severity": "info"
     },
     {
       "label": "📋 워크보드",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "0분 전",
-      "updated_at": "2026-06-17T16:33:33",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파이프라인 점검 필요",
+      "ago": "3일 전",
+      "updated_at": "2026-06-22 09:00",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
     },
@@ -90,7 +90,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-18 15:34"
+      "updated_at": "2026-06-25 14:26"
     },
     {
       "label": "🛡️ 데이터 신뢰도",

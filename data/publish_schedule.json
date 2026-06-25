@@ -1,28 +1,61 @@
 {
-  "정책": "발행 시간 (2026-06-13 데이터 기반 변경) — analyze_publish_time.py 결과 + 사용자 결정 종합. SKILL.md REVIEW_FINALIZE 단계에서 채팅 안내 자동.",
-  "version": "2026-06-13",
+  "정책": "발행 시간 (2026-06-25 결정) — 6채널 낮·밤 듀얼 슬롯 분배. analyze_publish_time.py 데이터 + 카니발 회피 + 폭발 채널 결 매칭",
+  "version": "2026-06-25",
   "slots": [
     {
-      "time": "점심 전 ⭐",
+      "time": "출근 시사 (09:30)",
+      "time_range": "09:00~10:00",
+      "primary_time": "09:30",
+      "publishes": [
+        {
+          "channel_slug": "redman-politics",
+          "channel": "🇰🇷 레드맨 (낮)",
+          "primary": true,
+          "notes": "출근 통근 시간 정치 뉴스 골든타임. 보수 시청자 모바일 출근 시청"
+        }
+      ]
+    },
+    {
+      "time": "점심 전 (11:30)",
       "time_range": "11:00~12:00",
       "primary_time": "11:30",
       "publishes": [
         {
           "channel_slug": "knowledge-archive",
-          "channel": "📈 지식록",
+          "channel": "📈 지식록 (낮)",
           "primary": true,
           "notes": "5070 점심 휴식 진입 + 알고리즘 점심시간 추천 풀"
-        },
-        {
-          "channel_slug": "science-world-life",
-          "channel": "🔬 과만세",
-          "primary": true,
-          "notes": "점심 휴식 호기심 슬롯 ([수면다큐] 시리즈는 22:30 별도)"
         }
       ]
     },
     {
-      "time": "저녁 (야담 골든타임) ⭐",
+      "time": "점심 후 호기심 (13:30) ⭐",
+      "time_range": "13:00~14:00",
+      "primary_time": "13:30",
+      "publishes": [
+        {
+          "channel_slug": "science-world-life",
+          "channel": "🔬 과만세 (낮 옵션)",
+          "primary": true,
+          "notes": "데이터: 과학 12-14시 평균 8.2x. 점심 후 호기심 슬롯. 11:30 지식록과 2시간 분리"
+        }
+      ]
+    },
+    {
+      "time": "낮 경제 골든타임 (14:00) ⭐⭐⭐",
+      "time_range": "13:30~15:00",
+      "primary_time": "14:00",
+      "publishes": [
+        {
+          "channel_slug": "economy-247",
+          "channel": "💹 247경제 (낮)",
+          "primary": true,
+          "notes": "데이터: 경제·시사 12-14시 평균 147.9x · 최대 276x (가장 강함). 낮 시의성 직격"
+        }
+      ]
+    },
+    {
+      "time": "야담 골든타임 (18:30) ⭐⭐⭐",
       "time_range": "18:30~19:30",
       "primary_time": "18:30",
       "publishes": [
@@ -30,12 +63,25 @@
           "channel_slug": "yadam",
           "channel": "📜 깊은밤야담",
           "primary": true,
-          "notes": "데이터: 18-20시 KST 평균 33x · 최대 141.2x. 22:00에서 18:30으로 변경 (2026-06-13)"
+          "notes": "데이터: 18-20시 KST 평균 33x · 최대 141.2x. 잠들기 전 22시가 아닌 저녁 6시가 알고리즘 진입 핵심"
         }
       ]
     },
     {
-      "time": "잠들기 전",
+      "time": "저녁 경제 (19:30)",
+      "time_range": "19:00~20:00",
+      "primary_time": "19:30",
+      "publishes": [
+        {
+          "channel_slug": "economy-247",
+          "channel": "💹 247경제 (밤)",
+          "primary": true,
+          "notes": "저녁 식사 시간 + 경제·시사 18-20시 평균 30.9x · 최대 78.4x"
+        }
+      ]
+    },
+    {
+      "time": "잠들기 전 위로 (20:30)",
       "time_range": "20:00~21:00",
       "primary_time": "20:30",
       "publishes": [
@@ -43,59 +89,102 @@
           "channel_slug": "nn-flix",
           "channel": "🌙 잘듣네",
           "primary": true,
-          "notes": "잠들기 전 위로 진입 + 21시 가족시간 직전 예약"
+          "notes": "데이터: 잘듣네 20-22시 평균 7x (잘듣네 골든타임). 잠들기 전 위로 진입"
         }
       ]
     },
     {
-      "time": "밤 보조 ([수면다큐] 한정)",
+      "time": "저녁 통찰 (21:00) ⭐",
+      "time_range": "20:30~21:30",
+      "primary_time": "21:00",
+      "publishes": [
+        {
+          "channel_slug": "knowledge-archive",
+          "channel": "📈 지식록 (밤)",
+          "primary": true,
+          "notes": "가족 단톡방 공유 시간 + 통찰 결. 잘듣네 20:30·야담 18:30과 30분~2시간 분리"
+        }
+      ]
+    },
+    {
+      "time": "밤 시사 (22:00) ⭐",
+      "time_range": "22:00~22:30",
+      "primary_time": "22:00",
+      "publishes": [
+        {
+          "channel_slug": "redman-politics",
+          "channel": "🇰🇷 레드맨 (밤)",
+          "primary": true,
+          "notes": "정치 채널 데이터: 21~22시 메인 (신의한수·배승희). 저녁 8시 뉴스 후 보강 시청자 진입"
+        }
+      ]
+    },
+    {
+      "time": "밤 보조 [수면다큐] (22:30) ⭐⭐⭐",
       "time_range": "22:00~23:00",
       "primary_time": "22:30",
       "publishes": [
         {
           "channel_slug": "science-world-life",
-          "channel": "🔬 과만세 ([수면다큐])",
+          "channel": "🔬 과만세 [수면다큐]",
           "primary": false,
-          "notes": "[수면다큐] 시리즈만 — 22-24시 KST 평균 209x · 최대 401.5x (시리즈 라벨 부스트 33x)"
+          "notes": "데이터: 22-24시 KST 평균 209.2x · 최대 401.5x. [수면다큐] 시리즈 라벨 부스트 64x"
         }
       ]
     }
   ],
-  "weekly_grid": {
-    "Mon": {
-      "11:30": ["지식록"],
-      "18:30": ["깊은밤야담 (며느리 결)"]
+  "channels": {
+    "knowledge-archive": {
+      "name": "📈 지식록",
+      "publish_time_kst": "11:30",
+      "publish_time_night_kst": "21:00",
+      "windows": ["11:00~12:00 (낮)", "20:30~21:30 (밤)"],
+      "label": "낮 11:30 / 밤 21:00",
+      "reason": "낮: 5070 점심 휴식. 밤: 가족 시간 + 통찰 결",
+      "changed_from": "11:30 단일 → 11:30 + 21:00 듀얼 (2026-06-25)"
     },
-    "Tue": {
-      "11:30": ["과만세"],
-      "20:30": ["잘듣네"]
+    "nn-flix": {
+      "name": "🌙 잘듣네",
+      "publish_time_kst": "20:30",
+      "window": "20:00~21:00",
+      "label": "저녁 8시 30분",
+      "reason": "잘듣네 20-22시 평균 7x. 잠들기 전 위로 진입 슬롯"
     },
-    "Wed": {
-      "11:30": ["지식록"],
-      "18:30": ["깊은밤야담 (사극 결)"]
+    "science-world-life": {
+      "name": "🔬 과만세",
+      "publish_time_kst": "11:30",
+      "publish_time_alt_kst": "13:30",
+      "publish_time_night_kst": "22:30",
+      "windows": ["11:00~14:00 (낮)", "22:00~23:00 (밤 [수면다큐])"],
+      "label": "낮 11:30 또는 13:30 / 밤 22:30 [수면다큐]",
+      "reason": "낮 옵션 13:30 = 점심 후 호기심 슬롯. 22:30 [수면다큐] = 22-24시 평균 209x · 최대 401.5x",
+      "changed_from": "11:30 + 22:30 → 11:30/13:30 + 22:30 (2026-06-25)"
     },
-    "Thu": {
-      "11:30": ["과만세"],
-      "20:30": ["잘듣네"]
+    "yadam": {
+      "name": "📜 깊은밤야담",
+      "publish_time_kst": "18:30",
+      "window": "18:30~19:30",
+      "label": "저녁 6시 30분 ~ 7시 30분",
+      "reason": "데이터: 18-20시 KST 평균 33x · 최대 141.2x",
+      "changed_from": "22:00 → 18:30 (2026-06-13, 데이터 기반 변경)"
     },
-    "Fri": {
-      "11:30": ["지식록"],
-      "18:30": ["깊은밤야담 (동물보은 결)"]
+    "economy-247": {
+      "name": "💹 247경제",
+      "publish_time_kst": "14:00",
+      "publish_time_night_kst": "19:30",
+      "windows": ["13:30~15:00 (낮 ⭐⭐⭐)", "19:00~20:00 (밤)"],
+      "label": "낮 14:00 (강력) / 밤 19:30",
+      "reason": "낮 14:00 = 경제 12-14시 평균 147.9x 최대 276x (최강). 밤 19:30 = 저녁 식사 시간",
+      "changed_from": "19:30 단일 → 14:00 + 19:30 듀얼 (2026-06-25)"
     },
-    "Sat": {
-      "11:30": ["과만세"],
-      "20:30": ["잘듣네"]
-    },
-    "Sun": {
-      "11:30": ["지식록"],
-      "18:30": ["깊은밤야담 (기담 결)"]
+    "redman-politics": {
+      "name": "🇰🇷 레드맨",
+      "publish_time_kst": "09:30",
+      "publish_time_night_kst": "22:00",
+      "windows": ["09:00~10:00 (낮)", "22:00~22:30 (밤)"],
+      "label": "낮 09:30 / 밤 22:00",
+      "reason": "낮: 출근 통근 정치 뉴스 골든타임. 밤: 정치 채널 21~22시 메인 (신의한수·배승희) + 저녁 뉴스 후 보강",
+      "created_at": "2026-06-25 신규 슬롯 박음"
     }
-  },
-  "principles": [
-    "지식록·과만세 = 점심 휴식 11:30 (5070 시니어 점심 진입)",
-    "깊은밤야담 = 저녁 18:30 ⭐ (데이터 기반 변경 2026-06-13 — 18-20시 KST 평균 33x)",
-    "잘듣네 = 잠들기 전 20:30 (위로 청취 진입 슬롯)",
-    "[수면다큐] (과만세) = 밤 22:30 ⭐ (시리즈 라벨 부스트 64x + 22-24시 골든타임)",
-    "발행 시간 = 작업 완료 시간 X, 사용자 시청 골든타임 시각"
-  ]
+  }
 }
