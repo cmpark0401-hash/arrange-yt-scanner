@@ -33,6 +33,7 @@
   .metric-cell .m-label { color: var(--muted); }
   .metric-cell .m-value { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
   .metric-cell .m-value.hot { color: var(--hot); }
+  .metric-cell .m-value.dim { color: var(--muted); font-size: 10px; }
   .col-actions { display: flex; flex-direction: column; gap: 4px; }
   .btn-check {
     background: transparent;
@@ -58,6 +59,35 @@
     margin-bottom: 4px;
   }
   .row.checked .name { text-decoration: line-through; }
+
+  .filter-group {
+    display: inline-flex;
+    background: var(--card);
+    border-radius: 6px;
+    padding: 3px;
+    gap: 2px;
+    margin-right: 8px;
+  }
+  .filter-group button {
+    background: transparent;
+    border: none;
+    padding: 5px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--muted);
+    border-radius: 4px;
+  }
+  .filter-group button.active {
+    background: var(--tier-s);
+    color: var(--tier-s-text);
+  }
+  .filter-group .label {
+    padding: 5px 8px;
+    font-size: 10px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 </style>
 </head>
 <body>
@@ -74,10 +104,22 @@
   </div>
 
   <div class="controls">
-    <button class="active" data-filter="all">전체</button>
-    <button data-filter="S">S</button>
-    <button data-filter="A">A</button>
-    <button data-filter="unchecked">체크 안 됨</button>
+    <div class="filter-group">
+      <span class="label">기간</span>
+      <button data-period="1d">오늘</button>
+      <button data-period="7d" class="active">7일</button>
+      <button data-period="14d">2주</button>
+      <button data-period="30d">30일</button>
+    </div>
+
+    <div class="filter-group">
+      <span class="label">티어</span>
+      <button data-filter="all" class="active">전체</button>
+      <button data-filter="S">S</button>
+      <button data-filter="A">A</button>
+      <button data-filter="unchecked">체크 안 됨</button>
+    </div>
+
     <input id="q" placeholder="🔍 채널명 검색..." oninput="render()">
     <button onclick="openCurrent()">현재 열기</button>
     <button onclick="clearChecks()">체크 초기화</button>
@@ -89,7 +131,7 @@
     <div>채널명</div>
     <div>채널 지표</div>
     <div>최근 업로드</div>
-    <div>최근 7일 TOP</div>
+    <div id="col-top-label">최근 7일 TOP</div>
     <div>액션</div>
   </div>
 
@@ -105,19 +147,42 @@
 <script>
 let channels = window.__CHANNELS__ || [];
 let filter = 'all';
+let period = '7d'; // '1d' | '7d' | '14d' | '30d'
 let currentIdx = 0;
 let checked = JSON.parse(localStorage.getItem('watchlist_checks') || '{}');
 
-channels.sort((a, b) => {
-  if (a.tier !== b.tier) return a.tier === 'S' ? -1 : 1;
-  return (b.top5_30d || 0) - (a.top5_30d || 0);
-});
 document.getElementById('count-s').textContent = channels.filter(c => c.tier === 'S').length;
 document.getElementById('count-a').textContent = channels.filter(c => c.tier === 'A').length;
 
+const PERIOD_LABELS = {
+  '1d': '오늘', '7d': '7일', '14d': '2주', '30d': '30일'
+};
+const PERIOD_TOP_KEYS = {
+  '1d': 'top1_video', '7d': 'top7_video', '14d': 'top14_video', '30d': 'top30_video'
+};
+const PERIOD_TOP5_KEYS = {
+  '1d': 'top5_1d', '7d': 'top5_7d', '14d': 'top5_14d', '30d': 'top5_30d'
+};
+const PERIOD_COUNT_KEYS = {
+  '1d': 'count_1d', '7d': 'count_7d', '14d': 'count_14d', '30d': 'count_30d'
+};
+
 function filtered() {
   const q = document.getElementById('q').value.toLowerCase();
-  let list = channels;
+  let list = [...channels];
+
+  // 정렬: 티어 우선 → 선택 기간 상위5 평균 뷰
+  const primaryKey = PERIOD_TOP5_KEYS[period];
+  const secondaryKey = 'top5_30d';
+  list.sort((a, b) => {
+    if (a.tier !== b.tier) return a.tier === 'S' ? -1 : 1;
+    // 1차: 선택 기간
+    const pDiff = (b[primaryKey] || 0) - (a[primaryKey] || 0);
+    if (pDiff !== 0) return pDiff;
+    // 동률이면 2차: 30일
+    return (b[secondaryKey] || 0) - (a[secondaryKey] || 0);
+  });
+
   if (filter === 'S') list = list.filter(c => c.tier === 'S');
   else if (filter === 'A') list = list.filter(c => c.tier === 'A');
   else if (filter === 'unchecked') list = list.filter(c => !checked[c.cid]);
@@ -148,12 +213,19 @@ function render() {
   const items = filtered();
   const done = Object.keys(checked).filter(k => checked[k]).length;
   document.getElementById('progress').textContent = `${done}/${channels.length}`;
+  document.getElementById('col-top-label').textContent = `최근 ${PERIOD_LABELS[period]} TOP`;
+
+  const topKey = PERIOD_TOP_KEYS[period];
+  const top5Key = PERIOD_TOP5_KEYS[period];
+  const countKey = PERIOD_COUNT_KEYS[period];
 
   document.getElementById('rows').innerHTML = items.map((c, i) => {
     const latest = c.latest_video;
-    const top7 = c.top7_video;
+    const topVideo = c[topKey];
     const isViewing = i === currentIdx;
     const isChecked = !!checked[c.cid];
+    const top5Views = c[top5Key] || 0;
+    const count = c[countKey] || 0;
     return `
       <div class="row tier-${c.tier} ${isViewing ? 'viewing' : ''} ${isChecked ? 'checked' : ''}" onclick="setCurrent(${i})">
         <div class="col-num">${i + 1}</div>
@@ -165,11 +237,11 @@ function render() {
         <div class="metric-cell">
           <div class="m-row"><span class="m-label">구독</span><span class="m-value">${fmt(c.subs)}</span></div>
           <div class="m-row"><span class="m-label">평균뷰</span><span class="m-value">${fmt(c.avg_views)}</span></div>
-          <div class="m-row"><span class="m-label">30일 상위5</span><span class="m-value hot">${fmt(c.top5_30d)}</span></div>
-          <div class="m-row"><span class="m-label">폴링 주기</span><span class="m-value">${c.poll_interval_min}분</span></div>
+          <div class="m-row"><span class="m-label">${PERIOD_LABELS[period]} 상위5</span><span class="m-value hot">${fmt(top5Views)}</span></div>
+          <div class="m-row"><span class="m-label">${PERIOD_LABELS[period]} 편수</span><span class="m-value dim">${count}편</span></div>
         </div>
         <div class="video-cell">${videoCell(latest)}</div>
-        <div class="video-cell">${videoCell(top7)}</div>
+        <div class="video-cell">${videoCell(topVideo)}</div>
         <div class="col-actions">
           <a href="${c.url}" target="_blank" class="btn btn-primary" onclick="event.stopPropagation()">채널 ↗</a>
           <button class="btn-check ${isChecked ? 'checked' : ''}" onclick="event.stopPropagation(); toggle('${c.cid}')">
@@ -197,10 +269,19 @@ function clearChecks() {
   }
 }
 
-document.querySelectorAll('.controls button[data-filter]').forEach(b => {
+document.querySelectorAll('.filter-group button[data-filter]').forEach(b => {
   b.onclick = () => {
     filter = b.dataset.filter;
-    document.querySelectorAll('.controls button[data-filter]').forEach(x => x.classList.remove('active'));
+    document.querySelectorAll('.filter-group button[data-filter]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    currentIdx = 0; render();
+  };
+});
+
+document.querySelectorAll('.filter-group button[data-period]').forEach(b => {
+  b.onclick = () => {
+    period = b.dataset.period;
+    document.querySelectorAll('.filter-group button[data-period]').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
     currentIdx = 0; render();
   };
@@ -220,7 +301,8 @@ document.addEventListener('keydown', e => {
     const v = items[currentIdx].latest_video;
     if (v) window.open(v.url, '_blank');
   } else if (e.key === '2') {
-    const v = items[currentIdx].top7_video;
+    const topKey = PERIOD_TOP_KEYS[period];
+    const v = items[currentIdx][topKey];
     if (v) window.open(v.url, '_blank');
   } else if (e.key === 'x') {
     toggle(items[currentIdx].cid);
