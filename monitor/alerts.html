@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔥 폭발 알림 · 튜브해커</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .alert-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    border-left: 4px solid var(--tier-s);
+  }
+  .alert-card.tier-A { border-left-color: var(--tier-a-text); }
+  .alert-header { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+  .alert-title { font-size: 17px; font-weight: 700; color: #f0f0f0; line-height: 1.4; }
+  .stats-inline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
+  .stat { background: #0f1116; padding: 8px 12px; border-radius: 6px; text-align: center; }
+  .stat-value { font-size: 16px; font-weight: 700; color: var(--hot); }
+  .stat-label { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .actions { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<div id="nav"></div>
+
+<div class="container">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h1>🔥 폭발 알림</h1>
+    <div id="alert-meta" class="muted"></div>
+  </div>
+
+  <div class="controls">
+    <button class="active" data-filter="all">전체 <span id="c-all"></span></button>
+    <button data-filter="S">S 티어 <span id="c-s"></span></button>
+    <button data-filter="A">A 티어 <span id="c-a"></span></button>
+  </div>
+
+  <div id="alerts-container"></div>
+
+  <div id="empty" style="display:none; text-align:center; padding:80px; color:var(--muted);">
+    <div style="font-size: 48px;">👀</div>
+    <div style="margin-top: 16px; font-size: 15px;">아직 폭발 감지 없음</div>
+    <div class="muted" style="margin-top: 8px;">스캐너가 15분마다 감시 중</div>
+  </div>
+</div>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/data/alerts.js"></script>
+<script>
+let alerts = (window.__ALERTS__ || {}).entries || [];
+let batchLocal = (window.__ALERTS__ || {}).batch_local || '';
+let filter = 'all';
+
+document.getElementById('alert-meta').textContent = batchLocal + ' · ' + alerts.length + '건';
+document.getElementById('c-all').textContent = `(${alerts.length})`;
+document.getElementById('c-s').textContent = `(${alerts.filter(a => a.tier === 'S').length})`;
+document.getElementById('c-a').textContent = `(${alerts.filter(a => a.tier === 'A').length})`;
+
+function filtered() {
+  if (filter === 'S') return alerts.filter(a => a.tier === 'S');
+  if (filter === 'A') return alerts.filter(a => a.tier === 'A');
+  return alerts;
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+function render() {
+  const items = filtered();
+  if (items.length === 0) {
+    document.getElementById('empty').style.display = 'block';
+    document.getElementById('alerts-container').innerHTML = '';
+    return;
+  }
+  document.getElementById('empty').style.display = 'none';
+
+  document.getElementById('alerts-container').innerHTML = items.map(a => {
+    const thumb = `https://i.ytimg.com/vi/${a.vid}/mqdefault.jpg`;
+    return `
+    <div class="alert-card tier-${a.tier}">
+      <div class="alert-header">
+        <div style="flex:1">
+          <div style="font-size: 12px; color: var(--muted); margin-bottom: 4px;">
+            <span class="badge badge-${a.tier.toLowerCase()}">${a.tier}</span>
+            ${a.multiplier >= 2 ? '🔥🔥' : '🔥'} #${a.idx}
+          </div>
+          <div class="alert-title">${esc(a.title)}</div>
+          <div style="font-size: 13px; color: #60a5fa; margin-top: 4px;">${esc(a.channel_name)}</div>
+        </div>
+        <div style="flex-shrink: 0;">
+          <img src="${thumb}" style="width: 160px; height: 90px; border-radius: 6px; cursor: pointer;" onclick="window.open('${a.video_url}', '_blank')">
+        </div>
+      </div>
+      <div class="stats-inline">
+        <div class="stat">
+          <div class="stat-value">${a.views.toLocaleString()}</div>
+          <div class="stat-label">조회수 (${a.multiplier}x임계)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">${a.hours_since_publish || '?'}h</div>
+          <div class="stat-label">발행 후</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">${a.comment_ratio_pct}%</div>
+          <div class="stat-label">댓글 참여</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">${a.views_per_hour.toLocaleString()}</div>
+          <div class="stat-label">뷰/시간</div>
+        </div>
+      </div>
+      <div class="actions">
+        <a href="${a.video_url}" target="_blank" class="btn btn-primary">▶ 영상 열기</a>
+        <a href="${a.channel_url}" target="_blank" class="btn btn-secondary">📺 채널 열기</a>
+      </div>
+    </div>
+  `;
+  }).join('');
+}
+
+document.querySelectorAll('.controls button[data-filter]').forEach(b => {
+  b.onclick = () => {
+    filter = b.dataset.filter;
+    document.querySelectorAll('.controls button[data-filter]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    render();
+  };
+});
+
+render();
+</script>
+</body>
+</html>

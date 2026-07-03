@@ -1,0 +1,273 @@
+/* 튜브해커 공통 스타일 */
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, Pretendard, "Apple SD Gothic Neo", sans-serif;
+  margin: 0; padding: 0;
+  background: #0f1116; color: #e4e6eb;
+  min-height: 100vh;
+}
+:root {
+  --bg: #0f1116;
+  --card: #1a1d24;
+  --card-hover: #232732;
+  --border: #2c3140;
+  --text: #e4e6eb;
+  --muted: #8a92a3;
+  --hot: #fbbf24;
+  --tier-s: #7c2d12;
+  --tier-s-text: #fdba74;
+  --tier-a: #1e3a8a;
+  --tier-a-text: #93c5fd;
+  --danger: #dc2626;
+  --success: #166534;
+}
+
+/* Nav */
+.nav-bar {
+  background: #17191f;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+.nav-logo {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav-logo .logo-emoji { font-size: 22px; }
+.nav-links { display: flex; gap: 6px; }
+.nav-link {
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.nav-link:hover { background: var(--card-hover); color: var(--text); }
+.nav-link.active { background: var(--tier-s); color: var(--tier-s-text); }
+.nav-meta { margin-left: auto; color: var(--muted); font-size: 12px; }
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+/* Common */
+h1 { font-size: 22px; margin: 0 0 8px; }
+h2 { font-size: 18px; margin: 24px 0 12px; }
+h3 { font-size: 15px; margin: 16px 0 8px; }
+.muted { color: var(--muted); font-size: 12px; }
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 11px;
+}
+.badge-s { background: var(--tier-s); color: var(--tier-s-text); }
+.badge-a { background: var(--tier-a); color: var(--tier-a-text); }
+.badge-ok { background: #166534; color: #86efac; }
+.badge-warn { background: #78350f; color: #fdba74; }
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.controls button {
+  background: var(--card-hover);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.controls button.active {
+  background: var(--tier-s);
+  color: var(--tier-s-text);
+  border-color: var(--tier-s);
+}
+.controls input {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 200px;
+}
+.progress { color: var(--muted); font-size: 12px; margin-left: auto; }
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+/* Table-like Row */
+.row {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  border-left: 3px solid #333;
+  display: grid;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.row:hover { background: var(--card-hover); }
+.row.tier-S { border-left-color: var(--tier-s-text); }
+.row.tier-A { border-left-color: var(--tier-a-text); }
+.row.viewing {
+  background: var(--card-hover);
+  border-left-width: 5px;
+  box-shadow: 0 0 0 2px var(--tier-s);
+}
+.row.checked { opacity: 0.5; }
+
+/* Buttons */
+.btn {
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.15s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary { background: var(--danger); color: white; }
+.btn-primary:hover { background: #ef4444; }
+.btn-secondary { background: var(--tier-a); color: var(--tier-a-text); }
+.btn-secondary:hover { background: #1e40af; }
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover { background: var(--card-hover); color: var(--text); }
+
+/* Video cell */
+.video-cell {
+  font-size: 11px;
+  overflow: hidden;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.v-thumb {
+  flex-shrink: 0;
+  width: 96px;
+  height: 54px;
+  border-radius: 4px;
+  background: #0f1116;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.15s;
+  position: relative;
+}
+.v-thumb:hover { transform: scale(1.05); }
+.v-thumb.empty::after {
+  content: '📼';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  opacity: 0.3;
+}
+.v-info { flex: 1; min-width: 0; }
+.v-title {
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 3px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.v-meta {
+  color: var(--muted);
+  font-size: 10px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.v-views {
+  color: var(--hot);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.v-link { color: #60a5fa; text-decoration: none; font-size: 10px; }
+.v-link:hover { text-decoration: underline; }
+
+/* Keyboard hint */
+.keyboard-hint {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: var(--card-hover);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 10px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+kbd {
+  background: var(--bg);
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 10px;
+  color: var(--hot);
+  border: 1px solid var(--border);
+}
+
+/* Stats grid */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.stat-tile {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 14px;
+  border: 1px solid var(--border);
+}
+.stat-tile .val {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--hot);
+  font-variant-numeric: tabular-nums;
+}
+.stat-tile .lbl {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}

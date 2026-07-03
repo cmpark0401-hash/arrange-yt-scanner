@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎬 튜브해커 — 유튜브 폭발 감지 시스템</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="nav"></div>
+
+<div class="container">
+  <h1>🎬 튜브해커 대시보드</h1>
+  <p class="muted">유튜브 폭발 감지 · 원조 추적 · 대본 작업 파이프라인</p>
+
+  <div class="stat-grid" style="margin-top: 24px;">
+    <div class="stat-tile">
+      <div class="val" id="stat-channels">-</div>
+      <div class="lbl">감시 채널 (S+A)</div>
+    </div>
+    <div class="stat-tile">
+      <div class="val" id="stat-videos">-</div>
+      <div class="lbl">14일 폭발 후보</div>
+    </div>
+    <div class="stat-tile">
+      <div class="val" id="stat-alerts">-</div>
+      <div class="lbl">최근 알림</div>
+    </div>
+    <div class="stat-tile">
+      <div class="val" id="stat-updated">-</div>
+      <div class="lbl">마지막 갱신</div>
+    </div>
+  </div>
+
+  <h2>바로 가기</h2>
+  <div class="stat-grid">
+    <a href="channels.html" class="stat-tile" style="text-decoration:none; color:inherit;">
+      <div class="val" style="color: var(--tier-a-text)">📺</div>
+      <div class="lbl">채널 감시 리스트<br>등급·지표·최근 영상</div>
+    </a>
+    <a href="alerts.html" class="stat-tile" style="text-decoration:none; color:inherit;">
+      <div class="val" style="color: var(--danger)">🔥</div>
+      <div class="lbl">폭발 알림<br>실시간 감지된 영상</div>
+    </a>
+    <a href="topics.html" class="stat-tile" style="text-decoration:none; color:inherit;">
+      <div class="val" style="color: var(--hot)">📊</div>
+      <div class="lbl">주제 파이<br>U/M/N × H/W/C 매트릭스</div>
+    </a>
+    <a href="reports.html" class="stat-tile" style="text-decoration:none; color:inherit;">
+      <div class="val" style="color: var(--muted)">📋</div>
+      <div class="lbl">일일 리포트<br>주제 클러스터 · 카피 성공률</div>
+    </a>
+  </div>
+
+  <h2>철학</h2>
+  <div class="card">
+    <h3>주제 파이 프레임워크 (U/M/N × H/W/C)</h3>
+    <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+      영상 조회수 천장은 <b style="color:var(--text)">관심사 세그먼트 × 시의성</b>로 결정.
+      실측 검증: JTBC 몰락(U×H) 1.24M, SK하이닉스 45조(N×H) 카피 12편 모두 참패.
+    </p>
+    <table style="width:100%; margin-top: 12px; font-size: 12px; border-collapse: collapse;">
+      <thead>
+        <tr style="color: var(--muted);">
+          <th style="text-align:left; padding: 6px;"></th>
+          <th style="padding: 6px;">U (Universal)</th>
+          <th style="padding: 6px;">M (Mass)</th>
+          <th style="padding: 6px;">N (Niche)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-top: 1px solid var(--border);">
+          <td style="padding: 8px; color: var(--muted);">🔥 H (Hot)</td>
+          <td style="padding: 8px; color: var(--hot);"><b>100만+</b></td>
+          <td style="padding: 8px;">30~50만</td>
+          <td style="padding: 8px; color: var(--muted);">10~15만</td>
+        </tr>
+        <tr style="border-top: 1px solid var(--border);">
+          <td style="padding: 8px; color: var(--muted);">🌤 W (Warm)</td>
+          <td style="padding: 8px;">30~50만</td>
+          <td style="padding: 8px;">15~30만</td>
+          <td style="padding: 8px; color: var(--muted);">5만 미만</td>
+        </tr>
+        <tr style="border-top: 1px solid var(--border);">
+          <td style="padding: 8px; color: var(--muted);">🌑 C (Cold)</td>
+          <td style="padding: 8px;">15~30만</td>
+          <td style="padding: 8px;">5~10만</td>
+          <td style="padding: 8px; color: var(--muted);">3만 미만</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/data/summary.js"></script>
+<script>
+// 통계 표시 (summary.js에서 window.__SUMMARY__ 세팅됨)
+if (window.__SUMMARY__) {
+  const s = window.__SUMMARY__;
+  document.getElementById('stat-channels').textContent = s.channels || '-';
+  document.getElementById('stat-videos').textContent = s.hot_videos || '-';
+  document.getElementById('stat-alerts').textContent = s.recent_alerts || '-';
+  document.getElementById('stat-updated').textContent = s.updated_at || '-';
+  document.getElementById('nav-meta').textContent = '갱신: ' + (s.updated_at || '-');
+}
+</script>
+</body>
+</html>

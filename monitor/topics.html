@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📊 주제 파이 · 튜브해커</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .topic-row {
+    background: var(--card);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    border-left: 4px solid #333;
+    display: grid;
+    grid-template-columns: 60px 1fr 100px 100px 100px 100px 80px;
+    gap: 14px;
+    align-items: center;
+    font-size: 12px;
+  }
+  .topic-row.big { border-left-color: #dc2626; }
+  .topic-row.mid { border-left-color: #fbbf24; }
+  .topic-row.small { border-left-color: #4b5563; opacity: 0.6; }
+  .t-name { font-size: 14px; font-weight: 700; color: var(--text); }
+  .t-num { text-align: center; }
+  .t-val { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .t-val.hot { color: var(--hot); }
+  .seg { display: inline-block; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 10px; }
+  .seg.U { background: #dc2626; color: white; }
+  .seg.M { background: #fbbf24; color: #78350f; }
+  .seg.N { background: #4b5563; color: #d1d5db; }
+</style>
+</head>
+<body>
+<div id="nav"></div>
+
+<div class="container">
+  <h1>📊 주제 파이 (클러스터 25개)</h1>
+  <p class="muted">최근 30일 · 뷰 15K+ · 확장 클러스터링</p>
+
+  <div class="stat-grid" style="margin-top: 20px;">
+    <div class="stat-tile">
+      <div class="val" id="stat-big">-</div>
+      <div class="lbl">🔥🔥 큰 파이 (진입 추천)</div>
+    </div>
+    <div class="stat-tile">
+      <div class="val" id="stat-mid">-</div>
+      <div class="lbl">🔥 중간 파이</div>
+    </div>
+    <div class="stat-tile">
+      <div class="val" id="stat-small">-</div>
+      <div class="lbl">⏸ 좁은 파이 (스킵)</div>
+    </div>
+    <div class="stat-tile">
+      <div class="val" id="stat-total">-</div>
+      <div class="lbl">전체 클러스터</div>
+    </div>
+  </div>
+
+  <h2>모든 클러스터 (총뷰 순)</h2>
+  <div class="topic-row" style="background: transparent; border-left-color: transparent; color: var(--muted); font-size: 10px; text-transform: uppercase;">
+    <div>세그먼트</div>
+    <div>주제</div>
+    <div class="t-val">채널수</div>
+    <div class="t-val">편수</div>
+    <div class="t-val">총뷰</div>
+    <div class="t-val">최고뷰</div>
+    <div class="t-val">성공률</div>
+  </div>
+  <div id="topics-list"></div>
+</div>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/data/topics.js"></script>
+<script>
+const clusters = (window.__TOPICS__ || {}).clusters || [];
+clusters.sort((a, b) => b.total - a.total);
+
+const big = clusters.filter(c => c.copy_success >= 30 && ['U', 'M'].includes(c.segment));
+const mid = clusters.filter(c => c.copy_success >= 15 && c.copy_success < 30);
+const small = clusters.filter(c => c.copy_success < 15);
+
+document.getElementById('stat-big').textContent = big.length;
+document.getElementById('stat-mid').textContent = mid.length;
+document.getElementById('stat-small').textContent = small.length;
+document.getElementById('stat-total').textContent = clusters.length;
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+document.getElementById('topics-list').innerHTML = clusters.map(c => {
+  const size = c.copy_success >= 30 ? 'big' : c.copy_success >= 15 ? 'mid' : 'small';
+  return `
+    <div class="topic-row ${size}">
+      <div class="t-num"><span class="seg ${c.segment}">${c.segment}</span></div>
+      <div class="t-name">${esc(c.cluster)}</div>
+      <div class="t-val">${c.channel_count}</div>
+      <div class="t-val">${c.video_count}</div>
+      <div class="t-val hot">${(c.total || 0).toLocaleString()}</div>
+      <div class="t-val">${(c.max || 0).toLocaleString()}</div>
+      <div class="t-val">${c.copy_success}%</div>
+    </div>
+  `;
+}).join('');
+</script>
+</body>
+</html>

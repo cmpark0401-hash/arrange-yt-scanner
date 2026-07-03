@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📺 채널 감시 리스트 · 튜브해커</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .row {
+    grid-template-columns: 40px 60px 180px 220px 1.2fr 1.2fr 90px;
+  }
+  .col-num {
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+  .col-tier { text-align: center; }
+  .tier-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+  }
+  .tier-tag.S { background: var(--tier-s); color: var(--tier-s-text); }
+  .tier-tag.A { background: var(--tier-a); color: var(--tier-a-text); }
+  .name { font-size: 14px; font-weight: 700; color: #f0f0f0; margin-bottom: 3px; }
+  .name-sub { font-size: 10px; color: #60a5fa; }
+  .metric-cell { font-size: 11px; }
+  .metric-cell .m-row { display: flex; justify-content: space-between; margin-bottom: 2px; }
+  .metric-cell .m-label { color: var(--muted); }
+  .metric-cell .m-value { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .metric-cell .m-value.hot { color: var(--hot); }
+  .col-actions { display: flex; flex-direction: column; gap: 4px; }
+  .btn-check {
+    background: transparent;
+    color: #86efac;
+    border: 1px solid var(--success);
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .btn-check.checked { background: var(--success); color: white; }
+  .col-head {
+    display: grid;
+    grid-template-columns: 40px 60px 180px 220px 1.2fr 1.2fr 90px;
+    gap: 12px;
+    padding: 8px 14px;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .row.checked .name { text-decoration: line-through; }
+</style>
+</head>
+<body>
+<div id="nav"></div>
+
+<div class="container">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+    <h1>📺 채널 감시 리스트</h1>
+    <div style="display: flex; gap: 8px; font-size: 12px;">
+      <span class="badge badge-s">🥇 S <span id="count-s">-</span></span>
+      <span class="badge badge-a">🥈 A <span id="count-a">-</span></span>
+      <span class="muted">진행 <span id="progress">0/0</span></span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="active" data-filter="all">전체</button>
+    <button data-filter="S">S</button>
+    <button data-filter="A">A</button>
+    <button data-filter="unchecked">체크 안 됨</button>
+    <input id="q" placeholder="🔍 채널명 검색..." oninput="render()">
+    <button onclick="openCurrent()">현재 열기</button>
+    <button onclick="clearChecks()">체크 초기화</button>
+  </div>
+
+  <div class="col-head">
+    <div>#</div>
+    <div>등급</div>
+    <div>채널명</div>
+    <div>채널 지표</div>
+    <div>최근 업로드</div>
+    <div>최근 7일 TOP</div>
+    <div>액션</div>
+  </div>
+
+  <div id="rows"></div>
+</div>
+
+<div class="keyboard-hint">
+  <kbd>↓/j</kbd> 다음 · <kbd>↑/k</kbd> 이전 · <kbd>Enter</kbd> 채널 · <kbd>1</kbd> 최근영상 · <kbd>2</kbd> TOP영상 · <kbd>x</kbd> 체크
+</div>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/data/channels.js"></script>
+<script>
+let channels = window.__CHANNELS__ || [];
+let filter = 'all';
+let currentIdx = 0;
+let checked = JSON.parse(localStorage.getItem('watchlist_checks') || '{}');
+
+channels.sort((a, b) => {
+  if (a.tier !== b.tier) return a.tier === 'S' ? -1 : 1;
+  return (b.top5_30d || 0) - (a.top5_30d || 0);
+});
+document.getElementById('count-s').textContent = channels.filter(c => c.tier === 'S').length;
+document.getElementById('count-a').textContent = channels.filter(c => c.tier === 'A').length;
+
+function filtered() {
+  const q = document.getElementById('q').value.toLowerCase();
+  let list = channels;
+  if (filter === 'S') list = list.filter(c => c.tier === 'S');
+  else if (filter === 'A') list = list.filter(c => c.tier === 'A');
+  else if (filter === 'unchecked') list = list.filter(c => !checked[c.cid]);
+  if (q) list = list.filter(c => c.name.toLowerCase().includes(q));
+  return list;
+}
+
+function fmt(n) { return (n || 0).toLocaleString(); }
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+function videoCell(v) {
+  if (!v) return '<div class="v-thumb empty"></div><div class="v-info"><div class="v-title" style="color:var(--muted)">데이터 없음</div></div>';
+  const thumb = `https://i.ytimg.com/vi/${v.vid}/mqdefault.jpg`;
+  return `
+    <div class="v-thumb" style="background-image: url('${thumb}')" onclick="event.stopPropagation(); window.open('${v.url}', '_blank')" title="클릭해서 영상 열기"></div>
+    <div class="v-info">
+      <div class="v-title">${esc(v.title)}</div>
+      <div class="v-meta">
+        <span class="v-views">${fmt(v.views)}뷰</span>
+        <span>${v.date_str} · D+${v.days_ago}</span>
+        <a href="${v.url}" target="_blank" class="v-link" onclick="event.stopPropagation()">↗</a>
+      </div>
+    </div>
+  `;
+}
+
+function render() {
+  const items = filtered();
+  const done = Object.keys(checked).filter(k => checked[k]).length;
+  document.getElementById('progress').textContent = `${done}/${channels.length}`;
+
+  document.getElementById('rows').innerHTML = items.map((c, i) => {
+    const latest = c.latest_video;
+    const top7 = c.top7_video;
+    const isViewing = i === currentIdx;
+    const isChecked = !!checked[c.cid];
+    return `
+      <div class="row tier-${c.tier} ${isViewing ? 'viewing' : ''} ${isChecked ? 'checked' : ''}" onclick="setCurrent(${i})">
+        <div class="col-num">${i + 1}</div>
+        <div class="col-tier"><span class="tier-tag ${c.tier}">${c.tier}</span></div>
+        <div>
+          <div class="name">${esc(c.name)}</div>
+          <div class="name-sub">${c.cid.slice(0, 12)}...</div>
+        </div>
+        <div class="metric-cell">
+          <div class="m-row"><span class="m-label">구독</span><span class="m-value">${fmt(c.subs)}</span></div>
+          <div class="m-row"><span class="m-label">평균뷰</span><span class="m-value">${fmt(c.avg_views)}</span></div>
+          <div class="m-row"><span class="m-label">30일 상위5</span><span class="m-value hot">${fmt(c.top5_30d)}</span></div>
+          <div class="m-row"><span class="m-label">폴링 주기</span><span class="m-value">${c.poll_interval_min}분</span></div>
+        </div>
+        <div class="video-cell">${videoCell(latest)}</div>
+        <div class="video-cell">${videoCell(top7)}</div>
+        <div class="col-actions">
+          <a href="${c.url}" target="_blank" class="btn btn-primary" onclick="event.stopPropagation()">채널 ↗</a>
+          <button class="btn-check ${isChecked ? 'checked' : ''}" onclick="event.stopPropagation(); toggle('${c.cid}')">
+            ${isChecked ? '✓ 체크됨' : '체크'}
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function toggle(cid) {
+  checked[cid] = !checked[cid];
+  localStorage.setItem('watchlist_checks', JSON.stringify(checked));
+  render();
+}
+function setCurrent(i) { currentIdx = i; render(); }
+function openCurrent() {
+  const items = filtered();
+  if (items[currentIdx]) window.open(items[currentIdx].url, '_blank');
+}
+function clearChecks() {
+  if (confirm('체크 모두 지울까요?')) {
+    checked = {}; localStorage.removeItem('watchlist_checks'); render();
+  }
+}
+
+document.querySelectorAll('.controls button[data-filter]').forEach(b => {
+  b.onclick = () => {
+    filter = b.dataset.filter;
+    document.querySelectorAll('.controls button[data-filter]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    currentIdx = 0; render();
+  };
+});
+
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT') return;
+  const items = filtered();
+  if (!items.length) return;
+  if (e.key === 'ArrowDown' || e.key === 'j') {
+    currentIdx = Math.min(currentIdx + 1, items.length - 1); render(); scrollToCurrent();
+  } else if (e.key === 'ArrowUp' || e.key === 'k') {
+    currentIdx = Math.max(0, currentIdx - 1); render(); scrollToCurrent();
+  } else if (e.key === 'Enter') {
+    openCurrent(); toggle(items[currentIdx].cid);
+  } else if (e.key === '1') {
+    const v = items[currentIdx].latest_video;
+    if (v) window.open(v.url, '_blank');
+  } else if (e.key === '2') {
+    const v = items[currentIdx].top7_video;
+    if (v) window.open(v.url, '_blank');
+  } else if (e.key === 'x') {
+    toggle(items[currentIdx].cid);
+  }
+});
+
+function scrollToCurrent() {
+  const el = document.querySelector('.row.viewing');
+  if (el) el.scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+
+render();
+</script>
+</body>
+</html>
