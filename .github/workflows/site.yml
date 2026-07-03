@@ -1,0 +1,54 @@
+name: Site Update (3h)
+
+on:
+  schedule:
+    # 매 3시간 (UTC)
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r monitor_scripts/requirements.txt
+
+      - name: Restore state cache (for alerts.js input)
+        uses: actions/cache@v3
+        with:
+          path: state/
+          key: monitor-state-${{ github.run_id }}-site
+          restore-keys: |
+            monitor-state-
+
+      - name: Refresh watchlist
+        env:
+          YT_TOKEN_KNOWLEDGE_ARCHIVE: ${{ secrets.YT_TOKEN_KNOWLEDGE_ARCHIVE }}
+        run: python monitor_scripts/refresh_watchlist.py
+
+      - name: Build tubehacker site data
+        run: python monitor_scripts/build_tubehacker_site.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add monitor/assets/data/
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "site: $(date -u '+%Y-%m-%d %H:%M UTC') 3시간 갱신"
+            git push
+          fi

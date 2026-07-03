@@ -1,0 +1,61 @@
+name: Daily Full Refresh
+
+on:
+  schedule:
+    # 매일 00:00 UTC = 09:00 KST
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r monitor_scripts/requirements.txt
+
+      - name: Restore state cache
+        uses: actions/cache@v3
+        with:
+          path: state/
+          key: monitor-state-${{ github.run_id }}-daily
+          restore-keys: |
+            monitor-state-
+
+      - name: Refresh watchlist
+        env:
+          YT_TOKEN_KNOWLEDGE_ARCHIVE: ${{ secrets.YT_TOKEN_KNOWLEDGE_ARCHIVE }}
+        run: python monitor_scripts/refresh_watchlist.py
+
+      - name: Fetch my channels (3 OAuth)
+        env:
+          YT_TOKEN_KNOWLEDGE_ARCHIVE: ${{ secrets.YT_TOKEN_KNOWLEDGE_ARCHIVE }}
+          YT_TOKEN_ECONOMY_247: ${{ secrets.YT_TOKEN_ECONOMY_247 }}
+          YT_TOKEN_REDMAN_POLITICS: ${{ secrets.YT_TOKEN_REDMAN_POLITICS }}
+        run: python monitor_scripts/fetch_my_channels.py
+
+      - name: Build tubehacker site data
+        run: python monitor_scripts/build_tubehacker_site.py
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add monitor/assets/data/
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "daily: $(date -u '+%Y-%m-%d') 전면 갱신 (my_channels 포함)"
+            git push
+          fi

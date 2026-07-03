@@ -1,3 +1,10 @@
 .DS_Store
 *.swp
 *.swo
+
+# monitor_scripts 파생 데이터 (workflow 내에서 빌드용 임시)
+monitor_scripts/watchlist_economy_full.json
+monitor_scripts/recycled_archive.json
+state/
+__pycache__/
+*.pyc

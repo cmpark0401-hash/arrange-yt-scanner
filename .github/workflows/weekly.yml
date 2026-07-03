@@ -1,0 +1,51 @@
+name: Weekly Recycled Archive
+
+on:
+  schedule:
+    # 매주 일요일 00:00 UTC = 09:00 KST (일요일)
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r monitor_scripts/requirements.txt
+
+      - name: Restore state cache
+        uses: actions/cache@v3
+        with:
+          path: state/
+          key: monitor-state-${{ github.run_id }}-weekly
+          restore-keys: |
+            monitor-state-
+
+      - name: Build recycled archive
+        env:
+          YT_TOKEN_KNOWLEDGE_ARCHIVE: ${{ secrets.YT_TOKEN_KNOWLEDGE_ARCHIVE }}
+        run: python monitor_scripts/build_recycled_archive.py
+
+      - name: Commit & push recycled.js
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add monitor/assets/data/recycled.js
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "weekly: $(date -u '+%Y-%m-%d') 재활용 아카이브 갱신"
+            git push
+          fi

@@ -1,0 +1,42 @@
+name: Telegram Digest
+
+on:
+  schedule:
+    # 12:00 KST = 03:00 UTC
+    - cron: '0 3 * * *'
+    # 18:00 KST = 09:00 UTC
+    - cron: '0 9 * * *'
+    # 22:00 KST = 13:00 UTC
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r monitor_scripts/requirements.txt
+
+      - name: Restore state cache (read alert history)
+        uses: actions/cache@v3
+        with:
+          path: state/
+          key: monitor-state-${{ github.run_id }}-digest
+          restore-keys: |
+            monitor-state-
+
+      - name: Send digest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python monitor_scripts/build_digest.py --window-hours 6
