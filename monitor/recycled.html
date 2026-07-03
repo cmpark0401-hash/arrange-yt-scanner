@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔁 재활용 후보 · 튜브해커</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .cat-filter {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .cat-btn {
+    background: var(--card-hover);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: all 0.15s;
+  }
+  .cat-btn:hover { background: var(--card); color: var(--text); }
+  .cat-btn.active {
+    background: var(--tier-s);
+    color: var(--tier-s-text);
+    border-color: var(--tier-s);
+  }
+
+  .recycled-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 14px;
+  }
+  .r-card {
+    background: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.15s;
+    cursor: pointer;
+    border: 1px solid var(--border);
+  }
+  .r-card:hover {
+    background: var(--card-hover);
+    transform: translateY(-2px);
+    border-color: var(--hot);
+  }
+  .r-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg);
+    position: relative;
+  }
+  .r-eff-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(220, 38, 38, 0.9);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .r-age-badge {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .r-body { padding: 12px 14px; }
+  .r-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 36px;
+  }
+  .r-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .r-channel { color: #60a5fa; font-weight: 600; }
+  .r-views { color: var(--hot); font-weight: 700; }
+  .r-cat-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--card-hover);
+    color: var(--muted);
+    font-size: 10px;
+    margin-top: 6px;
+  }
+  .r-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div id="nav"></div>
+
+<div class="container">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+    <h1>🔁 재활용 후보 (6개월~2년 전 폭발 영상)</h1>
+    <div id="stats" class="muted"></div>
+  </div>
+
+  <p class="muted" style="margin-bottom: 16px;">
+    감시 채널의 6~24개월 전 폭발 영상 · 오늘 재편집해서 발행하면 알고리즘 재부활 가능성
+  </p>
+
+  <div class="controls">
+    <input id="q" placeholder="🔍 제목 검색 (예: 인도네시아 · 삼성 · 부동산)" oninput="render()" style="flex:1; max-width: 400px;">
+    <select id="sort" onchange="render()">
+      <option value="views">조회수 순</option>
+      <option value="efficiency">효율 순</option>
+      <option value="days_ago">오래된 순</option>
+      <option value="recent">최신 순</option>
+    </select>
+    <select id="tier" onchange="render()">
+      <option value="all">전체 티어</option>
+      <option value="S">S만</option>
+      <option value="A">A만</option>
+    </select>
+  </div>
+
+  <div class="cat-filter" id="cat-filter"></div>
+
+  <div class="recycled-grid" id="grid"></div>
+
+  <div id="empty" style="display:none; text-align:center; padding:80px; color:var(--muted);">
+    <div style="font-size: 48px;">🔍</div>
+    <div style="margin-top: 16px;">검색 결과 없음</div>
+  </div>
+</div>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/bookmarks.js"></script>
+<script src="assets/data/recycled.js"></script>
+<script>
+const data = window.__RECYCLED__ || { candidates: [] };
+const candidates = data.candidates || [];
+let currentCat = 'all';
+
+document.getElementById('stats').textContent = `${candidates.length}편 · 갱신 ${data.built_local || '-'}`;
+
+// 카테고리 버튼 (카운트 포함 · 데스크톱 요약)
+const catCounts = {};
+candidates.forEach(c => catCounts[c.category] = (catCounts[c.category] || 0) + 1);
+const catOrder = ['all'].concat(Object.entries(catCounts).sort((a, b) => b[1] - a[1]).map(x => x[0]));
+document.getElementById('cat-filter').innerHTML = catOrder.map(cat => {
+  const label = cat === 'all' ? `전체 (${candidates.length})` : `${cat} (${catCounts[cat] || 0})`;
+  return `<button class="cat-btn ${cat === currentCat ? 'active' : ''}" data-cat="${cat}">${label}</button>`;
+}).join('');
+
+document.querySelectorAll('.cat-btn').forEach(b => {
+  b.onclick = () => {
+    currentCat = b.dataset.cat;
+    document.querySelectorAll('.cat-btn').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    render();
+  };
+});
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+function fmt(n) { return (n || 0).toLocaleString(); }
+
+function filtered() {
+  const q = document.getElementById('q').value.toLowerCase();
+  const sort = document.getElementById('sort').value;
+  const tier = document.getElementById('tier').value;
+  let list = [...candidates];
+  if (currentCat !== 'all') list = list.filter(c => c.category === currentCat);
+  if (tier !== 'all') list = list.filter(c => c.channel_tier === tier);
+  if (q) list = list.filter(c => c.title.toLowerCase().includes(q) || c.channel_name.toLowerCase().includes(q));
+
+  if (sort === 'views') list.sort((a, b) => b.views - a.views);
+  else if (sort === 'efficiency') list.sort((a, b) => b.efficiency - a.efficiency);
+  else if (sort === 'days_ago') list.sort((a, b) => b.days_ago - a.days_ago);
+  else if (sort === 'recent') list.sort((a, b) => a.days_ago - b.days_ago);
+  return list;
+}
+
+function render() {
+  const items = filtered();
+  const empty = document.getElementById('empty');
+  const grid = document.getElementById('grid');
+
+  if (items.length === 0) {
+    empty.style.display = 'block';
+    grid.innerHTML = '';
+    return;
+  }
+  empty.style.display = 'none';
+
+  grid.innerHTML = items.map(c => {
+    // 북마크 등록 (툴바 위해)
+    TubeHackerBookmarks.register({
+      vid: c.vid, title: c.title, views: c.views, comments: c.comments,
+      url: c.url, days_ago: c.days_ago, date_str: c.published,
+    }, c.channel_name);
+
+    const bm = TubeHackerBookmarks.get(c.vid);
+    const isInterest = bm && bm.type === 'interest';
+    const isProduction = bm && bm.type === 'production';
+    const prodCh = isProduction ? bm.production_channel : null;
+
+    return `
+      <div class="r-card" onclick="window.open('${c.url}', '_blank')">
+        <div class="r-thumb" style="background-image: url('${c.thumbnail}')">
+          <span class="r-eff-badge">${c.efficiency}x</span>
+          <span class="r-age-badge">${c.months_ago}개월 전 · D+${c.days_ago}</span>
+        </div>
+        <div class="r-body">
+          <div class="r-title">${esc(c.title)}</div>
+          <div class="r-meta">
+            <span class="r-channel">${esc(c.channel_name)}</span>
+            <span class="r-views">${fmt(c.views)}뷰</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="r-cat-tag">${c.category}</span>
+            <span style="font-size: 10px; color: var(--muted);">${c.published} · ${c.channel_tier}</span>
+          </div>
+          <div class="r-actions" onclick="event.stopPropagation();">
+            <button class="bm-btn ${isInterest ? 'active' : ''}"
+                    onclick="TubeHackerBookmarks.toggleInterestUI(this, '${c.vid}')"
+                    title="관심주제 담기">
+              ${isInterest ? '⭐ 관심' : '☆ 관심'}
+            </button>
+            <button class="bm-btn ${isProduction ? 'active' : ''}"
+                    onclick="TubeHackerBookmarks.openProductionMenu(event, '${c.vid}')"
+                    title="영상제작으로 담기">
+              ${isProduction ? '🎬 제작중' : '🎥 제작'}
+            </button>
+            ${prodCh && TubeHackerBookmarks.CHANNELS[prodCh] ? `
+              <span style="font-size: 10px; color: ${TubeHackerBookmarks.CHANNELS[prodCh].color}; margin-left: auto; font-weight: 700;">
+                ${TubeHackerBookmarks.CHANNELS[prodCh].emoji} ${TubeHackerBookmarks.CHANNELS[prodCh].name}
+              </span>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+render();
+</script>
+</body>
+</html>
