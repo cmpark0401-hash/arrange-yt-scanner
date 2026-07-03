@@ -8,6 +8,7 @@
   // 상대 경로 사용 (base 무관하게 동작)
   const NAV_ITEMS = [
     { path: 'index.html', name: '홈', emoji: '🏠' },
+    { path: 'my_channels.html', name: '나의 채널', emoji: '🎬' },
     { path: 'channels.html', name: '채널 감시', emoji: '📺' },
     { path: 'alerts.html', name: '폭발 알림', emoji: '🔥' },
     { path: 'topics.html', name: '주제 파이', emoji: '📊' },
