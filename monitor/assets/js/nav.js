@@ -10,6 +10,7 @@
     { path: 'index.html', name: '홈', emoji: '🏠' },
     { path: 'my_channels.html', name: '나의 채널', emoji: '🎬' },
     { path: 'channels.html', name: '채널 감시', emoji: '📺' },
+    { path: 'bookmarks.html', name: '북마크', emoji: '⭐' },
     { path: 'alerts.html', name: '폭발 알림', emoji: '🔥' },
     { path: 'topics.html', name: '주제 파이', emoji: '📊' },
     { path: 'reports.html', name: '리포트', emoji: '📋' },

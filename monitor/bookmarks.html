@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>⭐ 북마크 · 튜브해커</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .tab {
+    padding: 10px 18px;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active {
+    color: var(--text);
+    border-bottom-color: var(--hot);
+  }
+  .tab .tab-count {
+    background: var(--card-hover);
+    color: var(--muted);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .tab.active .tab-count { background: var(--tier-s); color: var(--tier-s-text); }
+
+  .bm-card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    transition: all 0.15s;
+  }
+  .bm-card:hover { background: var(--card-hover); transform: translateX(2px); }
+  .bm-card .bm-thumb {
+    width: 160px;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .bm-info { min-width: 0; }
+  .bm-title { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 6px; }
+  .bm-meta { font-size: 11px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .bm-meta b { color: var(--text); font-weight: 600; }
+  .bm-meta .hot { color: var(--hot); }
+  .bm-actions { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+
+  .prod-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+  }
+  .prod-badge.jisikrok { background: #3b82f6; }
+  .prod-badge.p247 { background: #dc2626; }
+  .prod-badge.redman { background: #e11d48; }
+
+  .empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--muted);
+  }
+  .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+</style>
+</head>
+<body>
+<div id="nav"></div>
+
+<div class="container">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+    <h1>⭐ 북마크</h1>
+    <button onclick="clearAll()" style="background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 6px 12px; border-radius: 5px; cursor: pointer; font-size: 12px;">전체 초기화</button>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+
+  <div id="bm-content"></div>
+</div>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/bookmarks.js"></script>
+<script>
+let currentTab = 'interest'; // 'interest' | 'jisikrok' | '247' | 'redman'
+
+const TABS = [
+  { key: 'interest', name: '관심주제', emoji: '⭐' },
+  { key: 'jisikrok', name: '지식록 제작', emoji: '📈', prodChannel: 'jisikrok' },
+  { key: '247', name: '247경제 제작', emoji: '💹', prodChannel: '247' },
+  { key: 'redman', name: '레드맨 제작', emoji: '🇰🇷', prodChannel: 'redman' },
+];
+
+function getTabBookmarks(tab) {
+  if (tab === 'interest') return TubeHackerBookmarks.getAll('interest');
+  const prod = TabsHelper(tab);
+  return TubeHackerBookmarks.getAll('production').filter(b => b.production_channel === prod);
+}
+function TabsHelper(tab) {
+  return tab; // key === production_channel
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+function fmt(n) { return (n || 0).toLocaleString(); }
+
+function renderTabs() {
+  document.getElementById('tabs').innerHTML = TABS.map(t => {
+    const count = getTabBookmarks(t.key).length;
+    return `
+      <button class="tab ${currentTab === t.key ? 'active' : ''}" onclick="setTab('${t.key}')">
+        ${t.emoji} ${t.name}
+        <span class="tab-count">${count}</span>
+      </button>
+    `;
+  }).join('');
+}
+
+function setTab(key) {
+  currentTab = key;
+  renderTabs();
+  renderContent();
+}
+
+function renderContent() {
+  const items = getTabBookmarks(currentTab);
+
+  if (items.length === 0) {
+    const emptyLbl = currentTab === 'interest'
+      ? '관심 있는 영상 없음<br><br>채널 감시 페이지에서 ⭐ 버튼을 클릭해서 담아두세요.'
+      : '제작 대상 영상 없음<br><br>채널 감시 페이지에서 🎥 버튼 → 채널 선택으로 담아두세요.';
+    document.getElementById('bm-content').innerHTML = `
+      <div class="empty-state">
+        <div class="icon">📭</div>
+        <div>${emptyLbl}</div>
+        <a href="channels.html" style="display:inline-block; margin-top: 16px; padding: 8px 16px; background: var(--tier-s); color: var(--tier-s-text); text-decoration: none; border-radius: 6px; font-weight: 600;">📺 채널 감시로 가기</a>
+      </div>
+    `;
+    return;
+  }
+
+  document.getElementById('bm-content').innerHTML = items.map(b => {
+    const v = b.video;
+    const thumb = `https://i.ytimg.com/vi/${v.vid}/mqdefault.jpg`;
+    const addedDate = new Date(b.added_at).toLocaleString('ko-KR', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+    const prodBadgeClass = b.production_channel === '247' ? 'p247' : (b.production_channel || '');
+    const prodEmoji = b.production_channel && TubeHackerBookmarks.CHANNELS[b.production_channel]
+      ? TubeHackerBookmarks.CHANNELS[b.production_channel].emoji + ' ' + TubeHackerBookmarks.CHANNELS[b.production_channel].name
+      : '';
+
+    return `
+      <div class="bm-card">
+        <div class="bm-thumb" style="background-image: url('${thumb}')" onclick="window.open('${v.url}', '_blank')"></div>
+        <div class="bm-info">
+          <div class="bm-title">${esc(v.title)}</div>
+          <div class="bm-meta">
+            <span>📺 <b>${esc(v.channel_name || '?')}</b></span>
+            <span class="hot">👁 ${fmt(v.views)}뷰</span>
+            <span>💬 ${fmt(v.comments || 0)}</span>
+            <span>${v.date_str} · D+${v.days_ago || '?'}</span>
+            <span>담은 시각: ${addedDate}</span>
+          </div>
+          ${b.type === 'production' ? `<span class="prod-badge ${prodBadgeClass}">${prodEmoji}</span>` : ''}
+        </div>
+        <div class="bm-actions">
+          <a href="${v.url}" target="_blank" class="btn btn-primary">▶ 영상</a>
+          ${b.type === 'production' ? `
+            <button class="btn btn-secondary" onclick="copyPromptToClip('${b.production_channel}', '${v.vid}')">📝 대본 지시 복사</button>
+          ` : ''}
+          <button class="btn btn-ghost" onclick="removeBm('${v.vid}')">🗑 제거</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function copyPromptToClip(channel, vid) {
+  const names = { 'jisikrok': '지식록', '247': '247경제', 'redman': '레드맨' };
+  const prompt = `${names[channel]} 대본: https://youtu.be/${vid} 이 영상 기반 변형 대본 만들어줘`;
+  navigator.clipboard.writeText(prompt);
+  alert('클립보드에 복사됨:\n\n' + prompt);
+}
+
+function removeBm(vid) {
+  if (confirm('북마크 제거?')) {
+    TubeHackerBookmarks.remove(vid);
+    renderTabs();
+    renderContent();
+  }
+}
+
+function clearAll() {
+  if (confirm('모든 북마크 삭제? (되돌릴 수 없음)')) {
+    localStorage.removeItem('tubehacker_bookmarks');
+    renderTabs();
+    renderContent();
+  }
+}
+
+renderTabs();
+renderContent();
+</script>
+</body>
+</html>
