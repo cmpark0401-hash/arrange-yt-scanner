@@ -1,5 +1,5 @@
 /**
- * 튜브해커 공통 네비게이션
+ * 골든타임 공통 네비게이션
  * 각 페이지에서 <div id="nav"></div> 삽입 후 자동 렌더링
  *
  * arrange-yt-scanner.pages.dev/monitor/ 하위에 배포됨
@@ -28,8 +28,8 @@
     container.innerHTML = `
       <nav class="nav-bar">
         <a href="index.html" class="nav-logo">
-          <span class="logo-emoji">🎬</span>
-          <span>튜브해커</span>
+          <span class="logo-emoji">⏰</span>
+          <span>골든타임</span>
         </a>
         <div class="nav-links">
           ${NAV_ITEMS.map(item => {
