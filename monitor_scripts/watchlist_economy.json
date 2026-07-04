@@ -581,5 +581,16 @@
     "top5_30d": 100000,
     "explosion_threshold": 60000,
     "poll_interval_min": 15
+  },
+  {
+    "cid": "UCdskFv3XMO41NG-UMuAfMyg",
+    "name": "퐁퐁퐁경제학",
+    "url": "https://www.youtube.com/@퐁퐁퐁경제학/videos",
+    "tier": "A",
+    "subs": 4380,
+    "avg_views": 1622,
+    "top5_30d": 1622,
+    "explosion_threshold": 5000,
+    "poll_interval_min": 60
   }
 ]
