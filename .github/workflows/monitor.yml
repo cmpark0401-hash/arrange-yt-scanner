@@ -2,8 +2,8 @@ name: Monitor Lite (15min)
 
 on:
   schedule:
-    # 매 15분 (UTC 기준)
-    - cron: '*/15 * * * *'
+    # 매 30분 (UTC 기준 · 무료 티어 스케줄 안정성)
+    - cron: '*/30 * * * *'
   workflow_dispatch:  # 수동 트리거 허용
 
 jobs:
