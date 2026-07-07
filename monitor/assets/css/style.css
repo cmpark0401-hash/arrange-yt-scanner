@@ -14,6 +14,9 @@ body {
   --text: #e4e6eb;
   --muted: #8a92a3;
   --hot: #fbbf24;
+  --tier-ss: #78350f;
+  --tier-ss-bg: #fbbf24;
+  --tier-ss-text: #78350f;
   --tier-s: #7c2d12;
   --tier-s-text: #fdba74;
   --tier-a: #1e3a8a;
@@ -79,8 +82,10 @@ h3 { font-size: 15px; margin: 16px 0 8px; }
   font-weight: 600;
   font-size: 11px;
 }
+.badge-ss { background: var(--tier-ss-bg); color: var(--tier-ss-text); font-weight: 800; }
 .badge-s { background: var(--tier-s); color: var(--tier-s-text); }
 .badge-a { background: var(--tier-a); color: var(--tier-a-text); }
+.tier-tag.SS { background: var(--tier-ss-bg); color: var(--tier-ss-text); font-weight: 800; box-shadow: 0 0 0 1px #d97706; }
 .badge-ok { background: #166534; color: #86efac; }
 .badge-warn { background: #78350f; color: #fdba74; }
 
@@ -138,6 +143,7 @@ h3 { font-size: 15px; margin: 16px 0 8px; }
   transition: all 0.15s;
 }
 .row:hover { background: var(--card-hover); }
+.row.tier-SS { border-left-color: var(--tier-ss-bg); border-left-width: 4px; }
 .row.tier-S { border-left-color: var(--tier-s-text); }
 .row.tier-A { border-left-color: var(--tier-a-text); }
 .row.viewing {
