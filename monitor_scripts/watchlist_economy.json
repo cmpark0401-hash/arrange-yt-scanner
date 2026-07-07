@@ -25,11 +25,11 @@
     "cid": "UCpFgkHCSjutpIijm5Py1ChQ",
     "name": "뿌들뿌들 경제학",
     "url": "https://www.youtube.com/channel/UCpFgkHCSjutpIijm5Py1ChQ/videos",
-    "tier": "S",
+    "tier": "SS",
     "subs": 13400,
     "avg_views": 84842,
     "top5_30d": 220407,
-    "explosion_threshold": 169684,
+    "explosion_threshold": 118778,
     "poll_interval_min": 15
   },
   {
@@ -157,23 +157,23 @@
     "cid": "UCD69gLlIMcDAHG5AzNnp7Bg",
     "name": "김재민TV",
     "url": "https://www.youtube.com/channel/UCD69gLlIMcDAHG5AzNnp7Bg/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 65500,
     "avg_views": 65078,
     "top5_30d": 144629,
-    "explosion_threshold": 130156,
-    "poll_interval_min": 60
+    "explosion_threshold": 91109,
+    "poll_interval_min": 15
   },
   {
     "cid": "UCInJSOkTvEwmjzuOM0uAepQ",
     "name": "경제화이팅",
     "url": "https://www.youtube.com/channel/UCInJSOkTvEwmjzuOM0uAepQ/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 9440,
     "avg_views": 53283,
     "top5_30d": 153742,
-    "explosion_threshold": 106566,
-    "poll_interval_min": 60
+    "explosion_threshold": 74596,
+    "poll_interval_min": 15
   },
   {
     "cid": "UCpc0q5QIXdMk8qTOSPnhNeQ",
@@ -377,12 +377,12 @@
     "cid": "UC-d0TuLXBiOGUNrhDtoW58w",
     "name": "귀에쏙쏙경제학",
     "url": "https://www.youtube.com/channel/UC-d0TuLXBiOGUNrhDtoW58w/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 30300,
     "avg_views": 139472,
     "top5_30d": 388695,
-    "explosion_threshold": 278944,
-    "poll_interval_min": 60
+    "explosion_threshold": 195260,
+    "poll_interval_min": 15
   },
   {
     "cid": "UChlv4GSd7OQl3js-jkLOnFA",
@@ -410,12 +410,12 @@
     "cid": "UCY4FGn0d7ltiW6GDypGnaMA",
     "name": "코믹스 경제",
     "url": "https://www.youtube.com/channel/UCY4FGn0d7ltiW6GDypGnaMA/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 11800,
     "avg_views": 89123,
     "top5_30d": 197594,
-    "explosion_threshold": 178246,
-    "poll_interval_min": 60
+    "explosion_threshold": 124772,
+    "poll_interval_min": 15
   },
   {
     "cid": "UC1nmYBR3WmSeD0wyCLI_-Uw",
