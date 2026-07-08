@@ -11,6 +11,7 @@
     { path: 'my_channels.html', name: '나의 채널', emoji: '🎬' },
     { path: 'channels.html', name: '채널 감시', emoji: '📺' },
     { path: 'channel_pool.html', name: '채널 리스트', emoji: '📋' },
+    { path: 'market_trend.html', name: '시장 트렌드', emoji: '📊' },
     { path: 'recycled.html', name: '재활용 후보', emoji: '🔁' },
     { path: 'bookmarks.html', name: '북마크', emoji: '⭐' },
     { path: 'alerts.html', name: '폭발 알림', emoji: '🔥' },

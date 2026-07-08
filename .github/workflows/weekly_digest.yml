@@ -1,0 +1,38 @@
+name: Weekly Digest (Monday)
+
+on:
+  schedule:
+    # 매주 월요일 00:30 UTC = 09:30 KST
+    - cron: '30 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r monitor_scripts/requirements.txt
+
+      - name: Restore state cache
+        uses: actions/cache@v4
+        with:
+          path: state/
+          key: monitor-state-${{ github.run_id }}-weeklydigest
+          restore-keys: |
+            monitor-state-
+
+      - name: Send weekly market digest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python monitor_scripts/build_weekly_digest.py
