@@ -45,6 +45,9 @@ jobs:
           YT_TOKEN_REDMAN_POLITICS: ${{ secrets.YT_TOKEN_REDMAN_POLITICS }}
         run: python monitor_scripts/fetch_my_channels.py
 
+      - name: Build market daily snapshot (54채널 조회수 크기 추적)
+        run: python monitor_scripts/build_market_daily.py
+
       - name: Build tubehacker site data
         run: python monitor_scripts/build_tubehacker_site.py
 

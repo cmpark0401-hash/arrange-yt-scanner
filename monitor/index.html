@@ -53,6 +53,34 @@
     </a>
   </div>
 
+  <h2>📊 시장 트렌드 (경제 카테고리)</h2>
+  <div class="card" id="market-card">
+    <p class="muted" style="font-size: 12px; margin-bottom: 12px;">
+      감시 채널 <b id="mt-total">-</b>개의 조회수 크기 · 매일 자동 저장 · 어제 대비 변화
+    </p>
+    <div class="stat-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="stat-tile" style="border-left: 3px solid #fbbf24">
+        <div class="val" id="mt-ss">-</div>
+        <div class="lbl">SS 상위5 평균 <span id="mt-ss-d" class="muted"></span></div>
+      </div>
+      <div class="stat-tile" style="border-left: 3px solid #fdba74">
+        <div class="val" id="mt-s">-</div>
+        <div class="lbl">S 상위5 평균 <span id="mt-s-d" class="muted"></span></div>
+      </div>
+      <div class="stat-tile" style="border-left: 3px solid #93c5fd">
+        <div class="val" id="mt-a">-</div>
+        <div class="lbl">A 상위5 평균 <span id="mt-a-d" class="muted"></span></div>
+      </div>
+      <div class="stat-tile" style="border-left: 3px solid var(--hot)">
+        <div class="val" id="mt-boom">-</div>
+        <div class="lbl">10K+ 폭발 채널 <span id="mt-boom-d" class="muted"></span></div>
+      </div>
+    </div>
+    <div style="margin-top: 12px; font-size: 11px; color: var(--muted);">
+      <span id="mt-uploads">-</span> · 최고 뷰: <span id="mt-top" style="color:var(--hot)">-</span>
+    </div>
+  </div>
+
   <h2>철학</h2>
   <div class="card">
     <h3>주제 파이 프레임워크 (U/M/N × H/W/C)</h3>
@@ -95,6 +123,7 @@
 
 <script src="assets/js/nav.js"></script>
 <script src="assets/data/summary.js"></script>
+<script src="assets/data/market_trend.js"></script>
 <script>
 // 통계 표시 (summary.js에서 window.__SUMMARY__ 세팅됨)
 if (window.__SUMMARY__) {
@@ -104,6 +133,39 @@ if (window.__SUMMARY__) {
   document.getElementById('stat-alerts').textContent = s.recent_alerts || '-';
   document.getElementById('stat-updated').textContent = s.updated_at || '-';
   document.getElementById('nav-meta').textContent = '갱신: ' + (s.updated_at || '-');
+}
+
+// 시장 트렌드 표시
+if (window.__MARKET_TREND__) {
+  const snaps = window.__MARKET_TREND__.snapshots || [];
+  if (snaps.length) {
+    const cur = snaps[snaps.length - 1];
+    const prev = snaps.length >= 2 ? snaps[snaps.length - 2] : null;
+    function delta(cKey, pKey) {
+      if (!prev) return '';
+      const v = (cur[cKey] || 0) - (prev[pKey || cKey] || 0);
+      const sign = v > 0 ? '↑+' : (v < 0 ? '↓' : '→');
+      const color = v > 0 ? '#22c55e' : (v < 0 ? '#ef4444' : '#8a92a3');
+      return `<span style="color:${color}">${sign}${Math.abs(v).toLocaleString()}</span>`;
+    }
+    function fmt(n) { return (n || 0).toLocaleString(); }
+    document.getElementById('mt-total').textContent = cur.total_channels || 54;
+    document.getElementById('mt-ss').textContent = fmt(cur.ss_top5_avg);
+    document.getElementById('mt-s').textContent = fmt(cur.s_top5_avg);
+    document.getElementById('mt-a').textContent = fmt(cur.a_top5_avg);
+    document.getElementById('mt-boom').textContent = cur.count_10k_7d;
+    document.getElementById('mt-ss-d').innerHTML = delta('ss_top5_avg');
+    document.getElementById('mt-s-d').innerHTML = delta('s_top5_avg');
+    document.getElementById('mt-a-d').innerHTML = delta('a_top5_avg');
+    document.getElementById('mt-boom-d').innerHTML = delta('count_10k_7d');
+    document.getElementById('mt-uploads').textContent =
+      `7일 발행 ${cur.total_uploads_7d}편 · 30일 ${cur.total_uploads_30d}편`;
+    if (cur.top_video) {
+      const t = cur.top_video;
+      document.getElementById('mt-top').innerHTML =
+        `<a href="https://youtu.be/${t.vid}" target="_blank" style="color:var(--hot)">[${t.tier}] ${t.channel} · ${fmt(t.views)}뷰</a>`;
+    }
+  }
 }
 </script>
 </body>
