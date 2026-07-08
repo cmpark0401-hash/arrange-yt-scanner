@@ -124,12 +124,12 @@
     "cid": "UCdO4PK4YGt3kWavoPqwZt8Q",
     "name": "또박경제",
     "url": "https://www.youtube.com/channel/UCdO4PK4YGt3kWavoPqwZt8Q/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 11700,
     "avg_views": 24587,
     "top5_30d": 71058,
-    "explosion_threshold": 49174,
-    "poll_interval_min": 60
+    "explosion_threshold": 34421,
+    "poll_interval_min": 15
   },
   {
     "cid": "UCXxLftv9YnegsNeV6D8DD4Q",
@@ -179,12 +179,12 @@
     "cid": "UCpc0q5QIXdMk8qTOSPnhNeQ",
     "name": "경제강국",
     "url": "https://www.youtube.com/channel/UCpc0q5QIXdMk8qTOSPnhNeQ/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 16900,
     "avg_views": 60541,
     "top5_30d": 147898,
-    "explosion_threshold": 121082,
-    "poll_interval_min": 60
+    "explosion_threshold": 84757,
+    "poll_interval_min": 15
   },
   {
     "cid": "UCn222kwFLDyPzh1ARzLe-tA",
