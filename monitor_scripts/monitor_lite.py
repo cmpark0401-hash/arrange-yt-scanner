@@ -126,10 +126,19 @@ def classify_alert(views: int, vph: float, hours_since: float, w: dict) -> tuple
     """감지 등급 판정.
 
     반환: (emoji, level)
-      level ∈ {'super', 'explosion', 'early', 'watch'}
+      level ∈ {'ss_new', 'super', 'explosion', 'early', 'watch'}
+
+    SS 신작 우선 원칙 (2026-07-08):
+      SS 티어 채널의 신규 영상은 뷰·VPH 관계없이 즉시 알림
+      (김재민TV급 채널은 무조건 골든 카피 원조 가치)
     """
+    tier = w.get('tier', '')
     threshold = w.get('explosion_threshold', 10000)
     baseline_vph = compute_baseline_vph(w)
+
+    # SS 우선: 뷰 관계없이 신작 감지 즉시 알림
+    if tier == 'SS':
+        return '🟨🟨', 'ss_new'
 
     # Level 1: 폭발
     if views >= threshold * 2:
@@ -146,6 +155,43 @@ def classify_alert(views: int, vph: float, hours_since: float, w: dict) -> tuple
         return '⚡', 'early'
 
     return '👀', 'watch'
+
+
+def format_ss_alert(entry: dict) -> str:
+    """SS 신작 전용 알림 (명령어 프리셋 포함)."""
+    w = entry['w']
+    v = entry['v']
+    s = entry['s']
+    title = s.get('title', '?')
+    vid = v['vid']
+    url = f'https://youtu.be/{vid}'
+    hrs = f'{entry["hours"]:.1f}h' if entry['hours'] else '?'
+
+    # 마크다운 특수문자 이스케이프
+    def esc(t):
+        return t.replace('*', '\\*').replace('_', '\\_').replace('[', '\\[').replace(']', '\\]')
+
+    title_safe = esc(title)
+    ch_name = esc(w['name'])
+
+    lines = [
+        f'🟨🟨 *SS 신작 감지* · {ch_name} \\[D+0/{hrs}\\]',
+        f'📌 {title_safe[:80]}',
+        f'📊 {entry["views"]:,}뷰 · vph {int(entry["vph"] or 0):,}',
+        f'🔗 {url}',
+        '',
+        '📝 *대본 명령어 프리셋* (원하는 채널 붙여넣기)',
+        '━━━━━━━━━━━━━━',
+        f'💹 247 · {title_safe[:35]} 대본 만들어줘',
+        f'원조: {url}',
+        f'러닝타임: 13분 · SS A/B/C 룰 적용',
+        '━━━━━━━━━━━━━━',
+        f'📈 지식록 · {title_safe[:35]} 대본 만들어줘',
+        f'원조: {url}',
+        f'러닝타임: 20분 · \\[숨은값공개\\] 결로 재구성 · SS A/B/C 룰',
+        '━━━━━━━━━━━━━━',
+    ]
+    return '\n'.join(lines)
 
 
 def main():
@@ -236,15 +282,29 @@ def main():
             'w': w, 'v': v, 's': s, 'views': views, 'comments': comments,
             'hours': hours_since, 'vph': vph, 'level': level, 'emoji': emoji,
         }
-        if level in ('super', 'explosion'):
+        if level == 'ss_new':
+            entry['ss_new'] = True
+            explosions.append(entry)  # 최우선 알림 대기열
+        elif level in ('super', 'explosion'):
             explosions.append(entry)
         elif level == 'early':
             earlies.append(entry)
         else:
             watches.append(entry)
 
-    # 4) 텔레그램 알림 (폭발 + 조기 시그널 통합)
-    alerts = explosions + earlies
+    # 4-A) SS 신작 · 개별 알림 즉시 발송 (명령어 프리셋 포함)
+    ss_new_entries = [e for e in explosions if e.get('ss_new')]
+    for e in ss_new_entries:
+        ss_msg = format_ss_alert(e)
+        if not args.dry_run:
+            ok = send_telegram(ss_msg)
+            print(f'  🟨🟨 SS 신작 텔레그램 {"✅" if ok else "❌"} · {e["w"]["name"]}')
+        else:
+            print(f'\n[DRY RUN SS 신작]\n{ss_msg}\n')
+
+    # 4-B) 나머지 폭발·조기 텔레그램 알림 (기존 통합)
+    other_explosions = [e for e in explosions if not e.get('ss_new')]
+    alerts = other_explosions + earlies
     if alerts:
         alerts.sort(key=lambda x: (0 if x['level'] in ('super', 'explosion') else 1, -x['views']))
 
