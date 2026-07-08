@@ -66,6 +66,15 @@ def main():
     watchlist = json.loads(WATCHLIST.read_text(encoding='utf-8'))
     print(f'📡 {len(watchlist)}채널 갱신 시작...')
 
+    # 이전 데이터 로드 (RSS/API 실패 시 fallback)
+    prev_data = {}
+    if OUT.exists():
+        try:
+            prev_list = json.loads(OUT.read_text(encoding='utf-8'))
+            prev_data = {c['cid']: c for c in prev_list}
+        except Exception:
+            pass
+
     token = get_yt_bearer('knowledge-archive')
     now = datetime.now(timezone.utc)
 
@@ -89,6 +98,7 @@ def main():
     print(f'  {len(stats)}편 stats 수집')
 
     enriched = []
+    fallback_count = 0
     for w in watchlist:
         cid = w['cid']
         ch_vids = []
@@ -110,6 +120,15 @@ def main():
                 'date_str': date_str,
                 'url': f'https://youtu.be/{vid}',
             })
+
+        # RSS/API 실패 시 이전 데이터 유지 (fallback)
+        if not ch_vids:
+            prev = prev_data.get(cid)
+            if prev:
+                merged = {**prev, **w, 'updated_at_fallback': now.isoformat()}
+                enriched.append(merged)
+                fallback_count += 1
+                continue
 
         by_recent = sorted(ch_vids, key=lambda x: x['days_ago'])
         latest = by_recent[0] if by_recent else None
