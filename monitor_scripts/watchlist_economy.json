@@ -592,5 +592,29 @@
     "top5_30d": 1622,
     "explosion_threshold": 5000,
     "poll_interval_min": 60
+  },
+  {
+    "cid": "UCPnc2RnDgzguc_wx6I3cf1g",
+    "name": "리얼뉴스 TV",
+    "url": "https://www.youtube.com/channel/UCPnc2RnDgzguc_wx6I3cf1g/videos",
+    "tier": "A",
+    "subs": 1110,
+    "avg_views": 29572,
+    "top5_30d": 36311,
+    "explosion_threshold": 18000,
+    "poll_interval_min": 30,
+    "note": "신생 · 2026-06-24 개설 · 4편 118K · 구독대비 65배 · SS 승격 관측 중"
+  },
+  {
+    "cid": "UCMEbRpvuwTbXxGiyDb1mT8w",
+    "name": "비디오머그",
+    "url": "https://www.youtube.com/channel/UCMEbRpvuwTbXxGiyDb1mT8w/videos",
+    "tier": "A",
+    "subs": 1870000,
+    "avg_views": 12239,
+    "top5_30d": 33386,
+    "explosion_threshold": 30000,
+    "poll_interval_min": 60,
+    "note": "SBS 산하 뉴스 브랜드 · 뉴스 시의성 감지 소스 · shorts 다량 · 롱폼 폭발만 알림"
   }
 ]
