@@ -47,12 +47,13 @@
     "cid": "UCpj0CzATn2UROFHBOZWs7hw",
     "name": "혼돈의경제학",
     "url": "https://www.youtube.com/channel/UCpj0CzATn2UROFHBOZWs7hw/videos",
-    "tier": "S",
+    "tier": "SS",
     "subs": 3700,
     "avg_views": 30424,
     "top5_30d": 81007,
     "explosion_threshold": 60848,
-    "poll_interval_min": 15
+    "poll_interval_min": 15,
+    "note": " | SS 승격 2026-07-14"
   },
   {
     "cid": "UCgjxecjzzlyEQbYTvPbH1zw",
@@ -223,12 +224,13 @@
     "cid": "UCXwOVioPSL6T3mBvcGFuOYg",
     "name": "경제초고수",
     "url": "https://www.youtube.com/channel/UCXwOVioPSL6T3mBvcGFuOYg/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 16000,
     "avg_views": 41381,
     "top5_30d": 113766,
     "explosion_threshold": 82762,
-    "poll_interval_min": 60
+    "poll_interval_min": 15,
+    "note": " | SS 승격 2026-07-14"
   },
   {
     "cid": "UCj3R-Jjdjek2Z1js_ZGAxLg",
@@ -509,12 +511,13 @@
     "cid": "UCR2242gJ23KCtXU3yEZeh2A",
     "name": "골고루 경제학",
     "url": "https://www.youtube.com/channel/UCR2242gJ23KCtXU3yEZeh2A/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 1490,
     "avg_views": 17866,
     "top5_30d": 27319,
     "explosion_threshold": 27319,
-    "poll_interval_min": 60
+    "poll_interval_min": 15,
+    "note": " | SS 승격 2026-07-14"
   },
   {
     "cid": "UCBd1M2_5voU-QGYa2MMvYOA",
@@ -597,13 +600,13 @@
     "cid": "UCPnc2RnDgzguc_wx6I3cf1g",
     "name": "리얼뉴스 TV",
     "url": "https://www.youtube.com/channel/UCPnc2RnDgzguc_wx6I3cf1g/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 1110,
     "avg_views": 29572,
     "top5_30d": 36311,
     "explosion_threshold": 18000,
-    "poll_interval_min": 30,
-    "note": "신생 · 2026-06-24 개설 · 4편 118K · 구독대비 65배 · SS 승격 관측 중"
+    "poll_interval_min": 15,
+    "note": "신생 · 2026-06-24 개설 · 4편 118K · 구독대비 65배 · SS 승격 관측 중 | SS 승격 2026-07-14"
   },
   {
     "cid": "UCMEbRpvuwTbXxGiyDb1mT8w",
@@ -616,5 +619,113 @@
     "explosion_threshold": 30000,
     "poll_interval_min": 60,
     "note": "SBS 산하 뉴스 브랜드 · 뉴스 시의성 감지 소스 · shorts 다량 · 롱폼 폭발만 알림"
+  },
+  {
+    "cid": "UCFOUKWJSGgbFtA5jUzqj5Iw",
+    "name": "경제하앍",
+    "url": "https://www.youtube.com/channel/UCFOUKWJSGgbFtA5jUzqj5Iw/videos",
+    "tier": "SS",
+    "subs": 685,
+    "avg_views": 11190,
+    "top5_30d": 32881,
+    "explosion_threshold": 16000,
+    "poll_interval_min": 15,
+    "note": "신생 · 15편 · 유럽 에어컨 D+2 149K 폭발 · 구독대비 219배 · SS 관측 중 | SS 승격 2026-07-14"
+  },
+  {
+    "cid": "UCT79lEUKFOq-KTr95dPCBnA",
+    "name": "이지경제학",
+    "url": "https://www.youtube.com/channel/UCT79lEUKFOq-KTr95dPCBnA/videos",
+    "tier": "SS",
+    "subs": 1050,
+    "avg_views": 17374,
+    "top5_30d": 48259,
+    "explosion_threshold": 24000,
+    "poll_interval_min": 15,
+    "note": "신생 · 14편 · 한국 버티는 이유 D+4 234K 폭발 · 구독대비 223배 · SS 관측 중 | SS 승격 2026-07-14"
+  },
+  {
+    "cid": "UCkgE4a8KfN62-_VQ4YKdEGQ",
+    "name": "더 리치 · 돈의 흐름을 읽어라",
+    "subs": 3340,
+    "avg_views": 15538,
+    "top5_30d": 37047,
+    "explosion_threshold": 18000,
+    "poll_interval_min": 15,
+    "tier": "SS",
+    "note": "신생 · 14편 · 코스피 620조 D+0 84K VPH 4,921 · 배수 25배 · A 등록 | SS 승격 2026-07-14",
+    "url": "https://www.youtube.com/channel/UCkgE4a8KfN62-_VQ4YKdEGQ/videos"
+  },
+  {
+    "cid": "UCgKj67DtxWM3DkvSu1fL3Mw",
+    "name": "K경제전쟁",
+    "subs": 7490,
+    "avg_views": 37801,
+    "top5_30d": 94116,
+    "explosion_threshold": 47000,
+    "poll_interval_min": 60,
+    "tier": "A",
+    "note": "22편 · 총 69만뷰 · 유럽폭염 삼성2조 D+1 30K · 배수 30배",
+    "url": "https://www.youtube.com/channel/UCgKj67DtxWM3DkvSu1fL3Mw/videos"
+  },
+  {
+    "cid": "UCeAaMy0QHoTmV0R2e6l9dSw",
+    "name": "misi32 Misi32",
+    "subs": 312,
+    "avg_views": 9223,
+    "top5_30d": 9223,
+    "explosion_threshold": 5000,
+    "poll_interval_min": 120,
+    "tier": "A",
+    "note": "초신생 · 1편만 · 폐타이어 D+0 9K · 배수 29배 · 관측",
+    "url": "https://www.youtube.com/channel/UCeAaMy0QHoTmV0R2e6l9dSw/videos"
+  },
+  {
+    "cid": "UCDTjt2AMj8dXco1iP7e1v6Q",
+    "name": "글로벌 머니 시그널",
+    "url": "https://www.youtube.com/channel/UCDTjt2AMj8dXco1iP7e1v6Q/videos",
+    "tier": "A",
+    "subs": 1060,
+    "avg_views": 11042,
+    "top5_30d": 19603,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 60,
+    "note": "9편 · 배수 43 · VPH 1408"
+  },
+  {
+    "cid": "UCYtcgI6rK3TPqycN0RqfiTA",
+    "name": "김민수TV",
+    "url": "https://www.youtube.com/channel/UCYtcgI6rK3TPqycN0RqfiTA/videos",
+    "tier": "A",
+    "subs": 1230,
+    "avg_views": 13895,
+    "top5_30d": 16669,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 60,
+    "note": "6편 · 배수 43 · 네덜란드 기계 52K"
+  },
+  {
+    "cid": "UC3qsliRIszQVx6mDvvcvQUQ",
+    "name": "경제한컵",
+    "url": "https://www.youtube.com/channel/UC3qsliRIszQVx6mDvvcvQUQ/videos",
+    "tier": "A",
+    "subs": 832,
+    "avg_views": 5905,
+    "top5_30d": 16498,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 60,
+    "note": "20편 · 배수 45 · LG 반도체 37K"
+  },
+  {
+    "cid": "UCUHOSB5sg1AgLr7I3EnxphQ",
+    "name": "경제디텍터",
+    "url": "https://www.youtube.com/channel/UCUHOSB5sg1AgLr7I3EnxphQ/videos",
+    "tier": "A",
+    "subs": 3350,
+    "avg_views": 9393,
+    "top5_30d": 26341,
+    "explosion_threshold": 13000,
+    "poll_interval_min": 60,
+    "note": "54편 · 배수 18 · 바다 위 공장 61K"
   }
 ]
