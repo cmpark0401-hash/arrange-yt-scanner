@@ -727,5 +727,17 @@
     "explosion_threshold": 13000,
     "poll_interval_min": 60,
     "note": "54편 · 배수 18 · 바다 위 공장 61K"
+  },
+  {
+    "cid": "UCRa88yEAjHc6GTGld3yv5wQ",
+    "name": "흐름의 관점",
+    "url": "https://www.youtube.com/channel/UCRa88yEAjHc6GTGld3yv5wQ/videos",
+    "tier": "A",
+    "subs": 1100,
+    "avg_views": 8423,
+    "top5_30d": 23483,
+    "explosion_threshold": 12000,
+    "poll_interval_min": 60,
+    "note": "신생 · 15편 · 유럽 에어컨 D+4 99K · 배수 90배 · VPH 1025 · SS 관측 중"
   }
 ]
