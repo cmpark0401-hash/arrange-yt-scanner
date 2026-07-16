@@ -838,6 +838,7 @@
     "tier": "R",
     "threshold": 500000,
     "poll_minutes": 240,
-    "note": "대형 3.95M · 지식인초대석 · 트렌드 관측 · 알림 X"
+    "note": "대형 3.95M · 지식인초대석 · 트렌드 관측 · 알림 X",
+    "poll_interval_min": 240
   }
 ]
