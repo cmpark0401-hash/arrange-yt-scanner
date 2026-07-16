@@ -1009,5 +1009,20 @@
     "note": "대형 3.95M · 지식인초대석 · 트렌드 관측 · 알림 X",
     "poll_interval_min": 240,
     "related_channels": []
+  },
+  {
+    "name": "경제중심지",
+    "cid": "UC2OKEf-u1WePToSaz9nLuOg",
+    "url": "https://www.youtube.com/channel/UC2OKEf-u1WePToSaz9nLuOg/videos",
+    "tier": "A-신생",
+    "subs": 441,
+    "explosion_threshold": 5000,
+    "poll_minutes": 60,
+    "poll_interval_min": 60,
+    "related_channels": [
+      "247",
+      "지식록"
+    ],
+    "note": "2026-07-16 등록: 신생 · 국뽕 반전 특화(삼성·LG·한국 반도체) · CV 1.59 안정 근접 · 최근 D+5 20K 상승세"
   }
 ]
