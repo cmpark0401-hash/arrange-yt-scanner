@@ -9,7 +9,8 @@
     "top5_30d": 15961,
     "explosion_threshold": 18386,
     "poll_interval_min": 15,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UCoxT1kQSLq564FwpK473w-g",
@@ -21,7 +22,8 @@
     "top5_30d": 385135,
     "explosion_threshold": 282794,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UCpFgkHCSjutpIijm5Py1ChQ",
@@ -33,7 +35,10 @@
     "top5_30d": 220407,
     "explosion_threshold": 118778,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UC4rZP6di8Qd7Rh_CRW9LERw",
@@ -45,7 +50,10 @@
     "top5_30d": 76341,
     "explosion_threshold": 53212,
     "poll_interval_min": 15,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCpj0CzATn2UROFHBOZWs7hw",
@@ -58,7 +66,10 @@
     "explosion_threshold": 60848,
     "poll_interval_min": 15,
     "note": " | SS 승격 2026-07-14",
-    "poll_minutes": 30
+    "poll_minutes": 30,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCgjxecjzzlyEQbYTvPbH1zw",
@@ -70,7 +81,10 @@
     "top5_30d": 132197,
     "explosion_threshold": 90712,
     "poll_interval_min": 15,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UC9fMEBHAqyi_W0Tqc2QszFw",
@@ -82,19 +96,27 @@
     "top5_30d": 109251,
     "explosion_threshold": 87204,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제",
+      "247"
+    ]
   },
   {
     "cid": "UCF5YuZguGmklyhKFmMUzS7Q",
     "name": "경제의 힘",
     "url": "https://www.youtube.com/channel/UCF5YuZguGmklyhKFmMUzS7Q/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 81600,
     "avg_views": 57291,
     "top5_30d": 156480,
     "explosion_threshold": 114582,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 15,
+    "note": "2026-07-16 SS 승격: 3채널 주력 벤치마킹 원조 · 신작 즉시 알림",
+    "related_channels": [
+      "지식록"
+    ]
   },
   {
     "cid": "UCo8mXO0-vYA1dBnqhNq-9FQ",
@@ -106,7 +128,8 @@
     "top5_30d": 25932,
     "explosion_threshold": 18204,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UCjKYxyhaAxALEVp_q_q0EcQ",
@@ -118,7 +141,8 @@
     "top5_30d": 22725,
     "explosion_threshold": 17598,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": []
   },
   {
     "cid": "UCBd3SwW8U7n_vsjevfJuvJA",
@@ -130,7 +154,8 @@
     "top5_30d": 10272,
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": []
   },
   {
     "cid": "UCdO4PK4YGt3kWavoPqwZt8Q",
@@ -142,7 +167,11 @@
     "top5_30d": 71058,
     "explosion_threshold": 34421,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제",
+      "지식록"
+    ]
   },
   {
     "cid": "UCXxLftv9YnegsNeV6D8DD4Q",
@@ -154,7 +183,8 @@
     "top5_30d": 15076,
     "explosion_threshold": 11556,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": []
   },
   {
     "cid": "UCVc2lEXhZ9-xogfmjQZ9P2w",
@@ -166,19 +196,24 @@
     "top5_30d": 108258,
     "explosion_threshold": 73606,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": []
   },
   {
     "cid": "UCD69gLlIMcDAHG5AzNnp7Bg",
     "name": "김재민TV",
     "url": "https://www.youtube.com/channel/UCD69gLlIMcDAHG5AzNnp7Bg/videos",
-    "tier": "A",
+    "tier": "SS",
     "subs": 65500,
     "avg_views": 65078,
     "top5_30d": 144629,
     "explosion_threshold": 91109,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 15,
+    "note": "2026-07-16 SS 승격: 3채널 주력 벤치마킹 원조 · 신작 즉시 알림",
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UCInJSOkTvEwmjzuOM0uAepQ",
@@ -190,7 +225,8 @@
     "top5_30d": 153742,
     "explosion_threshold": 74596,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UCpc0q5QIXdMk8qTOSPnhNeQ",
@@ -202,7 +238,8 @@
     "top5_30d": 147898,
     "explosion_threshold": 84757,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UCn222kwFLDyPzh1ARzLe-tA",
@@ -214,7 +251,11 @@
     "top5_30d": 131582,
     "explosion_threshold": 107668,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제",
+      "247"
+    ]
   },
   {
     "cid": "UCONMiNdg0T45myj-o3aesTg",
@@ -226,7 +267,10 @@
     "top5_30d": 14947,
     "explosion_threshold": 11826,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCrVqJnckVKzUAvzmk1rgElQ",
@@ -238,7 +282,10 @@
     "top5_30d": 108354,
     "explosion_threshold": 82260,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCXwOVioPSL6T3mBvcGFuOYg",
@@ -250,7 +297,10 @@
     "top5_30d": 113766,
     "explosion_threshold": 82762,
     "poll_interval_min": 15,
-    "note": " | SS 승격 2026-07-14"
+    "note": " | SS 승격 2026-07-14",
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCj3R-Jjdjek2Z1js_ZGAxLg",
@@ -262,7 +312,10 @@
     "top5_30d": 117465,
     "explosion_threshold": 80116,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCHRLqYp7U9uZGtgSrcp8VTA",
@@ -274,7 +327,11 @@
     "top5_30d": 30777,
     "explosion_threshold": 20914,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": [
+      "레드맨경제",
+      "247"
+    ]
   },
   {
     "cid": "UClhiVClMewIUofj1NIPBpcQ",
@@ -286,7 +343,8 @@
     "top5_30d": 51139,
     "explosion_threshold": 38222,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UC5hwbRRuNY7wP2oFwkbeSng",
@@ -298,7 +356,10 @@
     "top5_30d": 48686,
     "explosion_threshold": 35324,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UChFNQ8n5_Fk19xDyyMmfzXQ",
@@ -310,7 +371,8 @@
     "top5_30d": 71715,
     "explosion_threshold": 49264,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UChhjTakY69hZynLBvC3FErw",
@@ -322,7 +384,10 @@
     "top5_30d": 48537,
     "explosion_threshold": 39316,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCn49LSg2JSP-9rXV5G2kt4A",
@@ -334,7 +399,8 @@
     "top5_30d": 39023,
     "explosion_threshold": 30952,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": []
   },
   {
     "cid": "UC2JEVexKegalan4xSKjVQ0g",
@@ -345,7 +411,8 @@
     "avg_views": 18716,
     "top5_30d": 55342,
     "explosion_threshold": 37432,
-    "poll_interval_min": 60
+    "poll_interval_min": 60,
+    "related_channels": []
   },
   {
     "cid": "UCwWRZqSivHWjdkNSNsaEcDA",
@@ -357,7 +424,8 @@
     "top5_30d": 40344,
     "explosion_threshold": 35744,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UCMyh92T40NDc9KU48fwvZ1g",
@@ -369,19 +437,26 @@
     "top5_30d": 140731,
     "explosion_threshold": 110298,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UC4x-T7FgY0-n8jPT1NWfg2A",
     "name": "팬더경제학",
     "url": "https://www.youtube.com/channel/UC4x-T7FgY0-n8jPT1NWfg2A/videos",
-    "tier": "S",
+    "tier": "SS",
     "subs": 41000,
     "avg_views": 34075,
     "top5_30d": 81561,
     "explosion_threshold": 68150,
-    "poll_interval_min": 60,
-    "poll_minutes": 30
+    "poll_interval_min": 15,
+    "poll_minutes": 15,
+    "note": "2026-07-16 SS 승격: 3채널 주력 벤치마킹 원조 · 신작 즉시 알림",
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCIXQvJYc8Lc1mgXkJFCg1vg",
@@ -393,7 +468,8 @@
     "top5_30d": 20097,
     "explosion_threshold": 15372,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": []
   },
   {
     "cid": "UCiYbaVEODktcsh09454Grow",
@@ -405,7 +481,8 @@
     "top5_30d": 144699,
     "explosion_threshold": 129998,
     "poll_interval_min": 60,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UC-d0TuLXBiOGUNrhDtoW58w",
@@ -417,7 +494,10 @@
     "top5_30d": 388695,
     "explosion_threshold": 195260,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UChlv4GSd7OQl3js-jkLOnFA",
@@ -429,7 +509,8 @@
     "top5_30d": 291516,
     "explosion_threshold": 229670,
     "poll_interval_min": 60,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UCcPJYDTVkLFHKwn6ldB2uBA",
@@ -441,7 +522,10 @@
     "top5_30d": 12266,
     "explosion_threshold": 10274,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UCY4FGn0d7ltiW6GDypGnaMA",
@@ -453,7 +537,8 @@
     "top5_30d": 197594,
     "explosion_threshold": 124772,
     "poll_interval_min": 15,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UC1nmYBR3WmSeD0wyCLI_-Uw",
@@ -465,7 +550,11 @@
     "top5_30d": 11469,
     "explosion_threshold": 10756,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": [
+      "지식록",
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UC7usMJDHmtbs_oegmzQKKMA",
@@ -477,7 +566,8 @@
     "top5_30d": 139721,
     "explosion_threshold": 129154,
     "poll_interval_min": 60,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UCJo6G1u0e_-wS-JQn3T-zEw",
@@ -489,7 +579,8 @@
     "top5_30d": 374293,
     "explosion_threshold": 374293,
     "poll_interval_min": 60,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UCk1xIGPS2Sory5JT-oc74zQ",
@@ -501,7 +592,8 @@
     "top5_30d": 38458,
     "explosion_threshold": 38458,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UCDjaj6eENGMvgIXfeRErPmA",
@@ -513,7 +605,11 @@
     "top5_30d": 108673,
     "explosion_threshold": 100942,
     "poll_interval_min": 60,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": [
+      "지식록",
+      "247"
+    ]
   },
   {
     "cid": "UCRwGtAIx3HXTx6HjDho0cCw",
@@ -524,7 +620,10 @@
     "avg_views": 20896,
     "top5_30d": 45738,
     "explosion_threshold": 41792,
-    "poll_interval_min": 60
+    "poll_interval_min": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCX7qIVu8L93RXGuEueZ1UHQ",
@@ -536,18 +635,27 @@
     "top5_30d": 6702,
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": [
+      "레드맨경제",
+      "지식록"
+    ]
   },
   {
     "cid": "UCXD1p0ghcxXj8u4s5jYbGkw",
     "name": "너굴경제",
     "url": "https://www.youtube.com/channel/UCXD1p0ghcxXj8u4s5jYbGkw/videos",
-    "tier": "A",
+    "tier": "R",
     "subs": 279000,
     "avg_views": 93215,
     "top5_30d": 133541,
     "explosion_threshold": 133541,
-    "poll_interval_min": 60
+    "poll_interval_min": 240,
+    "poll_minutes": 240,
+    "note": "2026-07-16 강등: 구독 28.2만 대형 · R 티어 · 트렌드 관측만",
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCR2242gJ23KCtXU3yEZeh2A",
@@ -559,7 +667,11 @@
     "top5_30d": 27319,
     "explosion_threshold": 27319,
     "poll_interval_min": 15,
-    "note": " | SS 승격 2026-07-14"
+    "note": " | SS 승격 2026-07-14",
+    "related_channels": [
+      "247",
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCBd1M2_5voU-QGYa2MMvYOA",
@@ -571,7 +683,10 @@
     "top5_30d": 11954,
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "지식록"
+    ]
   },
   {
     "cid": "UC3FNiJw3RXP9Ae0cDY-wOWg",
@@ -583,7 +698,8 @@
     "top5_30d": 8252,
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": []
   },
   {
     "cid": "UCxfko2YOD6DODYRGzeOPhIQ",
@@ -595,7 +711,8 @@
     "top5_30d": 151896,
     "explosion_threshold": 151896,
     "poll_interval_min": 60,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UCUHWCAUgL1UgnIj_V9Tmdfw",
@@ -607,7 +724,10 @@
     "top5_30d": 54578,
     "explosion_threshold": 38006,
     "poll_interval_min": 60,
-    "poll_minutes": 120
+    "poll_minutes": 120,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCIUni4ScRp4mqPXsxy62L5w",
@@ -619,7 +739,8 @@
     "top5_30d": 100000,
     "explosion_threshold": 60000,
     "poll_interval_min": 15,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UCQ2DWm5Md16Dc3xRwwhVE7Q",
@@ -631,7 +752,8 @@
     "top5_30d": 100000,
     "explosion_threshold": 60000,
     "poll_interval_min": 15,
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UCdskFv3XMO41NG-UMuAfMyg",
@@ -643,19 +765,28 @@
     "top5_30d": 1622,
     "explosion_threshold": 5000,
     "poll_interval_min": 60,
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "지식록",
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCPnc2RnDgzguc_wx6I3cf1g",
     "name": "리얼뉴스 TV",
     "url": "https://www.youtube.com/channel/UCPnc2RnDgzguc_wx6I3cf1g/videos",
-    "tier": "SS",
+    "tier": "B",
     "subs": 1110,
     "avg_views": 29572,
     "top5_30d": 36311,
     "explosion_threshold": 18000,
-    "poll_interval_min": 15,
-    "note": "신생 · 2026-06-24 개설 · 4편 118K · 구독대비 65배 · SS 승격 관측 중 | SS 승격 2026-07-14"
+    "poll_interval_min": 240,
+    "note": "2026-07-16 강등: HÀN QUỐC 배지 · 베트남 트래픽 의심 · 카피 대상 X · 관찰만",
+    "poll_minutes": 240,
+    "related_channels": [
+      "지식록",
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCMEbRpvuwTbXxGiyDb1mT8w",
@@ -668,7 +799,8 @@
     "explosion_threshold": 30000,
     "poll_interval_min": 60,
     "note": "SBS 산하 뉴스 브랜드 · 뉴스 시의성 감지 소스 · shorts 다량 · 롱폼 폭발만 알림",
-    "poll_minutes": 240
+    "poll_minutes": 240,
+    "related_channels": []
   },
   {
     "cid": "UCFOUKWJSGgbFtA5jUzqj5Iw",
@@ -680,7 +812,10 @@
     "top5_30d": 32881,
     "explosion_threshold": 16000,
     "poll_interval_min": 15,
-    "note": "신생 · 15편 · 유럽 에어컨 D+2 149K 폭발 · 구독대비 219배 · SS 관측 중 | SS 승격 2026-07-14"
+    "note": "신생 · 15편 · 유럽 에어컨 D+2 149K 폭발 · 구독대비 219배 · SS 관측 중 | SS 승격 2026-07-14",
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCT79lEUKFOq-KTr95dPCBnA",
@@ -692,7 +827,8 @@
     "top5_30d": 48259,
     "explosion_threshold": 24000,
     "poll_interval_min": 15,
-    "note": "신생 · 14편 · 한국 버티는 이유 D+4 234K 폭발 · 구독대비 223배 · SS 관측 중 | SS 승격 2026-07-14"
+    "note": "신생 · 14편 · 한국 버티는 이유 D+4 234K 폭발 · 구독대비 223배 · SS 관측 중 | SS 승격 2026-07-14",
+    "related_channels": []
   },
   {
     "cid": "UCkgE4a8KfN62-_VQ4YKdEGQ",
@@ -704,7 +840,10 @@
     "poll_interval_min": 15,
     "tier": "SS",
     "note": "신생 · 14편 · 코스피 620조 D+0 84K VPH 4,921 · 배수 25배 · A 등록 | SS 승격 2026-07-14",
-    "url": "https://www.youtube.com/channel/UCkgE4a8KfN62-_VQ4YKdEGQ/videos"
+    "url": "https://www.youtube.com/channel/UCkgE4a8KfN62-_VQ4YKdEGQ/videos",
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCgKj67DtxWM3DkvSu1fL3Mw",
@@ -717,7 +856,10 @@
     "tier": "A-신생",
     "note": "22편 · 총 69만뷰 · 유럽폭염 삼성2조 D+1 30K · 배수 30배",
     "url": "https://www.youtube.com/channel/UCgKj67DtxWM3DkvSu1fL3Mw/videos",
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "지식록"
+    ]
   },
   {
     "cid": "UCeAaMy0QHoTmV0R2e6l9dSw",
@@ -729,7 +871,8 @@
     "poll_interval_min": 120,
     "tier": "A",
     "note": "초신생 · 1편만 · 폐타이어 D+0 9K · 배수 29배 · 관측",
-    "url": "https://www.youtube.com/channel/UCeAaMy0QHoTmV0R2e6l9dSw/videos"
+    "url": "https://www.youtube.com/channel/UCeAaMy0QHoTmV0R2e6l9dSw/videos",
+    "related_channels": []
   },
   {
     "cid": "UCDTjt2AMj8dXco1iP7e1v6Q",
@@ -741,7 +884,11 @@
     "top5_30d": 19603,
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
-    "note": "9편 · 배수 43 · VPH 1408"
+    "note": "9편 · 배수 43 · VPH 1408",
+    "related_channels": [
+      "247",
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCYtcgI6rK3TPqycN0RqfiTA",
@@ -754,7 +901,8 @@
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
     "note": "6편 · 배수 43 · 네덜란드 기계 52K",
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": []
   },
   {
     "cid": "UC3qsliRIszQVx6mDvvcvQUQ",
@@ -766,7 +914,10 @@
     "top5_30d": 16498,
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
-    "note": "20편 · 배수 45 · LG 반도체 37K"
+    "note": "20편 · 배수 45 · LG 반도체 37K",
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UCUHOSB5sg1AgLr7I3EnxphQ",
@@ -779,7 +930,10 @@
     "explosion_threshold": 13000,
     "poll_interval_min": 60,
     "note": "54편 · 배수 18 · 바다 위 공장 61K",
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCRa88yEAjHc6GTGld3yv5wQ",
@@ -791,7 +945,11 @@
     "top5_30d": 23483,
     "explosion_threshold": 12000,
     "poll_interval_min": 60,
-    "note": "신생 · 15편 · 유럽 에어컨 D+4 99K · 배수 90배 · VPH 1025 · SS 관측 중"
+    "note": "신생 · 15편 · 유럽 에어컨 D+4 99K · 배수 90배 · VPH 1025 · SS 관측 중",
+    "related_channels": [
+      "레드맨경제",
+      "247"
+    ]
   },
   {
     "cid": "UCwD_xccmY2wv4j8VNZ5sv3A",
@@ -803,7 +961,10 @@
     "top5_30d": 300352,
     "explosion_threshold": 150000,
     "poll_interval_min": 30,
-    "note": "12편 · 지정학·안보 · 캐나다 잠수함 300K · 러시아 불곰 900K (재활용)"
+    "note": "12편 · 지정학·안보 · 캐나다 잠수함 300K · 러시아 불곰 900K (재활용)",
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "cid": "UCi9DIcfdTZjIAC48gXl3hsQ",
@@ -816,7 +977,11 @@
     "explosion_threshold": 61000,
     "poll_interval_min": 60,
     "note": "15편 · 유통·소비자 결 · 배수 14배 · 최근 100K대",
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제",
+      "247"
+    ]
   },
   {
     "cid": "UC3mnFpI5MH8M83nIG-qttnw",
@@ -829,7 +994,10 @@
     "explosion_threshold": 13500,
     "poll_interval_min": 60,
     "note": "신생 · 23편 · 배수 36배 · LNG선·엔비디아·그래핀 텅스텐 결",
-    "poll_minutes": 60
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제"
+    ]
   },
   {
     "name": "지식인사이드",
@@ -839,6 +1007,7 @@
     "threshold": 500000,
     "poll_minutes": 240,
     "note": "대형 3.95M · 지식인초대석 · 트렌드 관측 · 알림 X",
-    "poll_interval_min": 240
+    "poll_interval_min": 240,
+    "related_channels": []
   }
 ]

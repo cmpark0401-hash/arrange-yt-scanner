@@ -27,6 +27,19 @@
   }
   .tier-tag.S { background: var(--tier-s); color: var(--tier-s-text); }
   .tier-tag.A { background: var(--tier-a); color: var(--tier-a-text); }
+  .our-ch-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+  .our-ch-tag {
+    display: inline-block; padding: 1px 7px; border-radius: 10px;
+    font-size: 10px; font-weight: 600; letter-spacing: -0.3px;
+  }
+  .our-ch-tag.지식록 { background: #dbeafe; color: #1e40af; }
+  .our-ch-tag.\32 47 { background: #dcfce7; color: #166534; }
+  .our-ch-tag.레드맨경제 { background: #fee2e2; color: #991b1b; }
+  @media (prefers-color-scheme: dark) {
+    .our-ch-tag.지식록 { background: #1e3a8a; color: #dbeafe; }
+    .our-ch-tag.\32 47 { background: #14532d; color: #bbf7d0; }
+    .our-ch-tag.레드맨경제 { background: #7f1d1d; color: #fecaca; }
+  }
   .name { font-size: 14px; font-weight: 700; color: #f0f0f0; margin-bottom: 3px; }
   .name-sub { font-size: 10px; color: #60a5fa; }
   .metric-cell { font-size: 11px; }
@@ -244,6 +257,7 @@ function render() {
         <div>
           <div class="name">${esc(c.name)}</div>
           <div class="name-sub">${c.cid.slice(0, 12)}...</div>
+          ${(c.related_channels && c.related_channels.length && c.related_channels[0] !== 'self') ? `<div class="our-ch-tags">${c.related_channels.map(t => `<span class="our-ch-tag ${t}">${t === '레드맨경제' ? '레드맨' : t}</span>`).join('')}</div>` : ''}
         </div>
         <div class="metric-cell">
           <div class="m-row"><span class="m-label">구독</span><span class="m-value">${fmt(c.subs)}</span></div>
