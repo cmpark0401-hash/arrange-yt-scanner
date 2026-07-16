@@ -739,5 +739,41 @@
     "explosion_threshold": 12000,
     "poll_interval_min": 60,
     "note": "신생 · 15편 · 유럽 에어컨 D+4 99K · 배수 90배 · VPH 1025 · SS 관측 중"
+  },
+  {
+    "cid": "UCwD_xccmY2wv4j8VNZ5sv3A",
+    "name": "지정학연구소",
+    "url": "https://www.youtube.com/channel/UCwD_xccmY2wv4j8VNZ5sv3A/videos",
+    "tier": "S",
+    "subs": 13800,
+    "avg_views": 146041,
+    "top5_30d": 300352,
+    "explosion_threshold": 150000,
+    "poll_interval_min": 30,
+    "note": "12편 · 지정학·안보 · 캐나다 잠수함 300K · 러시아 불곰 900K (재활용)"
+  },
+  {
+    "cid": "UCi9DIcfdTZjIAC48gXl3hsQ",
+    "name": "너만봐 경제학",
+    "url": "https://www.youtube.com/channel/UCi9DIcfdTZjIAC48gXl3hsQ/videos",
+    "tier": "A",
+    "subs": 10700,
+    "avg_views": 55844,
+    "top5_30d": 122375,
+    "explosion_threshold": 61000,
+    "poll_interval_min": 60,
+    "note": "15편 · 유통·소비자 결 · 배수 14배 · 최근 100K대"
+  },
+  {
+    "cid": "UC3mnFpI5MH8M83nIG-qttnw",
+    "name": "경제 한입",
+    "url": "https://www.youtube.com/channel/UC3mnFpI5MH8M83nIG-qttnw/videos",
+    "tier": "A",
+    "subs": 1710,
+    "avg_views": 9177,
+    "top5_30d": 27010,
+    "explosion_threshold": 13500,
+    "poll_interval_min": 60,
+    "note": "신생 · 23편 · 배수 36배 · LNG선·엔비디아·그래핀 텅스텐 결"
   }
 ]
