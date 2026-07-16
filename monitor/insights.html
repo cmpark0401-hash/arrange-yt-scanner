@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🧠 채널 인사이트 — 중간값·CV·감정</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .insight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 16px 0; }
+  .insight-card { padding: 14px 16px; border-radius: 10px; border: 1px solid var(--border); background: var(--card-bg); }
+  .persona-stable { border-left: 4px solid #22c55e; }
+  .persona-lottery { border-left: 4px solid #f59e0b; }
+  .persona-mixed { border-left: 4px solid #94a3b8; }
+  .persona-pending { border-left: 4px solid #64748b; opacity: 0.7; }
+  .emotion-red { background: #fef2f2; border-left: 4px solid #ef4444; padding: 10px 14px; border-radius: 8px; }
+  .emotion-blue { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 10px 14px; border-radius: 8px; }
+  .emotion-neutral { background: #f9fafb; border-left: 4px solid #6b7280; padding: 10px 14px; border-radius: 8px; }
+  @media (prefers-color-scheme: dark) {
+    .emotion-red { background: #431a1a; }
+    .emotion-blue { background: #172554; }
+    .emotion-neutral { background: #1f2937; }
+  }
+  table.insights { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.insights th, table.insights td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--border); }
+  table.insights th { background: var(--table-header); font-weight: 600; }
+  table.insights td.n { text-align: right; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .b-stable { background: #dcfce7; color: #166534; }
+  .b-lottery { background: #fef3c7; color: #92400e; }
+  .b-mixed { background: #e5e7eb; color: #374151; }
+  .b-pending { background: #e5e7eb; color: #6b7280; }
+  .cv-bar { display: inline-block; height: 6px; background: #e5e7eb; border-radius: 3px; width: 60px; position: relative; }
+  .cv-fill { position: absolute; left: 0; top: 0; height: 100%; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div id="nav"></div>
+
+<div class="container">
+  <h1>🧠 채널 인사이트</h1>
+  <p class="muted">중간값 · CV(계수변동율) · 감정 수급 — 벤치마크 318편 룰 적용 (<a href="https://nossssi.github.io/autoworker-slides/benchmark.html" target="_blank">원 출처</a>)</p>
+
+  <div class="insight-grid" id="summary-grid"></div>
+
+  <h2>🎭 감정 수급 매트릭스</h2>
+  <p class="muted" style="font-size: 12px;">우리 등록 채널의 감정별 공급량·기대값. 벤치마크 룰: 공급 15편↓=블루·40편↑=레드</p>
+  <div id="emotion-supply"></div>
+
+  <h2>⭐ 안정형 채널 (카피 우선)</h2>
+  <p class="muted" style="font-size: 12px;">CV &lt; 1.6 · 재현성 있음 · 카피 대상으로 안전</p>
+  <div style="overflow-x: auto;">
+    <table class="insights" id="stable-table">
+      <thead><tr>
+        <th>채널</th><th>티어</th><th class="n">구독</th>
+        <th class="n">중간값</th><th class="n">평균</th><th>CV</th>
+        <th class="n">히트율</th><th>주감정</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <h2>🎰 로또형 채널 (경고)</h2>
+  <p class="muted" style="font-size: 12px;">CV &gt; 2.0 · 재현성 없음 · 한 방 의존 · 카피 위험</p>
+  <div style="overflow-x: auto;">
+    <table class="insights" id="lottery-table">
+      <thead><tr>
+        <th>채널</th><th>티어</th><th class="n">구독</th>
+        <th class="n">중간값</th><th class="n">최고편</th><th>CV</th>
+        <th class="n">히트율</th><th>주감정</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <h2>🔀 혼합형·판정유예</h2>
+  <div style="overflow-x: auto;">
+    <table class="insights" id="mixed-table">
+      <thead><tr>
+        <th>채널</th><th>티어</th><th class="n">구독</th>
+        <th class="n">중간값</th><th>CV</th><th>페르소나</th><th>주감정</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top: 32px;">
+    <h3 style="margin-top: 0;">📚 학습 근거</h3>
+    <ul style="font-size: 13px;">
+      <li><a href="https://nossssi.github.io/autoworker-slides/benchmark.html" target="_blank">경제 채널 14개 벤치마크 (318편)</a> · 2026-06-30 ~ 07-14</li>
+      <li><a href="https://nossssi.github.io/autoworker-slides/jeongmo-20260715.html" target="_blank">정모 강의 (2026-07-15)</a> · 6채널 6월 성적</li>
+      <li>히트작 46편 실증 공식 · 감정아크·따옴표57%·숫자61%·24.5분</li>
+      <li>제목 공식: "인용" + 숫자 + 진짜 이유</li>
+    </ul>
+    <p style="font-size: 12px; color: var(--muted);">데이터: 채널당 최근 15편 롱폼(60초+) 기준 · 매일 09:30 갱신 예정</p>
+  </div>
+</div>
+
+<script src="assets/js/nav.js"></script>
+<script>
+async function load() {
+  const r = await fetch('../data/channel_insights.json?ts=' + Date.now());
+  const d = await r.json();
+  const s = d.summary || {};
+  const total = s.total || 0;
+
+  const sg = document.getElementById('summary-grid');
+  sg.innerHTML = `
+    <div class="insight-card persona-stable">
+      <div style="font-size: 12px; color: var(--muted);">안정형</div>
+      <div style="font-size: 28px; font-weight: 700;">${s.stable || 0} <span style="font-size: 13px; color: var(--muted);">/ ${total}</span></div>
+      <div style="font-size: 12px; color: var(--muted);">CV &lt; 1.6 · 카피 우선</div>
+    </div>
+    <div class="insight-card persona-lottery">
+      <div style="font-size: 12px; color: var(--muted);">로또형</div>
+      <div style="font-size: 28px; font-weight: 700;">${s.lottery || 0} <span style="font-size: 13px; color: var(--muted);">/ ${total}</span></div>
+      <div style="font-size: 12px; color: var(--muted);">CV &gt; 2.0 · 재현 X</div>
+    </div>
+    <div class="insight-card persona-mixed">
+      <div style="font-size: 12px; color: var(--muted);">혼합형</div>
+      <div style="font-size: 28px; font-weight: 700;">${s.mixed || 0} <span style="font-size: 13px; color: var(--muted);">/ ${total}</span></div>
+      <div style="font-size: 12px; color: var(--muted);">CV 1.6~2.0</div>
+    </div>
+    <div class="insight-card persona-pending">
+      <div style="font-size: 12px; color: var(--muted);">판정유예</div>
+      <div style="font-size: 28px; font-weight: 700;">${s.pending || 0} <span style="font-size: 13px; color: var(--muted);">/ ${total}</span></div>
+      <div style="font-size: 12px; color: var(--muted);">10편 미만</div>
+    </div>
+  `;
+
+  // Emotion supply
+  const es = document.getElementById('emotion-supply');
+  es.innerHTML = (d.emotion_supply || []).map(m => {
+    const cls = m.status === '레드' ? 'emotion-red' : m.status === '블루' ? 'emotion-blue' : 'emotion-neutral';
+    const badge = m.status === '레드' ? '🔴 레드오션' : m.status === '블루' ? '🔵 블루오션' : '⚪ 중립';
+    return `<div class="${cls}" style="margin-bottom: 8px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <div><b>${m.emotion}</b> <span style="font-size: 12px; color: var(--muted);">· 채널 ${m.channel_count}개</span></div>
+        <div style="text-align: right;">
+          <div style="font-size: 18px; font-weight: 700;">${m.median_of_median.toLocaleString()}</div>
+          <div style="font-size: 11px;">${badge}</div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Tables
+  const stable = d.channels.filter(c => c.persona === '안정형').sort((a,b)=>b.median-a.median);
+  const lottery = d.channels.filter(c => c.persona === '로또형').sort((a,b)=>b.max_view-a.max_view);
+  const mixed = d.channels.filter(c => c.persona === '혼합형' || c.persona === '판정유예').sort((a,b)=>b.median-a.median);
+
+  function cvBar(cv, max=4) {
+    const w = Math.min(cv/max*100, 100);
+    const color = cv < 1.6 ? '#22c55e' : cv > 2 ? '#f59e0b' : '#94a3b8';
+    return `<span class="cv-bar"><span class="cv-fill" style="width:${w}%; background:${color};"></span></span> ${cv}`;
+  }
+  function fmt(n){ return (n||0).toLocaleString(); }
+
+  document.querySelector('#stable-table tbody').innerHTML = stable.map(c => `
+    <tr>
+      <td><b>${c.name}</b></td>
+      <td>${c.tier}</td>
+      <td class="n">${fmt(c.subs)}</td>
+      <td class="n"><b>${fmt(c.median)}</b></td>
+      <td class="n">${fmt(c.mean)}</td>
+      <td>${cvBar(c.cv)}</td>
+      <td class="n">${c.hit_ratio}%</td>
+      <td>${c.top_emotion}</td>
+    </tr>`).join('');
+  document.querySelector('#lottery-table tbody').innerHTML = lottery.map(c => `
+    <tr>
+      <td><b>${c.name}</b></td>
+      <td>${c.tier}</td>
+      <td class="n">${fmt(c.subs)}</td>
+      <td class="n">${fmt(c.median)}</td>
+      <td class="n"><b>${fmt(c.max_view)}</b></td>
+      <td>${cvBar(c.cv)}</td>
+      <td class="n">${c.hit_ratio}%</td>
+      <td>${c.top_emotion}</td>
+    </tr>`).join('');
+  document.querySelector('#mixed-table tbody').innerHTML = mixed.map(c => `
+    <tr>
+      <td>${c.name}</td>
+      <td>${c.tier}</td>
+      <td class="n">${fmt(c.subs)}</td>
+      <td class="n">${fmt(c.median)}</td>
+      <td>${cvBar(c.cv)}</td>
+      <td><span class="badge b-${c.persona==='혼합형'?'mixed':'pending'}">${c.persona}</span></td>
+      <td>${c.top_emotion}</td>
+    </tr>`).join('');
+}
+load();
+</script>
+</body>
+</html>

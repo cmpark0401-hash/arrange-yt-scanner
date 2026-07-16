@@ -17,6 +17,7 @@
     { path: 'alerts.html', name: '폭발 알림', emoji: '🔥' },
     { path: 'topics.html', name: '주제 파이', emoji: '📊' },
     { path: 'reports.html', name: '리포트', emoji: '📋' },
+    { path: 'insights.html', name: '채널 인사이트', emoji: '🧠' },
   ];
 
   function renderNav() {
