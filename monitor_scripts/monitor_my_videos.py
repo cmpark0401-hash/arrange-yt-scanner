@@ -27,7 +27,7 @@ ALERT_STATE = STATE_DIR / 'my_video_alerts.json'
 CHANNELS = [
     {'slug': 'knowledge-archive', 'name': '지식록', 'emoji': '📈'},
     {'slug': 'economy-247', 'name': '247경제', 'emoji': '💹'},
-    {'slug': 'redman-politics', 'name': '레드맨', 'emoji': '🇰🇷'},
+    {'slug': 'redman-economy', 'name': '레드맨', 'emoji': '🇰🇷'},
 ]
 
 

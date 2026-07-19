@@ -1038,5 +1038,34 @@
       "레드맨경제"
     ],
     "note": "2026-07-18 등록: 성숙 채널 · CV 0.78(매우 안정) but 최근 5개월 편만 top5 · 활동 저조 · 몰락 서사 참고용 · 알림 X"
+  },
+  {
+    "name": "경제한꺼풀",
+    "cid": "UCNOQrpHTX-eJD-WpGGMSpzg",
+    "url": "https://www.youtube.com/channel/UCNOQrpHTX-eJD-WpGGMSpzg/videos",
+    "tier": "A-신생",
+    "subs": 5010,
+    "explosion_threshold": 34000,
+    "poll_minutes": 60,
+    "poll_interval_min": 60,
+    "related_channels": [
+      "지식록",
+      "레드맨경제"
+    ],
+    "note": "2026-07-19 등록: 신생 54일·CV 2.28 로또형·최고 222K(유럽에어컨)·배수 44.4배·25.1분 완벽 매치·SS 관찰"
+  },
+  {
+    "name": "오늘의 지식지도",
+    "cid": "UC6Qf2Sz4pn3Ox_lW87o2AQQ",
+    "url": "https://www.youtube.com/channel/UC6Qf2Sz4pn3Ox_lW87o2AQQ/videos",
+    "tier": "A",
+    "subs": 1640,
+    "explosion_threshold": 17000,
+    "poll_minutes": 60,
+    "poll_interval_min": 60,
+    "related_channels": [
+      "레드맨경제"
+    ],
+    "note": "2026-07-19 등록: 오래된 채널 부활·CV 1.73·최고 117K(재계10위 몰락)·배수 71.5·31.5분 롱폼·OO의 몰락 시리즈"
   }
 ]

@@ -19,7 +19,7 @@ OUT = ROOT / 'monitor/assets/data/my_channels.js'
 MY_CHANNELS = [
     {'slug': 'knowledge-archive', 'name': '지식록', 'emoji': '📈', 'color': '#3b82f6'},
     {'slug': 'economy-247', 'name': '247경제', 'emoji': '💹', 'color': '#dc2626'},
-    {'slug': 'redman-politics', 'name': '레드맨', 'emoji': '🇰🇷', 'color': '#e11d48'},
+    {'slug': 'redman-economy', 'name': '레드맨', 'emoji': '🇰🇷', 'color': '#e11d48'},
 ]
 
 

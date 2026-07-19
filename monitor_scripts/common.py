@@ -16,7 +16,7 @@ STATE_DIR.mkdir(exist_ok=True)
 CHANNEL_TOKENS = {
     'knowledge-archive': 'YT_TOKEN_KNOWLEDGE_ARCHIVE',
     'economy-247': 'YT_TOKEN_ECONOMY_247',
-    'redman-politics': 'YT_TOKEN_REDMAN_POLITICS',
+    'redman-economy': 'YT_TOKEN_REDMAN_POLITICS',
 }
 
 
