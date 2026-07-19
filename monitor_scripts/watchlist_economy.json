@@ -37,7 +37,7 @@
     "poll_interval_min": 15,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -52,7 +52,7 @@
     "poll_interval_min": 15,
     "poll_minutes": 120,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -68,7 +68,7 @@
     "note": " | SS 승격 2026-07-14",
     "poll_minutes": 30,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -83,7 +83,7 @@
     "poll_interval_min": 15,
     "poll_minutes": 120,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -98,7 +98,6 @@
     "poll_interval_min": 15,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제",
       "247"
     ]
   },
@@ -155,7 +154,9 @@
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
     "poll_minutes": 120,
-    "related_channels": []
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UCdO4PK4YGt3kWavoPqwZt8Q",
@@ -169,7 +170,7 @@
     "poll_interval_min": 15,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제",
+      "247",
       "지식록"
     ]
   },
@@ -184,7 +185,9 @@
     "explosion_threshold": 11556,
     "poll_interval_min": 60,
     "poll_minutes": 120,
-    "related_channels": []
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UCVc2lEXhZ9-xogfmjQZ9P2w",
@@ -239,7 +242,9 @@
     "explosion_threshold": 84757,
     "poll_interval_min": 15,
     "poll_minutes": 60,
-    "related_channels": []
+    "related_channels": [
+      "지식록"
+    ]
   },
   {
     "cid": "UCn222kwFLDyPzh1ARzLe-tA",
@@ -253,7 +258,6 @@
     "poll_interval_min": 60,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제",
       "247"
     ]
   },
@@ -269,7 +273,7 @@
     "poll_interval_min": 60,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -284,7 +288,7 @@
     "poll_interval_min": 60,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -298,9 +302,7 @@
     "explosion_threshold": 82762,
     "poll_interval_min": 15,
     "note": " | SS 승격 2026-07-14",
-    "related_channels": [
-      "레드맨경제"
-    ]
+    "related_channels": []
   },
   {
     "cid": "UCj3R-Jjdjek2Z1js_ZGAxLg",
@@ -314,7 +316,7 @@
     "poll_interval_min": 60,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -329,7 +331,6 @@
     "poll_interval_min": 60,
     "poll_minutes": 120,
     "related_channels": [
-      "레드맨경제",
       "247"
     ]
   },
@@ -358,7 +359,7 @@
     "poll_interval_min": 60,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -386,7 +387,7 @@
     "poll_interval_min": 60,
     "poll_minutes": 120,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -400,7 +401,9 @@
     "explosion_threshold": 30952,
     "poll_interval_min": 60,
     "poll_minutes": 120,
-    "related_channels": []
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UC2JEVexKegalan4xSKjVQ0g",
@@ -455,7 +458,8 @@
     "poll_minutes": 15,
     "note": "2026-07-16 SS 승격: 3채널 주력 벤치마킹 원조 · 신작 즉시 알림",
     "related_channels": [
-      "레드맨경제"
+      "지식록",
+      "247"
     ]
   },
   {
@@ -496,7 +500,7 @@
     "poll_interval_min": 15,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -553,7 +557,7 @@
     "poll_minutes": 120,
     "related_channels": [
       "지식록",
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -593,7 +597,9 @@
     "explosion_threshold": 38458,
     "poll_interval_min": 60,
     "poll_minutes": 60,
-    "related_channels": []
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UCDjaj6eENGMvgIXfeRErPmA",
@@ -607,8 +613,8 @@
     "poll_interval_min": 60,
     "poll_minutes": 240,
     "related_channels": [
-      "지식록",
-      "247"
+      "247",
+      "지식록"
     ]
   },
   {
@@ -622,7 +628,7 @@
     "explosion_threshold": 41792,
     "poll_interval_min": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -637,7 +643,7 @@
     "poll_interval_min": 60,
     "poll_minutes": 120,
     "related_channels": [
-      "레드맨경제",
+      "247",
       "지식록"
     ]
   },
@@ -654,7 +660,7 @@
     "poll_minutes": 240,
     "note": "2026-07-16 강등: 구독 28.2만 대형 · R 티어 · 트렌드 관측만",
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -669,8 +675,7 @@
     "poll_interval_min": 15,
     "note": " | SS 승격 2026-07-14",
     "related_channels": [
-      "247",
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -684,9 +689,7 @@
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
     "poll_minutes": 60,
-    "related_channels": [
-      "지식록"
-    ]
+    "related_channels": []
   },
   {
     "cid": "UC3FNiJw3RXP9Ae0cDY-wOWg",
@@ -699,7 +702,9 @@
     "explosion_threshold": 10000,
     "poll_interval_min": 60,
     "poll_minutes": 120,
-    "related_channels": []
+    "related_channels": [
+      "지식록"
+    ]
   },
   {
     "cid": "UCxfko2YOD6DODYRGzeOPhIQ",
@@ -726,7 +731,7 @@
     "poll_interval_min": 60,
     "poll_minutes": 120,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -768,7 +773,7 @@
     "poll_minutes": 60,
     "related_channels": [
       "지식록",
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -785,7 +790,7 @@
     "poll_minutes": 240,
     "related_channels": [
       "지식록",
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -814,7 +819,7 @@
     "poll_interval_min": 15,
     "note": "신생 · 15편 · 유럽 에어컨 D+2 149K 폭발 · 구독대비 219배 · SS 관측 중 | SS 승격 2026-07-14",
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -842,7 +847,7 @@
     "note": "신생 · 14편 · 코스피 620조 D+0 84K VPH 4,921 · 배수 25배 · A 등록 | SS 승격 2026-07-14",
     "url": "https://www.youtube.com/channel/UCkgE4a8KfN62-_VQ4YKdEGQ/videos",
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -858,7 +863,7 @@
     "url": "https://www.youtube.com/channel/UCgKj67DtxWM3DkvSu1fL3Mw/videos",
     "poll_minutes": 60,
     "related_channels": [
-      "지식록"
+      "247"
     ]
   },
   {
@@ -872,7 +877,9 @@
     "tier": "A",
     "note": "초신생 · 1편만 · 폐타이어 D+0 9K · 배수 29배 · 관측",
     "url": "https://www.youtube.com/channel/UCeAaMy0QHoTmV0R2e6l9dSw/videos",
-    "related_channels": []
+    "related_channels": [
+      "247"
+    ]
   },
   {
     "cid": "UCDTjt2AMj8dXco1iP7e1v6Q",
@@ -886,8 +893,7 @@
     "poll_interval_min": 60,
     "note": "9편 · 배수 43 · VPH 1408",
     "related_channels": [
-      "247",
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -932,8 +938,7 @@
     "note": "2026-07-19 SS 승격 (사용자 지정): 경제디텍터·소재 좋음(잠수함/트럭 몰락)·소규모지만 잠재력",
     "poll_minutes": 15,
     "related_channels": [
-      "247",
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -948,7 +953,6 @@
     "poll_interval_min": 60,
     "note": "신생 · 15편 · 유럽 에어컨 D+4 99K · 배수 90배 · VPH 1025 · SS 관측 중",
     "related_channels": [
-      "레드맨경제",
       "247"
     ]
   },
@@ -964,7 +968,7 @@
     "poll_interval_min": 30,
     "note": "12편 · 지정학·안보 · 캐나다 잠수함 300K · 러시아 불곰 900K (재활용)",
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -980,7 +984,6 @@
     "note": "15편 · 유통·소비자 결 · 배수 14배 · 최근 100K대",
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제",
       "247"
     ]
   },
@@ -997,7 +1000,7 @@
     "note": "신생 · 23편 · 배수 36배 · LNG선·엔비디아·그래핀 텅스텐 결",
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ]
   },
   {
@@ -1021,8 +1024,7 @@
     "poll_minutes": 60,
     "poll_interval_min": 60,
     "related_channels": [
-      "247",
-      "지식록"
+      "247"
     ],
     "note": "2026-07-16 등록: 신생 · 국뽕 반전 특화(삼성·LG·한국 반도체) · CV 1.59 안정 근접 · 최근 D+5 20K 상승세"
   },
@@ -1036,7 +1038,8 @@
     "poll_minutes": 240,
     "poll_interval_min": 240,
     "related_channels": [
-      "레드맨경제"
+      "247",
+      "지식록"
     ],
     "note": "2026-07-18 등록: 성숙 채널 · CV 0.78(매우 안정) but 최근 5개월 편만 top5 · 활동 저조 · 몰락 서사 참고용 · 알림 X"
   },
@@ -1051,7 +1054,7 @@
     "poll_interval_min": 60,
     "related_channels": [
       "지식록",
-      "레드맨경제"
+      "247"
     ],
     "note": "2026-07-19 등록: 신생 54일·CV 2.28 로또형·최고 222K(유럽에어컨)·배수 44.4배·25.1분 완벽 매치·SS 관찰"
   },
@@ -1065,7 +1068,7 @@
     "poll_minutes": 60,
     "poll_interval_min": 60,
     "related_channels": [
-      "레드맨경제"
+      "247"
     ],
     "note": "2026-07-19 등록: 오래된 채널 부활·CV 1.73·최고 117K(재계10위 몰락)·배수 71.5·31.5분 롱폼·OO의 몰락 시리즈"
   },
@@ -1076,7 +1079,6 @@
     "subs": 10400,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제",
       "247"
     ],
     "note": "2026-07-19 등록: CV 0.77 안정형·몰락 시리즈(엔씨/공무원/싱가포르)·12K",
@@ -1105,7 +1107,6 @@
     "subs": 162000,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제",
       "247"
     ],
     "note": "2026-07-19 등록: 구독 16만·성숙 저조(top5 12K)·몰락 시리즈",
@@ -1120,7 +1121,6 @@
     "subs": 359,
     "poll_minutes": 60,
     "related_channels": [
-      "레드맨경제",
       "247"
     ],
     "note": "2026-07-19 등록: 소형·CV 1.17·배수 11.4·몰락 결(하이마트/식당)",
