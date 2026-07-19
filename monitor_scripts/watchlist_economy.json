@@ -923,15 +923,16 @@
     "cid": "UCUHOSB5sg1AgLr7I3EnxphQ",
     "name": "경제디텍터",
     "url": "https://www.youtube.com/channel/UCUHOSB5sg1AgLr7I3EnxphQ/videos",
-    "tier": "A-신생",
+    "tier": "SS",
     "subs": 3350,
     "avg_views": 9393,
     "top5_30d": 26341,
     "explosion_threshold": 13000,
-    "poll_interval_min": 60,
-    "note": "54편 · 배수 18 · 바다 위 공장 61K",
-    "poll_minutes": 60,
+    "poll_interval_min": 15,
+    "note": "2026-07-19 SS 승격 (사용자 지정): 경제디텍터·소재 좋음(잠수함/트럭 몰락)·소규모지만 잠재력",
+    "poll_minutes": 15,
     "related_channels": [
+      "247",
       "레드맨경제"
     ]
   },
@@ -1067,5 +1068,64 @@
       "레드맨경제"
     ],
     "note": "2026-07-19 등록: 오래된 채널 부활·CV 1.73·최고 117K(재계10위 몰락)·배수 71.5·31.5분 롱폼·OO의 몰락 시리즈"
+  },
+  {
+    "name": "한번쯤궁금했던이야기",
+    "cid": "UCiKJ8EX42CwHul4kzYIS-tA",
+    "tier": "A-신생",
+    "subs": 10400,
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제",
+      "247"
+    ],
+    "note": "2026-07-19 등록: CV 0.77 안정형·몰락 시리즈(엔씨/공무원/싱가포르)·12K",
+    "url": "https://www.youtube.com/channel/UCiKJ8EX42CwHul4kzYIS-tA/videos",
+    "explosion_threshold": 3466,
+    "poll_interval_min": 60
+  },
+  {
+    "name": "해피 경제",
+    "cid": "UCX4UkMHOfLVEXxAdnBMj6DQ",
+    "tier": "B",
+    "subs": 2000,
+    "poll_minutes": 240,
+    "related_channels": [
+      "247"
+    ],
+    "note": "2026-07-19 등록: 활동 낮음(최고 2.5K)·관찰만",
+    "url": "https://www.youtube.com/channel/UCX4UkMHOfLVEXxAdnBMj6DQ/videos",
+    "explosion_threshold": 1000,
+    "poll_interval_min": 240
+  },
+  {
+    "name": "유쾌한 경제학",
+    "cid": "UCaLsqraxQaaRfm7HyT1x6ug",
+    "tier": "A-신생",
+    "subs": 162000,
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제",
+      "247"
+    ],
+    "note": "2026-07-19 등록: 구독 16만·성숙 저조(top5 12K)·몰락 시리즈",
+    "url": "https://www.youtube.com/channel/UCaLsqraxQaaRfm7HyT1x6ug/videos",
+    "explosion_threshold": 54000,
+    "poll_interval_min": 60
+  },
+  {
+    "name": "천천히경제학",
+    "cid": "UChAj3ddFHBqjXHGCPtjXCtA",
+    "tier": "A-신생",
+    "subs": 359,
+    "poll_minutes": 60,
+    "related_channels": [
+      "레드맨경제",
+      "247"
+    ],
+    "note": "2026-07-19 등록: 소형·CV 1.17·배수 11.4·몰락 결(하이마트/식당)",
+    "url": "https://www.youtube.com/channel/UChAj3ddFHBqjXHGCPtjXCtA/videos",
+    "explosion_threshold": 1000,
+    "poll_interval_min": 60
   }
 ]
