@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25 05:26:32 UTC",
+  "updated_at": "2026-07-24 04:39:36 UTC",
   "topic_count": 19,
   "recycle_count": 2,
   "topics": [
@@ -13,35 +13,19 @@
         "추월",
         "한국"
       ],
-      "depth_score": 0.453,
-      "matched_count": 7,
+      "depth_score": 0.34,
+      "matched_count": 3,
       "matched_videos": [
         {
-          "vid": "uCf-m_GD-Bk",
-          "title": "[삼성전자 주가 전망] \"3분전 충격속보\" 마이크론 실적유출 소문이 진짜였다 내일 핵폭탄급 온다 위클만기전 전략노출! 美골든타임 美반도체 어닝서프라이즈",
-          "channel": "미래에서 온 슈퍼개미",
-          "efficiency": 0.34,
-          "views": 28429,
-          "velocity_per_day": 28429,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 84400,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "반도체"
-          ]
-        },
-        {
-          "vid": "yIghxolVWxo",
-          "title": "주식 시황. 증시 급락 이유 총정리. 금리, MSCI, 연기금, 반도체 노이즈, 그리고 결정타. 흔들린 대장주 이 후 시나리오. 급락 이용해 증시 큰손들이 물량 받은 종목",
-          "channel": "시황맨TV",
-          "efficiency": 0.41,
-          "views": 36555,
-          "velocity_per_day": 18277,
+          "vid": "_M0fTY1utAQ",
+          "title": "[7월 22일 라이브] 나스닥 반도체 대반등. 역전의 시간이 될까?",
+          "channel": "주식명사수 주명",
+          "efficiency": 4.12,
+          "views": 216723,
+          "velocity_per_day": 108361,
           "freshness_days": 2,
           "bucket": "경제·시사",
-          "channel_subs": 88700,
+          "channel_subs": 52600,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [
@@ -49,15 +33,15 @@
           ]
         },
         {
-          "vid": "6SNuUeDWr44",
-          "title": "북중미 월드컵 한국은 졌는데 세계가 박수쳤다…멕시코전 직후 벌어진 믿기 힘든 장면 | 한국 멕시코 (해외감동사연)",
-          "channel": "감동신화",
-          "efficiency": 16.28,
-          "views": 39882,
-          "velocity_per_day": 9970,
-          "freshness_days": 4,
+          "vid": "NCpvJm7gAsw",
+          "title": "주식 시황. 증시 전강 후약 원인. 막판에 갑자기 매물 터진 이유. 두 종목으로 변동성 장난 시작. 한국 주식 쓸어 담는 외국인, 이유와 의도는. 딱 하루 남은 초대형 이벤트",
+          "channel": "시황맨TV",
+          "efficiency": 0.29,
+          "views": 25970,
+          "velocity_per_day": 12985,
+          "freshness_days": 2,
           "bucket": "경제·시사",
-          "channel_subs": 2450,
+          "channel_subs": 90600,
           "source": "alert",
           "match_ratio": 0.2,
           "common_kws": [
@@ -65,104 +49,72 @@
           ]
         },
         {
-          "vid": "VjVXB_x0MHo",
-          "title": "[해외감동사연] \"한국이 이걸 어떻게?\" 400조 꿈의 신소재 독식한 한국 앞에 무너진 일본!",
-          "channel": "코리아소울",
-          "efficiency": 0.57,
-          "views": 19297,
-          "velocity_per_day": 9648,
-          "freshness_days": 2,
+          "vid": "Hfefr9d1gbE",
+          "title": "[손석희의 12시] 반도체 쏠림 심화, 한국 경제 괜찮은가_고란 경제전문기자 | 한 걸음 더 들어가겠습니다 | MBC 260723",
+          "channel": "손석희의 12시",
+          "efficiency": 0.18,
+          "views": 9984,
+          "velocity_per_day": 9984,
+          "freshness_days": 1,
           "bucket": "경제·시사",
-          "channel_subs": 34100,
+          "channel_subs": 56900,
           "source": "alert",
           "match_ratio": 0.4,
           "common_kws": [
-            "일본",
-            "한국"
-          ]
-        },
-        {
-          "vid": "mNnwCc02T_4",
-          "title": "\"한국이 해냈다\" 중국이 90% 독점했던 태양광, 한국 잉크 한 방울이 뒤집었다",
-          "channel": "경제왕토끼",
-          "efficiency": 1.08,
-          "views": 27024,
-          "velocity_per_day": 9008,
-          "freshness_days": 3,
-          "bucket": "경제·시사",
-          "channel_subs": 25000,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "한국"
-          ]
-        },
-        {
-          "vid": "w1esqmle9Vg",
-          "title": "''한국 주식 폭락 이제 시작이다'' 삼성전자 SK하이닉스 있다면 당장 '이렇게' 하세요 이때 놓치면 다 끝난다",
-          "channel": "경제치트키",
-          "efficiency": 0.52,
-          "views": 5660,
-          "velocity_per_day": 5660,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 10700,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "한국"
-          ]
-        },
-        {
-          "vid": "4c-T5ARQVNQ",
-          "title": "한국 경제의 지연 뇌관, 해결책은 ‘이것’ 뿐입니다. (곽수종 박사)",
-          "channel": "경제마스터 곽수종",
-          "efficiency": 0.31,
-          "views": 26774,
-          "velocity_per_day": 5354,
-          "freshness_days": 5,
-          "bucket": "경제·시사",
-          "channel_subs": 85200,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
+            "반도체",
             "한국"
           ]
         }
       ],
-      "verdict": "🔁 재활용 진행 중 (D+7 윈도우)",
-      "priority": 2,
+      "verdict": "📦 재활용 신호 약함",
+      "priority": 3,
       "our_video_status": "검토 중",
       "is_missed_opportunity": false,
       "next_window": "진행 중",
       "pioneer_note": "김재민TV 2026-06-14 D+1 → 코믹스 경제 D+1 86K/일 동시"
     },
     {
-      "topic": "식당 폐업",
-      "category": "🍽️ 자영업 (정책 비판)",
+      "topic": "송산",
+      "category": "🌍 국제 자긍심 ([그 진짜 이유] 시리즈)",
       "keywords": [
-        "매출 반토막",
-        "자영업",
-        "자영업자",
-        "폐업"
+        "미국 보복",
+        "반도체",
+        "송산",
+        "한국 기업"
       ],
-      "depth_score": 0.262,
-      "matched_count": 1,
+      "depth_score": 0.309,
+      "matched_count": 2,
       "matched_videos": [
         {
-          "vid": "lOE1uPsIex4",
-          "title": "신도시의 몰락, 진짜 문제는 집값이 아니었습니다 #신도시의몰락 #일산 #분당 #1기신도시  #부동산 #한국부동산 #도시경제 #상권붕괴 #자영업 #인구감소 #재건축 #빡치는경제학",
-          "channel": "빡치는경제학",
-          "efficiency": 58.49,
-          "views": 25851,
-          "velocity_per_day": 4308,
-          "freshness_days": 6,
+          "vid": "_M0fTY1utAQ",
+          "title": "[7월 22일 라이브] 나스닥 반도체 대반등. 역전의 시간이 될까?",
+          "channel": "주식명사수 주명",
+          "efficiency": 4.12,
+          "views": 216723,
+          "velocity_per_day": 108361,
+          "freshness_days": 2,
           "bucket": "경제·시사",
-          "channel_subs": 442,
+          "channel_subs": 52600,
           "source": "alert",
           "match_ratio": 0.25,
           "common_kws": [
-            "자영업"
+            "반도체"
+          ]
+        },
+        {
+          "vid": "Hfefr9d1gbE",
+          "title": "[손석희의 12시] 반도체 쏠림 심화, 한국 경제 괜찮은가_고란 경제전문기자 | 한 걸음 더 들어가겠습니다 | MBC 260723",
+          "channel": "손석희의 12시",
+          "efficiency": 0.18,
+          "views": 9984,
+          "velocity_per_day": 9984,
+          "freshness_days": 1,
+          "bucket": "경제·시사",
+          "channel_subs": 56900,
+          "source": "alert",
+          "match_ratio": 0.25,
+          "common_kws": [
+            "반도체"
           ]
         }
       ],
@@ -170,8 +122,8 @@
       "priority": 3,
       "our_video_status": "미발행",
       "is_missed_opportunity": true,
-      "next_window": "진행 중",
-      "pioneer_note": "2025-05 → 2026-02 → 2026-09 예상"
+      "next_window": "2026-11",
+      "pioneer_note": "2025-09 → 2026-04 재폭발"
     }
   ]
 }

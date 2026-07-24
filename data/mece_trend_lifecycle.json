@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25 14:26",
+  "updated_at": "2026-07-24 13:39",
   "trends": {
     "시즌 트렌드:시그니엘": {
       "category": "시즌 트렌드",
@@ -18,10 +18,10 @@
           ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
-      "days_since_last_video": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
+      "days_since_last_video": 29,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-06-25",
@@ -32,7 +32,7 @@
       "category": "인물 트렌드",
       "keyword": "시진핑",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-24",
       "snapshots": [
         {
           "date": "2026-06-25",
@@ -43,11 +43,31 @@
           "channels": [
             "오늘의통찰"
           ]
+        },
+        {
+          "date": "2026-07-22",
+          "video_count": 1,
+          "avg_eff": 0.0,
+          "max_eff": 0,
+          "channel_count": 1,
+          "channels": [
+            "손에잡히는경제"
+          ]
+        },
+        {
+          "date": "2026-07-24",
+          "video_count": 1,
+          "avg_eff": 0.0,
+          "max_eff": 0,
+          "channel_count": 1,
+          "channels": [
+            "손에잡히는경제"
+          ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
       "days_since_last_video": 0,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
@@ -59,7 +79,7 @@
       "category": "뉴스 트렌드",
       "keyword": "AI",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-24",
       "snapshots": [
         {
           "date": "2026-06-25",
@@ -71,11 +91,31 @@
             "생각의 경제학",
             "엔터테인먼트 다름"
           ]
+        },
+        {
+          "date": "2026-07-22",
+          "video_count": 1,
+          "avg_eff": 0.0,
+          "max_eff": 0,
+          "channel_count": 1,
+          "channels": [
+            "손에잡히는경제"
+          ]
+        },
+        {
+          "date": "2026-07-24",
+          "video_count": 1,
+          "avg_eff": 0.0,
+          "max_eff": 0,
+          "channel_count": 1,
+          "channels": [
+            "손에잡히는경제"
+          ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
       "days_since_last_video": 0,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
@@ -87,7 +127,7 @@
       "category": "뉴스 트렌드",
       "keyword": "엔비디아",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-24",
       "snapshots": [
         {
           "date": "2026-06-25",
@@ -99,11 +139,21 @@
             "경제강국",
             "생각의 경제학"
           ]
+        },
+        {
+          "date": "2026-07-24",
+          "video_count": 1,
+          "avg_eff": 0.99,
+          "max_eff": 0.99,
+          "channel_count": 1,
+          "channels": [
+            "현동"
+          ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
       "days_since_last_video": 0,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
@@ -115,7 +165,7 @@
       "category": "뉴스 트렌드",
       "keyword": "반도체",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-24",
       "snapshots": [
         {
           "date": "2026-06-25",
@@ -129,11 +179,33 @@
             "시황맨TV",
             "주식명사수 주명"
           ]
+        },
+        {
+          "date": "2026-07-22",
+          "video_count": 2,
+          "avg_eff": 2.14,
+          "max_eff": 4.12,
+          "channel_count": 2,
+          "channels": [
+            "주독 - 주식독설가",
+            "주식명사수 주명"
+          ]
+        },
+        {
+          "date": "2026-07-24",
+          "video_count": 2,
+          "avg_eff": 2.15,
+          "max_eff": 4.12,
+          "channel_count": 2,
+          "channels": [
+            "손석희의 12시",
+            "주식명사수 주명"
+          ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
       "days_since_last_video": 0,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
@@ -145,7 +217,7 @@
       "category": "뉴스 트렌드",
       "keyword": "환율",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-22",
       "snapshots": [
         {
           "date": "2026-06-25",
@@ -156,23 +228,34 @@
           "channels": [
             "주식명사수 주명"
           ]
+        },
+        {
+          "date": "2026-07-22",
+          "video_count": 2,
+          "avg_eff": 0.18,
+          "max_eff": 0.19,
+          "channel_count": 2,
+          "channels": [
+            "이현훈교수의 경제포럼",
+            "파이낸셜뉴스"
+          ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
-      "days_since_last_video": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 2,
+      "days_since_last_video": 2,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
-      "peak_date": "2026-06-25",
-      "peak_video_count": 1,
-      "peak_efficiency": 2.02
+      "peak_date": "2026-07-22",
+      "peak_video_count": 2,
+      "peak_efficiency": 0.18
     },
     "뉴스 트렌드:금리": {
       "category": "뉴스 트렌드",
       "keyword": "금리",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
+      "last_seen": "2026-07-22",
       "snapshots": [
         {
           "date": "2026-06-25",
@@ -184,12 +267,22 @@
             "부자습관은 래빗해빛",
             "시황맨TV"
           ]
+        },
+        {
+          "date": "2026-07-22",
+          "video_count": 1,
+          "avg_eff": 0.19,
+          "max_eff": 0.19,
+          "channel_count": 1,
+          "channels": [
+            "파이낸셜뉴스"
+          ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
-      "days_since_last_video": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
+      "days_since_last_video": 2,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-06-25",
@@ -213,10 +306,10 @@
           ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
-      "days_since_last_video": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
+      "days_since_last_video": 29,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-06-25",
@@ -240,10 +333,10 @@
           ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
-      "days_since_last_video": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
+      "days_since_last_video": 29,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-06-25",
@@ -267,10 +360,10 @@
           ]
         }
       ],
-      "stage": "🟢 등장 (골든타임)",
-      "days_active": 0,
-      "days_since_peak": 0,
-      "days_since_last_video": 0,
+      "stage": "🔥 폭발 (정점)",
+      "days_active": 29,
+      "days_since_peak": 29,
+      "days_since_last_video": 29,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-06-25",
