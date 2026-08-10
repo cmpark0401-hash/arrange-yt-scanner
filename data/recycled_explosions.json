@@ -1,78 +1,8 @@
 {
-  "updated_at": "2026-07-24 04:39:36 UTC",
+  "updated_at": "2026-07-29 12:05:20 UTC",
   "topic_count": 19,
   "recycle_count": 2,
   "topics": [
-    {
-      "topic": "한일 역전",
-      "category": "🌍 국제 자긍심 ([그 진짜 이유] 시리즈)",
-      "keywords": [
-        "30년",
-        "반도체",
-        "일본",
-        "추월",
-        "한국"
-      ],
-      "depth_score": 0.34,
-      "matched_count": 3,
-      "matched_videos": [
-        {
-          "vid": "_M0fTY1utAQ",
-          "title": "[7월 22일 라이브] 나스닥 반도체 대반등. 역전의 시간이 될까?",
-          "channel": "주식명사수 주명",
-          "efficiency": 4.12,
-          "views": 216723,
-          "velocity_per_day": 108361,
-          "freshness_days": 2,
-          "bucket": "경제·시사",
-          "channel_subs": 52600,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "반도체"
-          ]
-        },
-        {
-          "vid": "NCpvJm7gAsw",
-          "title": "주식 시황. 증시 전강 후약 원인. 막판에 갑자기 매물 터진 이유. 두 종목으로 변동성 장난 시작. 한국 주식 쓸어 담는 외국인, 이유와 의도는. 딱 하루 남은 초대형 이벤트",
-          "channel": "시황맨TV",
-          "efficiency": 0.29,
-          "views": 25970,
-          "velocity_per_day": 12985,
-          "freshness_days": 2,
-          "bucket": "경제·시사",
-          "channel_subs": 90600,
-          "source": "alert",
-          "match_ratio": 0.2,
-          "common_kws": [
-            "한국"
-          ]
-        },
-        {
-          "vid": "Hfefr9d1gbE",
-          "title": "[손석희의 12시] 반도체 쏠림 심화, 한국 경제 괜찮은가_고란 경제전문기자 | 한 걸음 더 들어가겠습니다 | MBC 260723",
-          "channel": "손석희의 12시",
-          "efficiency": 0.18,
-          "views": 9984,
-          "velocity_per_day": 9984,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 56900,
-          "source": "alert",
-          "match_ratio": 0.4,
-          "common_kws": [
-            "반도체",
-            "한국"
-          ]
-        }
-      ],
-      "verdict": "📦 재활용 신호 약함",
-      "priority": 3,
-      "our_video_status": "검토 중",
-      "is_missed_opportunity": false,
-      "next_window": "진행 중",
-      "pioneer_note": "김재민TV 2026-06-14 D+1 → 코믹스 경제 D+1 86K/일 동시"
-    },
     {
       "topic": "송산",
       "category": "🌍 국제 자긍심 ([그 진짜 이유] 시리즈)",
@@ -82,8 +12,8 @@
         "송산",
         "한국 기업"
       ],
-      "depth_score": 0.309,
-      "matched_count": 2,
+      "depth_score": 0.206,
+      "matched_count": 1,
       "matched_videos": [
         {
           "vid": "_M0fTY1utAQ",
@@ -91,26 +21,10 @@
           "channel": "주식명사수 주명",
           "efficiency": 4.12,
           "views": 216723,
-          "velocity_per_day": 108361,
-          "freshness_days": 2,
+          "velocity_per_day": 30960,
+          "freshness_days": 7,
           "bucket": "경제·시사",
           "channel_subs": 52600,
-          "source": "alert",
-          "match_ratio": 0.25,
-          "common_kws": [
-            "반도체"
-          ]
-        },
-        {
-          "vid": "Hfefr9d1gbE",
-          "title": "[손석희의 12시] 반도체 쏠림 심화, 한국 경제 괜찮은가_고란 경제전문기자 | 한 걸음 더 들어가겠습니다 | MBC 260723",
-          "channel": "손석희의 12시",
-          "efficiency": 0.18,
-          "views": 9984,
-          "velocity_per_day": 9984,
-          "freshness_days": 1,
-          "bucket": "경제·시사",
-          "channel_subs": 56900,
           "source": "alert",
           "match_ratio": 0.25,
           "common_kws": [
@@ -124,6 +38,43 @@
       "is_missed_opportunity": true,
       "next_window": "2026-11",
       "pioneer_note": "2025-09 → 2026-04 재폭발"
+    },
+    {
+      "topic": "한일 역전",
+      "category": "🌍 국제 자긍심 ([그 진짜 이유] 시리즈)",
+      "keywords": [
+        "30년",
+        "반도체",
+        "일본",
+        "추월",
+        "한국"
+      ],
+      "depth_score": 0.204,
+      "matched_count": 1,
+      "matched_videos": [
+        {
+          "vid": "_M0fTY1utAQ",
+          "title": "[7월 22일 라이브] 나스닥 반도체 대반등. 역전의 시간이 될까?",
+          "channel": "주식명사수 주명",
+          "efficiency": 4.12,
+          "views": 216723,
+          "velocity_per_day": 30960,
+          "freshness_days": 7,
+          "bucket": "경제·시사",
+          "channel_subs": 52600,
+          "source": "alert",
+          "match_ratio": 0.2,
+          "common_kws": [
+            "반도체"
+          ]
+        }
+      ],
+      "verdict": "📦 재활용 신호 약함",
+      "priority": 3,
+      "our_video_status": "검토 중",
+      "is_missed_opportunity": false,
+      "next_window": "진행 중",
+      "pioneer_note": "김재민TV 2026-06-14 D+1 → 코믹스 경제 D+1 86K/일 동시"
     }
   ]
 }

@@ -1,33 +1,33 @@
 {
-  "updated_at": "2026-07-24 13:39",
+  "updated_at": "2026-07-29 21:05",
   "data_freshness": {
     "explosion_alerts": {
-      "mtime": "2026-07-24 13:39",
+      "mtime": "2026-07-29 21:05",
       "ago": "0분 전",
       "is_stale": false
     },
     "mece_trend_lifecycle": {
-      "mtime": "2026-07-24 13:39",
+      "mtime": "2026-07-29 21:05",
       "ago": "0분 전",
       "is_stale": false
     },
     "zeus_angles": {
-      "mtime": "2026-07-24 13:39",
+      "mtime": "2026-07-29 21:05",
       "ago": "0분 전",
       "is_stale": false
     },
     "copycat_clusters": {
       "mtime": "2026-06-25 13:50",
-      "ago": "28일 전 ⚠️",
+      "ago": "34일 전 ⚠️",
       "is_stale": true
     },
     "recycled_explosions": {
-      "mtime": "2026-07-24 13:39",
+      "mtime": "2026-07-29 21:05",
       "ago": "0분 전",
       "is_stale": false
     },
     "mece_unified": {
-      "mtime": "2026-07-24 13:39",
+      "mtime": "2026-07-29 21:05",
       "ago": "0분 전",
       "is_stale": false
     }
@@ -36,12 +36,12 @@
     "야담": [
       {
         "keyword": "야담",
-        "video_count": 4,
-        "avg_efficiency": 2.59,
+        "video_count": 6,
+        "avg_efficiency": 2.52,
         "max_efficiency": 4.58,
-        "total_views": 266261,
-        "channel_count": 4,
-        "fresh_min_days": 1,
+        "total_views": 343718,
+        "channel_count": 5,
+        "fresh_min_days": 2,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
         "momentum": "-",
         "days_active": 0,
@@ -54,24 +54,24 @@
             "channel": "아름야담tv",
             "views": 104399,
             "efficiency": 4.58,
-            "freshness_days": 7,
+            "freshness_days": 12,
             "url": "https://youtube.com/watch?v=GnF7u17gB5c"
+          },
+          {
+            "title": "[야담] 집안 장독을 모조리 지붕에 올린 며느리｜문짝을 메고 포졸에게 쫓긴 두 노인 (틀어놓으면 웃긴 조선 해학 야담) ㅣ 옛날이야기 설화 민담",
+            "channel": "명품야담",
+            "views": 31625,
+            "efficiency": 3.66,
+            "freshness_days": 6,
+            "url": "https://youtube.com/watch?v=vVMCEf1y9u8"
           },
           {
             "title": "한양 최고 부자가 죽기 전 아들에게 쫄딱 망한 척하라 한 이유 #옛날이야기 #오디오북 #수면동화 #민담 #전설",
             "channel": "송림야담",
             "views": 88399,
             "efficiency": 2.72,
-            "freshness_days": 7,
+            "freshness_days": 12,
             "url": "https://youtube.com/watch?v=123YG7iGR_U"
-          },
-          {
-            "title": "쫓기던 처녀를 쌀겨에 숨겨주고 대박난 노총각 | 야담 | 수면동화 | 전래동화 |  밤마실야담",
-            "channel": "밤마실야담",
-            "views": 62804,
-            "efficiency": 1.76,
-            "freshness_days": 3,
-            "url": "https://youtube.com/watch?v=T0VlCwlWZSo"
           }
         ],
         "recommended_channels": [
@@ -82,10 +82,10 @@
     "경제·시사": [
       {
         "keyword": "부동산",
-        "video_count": 1,
-        "avg_efficiency": 55.97,
+        "video_count": 2,
+        "avg_efficiency": 38.7,
         "max_efficiency": 55.97,
-        "total_views": 54626,
+        "total_views": 104348,
         "channel_count": 1,
         "fresh_min_days": 2,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
@@ -100,8 +100,138 @@
             "channel": "YTN 경제 라디오",
             "views": 54626,
             "efficiency": 55.97,
-            "freshness_days": 2,
+            "freshness_days": 7,
             "url": "https://youtube.com/watch?v=ciQN453c5mk"
+          },
+          {
+            "title": "[부동산대책은 증세?] \"솔직히 화가 납니다, 李정부 '똘똘한 한 채' 악마화..방치해놓고 이제와서\" #빠숑 #김인만 #이광수  _260727",
+            "channel": "YTN 경제 라디오",
+            "views": 49722,
+            "efficiency": 21.43,
+            "freshness_days": 2,
+            "url": "https://youtube.com/watch?v=zZegUETL3Pc"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "삼성",
+        "video_count": 1,
+        "avg_efficiency": 0.56,
+        "max_efficiency": 0.56,
+        "total_views": 17740,
+        "channel_count": 1,
+        "fresh_min_days": 1,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "260728 삼성라이온즈 이재현 선수 인터뷰 | 복귀 후 3홈런! \"경기에 빠지지 않고 끝까지 완주하겠습니다!\"",
+            "channel": "블루 라이온즈_Blue Lions",
+            "views": 17740,
+            "efficiency": 0.56,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=srgoS6VvYk8"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "트럼프",
+        "video_count": 1,
+        "avg_efficiency": 0.35,
+        "max_efficiency": 0.35,
+        "total_views": 32278,
+        "channel_count": 1,
+        "fresh_min_days": 1,
+        "lifecycle_stage": "🟢 등장 (골든타임)",
+        "momentum": "+0.0%",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts",
+          "lifecycle"
+        ],
+        "verification": [
+          {
+            "title": "트럼프의 세계전략과 한반도 통일 전망 I 이춘근 국제 정치학 박사",
+            "channel": " TV 기독일보",
+            "views": 32278,
+            "efficiency": 0.35,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=E14mtDGgQjA"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "환율",
+        "video_count": 1,
+        "avg_efficiency": 0.53,
+        "max_efficiency": 0.53,
+        "total_views": 42642,
+        "channel_count": 1,
+        "fresh_min_days": 2,
+        "lifecycle_stage": "🔥 폭발 (정점)",
+        "momentum": "+0.0%",
+        "days_active": 34,
+        "source_files": [
+          "explosion_alerts",
+          "lifecycle"
+        ],
+        "verification": [
+          {
+            "title": "엔화 900선 붕괴. 다음은 원화입니다.",
+            "channel": "경제해적단",
+            "views": 42642,
+            "efficiency": 0.53,
+            "freshness_days": 2,
+            "url": "https://youtube.com/watch?v=guGF_zDmI_g"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "경제",
+        "video_count": 1,
+        "avg_efficiency": 0.8,
+        "max_efficiency": 0.8,
+        "total_views": 63851,
+        "channel_count": 1,
+        "fresh_min_days": 3,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "경제 위기때 가장 먼저 무너지는 자산 5가지 \"다음 급락에서 뭘 먼저 팔아야 하나?\"",
+            "channel": "경제해적단",
+            "views": 63851,
+            "efficiency": 0.8,
+            "freshness_days": 3,
+            "url": "https://youtube.com/watch?v=K_0fFxiJsEM"
           }
         ],
         "recommended_channels": [
@@ -112,12 +242,12 @@
       },
       {
         "keyword": "주식",
-        "video_count": 3,
-        "avg_efficiency": 2.08,
+        "video_count": 5,
+        "avg_efficiency": 1.32,
         "max_efficiency": 4.12,
-        "total_views": 339828,
-        "channel_count": 2,
-        "fresh_min_days": 1,
+        "total_views": 351538,
+        "channel_count": 4,
+        "fresh_min_days": 6,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
         "momentum": "-",
         "days_active": 0,
@@ -130,7 +260,7 @@
             "channel": "주식명사수 주명",
             "views": 216723,
             "efficiency": 4.12,
-            "freshness_days": 2,
+            "freshness_days": 7,
             "url": "https://youtube.com/watch?v=_M0fTY1utAQ"
           },
           {
@@ -138,138 +268,16 @@
             "channel": "주식명사수 주명",
             "views": 97135,
             "efficiency": 1.82,
-            "freshness_days": 1,
+            "freshness_days": 6,
             "url": "https://youtube.com/watch?v=lyVG0U0ivqw"
           },
           {
-            "title": "주식 시황. 증시 전강 후약 원인. 막판에 갑자기 매물 터진 이유. 두 종목으로 변동성 장난 시작. 한국 주식 쓸어 담는 외국인, 이유와 의도는",
-            "channel": "시황맨TV",
-            "views": 25970,
-            "efficiency": 0.29,
-            "freshness_days": 2,
-            "url": "https://youtube.com/watch?v=NCpvJm7gAsw"
-          }
-        ],
-        "recommended_channels": [
-          "💹 247경제",
-          "📈 지식록",
-          "🇰🇷 레드맨"
-        ]
-      },
-      {
-        "keyword": "엔비디아",
-        "video_count": 1,
-        "avg_efficiency": 0.99,
-        "max_efficiency": 0.99,
-        "total_views": 9141,
-        "channel_count": 1,
-        "fresh_min_days": 1,
-        "lifecycle_stage": "🔥 폭발 (정점)",
-        "momentum": "+0.0%",
-        "days_active": 29,
-        "source_files": [
-          "explosion_alerts",
-          "lifecycle"
-        ],
-        "verification": [
-          {
-            "title": "[서든어택] 패치 후 게임하기 전에 꼭 봐야하는 변동 사항 요약 (엔비디아 설정 공개)",
-            "channel": "현동",
-            "views": 9141,
-            "efficiency": 0.99,
-            "freshness_days": 1,
-            "url": "https://youtube.com/watch?v=drwAU7k9ulM"
-          }
-        ],
-        "recommended_channels": [
-          "💹 247경제",
-          "📈 지식록",
-          "🇰🇷 레드맨"
-        ]
-      },
-      {
-        "keyword": "삼성",
-        "video_count": 1,
-        "avg_efficiency": 0.93,
-        "max_efficiency": 0.93,
-        "total_views": 29503,
-        "channel_count": 1,
-        "fresh_min_days": 1,
-        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
-        "momentum": "-",
-        "days_active": 0,
-        "source_files": [
-          "explosion_alerts"
-        ],
-        "verification": [
-          {
-            "title": "260723 삼성라이온즈 김재윤 선수 인터뷰 | \"사실 좀 착잡하긴 했습니다..\" 2.2이닝 무실점!",
-            "channel": "블루 라이온즈_Blue Lions",
-            "views": 29503,
-            "efficiency": 0.93,
-            "freshness_days": 1,
-            "url": "https://youtube.com/watch?v=c5sktLQwU_w"
-          }
-        ],
-        "recommended_channels": [
-          "💹 247경제",
-          "📈 지식록",
-          "🇰🇷 레드맨"
-        ]
-      },
-      {
-        "keyword": "경제",
-        "video_count": 1,
-        "avg_efficiency": 0.18,
-        "max_efficiency": 0.18,
-        "total_views": 9984,
-        "channel_count": 1,
-        "fresh_min_days": 1,
-        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
-        "momentum": "-",
-        "days_active": 0,
-        "source_files": [
-          "explosion_alerts"
-        ],
-        "verification": [
-          {
-            "title": "[손석희의 12시] 반도체 쏠림 심화, 한국 경제 괜찮은가_고란 경제전문기자 | 한 걸음 더 들어가겠습니다 | MBC 260723",
-            "channel": "손석희의 12시",
-            "views": 9984,
-            "efficiency": 0.18,
-            "freshness_days": 1,
-            "url": "https://youtube.com/watch?v=Hfefr9d1gbE"
-          }
-        ],
-        "recommended_channels": [
-          "💹 247경제",
-          "📈 지식록",
-          "🇰🇷 레드맨"
-        ]
-      },
-      {
-        "keyword": "시진핑",
-        "video_count": 1,
-        "avg_efficiency": 0.0,
-        "max_efficiency": 0,
-        "total_views": 25691,
-        "channel_count": 1,
-        "fresh_min_days": 4,
-        "lifecycle_stage": "🔥 폭발 (정점)",
-        "momentum": "+0.0%",
-        "days_active": 29,
-        "source_files": [
-          "explosion_alerts",
-          "lifecycle"
-        ],
-        "verification": [
-          {
-            "title": "시진핑이 AI패권을 천명했습니다 - 김덕진 IT커뮤니케이션 연구소 소장",
-            "channel": "손에잡히는경제",
-            "views": 25691,
-            "efficiency": 0,
-            "freshness_days": 4,
-            "url": "https://youtube.com/watch?v=QOeYpdNvZdc"
+            "title": "주식..제발 본전만 오면 다시는 안하겠습니다",
+            "channel": "서른일기",
+            "views": 9943,
+            "efficiency": 0.3,
+            "freshness_days": 0,
+            "url": "https://youtube.com/watch?v=V-YlpnHfSy0"
           }
         ],
         "recommended_channels": [
@@ -287,7 +295,7 @@
         "max_efficiency": 1.7,
         "total_views": 50975,
         "channel_count": 1,
-        "fresh_min_days": 1,
+        "fresh_min_days": 6,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
         "momentum": "-",
         "days_active": 0,
@@ -300,36 +308,8 @@
             "channel": "제일건강합니다",
             "views": 50975,
             "efficiency": 1.7,
-            "freshness_days": 1,
+            "freshness_days": 6,
             "url": "https://youtube.com/watch?v=YHru4HyNlKg"
-          }
-        ],
-        "recommended_channels": [
-          "🔬 과만세"
-        ]
-      },
-      {
-        "keyword": "우주",
-        "video_count": 1,
-        "avg_efficiency": 11.99,
-        "max_efficiency": 11.99,
-        "total_views": 78903,
-        "channel_count": 1,
-        "fresh_min_days": 13,
-        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
-        "momentum": "-",
-        "days_active": 0,
-        "source_files": [
-          "explosion_alerts"
-        ],
-        "verification": [
-          {
-            "title": "안드로메다는 사실 은하가 아니었다? 안드로메다의 충격적인 비밀",
-            "channel": "끝없는지식",
-            "views": 78903,
-            "efficiency": 11.99,
-            "freshness_days": 13,
-            "url": "https://youtube.com/watch?v=vKJRGNA9YwI"
           }
         ],
         "recommended_channels": [
@@ -339,7 +319,7 @@
     ]
   },
   "stats": {
-    "total_trends": 9,
+    "total_trends": 8,
     "categories_active": 3
   }
 }

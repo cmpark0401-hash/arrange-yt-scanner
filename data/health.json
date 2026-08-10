@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25 14:26",
+  "generated_at": "2026-08-10 19:23",
   "overall_icon": "🔴",
   "overall_label": "긴급 점검",
   "overall_severity": "critical",
@@ -8,70 +8,56 @@
       "label": "📊 모니터링 (KR)",
       "status": "dead",
       "icon": "🔴",
-      "status_label": "파이프라인 점검 필요",
-      "ago": "6일 전",
-      "updated_at": "2026-06-18 15:26",
-      "file": "channels/knowledge-archive/_monitor_logs/2026-06-18.json",
+      "status_label": "파일 없음",
+      "ago": "N/A",
       "severity": "critical"
     },
     {
       "label": "📰 뉴스 RSS (KR)",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "36분 전",
-      "updated_at": "2026-06-25 13:50",
-      "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-06-25.json",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파일 없음",
+      "ago": "N/A",
       "severity": "warning"
     },
     {
       "label": "🏆 검증 주제",
-      "status": "fresh",
-      "icon": "🟢",
-      "status_label": "정상",
-      "ago": "36분 전",
-      "updated_at": "2026-06-25 13:50",
-      "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-06-25.json",
+      "status": "dead",
+      "icon": "🔴",
+      "status_label": "파일 없음",
+      "ago": "N/A",
       "severity": "warning"
     },
     {
       "label": "🔁 재편집 (KR)",
       "status": "dead",
       "icon": "🔴",
-      "status_label": "파이프라인 점검 필요",
-      "ago": "13일 전",
-      "updated_at": "2026-06-12 09:55",
-      "file": "channels/knowledge-archive/_monitor_logs/_reedit_yt_2026-06-12.json",
+      "status_label": "파일 없음",
+      "ago": "N/A",
       "severity": "warning"
     },
     {
       "label": "🌏 모니터링 (JP)",
       "status": "dead",
       "icon": "🔴",
-      "status_label": "파이프라인 점검 필요",
-      "ago": "13일 전",
-      "updated_at": "2026-06-12 09:41",
-      "file": "channels/knowledge-archive/_monitor_logs_ja/2026-06-12.json",
+      "status_label": "파일 없음",
+      "ago": "N/A",
       "severity": "warning"
     },
     {
       "label": "🧪 과학 트렌드",
       "status": "dead",
       "icon": "🔴",
-      "status_label": "파이프라인 점검 필요",
-      "ago": "11일 전",
-      "updated_at": "2026-06-13 21:46",
-      "file": "channels/knowledge-archive/_monitor_logs/science_explore_2026-06-13.json",
+      "status_label": "파일 없음",
+      "ago": "N/A",
       "severity": "info"
     },
     {
       "label": "👴 시니어 탐사",
       "status": "dead",
       "icon": "🔴",
-      "status_label": "파이프라인 점검 필요",
-      "ago": "11일 전",
-      "updated_at": "2026-06-13 22:15",
-      "file": "channels/knowledge-archive/_monitor_logs/senior_explore_2026-06-13.json",
+      "status_label": "파일 없음",
+      "ago": "N/A",
       "severity": "info"
     },
     {
@@ -79,7 +65,7 @@
       "status": "dead",
       "icon": "🔴",
       "status_label": "파이프라인 점검 필요",
-      "ago": "3일 전",
+      "ago": "49일 전",
       "updated_at": "2026-06-22 09:00",
       "last_auto_run": "2026-06-12 09:33",
       "detail": "마지막 자동 추천: 2026-06-12 09:33"
@@ -90,7 +76,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-06-25 14:26"
+      "updated_at": "2026-08-10 19:23"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
