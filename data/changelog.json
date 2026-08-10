@@ -1,12 +1,28 @@
 {
-  "generated_at": "2026-08-10 19:23",
+  "generated_at": "2026-08-10 21:44",
   "total_commits": 80,
   "by_category": {
-    "other": 2,
+    "other": 3,
     "data": 74,
-    "feat": 4
+    "feat": 3
   },
   "recent_by_date": [
+    {
+      "date": "2026-08-10",
+      "count": 1,
+      "commits": [
+        {
+          "hash": "6130e33",
+          "full_hash": "6130e3328499b2a4461a1a3b778bee2b8b4f7b86",
+          "ts": "2026-08-10 19:23",
+          "ts_iso": "2026-08-10T19:23:49",
+          "author": "cmpark0401-hash",
+          "subject": "autopsy: reject channel #9 (closes #9)",
+          "category": "other",
+          "category_label": "📌 기타"
+        }
+      ]
+    },
     {
       "date": "2026-07-24",
       "count": 8,
@@ -622,115 +638,19 @@
           "category_label": "📊 데이터 갱신"
         }
       ]
-    },
-    {
-      "date": "2026-07-18",
-      "count": 10,
-      "commits": [
-        {
-          "hash": "43aadd5",
-          "full_hash": "43aadd55d39197f271ca1a5e9478fad6195433b8",
-          "ts": "2026-07-18 21:41",
-          "ts_iso": "2026-07-18T21:41:51",
-          "author": "github-actions[bot]",
-          "subject": "site: 2026-07-18 12:41 UTC 3시간 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "ee66045",
-          "full_hash": "ee66045e042e801a96671522e3dc528149c2bf9c",
-          "ts": "2026-07-18 19:06",
-          "ts_iso": "2026-07-18T19:06:01",
-          "author": "github-actions[bot]",
-          "subject": "site: 2026-07-18 10:06 UTC 3시간 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "88ff10c",
-          "full_hash": "88ff10c71d9fa7016c3561c88b1742ff4daf373d",
-          "ts": "2026-07-18 16:22",
-          "ts_iso": "2026-07-18T16:22:09",
-          "author": "github-actions[bot]",
-          "subject": "site: 2026-07-18 07:22 UTC 3시간 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "f58b16e",
-          "full_hash": "f58b16e7317888e9b698701a120e4b02191949a5",
-          "ts": "2026-07-18 14:15",
-          "ts_iso": "2026-07-18T14:15:57",
-          "author": "github-actions[bot]",
-          "subject": "site: 2026-07-18 05:15 UTC 3시간 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "2f0c83c",
-          "full_hash": "2f0c83c92b438be375c4726d824ea46ee966919e",
-          "ts": "2026-07-18 12:27",
-          "ts_iso": "2026-07-18T12:27:20",
-          "author": "github-actions[bot]",
-          "subject": "daily: 2026-07-18 전면 갱신 (my_channels 포함)",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "23641be",
-          "full_hash": "23641be6186cfec97a126848facbbaac97b9213f",
-          "ts": "2026-07-18 10:10",
-          "ts_iso": "2026-07-18T10:10:26",
-          "author": "github-actions[bot]",
-          "subject": "site: 2026-07-18 01:10 UTC 3시간 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "4ec760a",
-          "full_hash": "4ec760ae7b6847bedd3d6b8f753bf94bf08ba448",
-          "ts": "2026-07-18 06:39",
-          "ts_iso": "2026-07-18T06:39:00",
-          "author": "github-actions[bot]",
-          "subject": "site: 2026-07-17 21:39 UTC 3시간 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "d62e0c4",
-          "full_hash": "d62e0c4622b05370bf606fad16e962eb13944d36",
-          "ts": "2026-07-18 03:46",
-          "ts_iso": "2026-07-18T03:46:56",
-          "author": "github-actions[bot]",
-          "subject": "site: 2026-07-17 18:46 UTC 3시간 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "c58738f",
-          "full_hash": "c58738f703384ab9da013964a2956945935f40cb",
-          "ts": "2026-07-18 01:05",
-          "ts_iso": "2026-07-18T01:05:20",
-          "author": "github-actions[bot]",
-          "subject": "site: 2026-07-17 16:05 UTC 3시간 갱신",
-          "category": "data",
-          "category_label": "📊 데이터 갱신"
-        },
-        {
-          "hash": "1b06b10",
-          "full_hash": "1b06b103609c96a3ff7abfc6b15f7894001c9788",
-          "ts": "2026-07-18 00:09",
-          "ts_iso": "2026-07-18T00:09:32",
-          "author": "cmpark0401-hash",
-          "subject": "site: 비즈니스석 경제학 신규 등록 (B·36K·CV 0.78·레드맨 태그)",
-          "category": "feat",
-          "category_label": "✨ 신규 기능"
-        }
-      ]
     }
   ],
   "all_commits": [
+    {
+      "hash": "6130e33",
+      "full_hash": "6130e3328499b2a4461a1a3b778bee2b8b4f7b86",
+      "ts": "2026-08-10 19:23",
+      "ts_iso": "2026-08-10T19:23:49",
+      "author": "cmpark0401-hash",
+      "subject": "autopsy: reject channel #9 (closes #9)",
+      "category": "other",
+      "category_label": "📌 기타"
+    },
     {
       "hash": "7e2c41e",
       "full_hash": "7e2c41ef3e72e709149fbda7a107583f2a570f5a",
@@ -1520,16 +1440,6 @@
       "subject": "site: 2026-07-16 10:47 UTC 3시간 갱신",
       "category": "data",
       "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "dfb9ed1",
-      "full_hash": "dfb9ed181f4b471228ec568a0deb9eac2aa158bb",
-      "ts": "2026-07-16 16:50",
-      "ts_iso": "2026-07-16T16:50:16",
-      "author": "cmpark0401-hash",
-      "subject": "site: 경제중심지 신규 등록 (A-신생·국뽕반전·441구독 45.5배)",
-      "category": "feat",
-      "category_label": "✨ 신규 기능"
     }
   ]
 }

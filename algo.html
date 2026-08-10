@@ -41,386 +41,88 @@ table.hyp .small { font-size: 0.82em; color: #555; }
 <p class="subtitle">유튜브 알고리즘이 어떤 시그널에 반응하는지 자동 발견. 매일 evening 사이클에 갱신.</p>
 
 <div class="summary-card">
-    <strong>🔥 카피캣 클러스터 요약</strong>: 야담: 2개 · 경제·시사: 2개 · <a href="copycat.html">상세 →</a>
+    <strong>🔥 카피캣 클러스터 요약</strong>: 감지된 클러스터 없음 · <a href="copycat.html">상세 →</a>
 </div>
 
 <h2>📊 자동 발견 가설 — 채널별 시그널 부스트</h2>
 <p class="subtitle">각 변수가 ON일 때 효율 vs OFF일 때 효율. 부스트 ≥1.5x면 ⭐, ≥2.0x면 🔥. ▼는 역효과(라벨 박으면 효율 ↓).</p>
-
-            <section>
-                <h3>📂 야담 <span class="meta">268편 분석</span></h3>
-                <table class="hyp">
-                    <thead><tr><th></th><th>부스트</th><th>변수</th><th>ON</th><th>ON 효율</th><th>OFF</th><th>OFF 효율</th></tr></thead>
-                    <tbody><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">3.11x</td>
-                <td>감정 어휘 (몰락·붕괴·패닉)</td>
-                <td class="num">38</td>
-                <td class="num">7.3x</td>
-                <td class="num">230</td>
-                <td class="num">2.36x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.44x</td>
-                <td>제목 김 (≥80자)</td>
-                <td class="num">80</td>
-                <td class="num">1.6x</td>
-                <td class="num">188</td>
-                <td class="num">3.68x</td>
-            </tr><tr class="boost-warm">
-                <td>▲</td>
-                <td class="boost-cell">1.56x</td>
-                <td>장편 (≥30분)</td>
-                <td class="num">133</td>
-                <td class="num">3.8x</td>
-                <td class="num">135</td>
-                <td class="num">2.40x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.49x</td>
-                <td>제목 짧음 (≤40자)</td>
-                <td class="num">9</td>
-                <td class="num">1.5x</td>
-                <td class="num">259</td>
-                <td class="num">3.13x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.64x</td>
-                <td>따옴표 직인용 발언</td>
-                <td class="num">8</td>
-                <td class="num">2.0x</td>
-                <td class="num">260</td>
-                <td class="num">3.11x</td>
-            </tr><tr class="boost-cool">
-                <td>▲</td>
-                <td class="boost-cell">1.35x</td>
-                <td>물음표 사용</td>
-                <td class="num">29</td>
-                <td class="num">4.0x</td>
-                <td class="num">239</td>
-                <td class="num">2.96x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.67x</td>
-                <td>봉인어 사용 (진짜 이유·숨겨진·정체)</td>
-                <td class="num">56</td>
-                <td class="num">2.2x</td>
-                <td class="num">212</td>
-                <td class="num">3.30x</td>
-            </tr></tbody>
-                </table>
-            </section>
-        
-
-            <section>
-                <h3>📂 경제·시사 <span class="meta">4,104편 분석</span></h3>
-                <table class="hyp">
-                    <thead><tr><th></th><th>부스트</th><th>변수</th><th>ON</th><th>ON 효율</th><th>OFF</th><th>OFF 효율</th></tr></thead>
-                    <tbody><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">5.79x</td>
-                <td>감정 어휘 (몰락·붕괴·패닉)</td>
-                <td class="num">391</td>
-                <td class="num">1.9x</td>
-                <td class="num">3713</td>
-                <td class="num">0.32x</td>
-            </tr><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">3.97x</td>
-                <td>시간 표현 (○년 만에·○시간 후)</td>
-                <td class="num">396</td>
-                <td class="num">1.4x</td>
-                <td class="num">3708</td>
-                <td class="num">0.36x</td>
-            </tr><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">2.74x</td>
-                <td>봉인어 사용 (진짜 이유·숨겨진·정체)</td>
-                <td class="num">482</td>
-                <td class="num">1.1x</td>
-                <td class="num">3622</td>
-                <td class="num">0.39x</td>
-            </tr><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">2.23x</td>
-                <td>구체 숫자 등장</td>
-                <td class="num">1792</td>
-                <td class="num">0.7x</td>
-                <td class="num">2312</td>
-                <td class="num">0.30x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.12x</td>
-                <td>[○○○] 시리즈 라벨 박힘</td>
-                <td class="num">582</td>
-                <td class="num">0.1x</td>
-                <td class="num">3522</td>
-                <td class="num">0.53x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.46x</td>
-                <td>따옴표 직인용 발언</td>
-                <td class="num">282</td>
-                <td class="num">0.2x</td>
-                <td class="num">3822</td>
-                <td class="num">0.48x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.48x</td>
-                <td>물음표 사용</td>
-                <td class="num">1066</td>
-                <td class="num">0.3x</td>
-                <td class="num">3038</td>
-                <td class="num">0.54x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.55x</td>
-                <td>제목 짧음 (≤40자)</td>
-                <td class="num">1571</td>
-                <td class="num">0.3x</td>
-                <td class="num">2533</td>
-                <td class="num">0.56x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.58x</td>
-                <td>제목 김 (≥80자)</td>
-                <td class="num">376</td>
-                <td class="num">0.3x</td>
-                <td class="num">3728</td>
-                <td class="num">0.48x</td>
-            </tr></tbody>
-                </table>
-            </section>
-        
-
-            <section>
-                <h3>📂 잘듣네 <span class="meta">233편 분석</span></h3>
-                <table class="hyp">
-                    <thead><tr><th></th><th>부스트</th><th>변수</th><th>ON</th><th>ON 효율</th><th>OFF</th><th>OFF 효율</th></tr></thead>
-                    <tbody><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">8.12x</td>
-                <td>장편 (≥30분)</td>
-                <td class="num">53</td>
-                <td class="num">1.4x</td>
-                <td class="num">180</td>
-                <td class="num">0.17x</td>
-            </tr><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">5.34x</td>
-                <td>[○○○] 시리즈 라벨 박힘</td>
-                <td class="num">15</td>
-                <td class="num">1.9x</td>
-                <td class="num">218</td>
-                <td class="num">0.35x</td>
-            </tr><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">2.20x</td>
-                <td>공인 인물 본명 노출</td>
-                <td class="num">8</td>
-                <td class="num">0.9x</td>
-                <td class="num">225</td>
-                <td class="num">0.43x</td>
-            </tr><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">2.00x</td>
-                <td>감정 어휘 (몰락·붕괴·패닉)</td>
-                <td class="num">14</td>
-                <td class="num">0.8x</td>
-                <td class="num">219</td>
-                <td class="num">0.42x</td>
-            </tr><tr class="boost-warm">
-                <td>▲</td>
-                <td class="boost-cell">1.93x</td>
-                <td>시간 표현 (○년 만에·○시간 후)</td>
-                <td class="num">32</td>
-                <td class="num">0.8x</td>
-                <td class="num">201</td>
-                <td class="num">0.40x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.36x</td>
-                <td>물음표 사용</td>
-                <td class="num">56</td>
-                <td class="num">0.2x</td>
-                <td class="num">177</td>
-                <td class="num">0.53x</td>
-            </tr></tbody>
-                </table>
-            </section>
-        
-
-            <section>
-                <h3>📂 과학·건강 <span class="meta">994편 분석</span></h3>
-                <table class="hyp">
-                    <thead><tr><th></th><th>부스트</th><th>변수</th><th>ON</th><th>ON 효율</th><th>OFF</th><th>OFF 효율</th></tr></thead>
-                    <tbody><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">30.15x</td>
-                <td>[○○○] 시리즈 라벨 박힘</td>
-                <td class="num">47</td>
-                <td class="num">8.6x</td>
-                <td class="num">947</td>
-                <td class="num">0.29x</td>
-            </tr><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">22.11x</td>
-                <td>장편 (≥30분)</td>
-                <td class="num">111</td>
-                <td class="num">4.5x</td>
-                <td class="num">883</td>
-                <td class="num">0.20x</td>
-            </tr><tr class="boost-hot">
-                <td>▲</td>
-                <td class="boost-cell">7.37x</td>
-                <td>제목 짧음 (≤40자)</td>
-                <td class="num">494</td>
-                <td class="num">1.2x</td>
-                <td class="num">500</td>
-                <td class="num">0.16x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.01x</td>
-                <td>제목 김 (≥80자)</td>
-                <td class="num">112</td>
-                <td class="num">0.0x</td>
-                <td class="num">882</td>
-                <td class="num">0.77x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.03x</td>
-                <td>공인 인물 본명 노출</td>
-                <td class="num">27</td>
-                <td class="num">0.0x</td>
-                <td class="num">967</td>
-                <td class="num">0.70x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.17x</td>
-                <td>쇼츠 (≤60초)</td>
-                <td class="num">34</td>
-                <td class="num">0.1x</td>
-                <td class="num">960</td>
-                <td class="num">0.70x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.30x</td>
-                <td>구체 숫자 등장</td>
-                <td class="num">421</td>
-                <td class="num">0.3x</td>
-                <td class="num">573</td>
-                <td class="num">0.97x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.30x</td>
-                <td>물음표 사용</td>
-                <td class="num">263</td>
-                <td class="num">0.2x</td>
-                <td class="num">731</td>
-                <td class="num">0.83x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.42x</td>
-                <td>봉인어 사용 (진짜 이유·숨겨진·정체)</td>
-                <td class="num">81</td>
-                <td class="num">0.3x</td>
-                <td class="num">913</td>
-                <td class="num">0.71x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.42x</td>
-                <td>느낌표 사용</td>
-                <td class="num">86</td>
-                <td class="num">0.3x</td>
-                <td class="num">908</td>
-                <td class="num">0.72x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.46x</td>
-                <td>시간 표현 (○년 만에·○시간 후)</td>
-                <td class="num">109</td>
-                <td class="num">0.3x</td>
-                <td class="num">885</td>
-                <td class="num">0.72x</td>
-            </tr><tr class="boost-cold">
-                <td>▼</td>
-                <td class="boost-cell">0.50x</td>
-                <td>감정 어휘 (몰락·붕괴·패닉)</td>
-                <td class="num">53</td>
-                <td class="num">0.3x</td>
-                <td class="num">941</td>
-                <td class="num">0.70x</td>
-            </tr></tbody>
-                </table>
-            </section>
-        
+<p>아직 가설 데이터 없음.</p>
 
 <h2>🏷️ 시리즈 라벨 부스트 (전체 카테고리)</h2>
 <p class="subtitle">제목 앞 [○○○] 라벨이 박힌 영상의 효율 vs 같은 채널 무라벨 영상 평균. 알고리즘이 라벨 자체를 인식하는지 검증.</p>
 
-        <p class="meta">분석 영상 5,759편 · 라벨 박힌 영상 655편 (11.4%)</p>
+        <p class="meta">분석 영상 2,889편 · 라벨 박힌 영상 275편 (9.5%)</p>
         <table class="hyp">
             <thead><tr><th></th><th>라벨</th><th>등장</th><th>채널</th><th>부스트</th><th>평균</th><th>최대</th><th>주요 채널</th></tr></thead>
             <tbody><tr>
-            <td>📍</td>
-            <td><strong>[가까운 우주]</strong></td>
-            <td class="num">4</td>
-            <td class="num">1</td>
-            <td class="num boost-cell">1327.42x</td>
-            <td class="num">0.4x</td>
-            <td class="num">1.4x</td>
-            <td class="small">카오스 사이언스</td>
-        </tr><tr>
             <td>🌐</td>
             <td><strong>[수면다큐]</strong></td>
-            <td class="num">6</td>
-            <td class="num">5</td>
-            <td class="num boost-cell">68.57x</td>
-            <td class="num">67.2x</td>
-            <td class="num">401.5x</td>
-            <td class="small">[수면다큐], 고독한 낭독회, 세모과학 외</td>
+            <td class="num">4</td>
+            <td class="num">3</td>
+            <td class="num boost-cell">147.90x</td>
+            <td class="num">100.9x</td>
+            <td class="num">402.4x</td>
+            <td class="small">[수면다큐], 고독한 낭독회, 우주 산책</td>
         </tr><tr>
             <td>📍</td>
             <td><strong>[2018 물리]</strong></td>
-            <td class="num">7</td>
+            <td class="num">5</td>
             <td class="num">1</td>
-            <td class="num boost-cell">42.57x</td>
+            <td class="num boost-cell">62.50x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">카오스 사이언스</td>
         </tr><tr>
-            <td>🌐</td>
-            <td><strong>[지식뉴스]</strong></td>
-            <td class="num">30</td>
-            <td class="num">2</td>
-            <td class="num boost-cell">7.74x</td>
-            <td class="num">0.2x</td>
-            <td class="num">2.3x</td>
-            <td class="small">교양이를 부탁해, 스브스뉴스</td>
-        </tr><tr>
-            <td>🌐</td>
+            <td>📍</td>
             <td><strong>[통합본]</strong></td>
-            <td class="num">7</td>
-            <td class="num">2</td>
-            <td class="num boost-cell">6.40x</td>
-            <td class="num">0.2x</td>
-            <td class="num">0.4x</td>
-            <td class="small">교양이를 부탁해, 스브스뉴스</td>
+            <td class="num">5</td>
+            <td class="num">1</td>
+            <td class="num boost-cell">26.11x</td>
+            <td class="num">0.5x</td>
+            <td class="num">1.4x</td>
+            <td class="small">교양이를 부탁해</td>
         </tr><tr>
             <td>📍</td>
-            <td><strong>[EN]</strong></td>
-            <td class="num">10</td>
+            <td><strong>[지식뉴스]</strong></td>
+            <td class="num">18</td>
             <td class="num">1</td>
-            <td class="num boost-cell">5.30x</td>
-            <td class="num">0.5x</td>
-            <td class="num">1.6x</td>
-            <td class="small">이지영 [Leejiyoung Official]</td>
+            <td class="num boost-cell">10.41x</td>
+            <td class="num">0.2x</td>
+            <td class="num">0.4x</td>
+            <td class="small">교양이를 부탁해</td>
+        </tr><tr>
+            <td>📍</td>
+            <td><strong>[카오스 짧강]</strong></td>
+            <td class="num">9</td>
+            <td class="num">1</td>
+            <td class="num boost-cell">2.04x</td>
+            <td class="num">0.0x</td>
+            <td class="num">0.0x</td>
+            <td class="small">카오스 사이언스</td>
+        </tr><tr>
+            <td>📍</td>
+            <td><strong>[손경제]</strong></td>
+            <td class="num">5</td>
+            <td class="num">1</td>
+            <td class="num boost-cell">1.87x</td>
+            <td class="num">0.1x</td>
+            <td class="num">0.1x</td>
+            <td class="small">손에잡히는경제</td>
+        </tr><tr>
+            <td>📍</td>
+            <td><strong>[속보효]</strong></td>
+            <td class="num">3</td>
+            <td class="num">1</td>
+            <td class="num boost-cell">1.76x</td>
+            <td class="num">0.1x</td>
+            <td class="num">0.1x</td>
+            <td class="small">이효석아카데미</td>
         </tr><tr>
             <td>📍</td>
             <td><strong>[삼성전자 주가전망]</strong></td>
             <td class="num">4</td>
             <td class="num">1</td>
-            <td class="num boost-cell">2.83x</td>
+            <td class="num boost-cell">1.46x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">주식곳간TV</td>
@@ -429,7 +131,7 @@ table.hyp .small { font-size: 0.82em; color: #555; }
             <td><strong>[한화오션 주가전망]</strong></td>
             <td class="num">4</td>
             <td class="num">1</td>
-            <td class="num boost-cell">2.10x</td>
+            <td class="num boost-cell">1.08x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">주식곳간TV</td>
@@ -438,25 +140,16 @@ table.hyp .small { font-size: 0.82em; color: #555; }
             <td><strong>[LG전자 주가전망]</strong></td>
             <td class="num">3</td>
             <td class="num">1</td>
-            <td class="num boost-cell">2.08x</td>
+            <td class="num boost-cell">1.07x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">주식곳간TV</td>
         </tr><tr>
             <td>📍</td>
-            <td><strong>[시사끝짱 몰아보기]</strong></td>
-            <td class="num">5</td>
-            <td class="num">1</td>
-            <td class="num boost-cell">2.03x</td>
-            <td class="num">0.2x</td>
-            <td class="num">0.3x</td>
-            <td class="small">시사저널TV</td>
-        </tr><tr>
-            <td>📍</td>
             <td><strong>[삼성전기 주가전망]</strong></td>
             <td class="num">3</td>
             <td class="num">1</td>
-            <td class="num boost-cell">2.03x</td>
+            <td class="num boost-cell">1.04x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">주식곳간TV</td>
@@ -465,7 +158,7 @@ table.hyp .small { font-size: 0.82em; color: #555; }
             <td><strong>[두산에너빌리티 주가전망]</strong></td>
             <td class="num">4</td>
             <td class="num">1</td>
-            <td class="num boost-cell">1.96x</td>
+            <td class="num boost-cell">1.01x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">주식곳간TV</td>
@@ -474,7 +167,7 @@ table.hyp .small { font-size: 0.82em; color: #555; }
             <td><strong>[가온전선 주가전망]</strong></td>
             <td class="num">3</td>
             <td class="num">1</td>
-            <td class="num boost-cell">1.87x</td>
+            <td class="num boost-cell">0.96x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">주식곳간TV</td>
@@ -483,64 +176,64 @@ table.hyp .small { font-size: 0.82em; color: #555; }
             <td><strong>[미래에셋증권 주가전망]</strong></td>
             <td class="num">3</td>
             <td class="num">1</td>
-            <td class="num boost-cell">1.75x</td>
+            <td class="num boost-cell">0.90x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">주식곳간TV</td>
-        </tr><tr>
-            <td>📍</td>
-            <td><strong>[손경제]</strong></td>
-            <td class="num">17</td>
-            <td class="num">1</td>
-            <td class="num boost-cell">1.57x</td>
-            <td class="num">0.1x</td>
-            <td class="num">0.1x</td>
-            <td class="small">손에잡히는경제</td>
-        </tr><tr>
-            <td>📍</td>
-            <td><strong>[🔴진중권 LIVE]</strong></td>
-            <td class="num">5</td>
-            <td class="num">1</td>
-            <td class="num boost-cell">1.57x</td>
-            <td class="num">0.2x</td>
-            <td class="num">0.3x</td>
-            <td class="small">시사저널TV</td>
         </tr><tr>
             <td>📍</td>
             <td><strong>[한미반도체 주가전망]</strong></td>
             <td class="num">3</td>
             <td class="num">1</td>
-            <td class="num boost-cell">1.49x</td>
+            <td class="num boost-cell">0.76x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">주식곳간TV</td>
         </tr><tr>
             <td>📍</td>
-            <td><strong>[#유퀴즈온더블럭]</strong></td>
-            <td class="num">22</td>
+            <td><strong>[EBS x 한경협]</strong></td>
+            <td class="num">3</td>
             <td class="num">1</td>
-            <td class="num boost-cell">1.38x</td>
+            <td class="num boost-cell">0.55x</td>
+            <td class="num">0.0x</td>
+            <td class="num">0.0x</td>
+            <td class="small">EBSCulture (EBS 교양)</td>
+        </tr><tr>
+            <td>📍</td>
+            <td><strong>[버디버디]</strong></td>
+            <td class="num">6</td>
+            <td class="num">1</td>
+            <td class="num boost-cell">0.36x</td>
             <td class="num">0.0x</td>
             <td class="num">0.1x</td>
+            <td class="small">머니코믹스</td>
+        </tr><tr>
+            <td>📍</td>
+            <td><strong>[#유퀴즈온더블럭]</strong></td>
+            <td class="num">13</td>
+            <td class="num">1</td>
+            <td class="num boost-cell">0.29x</td>
+            <td class="num">0.0x</td>
+            <td class="num">0.0x</td>
             <td class="small">tvN D ENT</td>
         </tr><tr>
             <td>📍</td>
-            <td><strong>[카오스 짧강]</strong></td>
-            <td class="num">12</td>
+            <td><strong>[하이라이트]</strong></td>
+            <td class="num">3</td>
             <td class="num">1</td>
-            <td class="num boost-cell">1.29x</td>
-            <td class="num">0.0x</td>
-            <td class="num">0.0x</td>
-            <td class="small">카오스 사이언스</td>
-        </tr><tr>
-            <td>📍</td>
-            <td><strong>[#언더커버셰프]</strong></td>
-            <td class="num">4</td>
-            <td class="num">1</td>
-            <td class="num boost-cell">1.07x</td>
+            <td class="num boost-cell">0.27x</td>
             <td class="num">0.0x</td>
             <td class="num">0.0x</td>
             <td class="small">tvN D ENT</td>
+        </tr><tr>
+            <td>🌐</td>
+            <td><strong>[예고]</strong></td>
+            <td class="num">3</td>
+            <td class="num">3</td>
+            <td class="num boost-cell">0.16x</td>
+            <td class="num">0.0x</td>
+            <td class="num">0.0x</td>
+            <td class="small">EBSCulture (EBS 교양), EBSDocumentary (EBS 다큐), 세상의 모든 다큐</td>
         </tr></tbody>
         </table>
     
@@ -724,7 +417,7 @@ table.hyp .small { font-size: 0.82em; color: #555; }
         
 
 <p class="meta" style="margin-top:40px; text-align:center;">
-    가설 갱신: 2026-06-25 04:50:30 UTC · 라벨: 2026-06-25 04:50:30 UTC · 시간: 2026-06-13 13:58:07
+    가설 갱신: 2026-08-10 12:30:24 UTC · 라벨: 2026-08-10 12:30:24 UTC · 시간: 2026-06-13 13:58:07
 </p>
 </body>
 </html>
