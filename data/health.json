@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10 21:44",
+  "generated_at": "2026-08-10 22:50",
   "overall_icon": "🔴",
   "overall_label": "긴급 점검",
   "overall_severity": "critical",
@@ -17,7 +17,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "14분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-08-10 21:30",
       "file": "channels/knowledge-archive/_monitor_logs/news_headlines_2026-08-10.json",
       "severity": "warning"
@@ -27,7 +27,7 @@
       "status": "fresh",
       "icon": "🟢",
       "status_label": "정상",
-      "ago": "14분 전",
+      "ago": "1시간 전",
       "updated_at": "2026-08-10 21:30",
       "file": "channels/knowledge-archive/_monitor_logs/proven_topics_2026-08-10.json",
       "severity": "warning"
@@ -80,7 +80,7 @@
       "icon": "🟢",
       "status_label": "정상",
       "ago": "0분 전",
-      "updated_at": "2026-08-10 21:44"
+      "updated_at": "2026-08-10 22:50"
     },
     {
       "label": "🛡️ 데이터 신뢰도",
@@ -88,14 +88,14 @@
       "icon": "🟡",
       "status_label": "부분 의심",
       "ago": "실시간",
-      "detail": "24h 차단 1건",
-      "block_events_24h": 1,
+      "detail": "24h 차단 2건",
+      "block_events_24h": 2,
       "flagged_drops": [],
       "severity": "critical"
     }
   ],
   "data_trust": {
-    "block_events_24h": 1,
+    "block_events_24h": 2,
     "flagged_drops": [],
     "status": "stale"
   },
@@ -109,10 +109,15 @@
       "ts": "2026-08-10 21:04:43",
       "type": "canary_fail",
       "detail": "canary FAIL (PSY 강남스타일: [Errno 2] No such file or directory: 'yt-dlp')"
+    },
+    {
+      "ts": "2026-08-10 22:09:57",
+      "type": "canary_fail",
+      "detail": "canary FAIL (PSY 강남스타일: [Errno 2] No such file or directory: 'yt-dlp')"
     }
   ],
   "last_block_event": {
-    "ts": "2026-08-10 21:04:43",
+    "ts": "2026-08-10 22:09:57",
     "type": "canary_fail",
     "detail": "canary FAIL (PSY 강남스타일: [Errno 2] No such file or directory: 'yt-dlp')"
   }

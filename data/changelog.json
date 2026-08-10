@@ -1,16 +1,26 @@
 {
-  "generated_at": "2026-08-10 21:44",
+  "generated_at": "2026-08-10 22:50",
   "total_commits": 80,
   "by_category": {
-    "other": 3,
     "data": 74,
+    "other": 3,
     "feat": 3
   },
   "recent_by_date": [
     {
       "date": "2026-08-10",
-      "count": 1,
+      "count": 2,
       "commits": [
+        {
+          "hash": "6805a3f",
+          "full_hash": "6805a3f913b0a7e10e65fabee6416f9672852445",
+          "ts": "2026-08-10 21:46",
+          "ts_iso": "2026-08-10T21:46:05",
+          "author": "cmpark0401-hash",
+          "subject": "auto: build 2026-08-10 21:46",
+          "category": "data",
+          "category_label": "📊 데이터 갱신"
+        },
         {
           "hash": "6130e33",
           "full_hash": "6130e3328499b2a4461a1a3b778bee2b8b4f7b86",
@@ -641,6 +651,16 @@
     }
   ],
   "all_commits": [
+    {
+      "hash": "6805a3f",
+      "full_hash": "6805a3f913b0a7e10e65fabee6416f9672852445",
+      "ts": "2026-08-10 21:46",
+      "ts_iso": "2026-08-10T21:46:05",
+      "author": "cmpark0401-hash",
+      "subject": "auto: build 2026-08-10 21:46",
+      "category": "data",
+      "category_label": "📊 데이터 갱신"
+    },
     {
       "hash": "6130e33",
       "full_hash": "6130e3328499b2a4461a1a3b778bee2b8b4f7b86",
@@ -1428,16 +1448,6 @@
       "ts_iso": "2026-07-16T22:09:28",
       "author": "github-actions[bot]",
       "subject": "site: 2026-07-16 13:09 UTC 3시간 갱신",
-      "category": "data",
-      "category_label": "📊 데이터 갱신"
-    },
-    {
-      "hash": "9724c52",
-      "full_hash": "9724c5283fa910e1866cafaa16eecba9025dd753",
-      "ts": "2026-07-16 19:47",
-      "ts_iso": "2026-07-16T19:47:21",
-      "author": "github-actions[bot]",
-      "subject": "site: 2026-07-16 10:47 UTC 3시간 갱신",
       "category": "data",
       "category_label": "📊 데이터 갱신"
     }
