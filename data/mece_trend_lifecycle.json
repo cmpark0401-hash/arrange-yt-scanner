@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 21:43",
+  "updated_at": "2026-08-11 16:09",
   "trends": {
     "시즌 트렌드:시그니엘": {
       "category": "시즌 트렌드",
@@ -45,9 +45,9 @@
         }
       ],
       "stage": "🔥 폭발 (정점)",
-      "days_active": 46,
-      "days_since_peak": 19,
-      "days_since_last_video": 17,
+      "days_active": 47,
+      "days_since_peak": 20,
+      "days_since_last_video": 18,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-07-22",
@@ -82,9 +82,9 @@
         }
       ],
       "stage": "🔥 폭발 (정점)",
-      "days_active": 46,
-      "days_since_peak": 19,
-      "days_since_last_video": 17,
+      "days_active": 47,
+      "days_since_peak": 20,
+      "days_since_last_video": 18,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-07-22",
@@ -109,9 +109,9 @@
         }
       ],
       "stage": "🔥 폭발 (정점)",
-      "days_active": 46,
-      "days_since_peak": 17,
-      "days_since_last_video": 17,
+      "days_active": 47,
+      "days_since_peak": 18,
+      "days_since_last_video": 18,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-07-24",
@@ -122,7 +122,7 @@
       "category": "뉴스 트렌드",
       "keyword": "반도체",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "snapshots": [
         {
           "date": "2026-07-22",
@@ -165,14 +165,24 @@
           "channels": [
             "MBC 라디오 시사"
           ]
+        },
+        {
+          "date": "2026-08-11",
+          "video_count": 1,
+          "avg_eff": 0.0,
+          "max_eff": 0,
+          "channel_count": 1,
+          "channels": [
+            "MBC 라디오 시사"
+          ]
         }
       ],
       "stage": "📉 하락",
-      "days_active": 46,
-      "days_since_peak": 19,
+      "days_active": 47,
+      "days_since_peak": 20,
       "days_since_last_video": 0,
-      "momentum": "-20.0%",
-      "momentum_pct": -20.0,
+      "momentum": "-40.0%",
+      "momentum_pct": -40.0,
       "peak_date": "2026-07-22",
       "peak_video_count": 2,
       "peak_efficiency": 2.14
@@ -181,7 +191,7 @@
       "category": "뉴스 트렌드",
       "keyword": "환율",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-08-10",
+      "last_seen": "2026-08-11",
       "snapshots": [
         {
           "date": "2026-07-22",
@@ -216,17 +226,31 @@
             "지식캔버스",
             "청춘 부동산"
           ]
+        },
+        {
+          "date": "2026-08-11",
+          "video_count": 5,
+          "avg_eff": 29.22,
+          "max_eff": 110.0,
+          "channel_count": 5,
+          "channels": [
+            "KB여의도5번출구",
+            "경제해적단",
+            "돈그라미 경제학",
+            "지식캔버스",
+            "청춘 부동산"
+          ]
         }
       ],
-      "stage": "🔥 폭발 (정점)",
-      "days_active": 46,
+      "stage": "🔥 폭발 (상승)",
+      "days_active": 47,
       "days_since_peak": 0,
       "days_since_last_video": 0,
-      "momentum": "+0.0%",
-      "momentum_pct": 0.0,
-      "peak_date": "2026-08-10",
-      "peak_video_count": 4,
-      "peak_efficiency": 36.21
+      "momentum": "+42.9%",
+      "momentum_pct": 42.9,
+      "peak_date": "2026-08-11",
+      "peak_video_count": 5,
+      "peak_efficiency": 29.22
     },
     "뉴스 트렌드:금리": {
       "category": "뉴스 트렌드",
@@ -246,9 +270,9 @@
         }
       ],
       "stage": "🔥 폭발 (정점)",
-      "days_active": 46,
-      "days_since_peak": 19,
-      "days_since_last_video": 19,
+      "days_active": 47,
+      "days_since_peak": 20,
+      "days_since_last_video": 20,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-07-22",
@@ -321,9 +345,9 @@
         }
       ],
       "stage": "🔥 폭발 (정점)",
-      "days_active": 12,
-      "days_since_peak": 12,
-      "days_since_last_video": 12,
+      "days_active": 13,
+      "days_since_peak": 13,
+      "days_since_last_video": 13,
       "momentum": "+0.0%",
       "momentum_pct": 0.0,
       "peak_date": "2026-07-29",

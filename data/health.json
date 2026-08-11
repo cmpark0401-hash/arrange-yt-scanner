@@ -114,10 +114,15 @@
       "ts": "2026-08-10 22:09:57",
       "type": "canary_fail",
       "detail": "canary FAIL (PSY 강남스타일: [Errno 2] No such file or directory: 'yt-dlp')"
+    },
+    {
+      "ts": "2026-08-11 12:00:03",
+      "type": "canary_fail",
+      "detail": "canary FAIL (PSY 강남스타일: [Errno 2] No such file or directory: 'yt-dlp')"
     }
   ],
   "last_block_event": {
-    "ts": "2026-08-10 22:09:57",
+    "ts": "2026-08-11 12:00:03",
     "type": "canary_fail",
     "detail": "canary FAIL (PSY 강남스타일: [Errno 2] No such file or directory: 'yt-dlp')"
   }

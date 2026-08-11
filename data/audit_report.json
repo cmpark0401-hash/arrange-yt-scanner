@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-08-10 21:43",
+  "audited_at": "2026-08-11 16:09",
   "overall_status": "fail",
   "summary": {
     "pass": 5,
@@ -13,10 +13,10 @@
       "status": "pass",
       "messages": [],
       "data": {
-        "size_kb": 10.3,
-        "mtime": "2026-08-10 21:43",
+        "size_kb": 12.1,
+        "mtime": "2026-08-11 16:09",
         "hours_ago": 0.0,
-        "count": 17
+        "count": 20
       }
     },
     {
@@ -24,10 +24,10 @@
       "status": "pass",
       "messages": [],
       "data": {
-        "size_kb": 20.2,
-        "mtime": "2026-08-10 21:43",
+        "size_kb": 23.6,
+        "mtime": "2026-08-11 16:09",
         "hours_ago": 0.0,
-        "count": 17
+        "count": 20
       }
     },
     {
@@ -37,7 +37,7 @@
       "data": {
         "size_kb": 5.3,
         "mtime": "2026-08-10 21:43",
-        "hours_ago": 0.0,
+        "hours_ago": 18.4,
         "count": 2
       }
     },
@@ -46,8 +46,8 @@
       "status": "pass",
       "messages": [],
       "data": {
-        "size_kb": 8.5,
-        "mtime": "2026-08-10 21:43",
+        "size_kb": 9.1,
+        "mtime": "2026-08-11 16:09",
         "hours_ago": 0.0,
         "count": 11
       }
@@ -63,7 +63,7 @@
       "data": {
         "size_kb": 0.4,
         "mtime": "2026-08-10 21:30",
-        "hours_ago": 0.2,
+        "hours_ago": 18.7,
         "count": 0
       }
     },
@@ -76,7 +76,7 @@
       ],
       "data": {
         "size_kb": 0.1,
-        "mtime": "2026-08-10 21:43",
+        "mtime": "2026-08-11 16:09",
         "hours_ago": 0.0,
         "count": 0
       }
@@ -90,7 +90,7 @@
       ],
       "data": {
         "size_kb": 0.2,
-        "mtime": "2026-08-10 21:43",
+        "mtime": "2026-08-11 16:09",
         "hours_ago": 0.0,
         "count": 0
       }
@@ -102,13 +102,17 @@
       "data": {
         "size_kb": 1.4,
         "mtime": "2026-08-10 21:43",
-        "hours_ago": 0.0,
+        "hours_ago": 18.4,
         "count": 2
       }
     }
   ],
   "data_diff": {
-    "note": "어제 데이터 없음 — 첫 실행이거나 누락"
+    "explosion_alerts.json": "20 (+3, +17.6%)",
+    "mece_unified.json": "20 (+3, +17.6%)",
+    "mece_blue_slots.json": "2 (+0, +0.0%)",
+    "mece_trend_lifecycle.json": "11 (+0, +0.0%)",
+    "mece_history.json": "2 (+0, +0.0%)"
   },
   "youtube_blocks": {
     "meta_failures": 0,

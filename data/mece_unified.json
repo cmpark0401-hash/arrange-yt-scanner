@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-10 21:43",
+  "updated_at": "2026-08-11 16:09",
   "videos": [
     {
       "vid": "l94qERn7Nus",
       "title": "달러 보유, 위기 보험일까 환율 베팅일까? '버티는 돈·지키는 돈·움직이는 돈' 구분법",
       "channel": "돈그라미 경제학",
       "channel_subs": 819,
-      "views": 27238,
-      "efficiency": 33.26,
-      "velocity_per_day": 9079,
-      "freshness_days": 3,
-      "verdict": "🔥 즉시 추격 (D+3 황금기)",
+      "views": 29198,
+      "efficiency": 34.27,
+      "velocity_per_day": 7299,
+      "freshness_days": 4,
+      "verdict": "⚡ 속도 추격 가치",
       "url": "https://youtube.com/watch?v=l94qERn7Nus",
       "category": "경제·시사",
       "found_via_keyword": "환율",
@@ -43,7 +43,7 @@
         "has_trend": true,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.521
+      "priority_score": 0.498
     },
     {
       "vid": "DW-_G6UpNL0",
@@ -52,8 +52,8 @@
       "channel_subs": 647,
       "views": 71167,
       "efficiency": 110.0,
-      "velocity_per_day": 8895,
-      "freshness_days": 8,
+      "velocity_per_day": 7907,
+      "freshness_days": 9,
       "verdict": "⭐ 2차 정점 (D+8~14)",
       "url": "https://youtube.com/watch?v=DW-_G6UpNL0",
       "category": "경제·시사",
@@ -90,7 +90,7 @@
         "has_trend": true,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.48
+      "priority_score": 0.456
     },
     {
       "vid": "1i__O7cbkDA",
@@ -99,9 +99,9 @@
       "channel_subs": 10500,
       "views": 290181,
       "efficiency": 27.64,
-      "velocity_per_day": 58036,
-      "freshness_days": 5,
-      "verdict": "🚀🚀 슈퍼 폭발 (D+5 초신선)",
+      "velocity_per_day": 48363,
+      "freshness_days": 6,
+      "verdict": "🚀 속도 폭발 (즉시 추격)",
       "url": "https://youtube.com/watch?v=1i__O7cbkDA",
       "category": "야담",
       "found_via_keyword": "야담",
@@ -132,7 +132,91 @@
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.453
+      "priority_score": 0.427
+    },
+    {
+      "vid": "4ZFm8I710Hc",
+      "title": "1300원대 내다보는 원달러 환율. 하반기 미국 투자 전망",
+      "channel": "경제해적단",
+      "channel_subs": 89700,
+      "views": 15246,
+      "efficiency": 0.17,
+      "velocity_per_day": 7623,
+      "freshness_days": 2,
+      "verdict": "⚡ 속도 추격 가치",
+      "url": "https://youtube.com/watch?v=4ZFm8I710Hc",
+      "category": "경제·시사",
+      "found_via_keyword": "환율",
+      "source": [
+        "explosion"
+      ],
+      "dims": {
+        "time": [],
+        "space": [
+          "미국"
+        ],
+        "stake": [],
+        "cause": [],
+        "scale": [],
+        "person": [],
+        "number": [],
+        "mech": [],
+        "content_keyword": [],
+        "trend": [
+          "뉴스 트렌드:환율"
+        ],
+        "click_force": {
+          "seal": [],
+          "quote": [],
+          "compare": [],
+          "specific_num": []
+        },
+        "dim_count": 1,
+        "click_force_count": 0,
+        "has_trend": true,
+        "is_explosive_pattern": false
+      },
+      "priority_score": 0.381
+    },
+    {
+      "vid": "gkFjoBbLW_U",
+      "title": "[제우스: 오만의 신] 경제 특화 클래스 | 아티산",
+      "channel": "제우스: 오만의 신",
+      "channel_subs": 79700,
+      "views": 30361,
+      "efficiency": 0.38,
+      "velocity_per_day": 30361,
+      "freshness_days": 1,
+      "verdict": "🚀🚀 슈퍼 폭발 (D+5 초신선)",
+      "url": "https://youtube.com/watch?v=gkFjoBbLW_U",
+      "category": "경제·시사",
+      "found_via_keyword": "경제",
+      "source": [
+        "explosion"
+      ],
+      "dims": {
+        "time": [],
+        "space": [],
+        "stake": [],
+        "cause": [],
+        "scale": [],
+        "person": [],
+        "number": [],
+        "mech": [],
+        "content_keyword": [],
+        "trend": [],
+        "click_force": {
+          "seal": [],
+          "quote": [],
+          "compare": [],
+          "specific_num": []
+        },
+        "dim_count": 0,
+        "click_force_count": 0,
+        "has_trend": false,
+        "is_explosive_pattern": false
+      },
+      "priority_score": 0.371
     },
     {
       "vid": "quhnodcWmWQ",
@@ -141,8 +225,8 @@
       "channel_subs": 0,
       "views": 81931,
       "efficiency": 0,
-      "velocity_per_day": 20482,
-      "freshness_days": 4,
+      "velocity_per_day": 16386,
+      "freshness_days": 5,
       "verdict": "🚀 속도 폭발 (즉시 추격)",
       "url": "https://youtube.com/watch?v=quhnodcWmWQ",
       "category": "경제·시사",
@@ -176,17 +260,57 @@
         "has_trend": true,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.401
+      "priority_score": 0.367
+    },
+    {
+      "vid": "iAE0IGyiGho",
+      "title": "[손석희의 12시] 서학 개미 증가가 우리 경제에 미칠 영향 _이효석 HS아카데미 대표 | 한 걸음 더 들어가겠습니다 | MBC 260810",
+      "channel": "손석희의 12시",
+      "channel_subs": 78000,
+      "views": 27969,
+      "efficiency": 0.36,
+      "velocity_per_day": 27969,
+      "freshness_days": 1,
+      "verdict": "🚀 속도 폭발 (즉시 추격)",
+      "url": "https://youtube.com/watch?v=iAE0IGyiGho",
+      "category": "경제·시사",
+      "found_via_keyword": "경제",
+      "source": [
+        "explosion"
+      ],
+      "dims": {
+        "time": [],
+        "space": [],
+        "stake": [],
+        "cause": [],
+        "scale": [],
+        "person": [],
+        "number": [],
+        "mech": [],
+        "content_keyword": [],
+        "trend": [],
+        "click_force": {
+          "seal": [],
+          "quote": [],
+          "compare": [],
+          "specific_num": []
+        },
+        "dim_count": 0,
+        "click_force_count": 0,
+        "has_trend": false,
+        "is_explosive_pattern": false
+      },
+      "priority_score": 0.364
     },
     {
       "vid": "7OCnsWXtJfU",
       "title": "환율 1,400원 초반 붕괴 임박? 미국과 일본이 작정하고 달러 떨어뜨리는 이유",
       "channel": "KB여의도5번출구",
       "channel_subs": 43400,
-      "views": 19434,
-      "efficiency": 0.45,
-      "velocity_per_day": 6478,
-      "freshness_days": 3,
+      "views": 22545,
+      "efficiency": 0.52,
+      "velocity_per_day": 5636,
+      "freshness_days": 4,
       "verdict": "⚡ 속도 추격 가치",
       "url": "https://youtube.com/watch?v=7OCnsWXtJfU",
       "category": "경제·시사",
@@ -223,7 +347,101 @@
         "has_trend": true,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.382
+      "priority_score": 0.358
+    },
+    {
+      "vid": "U541ObsL6Nw",
+      "title": "1위 수원삼성·3위 수원FC…승격 놓고 수원더비 [경기/수원]",
+      "channel": "B tv 뉴스",
+      "channel_subs": 43100,
+      "views": 12987,
+      "efficiency": 0.3,
+      "velocity_per_day": 12987,
+      "freshness_days": 1,
+      "verdict": "🚀 속도 폭발 (즉시 추격)",
+      "url": "https://youtube.com/watch?v=U541ObsL6Nw",
+      "category": "경제·시사",
+      "found_via_keyword": "삼성",
+      "source": [
+        "explosion"
+      ],
+      "dims": {
+        "time": [],
+        "space": [],
+        "stake": [],
+        "cause": [],
+        "scale": [
+          "1위"
+        ],
+        "person": [],
+        "number": [
+          "1위",
+          "3위"
+        ],
+        "mech": [],
+        "content_keyword": [],
+        "trend": [],
+        "click_force": {
+          "seal": [],
+          "quote": [],
+          "compare": [],
+          "specific_num": [
+            "1위",
+            "3위"
+          ]
+        },
+        "dim_count": 2,
+        "click_force_count": 1,
+        "has_trend": false,
+        "is_explosive_pattern": false
+      },
+      "priority_score": 0.344
+    },
+    {
+      "vid": "0TQmm16Lmlg",
+      "title": "[삼성전자 주가 전망] \"새벽5시 긴급속보\" 오늘 시초가 \"이 가격\"이면 주가 난리납니다 반드시 \"이렇게\" 대응하세요 공매도 숏스퀴즈 美골든타임 #삼성전자",
+      "channel": "미래에서 온 슈퍼개미",
+      "channel_subs": 90500,
+      "views": 5858,
+      "efficiency": 0.06,
+      "velocity_per_day": 5858,
+      "freshness_days": 1,
+      "verdict": "⚡ 속도 추격 가치",
+      "url": "https://youtube.com/watch?v=0TQmm16Lmlg",
+      "category": "경제·시사",
+      "found_via_keyword": "삼성",
+      "source": [
+        "explosion"
+      ],
+      "dims": {
+        "time": [
+          "오늘"
+        ],
+        "space": [],
+        "stake": [],
+        "cause": [],
+        "scale": [],
+        "person": [],
+        "number": [],
+        "mech": [],
+        "content_keyword": [],
+        "trend": [],
+        "click_force": {
+          "seal": [],
+          "quote": [
+            "새벽5시 긴급속보",
+            "이 가격",
+            "이렇게"
+          ],
+          "compare": [],
+          "specific_num": []
+        },
+        "dim_count": 1,
+        "click_force_count": 1,
+        "has_trend": false,
+        "is_explosive_pattern": false
+      },
+      "priority_score": 0.321
     },
     {
       "vid": "cYZYuB44r_Q",
@@ -232,8 +450,8 @@
       "channel_subs": 34200,
       "views": 167882,
       "efficiency": 4.91,
-      "velocity_per_day": 41970,
-      "freshness_days": 4,
+      "velocity_per_day": 33576,
+      "freshness_days": 5,
       "verdict": "🚀🚀 슈퍼 폭발 (D+5 초신선)",
       "url": "https://youtube.com/watch?v=cYZYuB44r_Q",
       "category": "과학·건강",
@@ -263,7 +481,7 @@
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.36
+      "priority_score": 0.313
     },
     {
       "vid": "Q9d1dEUVJHI",
@@ -272,9 +490,9 @@
       "channel_subs": 20000,
       "views": 99254,
       "efficiency": 4.96,
-      "velocity_per_day": 33084,
-      "freshness_days": 3,
-      "verdict": "🚀🚀 슈퍼 폭발 (D+5 초신선)",
+      "velocity_per_day": 24813,
+      "freshness_days": 4,
+      "verdict": "🚀 속도 폭발 (즉시 추격)",
       "url": "https://youtube.com/watch?v=Q9d1dEUVJHI",
       "category": "잘듣네",
       "found_via_keyword": "인물",
@@ -307,7 +525,7 @@
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.355
+      "priority_score": 0.309
     },
     {
       "vid": "DnlRVUXxMa8",
@@ -316,8 +534,8 @@
       "channel_subs": 10700,
       "views": 44173,
       "efficiency": 4.13,
-      "velocity_per_day": 14724,
-      "freshness_days": 3,
+      "velocity_per_day": 11043,
+      "freshness_days": 4,
       "verdict": "🚀 속도 폭발 (즉시 추격)",
       "url": "https://youtube.com/watch?v=DnlRVUXxMa8",
       "category": "경제·시사",
@@ -355,21 +573,63 @@
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.321
+      "priority_score": 0.289
     },
     {
-      "vid": "2AMLSKGr7CY",
-      "title": "레이달리오가 경고한 주식시장 몰락 신호",
-      "channel": "지식부장관",
-      "channel_subs": 83300,
-      "views": 5451,
-      "efficiency": 0.07,
-      "velocity_per_day": 5451,
-      "freshness_days": 1,
+      "vid": "R0yQiWOPM4I",
+      "title": "환율 폭락... 이제 진짜 위험이 시작됩니다",
+      "channel": "청춘 부동산",
+      "channel_subs": 47900,
+      "views": 55180,
+      "efficiency": 1.15,
+      "velocity_per_day": 7882,
+      "freshness_days": 7,
       "verdict": "⚡ 속도 추격 가치",
-      "url": "https://youtube.com/watch?v=2AMLSKGr7CY",
+      "url": "https://youtube.com/watch?v=R0yQiWOPM4I",
       "category": "경제·시사",
-      "found_via_keyword": "주식",
+      "found_via_keyword": "환율",
+      "source": [
+        "explosion"
+      ],
+      "dims": {
+        "time": [],
+        "space": [],
+        "stake": [],
+        "cause": [],
+        "scale": [],
+        "person": [],
+        "number": [],
+        "mech": [],
+        "content_keyword": [],
+        "trend": [
+          "뉴스 트렌드:환율"
+        ],
+        "click_force": {
+          "seal": [],
+          "quote": [],
+          "compare": [],
+          "specific_num": []
+        },
+        "dim_count": 0,
+        "click_force_count": 0,
+        "has_trend": true,
+        "is_explosive_pattern": false
+      },
+      "priority_score": 0.278
+    },
+    {
+      "vid": "vWFMSgfcBPo",
+      "title": "산골 머슴이 매맞는 처녀를 데려왔는데 경사났다 /야담 조선야담 옛날이야기 오디오북 수면동화 전래동화",
+      "channel": "야담한자락",
+      "channel_subs": 23600,
+      "views": 106820,
+      "efficiency": 4.53,
+      "velocity_per_day": 21364,
+      "freshness_days": 5,
+      "verdict": "🚀 속도 폭발 (즉시 추격)",
+      "url": "https://youtube.com/watch?v=vWFMSgfcBPo",
+      "category": "야담",
+      "found_via_keyword": "야담",
       "source": [
         "explosion"
       ],
@@ -385,61 +645,17 @@
         "content_keyword": [],
         "trend": [],
         "click_force": {
-          "seal": [
-            "몰락"
-          ],
-          "quote": [],
-          "compare": [],
-          "specific_num": []
-        },
-        "dim_count": 0,
-        "click_force_count": 1,
-        "has_trend": false,
-        "is_explosive_pattern": false
-      },
-      "priority_score": 0.32
-    },
-    {
-      "vid": "5ofas55JKBc",
-      "title": "왜 우주의 근본은 정보와 3차원일까? 답은 양자정보에 있다",
-      "channel": "아재너드",
-      "channel_subs": 35800,
-      "views": 9989,
-      "efficiency": 0.28,
-      "velocity_per_day": 9989,
-      "freshness_days": 1,
-      "verdict": "⚡ 속도 추격 가치",
-      "url": "https://youtube.com/watch?v=5ofas55JKBc",
-      "category": "과학·건강",
-      "found_via_keyword": "우주",
-      "source": [
-        "explosion"
-      ],
-      "dims": {
-        "time": [],
-        "space": [],
-        "stake": [],
-        "cause": [],
-        "scale": [],
-        "person": [],
-        "number": [
-          "3차"
-        ],
-        "mech": [],
-        "content_keyword": [],
-        "trend": [],
-        "click_force": {
           "seal": [],
           "quote": [],
           "compare": [],
           "specific_num": []
         },
-        "dim_count": 1,
+        "dim_count": 0,
         "click_force_count": 0,
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.31
+      "priority_score": 0.275
     },
     {
       "vid": "jQogWQlkAtY",
@@ -448,8 +664,8 @@
       "channel_subs": 26700,
       "views": 172429,
       "efficiency": 6.46,
-      "velocity_per_day": 28738,
-      "freshness_days": 6,
+      "velocity_per_day": 24632,
+      "freshness_days": 7,
       "verdict": "🚀 속도 폭발 (즉시 추격)",
       "url": "https://youtube.com/watch?v=jQogWQlkAtY",
       "category": "과학·건강",
@@ -483,49 +699,7 @@
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.308
-    },
-    {
-      "vid": "R0yQiWOPM4I",
-      "title": "환율 폭락... 이제 진짜 위험이 시작됩니다",
-      "channel": "청춘 부동산",
-      "channel_subs": 47900,
-      "views": 55180,
-      "efficiency": 1.15,
-      "velocity_per_day": 9196,
-      "freshness_days": 6,
-      "verdict": "⚡ 속도 추격 가치",
-      "url": "https://youtube.com/watch?v=R0yQiWOPM4I",
-      "category": "경제·시사",
-      "found_via_keyword": "환율",
-      "source": [
-        "explosion"
-      ],
-      "dims": {
-        "time": [],
-        "space": [],
-        "stake": [],
-        "cause": [],
-        "scale": [],
-        "person": [],
-        "number": [],
-        "mech": [],
-        "content_keyword": [],
-        "trend": [
-          "뉴스 트렌드:환율"
-        ],
-        "click_force": {
-          "seal": [],
-          "quote": [],
-          "compare": [],
-          "specific_num": []
-        },
-        "dim_count": 0,
-        "click_force_count": 0,
-        "has_trend": true,
-        "is_explosive_pattern": false
-      },
-      "priority_score": 0.304
+      "priority_score": 0.275
     },
     {
       "vid": "On5S7MgDzGI",
@@ -534,8 +708,8 @@
       "channel_subs": 97400,
       "views": 51877,
       "efficiency": 0.53,
-      "velocity_per_day": 12969,
-      "freshness_days": 4,
+      "velocity_per_day": 10375,
+      "freshness_days": 5,
       "verdict": "🚀 속도 폭발 (즉시 추격)",
       "url": "https://youtube.com/watch?v=On5S7MgDzGI",
       "category": "경제·시사",
@@ -567,17 +741,17 @@
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.28
+      "priority_score": 0.251
     },
     {
       "vid": "zgc8cbhN3Sw",
       "title": "[부동산 세제개편안] 전문가도 혀내두른 '세제개편안', \"젤 복잡한 건 1주택 부부공동명의\"  _260805",
       "channel": "YTN 경제 라디오",
       "channel_subs": 6350,
-      "views": 32590,
-      "efficiency": 5.13,
-      "velocity_per_day": 6518,
-      "freshness_days": 5,
+      "views": 33020,
+      "efficiency": 5.1,
+      "velocity_per_day": 5503,
+      "freshness_days": 6,
       "verdict": "⚡ 속도 추격 가치",
       "url": "https://youtube.com/watch?v=zgc8cbhN3Sw",
       "category": "경제·시사",
@@ -610,7 +784,7 @@
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.258
+      "priority_score": 0.233
     },
     {
       "vid": "fuosM0ud5u4",
@@ -619,8 +793,8 @@
       "channel_subs": 12800,
       "views": 38548,
       "efficiency": 3.01,
-      "velocity_per_day": 6424,
-      "freshness_days": 6,
+      "velocity_per_day": 5506,
+      "freshness_days": 7,
       "verdict": "⚡ 속도 추격 가치",
       "url": "https://youtube.com/watch?v=fuosM0ud5u4",
       "category": "야담",
@@ -656,63 +830,21 @@
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.253
+      "priority_score": 0.229
     },
     {
-      "vid": "4Xc_c76Ofz8",
-      "title": "주식 시황. 증시 상승 만든 호재 두 개. 중동 사태 속보와 증시 영향. 거래 터진 종목, 급감한 종목. 주포와 주도주 등장. 추가 상승 가능성 높다? 뭉칫돈 유입. 그런데 실제는",
-      "channel": "시황맨TV",
-      "channel_subs": 92100,
-      "views": 25117,
-      "efficiency": 0.27,
-      "velocity_per_day": 5023,
-      "freshness_days": 5,
-      "verdict": "⚡ 속도 추격 가치",
-      "url": "https://youtube.com/watch?v=4Xc_c76Ofz8",
+      "vid": "2UgstQctMVU",
+      "title": "[8월11일 #장중엔]  갑작스런 삼성전자 4% 급등, 무슨 호재 있나? / 삼전 오르니 코스닥은 하락 | 박근형, 임수열",
+      "channel": "815 캠퍼스",
+      "channel_subs": 73300,
+      "views": 35506,
+      "efficiency": 0.48,
+      "velocity_per_day": 35506,
+      "freshness_days": 0,
+      "verdict": "🚀🚀 슈퍼 폭발 (D+5 초신선)",
+      "url": "https://youtube.com/watch?v=2UgstQctMVU",
       "category": "경제·시사",
-      "found_via_keyword": "주식",
-      "source": [
-        "explosion"
-      ],
-      "dims": {
-        "time": [],
-        "space": [
-          "중동"
-        ],
-        "stake": [],
-        "cause": [],
-        "scale": [],
-        "person": [],
-        "number": [],
-        "mech": [],
-        "content_keyword": [],
-        "trend": [],
-        "click_force": {
-          "seal": [],
-          "quote": [],
-          "compare": [],
-          "specific_num": []
-        },
-        "dim_count": 1,
-        "click_force_count": 0,
-        "has_trend": false,
-        "is_explosive_pattern": false
-      },
-      "priority_score": 0.209
-    },
-    {
-      "vid": "zZegUETL3Pc",
-      "title": "[부동산대책은 증세?] \"솔직히 화가 납니다, 李정부 '똘똘한 한 채' 악마화..방치해놓고 이제와서\" #빠숑 #김인만 #이광수  _260727",
-      "channel": "YTN 경제 라디오",
-      "channel_subs": 2320,
-      "views": 49722,
-      "efficiency": 21.43,
-      "velocity_per_day": 3551,
-      "freshness_days": 14,
-      "verdict": "⭐ 2차 정점 (D+8~14)",
-      "url": "https://youtube.com/watch?v=zZegUETL3Pc",
-      "category": "경제·시사",
-      "found_via_keyword": "부동산",
+      "found_via_keyword": "삼성",
       "source": [
         "explosion"
       ],
@@ -723,39 +855,40 @@
         "cause": [],
         "scale": [],
         "person": [],
-        "number": [],
+        "number": [
+          "4%"
+        ],
         "mech": [],
         "content_keyword": [],
         "trend": [],
         "click_force": {
           "seal": [],
-          "quote": [
-            "솔직히 화가 납니다, 李정부",
-            "악마화..방치해놓고 이제와서"
-          ],
+          "quote": [],
           "compare": [],
-          "specific_num": []
+          "specific_num": [
+            "4%"
+          ]
         },
-        "dim_count": 0,
+        "dim_count": 1,
         "click_force_count": 1,
         "has_trend": false,
         "is_explosive_pattern": false
       },
-      "priority_score": 0.121
+      "priority_score": 0.133
     }
   ],
   "stats": {
-    "total": 17,
-    "with_trend": 5,
+    "total": 20,
+    "with_trend": 6,
     "explosive_pattern": 0,
     "by_category": {
-      "경제·시사": 11,
-      "야담": 2,
-      "과학·건강": 3,
+      "경제·시사": 14,
+      "야담": 3,
+      "과학·건강": 2,
       "잘듣네": 1
     },
     "sources": {
-      "explosion": 17,
+      "explosion": 20,
       "zeus": 0,
       "recycle": 0,
       "copycat": 0

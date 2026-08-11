@@ -1,33 +1,33 @@
 {
-  "updated_at": "2026-08-10 21:43",
+  "updated_at": "2026-08-11 16:09",
   "data_freshness": {
     "explosion_alerts": {
-      "mtime": "2026-08-10 21:43",
+      "mtime": "2026-08-11 16:09",
       "ago": "0분 전",
       "is_stale": false
     },
     "mece_trend_lifecycle": {
-      "mtime": "2026-08-10 21:43",
+      "mtime": "2026-08-11 16:09",
       "ago": "0분 전",
       "is_stale": false
     },
     "zeus_angles": {
-      "mtime": "2026-08-10 21:43",
+      "mtime": "2026-08-11 16:09",
       "ago": "0분 전",
       "is_stale": false
     },
     "copycat_clusters": {
       "mtime": "2026-08-10 21:30",
-      "ago": "13분 전",
+      "ago": "18시간 전",
       "is_stale": false
     },
     "recycled_explosions": {
-      "mtime": "2026-08-10 21:43",
+      "mtime": "2026-08-11 16:09",
       "ago": "0분 전",
       "is_stale": false
     },
     "mece_unified": {
-      "mtime": "2026-08-10 21:43",
+      "mtime": "2026-08-11 16:09",
       "ago": "0분 전",
       "is_stale": false
     }
@@ -36,11 +36,11 @@
     "야담": [
       {
         "keyword": "야담",
-        "video_count": 2,
-        "avg_efficiency": 15.32,
+        "video_count": 3,
+        "avg_efficiency": 11.73,
         "max_efficiency": 27.64,
-        "total_views": 328729,
-        "channel_count": 2,
+        "total_views": 435549,
+        "channel_count": 3,
         "fresh_min_days": 5,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
         "momentum": "-",
@@ -54,15 +54,23 @@
             "channel": "청하야담",
             "views": 290181,
             "efficiency": 27.64,
-            "freshness_days": 5,
+            "freshness_days": 6,
             "url": "https://youtube.com/watch?v=1i__O7cbkDA"
+          },
+          {
+            "title": "산골 머슴이 매맞는 처녀를 데려왔는데 경사났다 /야담 조선야담 옛날이야기 오디오북 수면동화 전래동화",
+            "channel": "야담한자락",
+            "views": 106820,
+            "efficiency": 4.53,
+            "freshness_days": 5,
+            "url": "https://youtube.com/watch?v=vWFMSgfcBPo"
           },
           {
             "title": "\"저 바보 머슴과 혼인하겠습니다!\" 부잣집 혼담 걷어차고 동네 바보를 남편으로 찍은 19살 아씨의 소름 돋는 눈썰미..|야담| 민담| 옛날이야기",
             "channel": "햇빛야담",
             "views": 38548,
             "efficiency": 3.01,
-            "freshness_days": 6,
+            "freshness_days": 7,
             "url": "https://youtube.com/watch?v=fuosM0ud5u4"
           }
         ],
@@ -74,15 +82,15 @@
     "경제·시사": [
       {
         "keyword": "환율",
-        "video_count": 4,
-        "avg_efficiency": 36.22,
+        "video_count": 5,
+        "avg_efficiency": 29.22,
         "max_efficiency": 110.0,
-        "total_views": 173019,
-        "channel_count": 4,
-        "fresh_min_days": 3,
-        "lifecycle_stage": "🔥 폭발 (정점)",
-        "momentum": "+0.0%",
-        "days_active": 46,
+        "total_views": 193336,
+        "channel_count": 5,
+        "fresh_min_days": 2,
+        "lifecycle_stage": "🔥 폭발 (상승)",
+        "momentum": "+42.9%",
+        "days_active": 47,
         "source_files": [
           "explosion_alerts",
           "lifecycle"
@@ -93,15 +101,15 @@
             "channel": "지식캔버스",
             "views": 71167,
             "efficiency": 110.0,
-            "freshness_days": 8,
+            "freshness_days": 9,
             "url": "https://youtube.com/watch?v=DW-_G6UpNL0"
           },
           {
             "title": "달러 보유, 위기 보험일까 환율 베팅일까? '버티는 돈·지키는 돈·움직이는 돈' 구분법",
             "channel": "돈그라미 경제학",
-            "views": 27238,
-            "efficiency": 33.26,
-            "freshness_days": 3,
+            "views": 29198,
+            "efficiency": 34.27,
+            "freshness_days": 4,
             "url": "https://youtube.com/watch?v=l94qERn7Nus"
           },
           {
@@ -109,7 +117,7 @@
             "channel": "청춘 부동산",
             "views": 55180,
             "efficiency": 1.15,
-            "freshness_days": 6,
+            "freshness_days": 7,
             "url": "https://youtube.com/watch?v=R0yQiWOPM4I"
           }
         ],
@@ -120,89 +128,13 @@
         ]
       },
       {
-        "keyword": "부동산",
-        "video_count": 2,
-        "avg_efficiency": 13.28,
-        "max_efficiency": 21.43,
-        "total_views": 82312,
-        "channel_count": 1,
-        "fresh_min_days": 5,
-        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
-        "momentum": "-",
-        "days_active": 0,
-        "source_files": [
-          "explosion_alerts"
-        ],
-        "verification": [
-          {
-            "title": "[부동산대책은 증세?] \"솔직히 화가 납니다, 李정부 '똘똘한 한 채' 악마화..방치해놓고 이제와서\" #빠숑 #김인만 #이광수  _260727",
-            "channel": "YTN 경제 라디오",
-            "views": 49722,
-            "efficiency": 21.43,
-            "freshness_days": 14,
-            "url": "https://youtube.com/watch?v=zZegUETL3Pc"
-          },
-          {
-            "title": "[부동산 세제개편안] 전문가도 혀내두른 '세제개편안', \"젤 복잡한 건 1주택 부부공동명의\"  _260805",
-            "channel": "YTN 경제 라디오",
-            "views": 32590,
-            "efficiency": 5.13,
-            "freshness_days": 5,
-            "url": "https://youtube.com/watch?v=zgc8cbhN3Sw"
-          }
-        ],
-        "recommended_channels": [
-          "💹 247경제",
-          "📈 지식록",
-          "🇰🇷 레드맨"
-        ]
-      },
-      {
-        "keyword": "주식",
-        "video_count": 2,
-        "avg_efficiency": 0.17,
-        "max_efficiency": 0.27,
-        "total_views": 30568,
-        "channel_count": 2,
-        "fresh_min_days": 1,
-        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
-        "momentum": "-",
-        "days_active": 0,
-        "source_files": [
-          "explosion_alerts"
-        ],
-        "verification": [
-          {
-            "title": "주식 시황. 증시 상승 만든 호재 두 개. 중동 사태 속보와 증시 영향. 거래 터진 종목, 급감한 종목. 주포와 주도주 등장. 추가 상승 가능성",
-            "channel": "시황맨TV",
-            "views": 25117,
-            "efficiency": 0.27,
-            "freshness_days": 5,
-            "url": "https://youtube.com/watch?v=4Xc_c76Ofz8"
-          },
-          {
-            "title": "레이달리오가 경고한 주식시장 몰락 신호",
-            "channel": "지식부장관",
-            "views": 5451,
-            "efficiency": 0.07,
-            "freshness_days": 1,
-            "url": "https://youtube.com/watch?v=2AMLSKGr7CY"
-          }
-        ],
-        "recommended_channels": [
-          "💹 247경제",
-          "📈 지식록",
-          "🇰🇷 레드맨"
-        ]
-      },
-      {
         "keyword": "삼성",
-        "video_count": 2,
-        "avg_efficiency": 2.33,
+        "video_count": 5,
+        "avg_efficiency": 1.1,
         "max_efficiency": 4.13,
-        "total_views": 96050,
-        "channel_count": 2,
-        "fresh_min_days": 3,
+        "total_views": 150401,
+        "channel_count": 5,
+        "fresh_min_days": 1,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
         "momentum": "-",
         "days_active": 0,
@@ -215,7 +147,7 @@
             "channel": "글로벌톡",
             "views": 44173,
             "efficiency": 4.13,
-            "freshness_days": 3,
+            "freshness_days": 4,
             "url": "https://youtube.com/watch?v=DnlRVUXxMa8"
           },
           {
@@ -223,8 +155,16 @@
             "channel": "정영진의 나쁜질문",
             "views": 51877,
             "efficiency": 0.53,
-            "freshness_days": 4,
+            "freshness_days": 5,
             "url": "https://youtube.com/watch?v=On5S7MgDzGI"
+          },
+          {
+            "title": "[8월11일 #장중엔]  갑작스런 삼성전자 4% 급등, 무슨 호재 있나? / 삼전 오르니 코스닥은 하락 | 박근형, 임수열",
+            "channel": "815 캠퍼스",
+            "views": 35506,
+            "efficiency": 0.48,
+            "freshness_days": 0,
+            "url": "https://youtube.com/watch?v=2UgstQctMVU"
           }
         ],
         "recommended_channels": [
@@ -235,12 +175,12 @@
       },
       {
         "keyword": "경제",
-        "video_count": 1,
-        "avg_efficiency": 0.0,
-        "max_efficiency": 0,
-        "total_views": 81931,
-        "channel_count": 1,
-        "fresh_min_days": 4,
+        "video_count": 3,
+        "avg_efficiency": 0.25,
+        "max_efficiency": 0.38,
+        "total_views": 140261,
+        "channel_count": 3,
+        "fresh_min_days": 1,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
         "momentum": "-",
         "days_active": 0,
@@ -249,12 +189,58 @@
         ],
         "verification": [
           {
+            "title": "[제우스: 오만의 신] 경제 특화 클래스 | 아티산",
+            "channel": "제우스: 오만의 신",
+            "views": 30361,
+            "efficiency": 0.38,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=gkFjoBbLW_U"
+          },
+          {
+            "title": "[손석희의 12시] 서학 개미 증가가 우리 경제에 미칠 영향 _이효석 HS아카데미 대표 | 한 걸음 더 들어가겠습니다 | MBC 260810",
+            "channel": "손석희의 12시",
+            "views": 27969,
+            "efficiency": 0.36,
+            "freshness_days": 1,
+            "url": "https://youtube.com/watch?v=iAE0IGyiGho"
+          },
+          {
             "title": "\"삼전닉스? 걱정 마세요\" 반도체 대세 상승이 지속될 수밖에 없는 결정적 이유 | 김경일의 물음표",
             "channel": "MBC 라디오 시사",
             "views": 81931,
             "efficiency": 0,
-            "freshness_days": 4,
+            "freshness_days": 5,
             "url": "https://youtube.com/watch?v=quhnodcWmWQ"
+          }
+        ],
+        "recommended_channels": [
+          "💹 247경제",
+          "📈 지식록",
+          "🇰🇷 레드맨"
+        ]
+      },
+      {
+        "keyword": "부동산",
+        "video_count": 1,
+        "avg_efficiency": 5.1,
+        "max_efficiency": 5.1,
+        "total_views": 33020,
+        "channel_count": 1,
+        "fresh_min_days": 6,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "[부동산 세제개편안] 전문가도 혀내두른 '세제개편안', \"젤 복잡한 건 1주택 부부공동명의\"  _260805",
+            "channel": "YTN 경제 라디오",
+            "views": 33020,
+            "efficiency": 5.1,
+            "freshness_days": 6,
+            "url": "https://youtube.com/watch?v=zgc8cbhN3Sw"
           }
         ],
         "recommended_channels": [
@@ -272,7 +258,7 @@
         "max_efficiency": 4.96,
         "total_views": 99254,
         "channel_count": 1,
-        "fresh_min_days": 3,
+        "fresh_min_days": 4,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
         "momentum": "-",
         "days_active": 0,
@@ -285,7 +271,7 @@
             "channel": "역사스토리",
             "views": 99254,
             "efficiency": 4.96,
-            "freshness_days": 3,
+            "freshness_days": 4,
             "url": "https://youtube.com/watch?v=Q9d1dEUVJHI"
           }
         ],
@@ -296,49 +282,13 @@
     ],
     "과학·건강": [
       {
-        "keyword": "우주",
-        "video_count": 2,
-        "avg_efficiency": 3.37,
-        "max_efficiency": 6.46,
-        "total_views": 182418,
-        "channel_count": 2,
-        "fresh_min_days": 1,
-        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
-        "momentum": "-",
-        "days_active": 0,
-        "source_files": [
-          "explosion_alerts"
-        ],
-        "verification": [
-          {
-            "title": "모든 조건을 갖춘 '쌍둥이 지구' 관측! 학계 난리났다고? | 지웅배 교수(우주먼지)",
-            "channel": "이과학 저과학",
-            "views": 172429,
-            "efficiency": 6.46,
-            "freshness_days": 6,
-            "url": "https://youtube.com/watch?v=jQogWQlkAtY"
-          },
-          {
-            "title": "왜 우주의 근본은 정보와 3차원일까? 답은 양자정보에 있다",
-            "channel": "아재너드",
-            "views": 9989,
-            "efficiency": 0.28,
-            "freshness_days": 1,
-            "url": "https://youtube.com/watch?v=5ofas55JKBc"
-          }
-        ],
-        "recommended_channels": [
-          "🔬 과만세"
-        ]
-      },
-      {
         "keyword": "건강",
         "video_count": 1,
         "avg_efficiency": 4.91,
         "max_efficiency": 4.91,
         "total_views": 167882,
         "channel_count": 1,
-        "fresh_min_days": 4,
+        "fresh_min_days": 5,
         "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
         "momentum": "-",
         "days_active": 0,
@@ -351,8 +301,36 @@
             "channel": "제일건강합니다",
             "views": 167882,
             "efficiency": 4.91,
-            "freshness_days": 4,
+            "freshness_days": 5,
             "url": "https://youtube.com/watch?v=cYZYuB44r_Q"
+          }
+        ],
+        "recommended_channels": [
+          "🔬 과만세"
+        ]
+      },
+      {
+        "keyword": "우주",
+        "video_count": 1,
+        "avg_efficiency": 6.46,
+        "max_efficiency": 6.46,
+        "total_views": 172429,
+        "channel_count": 1,
+        "fresh_min_days": 7,
+        "lifecycle_stage": "🆕 모니터링 중 (라이프사이클 미축적)",
+        "momentum": "-",
+        "days_active": 0,
+        "source_files": [
+          "explosion_alerts"
+        ],
+        "verification": [
+          {
+            "title": "모든 조건을 갖춘 '쌍둥이 지구' 관측! 학계 난리났다고? | 지웅배 교수(우주먼지)",
+            "channel": "이과학 저과학",
+            "views": 172429,
+            "efficiency": 6.46,
+            "freshness_days": 7,
+            "url": "https://youtube.com/watch?v=jQogWQlkAtY"
           }
         ],
         "recommended_channels": [
@@ -362,7 +340,7 @@
     ]
   },
   "stats": {
-    "total_trends": 9,
+    "total_trends": 8,
     "categories_active": 4
   }
 }
