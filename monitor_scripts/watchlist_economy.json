@@ -1250,5 +1250,119 @@
     "related_channels": [],
     "added_at": "2026-07-28",
     "note": "신규 등록 · 2w 실적: best 117,405v · 한국 남자와 결혼한 일본 여자 40% 급증, 그들이 반한 뜻밖의 '이것'"
+  },
+  {
+    "cid": "UC_YMjWL8rj2TRkunDRrlUPA",
+    "name": "바이스톰 코리아",
+    "url": "https://www.youtube.com/channel/UC_YMjWL8rj2TRkunDRrlUPA/videos",
+    "tier": "SS",
+    "subs": 403000,
+    "avg_views": 186055,
+    "top5_30d": 233899,
+    "explosion_threshold": 268983,
+    "poll_interval_min": 15,
+    "poll_minutes": 240,
+    "related_channels": [],
+    "lane": "시사·국뽕",
+    "categories": [
+      "시사",
+      "국뽕",
+      "해외반응"
+    ],
+    "added_at": "2026-08-15",
+    "note": "시사·국뽕 레인 신설 · 2주 10편 · best 322,597v · 중앙값 151,512"
+  },
+  {
+    "cid": "UCVObSp4MlJwCsh6vtKz4PHQ",
+    "name": "쓸모왕",
+    "url": "https://www.youtube.com/channel/UCVObSp4MlJwCsh6vtKz4PHQ/videos",
+    "tier": "SS",
+    "subs": 781000,
+    "avg_views": 220377,
+    "top5_30d": 329722,
+    "explosion_threshold": 379180,
+    "poll_interval_min": 15,
+    "poll_minutes": 240,
+    "related_channels": [],
+    "lane": "시사·국뽕",
+    "categories": [
+      "시사",
+      "국뽕",
+      "해외반응"
+    ],
+    "added_at": "2026-08-15",
+    "note": "시사·국뽕 레인 신설 · 2주 12편 · best 454,685v · 중앙값 181,675"
+  },
+  {
+    "cid": "UCGv2BVEQQwcezvFXbEX8xnQ",
+    "name": "홍시채널",
+    "url": "https://www.youtube.com/channel/UCGv2BVEQQwcezvFXbEX8xnQ/videos",
+    "tier": "SS",
+    "subs": 25800,
+    "avg_views": 61945,
+    "top5_30d": 116685,
+    "explosion_threshold": 134187,
+    "poll_interval_min": 15,
+    "poll_minutes": 240,
+    "related_channels": [],
+    "lane": "시사·국뽕",
+    "categories": [
+      "시사",
+      "국뽕",
+      "해외반응"
+    ],
+    "added_at": "2026-08-15",
+    "note": "시사·국뽕 레인 신설 · 2주 13편 · best 592,640v · 중앙값 34,550"
+  },
+  {
+    "cid": "UCWBhajLdX4Go7KHzDWyBHXw",
+    "name": "꿀튜브",
+    "url": "https://www.youtube.com/channel/UCWBhajLdX4Go7KHzDWyBHXw/videos",
+    "tier": "SS",
+    "subs": 299000,
+    "avg_views": 302217,
+    "top5_30d": 474111,
+    "explosion_threshold": 545227,
+    "poll_interval_min": 15,
+    "poll_minutes": 240,
+    "related_channels": [],
+    "lane": "시사·국뽕",
+    "categories": [
+      "시사",
+      "국뽕",
+      "해외반응"
+    ],
+    "added_at": "2026-08-15",
+    "note": "시사·국뽕 레인 신설 · 2주 9편 · best 1,020,110v · 중앙값 84,784"
+  },
+  {
+    "cid": "UCsOFUBNmRjtvK2TQcITBVEA",
+    "name": "이상하TV",
+    "url": "https://www.youtube.com/channel/UCsOFUBNmRjtvK2TQcITBVEA/videos",
+    "tier": "SS",
+    "subs": 4650,
+    "avg_views": 0,
+    "top5_30d": 171494,
+    "explosion_threshold": 20000,
+    "poll_interval_min": 15,
+    "poll_minutes": 240,
+    "related_channels": [],
+    "lane": "시사·국뽕",
+    "note": "2026-08-30 등록. 구독 4,650 / 17.1만뷰 = 효율 36.9배 신생폭발. 136화 벤치 원조"
+  },
+  {
+    "cid": "UCdAEK7uy5MtU7bh45FFeA4w",
+    "name": "경제타임",
+    "url": "https://www.youtube.com/channel/UCdAEK7uy5MtU7bh45FFeA4w/videos",
+    "tier": "B-참고",
+    "subs": 42200,
+    "avg_views": 21047,
+    "top5_30d": 280349,
+    "explosion_threshold": 30000,
+    "poll_interval_min": 30,
+    "poll_minutes": 240,
+    "related_channels": [],
+    "lane": "시사·국뽕",
+    "note": "2026-08-30 등록(참고용). ⚠️로또형 — 최근12편 중간값 2,737인데 최고 280,349(102배). 평균 쓰지 말 것. 주어=한국 편은 전부 4천 이하, 주어=외국인/시청자 편만 폭발 → 주어 법칙 재현 채널. 신작 알림 와도 주어가 외국인일 때만 검토."
   }
 ]

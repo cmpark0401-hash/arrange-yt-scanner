@@ -1473,5 +1473,62 @@
       "경제"
     ],
     "url": "https://www.youtube.com/channel/UC9FfMrpz8TJMTi84Dlc-ySg/videos"
+  },
+  {
+    "name": "바이스톰 코리아",
+    "type": "일반",
+    "categories": [
+      "시사",
+      "국뽕",
+      "해외반응"
+    ],
+    "url": "https://www.youtube.com/channel/UC_YMjWL8rj2TRkunDRrlUPA/videos"
+  },
+  {
+    "name": "쓸모왕",
+    "type": "일반",
+    "categories": [
+      "시사",
+      "국뽕",
+      "해외반응"
+    ],
+    "url": "https://www.youtube.com/channel/UCVObSp4MlJwCsh6vtKz4PHQ/videos"
+  },
+  {
+    "name": "홍시채널",
+    "type": "일반",
+    "categories": [
+      "시사",
+      "국뽕",
+      "해외반응"
+    ],
+    "url": "https://www.youtube.com/channel/UCGv2BVEQQwcezvFXbEX8xnQ/videos"
+  },
+  {
+    "name": "꿀튜브",
+    "type": "일반",
+    "categories": [
+      "시사",
+      "국뽕",
+      "해외반응"
+    ],
+    "url": "https://www.youtube.com/channel/UCWBhajLdX4Go7KHzDWyBHXw/videos"
+  },
+  {
+    "name": "이상하TV",
+    "type": "일반, 뉴스",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCsOFUBNmRjtvK2TQcITBVEA/videos"
+  },
+  {
+    "name": "경제타임",
+    "type": "일반, 뉴스",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCdAEK7uy5MtU7bh45FFeA4w/videos"
   }
 ]
