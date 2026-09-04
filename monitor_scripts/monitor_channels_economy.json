@@ -1530,5 +1530,50 @@
       "경제"
     ],
     "url": "https://www.youtube.com/channel/UCdAEK7uy5MtU7bh45FFeA4w/videos"
+  },
+  {
+    "name": "영양만점경제",
+    "type": "일반, 뉴스",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCKZaPo7JnipwYuVgwpu07HA/videos"
+  },
+  {
+    "name": "경제담론",
+    "type": "일반, 뉴스",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCOiRCmnv_nX2ypat6DNRhmQ/videos"
+  },
+  {
+    "name": "세상해설소",
+    "type": "일반, 뉴스",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCskY2hb_QQrqLhCipN4MDVQ/videos"
+  },
+  {
+    "name": "역사여행",
+    "type": "일반, 뉴스",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCCEvBFx52AFs4iff-9FMBFQ/videos"
+  },
+  {
+    "name": "백만사전",
+    "type": "일반, 뉴스",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCctpAWSAuzdHPi7HnUoDgFg/videos"
   }
 ]
