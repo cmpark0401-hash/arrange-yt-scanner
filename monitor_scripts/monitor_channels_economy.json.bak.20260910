@@ -179,6 +179,22 @@
     "url": "https://www.youtube.com/channel/UCdA_ovMcYiNgbkf4624Tbxw/videos"
   },
   {
+    "name": "푸짐한 경제학",
+    "type": "AI",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/@PujimEcon/videos"
+  },
+  {
+    "name": "팬더경제학",
+    "type": "AI",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/@%ED%8C%AC%EB%8D%94%EA%B2%BD%EC%A0%9C%ED%95%99/videos"
+  },
+  {
     "name": "새싹경제학",
     "type": "AI",
     "categories": [
@@ -209,6 +225,14 @@
       "경제"
     ],
     "url": "https://www.youtube.com/@%EC%86%94%EC%A7%81%ED%95%9C%EA%B2%BD%EC%A0%9C%ED%95%99/videos"
+  },
+  {
+    "name": "귀에쏙쏙경제학",
+    "type": "AI",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/@%EA%B7%80%EC%97%90%EC%8F%99%EC%8F%99%EA%B2%BD%EC%A0%9C%ED%95%99_0/videos"
   },
   {
     "name": "원가 공개 경제학",
@@ -309,6 +333,15 @@
     "url": "https://www.youtube.com/channel/UCr9ypiZp4EbjJuw2ZYB1vpQ/videos"
   },
   {
+    "name": "경제학오디오북",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCgjxecjzzlyEQbYTvPbH1zw/videos"
+  },
+  {
     "name": "또박경제",
     "type": "일반",
     "categories": [
@@ -316,6 +349,33 @@
       "시사"
     ],
     "url": "https://www.youtube.com/channel/UCdO4PK4YGt3kWavoPqwZt8Q/videos"
+  },
+  {
+    "name": "머리가 좋아지는 지박사",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UC4rZP6di8Qd7Rh_CRW9LERw/videos"
+  },
+  {
+    "name": "부자의 경제학 - 경제 지식",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UC9fMEBHAqyi_W0Tqc2QszFw/videos"
+  },
+  {
+    "name": "경제의 힘",
+    "type": "대형",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCF5YuZguGmklyhKFmMUzS7Q/videos"
   },
   {
     "name": "너굴경제",
@@ -345,6 +405,33 @@
     "url": "https://www.youtube.com/channel/UCRBI18JmuwLD-zAnulDAPlw/videos"
   },
   {
+    "name": "허스키경제학",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCjKYxyhaAxALEVp_q_q0EcQ/videos"
+  },
+  {
+    "name": "뿌들뿌들 경제학",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCpFgkHCSjutpIijm5Py1ChQ/videos"
+  },
+  {
+    "name": "머니브레이크",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCBd3SwW8U7n_vsjevfJuvJA/videos"
+  },
+  {
     "name": "경제엔진",
     "type": "일반",
     "categories": [
@@ -352,6 +439,24 @@
       "시사"
     ],
     "url": "https://www.youtube.com/channel/UCiWWYhMh9fdWtluuenw8FdA/videos"
+  },
+  {
+    "name": "경제방정식",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCONMiNdg0T45myj-o3aesTg/videos"
+  },
+  {
+    "name": "배달경제학",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCUHWCAUgL1UgnIj_V9Tmdfw/videos"
   },
   {
     "name": "혼돈의경제학",
@@ -406,6 +511,15 @@
       "시사"
     ],
     "url": "https://www.youtube.com/channel/UCo50Iv5SJFJEGJfZTJcCSHA/videos"
+  },
+  {
+    "name": "경제 나침반",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCo8mXO0-vYA1dBnqhNq-9FQ/videos"
   },
   {
     "name": "경제사회자",
@@ -640,12 +754,36 @@
     "url": "https://www.youtube.com/channel/UCDyYa5W3irNM3dDpajC9EWw/videos"
   },
   {
+    "name": "나라 돌아가는 이야기",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UChFNQ8n5_Fk19xDyyMmfzXQ/videos"
+  },
+  {
     "name": "경제의세계",
     "type": "일반",
     "categories": [
       "경제"
     ],
     "url": "https://www.youtube.com/channel/UCJjwQKA8aMVPPh9BFb7JCbg/videos"
+  },
+  {
+    "name": "박기자의 심층분석",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCj3R-Jjdjek2Z1js_ZGAxLg/videos"
+  },
+  {
+    "name": "영민 경제 TV",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UClhiVClMewIUofj1NIPBpcQ/videos"
   },
   {
     "name": "돈공부",
@@ -686,6 +824,14 @@
       "경제"
     ],
     "url": "https://www.youtube.com/channel/UC5hwbRRuNY7wP2oFwkbeSng/videos"
+  },
+  {
+    "name": "지식의 신",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UChhjTakY69hZynLBvC3FErw/videos"
   },
   {
     "name": "돈냄새 경제학",
@@ -736,6 +882,22 @@
     "url": "https://www.youtube.com/channel/UC3VtLXnkUGzKMG_Y51QpwIA/videos"
   },
   {
+    "name": "돈의민족",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UC3FNiJw3RXP9Ae0cDY-wOWg/videos"
+  },
+  {
+    "name": "인간2.0연구소",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCcPJYDTVkLFHKwn6ldB2uBA/videos"
+  },
+  {
     "name": "이철진TV",
     "type": "일반",
     "categories": [
@@ -776,6 +938,14 @@
     "url": "https://www.youtube.com/channel/UC2YEzIl9lftcJYWBW_5ZUdQ/videos"
   },
   {
+    "name": "월급쟁이형",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCX7qIVu8L93RXGuEueZ1UHQ/videos"
+  },
+  {
     "name": "경제와지구",
     "type": "일반",
     "categories": [
@@ -806,6 +976,14 @@
       "경제"
     ],
     "url": "https://www.youtube.com/channel/UCgPV1qLhfgJ8qMkMikHwKww/videos"
+  },
+  {
+    "name": "경제팔로우",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCIXQvJYc8Lc1mgXkJFCg1vg/videos"
   },
   {
     "name": "경제단속반",
@@ -912,6 +1090,14 @@
     "url": "https://www.youtube.com/channel/UCDMSW-sCNhLadzaGoRPjRRg/videos"
   },
   {
+    "name": "영리한 경제학",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCwWRZqSivHWjdkNSNsaEcDA/videos"
+  },
+  {
     "name": "깊은 경제",
     "type": "일반",
     "categories": [
@@ -960,6 +1146,14 @@
     "url": "https://www.youtube.com/channel/UCse2qRMJ1P4EeJ3boSCZR7g/videos"
   },
   {
+    "name": "유쾌한 경제학",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCaLsqraxQaaRfm7HyT1x6ug/videos"
+  },
+  {
     "name": "미니소식단",
     "type": "일반",
     "categories": [
@@ -1006,6 +1200,22 @@
       "경제"
     ],
     "url": "https://www.youtube.com/channel/UCY4FGn0d7ltiW6GDypGnaMA/videos"
+  },
+  {
+    "name": "푸짐한 경제학",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCk1xIGPS2Sory5JT-oc74zQ/videos"
+  },
+  {
+    "name": "귀에쏙쏙경제학",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UC-d0TuLXBiOGUNrhDtoW58w/videos"
   },
   {
     "name": "원가 공개 경제학",
@@ -1157,6 +1367,15 @@
     "url": "https://www.youtube.com/channel/UCOqFcncIHYCt1Is7GzeT7oA/videos"
   },
   {
+    "name": "김재민TV",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCD69gLlIMcDAHG5AzNnp7Bg/videos"
+  },
+  {
     "name": "지식왕천재",
     "type": "AI",
     "categories": [
@@ -1164,6 +1383,24 @@
       "시사"
     ],
     "url": "https://www.youtube.com/channel/UCn222kwFLDyPzh1ARzLe-tA/videos"
+  },
+  {
+    "name": "경제강국",
+    "type": "일반",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UCpc0q5QIXdMk8qTOSPnhNeQ/videos"
+  },
+  {
+    "name": "팬더경제학",
+    "type": "AI",
+    "categories": [
+      "경제",
+      "시사"
+    ],
+    "url": "https://www.youtube.com/channel/UC4x-T7FgY0-n8jPT1NWfg2A/videos"
   },
   {
     "name": "돈의열전",
@@ -1212,6 +1449,22 @@
       "경제"
     ],
     "url": "https://www.youtube.com/channel/UCxlUD-zzjz8vURg-olPl4MQ/videos"
+  },
+  {
+    "name": "경제한꺼풀",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCNOQrpHTX-eJD-WpGGMSpzg/videos"
+  },
+  {
+    "name": "취미는 경제TV",
+    "type": "일반",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCyg5PbE60SYV7z4VlVcgw1A/videos"
   },
   {
     "name": "오지랖경제",
@@ -1269,6 +1522,14 @@
       "시사"
     ],
     "url": "https://www.youtube.com/channel/UCsOFUBNmRjtvK2TQcITBVEA/videos"
+  },
+  {
+    "name": "경제타임",
+    "type": "일반, 뉴스",
+    "categories": [
+      "경제"
+    ],
+    "url": "https://www.youtube.com/channel/UCdAEK7uy5MtU7bh45FFeA4w/videos"
   },
   {
     "name": "영양만점경제",
@@ -1350,21 +1611,5 @@
       "국뽕"
     ],
     "url": "https://www.youtube.com/channel/UC-PQPucINFHZAla_ri355RA/videos"
-  },
-  {
-    "name": "멋진 경제학",
-    "type": "일반, 뉴스",
-    "categories": [
-      "경제"
-    ],
-    "url": "https://www.youtube.com/channel/UCpRe9cd_kjrbpaxWrZ1SX7g/videos"
-  },
-  {
-    "name": "안경 경제학",
-    "type": "일반, 뉴스",
-    "categories": [
-      "경제"
-    ],
-    "url": "https://www.youtube.com/channel/UCJG9mwOwrHpNZRalbZjkk_g/videos"
   }
 ]

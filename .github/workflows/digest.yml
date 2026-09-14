@@ -6,7 +6,9 @@ on:
     # 09:40 KST = 00:40 UTC
     #   · daily.yml(09:10 KST 워치리스트 전면 갱신) 완료 직후에 돌도록 배치
     #   · 지식록 첫 발행 11:30 KST 전에 받아야 그날 제작에 반영됨
-    - cron: '40 0 * * *'
+    # 2026-09-14 — 하루 2회 (실시간 알림 폐지 · 이 둘이 24h를 빈틈없이 덮는다)
+    - cron: '38 0 * * *'    # KST 09:38 · 지난 14h (전날 저녁~아침)
+    - cron: '42 10 * * *'   # KST 19:42 · 지난 10h (아침~저녁)
   workflow_dispatch:
 
 jobs:
@@ -39,4 +41,9 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         # 하루 1회로 줄였으므로 집계 창도 6h → 24h (안 그러면 나머지 18시간이 통째로 누락된다)
-        run: python monitor_scripts/build_digest.py --window-hours 24
+        run: |
+          # 발송 시각에 따라 창(window)을 달리해 24시간을 이어붙인다
+          H=$(date -u +%H)
+          if [ "$H" = "00" ]; then WIN=14; else WIN=10; fi
+          echo "window=${WIN}h (UTC ${H}시)"
+          python monitor_scripts/build_digest.py --window-hours $WIN

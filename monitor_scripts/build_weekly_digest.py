@@ -15,6 +15,7 @@ from pathlib import Path
 from datetime import datetime, timedelta
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import sys
 from common import ROOT, STATE_DIR, send_telegram, load_json
 
 
@@ -118,8 +119,19 @@ def main():
     print(msg)
     print()
 
-    ok = send_telegram(msg)
-    print(f'📢 텔레그램 {"✅" if ok else "❌"}')
+    # 2026-09-14 — 주간 리포트는 텔레그램으로 보내지 않는다(사용자 결정).
+    # 즉시성이 없는 '시장 온도' 지표라 알림으로 받을 이유가 없고,
+    # 리포트는 파일로 남겨 클로드 창에서 필요할 때 읽어 보고한다.
+    # 다시 켜려면 --telegram 플래그로 실행.
+    out = STATE_DIR / 'weekly_report.md'
+    out.write_text(msg, encoding='utf-8')
+    print(f'💾 저장 · {out}')
+
+    if '--telegram' in sys.argv:
+        ok = send_telegram(msg)
+        print(f'📢 텔레그램 {"✅" if ok else "❌"}')
+    else:
+        print('📵 텔레그램 발송 안 함 (--telegram 으로 강제 발송 가능)')
 
 
 if __name__ == '__main__':

@@ -13,7 +13,7 @@ Emoji 위계:
   👀    관찰 (신규 감지지만 지표 미달)
 """
 from __future__ import annotations
-import argparse, json, re, sys, requests
+import argparse, json, os, re, sys, requests
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -122,6 +122,11 @@ def compute_baseline_vph(w: dict) -> float:
     return w.get('explosion_threshold', 10000) / 24
 
 
+def _realtime_on(args) -> bool:
+    """실시간 텔레그램 발송 여부. 기본 꺼짐(다이제스트가 하루 2회 대신 보냄)."""
+    return bool(getattr(args, 'realtime', False)) or os.getenv('MONITOR_REALTIME') == '1'
+
+
 def classify_alert(views: int, vph: float, hours_since: float, w: dict) -> tuple[str, str]:
     """감지 등급 판정.
 
@@ -197,6 +202,9 @@ def format_ss_alert(entry: dict) -> str:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--dry-run', action='store_true', help='알림 전송 안 함')
+    # 2026-09-14 — 실시간 발송 폐지. 감지·기록은 계속하고 알림은 다이제스트(하루 2회)가 담당.
+    ap.add_argument('--realtime', action='store_true',
+                    help='감지 즉시 텔레그램 발송(기본 꺼짐 · 다이제스트로 통합)')
     ap.add_argument('--all', action='store_true', help='폴링 주기 무시 · 전 채널')
     ap.add_argument('--tier', choices=['S', 'A'], help='특정 티어만')
     args = ap.parse_args()
@@ -296,7 +304,7 @@ def main():
     ss_new_entries = [e for e in explosions if e.get('ss_new')]
     for e in ss_new_entries:
         ss_msg = format_ss_alert(e)
-        if not args.dry_run:
+        if not args.dry_run and _realtime_on(args):
             ok = send_telegram(ss_msg)
             print(f'  🟨🟨 SS 신작 텔레그램 {"✅" if ok else "❌"} · {e["w"]["name"]}')
         else:
@@ -352,7 +360,7 @@ def main():
                 'tier': w['tier'],
                 'channel_name': w['name'],
                 'channel_cid': w['cid'],
-                'channel_url': w['url'],
+                'channel_url': w.get('url') or f"https://www.youtube.com/channel/{w.get('cid','')}/videos",
                 'vid': a['v']['vid'],
                 'video_url': f'https://youtu.be/{a["v"]["vid"]}',
                 'title': s.get('title', ''),
@@ -382,7 +390,7 @@ def main():
         with ALERT_HISTORY.open('a', encoding='utf-8') as f:
             f.write(json.dumps(payload, ensure_ascii=False) + '\n')
 
-        if not args.dry_run:
+        if not args.dry_run and _realtime_on(args):
             ok = send_telegram(msg)
             print(f'  📢 텔레그램 {"✅" if ok else "❌"} · '
                   f'폭발 {len(explosions)} · 조기 {len(earlies)}')
@@ -395,4 +403,16 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    # CRASH GUARD (2026-09-14) — 조용히 죽지 않게. 85% 실패의 원인을 알림으로 받는다.
+    import traceback as _tb
+    try:
+        main()
+    except Exception as _e:
+        _d = _tb.format_exc()
+        try:
+            send_telegram('💥 [모니터] Monitor Lite 비정상 종료\n'
+                          f'{type(_e).__name__}: {str(_e)[:200]}\n---\n'
+                          f'{_d.strip().splitlines()[-1][:160] if _d else ""}')
+        except Exception:
+            pass
+        raise

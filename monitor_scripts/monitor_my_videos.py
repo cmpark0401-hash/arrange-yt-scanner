@@ -48,7 +48,7 @@ def fetch_video_stats(token: str, vids: list[str]) -> dict:
         return {}
     r = requests.get(
         'https://www.googleapis.com/youtube/v3/videos',
-        params={'part': 'snippet,statistics', 'id': ','.join(vids)},
+        params={'part': 'snippet,statistics,status', 'id': ','.join(vids)},
         headers={'Authorization': f'Bearer {token}'}, timeout=15,
     )
     result = {}
@@ -59,6 +59,9 @@ def fetch_video_stats(token: str, vids: list[str]) -> dict:
             'title': sn.get('title', ''),
             'published': sn.get('publishedAt', ''),
             'views': int(st.get('viewCount', 0)),
+            # 2026-09-14 — 업로드만 해두고 발행은 나중에 하는 경우가 있어
+            # 공개(public) 상태만 대상으로 삼는다. private/unlisted는 제외.
+            'privacy': item.get('status', {}).get('privacyStatus', ''),
         }
     return result
 
@@ -138,6 +141,11 @@ def main():
 
             for vid, s in stats.items():
                 if not s.get('published'):
+                    continue
+                # ★ 발행(공개)된 영상만 — 업로드만 해둔 비공개/일부공개는 건너뛴다.
+                #   유튜브는 비공개→공개 전환 시 publishedAt을 공개 시각으로 갱신하므로
+                #   아래 hours 계산도 '발행 후 경과'가 된다.
+                if s.get('privacy') != 'public':
                     continue
                 pub = datetime.fromisoformat(s['published'].replace('Z', '+00:00'))
                 hours = (now - pub).total_seconds() / 3600
