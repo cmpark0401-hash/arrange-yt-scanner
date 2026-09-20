@@ -1,1 +1,1 @@
-window.__SUMMARY__ = {"channels": 65, "hot_videos": 0, "recent_alerts": 5, "updated_at": "2026-09-20 19:52"};
+window.__SUMMARY__ = {"channels": 65, "hot_videos": 0, "recent_alerts": 1, "updated_at": "2026-09-20 22:45"};
