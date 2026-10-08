@@ -39,6 +39,13 @@
   .our-ch-tag.신비한기록 { background: #ede9fe; color: #5b21b6; }
   .tier-tag.B { background: #374151; color: #d1d5db; }
   .tier-tag.R { background: #1f2937; color: #9ca3af; border: 1px solid #4b5563; }
+  .size-tag { display:inline-block; padding:1px 7px; border-radius:10px; font-size:10px; font-weight:700; margin-left:6px; vertical-align:middle; }
+  .size-tag.small { background:#14532d; color:#bbf7d0; }
+  .size-tag.mid { background:#1e3a8a; color:#dbeafe; }
+  .size-tag.big { background:#374151; color:#9ca3af; }
+  .row.big-ch { opacity:.55; }
+  .row.big-ch:hover, .row.big-ch.viewing { opacity:1; }
+  .big-divider { margin:22px 0 8px; padding:8px 14px; border-top:1px dashed #4b5563; color:var(--muted); font-size:12px; font-weight:700; }
   #urllist { display:none; margin: 0 0 16px; }
   #urllist table { width:100%; border-collapse: collapse; font-size: 13px; }
   #urllist th, #urllist td { text-align:left; padding: 6px 8px; border-bottom: 1px solid #2a2f3a; }
@@ -147,6 +154,13 @@
       <button data-filter="B">B</button>
       <button data-filter="R">참고</button>
     </div>
+    <div class="filter-group">
+      <span class="label">구독 규모</span>
+      <button data-size="all" class="active">전체</button>
+      <button data-size="small">소형 5만↓</button>
+      <button data-size="mid">중형 5~30만</button>
+      <button data-size="big">대형 30만↑</button>
+    </div>
 
     <input id="q" placeholder="🔍 채널명 검색..." oninput="render()">
     <button onclick="openCurrent()">현재 열기</button>
@@ -184,6 +198,10 @@
 <script>
 let channels = window.__CHANNELS__ || [];
 let filter = 'all';
+let sizeFilter = 'all';
+// 구독 규모 (2026-10-08): 소형 <5만 · 중형 5만~30만 · 대형 30만+ — 전체 보기에선 대형을 맨 아래로 분리·흐리게
+function sizeOf(c) { const n = c.subs || 0; return n >= 300000 ? 'big' : n >= 50000 ? 'mid' : 'small'; }
+const SIZE_LABEL = { small: '소형', mid: '중형', big: '대형' };
 let period = '7d'; // '1d' | '7d' | '14d' | '30d'
 let currentIdx = 0;
 
@@ -223,12 +241,17 @@ function filtered() {
   const primaryKey = PERIOD_AVG_KEYS[period];
   const secondaryKey = PERIOD_TOP5_KEYS[period];
   list.sort((a, b) => {
+    if (sizeFilter === 'all') {
+      const ba = sizeOf(a) === 'big' ? 1 : 0, bb = sizeOf(b) === 'big' ? 1 : 0;
+      if (ba !== bb) return ba - bb;
+    }
     const pDiff = (b[primaryKey] || 0) - (a[primaryKey] || 0);
     if (pDiff !== 0) return pDiff;
     return (b[secondaryKey] || 0) - (a[secondaryKey] || 0);
   });
 
   if (filter !== 'all') list = list.filter(c => baseTier(c.tier) === filter);
+  if (sizeFilter !== 'all') list = list.filter(c => sizeOf(c) === sizeFilter);
   if (q) list = list.filter(c => c.name.toLowerCase().includes(q));
   return list;
 }
@@ -270,12 +293,15 @@ function render() {
     const top5Views = c[top5Key] || 0;
     const avgViews = c[PERIOD_AVG_KEYS[period]] || 0;
     const count = c[countKey] || 0;
-    return `
-      <div class="row tier-${c.tier} ${isViewing ? 'viewing' : ''}" onclick="setCurrent(${i})">
+    const sz = sizeOf(c);
+    const divider = (sizeFilter === 'all' && sz === 'big' && (i === 0 || sizeOf(items[i - 1]) !== 'big'))
+      ? `<div class="big-divider">대형 채널 · 구독 30만 이상 (참고용 · ${items.filter(x => sizeOf(x) === 'big').length}개)</div>` : '';
+    return divider + `
+      <div class="row tier-${c.tier} ${sz === 'big' ? 'big-ch' : ''} ${isViewing ? 'viewing' : ''}" onclick="setCurrent(${i})">
         <div class="col-num">${i + 1}</div>
         <div class="col-tier"><span class="tier-tag ${baseTier(c.tier)}" title="${esc(c.tier)}">${esc(c.tier)}</span></div>
         <div>
-          <div class="name">${esc(c.name)}</div>
+          <div class="name">${esc(c.name)}<span class="size-tag ${sz}">${SIZE_LABEL[sz]}</span></div>
           <div class="name-sub">${c.cid.slice(0, 12)}...</div>
           ${(c.related_channels && c.related_channels.length && c.related_channels[0] !== 'self') ? `<div class="our-ch-tags">${c.related_channels.map(t => `<span class="our-ch-tag ${t}">${t === '레드맨경제' ? '레드맨' : t}</span>`).join('')}</div>` : ''}
         </div>
@@ -326,6 +352,15 @@ document.querySelectorAll('.filter-group button[data-filter]').forEach(b => {
   b.onclick = () => {
     filter = b.dataset.filter;
     document.querySelectorAll('.filter-group button[data-filter]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    currentIdx = 0; render();
+  };
+});
+
+document.querySelectorAll('.filter-group button[data-size]').forEach(b => {
+  b.onclick = () => {
+    sizeFilter = b.dataset.size;
+    document.querySelectorAll('.filter-group button[data-size]').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
     currentIdx = 0; render();
   };
