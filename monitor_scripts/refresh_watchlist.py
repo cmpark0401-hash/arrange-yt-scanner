@@ -37,6 +37,33 @@ def fetch_rss_vids(cid):
         return []
 
 
+RSS_FAIL = {'n': 0}
+
+
+def fetch_rss_vids_retry(cid, token):
+    """RSS → 실패 시 1회 재시도 → 그래도 비면 API 업로드 재생목록(1 unit) (2026-10-08)
+    Actions에서 RSS가 비어 채널 감시 페이지 지표가 전부 0이 된 문제 대응."""
+    import time
+    vids = fetch_rss_vids(cid)
+    if not vids:
+        time.sleep(1.5)
+        vids = fetch_rss_vids(cid)
+    if vids:
+        return vids
+    RSS_FAIL['n'] += 1
+    try:
+        r = requests.get('https://www.googleapis.com/youtube/v3/playlistItems',
+                         params={'part': 'contentDetails', 'playlistId': 'UU' + cid[2:], 'maxResults': 15},
+                         headers={'Authorization': f'Bearer {token}'}, timeout=20)
+        if r.status_code != 200:
+            print(f'  WARN playlistItems {cid} {r.status_code} {r.text[:120]}')
+            return []
+        return [it['contentDetails']['videoId'] for it in r.json().get('items', [])]
+    except Exception as e:
+        print(f'  WARN playlistItems {cid} {e}')
+        return []
+
+
 def fetch_video_stats(vids, token):
     out = {}
     for i in range(0, len(vids), 50):
@@ -48,6 +75,9 @@ def fetch_video_stats(vids, token):
                         'id': ','.join(batch), 'maxResults': 50},
                 headers={'Authorization': f'Bearer {token}'}, timeout=30,
             )
+            if r.status_code != 200:
+                print(f'  WARN videos.list {r.status_code} {r.text[:160]}')
+                continue
             for item in r.json().get('items', []):
                 st = item.get('statistics', {})
                 sn = item.get('snippet', {})
@@ -81,8 +111,8 @@ def main():
     # 1) RSS 병렬
     all_vids = []
     vid_by_ch = {}
-    with ThreadPoolExecutor(max_workers=15) as ex:
-        futs = {ex.submit(fetch_rss_vids, w['cid']): w['cid'] for w in watchlist}
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futs = {ex.submit(fetch_rss_vids_retry, w['cid'], token): w['cid'] for w in watchlist}
         done = 0
         for fut in as_completed(futs):
             cid = futs[fut]
@@ -93,6 +123,7 @@ def main():
             if done % 15 == 0:
                 print(f'  RSS {done}/{len(watchlist)}')
 
+    print(f'  RSS 실패→API 대체 {RSS_FAIL["n"]}채널')
     print(f'  총 {len(all_vids)}편 stats 조회...')
     stats = fetch_video_stats(all_vids, token)
     print(f'  {len(stats)}편 stats 수집')

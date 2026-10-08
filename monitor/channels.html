@@ -35,6 +35,17 @@
   .our-ch-tag.지식록 { background: #dbeafe; color: #1e40af; }
   .our-ch-tag.\32 47 { background: #dcfce7; color: #166534; }
   .our-ch-tag.레드맨경제 { background: #fee2e2; color: #991b1b; }
+  .our-ch-tag.김삿갓 { background: #fef3c7; color: #92400e; }
+  .our-ch-tag.신비한기록 { background: #ede9fe; color: #5b21b6; }
+  .tier-tag.B { background: #374151; color: #d1d5db; }
+  .tier-tag.R { background: #1f2937; color: #9ca3af; border: 1px solid #4b5563; }
+  #urllist { display:none; margin: 0 0 16px; }
+  #urllist table { width:100%; border-collapse: collapse; font-size: 13px; }
+  #urllist th, #urllist td { text-align:left; padding: 6px 8px; border-bottom: 1px solid #2a2f3a; }
+  #urllist th { color: var(--muted); font-size: 11px; }
+  #urllist td.num { text-align:right; font-variant-numeric: tabular-nums; }
+  #urllist a { color: #93c5fd; word-break: break-all; }
+  .urllist-wrap { overflow-x: auto; }
   @media (prefers-color-scheme: dark) {
     .our-ch-tag.지식록 { background: #1e3a8a; color: #dbeafe; }
     .our-ch-tag.\32 47 { background: #14532d; color: #bbf7d0; }
@@ -133,13 +144,23 @@
       <button data-filter="SS" style="color:#78350f;background:transparent">SS</button>
       <button data-filter="S">S</button>
       <button data-filter="A">A</button>
+      <button data-filter="B">B</button>
+      <button data-filter="R">참고</button>
     </div>
 
     <input id="q" placeholder="🔍 채널명 검색..." oninput="render()">
     <button onclick="openCurrent()">현재 열기</button>
+    <button id="btn-urllist" onclick="toggleUrlList()">📋 이름·URL 목록</button>
     <a href="bookmarks.html" style="padding: 6px 12px; background: var(--tier-s); color: var(--tier-s-text); text-decoration: none; border-radius: 5px; font-size: 12px; font-weight: 600;">⭐ 북마크 →</a>
   </div>
 
+  <div id="urllist">
+    <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap">
+      <strong>감시 채널 이름·URL</strong><span class="muted" id="urllist-count"></span>
+      <button onclick="copyUrlList()">전체 복사</button><span class="muted" id="copy-msg"></span>
+    </div>
+    <div class="urllist-wrap"><table><thead><tr><th>#</th><th>등급</th><th>채널</th><th>구독</th><th>30일 상위5 평균</th><th>URL</th></tr></thead><tbody id="urllist-body"></tbody></table></div>
+  </div>
   <div class="col-head">
     <div>#</div>
     <div>등급</div>
@@ -172,9 +193,9 @@ function updateBmCount() {
 }
 window.addEventListener('bookmarks-changed', updateBmCount);
 
-document.getElementById('count-ss').textContent = channels.filter(c => c.tier === 'SS').length;
-document.getElementById('count-s').textContent = channels.filter(c => c.tier === 'S').length;
-document.getElementById('count-a').textContent = channels.filter(c => c.tier === 'A').length;
+document.getElementById('count-ss').textContent = channels.filter(c => (c.tier||'').split('-')[0] === 'SS').length;
+document.getElementById('count-s').textContent = channels.filter(c => (c.tier||'').split('-')[0] === 'S').length;
+document.getElementById('count-a').textContent = channels.filter(c => (c.tier||'').split('-')[0] === 'A').length;
 
 const PERIOD_LABELS = {
   '1d': '오늘', '7d': '7일', '14d': '2주', '30d': '30일'
@@ -189,6 +210,8 @@ const PERIOD_COUNT_KEYS = {
   '1d': 'count_1d', '7d': 'count_7d', '14d': 'count_14d', '30d': 'count_30d'
 };
 
+function baseTier(t) { return (t || '').split('-')[0]; }
+
 function filtered() {
   const q = document.getElementById('q').value.toLowerCase();
   let list = [...channels];
@@ -196,10 +219,10 @@ function filtered() {
   // 정렬: 티어 우선 (SS > S > A) → 선택 기간 상위5 평균 뷰
   const primaryKey = PERIOD_TOP5_KEYS[period];
   const secondaryKey = 'top5_30d';
-  const tierRank = { 'SS': 0, 'S': 1, 'A': 2 };
+  const tierRank = { 'SS': 0, 'S': 1, 'A': 2, 'B': 3, 'R': 4 };
   list.sort((a, b) => {
-    const ra = tierRank[a.tier] ?? 9;
-    const rb = tierRank[b.tier] ?? 9;
+    const ra = tierRank[baseTier(a.tier)] ?? 9;
+    const rb = tierRank[baseTier(b.tier)] ?? 9;
     if (ra !== rb) return ra - rb;
     // 1차: 선택 기간
     const pDiff = (b[primaryKey] || 0) - (a[primaryKey] || 0);
@@ -208,9 +231,7 @@ function filtered() {
     return (b[secondaryKey] || 0) - (a[secondaryKey] || 0);
   });
 
-  if (filter === 'SS') list = list.filter(c => c.tier === 'SS');
-  else if (filter === 'S') list = list.filter(c => c.tier === 'S');
-  else if (filter === 'A') list = list.filter(c => c.tier === 'A');
+  if (filter !== 'all') list = list.filter(c => baseTier(c.tier) === filter);
   if (q) list = list.filter(c => c.name.toLowerCase().includes(q));
   return list;
 }
@@ -238,6 +259,7 @@ function videoCell(v, channelName) {
 function render() {
   const items = filtered();
   updateBmCount();
+  if (document.getElementById('urllist').style.display === 'block') renderUrlList(items);
   document.getElementById('col-top-label').textContent = `최근 ${PERIOD_LABELS[period]} TOP`;
 
   const topKey = PERIOD_TOP_KEYS[period];
@@ -253,7 +275,7 @@ function render() {
     return `
       <div class="row tier-${c.tier} ${isViewing ? 'viewing' : ''}" onclick="setCurrent(${i})">
         <div class="col-num">${i + 1}</div>
-        <div class="col-tier"><span class="tier-tag ${c.tier}">${c.tier}</span></div>
+        <div class="col-tier"><span class="tier-tag ${baseTier(c.tier)}" title="${esc(c.tier)}">${esc(c.tier)}</span></div>
         <div>
           <div class="name">${esc(c.name)}</div>
           <div class="name-sub">${c.cid.slice(0, 12)}...</div>
@@ -273,6 +295,26 @@ function render() {
       </div>
     `;
   }).join('');
+}
+
+function renderUrlList(items) {
+  document.getElementById('urllist-count').textContent = `${items.length}개`;
+  document.getElementById('urllist-body').innerHTML = items.map((c, i) => `
+    <tr><td class="num">${i + 1}</td><td>${esc(c.tier)}</td><td>${esc(c.name)}</td>
+    <td class="num">${fmt(c.subs)}</td><td class="num">${fmt(c.top5_30d)}</td>
+    <td><a href="${c.url}" target="_blank">${esc(c.url)}</a></td></tr>`).join('');
+}
+function toggleUrlList() {
+  const el = document.getElementById('urllist');
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+  render();
+}
+function copyUrlList() {
+  const txt = filtered().map(c => `${c.name}\t${c.tier}\t${c.url}`).join('\n');
+  navigator.clipboard.writeText(txt).then(() => {
+    document.getElementById('copy-msg').textContent = '복사했습니다';
+    setTimeout(() => document.getElementById('copy-msg').textContent = '', 2000);
+  });
 }
 
 function setCurrent(i) { currentIdx = i; render(); }
