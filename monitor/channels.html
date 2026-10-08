@@ -141,7 +141,7 @@
     <div class="filter-group">
       <span class="label">티어</span>
       <button data-filter="all" class="active">전체</button>
-      <button data-filter="SS" style="color:#78350f;background:transparent">SS</button>
+      <button data-filter="SS">SS</button>
       <button data-filter="S">S</button>
       <button data-filter="A">A</button>
       <button data-filter="B">B</button>
@@ -159,7 +159,7 @@
       <strong>감시 채널 이름·URL</strong><span class="muted" id="urllist-count"></span>
       <button onclick="copyUrlList()">전체 복사</button><span class="muted" id="copy-msg"></span>
     </div>
-    <div class="urllist-wrap"><table><thead><tr><th>#</th><th>등급</th><th>채널</th><th>구독</th><th>30일 상위5 평균</th><th>URL</th></tr></thead><tbody id="urllist-body"></tbody></table></div>
+    <div class="urllist-wrap"><table><thead><tr><th>#</th><th>등급</th><th>채널</th><th>구독</th><th id="urllist-avg-h">기간 평균뷰</th><th>URL</th></tr></thead><tbody id="urllist-body"></tbody></table></div>
   </div>
   <div class="col-head">
     <div>#</div>
@@ -206,6 +206,9 @@ const PERIOD_TOP_KEYS = {
 const PERIOD_TOP5_KEYS = {
   '1d': 'top5_1d', '7d': 'top5_7d', '14d': 'top5_14d', '30d': 'top5_30d'
 };
+const PERIOD_AVG_KEYS = {
+  '1d': 'avg_1d', '7d': 'avg_7d', '14d': 'avg_14d', '30d': 'avg_30d'
+};
 const PERIOD_COUNT_KEYS = {
   '1d': 'count_1d', '7d': 'count_7d', '14d': 'count_14d', '30d': 'count_30d'
 };
@@ -216,18 +219,12 @@ function filtered() {
   const q = document.getElementById('q').value.toLowerCase();
   let list = [...channels];
 
-  // 정렬: 티어 우선 (SS > S > A) → 선택 기간 상위5 평균 뷰
-  const primaryKey = PERIOD_TOP5_KEYS[period];
-  const secondaryKey = 'top5_30d';
-  const tierRank = { 'SS': 0, 'S': 1, 'A': 2, 'B': 3, 'R': 4 };
+  // 정렬 (2026-10-08): 등급 무관 · 선택 기간 평균뷰 높은 순 → 동률이면 기간 상위5 · 등급은 참고 표시만
+  const primaryKey = PERIOD_AVG_KEYS[period];
+  const secondaryKey = PERIOD_TOP5_KEYS[period];
   list.sort((a, b) => {
-    const ra = tierRank[baseTier(a.tier)] ?? 9;
-    const rb = tierRank[baseTier(b.tier)] ?? 9;
-    if (ra !== rb) return ra - rb;
-    // 1차: 선택 기간
     const pDiff = (b[primaryKey] || 0) - (a[primaryKey] || 0);
     if (pDiff !== 0) return pDiff;
-    // 동률이면 2차: 30일
     return (b[secondaryKey] || 0) - (a[secondaryKey] || 0);
   });
 
@@ -271,6 +268,7 @@ function render() {
     const topVideo = c[topKey];
     const isViewing = i === currentIdx;
     const top5Views = c[top5Key] || 0;
+    const avgViews = c[PERIOD_AVG_KEYS[period]] || 0;
     const count = c[countKey] || 0;
     return `
       <div class="row tier-${c.tier} ${isViewing ? 'viewing' : ''}" onclick="setCurrent(${i})">
@@ -283,8 +281,8 @@ function render() {
         </div>
         <div class="metric-cell">
           <div class="m-row"><span class="m-label">구독</span><span class="m-value">${fmt(c.subs)}</span></div>
-          <div class="m-row"><span class="m-label">평균뷰</span><span class="m-value">${fmt(c.avg_views)}</span></div>
-          <div class="m-row"><span class="m-label">${PERIOD_LABELS[period]} 상위5</span><span class="m-value hot">${fmt(top5Views)}</span></div>
+          <div class="m-row"><span class="m-label">${PERIOD_LABELS[period]} 평균뷰</span><span class="m-value hot">${fmt(avgViews)}</span></div>
+          <div class="m-row"><span class="m-label">${PERIOD_LABELS[period]} 상위5</span><span class="m-value">${fmt(top5Views)}</span></div>
           <div class="m-row"><span class="m-label">${PERIOD_LABELS[period]} 편수</span><span class="m-value dim">${count}편</span></div>
         </div>
         <div class="video-cell">${videoCell(latest, c.name)}</div>
@@ -298,10 +296,11 @@ function render() {
 }
 
 function renderUrlList(items) {
-  document.getElementById('urllist-count').textContent = `${items.length}개`;
+  document.getElementById('urllist-count').textContent = `${items.length}개 · ${PERIOD_LABELS[period]} 평균뷰 순`;
+  document.getElementById('urllist-avg-h').textContent = `${PERIOD_LABELS[period]} 평균뷰`;
   document.getElementById('urllist-body').innerHTML = items.map((c, i) => `
     <tr><td class="num">${i + 1}</td><td>${esc(c.tier)}</td><td>${esc(c.name)}</td>
-    <td class="num">${fmt(c.subs)}</td><td class="num">${fmt(c.top5_30d)}</td>
+    <td class="num">${fmt(c.subs)}</td><td class="num">${fmt(c[PERIOD_AVG_KEYS[period]])}</td>
     <td><a href="${c.url}" target="_blank">${esc(c.url)}</a></td></tr>`).join('');
 }
 function toggleUrlList() {
@@ -310,7 +309,7 @@ function toggleUrlList() {
   render();
 }
 function copyUrlList() {
-  const txt = filtered().map(c => `${c.name}\t${c.tier}\t${c.url}`).join('\n');
+  const txt = filtered().map(c => `${c.name}\t${c.tier}\t${c[PERIOD_AVG_KEYS[period]] || 0}\t${c.url}`).join('\n');
   navigator.clipboard.writeText(txt).then(() => {
     document.getElementById('copy-msg').textContent = '복사했습니다';
     setTimeout(() => document.getElementById('copy-msg').textContent = '', 2000);

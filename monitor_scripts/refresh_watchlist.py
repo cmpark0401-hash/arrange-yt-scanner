@@ -199,6 +199,11 @@ def main():
             'top5_7d': top5_avg(v7),
             'top5_14d': top5_avg(v14),
             'top5_30d': top5_avg(v30),
+            # 기간 평균뷰 (2026-10-08 · 채널 감시 페이지 정렬 기준 — 등급 무관)
+            'avg_1d': int(sum(v['views'] for v in v1) / len(v1)) if v1 else 0,
+            'avg_7d': int(sum(v['views'] for v in v7) / len(v7)) if v7 else 0,
+            'avg_14d': int(sum(v['views'] for v in v14) / len(v14)) if v14 else 0,
+            'avg_30d': int(sum(v['views'] for v in v30) / len(v30)) if v30 else 0,
             'count_1d': len(v1),
             'count_7d': len(v7),
             'count_14d': len(v14),
