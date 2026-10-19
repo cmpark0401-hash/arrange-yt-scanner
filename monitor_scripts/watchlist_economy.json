@@ -2069,5 +2069,890 @@
     ],
     "added_at": "2026-10-08",
     "added_note": "키워드 검색 발굴(미등록 양산형 탐색) · 개설 2026-09 · 30일 롱폼 8편"
+  },
+  {
+    "cid": "UCK_U_kclhlfMDlrCPnZFIfA",
+    "name": "경제 참견소",
+    "url": "https://www.youtube.com/channel/UCK_U_kclhlfMDlrCPnZFIfA/videos",
+    "tier": "A-신생",
+    "subs": 5690,
+    "avg_views": 100489,
+    "top5_30d": 221632,
+    "explosion_threshold": 200978,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC9nsOW6kjX1sDG6MIt4eiJg",
+    "name": "경제K파워",
+    "url": "https://www.youtube.com/channel/UC9nsOW6kjX1sDG6MIt4eiJg/videos",
+    "tier": "A-신생",
+    "subs": 540,
+    "avg_views": 11550,
+    "top5_30d": 34044,
+    "explosion_threshold": 23100,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCi47LtMbpvf4y9tCT3WrbWQ",
+    "name": "경제학일번지",
+    "url": "https://www.youtube.com/channel/UCi47LtMbpvf4y9tCT3WrbWQ/videos",
+    "tier": "A-신생",
+    "subs": 1420,
+    "avg_views": 23282,
+    "top5_30d": 183434,
+    "explosion_threshold": 46564,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC0Vt_TfId217rJXeFZtindA",
+    "name": "세상천지",
+    "url": "https://www.youtube.com/channel/UC0Vt_TfId217rJXeFZtindA/videos",
+    "tier": "A-신생",
+    "subs": 2200,
+    "avg_views": 44829,
+    "top5_30d": 100468,
+    "explosion_threshold": 89658,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCtCp1dJ0QSuFMc8Z4M7g5LQ",
+    "name": "잡식왕",
+    "url": "https://www.youtube.com/channel/UCtCp1dJ0QSuFMc8Z4M7g5LQ/videos",
+    "tier": "R-참고",
+    "subs": 541000,
+    "avg_views": 61049,
+    "top5_30d": 91778,
+    "explosion_threshold": 122098,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCBjEVVJTzDRZkfzTebzOXLg",
+    "name": "감동의방",
+    "url": "https://www.youtube.com/channel/UCBjEVVJTzDRZkfzTebzOXLg/videos",
+    "tier": "A",
+    "subs": 37900,
+    "avg_views": 10039,
+    "top5_30d": 19467,
+    "explosion_threshold": 20078,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCr5Kwk79-o57rSScqOKnCCQ",
+    "name": "하루빨리경제학",
+    "url": "https://www.youtube.com/channel/UCr5Kwk79-o57rSScqOKnCCQ/videos",
+    "tier": "A-신생",
+    "subs": 1930,
+    "avg_views": 27227,
+    "top5_30d": 79121,
+    "explosion_threshold": 54454,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCYuFg7FV_D4n69Irg409jyg",
+    "name": "한국백서",
+    "url": "https://www.youtube.com/channel/UCYuFg7FV_D4n69Irg409jyg/videos",
+    "tier": "A-신생",
+    "subs": 1990,
+    "avg_views": 88114,
+    "top5_30d": 257437,
+    "explosion_threshold": 176228,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCH57TVMKyrp-gmEKQRr7d6Q",
+    "name": "투자한잔",
+    "url": "https://www.youtube.com/channel/UCH57TVMKyrp-gmEKQRr7d6Q/videos",
+    "tier": "A-신생",
+    "subs": 7340,
+    "avg_views": 81846,
+    "top5_30d": 380172,
+    "explosion_threshold": 163692,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC0mAad1Kb_Rt7bqw_94rs1g",
+    "name": "경제참견쟁이",
+    "url": "https://www.youtube.com/channel/UC0mAad1Kb_Rt7bqw_94rs1g/videos",
+    "tier": "A-신생",
+    "subs": 4900,
+    "avg_views": 63497,
+    "top5_30d": 181855,
+    "explosion_threshold": 126994,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCPwsULoI7GbJQpiBlnPn3Bw",
+    "name": "경제비타민",
+    "url": "https://www.youtube.com/channel/UCPwsULoI7GbJQpiBlnPn3Bw/videos",
+    "tier": "A-신생",
+    "subs": 933,
+    "avg_views": 36485,
+    "top5_30d": 152961,
+    "explosion_threshold": 72970,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCJGGijrbXvlTQ3hIAyK-pFg",
+    "name": "실전경제",
+    "url": "https://www.youtube.com/channel/UCJGGijrbXvlTQ3hIAyK-pFg/videos",
+    "tier": "A",
+    "subs": 30100,
+    "avg_views": 39632,
+    "top5_30d": 174236,
+    "explosion_threshold": 79264,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCA4rCVsO0EqZBVLU-ysSvBw",
+    "name": "경제콜렉터",
+    "url": "https://www.youtube.com/channel/UCA4rCVsO0EqZBVLU-ysSvBw/videos",
+    "tier": "A-신생",
+    "subs": 4280,
+    "avg_views": 45872,
+    "top5_30d": 106526,
+    "explosion_threshold": 91744,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCYtssJbUBFho1AY9ixu6McA",
+    "name": "날씨환경청",
+    "url": "https://www.youtube.com/channel/UCYtssJbUBFho1AY9ixu6McA/videos",
+    "tier": "A-신생",
+    "subs": 9370,
+    "avg_views": 0,
+    "top5_30d": 0,
+    "explosion_threshold": 0,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCDF8nSX72UYN-KL11EzSWPg",
+    "name": "스케치 경제학",
+    "url": "https://www.youtube.com/channel/UCDF8nSX72UYN-KL11EzSWPg/videos",
+    "tier": "A-신생",
+    "subs": 2380,
+    "avg_views": 31841,
+    "top5_30d": 77076,
+    "explosion_threshold": 63682,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCju_tjw3QV15l6B6ZvCygBA",
+    "name": "손바닥경제",
+    "url": "https://www.youtube.com/channel/UCju_tjw3QV15l6B6ZvCygBA/videos",
+    "tier": "A-신생",
+    "subs": 5880,
+    "avg_views": 13265,
+    "top5_30d": 68538,
+    "explosion_threshold": 26530,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC2WWPwVaPOfvnWHVmnjNvOA",
+    "name": "경제히어로",
+    "url": "https://www.youtube.com/channel/UC2WWPwVaPOfvnWHVmnjNvOA/videos",
+    "tier": "A-신생",
+    "subs": 1010,
+    "avg_views": 56939,
+    "top5_30d": 164747,
+    "explosion_threshold": 113878,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "사용자 제공 벤치 채널(10/12~19 감시 밖 46편 점검) · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCtAfLywLQHFG_83zCuhDYrA",
+    "name": "꾸준한 경제",
+    "url": "https://www.youtube.com/channel/UCtAfLywLQHFG_83zCuhDYrA/videos",
+    "tier": "A-신생",
+    "subs": 2460,
+    "avg_views": 4528,
+    "top5_30d": 313849,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-09-18 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC8PEz1kF-8WLaTc8E7k8wpQ",
+    "name": "경제수첩",
+    "url": "https://www.youtube.com/channel/UC8PEz1kF-8WLaTc8E7k8wpQ/videos",
+    "tier": "A-신생",
+    "subs": 8820,
+    "avg_views": 11294,
+    "top5_30d": 237954,
+    "explosion_threshold": 22588,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2022-07-05 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCKcs2GxV73M_-L_F5138xPA",
+    "name": "쿨한 경제학",
+    "url": "https://www.youtube.com/channel/UCKcs2GxV73M_-L_F5138xPA/videos",
+    "tier": "A-신생",
+    "subs": 5980,
+    "avg_views": 9282,
+    "top5_30d": 200679,
+    "explosion_threshold": 18564,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-07-11 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC0c8BjZQ-0Gf1LA7JM-ul5Q",
+    "name": "노바: 와일드",
+    "url": "https://www.youtube.com/channel/UC0c8BjZQ-0Gf1LA7JM-ul5Q/videos",
+    "tier": "A-신생",
+    "subs": 2380,
+    "avg_views": 12314,
+    "top5_30d": 183769,
+    "explosion_threshold": 24628,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2023-02-16 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCDyYa5W3irNM3dDpajC9EWw",
+    "name": "똑소리나는 경제",
+    "url": "https://www.youtube.com/channel/UCDyYa5W3irNM3dDpajC9EWw/videos",
+    "tier": "A-신생",
+    "subs": 2030,
+    "avg_views": 1332,
+    "top5_30d": 173472,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-04-21 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCfPF5iRUPExSHkCO9zayEfA",
+    "name": "오늘을 말하다",
+    "url": "https://www.youtube.com/channel/UCfPF5iRUPExSHkCO9zayEfA/videos",
+    "tier": "A-신생",
+    "subs": 2510,
+    "avg_views": 21203,
+    "top5_30d": 121431,
+    "explosion_threshold": 42406,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-10-03 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCi-LStu7-eNrQihqni9zGjA",
+    "name": "초격차경제",
+    "url": "https://www.youtube.com/channel/UCi-LStu7-eNrQihqni9zGjA/videos",
+    "tier": "A-신생",
+    "subs": 1440,
+    "avg_views": 11223,
+    "top5_30d": 90472,
+    "explosion_threshold": 22446,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-08-16 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC7tjLJdvbBVz4Ac0SC2jqOA",
+    "name": "돈의 이야기",
+    "url": "https://www.youtube.com/channel/UC7tjLJdvbBVz4Ac0SC2jqOA/videos",
+    "tier": "A-신생",
+    "subs": 8950,
+    "avg_views": 11451,
+    "top5_30d": 84740,
+    "explosion_threshold": 22902,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2020-09-11 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCRzL-raJPjMSf2x20r5Q0yw",
+    "name": "짜릿한경제학",
+    "url": "https://www.youtube.com/channel/UCRzL-raJPjMSf2x20r5Q0yw/videos",
+    "tier": "A-신생",
+    "subs": 1010,
+    "avg_views": 2909,
+    "top5_30d": 68119,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-08-13 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCisKM7ZTMt5N0nkKMPHtijg",
+    "name": "우리가 몰랐던 경제",
+    "url": "https://www.youtube.com/channel/UCisKM7ZTMt5N0nkKMPHtijg/videos",
+    "tier": "A-신생",
+    "subs": 802,
+    "avg_views": 3495,
+    "top5_30d": 66550,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-08-24 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCihfvDL8-2_laUcpdOrVozA",
+    "name": "경제학TV",
+    "url": "https://www.youtube.com/channel/UCihfvDL8-2_laUcpdOrVozA/videos",
+    "tier": "A-신생",
+    "subs": 9420,
+    "avg_views": 4272,
+    "top5_30d": 65513,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-07-07 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC2yALkOs2FomlJW3KY1tz5Q",
+    "name": "성실경제학",
+    "url": "https://www.youtube.com/channel/UC2yALkOs2FomlJW3KY1tz5Q/videos",
+    "tier": "A-신생",
+    "subs": 2970,
+    "avg_views": 4690,
+    "top5_30d": 60836,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-07-16 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCEeZjBqwtLkmmV3xLCvVvkQ",
+    "name": "대한민국경제의힘",
+    "url": "https://www.youtube.com/channel/UCEeZjBqwtLkmmV3xLCvVvkQ/videos",
+    "tier": "A-신생",
+    "subs": 3350,
+    "avg_views": 4020,
+    "top5_30d": 60236,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-09-12 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCmgSAH0b5tzh5KkJjZBUHBw",
+    "name": "경제를 알아야",
+    "url": "https://www.youtube.com/channel/UCmgSAH0b5tzh5KkJjZBUHBw/videos",
+    "tier": "A-신생",
+    "subs": 689,
+    "avg_views": 763,
+    "top5_30d": 53101,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-09-06 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCsqc50L29B7B_jFdbiNu7BA",
+    "name": "금융의 권력",
+    "url": "https://www.youtube.com/channel/UCsqc50L29B7B_jFdbiNu7BA/videos",
+    "tier": "A-신생",
+    "subs": 1850,
+    "avg_views": 949,
+    "top5_30d": 52093,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-07-06 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCUFGxD1Pteh0ezZ9hrx-zXw",
+    "name": "경제 이야기꾼",
+    "url": "https://www.youtube.com/channel/UCUFGxD1Pteh0ezZ9hrx-zXw/videos",
+    "tier": "A-신생",
+    "subs": 592,
+    "avg_views": 1878,
+    "top5_30d": 49093,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-07-30 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC0xf4yd7svvN94NGM5BVQUg",
+    "name": "신용마스터",
+    "url": "https://www.youtube.com/channel/UC0xf4yd7svvN94NGM5BVQUg/videos",
+    "tier": "A-신생",
+    "subs": 1930,
+    "avg_views": 5326,
+    "top5_30d": 47424,
+    "explosion_threshold": 10652,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2018-11-01 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCtF0zCkZKQFZf12_dScOxgQ",
+    "name": "경제실험실",
+    "url": "https://www.youtube.com/channel/UCtF0zCkZKQFZf12_dScOxgQ/videos",
+    "tier": "A-신생",
+    "subs": 407,
+    "avg_views": 764,
+    "top5_30d": 44157,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2026-08-18 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCLcGV_blilJlK7dqcsSwz3g",
+    "name": "한뼘경제",
+    "url": "https://www.youtube.com/channel/UCLcGV_blilJlK7dqcsSwz3g/videos",
+    "tier": "A-신생",
+    "subs": 3190,
+    "avg_views": 6418,
+    "top5_30d": 43736,
+    "explosion_threshold": 12836,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2025-08-22 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC-1RcfOBILQRgMzazGICiTw",
+    "name": "더시프트",
+    "url": "https://www.youtube.com/channel/UC-1RcfOBILQRgMzazGICiTw/videos",
+    "tier": "A-신생",
+    "subs": 7790,
+    "avg_views": 14502,
+    "top5_30d": 39644,
+    "explosion_threshold": 29004,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2012-07-28 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCt5-zOmdbbPve-KEQS4r-hg",
+    "name": "퇴근후 경제학",
+    "url": "https://www.youtube.com/channel/UCt5-zOmdbbPve-KEQS4r-hg/videos",
+    "tier": "A",
+    "subs": 15900,
+    "avg_views": 11552,
+    "top5_30d": 39023,
+    "explosion_threshold": 23104,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2021-09-25 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UC9KwB5HFhQEAiTb3M3plb_A",
+    "name": "레몬경제학",
+    "url": "https://www.youtube.com/channel/UC9KwB5HFhQEAiTb3M3plb_A/videos",
+    "tier": "A-신생",
+    "subs": 6600,
+    "avg_views": 8448,
+    "top5_30d": 17259,
+    "explosion_threshold": 16896,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 경제 · 개설 2025-03-03 · 사용자 승인 10/19"
+  },
+  {
+    "cid": "UCuXyU2sGtQLnCiQkYjTb_wg",
+    "name": "생생반응",
+    "url": "https://www.youtube.com/channel/UCuXyU2sGtQLnCiQkYjTb_wg/videos",
+    "tier": "A",
+    "subs": 22600,
+    "avg_views": 54541,
+    "top5_30d": 339016,
+    "explosion_threshold": 109082,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2026-04-05 · 사용자 승인 10/19",
+    "lane": "sisa_kbbong"
+  },
+  {
+    "cid": "UCvZhBe0Of9gbevwYhqkfeKw",
+    "name": "글로벌한국",
+    "url": "https://www.youtube.com/channel/UCvZhBe0Of9gbevwYhqkfeKw/videos",
+    "tier": "A",
+    "subs": 18300,
+    "avg_views": 51640,
+    "top5_30d": 309327,
+    "explosion_threshold": 103280,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2026-04-14 · 사용자 승인 10/19",
+    "lane": "sisa_kbbong"
+  },
+  {
+    "cid": "UCsvPNw8nTRonXF1lj-crXeQ",
+    "name": "한국찐반응",
+    "url": "https://www.youtube.com/channel/UCsvPNw8nTRonXF1lj-crXeQ/videos",
+    "tier": "A",
+    "subs": 33200,
+    "avg_views": 33484,
+    "top5_30d": 270676,
+    "explosion_threshold": 66968,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2026-04-02 · 사용자 승인 10/19",
+    "lane": "sisa_kbbong"
+  },
+  {
+    "cid": "UCeE39SZaTlXeMk7O97g7tBQ",
+    "name": "한파주의보",
+    "url": "https://www.youtube.com/channel/UCeE39SZaTlXeMk7O97g7tBQ/videos",
+    "tier": "A",
+    "subs": 10100,
+    "avg_views": 27144,
+    "top5_30d": 135406,
+    "explosion_threshold": 54288,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2025-10-31 · 사용자 승인 10/19",
+    "lane": "sisa_kbbong"
+  },
+  {
+    "cid": "UC8sgbEA0dCnWEFSDWFB537g",
+    "name": "한국은말한다",
+    "url": "https://www.youtube.com/channel/UC8sgbEA0dCnWEFSDWFB537g/videos",
+    "tier": "A",
+    "subs": 22200,
+    "avg_views": 17443,
+    "top5_30d": 99666,
+    "explosion_threshold": 34886,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2025-11-07 · 사용자 승인 10/19",
+    "lane": "sisa_kbbong"
+  },
+  {
+    "cid": "UCpVHSYZKJYSaMvn5kgmdteQ",
+    "name": "프레임드",
+    "url": "https://www.youtube.com/channel/UCpVHSYZKJYSaMvn5kgmdteQ/videos",
+    "tier": "A-신생",
+    "subs": 5330,
+    "avg_views": 21243,
+    "top5_30d": 89645,
+    "explosion_threshold": 42486,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2026-06-25 · 사용자 승인 10/19",
+    "lane": "sisa_kbbong"
+  },
+  {
+    "cid": "UC_GXtoObGKHX0uy5OIMaXlQ",
+    "name": "감동노다지",
+    "url": "https://www.youtube.com/channel/UC_GXtoObGKHX0uy5OIMaXlQ/videos",
+    "tier": "A-신생",
+    "subs": 5530,
+    "avg_views": 11484,
+    "top5_30d": 43219,
+    "explosion_threshold": 22968,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2026-07-29 · 사용자 승인 10/19",
+    "lane": "sisa_kbbong"
+  },
+  {
+    "cid": "UCL4swr6pYfgyCUKrLF15kEg",
+    "name": "코리아와우",
+    "url": "https://www.youtube.com/channel/UCL4swr6pYfgyCUKrLF15kEg/videos",
+    "tier": "A-신생",
+    "subs": 1080,
+    "avg_views": 2867,
+    "top5_30d": 43859,
+    "explosion_threshold": 10000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247"
+    ],
+    "added_at": "2026-10-19",
+    "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2026-03-30 · 사용자 승인 10/19",
+    "lane": "sisa_kbbong"
   }
 ]
