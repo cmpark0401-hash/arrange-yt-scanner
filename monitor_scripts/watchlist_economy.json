@@ -2973,5 +2973,43 @@
     ],
     "added_at": "2026-10-20",
     "added_note": "hot_monitor 감시 밖 검색 발굴(바디프랜드 몰락) · 개설 2026-10-13 · 사용자 승인 10/20"
+  },
+  {
+    "cid": "UCGaisflfF5K5swSt2LAqLeg",
+    "name": "쩐의경제학",
+    "url": "https://www.youtube.com/channel/UCGaisflfF5K5swSt2LAqLeg/videos",
+    "tier": "A-신생",
+    "subs": 4640,
+    "avg_views": 7383,
+    "top5_30d": 20676,
+    "explosion_threshold": 14766,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-20",
+    "added_note": "몰락 결 벤치(신비 벤치 풀) · 개설 2025-06-28 · 사용자 승인 10/20"
+  },
+  {
+    "cid": "UCGCrs-Z35veRmRpCdw2_n2A",
+    "name": "우리의경제학",
+    "url": "https://www.youtube.com/channel/UCGCrs-Z35veRmRpCdw2_n2A/videos",
+    "tier": "A-신생",
+    "subs": 1550,
+    "avg_views": 7100,
+    "top5_30d": 15600,
+    "explosion_threshold": 14200,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-20",
+    "added_note": "몰락 결 벤치(신비 벤치 풀) · 개설 2026-07-01 · 사용자 승인 10/20"
   }
 ]
