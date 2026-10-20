@@ -2954,5 +2954,24 @@
     "added_at": "2026-10-19",
     "added_note": "발굴(키워드 검색·대표 채널 주제 추적) · 국뽕 · 개설 2026-03-30 · 사용자 승인 10/19",
     "lane": "sisa_kbbong"
+  },
+  {
+    "cid": "UC-VpZid7uwiWld95uUjaYxw",
+    "name": "우리동네경제",
+    "url": "https://www.youtube.com/channel/UC-VpZid7uwiWld95uUjaYxw/videos",
+    "tier": "A-신생",
+    "subs": 454,
+    "avg_views": 18586,
+    "top5_30d": 27433,
+    "explosion_threshold": 37172,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-20",
+    "added_note": "hot_monitor 감시 밖 검색 발굴(바디프랜드 몰락) · 개설 2026-10-13 · 사용자 승인 10/20"
   }
 ]
