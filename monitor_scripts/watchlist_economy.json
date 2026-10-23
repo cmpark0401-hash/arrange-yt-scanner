@@ -3201,5 +3201,24 @@
     ],
     "added_at": "2026-10-21",
     "added_note": "사용자 제공 URL 일괄 등록(10/21) · 개설 2026-08-12 · 사용자 승인"
+  },
+  {
+    "cid": "UCyifrBCORwFq1Zcm9qJBMDA",
+    "name": "이창민TV",
+    "url": "https://www.youtube.com/channel/UCyifrBCORwFq1Zcm9qJBMDA/videos",
+    "tier": "A-신생",
+    "subs": 2190,
+    "avg_views": 35143,
+    "top5_30d": 178734,
+    "explosion_threshold": 70286,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-23",
+    "added_note": "사용자 제공 벤치(조선족 동네 44만) · 개설 2021-10-12"
   }
 ]
