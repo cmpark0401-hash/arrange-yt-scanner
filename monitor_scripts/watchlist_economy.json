@@ -3220,5 +3220,43 @@
     ],
     "added_at": "2026-10-23",
     "added_note": "사용자 제공 벤치(조선족 동네 44만) · 개설 2021-10-12"
+  },
+  {
+    "cid": "UCi4P7edBnaFplv3Bv_au4Cw",
+    "name": "안성빈TV",
+    "url": "https://www.youtube.com/channel/UCi4P7edBnaFplv3Bv_au4Cw/videos",
+    "tier": "A-신생",
+    "subs": 417,
+    "avg_views": 19883,
+    "top5_30d": 58827,
+    "explosion_threshold": 39766,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-25",
+    "added_note": "사용자 제공 벤치(현대차 내수 몰락 17.9만/14h)"
+  },
+  {
+    "cid": "UCsEZej_nE7BuTQ95s5kRevg",
+    "name": "네가사는세상",
+    "url": "https://www.youtube.com/channel/UCsEZej_nE7BuTQ95s5kRevg/videos",
+    "tier": "A-신생",
+    "subs": 304,
+    "avg_views": 17842,
+    "top5_30d": 28260,
+    "explosion_threshold": 35684,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-25",
+    "added_note": "사용자 제공 벤치(화천댐 한강 물 10만)"
   }
 ]
