@@ -3258,5 +3258,157 @@
     ],
     "added_at": "2026-10-25",
     "added_note": "사용자 제공 벤치(화천댐 한강 물 10만)"
+  },
+  {
+    "cid": "UCBUpw-qKaxJYN95i2Y7GgUg",
+    "name": "내가 반한 한국",
+    "url": "https://www.youtube.com/channel/UCBUpw-qKaxJYN95i2Y7GgUg/videos",
+    "tier": "A-신생",
+    "subs": 219,
+    "avg_views": 1300,
+    "top5_30d": 3565,
+    "explosion_threshold": 2600,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-26",
+    "added_note": "사용자 승인 벤치(병원 미국인 41만)"
+  },
+  {
+    "cid": "UCW_P6WdNKlb18hv57FdwEBg",
+    "name": "경제야뭐하니",
+    "url": "https://www.youtube.com/channel/UCW_P6WdNKlb18hv57FdwEBg/videos",
+    "tier": "A-신생",
+    "subs": 166,
+    "avg_views": 3601,
+    "top5_30d": 9100,
+    "explosion_threshold": 7202,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-26",
+    "added_note": "사용자 승인 벤치(명품 몰락 TOP7 8,400)"
+  },
+  {
+    "cid": "UCUi1ph0rJYKKgtyg3T4nY8g",
+    "name": "까치가 물어온 경제",
+    "url": "https://www.youtube.com/channel/UCUi1ph0rJYKKgtyg3T4nY8g/videos",
+    "tier": "A-신생",
+    "subs": 1280,
+    "avg_views": 3131,
+    "top5_30d": 8400,
+    "explosion_threshold": 6262,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-26",
+    "added_note": "사용자 승인 벤치(명품 몰락 TOP7 6,700)"
+  },
+  {
+    "cid": "UCAUTgBA8hKc1bPK59g1pS-g",
+    "name": "K브리핑",
+    "url": "https://www.youtube.com/channel/UCAUTgBA8hKc1bPK59g1pS-g/videos",
+    "tier": "A-신생",
+    "subs": 10600,
+    "avg_views": 5589,
+    "top5_30d": 16260,
+    "explosion_threshold": 11178,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-26",
+    "added_note": "사용자 승인 벤치(병원 미국인 6.9만)"
+  },
+  {
+    "cid": "UC0julKgIDzqKV0T6aabO5bA",
+    "name": "단독튜브",
+    "url": "https://www.youtube.com/channel/UC0julKgIDzqKV0T6aabO5bA/videos",
+    "tier": "A-신생",
+    "subs": 8320,
+    "avg_views": 105761,
+    "top5_30d": 291800,
+    "explosion_threshold": 211522,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-26",
+    "added_note": "사용자 승인 벤치(병원 미국인 5.9만)"
+  },
+  {
+    "cid": "UCWVZnnyCyURnEZa5kwS3r4w",
+    "name": "경제센스",
+    "url": "https://www.youtube.com/channel/UCWVZnnyCyURnEZa5kwS3r4w/videos",
+    "tier": "A-신생",
+    "subs": 479,
+    "avg_views": 29751,
+    "top5_30d": 78600,
+    "explosion_threshold": 59502,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-26",
+    "added_note": "사용자 승인 벤치(사과대추 4,800)"
+  },
+  {
+    "cid": "UCqPMEBS7fo9HEj8x-AJM0gQ",
+    "name": "숨결기록",
+    "url": "https://www.youtube.com/channel/UCqPMEBS7fo9HEj8x-AJM0gQ/videos",
+    "tier": "A-신생",
+    "subs": 13800,
+    "avg_views": 6775,
+    "top5_30d": 11100,
+    "explosion_threshold": 13550,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-26",
+    "added_note": "사용자 승인 벤치(식당 몰락 23.6만)"
+  },
+  {
+    "cid": "UCeFiKG5t8-yIRiXW4cMj6fA",
+    "name": "돈의 맥락",
+    "url": "https://www.youtube.com/channel/UCeFiKG5t8-yIRiXW4cMj6fA/videos",
+    "tier": "A-신생",
+    "subs": 5990,
+    "avg_views": 5087,
+    "top5_30d": 12720,
+    "explosion_threshold": 10174,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [
+      "247",
+      "김삿갓",
+      "신비한기록"
+    ],
+    "added_at": "2026-10-26",
+    "added_note": "사용자 승인 벤치(오피스 상권 몰락 22.5만)"
   }
 ]
