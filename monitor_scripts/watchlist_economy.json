@@ -3500,5 +3500,35 @@
     "related_channels": [],
     "added_at": "2026-10-28",
     "added_note": "10/28 새 채널 조사(유튜브 전체 검색) · 대표작 국제그룹이 무너진 뒤, 양정모 가문은 어떻게 되었을까? 303,415"
+  },
+  {
+    "cid": "UC7vBbUB_NAIZpkVeezzODaA",
+    "name": "잡학도깨비",
+    "url": "https://www.youtube.com/channel/UC7vBbUB_NAIZpkVeezzODaA/videos",
+    "tier": "A-신생",
+    "subs": 2380,
+    "avg_views": 29159,
+    "top5_30d": 84220,
+    "explosion_threshold": 58318,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-10-31",
+    "added_note": "10/31 사용자 요청 · 대표작 한국엔 가로수가 많은데, 일본엔 왜 가로수가 안 보일까? 274,000"
+  },
+  {
+    "cid": "UCP25nEyPIBxqCaorxTS54Cg",
+    "name": "돈맥경제TV",
+    "url": "https://www.youtube.com/channel/UCP25nEyPIBxqCaorxTS54Cg/videos",
+    "tier": "A-신생",
+    "subs": 983,
+    "avg_views": 26588,
+    "top5_30d": 36980,
+    "explosion_threshold": 53176,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-10-31",
+    "added_note": "10/31 사용자 요청 · 대표작 여의도 850개만큼 넓어진 한국 땅 158,000"
   }
 ]
