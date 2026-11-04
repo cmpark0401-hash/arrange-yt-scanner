@@ -3620,5 +3620,50 @@
     "related_channels": [],
     "added_at": "2026-11-04",
     "added_note": "11/4 사용자 요청 · 대표작 영국 난방텐트 14만"
+  },
+  {
+    "cid": "UCqZYLbUNZBKStZYZWkSTJoA",
+    "name": "경제의 민낯",
+    "url": "https://www.youtube.com/channel/UCqZYLbUNZBKStZYZWkSTJoA/videos",
+    "tier": "S-신생",
+    "subs": 1240,
+    "avg_views": 60263,
+    "top5_30d": 162800,
+    "explosion_threshold": 120526,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-04",
+    "added_note": "11/4 사용자 요청 · 대표작 임창정의 몰락 19만(D+1)"
+  },
+  {
+    "cid": "UCHb643fmgqYjl0uKMMwJHVA",
+    "name": "상상지식",
+    "url": "https://www.youtube.com/channel/UCHb643fmgqYjl0uKMMwJHVA/videos",
+    "tier": "B",
+    "subs": 905,
+    "avg_views": 11999,
+    "top5_30d": 34280,
+    "explosion_threshold": 23998,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-04",
+    "added_note": "11/4 사용자 요청 · 대표작 낙동강 시작 연못 15만"
+  },
+  {
+    "cid": "UCKnmRjtoj2QGxbwZO0XdloA",
+    "name": "이 경제가 알고싶다",
+    "url": "https://www.youtube.com/channel/UCKnmRjtoj2QGxbwZO0XdloA/videos",
+    "tier": "A-신생",
+    "subs": 189,
+    "avg_views": 9344,
+    "top5_30d": 20200,
+    "explosion_threshold": 18688,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-04",
+    "added_note": "11/4 사용자 요청 · 대표작 일본 사실상 파산 8만(D+2)"
   }
 ]
