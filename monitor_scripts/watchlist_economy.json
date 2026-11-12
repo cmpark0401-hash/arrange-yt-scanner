@@ -3665,5 +3665,50 @@
     "related_channels": [],
     "added_at": "2026-11-04",
     "added_note": "11/4 사용자 요청 · 대표작 일본 사실상 파산 8만(D+2)"
+  },
+  {
+    "cid": "UCzXV3Np_oXOFLcmeOg29BXQ",
+    "name": "지식부엉이",
+    "url": "https://www.youtube.com/channel/UCzXV3Np_oXOFLcmeOg29BXQ/videos",
+    "tier": "A-신생",
+    "subs": 957,
+    "avg_views": 4000,
+    "top5_30d": 70400,
+    "explosion_threshold": 8000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-12",
+    "added_note": "11/12 사용자 요청 · 대표작 김 24만(254배)"
+  },
+  {
+    "cid": "UCeYystGKhgTdKtDSMRO-bZQ",
+    "name": "숨은장부",
+    "url": "https://www.youtube.com/channel/UCeYystGKhgTdKtDSMRO-bZQ/videos",
+    "tier": "A",
+    "subs": 10700,
+    "avg_views": 8100,
+    "top5_30d": 116800,
+    "explosion_threshold": 16200,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-12",
+    "added_note": "11/12 사용자 요청 · 대표작 장가계 패키지 39만·5천원 250원 12만"
+  },
+  {
+    "cid": "UC9xZPdzjrXwBWUi_ZAqr3Xg",
+    "name": "감탄경제",
+    "url": "https://www.youtube.com/channel/UC9xZPdzjrXwBWUi_ZAqr3Xg/videos",
+    "tier": "A-신생",
+    "subs": 1510,
+    "avg_views": 8400,
+    "top5_30d": 88000,
+    "explosion_threshold": 16800,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-12",
+    "added_note": "11/12 사용자 요청 · 대표작 제주살이 몰락 20만(136배)"
   }
 ]
