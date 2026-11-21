@@ -4085,5 +4085,20 @@
     "related_channels": [],
     "added_at": "2026-11-20",
     "added_note": "11/20 사용자 요청 · 벤치로 추천됐던 소형 경제 채널 · 최근 15편 top5 1,930·중간 317"
+  },
+  {
+    "cid": "UCEBbdZMdMMTJ3J03506JCJQ",
+    "name": "이코로그",
+    "url": "https://www.youtube.com/channel/UCEBbdZMdMMTJ3J03506JCJQ",
+    "tier": "S-신생",
+    "subs": 2420,
+    "avg_views": 1981,
+    "top5_30d": 138000,
+    "explosion_threshold": 8000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-22",
+    "added_note": "신비 몰락 결 · 꿀벌/양봉 56만(11/20) · 사용자 컨펌 11/22"
   }
 ]
