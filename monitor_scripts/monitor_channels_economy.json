@@ -3051,5 +3051,35 @@
     "related_channels": [],
     "added_at": "2026-11-26",
     "added_note": "벤치 91,045회 · 불황일수록 돈 버는 실속 업종 TOP 5 · 사용자 컨펌 11/26"
+  },
+  {
+    "cid": "UC0Yo6jzAv4ZSgzy2XE_OKQQ",
+    "name": "일파만파tv",
+    "url": "https://www.youtube.com/channel/UC0Yo6jzAv4ZSgzy2XE_OKQQ",
+    "tier": "A-신생",
+    "subs": 2910,
+    "avg_views": 2000,
+    "top5_30d": 64680,
+    "explosion_threshold": 8000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-27",
+    "added_note": "벤치 207937회 · \"정미소에서 태워 버리던 왕겨가 반도체·배터리 핵심 소재였습니다\" 흔해  · 사용자 컨펌 11/27"
+  },
+  {
+    "cid": "UCu1LVsXvLCFnhmfUZemmOEA",
+    "name": "이유랩",
+    "url": "https://www.youtube.com/channel/UCu1LVsXvLCFnhmfUZemmOEA",
+    "tier": "B-신생",
+    "subs": 97,
+    "avg_views": 519,
+    "top5_30d": 30341,
+    "explosion_threshold": 8000,
+    "poll_interval_min": 15,
+    "poll_minutes": 60,
+    "related_channels": [],
+    "added_at": "2026-11-27",
+    "added_note": "벤치 137813회 · 2000억 넣고 석 달 반 만에 또 휴업… 홈플러스는 왜 물건 살 돈이  · 사용자 컨펌 11/27"
   }
 ]
